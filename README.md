@@ -5,14 +5,14 @@ This is a place to hold the files for my personal website. It's a work in progre
 
 ## To-Do
 
-### Initial Release
+### v1: Initial Release
 1. DONE: add base HTML
 1. TODO: add asset files
 1. TODO: add Google Analytics
 
 ### Major Release Roadmap
 
-#### V2: Major overhaul
+#### v2: Major overhaul
 1. Make a glorious, beautiful, BootStrap-powered (static) site with audience segmentation
 1. Maintain "business card" appeal
 1. Create a new "contact me" portal
@@ -24,5 +24,5 @@ This is a place to hold the files for my personal website. It's a work in progre
 1. "Projects" portal?
 1. Does my current host support PHP out-of-the-box?
 
-#### V3: Are You Pondering What I'm Pondering?!
+#### v3: Are You Pondering What I'm Pondering?!
 1. Profit / World Domination
