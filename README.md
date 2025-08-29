@@ -24,5 +24,5 @@ This is a place to hold the files for my personal website. It's a work in progre
 1. "Projects" portal?
 1. Does my current host support PHP out-of-the-box?
 
-#### V3
+#### V3: Are You Pondering What I'm Pondering?!
 1. Profit / World Domination
