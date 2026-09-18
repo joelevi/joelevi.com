@@ -11,9 +11,8 @@ https://www.joelevi.com (apex redirects to www)
 - `joelevi.vcf` — downloadable contact card
 - `qrcode.min.js` — QR share modal
 - `microformat_hcard.png` — h-card badge
-- `joe-levi-public-key.asc` — PGP public key (**add when ready**)
+- `joe-levi-public-key.asc` — PGP public key (joe@joelevi.com)
 
 ## Polish backlog
-- [ ] Add PGP public key file
 - [ ] Optional: richer og:image / better microformat badge art
 - [ ] v2 hub (README historical roadmap): Bootstrap site with audience segmentation, projects, contact portal
