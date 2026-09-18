@@ -1,28 +1,19 @@
-# Personal website of Joe Levi (hey, that's **ME!**)
+# joelevi.com
 
-## Description
-This is a place to hold the files for my personal website. It's a work in progress.
+Personal digital business card for Joe Levi (static HTML on Vercel).
 
-## To-Do
+## Live
+https://www.joelevi.com (apex redirects to www)
 
-### v1: Initial Release
-1. DONE: add base HTML
-1. TODO: add asset files
-1. TODO: add Google Analytics
+## Assets
+- `index.html` — card UI (EnBizCard-based, customized)
+- `photo.jpeg` — profile photo
+- `joelevi.vcf` — downloadable contact card
+- `qrcode.min.js` — QR share modal
+- `microformat_hcard.png` — h-card badge
+- `joe-levi-public-key.asc` — PGP public key (**add when ready**)
 
-## Major Release Roadmap
-
-### v2: Major overhaul
-1. Make a glorious, beautiful, BootStrap-powered (static) site with audience segmentation
-1. Maintain "business card" appeal
-1. Create a new "contact me" portal
-1. Add links to:
-   - Amazon Author page (books subpages?)
-   - Resume' / CV
-   - Github Profile
-1. "Aspirations" portal
-1. "Projects" portal?
-1. Does my current host support PHP out-of-the-box?
-
-### v3: Are You Pondering What I'm Pondering?!
-1. Profit / World Domination
+## Polish backlog
+- [ ] Add PGP public key file
+- [ ] Optional: richer og:image / better microformat badge art
+- [ ] v2 hub (README historical roadmap): Bootstrap site with audience segmentation, projects, contact portal
