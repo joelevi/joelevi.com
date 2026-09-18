@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://microformats.org/wiki/hresume">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#222D52" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Résumé of Joe Levi — cross-discipline problem solver in Utah. Webmaster, systems architect, and technical specialist. hResume microformat." />
+	<link rel="canonical" href="https://www.joelevi.com/resume" />
+	<meta property="og:title" content="Joe Levi — Résumé" />
+	<meta property="og:description" content="Cross-discipline, multi-dimensional problem solver. Utah, USA. Webmaster · systems · web · security." />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:url" content="https://www.joelevi.com/resume" />
+	<meta property="og:type" content="profile" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Joe Levi — Résumé" />
+	<meta name="twitter:description" content="Cross-discipline, multi-dimensional problem solver. Utah, USA." />
+	<title>Joe Levi — Résumé</title>
+	<link rel="profile" href="http://microformats.org/wiki/hresume" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Gruppo&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		:root {
+			--navy: #222D52;
+			--navy-deep: #1a2340;
+			--ink: #e8ecf4;
+			--muted: #a8b0c4;
+			--accent: #7eb6ff;
+			--card: #2a365f;
+			--rule: rgba(255,255,255,0.12);
+		}
+		* { box-sizing: border-box; }
+		html { background: var(--navy-deep); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 40%, #151c33 100%);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 52rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.topnav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 1.5rem;
+			flex-wrap: wrap;
+		}
+		.topnav a.home {
+			font-family: Gruppo, sans-serif;
+			font-size: 1.15rem;
+			letter-spacing: 0.04em;
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			padding: 0.4rem 0.85rem;
+			border-radius: 999px;
+			background: rgba(255,255,255,0.04);
+		}
+		.topnav a.home:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
+		.print-hint { color: var(--muted); font-size: 0.85rem; }
+		.hresume {
+			background: var(--card);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 1.75rem 1.5rem 2rem;
+			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+		}
+		h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(2rem, 5vw, 2.75rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: #fff;
+		}
+		h2 {
+			font-family: Gruppo, sans-serif;
+			font-size: 1.45rem;
+			font-weight: 400;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			margin: 2rem 0 0.85rem;
+			padding-bottom: 0.35rem;
+			border-bottom: 1px solid var(--rule);
+			color: #fff;
+		}
+		h3 {
+			font-size: 1.05rem;
+			font-weight: 600;
+			margin: 0 0 0.2rem;
+			color: #fff;
+		}
+		.summary {
+			font-style: italic;
+			color: var(--muted);
+			margin: 0.5rem 0 1rem;
+			max-width: 40rem;
+		}
+		.contact {
+			font-style: normal;
+			display: grid;
+			gap: 0.25rem;
+			color: var(--muted);
+			font-size: 0.95rem;
+		}
+		.contact .fn { display: none; }
+		.meta-line { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
+		.experience, .education {
+			margin: 0 0 1.35rem;
+			padding-bottom: 1.15rem;
+			border-bottom: 1px solid var(--rule);
+		}
+		.experience:last-of-type, .education:last-of-type { border-bottom: none; }
+		.description { margin: 0.35rem 0 0; }
+		ul.description, .skills ul {
+			margin: 0.35rem 0 0;
+			padding-left: 1.2rem;
+		}
+		ul.description li, .skills li { margin: 0.25rem 0; }
+		.skill {
+			display: inline-block;
+			margin: 0.2rem 0.35rem 0.2rem 0;
+			padding: 0.2rem 0.55rem;
+			border-radius: 999px;
+			background: rgba(126,182,255,0.12);
+			border: 1px solid rgba(126,182,255,0.25);
+			color: var(--ink);
+			font-size: 0.88rem;
+			text-decoration: none;
+		}
+		.skill:hover { background: rgba(126,182,255,0.2); text-decoration: none; }
+		.skill-group { margin: 0 0 1rem; }
+		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--accent); }
+		blockquote.testimonial {
+			margin: 0.75rem 0;
+			padding: 0.75rem 1rem;
+			border-left: 3px solid var(--accent);
+			background: rgba(0,0,0,0.18);
+			border-radius: 0 0.5rem 0.5rem 0;
+			color: var(--ink);
+			font-size: 0.95rem;
+		}
+		blockquote.testimonial cite {
+			display: block;
+			margin-top: 0.5rem;
+			font-style: normal;
+			color: var(--muted);
+			font-size: 0.85rem;
+		}
+		.refs ul { margin: 0.35rem 0 0; padding-left: 1.2rem; }
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.hresume { padding: 1.25rem 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+		}
+		@media print {
+			html, body {
+				background: #fff !important;
+				color: #111 !important;
+			}
+			.topnav .print-hint, .page-foot .no-print { display: none; }
+			.wrap { max-width: none; padding: 0; }
+			.hresume {
+				box-shadow: none;
+				border: none;
+				border-radius: 0;
+				background: #fff;
+				padding: 0;
+			}
+			h1, h2, h3 { color: #111 !important; }
+			.summary, .meta-line, .contact, blockquote.testimonial cite { color: #333 !important; }
+			a { color: #0645ad !important; text-decoration: underline; }
+			.skill {
+				border: 1px solid #ccc;
+				background: #f5f5f5;
+				color: #111;
+			}
+			.experience, .education { border-color: #ddd; page-break-inside: avoid; }
+			a.home { border-color: #999; color: #111; }
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="topnav" aria-label="Site">
+			<a class="home" href="/">← JoeLevi.com</a>
+			<span class="print-hint">Print-friendly · <a href="javascript:window.print()">Print</a></span>
+		</nav>
+
+		<article class="hresume">
+			<header>
+				<h1 class="fn">Joe Levi</h1>
+				<p class="summary title">a cross-discipline, multi-dimensional problem solver who thinks outside the box – but within reality</p>
+			</header>
+
+			<section aria-labelledby="contact-h">
+				<h2 id="contact-h">Contact</h2>
+				<address class="contact vcard h-card">
+					<span class="fn">Joe Levi</span>
+					<span class="n">
+						<span class="given-name">Joe</span>
+						<span class="family-name">Levi</span>
+					</span>
+					<span class="title summary">a cross-discipline, multi-dimensional problem solver who thinks outside the box – but within reality</span>
+					<div class="adr">
+						<span class="locality">Utah</span>,
+						<span class="country-name">USA</span>
+					</div>
+					<div>
+						<a class="tel" href="tel:+18013178563">+1 (801) 317-8563</a>
+						<span> (voicemail)</span>
+					</div>
+					<div><a class="email" href="mailto:Joe@JoeLevi.com">Joe@JoeLevi.com</a></div>
+					<div><a class="url" href="https://www.JoeLevi.com">www.JoeLevi.com</a></div>
+				</address>
+			</section>
+
+			<section aria-labelledby="exp-h">
+				<h2 id="exp-h">Experience</h2>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Webmaster</h3>
+					<p class="meta-line">
+						<span class="org">Bruker Biomedical Systems</span>
+						·
+						<time class="dtstart" datetime="2025">2025</time>
+						–
+						<span class="dtend">Present</span>
+					</p>
+					<p class="description">(responsibilities to go here)</p>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Lead Technical Specialist</h3>
+					<p class="meta-line">
+						<span class="org">Redoubt Solutions, LLC</span>
+						·
+						<time class="dtstart" datetime="2018">2018</time>
+						–
+						<span class="dtend">Present</span>
+					</p>
+					<p class="description">(responsibilities / bullets to go here — Joe’s VisualCV source unavailable at publish)</p>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">System Architect and Software Test Engineer</h3>
+					<p class="meta-line">
+						<span class="org">Lifetime Products</span>
+						·
+						<time class="dtstart" datetime="2005">2005</time>
+						–
+						<time class="dtend" datetime="2025">2025</time>
+					</p>
+					<p class="description">aka: Webmaster / System Administrator &amp; Senior Web Developer</p>
+					<ul class="description">
+						<li>Developed various corporate websites using Visual Studio 2005 and 2008 with ASP.NET 2.0 and 3.5 connecting to MS SQL Server 2005 via Web Services, ADO.NET, SQL Data Sources, SubSonic, RSS, XML, and LINQ.</li>
+						<li>Lead developer for the Lifetime Products global corporate website (536,000+ monthly page views); decreased the bounce rate from over 90% to less than 73%.</li>
+						<li>Developed B2C e-commerce sites using La Garde’s StoreFront.Net engine and Microsoft’s Commerce Server 2007 engine, both with custom designs (myLifePlay.com, BackyardsInc.com, BuyLifetime.com).</li>
+						<li>BuyLifetime.com: after re-developing and optimizing, the site increased from $1.3 to $5.3 million annual revenue ($1.5 million annual profit).</li>
+						<li>Designed and co-developed merchants.Lifetime.com (B2B e-commerce) to increase accuracy and reduce manual labor required to input merchant orders from emails, faxes, or phone calls.</li>
+						<li>Designed and developed BigStuffPlay.com, a one-page brochure site for commercial play equipment.</li>
+						<li>Implemented site-wide microformats (XFN, hCard, hCal, Geo, tag, vote).</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Board of Directors</h3>
+					<p class="meta-line">
+						<span class="org">United Precious Metals Association</span>
+						·
+						<time class="dtstart" datetime="2015">2015</time>
+						–
+						<time class="dtend" datetime="2021">2021</time>
+					</p>
+					<ul class="description">
+						<li>Along with the other Directors, conducted, managed, and controlled the affairs and business of the Association in conformity with laws and governing documents of the association.</li>
+						<li>Along with the other Directors, responsible for enrollment, discipline, and expulsion of members.</li>
+						<li>Along with the other Directors, responsible for creating and disbanding committees and appointing or removing members of the same as necessary.</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Senior Editor, Journalist, Tech Evangelist</h3>
+					<p class="meta-line">
+						<span class="org">Pocketnow</span>
+						·
+						<time class="dtstart" datetime="2010">2010</time>
+						–
+						<time class="dtend" datetime="2017">2017</time>
+					</p>
+					<ul class="description">
+						<li>As pocketnow.com’s “Android Guy,” developed the community for the site, which had previously centered around Windows Mobile.</li>
+						<li>Researched and wrote articles and editorials; produced HD videos end-to-end (concept, research, scripting, filming, editing, production, post-production, and posting).</li>
+						<li>Covered devices, how-tos, wearables, reviews, videos, and editorials for a broad mobile audience.</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Manager: Regional, Returns, Production, Store, Technical Support</h3>
+					<p class="meta-line">
+						<span class="org">Totally Awesome Computers</span>
+						·
+						<time class="dtstart" datetime="2001">2001</time>
+						–
+						<time class="dtend" datetime="2005">2005</time>
+					</p>
+					<ul class="description">
+						<li>Regional Manager: Balanced staffing needs among stores in the Northern Sales Region.</li>
+						<li>Store Manager: Managed store and production (assembly line) operations and staff; collected over $30,000 in 60–90 day past-due accounts receivable.</li>
+						<li>RMA / Returns Manager: Audited processes resulting in the discovery of a missing $150K inventory; improved processes and forms to drop inventory to $30K with a turn-around time of two weeks; tightened troubleshooting methodologies to reduce unnecessarily RMA’d items.</li>
+						<li>Technical Support Manager: Provided PC technical support for out-of-state customers; handled packaging, shipping, and shipment insurance claims; established protocols and procedures for the newly created department.</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Web Services Manager &amp; Senior Web Developer</h3>
+					<p class="meta-line">
+						<span class="org">ABC Office</span>
+						·
+						<time class="dtstart" datetime="2001">2001</time>
+						–
+						<time class="dtend" datetime="2001">2001</time>
+					</p>
+					<p class="description">(responsibilities to go here)</p>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Interactive Technology Director</h3>
+					<p class="meta-line">
+						<span class="org">BOWG Advertising</span>
+						<span> (Blain Olsen White Gurr Advertising)</span>
+						·
+						<time class="dtstart" datetime="1999">1999</time>
+						–
+						<time class="dtend" datetime="2001">2001</time>
+					</p>
+					<ul class="description">
+						<li>Lead web developer for all client projects.</li>
+						<li>Headed the Quality Control Department to ensure quality deliverables.</li>
+						<li>Built websites, web “pods,” and various interactive projects for a variety of clientele.</li>
+						<li>Led the Digital Signature Initiative to enable faster turn-around of documents requiring legally binding signatures.</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">KnowledgeBase Administrator</h3>
+					<p class="meta-line">
+						<span class="org">Iomega</span>
+						·
+						<time class="dtstart" datetime="1996">1996</time>
+						–
+						<time class="dtend" datetime="1999">1999</time>
+					</p>
+					<ul class="description">
+						<li>Supervised and led the Automated Support Group of the Customer Satisfaction Department.</li>
+						<li>Drove the KnowledgeBase Initiative from initial strategy through two audience-specific implementations.</li>
+						<li>Designed and maintained the award-winning Iomega global customer support website, including individual page presentation, placement, and display; site navigation and graphics.</li>
+					</ul>
+				</div>
+
+				<div class="experience vevent vcard">
+					<h3 class="summary fn">Account Manager &amp; Escalations Technician</h3>
+					<p class="meta-line">
+						<span class="org">Prodigy</span>
+						<span> (via SPS Payment Systems)</span>
+						·
+						<time class="dtstart" datetime="1994">1994</time>
+						–
+						<time class="dtend" datetime="1995">1995</time>
+					</p>
+					<ul class="description">
+						<li>Working for the Prodigy account, liaison between first/second level phone technicians and Research &amp; Development.</li>
+						<li>Customer support technician.</li>
+						<li>Developed prototype of the department intranet.</li>
+						<li>Head of “Hearing Impaired” support group which troubleshot using TDD/TTY terminals and Relay Operators.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section aria-labelledby="edu-h">
+				<h2 id="edu-h">Education</h2>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">Microsoft Azure Data Fundamentals</h3>
+					<p class="meta-line">
+						<span class="org">Microsoft</span>
+						·
+						<time class="dtstart" datetime="2021-06">June 2021</time>
+					</p>
+					<p class="description">Virtual Training Day 1 and Day 2</p>
+				</div>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">Continuous Learning</h3>
+					<p class="meta-line">
+						<span class="org">PluralSight</span>
+						·
+						<time class="dtstart" datetime="2021">2021</time>
+						–
+						<span class="dtend">ongoing</span>
+					</p>
+					<ul class="description">
+						<li>Creating Security Baselines… (in progress)</li>
+						<li>Ethical Hacking: Social Engineering</li>
+						<li>Security Management</li>
+						<li>Investigations and Incident Management</li>
+					</ul>
+				</div>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">Bachelor of Science, Information Systems &amp; Technology</h3>
+					<p class="meta-line">
+						<span class="org">Weber State University</span>
+						— Goddard School of Business &amp; Economics (AACSB)
+					</p>
+				</div>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">Associate of Arts, Information Systems &amp; Technologies</h3>
+					<p class="meta-line"><span class="org">Weber State University</span></p>
+				</div>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">Associate of Science, General Studies</h3>
+					<p class="meta-line"><span class="org">Weber State University</span></p>
+				</div>
+
+				<div class="education vevent vcard">
+					<h3 class="summary fn">High Honors Diploma</h3>
+					<p class="meta-line">
+						<span class="org">Layton High</span>
+						· 3.72 / 4.0
+					</p>
+					<p class="description">FBLA, STEC, swimming, art award</p>
+				</div>
+			</section>
+
+			<section class="skills" aria-labelledby="skills-h">
+				<h2 id="skills-h">Skills</h2>
+
+				<div class="skill-group">
+					<h3>System Administrator</h3>
+					<p>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/System_administrator">Windows Server</a>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/Internet_Information_Services">IIS</a>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server">SQL Server</a>
+						<a class="skill" rel="tag">Firewall administration</a>
+						<a class="skill" rel="tag">Server security &amp; monitoring</a>
+						<a class="skill" rel="tag">Backups &amp; automation</a>
+					</p>
+				</div>
+
+				<div class="skill-group">
+					<h3>.NET</h3>
+					<p>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/ASP.NET">ASP.NET</a>
+						<a class="skill" rel="tag">ADO.NET</a>
+						<a class="skill" rel="tag">Web Services</a>
+						<a class="skill" rel="tag">LINQ</a>
+						<a class="skill" rel="tag">Visual Studio</a>
+						<a class="skill" rel="tag">SubSonic</a>
+						<a class="skill" rel="tag">Commerce Server / StoreFront.Net</a>
+					</p>
+				</div>
+
+				<div class="skill-group">
+					<h3>Networking</h3>
+					<p>
+						<a class="skill" rel="tag">TCP/IP</a>
+						<a class="skill" rel="tag">Wireless / long-range links</a>
+						<a class="skill" rel="tag">DNS / hosting</a>
+						<a class="skill" rel="tag">Mesh (Meshtastic / LoRa)</a>
+					</p>
+				</div>
+
+				<div class="skill-group">
+					<h3>Encryption &amp; Security</h3>
+					<p>
+						<a class="skill" rel="tag">Encryption</a>
+						<a class="skill" rel="tag">Security baselines</a>
+						<a class="skill" rel="tag">Ethical hacking / social engineering awareness</a>
+						<a class="skill" rel="tag">Incident management</a>
+					</p>
+				</div>
+
+				<div class="skill-group">
+					<h3>HTML5 &amp; CSS3 SME</h3>
+					<p>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/HTML5">HTML5</a>
+						<a class="skill" rel="tag" href="https://en.wikipedia.org/wiki/CSS">CSS3</a>
+						<a class="skill" rel="tag" href="https://microformats.org/">Microformats</a>
+						<a class="skill" rel="tag">hCard / hResume / hCalendar</a>
+						<a class="skill" rel="tag">Web standards &amp; mentoring</a>
+					</p>
+				</div>
+			</section>
+
+			<section class="refs" aria-labelledby="refs-h">
+				<h2 id="refs-h">References &amp; Testimonials</h2>
+				<p>References available upon request. Contact:</p>
+				<ul>
+					<li>Phone (voicemail): <a href="tel:+18013178563">+1 (801) 317-8563</a></li>
+					<li>Email: <a href="mailto:Joe@JoeLevi.com">Joe@JoeLevi.com</a></li>
+				</ul>
+				<p class="meta-line">Additional named references and testimonial quotes can be supplied on request (source VisualCV content was unavailable at publish time).</p>
+			</section>
+
+			<section aria-labelledby="reading-h">
+				<h2 id="reading-h">Recent Reading</h2>
+				<ul class="description">
+					<li>(two books — titles to be restored from Joe’s source list)</li>
+				</ul>
+			</section>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a></p>
+			<p class="no-print">Marked up with <a href="https://microformats.org/wiki/hresume">hResume</a> · https://www.joelevi.com/resume</p>
+		</footer>
+	</div>
+</body>
+</html>
