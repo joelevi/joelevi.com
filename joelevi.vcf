@@ -2,11 +2,9 @@ BEGIN:VCARD
 VERSION:3.0
 N:Levi;Joe;;;
 FN:Joe Levi
-ORG:Redoubt Solutions, LLC
 TITLE:Cross-discipline problem solver
 TEL;TYPE=CELL,VOICE:+18013178563
 EMAIL;TYPE=INTERNET:Joe@JoeLevi.com
 URL:https://www.joelevi.com
-ADR;TYPE=WORK:;;PO Box 381;Newton;UT;84327;USA
 NOTE:Amateur radio callsign KF7NWA. Author of Miles the Muskrat.
 END:VCARD
