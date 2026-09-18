@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="30" viewBox="0 0 160 30" role="img" aria-label="hCard">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3d8c1a"/>
+      <stop offset="100%" stop-color="#7bc23a"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="30" rx="3" ry="3" fill="#2a2a2a"/>
+  <!-- icon well -->
+  <rect x="2" y="2" width="26" height="26" rx="2" fill="#1e1e1e"/>
+  <!-- nested L marks -->
+  <path d="M7 22 V8 H12 V17 H21 V22 Z" fill="#2d6b14"/>
+  <path d="M9 20 V10 H14 V15 H19 V20 Z" fill="#4fa01f"/>
+  <path d="M11 18 V12 H16 V14 H17 V18 Z" fill="#8fd94a"/>
+  <!-- label -->
+  <rect x="30" y="2" width="128" height="26" rx="2" fill="url(#g)"/>
+  <text x="94" y="20" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#ffffff">HCARD</text>
+</svg>
