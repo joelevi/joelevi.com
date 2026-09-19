@@ -6,7 +6,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 
 ## Pages
 
-- [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, résumé, Miles / Mesh / GitHub, vCard and PGP downloads
+- [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, résumé, Miles / Mesh / GitHub, vCard and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
 
 ## Contact
@@ -19,6 +19,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 - PGP: https://www.joelevi.com/joe-levi-public-key.asc
 - vCard: https://www.joelevi.com/joelevi.vcf
 - GitHub: https://github.com/joelevi
+- LinkedIn: https://www.linkedin.com/in/joelevi
 
 ## Experience (summary)
 
