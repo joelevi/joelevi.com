@@ -22,7 +22,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 
 ## Experience (summary)
 
-- **Webmaster** — Bruker Biomedical Systems — 2025–Present
+- **Webmaster** — Bruker Biomedical Systems (ELITechGroup / Logan, UT) — 2025–Present — Manage and develop company websites (HTML/CSS/JS); content, SEO, security, performance, analytics; user support; digital marketing support (video, social, design)
 - **Lead Technical Specialist** — Redoubt Solutions, LLC — 2018–Present — Work-from-home / school-from-home workstations; wired/wireless and multi-site Wi-Fi & mesh; Plex/NAS/Unraid media servers; gaming and crypto mining rigs; WordPress/site security; smart home (Home Assistant, ESPHome/Tasmota, UniFi Protect, MQTT, Zigbee/Z-Wave, and related platforms); web builds for individuals, political, and community groups
 - **System Architect and Software Test Engineer** — Lifetime Products — 2005–2025 — Regression/acceptance testing leadership; UI and non-UI defect management; multi-program test strategy; Windows/IIS/SQL/firewall ops and security monitoring; mobile/web architecture; HTML5/CSS3/JS mentoring and standards
 - **Board of Directors** — United Precious Metals Association — 2015–2021 — Governance, committees, strategic initiatives
