@@ -1,0 +1,23 @@
+# Joe Levi
+
+> Personal site for Joe Levi — digital business card and résumé. Cache Valley, Utah. Author of Miles the Muskrat; amateur radio KF7NWA; web, networking, and systems work.
+
+Canonical host is `www.joelevi.com` (apex redirects to www).
+
+## Pages
+
+- [Home (digital business card)](https://www.joelevi.com/): Contact card with Signal, email, phone, résumé, Miles / Mesh / GitHub links, vCard and PGP key download
+- [Résumé](https://www.joelevi.com/resume/): Full hResume — experience, education, skills, references & testimonials, recent reading (Amazon Associates links)
+
+## Related sites
+
+- [Miles the Muskrat](https://www.milesthemuskrat.com/): Children's book series hub
+- [Cache Valley Mesh](https://cachevalleymesh.com/): Local mesh / Meshtastic community site
+- [GitHub](https://github.com/joelevi): Code and projects
+
+## Contact
+
+- Email: Joe@JoeLevi.com
+- Phone (voicemail): +1 (801) 317-8563
+- PGP: https://www.joelevi.com/joe-levi-public-key.asc
+- vCard: https://www.joelevi.com/joelevi.vcf
