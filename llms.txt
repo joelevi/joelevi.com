@@ -1,23 +1,57 @@
 # Joe Levi
 
-> Personal site for Joe Levi — digital business card and résumé. Cache Valley, Utah. Author of Miles the Muskrat; amateur radio KF7NWA; web, networking, and systems work.
+> A cross-discipline, multi-dimensional problem solver who thinks outside the box — but within reality. Based in Utah, USA. Amateur radio callsign KF7NWA. Author of the Miles the Muskrat children's book series.
 
-Canonical host is `www.joelevi.com` (apex redirects to www).
+Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResume): https://www.joelevi.com/resume/
 
 ## Pages
 
-- [Home (digital business card)](https://www.joelevi.com/): Contact card with Signal, email, phone, résumé, Miles / Mesh / GitHub links, vCard and PGP key download
-- [Résumé](https://www.joelevi.com/resume/): Full hResume — experience, education, skills, references & testimonials, recent reading (Amazon Associates links)
-
-## Related sites
-
-- [Miles the Muskrat](https://www.milesthemuskrat.com/): Children's book series hub
-- [Cache Valley Mesh](https://cachevalleymesh.com/): Local mesh / Meshtastic community site
-- [GitHub](https://github.com/joelevi): Code and projects
+- [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, résumé, Miles / Mesh / GitHub, vCard and PGP downloads
+- [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
 
 ## Contact
 
 - Email: Joe@JoeLevi.com
 - Phone (voicemail): +1 (801) 317-8563
+- Location: Utah, USA
 - PGP: https://www.joelevi.com/joe-levi-public-key.asc
 - vCard: https://www.joelevi.com/joelevi.vcf
+- GitHub: https://github.com/joelevi
+
+## Experience (summary)
+
+- **Webmaster** — Bruker Biomedical Systems — 2025–Present
+- **Lead Technical Specialist** — Redoubt Solutions, LLC — 2018–Present — Work-from-home / school-from-home workstations; wired/wireless and multi-site Wi-Fi & mesh; Plex/NAS/Unraid media servers; gaming and crypto mining rigs; WordPress/site security; smart home (Home Assistant, ESPHome/Tasmota, UniFi Protect, MQTT, Zigbee/Z-Wave, and related platforms); web builds for individuals, political, and community groups
+- **System Architect and Software Test Engineer** — Lifetime Products — 2005–2025 — Regression/acceptance testing leadership; UI and non-UI defect management; multi-program test strategy; Windows/IIS/SQL/firewall ops and security monitoring; mobile/web architecture; HTML5/CSS3/JS mentoring and standards
+- **Board of Directors** — United Precious Metals Association — 2015–2021 — Governance, committees, strategic initiatives
+- **Senior Editor, Journalist, Tech Evangelist** — Pocketnow — 2010–2017 — Android/tech writing, reviews, How-To, HD video for site and YouTube; smart home, privacy, and security coverage
+- **Manager (Regional, Returns, Production, Store, Technical Support)** — Totally Awesome Computers — 2001–2005 — Regional staffing; RMA process overhaul (inventory reduction); store/production ops; AR collections; out-of-state tech support; built Technical Support department protocols
+- **Web Services Manager & Senior Web Developer** — ABC Office — 2001 — Team leadership; large-site performance and markup fixes; B2C cart across ~15,000 pages in ~90 days
+- **Technology Director, Interactive** — BOWG Advertising (Blain Olsen White Gurr) — 1999–2001 — Interactive sites/web pods; QC leadership; Digital Signature Initiative
+- **KnowledgeBase Administrator** — Iomega — 1996–1999 — Automated Support Group; award-winning global support site; KnowledgeBase strategy (two iterations)
+- **Account Manager & Escalations Technician** — Prodigy (via SPS Payment Systems) — 1994–1995 — Liaison to R&D; departmental intranet/KB prototype; escalations; Hearing Impaired support (TDD/TTY)
+
+## Education
+
+- Microsoft Azure Data Fundamentals — Microsoft — June 2021 (Virtual Training Days)
+- Continuous learning — PluralSight — 2021–ongoing (security baselines in Azure, ethical hacking/social engineering, security management, investigations & incident management)
+- B.S. Information Systems & Technology — Weber State University, Goddard School of Business & Economics (AACSB)
+- A.A. Information Systems & Technologies; A.S. General Studies — Weber State University
+- High Honors Diploma (3.72/4.0) — Layton High — FBLA (Publications & Desktop Publishing Co-Chair), STEC, Varsity Letter Co-Ed Competitive Swimming, Excellence in Art Award
+
+## Skills
+
+- **System administration:** Windows Server, IIS, SQL Server, firewalls, server security/monitoring, backups
+- **.NET:** ASP.NET, ADO.NET, Web Services, LINQ, Visual Studio, related Microsoft web stack
+- **Networking:** TCP/IP, wireless/long-range, DNS/hosting, UniFi/Ubiquiti, mesh (Meshtastic/LoRa), HAMnet/AREDN
+- **Encryption & security:** SSL/TLS, PGP, x.509, MFA/2FA, security baselines, incident awareness
+- **Web development:** HTML5, CSS3, PHP, JavaScript, Vercel, GitHub, SEO, GEO, Schema.org, OpenGraph, microformats (hCard/hResume), agentic development, web standards & mentoring
+
+## Related sites
+
+- [Miles the Muskrat](https://www.milesthemuskrat.com/) — children's picture-book series hub (Amazon Associates on that site)
+- [Cache Valley Mesh](https://cachevalleymesh.com/) — local mesh networking community
+
+## Optional
+
+- Résumé includes named references and testimonials; recent reading titles link via Amazon Associates on the résumé page (see footer disclosure there)
