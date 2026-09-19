@@ -235,6 +235,42 @@
 			}
 		}
 
+	
+		/* Headshot intro: full-view circle → settle into card */
+		#profilePhotoIntro {
+			position: fixed;
+			z-index: 10000;
+			margin: 0;
+			border-radius: 50%;
+			object-fit: cover;
+			pointer-events: none;
+			-webkit-user-select: none;
+			user-select: none;
+			box-shadow:
+				0 0 0 0.35rem rgba(232, 228, 224, 0.95),
+				0 1.25rem 3rem rgba(0, 0, 0, 0.35);
+			will-change: top, left, width, height, transform;
+		}
+		body.intro-photo-active {
+			overflow: hidden;
+		}
+		body.intro-photo-active article.vcard {
+			opacity: 0.35;
+			filter: blur(1px);
+			transition: opacity 0.6s ease, filter 0.6s ease;
+		}
+		body.intro-photo-settling article.vcard {
+			opacity: 1;
+			filter: none;
+		}
+		@media (prefers-reduced-motion: reduce) {
+			#profilePhotoIntro { display: none !important; }
+			body.intro-photo-active article.vcard {
+				opacity: 1;
+				filter: none;
+			}
+		}
+
 	</style>
 	
 	<link rel="canonical" href="https://www.JoeLevi.com" />
@@ -407,6 +443,127 @@
                         : (srcs[l].pause(), (c.style.display = "none"), (a.style.display = "block"));
                 });
         });
+</script>
+
+
+<script>
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  function ready(fn) {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      setTimeout(fn, 0);
+    } else {
+      document.addEventListener("DOMContentLoaded", fn);
+    }
+  }
+
+  function wait(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
+
+  ready(async function () {
+    var photo = document.getElementById("profilePhoto");
+    if (!photo || !photo.complete) {
+      if (photo) {
+        await new Promise(function (resolve) {
+          photo.addEventListener("load", resolve, { once: true });
+          photo.addEventListener("error", resolve, { once: true });
+        });
+      } else {
+        return;
+      }
+    }
+
+    // Ensure layout (incl. Fold compact CSS) has settled
+    await wait(40);
+    var end = photo.getBoundingClientRect();
+    if (!end.width || !end.height) return;
+
+    var size = Math.min(window.innerWidth, window.innerHeight) * 0.92;
+    var startTop = (window.innerHeight - size) / 2;
+    var startLeft = (window.innerWidth - size) / 2;
+
+    var clone = photo.cloneNode(true);
+    clone.id = "profilePhotoIntro";
+    clone.removeAttribute("itemprop");
+    clone.alt = "";
+    clone.setAttribute("aria-hidden", "true");
+    clone.style.top = startTop + "px";
+    clone.style.left = startLeft + "px";
+    clone.style.width = size + "px";
+    clone.style.height = size + "px";
+    document.body.appendChild(clone);
+
+    document.body.classList.add("intro-photo-active");
+    photo.style.visibility = "hidden";
+
+    // Hold full-view beat
+    await wait(1100);
+
+    // Remeasure in case of late layout
+    end = photo.getBoundingClientRect();
+    document.body.classList.add("intro-photo-settling");
+
+    var fly = clone.animate(
+      [
+        {
+          top: startTop + "px",
+          left: startLeft + "px",
+          width: size + "px",
+          height: size + "px",
+          offset: 0,
+        },
+        {
+          top: end.top - 10 + "px",
+          left: end.left + "px",
+          width: end.width + "px",
+          height: end.height + "px",
+          offset: 0.82,
+        },
+        {
+          top: end.top + 4 + "px",
+          left: end.left + "px",
+          width: end.width + "px",
+          height: end.height + "px",
+          offset: 0.91,
+        },
+        {
+          top: end.top + "px",
+          left: end.left + "px",
+          width: end.width + "px",
+          height: end.height + "px",
+          offset: 1,
+        },
+      ],
+      {
+        duration: 1150,
+        easing: "cubic-bezier(0.22, 1.15, 0.36, 1)",
+        fill: "forwards",
+      }
+    );
+    await fly.finished;
+
+    // Soft settle bounce
+    var bounce = clone.animate(
+      [
+        { transform: "scale(1)" },
+        { transform: "scale(1.07)" },
+        { transform: "scale(0.97)" },
+        { transform: "scale(1.02)" },
+        { transform: "scale(1)" },
+      ],
+      { duration: 520, easing: "ease-out", fill: "forwards" }
+    );
+    await bounce.finished;
+
+    clone.remove();
+    photo.style.visibility = "";
+    document.body.classList.remove("intro-photo-active", "intro-photo-settling");
+  });
+})();
 </script>
 
 </body>
