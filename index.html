@@ -237,7 +237,8 @@
 
 	
 
-		/* Headshot intro: full-view circle → settle into card (no bounce) */
+
+		/* Headshot intro + name letters + action fly-in */
 		#profilePhotoIntro {
 			position: fixed;
 			z-index: 10001;
@@ -265,9 +266,23 @@
 		body.intro-photo-active {
 			overflow: hidden;
 		}
+		.name .letter {
+			display: inline-block;
+			will-change: transform, opacity;
+		}
+		body.intro-pending #cta,
+		body.intro-pending .actionsC {
+			opacity: 0;
+			transform: translateY(32px) scale(0.9);
+		}
 		@media (prefers-reduced-motion: reduce) {
 			#profilePhotoIntro,
 			#introPhotoScrim { display: none !important; }
+			body.intro-pending #cta,
+			body.intro-pending .actionsC {
+				opacity: 1;
+				transform: none;
+			}
 		}
 
 	</style>
@@ -447,7 +462,7 @@
 
 <script>
 (function () {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function ready(fn) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -463,9 +478,100 @@
     });
   }
 
+  function splitLetters(el) {
+    var text = el.textContent;
+    el.textContent = "";
+    var letters = [];
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      var span = document.createElement("span");
+      span.className = "letter";
+      span.textContent = ch === " " ? "\u00a0" : ch;
+      span.style.opacity = "0";
+      span.style.transform = "translateY(1.1em) rotate(-8deg)";
+      el.appendChild(span);
+      letters.push(span);
+    }
+    return letters;
+  }
+
+  function animateLetters(letters) {
+    return Promise.all(
+      letters.map(function (span, i) {
+        return span.animate(
+          [
+            { opacity: 0, transform: "translateY(1.1em) rotate(-8deg)" },
+            { opacity: 1, transform: "translateY(0) rotate(0deg)" },
+          ],
+          {
+            duration: 520,
+            delay: i * 55,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            fill: "forwards",
+          }
+        ).finished;
+      })
+    );
+  }
+
+  function flyButtons() {
+    var nodes = Array.prototype.slice.call(
+      document.querySelectorAll("#cta, .actions .actionsC")
+    );
+    return Promise.all(
+      nodes.map(function (node, i) {
+        node.style.opacity = "0";
+        return node.animate(
+          [
+            { opacity: 0, transform: "translateY(36px) scale(0.88)" },
+            { opacity: 1, transform: "translateY(0) scale(1)" },
+          ],
+          {
+            duration: 580,
+            delay: i * 70,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            fill: "forwards",
+          }
+        ).finished;
+      })
+    );
+  }
+
   ready(async function () {
+    document.body.classList.add("intro-pending");
+
+    var given = document.querySelector(".name .p-given-name");
+    var family = document.querySelector(".name .p-family-name");
+    var letters = [];
+    if (given && family) {
+      letters = splitLetters(given).concat(
+        (function () {
+          var space = document.createElement("span");
+          space.className = "letter";
+          space.textContent = "\u00a0";
+          space.style.opacity = "0";
+          given.parentNode.insertBefore(space, family);
+          return [space];
+        })().concat(splitLetters(family))
+      );
+    }
+
+    if (reduce) {
+      letters.forEach(function (l) {
+        l.style.opacity = "1";
+        l.style.transform = "none";
+      });
+      document.body.classList.remove("intro-pending");
+      return;
+    }
+
     var photo = document.getElementById("profilePhoto");
-    if (!photo) return;
+    if (!photo) {
+      await animateLetters(letters);
+      document.body.classList.remove("intro-pending");
+      await flyButtons();
+      return;
+    }
     if (!photo.complete) {
       await new Promise(function (resolve) {
         photo.addEventListener("load", resolve, { once: true });
@@ -475,7 +581,12 @@
 
     await wait(40);
     var end = photo.getBoundingClientRect();
-    if (!end.width || !end.height) return;
+    if (!end.width || !end.height) {
+      await animateLetters(letters);
+      document.body.classList.remove("intro-pending");
+      await flyButtons();
+      return;
+    }
 
     var size = Math.min(window.innerWidth, window.innerHeight) * 0.92;
     var startTop = (window.innerHeight - size) / 2;
@@ -499,11 +610,9 @@
     document.body.classList.add("intro-photo-active");
     photo.style.visibility = "hidden";
 
-    // Hold full-view beat over 80% dark page
     await wait(1100);
 
     end = photo.getBoundingClientRect();
-
     var duration = 1000;
     var easing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
 
@@ -536,6 +645,11 @@
     scrim.remove();
     photo.style.visibility = "";
     document.body.classList.remove("intro-photo-active");
+
+    // Name letters, then buttons
+    await animateLetters(letters);
+    document.body.classList.remove("intro-pending");
+    await flyButtons();
   });
 })();
 </script>
