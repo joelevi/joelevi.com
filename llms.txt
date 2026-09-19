@@ -52,6 +52,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 
 - [Miles the Muskrat](https://www.milesthemuskrat.com/) — children's picture-book series hub (Amazon Associates on that site)
 - [Cache Valley Mesh](https://cachevalleymesh.com/) — local mesh networking community
+- [Crave Broadband](https://www.cravebroadband.com/) — https://CraveBroadband.com
 
 ## Optional
 
