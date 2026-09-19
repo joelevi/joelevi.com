@@ -149,6 +149,68 @@
 		}
 		
 		body{margin:0 auto;width:100%;padding:0;max-width:30rem;color:#eee;position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
+	
+		/* Fit digital card on short/tall cover screens (e.g. Pixel Fold closed ~1080×2364) */
+		@media (max-height: 920px) {
+			main {
+				margin-top: 2.25rem !important;
+				padding: 0.5rem 0.75rem 0.75rem !important;
+			}
+			#profilePhoto {
+				width: 6.5rem !important;
+				height: 6.5rem !important;
+				margin-top: -3.75rem !important;
+			}
+			#info {
+				margin-top: 0.5rem !important;
+			}
+			.jobtitle.description {
+				font-size: 0.85rem !important;
+				line-height: 1.3 !important;
+				max-width: 22rem;
+			}
+			#cta {
+				margin-top: 0.85rem !important;
+				padding: 0.7rem 1.1rem !important;
+			}
+			.actions {
+				margin-top: 0.75rem !important;
+			}
+			.actionBtn {
+				padding: 0.2rem !important;
+			}
+			.actionBtn a {
+				padding: 0.7rem !important;
+			}
+			.actionBtn p {
+				margin: 0.25rem 0 0 !important;
+				font-size: 0.75rem !important;
+			}
+			.icon {
+				width: 1.25rem !important;
+				height: 1.25rem !important;
+			}
+			#topActions a {
+				padding: 0.65rem !important;
+			}
+			article {
+				box-shadow: 0 0 1.5rem 0.35rem rgba(232, 228, 224, 0.2) !important;
+			}
+		}
+		@media (max-height: 780px) {
+			main { margin-top: 1.5rem !important; }
+			#profilePhoto {
+				width: 5.5rem !important;
+				height: 5.5rem !important;
+				margin-top: -3rem !important;
+			}
+			.jobtitle.description { font-size: 0.8rem !important; }
+			#cta { margin-top: 0.6rem !important; padding: 0.55rem 1rem !important; }
+			.actions { margin-top: 0.5rem !important; }
+			.actionBtn a { padding: 0.55rem !important; }
+			.actionBtn p { font-size: 0.7rem !important; }
+		}
+
 	</style>
 	
 	<link rel="canonical" href="https://www.JoeLevi.com" />
@@ -178,14 +240,7 @@
 			<p class="jobtitle description tagline p-note note p-role p-job-title" itemprop="jobTitle">
 				a cross-discipline, multi-dimensional problem solver who thinks outside the box &mdash; but within reality&trade;
 			</p>
-			<p class="bizname p-org org">
-				Redoubt Solutions, LLC
-			</p>
-			
-			<p class="bizaddr p-adr h-adr adr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-				<span class="p-post-office-box post-office-box">PO Box <span itemprop="postOfficeBoxNumber">381</span></span>, <span class="p-locality locality" itemprop="addressLocality">Newton</span>, <abbr title="Utah" class="p-region region" itemprop="addressRegion">UT</abbr> <span class="p-postal-code postal-code" itemprop="postalCode">84327</span> <abbr class="p-country-name country-name" itemprop="addressCountry" title="These United States of America">USA</abbr>
-			</p>
-		</div>
+</div>
 		
 		<a id="cta" rel="noreferrer" download="" target="_blank" aria-label="Save Contact" href="joelevi.vcf"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="7" r="4" style="fill:none;stroke:#fff;stroke-width:2.29px" transform="matrix(.875 0 0 .875 4.563 -.625)"></circle><path d="M86 181c0-3.863 3.137-7 7-7s7 3.137 7 7" style="fill:none;stroke:#fff;stroke-width:2px" transform="translate(-81 -163)"></path><path d="M104 168v6m3-3-3 3-3-3" style="fill:none;fill-rule:nonzero;stroke:#fff;stroke-width:2px" transform="translate(-92 -152)"></path></svg></div>
 		<p class="iconColor">Save Contact</p></a>
@@ -213,7 +268,7 @@
 			<div class="actionsC"><div class="actionBtn"><a href="https://cachevalleymesh.com" target="_blank" rel="noopener noreferrer" aria-label="Cache Valley Mesh"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><circle cx="5" cy="12" r="2" style="fill:none;stroke:#fff;stroke-width:2px"/><circle cx="19" cy="5" r="2" style="fill:none;stroke:#fff;stroke-width:2px"/><circle cx="19" cy="19" r="2" style="fill:none;stroke:#fff;stroke-width:2px"/><path d="M7 12h10M16.2 6.5 7.8 11M16.2 17.5 7.8 13" style="fill:none;stroke:#fff;stroke-width:2px"/></svg></div></a> <p class="textColor">Mesh</p></div></div>
 			<div class="actionsC"><div class="actionBtn"><a href="https://github.com/joelevi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.586 2 12.253c0 4.537 2.865 8.383 6.839 9.743.5.094.682-.222.682-.49 0-.242-.009-.883-.014-1.733-2.782.62-3.369-1.37-3.369-1.37-.454-1.177-1.11-1.49-1.11-1.49-.908-.635.069-.622.069-.622 1.003.072 1.532 1.055 1.532 1.055.892 1.558 2.341 1.108 2.91.847.091-.66.35-1.108.636-1.363-2.22-.258-4.555-1.137-4.555-5.06 0-1.118.39-2.032 1.03-2.75-.103-.258-.447-1.3.098-2.71 0 0 .84-.274 2.75 1.05A9.35 9.35 0 0 1 12 7.14c.85.004 1.705.117 2.504.343 1.909-1.324 2.747-1.05 2.747-1.05.546 1.41.202 2.452.1 2.71.64.718 1.028 1.632 1.028 2.75 0 3.934-2.339 4.8-4.566 5.052.359.316.679.94.679 1.896 0 1.368-.012 2.47-.012 2.806 0 .27.18.588.688.488C19.138 20.632 22 16.786 22 12.253 22 6.586 17.523 2 12 2z" style="fill:#fff"/></svg></div></a> <p class="textColor">GitHub</p></div></div>
 			<div class="actionsC"><div class="actionBtn"><a class="u-url url" href="https://www.linkedin.com/in/joelevi" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn" itemprop="sameAs"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path fill="#fff" d="M6.94 6.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.5 9h3v12h-3V9zm5.5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V21h-3v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9V9z"/></svg></div></a> <p class="textColor">LinkedIn</p></div></div>
-			<div class="actionsC"><div class="actionBtn"><a class="u-url url" href="https://www.qrz.com/db/KF7NWA" target="_blank" rel="noopener noreferrer" aria-label="Amateur Radio QRZ KF7NWA" title="KF7NWA on QRZ"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M12 22V10" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/><circle cx="12" cy="7" r="2.5" style="fill:none;stroke:#fff;stroke-width:2px"/><path d="M7 11.5a7 7 0 0 1 10 0" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/><path d="M4.5 8.5a11 11 0 0 1 15 0" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/></svg></div></a> <p class="textColor">QRZ</p></div></div>
+			<div class="actionsC"><div class="actionBtn"><a class="u-url url" href="https://www.qrz.com/db/KF7NWA" target="_blank" rel="noopener noreferrer" aria-label="Amateur Radio QRZ KF7NWA" title="KF7NWA on QRZ"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M12 21V9" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/><path d="M8 12h8M9.5 15h5M10.5 18h3" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/><path d="M9 21h6" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linecap:round"/><circle cx="12" cy="6.5" r="1.75" style="fill:#fff"/><path d="M6.2 8.2a7.2 7.2 0 0 1 11.6 0" style="fill:none;stroke:#fff;stroke-width:1.75px;stroke-linecap:round"/><path d="M3.8 5.6a10.5 10.5 0 0 1 16.4 0" style="fill:none;stroke:#fff;stroke-width:1.75px;stroke-linecap:round"/></svg></div></a> <p class="textColor">QRZ</p></div></div>
 
 
 			<!-- <div class="actionsC"><div class="actionBtn"><a href="https://www.JoeLevi.com/articles" target="_blank" rel="noopener noreferrer" aria-label="Articles"><div class="icon iconColor" itemprop="url"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="12" cy="12" r="10" style="fill:none;stroke:#fff;stroke-width:2px"></circle><ellipse cx="40" cy="40" rx="4" ry="10" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linejoin:miter" transform="translate(-28 -28)"></ellipse><path d="M40 50s-2-4-2-10 2-10 2-10" style="fill:none;stroke:#fff;stroke-width:2px" transform="rotate(-90 11.5 39.5)"></path></g></g></svg></div></a> <p class="textColor">
