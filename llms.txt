@@ -14,6 +14,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 - Signal (Preferred): https://signal.me/#eu/kez2d3EnvXoe-gjPhHb-k60FX4wUPr8ib7FzcJlDBEMWAqf4C7NGHIFJYrARuQKG
 - Email: Joe@JoeLevi.com
 - Phone (voicemail): +1 (801) 317-8563
+- Winlink: KF7NWA
 - Location: Utah, USA
 - PGP: https://www.joelevi.com/joe-levi-public-key.asc
 - vCard: https://www.joelevi.com/joelevi.vcf
