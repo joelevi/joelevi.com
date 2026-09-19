@@ -6,7 +6,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 
 ## Pages
 
-- [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, résumé, Miles / Mesh / GitHub, vCard and PGP downloads
+- [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, QRZ (KF7NWA), résumé, Miles / Mesh / GitHub, vCard and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
 
 ## Contact
@@ -15,6 +15,7 @@ Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResum
 - Email: Joe@JoeLevi.com
 - Phone (voicemail): +1 (801) 317-8563
 - Winlink: KF7NWA
+- QRZ: https://www.qrz.com/db/KF7NWA
 - Location: Utah, USA
 - PGP: https://www.joelevi.com/joe-levi-public-key.asc
 - vCard: https://www.joelevi.com/joelevi.vcf
