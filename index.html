@@ -236,10 +236,11 @@
 		}
 
 	
-		/* Headshot intro: full-view circle → settle into card */
+
+		/* Headshot intro: full-view circle → settle into card (no bounce) */
 		#profilePhotoIntro {
 			position: fixed;
-			z-index: 10000;
+			z-index: 10001;
 			margin: 0;
 			border-radius: 50%;
 			object-fit: cover;
@@ -250,26 +251,23 @@
 			box-shadow:
 				0 0 0 0.15rem rgba(232, 228, 224, 0.9),
 				0 1.25rem 3rem rgba(0, 0, 0, 0.35);
-			will-change: top, left, width, height, transform;
+			will-change: top, left, width, height;
+		}
+		#introPhotoScrim {
+			position: fixed;
+			inset: 0;
+			z-index: 10000;
+			background: #000;
+			opacity: 0.8;
+			pointer-events: none;
+			will-change: opacity;
 		}
 		body.intro-photo-active {
 			overflow: hidden;
 		}
-		body.intro-photo-active article.vcard {
-			opacity: 0.35;
-			filter: blur(1px);
-			transition: opacity 0.6s ease, filter 0.6s ease;
-		}
-		body.intro-photo-settling article.vcard {
-			opacity: 1;
-			filter: none;
-		}
 		@media (prefers-reduced-motion: reduce) {
-			#profilePhotoIntro { display: none !important; }
-			body.intro-photo-active article.vcard {
-				opacity: 1;
-				filter: none;
-			}
+			#profilePhotoIntro,
+			#introPhotoScrim { display: none !important; }
 		}
 
 	</style>
@@ -467,18 +465,14 @@
 
   ready(async function () {
     var photo = document.getElementById("profilePhoto");
-    if (!photo || !photo.complete) {
-      if (photo) {
-        await new Promise(function (resolve) {
-          photo.addEventListener("load", resolve, { once: true });
-          photo.addEventListener("error", resolve, { once: true });
-        });
-      } else {
-        return;
-      }
+    if (!photo) return;
+    if (!photo.complete) {
+      await new Promise(function (resolve) {
+        photo.addEventListener("load", resolve, { once: true });
+        photo.addEventListener("error", resolve, { once: true });
+      });
     }
 
-    // Ensure layout (incl. Fold compact CSS) has settled
     await wait(40);
     var end = photo.getBoundingClientRect();
     if (!end.width || !end.height) return;
@@ -486,6 +480,10 @@
     var size = Math.min(window.innerWidth, window.innerHeight) * 0.92;
     var startTop = (window.innerHeight - size) / 2;
     var startLeft = (window.innerWidth - size) / 2;
+
+    var scrim = document.createElement("div");
+    scrim.id = "introPhotoScrim";
+    document.body.appendChild(scrim);
 
     var clone = photo.cloneNode(true);
     clone.id = "profilePhotoIntro";
@@ -501,12 +499,13 @@
     document.body.classList.add("intro-photo-active");
     photo.style.visibility = "hidden";
 
-    // Hold full-view beat
+    // Hold full-view beat over 80% dark page
     await wait(1100);
 
-    // Remeasure in case of late layout
     end = photo.getBoundingClientRect();
-    document.body.classList.add("intro-photo-settling");
+
+    var duration = 1000;
+    var easing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
 
     var fly = clone.animate(
       [
@@ -515,55 +514,28 @@
           left: startLeft + "px",
           width: size + "px",
           height: size + "px",
-          offset: 0,
-        },
-        {
-          top: end.top - 22 + "px",
-          left: end.left + "px",
-          width: end.width + "px",
-          height: end.height + "px",
-          offset: 0.82,
-        },
-        {
-          top: end.top + 10 + "px",
-          left: end.left + "px",
-          width: end.width + "px",
-          height: end.height + "px",
-          offset: 0.91,
         },
         {
           top: end.top + "px",
           left: end.left + "px",
           width: end.width + "px",
           height: end.height + "px",
-          offset: 1,
         },
       ],
-      {
-        duration: 1150,
-        easing: "cubic-bezier(0.22, 1.15, 0.36, 1)",
-        fill: "forwards",
-      }
+      { duration: duration, easing: easing, fill: "forwards" }
     );
-    await fly.finished;
 
-    // Soft settle bounce
-    var bounce = clone.animate(
-      [
-        { transform: "scale(1) translateY(0)" },
-        { transform: "scale(1.18) translateY(-18px)", offset: 0.28 },
-        { transform: "scale(0.92) translateY(10px)", offset: 0.52 },
-        { transform: "scale(1.08) translateY(-6px)", offset: 0.72 },
-        { transform: "scale(0.98) translateY(3px)", offset: 0.88 },
-        { transform: "scale(1) translateY(0)", offset: 1 },
-      ],
-      { duration: 720, easing: "cubic-bezier(0.34, 1.45, 0.64, 1)", fill: "forwards" }
+    var fade = scrim.animate(
+      [{ opacity: 0.8 }, { opacity: 0 }],
+      { duration: duration, easing: easing, fill: "forwards" }
     );
-    await bounce.finished;
+
+    await Promise.all([fly.finished, fade.finished]);
 
     clone.remove();
+    scrim.remove();
     photo.style.visibility = "";
-    document.body.classList.remove("intro-photo-active", "intro-photo-settling");
+    document.body.classList.remove("intro-photo-active");
   });
 })();
 </script>
