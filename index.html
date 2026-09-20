@@ -436,6 +436,13 @@
 	<a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="This business card has been marked up using the h-card Microformat" /></a>
 </article>
 
+<footer>
+	<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+</footer>
+
+<script>
+	document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
 <script src="./qrcode.min.js"></script>
 
