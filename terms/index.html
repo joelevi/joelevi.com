@@ -131,7 +131,11 @@ footer { margin-top:1.75rem; text-align:center; color:var(--muted); font-size:0.
 		</article>
 		<footer>
 			<p><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
 		</footer>
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
 	</div>
 </body>
 </html>
