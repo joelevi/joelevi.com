@@ -59,6 +59,8 @@
 			--accent: #7eb6ff;
 			--card: #2a365f;
 			--rule: rgba(255,255,255,0.12);
+			--cream: #f4efe4;
+			--cream-ink: #1a2340;
 		}
 		* { box-sizing: border-box; }
 		html { background: var(--navy-deep); }
@@ -78,20 +80,23 @@
 			margin: 0 auto;
 			padding: 1.25rem 1.25rem 3rem;
 		}
+		/* Match Books page cream card on navy gradient */
 		.hresume {
-			background: var(--card);
+			background: var(--cream);
+			color: var(--cream-ink);
 			border: 1px solid var(--rule);
 			border-radius: 1rem;
 			padding: 1.75rem 1.5rem 2rem;
 			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 		}
+		.hresume a { color: #1a5fb4; }
 		h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(2rem, 5vw, 2.75rem);
 			font-weight: 400;
 			letter-spacing: 0.03em;
 			margin: 0 0 0.35rem;
-			color: #fff;
+			color: var(--navy);
 		}
 		h2 {
 			font-family: Gruppo, sans-serif;
@@ -101,18 +106,18 @@
 			text-transform: uppercase;
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
-			border-bottom: 1px solid var(--rule);
-			color: #fff;
+			border-bottom: 1px solid rgba(34,45,82,0.18);
+			color: var(--navy);
 		}
 		h3 {
 			font-size: 1.05rem;
 			font-weight: 600;
 			margin: 0 0 0.2rem;
-			color: #fff;
+			color: var(--navy);
 		}
 		.summary {
 			font-style: italic;
-			color: var(--muted);
+			color: #4a5568;
 			margin: 0.5rem 0 1rem;
 			max-width: 40rem;
 		}
@@ -120,15 +125,15 @@
 			font-style: normal;
 			display: grid;
 			gap: 0.25rem;
-			color: var(--muted);
+			color: #5a6478;
 			font-size: 0.95rem;
 		}
 		.contact .fn { display: none; }
-		.meta-line { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
+		.meta-line { color: #5a6478; font-size: 0.9rem; margin: 0 0 0.55rem; }
 		.experience, .education {
 			margin: 0 0 1.35rem;
 			padding-bottom: 1.15rem;
-			border-bottom: 1px solid var(--rule);
+			border-bottom: 1px solid rgba(34,45,82,0.12);
 		}
 		.experience:last-of-type, .education:last-of-type { border-bottom: none; }
 		.description { margin: 0.35rem 0 0; }
@@ -136,38 +141,40 @@
 			margin: 0.35rem 0 0;
 			padding-left: 1.2rem;
 		}
-		ul.description li, .skills li { margin: 0.25rem 0; }
+		ul.description li, .skills li { margin: 0.25rem 0; color: #3d4658; }
 		.skill {
 			display: inline-block;
 			margin: 0.2rem 0.35rem 0.2rem 0;
 			padding: 0.2rem 0.55rem;
 			border-radius: 999px;
-			background: rgba(126,182,255,0.12);
-			border: 1px solid rgba(126,182,255,0.25);
-			color: var(--ink);
+			background: rgba(34,45,82,0.1);
+			border: 1px solid rgba(34,45,82,0.22);
+			color: var(--navy);
 			font-size: 0.88rem;
+			font-weight: 600;
 			text-decoration: none;
 		}
-		.skill:hover { background: rgba(126,182,255,0.2); text-decoration: none; }
+		.skill:hover { background: rgba(34,45,82,0.16); text-decoration: none; color: var(--navy); }
 		.skill-group { margin: 0 0 1rem; }
-		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--accent); }
+		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: #2a365f; }
 		blockquote.testimonial {
 			margin: 0.75rem 0;
 			padding: 0.75rem 1rem;
-			border-left: 3px solid var(--accent);
-			background: rgba(0,0,0,0.18);
+			border-left: 3px solid var(--navy);
+			background: #e8e4da;
 			border-radius: 0 0.5rem 0.5rem 0;
-			color: var(--ink);
+			color: var(--cream-ink);
 			font-size: 0.95rem;
 		}
 		blockquote.testimonial cite {
 			display: block;
 			margin-top: 0.5rem;
 			font-style: normal;
-			color: var(--muted);
+			color: #5a6478;
 			font-size: 0.85rem;
 		}
 		.refs ul { margin: 0.35rem 0 0; padding-left: 1.2rem; }
+		.refs li { color: #3d4658; }
 		footer.page-foot {
 			margin-top: 1.5rem;
 			text-align: center;
