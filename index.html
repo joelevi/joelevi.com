@@ -132,36 +132,18 @@
 			background-color: rgb(34, 45, 82);
 		}
 		
-				footer {
-			overflow: visible;
-		}
-		footer .footer-line {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: nowrap;
-			gap: 0.45rem;
-			margin: 0;
-			max-width: 100%;
-			overflow: visible;
-			line-height: 1.4;
-		}
-		footer .badge {
-			display: inline-flex;
-			position: static;
-			padding: 0;
+		.badge {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			padding: 0.5rem;
 			line-height: 0;
-			margin: 0;
-			flex: 0 0 auto;
-	overflow: visible;
 		}
-		footer .badge img {
-			width: 1.35em;
-			height: 1.35em;
-			max-width: none;
-			object-fit: contain;
+		.badge img {
+			width: 100px;
+			height: auto;
 			image-rendering: auto;
-			display: block;
+			overflow-clip-margin: content-box;
 		}
 		
 		p.name {
@@ -177,114 +159,95 @@
 			text-decoration: none;
 		}
 		
-		body{margin:0 auto;width:100%;padding:0;max-width:30rem;color:#eee;position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid #fff;box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:2.35rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:2rem 1rem 2.5rem;font-size:.9rem;text-align:center;overflow:visible}footer a{text-decoration:underline;color:inherit}
+		body{margin:0 auto;width:100%;padding:0;max-width:30rem;color:#eee;position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid #fff;box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
 	
-		/* Homepage must fit Google Pixel 10 Pro Fold cover (~412×901 CSS) with no scroll.
-		   Honor forever (homepage only): 100dvh/100svh, overflow locked, compact spacing. */
+		/* Fill Fold cover height (~1080×2364) without scrolling — distribute, don't crush */
 		@media (max-height: 920px) {
 			html, body {
+				min-height: 100%;
 				height: 100%;
-				height: 100svh;
-				height: 100dvh;
-				max-height: 100svh;
-				max-height: 100dvh;
-				overflow: hidden;
-				overscroll-behavior: none;
 			}
 			body {
 				display: flex;
 				flex-direction: column;
-				box-sizing: border-box;
 			}
 			article.vcard {
 				position: relative;
 				flex: 1 1 auto;
-				min-height: 0;
+				min-height: 100dvh;
+				min-height: 100svh;
 				display: flex;
 				flex-direction: column;
 				box-sizing: border-box;
-				overflow: visible;
 			}
 			header {
 				flex: 0 0 auto;
 			}
-main {
+			main {
 				flex: 1 1 auto;
-				min-height: 0;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-evenly;
-				margin-top: 0 !important;
-				padding: 0.25rem 0.85rem 0.35rem !important;
+				margin-top: 3rem !important;
+				padding: 0.75rem 1rem 1.25rem !important;
 				box-sizing: border-box;
 			}
 			#profilePhoto {
 				width: 8rem !important;
 				height: 8rem !important;
-				margin-top: -4rem !important;
-				border-width: 0.25rem !important;
-				box-shadow: 0 0.25rem 0.85rem rgba(0,0,0,0.18) !important;
+				margin-top: -4.5rem !important;
 				flex: 0 0 auto;
 			}
 			#info {
-				margin-top: 0.2rem !important;
+				margin-top: 0.35rem !important;
 				flex: 0 0 auto;
 			}
-			.name {
-				font-size: 2.25rem !important;
-			}
 			.jobtitle.description {
-				font-size: 0.88rem !important;
-				line-height: 1.3 !important;
+				font-size: 0.92rem !important;
+				line-height: 1.35 !important;
 				max-width: 22rem;
 			}
-			.sub {
-				margin-top: 0.25rem !important;
-				font-size: 0.82rem !important;
-			}
 			#cta {
-				margin-top: 0.35rem !important;
-				padding: 0.7rem 1.2rem !important;
+				margin-top: 0.65rem !important;
+				padding: 0.85rem 1.35rem !important;
 				flex: 0 0 auto;
 				width: calc(100% - 0.5rem);
 			}
 			.actions {
 				margin-top: 0 !important;
 				flex: 0 0 auto;
-				padding-bottom: 0;
+				padding-bottom: 0.25rem;
 			}
 			.actionBtn {
-				padding: 0.25rem !important;
+				padding: 0.35rem !important;
 			}
 			.actionBtn a {
-				padding: 0.7rem !important;
+				padding: 0.85rem !important;
 			}
 			.actionBtn p {
-				margin: 0.25rem 0 0 !important;
-				font-size: 0.78rem !important;
+				margin: 0.35rem 0 0 !important;
+				font-size: 0.82rem !important;
 			}
 			.icon {
-				width: 1.25rem !important;
-				height: 1.25rem !important;
+				width: 1.35rem !important;
+				height: 1.35rem !important;
 			}
 			#topActions a {
-				padding: 0.55rem !important;
+				padding: 0.75rem !important;
 			}
-			footer {
-				flex: 0 0 auto;
-				padding: 0.35rem 1rem 1.1rem !important;
-				font-size: 0.78rem !important;
-				overflow: visible !important;
+			.badge {
+				position: absolute;
+				bottom: 0.35rem;
+				right: 0.35rem;
 			}
-			footer .footer-line {
-				overflow: visible !important;
-			}
-			footer .badge img {
-				width: 1.35em !important;
-				height: 1.35em !important;
+			.badge img {
+				width: 72px !important;
 			}
 		}
+
+	
+
 
 		/* Headshot intro + name letters + action fly-in */
 		#profilePhotoIntro {
@@ -523,9 +486,319 @@ main {
 			
 			<!-- <span itemprop="callSign">KF7NWA</span> -->
 			
+				<p class="textColor" style="margin-top:2rem;font-size:0.85rem;opacity:0.85;">
+			<a href="/books/" class="textColor" style="text-decoration:underline;">Books</a>
+			·
+			<a href="/privacy/" class="textColor" style="text-decoration:underline;">Privacy</a>
+			·
+			<a href="/terms/" class="textColor" style="text-decoration:underline;">Terms</a>
+		</p>
+
 	</main>
+	
+	
+	<a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="This business card has been marked up using the h-card Microformat" /></a>
 </article>
 
 <footer>
-	<p class="footer-line">© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> <a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="h-card" width="20" height="20" /></a></p>
+	<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
 </footer>
+
+<script>
+	document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+<script src="./qrcode.min.js"></script>
+
+<script>
+    let m = document.getElementById("modal"),
+        c = document.getElementById("close"),
+        ki = document.getElementById("keyView"),
+        cv = document.getElementById("copyView"),
+        curl = document.getElementById("copyURL"),
+        qrv = document.getElementById("qrView"),
+        qr = document.getElementById("qr"),
+        s = document.getElementById("share"),
+        sqr = document.getElementById("showQR"),
+        sk = document.getElementById("showKey");
+    function tC(e) {
+        "2rem" == e.style.top
+            ? ((e.style.visibility = "visible"), (e.style.top = "0px"), (e.style.opacity = 1))
+            : ((e.style.top = "2rem"),
+              (e.style.opacity = 0),
+              setTimeout(() => {
+                  e.style.visibility = "hidden";
+              }, 200));
+    }
+    function dN(e) {
+        e.style.display = "none";
+    }
+    window.addEventListener("load", () => {
+        (document.querySelector("#topActions").style.display = "flex"), (qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg());
+    }),
+        navigator.canShare
+            ? s.addEventListener("click", () => {
+                  navigator.share({ title: document.title, text: "You can view my Digital Business Card here:", url: window.location.href });
+              })
+            : s.addEventListener("click", () => {
+                  tC(m), (cv.style.display = "flex"), dN(qrv), ki && dN(ki);
+              }),
+        sqr.addEventListener("click", () => {
+            tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki);
+        }),
+        sk &&
+            sk.addEventListener("click", () => {
+                tC(m), ki && (ki.style.display = "flex"), dN(cv), dN(qrv);
+            }),
+        c.addEventListener("click", () => tC(m)),
+        curl.addEventListener("click", async () => {
+            let e = curl.querySelectorAll(".iconColor")[1];
+            await navigator.clipboard.writeText(window.location.href).then((t) => {
+                (e.innerText = "Copied"),
+                    setTimeout(() => {
+                        e.innerText = "Copy URL";
+                    }, 1e3);
+            });
+        });
+</script>
+
+<script>
+    let pC = document.querySelectorAll(".pCtrl"),
+        pP = document.querySelectorAll(".playPause"),
+        srcs = document.querySelectorAll(".source");
+    srcs.forEach((e) => {
+        (e.style.pointerEvents = "none"), e.removeAttribute("controls");
+    }),
+        pC.forEach((e, l) => {
+            e.style.display = "flex";
+            let r = e.querySelector(".currentTime"),
+                s = e.querySelector(".seekBar"),
+                t = e.querySelector(".playPause"),
+                a = t.querySelector(".play"),
+                c = t.querySelector(".pause");
+            srcs[l].addEventListener("timeupdate", () => {
+                let e = srcs[l].currentTime,
+                    t = (100 / srcs[l].duration) * e;
+                (s.value = t), 100 == t && ((s.value = 0), (a.style.display = "block"), (c.style.display = "none"));
+                let o = Math.floor(e / 60),
+                    y = Math.floor(e % 60);
+                o.toString().length < 2 && (o = "0" + o), y.toString().length < 2 && (y = "0" + y), (r.value = o + ":" + y);
+            }),
+                s.addEventListener("change", () => {
+                    srcs[l].currentTime = srcs[l].duration * (parseInt(s.value) / 100);
+                }),
+                t.addEventListener("click", () => {
+                    srcs[l].paused
+                        ? (srcs.forEach((e, r) => {
+                              l != r && (e.paused || e.pause());
+                          }),
+                          pP.forEach((e, l) => {
+                              let r = e.querySelector(".play"),
+                                  s = e.querySelector(".pause");
+                              (r.style.display = "block"), (s.style.display = "none");
+                          }),
+                          srcs[l].play(),
+                          (a.style.display = "none"),
+                          (c.style.display = "block"))
+                        : (srcs[l].pause(), (c.style.display = "none"), (a.style.display = "block"));
+                });
+        });
+</script>
+
+
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function ready(fn) {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      setTimeout(fn, 0);
+    } else {
+      document.addEventListener("DOMContentLoaded", fn);
+    }
+  }
+
+  function wait(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
+
+  function splitLetters(el) {
+    var text = el.textContent;
+    el.textContent = "";
+    var letters = [];
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      var span = document.createElement("span");
+      span.className = "letter";
+      span.textContent = ch === " " ? "\u00a0" : ch;
+      span.style.opacity = "0";
+      span.style.transform = "translateY(1.1em) rotate(-8deg)";
+      el.appendChild(span);
+      letters.push(span);
+    }
+    return letters;
+  }
+
+  function animateLetters(letters) {
+    return Promise.all(
+      letters.map(function (span, i) {
+        return span.animate(
+          [
+            { opacity: 0, transform: "translateY(1.1em) rotate(-8deg)" },
+            { opacity: 1, transform: "translateY(0) rotate(0deg)" },
+          ],
+          {
+            duration: 520,
+            delay: i * 55,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            fill: "forwards",
+          }
+        ).finished;
+      })
+    );
+  }
+
+  function flyButtons() {
+    var nodes = Array.prototype.slice.call(
+      document.querySelectorAll(".actions .actionsC, #cta")
+    );
+    return Promise.all(
+      nodes.map(function (node, i) {
+        node.style.opacity = "0";
+        return node.animate(
+          [
+            { opacity: 0, transform: "translateY(36px) scale(0.88)" },
+            { opacity: 1, transform: "translateY(0) scale(1)" },
+          ],
+          {
+            duration: 580,
+            delay: i * 70,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            fill: "forwards",
+          }
+        ).finished;
+      })
+    );
+  }
+
+  ready(async function () {
+    document.body.classList.add("intro-pending");
+
+    var given = document.querySelector(".name .p-given-name");
+    var family = document.querySelector(".name .p-family-name");
+    var letters = [];
+    if (given && family) {
+      letters = splitLetters(given).concat(
+        (function () {
+          var space = document.createElement("span");
+          space.className = "letter";
+          space.textContent = "\u00a0";
+          space.style.opacity = "0";
+          given.parentNode.insertBefore(space, family);
+          return [space];
+        })().concat(splitLetters(family))
+      );
+    }
+
+    if (reduce) {
+      letters.forEach(function (l) {
+        l.style.opacity = "1";
+        l.style.transform = "none";
+      });
+      document.body.classList.remove("intro-pending");
+      return;
+    }
+
+    var photo = document.getElementById("profilePhoto");
+    if (!photo) {
+      await animateLetters(letters);
+      document.body.classList.remove("intro-pending");
+      await flyButtons();
+      return;
+    }
+    if (!photo.complete) {
+      await new Promise(function (resolve) {
+        photo.addEventListener("load", resolve, { once: true });
+        photo.addEventListener("error", resolve, { once: true });
+      });
+    }
+
+    await wait(40);
+    var end = photo.getBoundingClientRect();
+    if (!end.width || !end.height) {
+      await animateLetters(letters);
+      document.body.classList.remove("intro-pending");
+      await flyButtons();
+      return;
+    }
+
+    var size = Math.min(window.innerWidth, window.innerHeight) * 0.92;
+    var startTop = (window.innerHeight - size) / 2;
+    var startLeft = (window.innerWidth - size) / 2;
+
+    var scrim = document.createElement("div");
+    scrim.id = "introPhotoScrim";
+    document.body.appendChild(scrim);
+
+    var clone = photo.cloneNode(true);
+    clone.id = "profilePhotoIntro";
+    clone.removeAttribute("itemprop");
+    clone.alt = "";
+    clone.setAttribute("aria-hidden", "true");
+    clone.style.top = startTop + "px";
+    clone.style.left = startLeft + "px";
+    clone.style.width = size + "px";
+    clone.style.height = size + "px";
+    document.body.appendChild(clone);
+
+    document.body.classList.add("intro-photo-active");
+    photo.style.visibility = "hidden";
+
+    await wait(1100);
+
+    end = photo.getBoundingClientRect();
+    var duration = 1000;
+    var easing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
+
+    var fly = clone.animate(
+      [
+        {
+          top: startTop + "px",
+          left: startLeft + "px",
+          width: size + "px",
+          height: size + "px",
+        },
+        {
+          top: end.top + "px",
+          left: end.left + "px",
+          width: end.width + "px",
+          height: end.height + "px",
+        },
+      ],
+      { duration: duration, easing: easing, fill: "forwards" }
+    );
+
+    var fade = scrim.animate(
+      [{ opacity: 0.8 }, { opacity: 0 }],
+      { duration: duration, easing: easing, fill: "forwards" }
+    );
+
+    await Promise.all([fly.finished, fade.finished]);
+
+    clone.remove();
+    scrim.remove();
+    photo.style.visibility = "";
+    document.body.classList.remove("intro-photo-active");
+
+    // Name letters, then buttons
+    await animateLetters(letters);
+    document.body.classList.remove("intro-pending");
+    await flyButtons();
+  });
+})();
+</script>
+
+</body>
+</html>
