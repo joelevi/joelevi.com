@@ -132,18 +132,28 @@
 			background-color: rgb(34, 45, 82);
 		}
 		
-		.badge {
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			padding: 0.5rem;
-			line-height: 0;
+		footer .footer-line {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 0.4rem;
+			margin: 0;
 		}
-		.badge img {
-			width: 100px;
-			height: auto;
+		footer .badge {
+			display: inline-flex;
+			position: static;
+			padding: 0;
+			line-height: 0;
+			margin: 0;
+			flex: 0 0 auto;
+		}
+		footer .badge img {
+			width: 1.25em;
+			height: 1.25em;
+			object-fit: contain;
 			image-rendering: auto;
-			overflow-clip-margin: content-box;
+			display: block;
 		}
 		
 		p.name {
@@ -236,13 +246,9 @@
 			#topActions a {
 				padding: 0.75rem !important;
 			}
-			.badge {
-				position: absolute;
-				bottom: 0.35rem;
-				right: 0.35rem;
-			}
-			.badge img {
-				width: 72px !important;
+			footer .badge img {
+				width: 1.25em !important;
+				height: 1.25em !important;
 			}
 		}
 
@@ -485,23 +491,11 @@
             </p></div></div></div> -->
 			
 			<!-- <span itemprop="callSign">KF7NWA</span> -->
-			
-				<p class="textColor" style="margin-top:2rem;font-size:0.85rem;opacity:0.85;">
-			<a href="/books/" class="textColor" style="text-decoration:underline;">Books</a>
-			·
-			<a href="/privacy/" class="textColor" style="text-decoration:underline;">Privacy</a>
-			·
-			<a href="/terms/" class="textColor" style="text-decoration:underline;">Terms</a>
-		</p>
-
-	</main>
-	
-	
-	<a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="This business card has been marked up using the h-card Microformat" /></a>
+</main>
 </article>
 
 <footer>
-	<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+	<p class="footer-line">© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> <a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="h-card" width="18" height="18" /></a></p>
 </footer>
 
 <script>
