@@ -132,18 +132,17 @@
 			background-color: rgb(34, 45, 82);
 		}
 		
-		.badge {
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			padding: 0.5rem;
+				footer .badge {
+			display: inline-block;
+			position: static;
+			padding: 0;
 			line-height: 0;
+			margin: 0 0 0.65rem;
 		}
-		.badge img {
-			width: 100px;
+		footer .badge img {
+			width: 72px;
 			height: auto;
 			image-rendering: auto;
-			overflow-clip-margin: content-box;
 		}
 		
 		p.name {
@@ -261,13 +260,11 @@
 				padding: 0.4rem 1rem 0.65rem !important;
 				font-size: 0.78rem !important;
 			}
-			.badge {
-				position: absolute;
-				bottom: 0.2rem;
-				right: 0.2rem;
+			footer .badge {
+				margin-bottom: 0.35rem;
 			}
-			.badge img {
-				width: 56px !important;
+			footer .badge img {
+				width: 48px !important;
 			}
 		}
 
@@ -509,12 +506,10 @@
 			<!-- <span itemprop="callSign">KF7NWA</span> -->
 			
 	</main>
-	
-	
-	<a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="This business card has been marked up using the h-card Microformat" /></a>
 </article>
 
 <footer>
+	<a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="This business card has been marked up using the h-card Microformat" width="72" height="72" /></a>
 	<p>© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
 </footer>
 
