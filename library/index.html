@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#222D52" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Joe’s Library — books Joe Levi is currently reading and has recently read. Thriller, science fiction, preparedness, and nonfiction with Amazon Associate links." />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/library/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Joe’s Library — Joe Levi" />
+	<meta property="og:description" content="Currently reading and recently read books from Joe’s bookshelf, with Buy on Amazon links." />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:url" content="https://www.joelevi.com/library/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Joe’s Library — Joe Levi" />
+	<meta name="twitter:description" content="Currently reading and recently read books from Joe’s bookshelf." />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Joe’s Library — Joe Levi</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Gruppo&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-6V4LCMVCZV');
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		:root {
+			--navy: #222D52;
+			--navy-deep: #1a2340;
+			--ink: #e8ecf4;
+			--muted: #a8b0c4;
+			--accent: #7eb6ff;
+			--card: #2a365f;
+			--rule: rgba(255,255,255,0.12);
+			--cream: #f4efe4;
+			--cream-ink: #1a2340;
+		}
+		* { box-sizing: border-box; }
+		html { background: var(--navy-deep); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 40%, #151c33 100%);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.topnav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 1.5rem;
+			flex-wrap: wrap;
+		}
+		.topnav a.home {
+			font-family: Gruppo, sans-serif;
+			font-size: 1.15rem;
+			letter-spacing: 0.04em;
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			padding: 0.4rem 0.85rem;
+			border-radius: 999px;
+			background: rgba(255,255,255,0.04);
+		}
+		.topnav a.home:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
+		.topnav .nav-links { color: var(--muted); font-size: 0.9rem; }
+		.topnav .nav-links a { color: var(--accent); }
+		.library {
+			background: var(--cream);
+			color: var(--cream-ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 1.75rem 1.5rem 2rem;
+			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+		}
+		.library a { color: #1a5fb4; }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(2rem, 5vw, 2.75rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--navy);
+		}
+		.library .lede {
+			color: #4a5568;
+			margin: 0.5rem 0 1.25rem;
+			max-width: 42rem;
+		}
+		.library h2 {
+			font-family: Gruppo, sans-serif;
+			font-size: 1.45rem;
+			font-weight: 400;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			margin: 2rem 0 0.85rem;
+			padding-bottom: 0.35rem;
+			border-bottom: 1px solid rgba(34,45,82,0.18);
+			color: var(--navy);
+		}
+		.library h2.author-h {
+			font-size: 1.15rem;
+			letter-spacing: 0.04em;
+			margin: 1.75rem 0 0.75rem;
+			border-bottom: 1px solid rgba(34,45,82,0.12);
+			text-transform: none;
+			color: #2a365f;
+		}
+		.library h3.card-title {
+			font-size: 1.05rem;
+			font-weight: 600;
+			margin: 0 0 0.2rem;
+			color: var(--navy);
+			line-height: 1.3;
+		}
+		.book-card {
+			background: #fff;
+			border: 1px solid rgba(34,45,82,0.12) !important;
+			border-radius: 0.75rem;
+			overflow: hidden;
+			box-shadow: 0 6px 18px rgba(26,35,64,0.08);
+		}
+		.book-card .card-body {
+			padding: 0.85rem 1rem 1rem;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		.cover-col {
+			width: 120px;
+			background: #e8e4da;
+		}
+		.cover {
+			display: block;
+			width: 120px;
+			height: 100%;
+			min-height: 160px;
+			object-fit: cover;
+		}
+		.card-author {
+			margin: 0 0 0.45rem;
+			color: #5a6478;
+			font-size: 0.92rem;
+			font-weight: 500;
+		}
+		.card-text {
+			margin: 0 0 0.85rem;
+			color: #3d4658;
+			font-size: 0.92rem;
+			flex: 1;
+		}
+		.badge-reading {
+			display: inline-block;
+			align-self: flex-start;
+			margin: 0 0 0.45rem;
+			padding: 0.2rem 0.55rem;
+			border-radius: 999px;
+			background: rgba(34,45,82,0.1);
+			border: 1px solid rgba(34,45,82,0.22);
+			color: var(--navy);
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+		}
+		.btn-amazon {
+			display: inline-block;
+			align-self: flex-start;
+			background: var(--navy) !important;
+			border: 1px solid var(--navy-deep) !important;
+			color: #fff !important;
+			font-weight: 600;
+			font-size: 0.9rem;
+			padding: 0.45rem 0.9rem;
+			border-radius: 0.45rem;
+			text-decoration: none !important;
+		}
+		.btn-amazon:hover {
+			background: var(--navy-deep) !important;
+			color: #fff !important;
+		}
+		.disclosure {
+			margin-top: 1rem;
+			font-size: 0.88rem;
+			color: #5a6478;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--muted);
+			font-size: 0.85rem;
+		}
+		footer.page-foot .meta-line { color: var(--muted); }
+		@media (max-width: 560px) {
+			.library { padding: 1.25rem 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.cover-col, .cover { width: 96px; }
+			.row.g-0 > .cover-col { flex: 0 0 96px; max-width: 96px; }
+		}
+	</style>
+	<script type="application/ld+json">
+	{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.joelevi.com/library/#webpage",
+      "url": "https://www.joelevi.com/library/",
+      "name": "Joe\u2019s Library \u2014 Joe Levi",
+      "description": "Joe\u2019s Library: books Joe Levi is reading and has recently read, with Amazon Associate links.",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/#website"
+      },
+      "about": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.joelevi.com/photo.jpeg"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.joelevi.com/library/#bookshelf",
+      "name": "Joe\u2019s Library bookshelf",
+      "numberOfItems": 38,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Book",
+            "name": "Red Rabbit (1982)",
+            "author": {
+              "@type": "Person",
+              "name": "Tom Clancy"
+            },
+            "url": "https://amzn.to/4u5tyi3",
+            "image": "https://www.joelevi.com/library/covers/red-rabbit.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Book",
+            "name": "The Fountainhead",
+            "author": {
+              "@type": "Person",
+              "name": "Ayn Rand"
+            },
+            "url": "https://amzn.to/46tmQYf",
+            "image": "https://www.joelevi.com/library/covers/fountainhead.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Book",
+            "name": "Without Remorse",
+            "author": {
+              "@type": "Person",
+              "name": "Tom Clancy"
+            },
+            "url": "https://amzn.to/3Xyh3fJ",
+            "image": "https://www.joelevi.com/library/covers/without-remorse.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Book",
+            "name": "Patriot Games",
+            "author": {
+              "@type": "Person",
+              "name": "Tom Clancy"
+            },
+            "url": "https://amzn.to/4aTBHPq",
+            "image": "https://www.joelevi.com/library/covers/patriot-games.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Book",
+            "name": "The Hunt for Red October",
+            "author": {
+              "@type": "Person",
+              "name": "Tom Clancy"
+            },
+            "url": "https://amzn.to/4o2xyLV",
+            "image": "https://www.joelevi.com/library/covers/hunt-for-red-october.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Book",
+            "name": "Stranger in a Strange Land",
+            "author": {
+              "@type": "Person",
+              "name": "Robert A. Heinlein"
+            },
+            "url": "https://amzn.to/48kRCED",
+            "image": "https://www.joelevi.com/library/covers/stranger-in-a-strange-land.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Book",
+            "name": "The Moon Is a Harsh Mistress",
+            "author": {
+              "@type": "Person",
+              "name": "Robert A. Heinlein"
+            },
+            "url": "https://amzn.to/46cDevO",
+            "image": "https://www.joelevi.com/library/covers/moon-is-a-harsh-mistress.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Book",
+            "name": "Starship Troopers",
+            "author": {
+              "@type": "Person",
+              "name": "Robert A. Heinlein"
+            },
+            "url": "https://amzn.to/45Y8qAe",
+            "image": "https://www.joelevi.com/library/covers/starship-troopers.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Book",
+            "name": "One Second After",
+            "author": {
+              "@type": "Person",
+              "name": "William R. Forstchen"
+            },
+            "url": "https://amzn.to/452kakO",
+            "image": "https://www.joelevi.com/library/covers/one-second-after.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Book",
+            "name": "One Year After",
+            "author": {
+              "@type": "Person",
+              "name": "William R. Forstchen"
+            },
+            "url": "https://amzn.to/3I4Xg3r",
+            "image": "https://www.joelevi.com/library/covers/one-year-after.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Book",
+            "name": "The Final Day",
+            "author": {
+              "@type": "Person",
+              "name": "William R. Forstchen"
+            },
+            "url": "https://amzn.to/3JP8BFk",
+            "image": "https://www.joelevi.com/library/covers/the-final-day.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Book",
+            "name": "Five Years After",
+            "author": {
+              "@type": "Person",
+              "name": "William R. Forstchen"
+            },
+            "url": "https://amzn.to/3V9EiMa",
+            "image": "https://www.joelevi.com/library/covers/five-years-after.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 1: The Preparation",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/4fl1KPE",
+            "image": "https://www.joelevi.com/library/covers/299-days-1.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 2: The Collapse",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/41H43qA",
+            "image": "https://www.joelevi.com/library/covers/299-days-2.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 3: The Community",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/41L7Xi8",
+            "image": "https://www.joelevi.com/library/covers/299-days-3.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 4: The Stronghold",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/4fEkYjj",
+            "image": "https://www.joelevi.com/library/covers/299-days-4.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 5: The Visitors",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/3Jm8Kjl",
+            "image": "https://www.joelevi.com/library/covers/299-days-5.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 6: The 17th Irregulars",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/4mG86LO",
+            "image": "https://www.joelevi.com/library/covers/299-days-6.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 7: The Change of Seasons",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/3UC6EOK",
+            "image": "https://www.joelevi.com/library/covers/299-days-7.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 8: The War",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/4mu5NMu",
+            "image": "https://www.joelevi.com/library/covers/299-days-8.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 9: The Restoration",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/4mXArxA",
+            "image": "https://www.joelevi.com/library/covers/299-days-9.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "Book",
+            "name": "299 Days 10: The 43 Colonels",
+            "author": {
+              "@type": "Person",
+              "name": "Glen Tate"
+            },
+            "url": "https://amzn.to/462x2aV",
+            "image": "https://www.joelevi.com/library/covers/299-days-10.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@type": "Book",
+            "name": "A Great State 1: The Divide",
+            "author": {
+              "@type": "Person",
+              "name": "Shelby Gallagher"
+            },
+            "url": "https://amzn.to/45FIgAO",
+            "image": "https://www.joelevi.com/library/covers/great-state-1.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@type": "Book",
+            "name": "A Great State 2: The Aftermath",
+            "author": {
+              "@type": "Person",
+              "name": "Shelby Gallagher"
+            },
+            "url": "https://amzn.to/416D8V6",
+            "image": "https://www.joelevi.com/library/covers/great-state-2.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@type": "Book",
+            "name": "A Great State 3: The Rescue",
+            "author": {
+              "@type": "Person",
+              "name": "Shelby Gallagher"
+            },
+            "url": "https://amzn.to/4fDqClO",
+            "image": "https://www.joelevi.com/library/covers/great-state-3.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@type": "Book",
+            "name": "The Art of Deception",
+            "author": {
+              "@type": "Person",
+              "name": "Kevin D. Mitnick"
+            },
+            "url": "https://amzn.to/472TwtA",
+            "image": "https://www.joelevi.com/library/covers/art-of-deception.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@type": "Book",
+            "name": "The Art of Invisibility",
+            "author": {
+              "@type": "Person",
+              "name": "Kevin D. Mitnick"
+            },
+            "url": "https://amzn.to/3V6oLMR",
+            "image": "https://www.joelevi.com/library/covers/art-of-invisibility.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "item": {
+            "@type": "Book",
+            "name": "Ghost in the Wires",
+            "author": {
+              "@type": "Person",
+              "name": "Kevin D. Mitnick"
+            },
+            "url": "https://amzn.to/3UTnXLv",
+            "image": "https://www.joelevi.com/library/covers/ghost-in-the-wires.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "item": {
+            "@type": "Book",
+            "name": "Animal Farm",
+            "author": {
+              "@type": "Person",
+              "name": "George Orwell"
+            },
+            "url": "https://amzn.to/4mk13Zs",
+            "image": "https://www.joelevi.com/library/covers/animal-farm.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "item": {
+            "@type": "Book",
+            "name": "1984",
+            "author": {
+              "@type": "Person",
+              "name": "George Orwell"
+            },
+            "url": "https://amzn.to/3UyB849",
+            "image": "https://www.joelevi.com/library/covers/1984.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "item": {
+            "@type": "Book",
+            "name": "Atlas Shrugged",
+            "author": {
+              "@type": "Person",
+              "name": "Ayn Rand"
+            },
+            "url": "https://amzn.to/3HFquFP",
+            "image": "https://www.joelevi.com/library/covers/atlas-shrugged.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "item": {
+            "@type": "Book",
+            "name": "The Martian",
+            "author": {
+              "@type": "Person",
+              "name": "Andy Weir"
+            },
+            "url": "https://amzn.to/4lR1I3Q",
+            "image": "https://www.joelevi.com/library/covers/the-martian.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "item": {
+            "@type": "Book",
+            "name": "Tomorrow and Tomorrow",
+            "author": {
+              "@type": "Person",
+              "name": "Tom Sweterlitsch"
+            },
+            "url": "https://amzn.to/472oq59",
+            "image": "https://www.joelevi.com/library/covers/tomorrow-and-tomorrow.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "item": {
+            "@type": "Book",
+            "name": "Written Out of History",
+            "author": {
+              "@type": "Person",
+              "name": "Mike Lee"
+            },
+            "url": "https://amzn.to/4lzWB82",
+            "image": "https://www.joelevi.com/library/covers/written-out-of-history.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "item": {
+            "@type": "Book",
+            "name": "The Liberty Amendments",
+            "author": {
+              "@type": "Person",
+              "name": "Mark R. Levin"
+            },
+            "url": "https://amzn.to/46XXSC9",
+            "image": "https://www.joelevi.com/library/covers/liberty-amendments.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "item": {
+            "@type": "Book",
+            "name": "The American Miracle: Divine Providence in the Rise of the Republic",
+            "author": {
+              "@type": "Person",
+              "name": "Michael Medved"
+            },
+            "url": "https://amzn.to/4mugcb2",
+            "image": "https://www.joelevi.com/library/covers/american-miracle.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "item": {
+            "@type": "Book",
+            "name": "The Creature from Jekyll Island",
+            "author": {
+              "@type": "Person",
+              "name": "G. Edward Griffin"
+            },
+            "url": "https://amzn.to/4mMFNvq",
+            "image": "https://www.joelevi.com/library/covers/creature-jekyll.jpg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "item": {
+            "@type": "Book",
+            "name": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+            "author": {
+              "@type": "Person",
+              "name": "Ashlee Vance"
+            },
+            "url": "https://amzn.to/418CqGW",
+            "image": "https://www.joelevi.com/library/covers/elon-musk.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.joelevi.com/#person",
+      "name": "Joe Levi",
+      "url": "https://www.joelevi.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.joelevi.com/#website",
+      "url": "https://www.joelevi.com/",
+      "name": "Joe Levi",
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      }
+    }
+  ]
+}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="topnav" aria-label="Site">
+			<a class="home" href="/">← JoeLevi.com</a>
+			<span class="nav-links"><a href="/resume/">Résumé</a> · <a href="/library/" aria-current="page">Library</a></span>
+		</nav>
+
+		<article class="library">
+			<header>
+				<h1>Joe’s Library</h1>
+				<p class="lede">Books I’m currently reading, and titles from my recent bookshelf. Affiliate links use Amazon Associates; I earn from qualifying purchases.</p>
+			</header>
+
+			<section aria-labelledby="current-h">
+				<h2 id="current-h">Currently reading</h2>
+				<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/red-rabbit.jpg" alt="Cover of Red Rabbit (1982)" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										<span class="badge-reading">Currently reading</span>
+										<h3 class="card-title">Red Rabbit (1982)</h3>
+										<p class="card-author">Tom Clancy</p>
+										<p class="card-text">Young CIA analyst Jack Ryan is drawn into a Soviet plot to assassinate Pope John Paul II, weaving Cold War tradecraft with Clancy’s trademark procedural detail.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/fountainhead.jpg" alt="Cover of The Fountainhead" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										<span class="badge-reading">Currently reading</span>
+										<h3 class="card-title">The Fountainhead</h3>
+										<p class="card-author">Ayn Rand</p>
+										<p class="card-text">Architect Howard Roark refuses to compromise his creative integrity, challenging collectivist pressures in a novel that helped define Rand’s Objectivist themes.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section aria-labelledby="shelf-h">
+				<h2 id="shelf-h">Recently read</h2>
+				<p class="lede" style="margin-top:0;">Grouped by author. Red Rabbit and The Fountainhead also appear above while I’m still reading them.</p>
+
+				<section class="author-block" aria-labelledby="author-tom-clancy">
+					<h2 class="author-h" id="author-tom-clancy">Tom Clancy</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/red-rabbit.jpg" alt="Cover of Red Rabbit (1982)" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										<span class="badge-reading">Currently reading</span>
+										<h3 class="card-title">Red Rabbit (1982)</h3>
+										<p class="card-author">Tom Clancy</p>
+										<p class="card-text">Young CIA analyst Jack Ryan is drawn into a Soviet plot to assassinate Pope John Paul II, weaving Cold War tradecraft with Clancy’s trademark procedural detail.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/without-remorse.jpg" alt="Cover of Without Remorse" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Without Remorse</h3>
+										<p class="card-author">Tom Clancy</p>
+										<p class="card-text">Navy SEAL John Kelly seeks justice after personal tragedy, and his path foreshadows the operative who becomes John Clark in the Ryan universe.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3Xyh3fJ" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/patriot-games.jpg" alt="Cover of Patriot Games" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Patriot Games</h3>
+										<p class="card-author">Tom Clancy</p>
+										<p class="card-text">After foiling a terrorist attack in London, Jack Ryan and his family become targets in a thriller that blends domestic stakes with international intrigue.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4aTBHPq" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/hunt-for-red-october.jpg" alt="Cover of The Hunt for Red October" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Hunt for Red October</h3>
+										<p class="card-author">Tom Clancy</p>
+										<p class="card-text">A Soviet submarine captain attempts to defect with a cutting-edge vessel, while Jack Ryan races to interpret the crisis before it sparks war.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4o2xyLV" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-robert-a-heinlein">
+					<h2 class="author-h" id="author-robert-a-heinlein">Robert A. Heinlein</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/stranger-in-a-strange-land.jpg" alt="Cover of Stranger in a Strange Land" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Stranger in a Strange Land</h3>
+										<p class="card-author">Robert A. Heinlein</p>
+										<p class="card-text">Valentine Michael Smith, raised by Martians, returns to Earth and upends human ideas of religion, free thought, and community.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/48kRCED" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/moon-is-a-harsh-mistress.jpg" alt="Cover of The Moon Is a Harsh Mistress" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Moon Is a Harsh Mistress</h3>
+										<p class="card-author">Robert A. Heinlein</p>
+										<p class="card-text">Lunar colonists, aided by a self-aware computer, rebel against Earth’s authority in a classic of revolutionary science fiction.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/46cDevO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/starship-troopers.jpg" alt="Cover of Starship Troopers" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Starship Troopers</h3>
+										<p class="card-author">Robert A. Heinlein</p>
+										<p class="card-text">Citizen-soldier Juan “Johnny” Rico fights an interstellar war while the novel debates civic duty, training, and the cost of franchise.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/45Y8qAe" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-william-r-forstchen">
+					<h2 class="author-h" id="author-william-r-forstchen">William R. Forstchen</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/one-second-after.jpg" alt="Cover of One Second After" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">One Second After</h3>
+										<p class="card-author">William R. Forstchen</p>
+										<p class="card-text">An EMP strike blackouts the United States overnight, and a small North Carolina town struggles to survive the collapse that follows.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/452kakO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/one-year-after.jpg" alt="Cover of One Year After" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">One Year After</h3>
+										<p class="card-author">William R. Forstchen</p>
+										<p class="card-text">A year after the EMP, John Matherson’s community faces new threats as America tries to rebuild amid scarcity and outside pressure.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3I4Xg3r" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/the-final-day.jpg" alt="Cover of The Final Day" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Final Day</h3>
+										<p class="card-author">William R. Forstchen</p>
+										<p class="card-text">Matherson confronts the political and military endgame of the post-EMP world as factions compete to define America’s future.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3JP8BFk" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/five-years-after.jpg" alt="Cover of Five Years After" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Five Years After</h3>
+										<p class="card-author">William R. Forstchen</p>
+										<p class="card-text">Half a decade after the blackout, survivors confront lingering enemies and the hard work of restoring a fractured republic.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3V9EiMa" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-glen-tate">
+					<h2 class="author-h" id="author-glen-tate">Glen Tate</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-1.jpg" alt="Cover of 299 Days 1: The Preparation" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 1: The Preparation</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">Attorney Grant Matson begins quietly preparing his family for systemic collapse while still living a conventional suburban life.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4fl1KPE" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-2.jpg" alt="Cover of 299 Days 2: The Collapse" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 2: The Collapse</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">When order breaks down, Grant’s preparations are tested as supply chains fail and neighborhoods turn unstable.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/41H43qA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-3.jpg" alt="Cover of 299 Days 3: The Community" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 3: The Community</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">Survivors organize mutual aid and local governance as Pierce Point becomes a fragile island of cooperation.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/41L7Xi8" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-4.jpg" alt="Cover of 299 Days 4: The Stronghold" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 4: The Stronghold</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">The community hardens defenses and routines while outside factions and scarcity keep pressure high.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4fEkYjj" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-5.jpg" alt="Cover of 299 Days 5: The Visitors" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 5: The Visitors</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">New arrivals and outside contacts force Pierce Point to decide whom to trust in a world without easy rules.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3Jm8Kjl" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-6.jpg" alt="Cover of 299 Days 6: The 17th Irregulars" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 6: The 17th Irregulars</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">Grant’s circle is drawn deeper into irregular warfare as competing authorities claim legitimacy.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mG86LO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-7.jpg" alt="Cover of 299 Days 7: The Change of Seasons" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 7: The Change of Seasons</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">As seasons turn, Pierce Point adapts logistics, morale, and alliances for a longer emergency.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3UC6EOK" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-8.jpg" alt="Cover of 299 Days 8: The War" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 8: The War</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">Open conflict arrives, and the community’s preparations become a matter of survival under fire.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mu5NMu" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-9.jpg" alt="Cover of 299 Days 9: The Restoration" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 9: The Restoration</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">After the fighting, characters confront what “restoration” can mean when institutions and trust are broken.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mXArxA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/299-days-10.jpg" alt="Cover of 299 Days 10: The 43 Colonels" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">299 Days 10: The 43 Colonels</h3>
+										<p class="card-author">Glen Tate</p>
+										<p class="card-text">The series closes around leadership choices that will shape the political order after collapse.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/462x2aV" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-shelby-gallagher">
+					<h2 class="author-h" id="author-shelby-gallagher">Shelby Gallagher</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/great-state-1.jpg" alt="Cover of A Great State 1: The Divide" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">A Great State 1: The Divide</h3>
+										<p class="card-author">Shelby Gallagher</p>
+										<p class="card-text">Political fracture and civil strife push ordinary people to choose sides as America divides.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/45FIgAO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/great-state-2.jpg" alt="Cover of A Great State 2: The Aftermath" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">A Great State 2: The Aftermath</h3>
+										<p class="card-author">Shelby Gallagher</p>
+										<p class="card-text">In the wake of upheaval, survivors navigate danger, scarcity, and the politics of a broken map.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/416D8V6" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/great-state-3.jpg" alt="Cover of A Great State 3: The Rescue" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">A Great State 3: The Rescue</h3>
+										<p class="card-author">Shelby Gallagher</p>
+										<p class="card-text">Alliances and risk escalate as characters attempt a rescue that could redefine their fight.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4fDqClO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-kevin-d-mitnick">
+					<h2 class="author-h" id="author-kevin-d-mitnick">Kevin D. Mitnick</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/art-of-deception.jpg" alt="Cover of The Art of Deception" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Art of Deception</h3>
+										<p class="card-author">Kevin D. Mitnick</p>
+										<p class="card-text">Mitnick explains social-engineering tactics through real-world cases, showing how trust is exploited more than code.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/472TwtA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/art-of-invisibility.jpg" alt="Cover of The Art of Invisibility" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Art of Invisibility</h3>
+										<p class="card-author">Kevin D. Mitnick</p>
+										<p class="card-text">A practical guide to digital privacy habits, tracking risks, and reducing your everyday exposure online.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3V6oLMR" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/ghost-in-the-wires.jpg" alt="Cover of Ghost in the Wires" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Ghost in the Wires</h3>
+										<p class="card-author">Kevin D. Mitnick</p>
+										<p class="card-text">Mitnick’s memoir of phone phreaking, hacking pursuits, and life as one of the FBI’s most-wanted cyber fugitives.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3UTnXLv" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-george-orwell">
+					<h2 class="author-h" id="author-george-orwell">George Orwell</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/animal-farm.jpg" alt="Cover of Animal Farm" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Animal Farm</h3>
+										<p class="card-author">George Orwell</p>
+										<p class="card-text">Farm animals overthrow their human master, only to watch revolutionary ideals curdle into a new tyranny.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mk13Zs" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/1984.jpg" alt="Cover of 1984" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">1984</h3>
+										<p class="card-author">George Orwell</p>
+										<p class="card-text">Winston Smith struggles against a totalitarian state that polices thought, language, and truth itself.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3UyB849" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-ayn-rand">
+					<h2 class="author-h" id="author-ayn-rand">Ayn Rand</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/fountainhead.jpg" alt="Cover of The Fountainhead" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										<span class="badge-reading">Currently reading</span>
+										<h3 class="card-title">The Fountainhead</h3>
+										<p class="card-author">Ayn Rand</p>
+										<p class="card-text">Architect Howard Roark refuses to compromise his creative integrity, challenging collectivist pressures in a novel that helped define Rand’s Objectivist themes.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/atlas-shrugged.jpg" alt="Cover of Atlas Shrugged" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Atlas Shrugged</h3>
+										<p class="card-author">Ayn Rand</p>
+										<p class="card-text">As productive minds withdraw from a coercive society, Rand dramatizes her case for reason, individualism, and free enterprise.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/3HFquFP" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-andy-weir">
+					<h2 class="author-h" id="author-andy-weir">Andy Weir</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/the-martian.jpg" alt="Cover of The Martian" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Martian</h3>
+										<p class="card-author">Andy Weir</p>
+										<p class="card-text">Astronaut Mark Watney is stranded on Mars and must science his way through survival while NASA races to bring him home.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4lR1I3Q" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-tom-sweterlitsch">
+					<h2 class="author-h" id="author-tom-sweterlitsch">Tom Sweterlitsch</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/tomorrow-and-tomorrow.jpg" alt="Cover of Tomorrow and Tomorrow" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Tomorrow and Tomorrow</h3>
+										<p class="card-author">Tom Sweterlitsch</p>
+										<p class="card-text">After a catastrophe destroys Pittsburgh, a man uses a high-tech archive of the past city to chase answers—and risk losing the present.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/472oq59" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-mike-lee">
+					<h2 class="author-h" id="author-mike-lee">Mike Lee</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/written-out-of-history.jpg" alt="Cover of Written Out of History" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Written Out of History</h3>
+										<p class="card-author">Mike Lee</p>
+										<p class="card-text">Senator Mike Lee profiles lesser-known Founding-era figures he argues have been sidelined in popular American history.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4lzWB82" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-mark-r-levin">
+					<h2 class="author-h" id="author-mark-r-levin">Mark R. Levin</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/liberty-amendments.jpg" alt="Cover of The Liberty Amendments" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Liberty Amendments</h3>
+										<p class="card-author">Mark R. Levin</p>
+										<p class="card-text">Levin proposes a slate of constitutional amendments aimed at restraining federal power and restoring federalism.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/46XXSC9" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-michael-medved">
+					<h2 class="author-h" id="author-michael-medved">Michael Medved</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/american-miracle.jpg" alt="Cover of The American Miracle: Divine Providence in the Rise of the Republic" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The American Miracle: Divine Providence in the Rise of the Republic</h3>
+										<p class="card-author">Michael Medved</p>
+										<p class="card-text">Medved recounts pivotal episodes in early American history through a lens of providence, timing, and national purpose.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mugcb2" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-g-edward-griffin">
+					<h2 class="author-h" id="author-g-edward-griffin">G. Edward Griffin</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/creature-jekyll.jpg" alt="Cover of The Creature from Jekyll Island" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">The Creature from Jekyll Island</h3>
+										<p class="card-author">G. Edward Griffin</p>
+										<p class="card-text">A critical narrative of the Federal Reserve’s origins on Jekyll Island and arguments about money, banking, and political power.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/4mMFNvq" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+				<section class="author-block" aria-labelledby="author-ashlee-vance">
+					<h2 class="author-h" id="author-ashlee-vance">Ashlee Vance</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3">
+
+					<div class="col">
+						<article class="card h-100 book-card">
+							<div class="row g-0 h-100">
+								<div class="col-auto cover-col">
+									<img class="cover" src="covers/elon-musk.jpg" alt="Cover of Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future" width="120" height="180" loading="lazy" />
+								</div>
+								<div class="col">
+									<div class="card-body">
+										
+										<h3 class="card-title">Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</h3>
+										<p class="card-author">Ashlee Vance</p>
+										<p class="card-text">A biography of Elon Musk covering PayPal, Tesla, SpaceX, and the high-stakes engineering culture around his companies.</p>
+										<a class="btn btn-amazon" href="https://amzn.to/418CqGW" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					</div>
+				</section>
+			</section>
+
+			<p class="disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>As an Amazon Associate, I earn from qualifying purchases.</p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+</body>
+</html>
