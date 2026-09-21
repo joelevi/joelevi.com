@@ -161,93 +161,115 @@
 		
 		body{margin:0 auto;width:100%;padding:0;max-width:30rem;color:#eee;position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid #fff;box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
 	
-		/* Fill Fold cover height (~1080×2364) without scrolling — distribute, don't crush */
+		/* Homepage must fit Google Pixel 10 Pro Fold cover (~412×901 CSS) with no scroll.
+		   Honor forever (homepage only): 100dvh/100svh, overflow locked, compact spacing. */
 		@media (max-height: 920px) {
 			html, body {
-				min-height: 100%;
 				height: 100%;
+				height: 100svh;
+				height: 100dvh;
+				max-height: 100svh;
+				max-height: 100dvh;
+				overflow: hidden;
+				overscroll-behavior: none;
 			}
 			body {
 				display: flex;
 				flex-direction: column;
+				box-sizing: border-box;
 			}
 			article.vcard {
 				position: relative;
 				flex: 1 1 auto;
-				min-height: 100dvh;
-				min-height: 100svh;
+				min-height: 0;
 				display: flex;
 				flex-direction: column;
 				box-sizing: border-box;
+				overflow: hidden;
 			}
 			header {
 				flex: 0 0 auto;
 			}
+			#cover {
+				height: 9.25rem !important;
+			}
 			main {
 				flex: 1 1 auto;
+				min-height: 0;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-evenly;
-				margin-top: 3rem !important;
-				padding: 0.75rem 1rem 1.25rem !important;
+				margin-top: 0 !important;
+				padding: 0.25rem 0.85rem 0.35rem !important;
 				box-sizing: border-box;
 			}
 			#profilePhoto {
-				width: 8rem !important;
-				height: 8rem !important;
-				margin-top: -4.5rem !important;
+				width: 6.25rem !important;
+				height: 6.25rem !important;
+				margin-top: -3.1rem !important;
+				border-width: 0.25rem !important;
+				box-shadow: 0 0.25rem 0.85rem rgba(0,0,0,0.18) !important;
 				flex: 0 0 auto;
 			}
 			#info {
-				margin-top: 0.35rem !important;
+				margin-top: 0.2rem !important;
 				flex: 0 0 auto;
 			}
+			.name {
+				font-size: 1.35rem !important;
+			}
 			.jobtitle.description {
-				font-size: 0.92rem !important;
-				line-height: 1.35 !important;
+				font-size: 0.88rem !important;
+				line-height: 1.3 !important;
 				max-width: 22rem;
 			}
+			.sub {
+				margin-top: 0.25rem !important;
+				font-size: 0.82rem !important;
+			}
 			#cta {
-				margin-top: 0.65rem !important;
-				padding: 0.85rem 1.35rem !important;
+				margin-top: 0.35rem !important;
+				padding: 0.7rem 1.2rem !important;
 				flex: 0 0 auto;
 				width: calc(100% - 0.5rem);
 			}
 			.actions {
 				margin-top: 0 !important;
 				flex: 0 0 auto;
-				padding-bottom: 0.25rem;
+				padding-bottom: 0;
 			}
 			.actionBtn {
-				padding: 0.35rem !important;
+				padding: 0.25rem !important;
 			}
 			.actionBtn a {
-				padding: 0.85rem !important;
+				padding: 0.7rem !important;
 			}
 			.actionBtn p {
-				margin: 0.35rem 0 0 !important;
-				font-size: 0.82rem !important;
+				margin: 0.25rem 0 0 !important;
+				font-size: 0.78rem !important;
 			}
 			.icon {
-				width: 1.35rem !important;
-				height: 1.35rem !important;
+				width: 1.25rem !important;
+				height: 1.25rem !important;
 			}
 			#topActions a {
-				padding: 0.75rem !important;
+				padding: 0.55rem !important;
+			}
+			footer {
+				flex: 0 0 auto;
+				padding: 0.4rem 1rem 0.65rem !important;
+				font-size: 0.78rem !important;
 			}
 			.badge {
 				position: absolute;
-				bottom: 0.35rem;
-				right: 0.35rem;
+				bottom: 0.2rem;
+				right: 0.2rem;
 			}
 			.badge img {
-				width: 72px !important;
+				width: 56px !important;
 			}
 		}
-
-	
-
 
 		/* Headshot intro + name letters + action fly-in */
 		#profilePhotoIntro {
@@ -486,14 +508,6 @@
 			
 			<!-- <span itemprop="callSign">KF7NWA</span> -->
 			
-				<p class="textColor" style="margin-top:2rem;font-size:0.85rem;opacity:0.85;">
-			<a href="/books/" class="textColor" style="text-decoration:underline;">Books</a>
-			·
-			<a href="/privacy/" class="textColor" style="text-decoration:underline;">Privacy</a>
-			·
-			<a href="/terms/" class="textColor" style="text-decoration:underline;">Terms</a>
-		</p>
-
 	</main>
 	
 	
@@ -501,7 +515,7 @@
 </article>
 
 <footer>
-	<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+	<p>© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
 </footer>
 
 <script>
