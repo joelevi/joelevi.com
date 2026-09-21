@@ -74,27 +74,6 @@
 			margin: 0 auto;
 			padding: 1.25rem 1.25rem 3rem;
 		}
-		.topnav {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: 1rem;
-			margin-bottom: 1.5rem;
-			flex-wrap: wrap;
-		}
-		.topnav a.home {
-			font-family: Gruppo, sans-serif;
-			font-size: 1.15rem;
-			letter-spacing: 0.04em;
-			color: var(--ink);
-			border: 1px solid var(--rule);
-			padding: 0.4rem 0.85rem;
-			border-radius: 999px;
-			background: rgba(255,255,255,0.04);
-		}
-		.topnav a.home:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
-		.topnav .nav-links { color: var(--muted); font-size: 0.9rem; }
-		.topnav .nav-links a { color: var(--accent); }
 		.library {
 			background: var(--cream);
 			color: var(--cream-ink);
@@ -848,12 +827,25 @@
   ]
 }
 	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
 </head>
 <body>
 	<div class="wrap">
-		<nav class="topnav" aria-label="Site">
-			<a class="home" href="/">← JoeLevi.com</a>
-			<span class="nav-links"><a href="/resume/">Résumé</a> · <a href="/books/" aria-current="page">Books</a></span>
+		<nav class="site-nav" aria-label="Site">
+			<a class="site-nav__home" href="/">← JoeLevi.com</a>
+			<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+				<span class="site-nav__burger" aria-hidden="true"></span>
+			</button>
+			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+				<ul class="site-nav__list">
+				<li><a href="/">Home</a></li>
+				<li><a href="/resume/">Résumé</a></li>
+				<li><a href="/books/" aria-current="page">Books</a></li>
+				<li><a href="/privacy/">Privacy</a></li>
+				<li><a href="/terms/">Terms</a></li>
+				</ul>
+			</div>
 		</nav>
 
 		<article class="library">

@@ -1,0 +1,162 @@
+/* Shared site hamburger nav — used on all pages except the homepage Fold card. */
+.site-nav {
+	--sn-fg: var(--ink, #1c1712);
+	--sn-muted: var(--muted, #5c5348);
+	--sn-accent: var(--accent, #1a2b44);
+	--sn-border: var(--rule, var(--line, rgba(26, 35, 64, 0.18)));
+	--sn-panel-bg: var(--card, #fffdf8);
+	--sn-cream: var(--cream, #f4efe4);
+	--sn-gold: var(--gold, #c9a84c);
+	--sn-navy: var(--navy, #222D52);
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	z-index: 40;
+}
+
+.site-nav__home {
+	font-family: Gruppo, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+	font-size: 1.15rem;
+	letter-spacing: 0.04em;
+	color: var(--sn-fg);
+	border: 1px solid var(--sn-border);
+	padding: 0.4rem 0.85rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.04);
+	text-decoration: none;
+}
+
+.site-nav__home:hover {
+	background: rgba(255, 255, 255, 0.08);
+	text-decoration: none;
+	border-color: var(--sn-gold);
+}
+
+.site-nav__toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	border: 1px solid var(--sn-border);
+	border-radius: 0.5rem;
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--sn-fg);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.site-nav__toggle:hover,
+.site-nav__toggle:focus-visible {
+	border-color: var(--sn-gold);
+	outline: 2px solid transparent;
+	box-shadow: 0 0 0 2px var(--sn-gold);
+}
+
+.site-nav__burger,
+.site-nav__burger::before,
+.site-nav__burger::after {
+	display: block;
+	width: 1.15rem;
+	height: 2px;
+	background: currentColor;
+	border-radius: 1px;
+	position: relative;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-nav__burger::before,
+.site-nav__burger::after {
+	content: "";
+	position: absolute;
+	left: 0;
+}
+
+.site-nav__burger::before { top: -6px; }
+.site-nav__burger::after { top: 6px; }
+
+.site-nav.is-open .site-nav__burger {
+	background: transparent;
+}
+
+.site-nav.is-open .site-nav__burger::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.site-nav.is-open .site-nav__burger::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+.site-nav__panel {
+	position: absolute;
+	top: calc(100% + 0.35rem);
+	right: 0;
+	min-width: min(16.5rem, calc(100vw - 2rem));
+	margin: 0;
+	padding: 0.5rem;
+	list-style: none;
+	background: var(--sn-panel-bg);
+	border: 1px solid var(--sn-border);
+	border-radius: 0.75rem;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.site-nav__panel[hidden] {
+	display: none !important;
+}
+
+.site-nav__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav__list a,
+.site-nav__list button.site-nav__action {
+	display: block;
+	width: 100%;
+	padding: 0.65rem 0.85rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: transparent;
+	color: var(--sn-fg);
+	font: inherit;
+	font-size: 0.95rem;
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.site-nav__list a:hover,
+.site-nav__list a:focus-visible,
+.site-nav__list button.site-nav__action:hover,
+.site-nav__list button.site-nav__action:focus-visible {
+	background: rgba(201, 168, 76, 0.14);
+	color: var(--sn-accent);
+	outline: none;
+	text-decoration: none;
+}
+
+.site-nav__list a[aria-current="page"] {
+	background: rgba(201, 168, 76, 0.2);
+	color: var(--sn-accent);
+	font-weight: 600;
+	box-shadow: inset 3px 0 0 var(--sn-gold);
+}
+
+.site-nav__divider {
+	height: 1px;
+	margin: 0.35rem 0.5rem;
+	background: var(--sn-border);
+	border: 0;
+}
+
+@media print {
+	.site-nav { display: none !important; }
+}
