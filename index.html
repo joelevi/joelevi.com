@@ -36,22 +36,29 @@
 <link rel="canonical" href="https://www.joelevi.com/" />
 	<title>Joe Levi | Digital Business Card</title>
 	
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet" />
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/photo.jpeg" as="image" fetchpriority="high" />
+	<link rel="stylesheet" href="/assets/fonts.css" />
 	
 	
 	<script>
 		"http"==window.location.href.substr(0,4)&&"/"!=window.location.href.slice(-1)&&window.location.replace(window.location.href+"/");
     </script>
 	
-		<!-- Google Analytics (GA4) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV"></script>
+		<!-- Google Analytics (GA4) — deferred until after load -->
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-6V4LCMVCZV');
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
 	</script>
 	<!-- Vercel Web Analytics -->
 	<script>
@@ -440,7 +447,7 @@
 	<header><div id="topActions" style="display: none;"><div><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#fff;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#fff;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#fff;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#fff;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#fff;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#fff;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#fff" d="M15 15h2v2h-2z"></path></svg></div></a></div> <a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#fff;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#fff;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#fff;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a></div> <div class="headerImgC"> </div></header>
 	
 	<main>
-		<img id="profilePhoto" src="./photo.jpeg" class="u-photo photo" alt="Joe Levi" itemprop="image">
+		<img id="profilePhoto" src="./photo.jpeg" class="u-photo photo" alt="Joe Levi" itemprop="image" width="450" height="450" fetchpriority="high" decoding="sync" loading="eager">
 		<div id="info" class="textColor">
 			<p class="name n" itemprop="name">
 				<span class="p-given-name given-name nickname" itemprop="givenName">Joe</span> <span class="p-family-name family-name" itemprop="familyName">Levi</span>
@@ -502,7 +509,6 @@
 	document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
-<script src="./qrcode.min.js"></script>
 
 <script>
     let m = document.getElementById("modal"),
@@ -527,8 +533,29 @@
     function dN(e) {
         e.style.display = "none";
     }
+    function ensureQr() {
+        if (qr.dataset.ready === "1") return Promise.resolve();
+        return new Promise(function (resolve, reject) {
+            if (window.QRCode) {
+                qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg();
+                qr.dataset.ready = "1";
+                resolve();
+                return;
+            }
+            var s = document.createElement("script");
+            s.src = "./qrcode.min.js";
+            s.async = true;
+            s.onload = function () {
+                qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg();
+                qr.dataset.ready = "1";
+                resolve();
+            };
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+    }
     window.addEventListener("load", () => {
-        (document.querySelector("#topActions").style.display = "flex"), (qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg());
+        document.querySelector("#topActions").style.display = "flex";
     }),
         navigator.canShare
             ? s.addEventListener("click", () => {
@@ -538,7 +565,9 @@
                   tC(m), (cv.style.display = "flex"), dN(qrv), ki && dN(ki);
               }),
         sqr.addEventListener("click", () => {
-            tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki);
+            ensureQr().then(function () {
+                tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki);
+            });
         }),
         sk &&
             sk.addEventListener("click", () => {
@@ -741,6 +770,9 @@
     clone.removeAttribute("itemprop");
     clone.alt = "";
     clone.setAttribute("aria-hidden", "true");
+    clone.setAttribute("loading", "eager");
+    clone.setAttribute("fetchpriority", "high");
+    clone.setAttribute("decoding", "sync");
     clone.style.top = startTop + "px";
     clone.style.left = startLeft + "px";
     clone.style.width = size + "px";
