@@ -3,10 +3,10 @@
 <html lang="en" data-theme="dark" class="theme-dark">
 <head profile="http://microformats.org/profile/hcard">
 	<meta charset="UTF-8" />
-	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<!-- Theme: dark (lime/BIO) ↔ light (forest/mint); localStorage override or prefers-color-scheme. -->
 	<script>
 		(function () {
-			var LIGHT_ENABLED = false;
+			var LIGHT_ENABLED = true;
 			var key = "joelevi-theme";
 			var theme = "dark";
 			try {
@@ -102,15 +102,15 @@
 		html {
 			background-color: var(--bio, #06110D);
 		}
-		
 		body {
+			background-color: var(--bio, #06110D);
 			font-family: "Gruppo", sans-serif;
 			font-weight: 400;
 			font-style: normal;
 		}
 		
 		article {
-			box-shadow: 0 0 3rem 1rem rgba(200, 255, 0, 0.18);
+			box-shadow: 0 0 3rem 1rem var(--tint-strong, rgba(200, 255, 0, 0.18));
 		}
 		
 		input[type='range']::-moz-range-track {
@@ -123,7 +123,7 @@
 			height: 1.5rem;
 			border-radius: 100%;
 			border: none;
-			background: #C8FF00;
+			background: var(--lime, #C8FF00);
 			z-index: 3;
 			cursor: pointer;
 		}
@@ -134,14 +134,14 @@
 			height: 1.5rem;
 			border-radius: 100%;
 			border: none;
-			background: #C8FF00;
+			background: var(--lime, #C8FF00);
 			z-index: 3;
 			cursor: pointer;
 		}
 		
-		.closeColor { color: #C8FF00; }
+		.closeColor { color: var(--lime, #C8FF00); }
 		.topAction { }
-		.iconColor { color: #06110D; opacity: 1; -webkit-text-fill-color: #06110D; }
+		.iconColor { color: var(--btn-fg, #06110D); opacity: 1; -webkit-text-fill-color: var(--btn-fg, #06110D); }
 
 		/* Fold homepage: reuse .site-nav__trailing theme control (far right of top actions) */
 		#topActions.site-nav {
@@ -165,9 +165,9 @@
 			/* Match other pages; keep clear of the lime icon-link paddings */
 			align-self: center;
 		}
-		.cardColor { color:#C8FF00 !important; }
-		.textColor { color:#C8FF00 !important; }
-		.seekbarColor { background:#C8FF00 !important; }
+		.cardColor { color: var(--lime, #C8FF00) !important; }
+		.textColor { color: var(--lime, #C8FF00) !important; }
+		.seekbarColor { background: var(--lime, #C8FF00) !important; }
 		
 		main {
 			background-color: var(--card, #0C1F18);
@@ -188,16 +188,16 @@
 		#dlKey,
 		#cta,
 		.actionBtn a {
-			background-color: #C8FF00 !important;
-			background: #C8FF00 !important;
-			color: #06110D !important;
-			border-color: #030907 !important;
+			background-color: var(--btn-bg, #C8FF00) !important;
+			background: var(--btn-bg, #C8FF00) !important;
+			color: var(--btn-fg, #06110D) !important;
+			border-color: var(--btn-border, #030907) !important;
 		}
 		#cta {
 			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
 			font-weight: 700 !important;
 			letter-spacing: 0.01em;
-			-webkit-text-fill-color: #06110D !important;
+			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
 			text-shadow: none !important;
 			-webkit-text-stroke: 0 !important;
 		}
@@ -211,8 +211,8 @@
 		#copyURL .iconColor,
 		#copyURL span,
 		.actionBtn a .iconColor {
-			color: #06110D !important;
-			-webkit-text-fill-color: #06110D !important;
+			color: var(--btn-fg, #06110D) !important;
+			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
 			opacity: 1 !important;
 			font-weight: 700 !important;
 			text-shadow: none !important;
@@ -248,7 +248,7 @@
 			text-decoration: none;
 		}
 		
-		body{margin:0 auto;width:100%;padding:0;max-width:min(100%,72rem);color:#C8FF00;position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid #C8FF00;box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
+		body{margin:0 auto;width:100%;padding:0;max-width:min(100%,72rem);color:var(--ink,#C8FF00);position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid var(--lime,#C8FF00);box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
 	
 		/* Fill Fold cover height (~1080×2364) without scrolling — distribute, don't crush */
 		@media (max-height: 920px) {
@@ -340,18 +340,18 @@
 			pointer-events: none;
 			-webkit-user-select: none;
 			user-select: none;
-			border: 0.4rem solid #C8FF00;
+			border: 0.4rem solid var(--lime, #C8FF00);
 			box-shadow:
-				0 0 0 0.15rem rgba(200, 255, 0, 0.85),
-				0 1.25rem 3rem rgba(0, 0, 0, 0.35);
+				0 0 0 0.15rem color-mix(in srgb, var(--lime, #C8FF00) 85%, transparent),
+				0 1.25rem 3rem var(--shadow, rgba(0, 0, 0, 0.35));
 			will-change: top, left, width, height;
 		}
 		#introPhotoScrim {
 			position: fixed;
 			inset: 0;
 			z-index: 10000;
-			background: #000;
-			opacity: 0.8;
+			background: var(--bio, #06110D);
+			opacity: 0.92;
 			pointer-events: none;
 			will-change: opacity;
 		}
@@ -378,14 +378,44 @@
 		}
 
 	
-		::selection { background: #C8FF00; color: #06110D; }
-		::-moz-selection { background: #C8FF00; color: #06110D; }
+		::selection { background: var(--selection-bg, #C8FF00); color: var(--selection-fg, #06110D); }
+		::-moz-selection { background: var(--selection-bg, #C8FF00); color: var(--selection-fg, #06110D); }
 		a:focus-visible, button:focus-visible, #cta:focus-visible, .actionBtn a:focus-visible {
-			outline: 2px solid #C8FF00;
+			outline: 2px solid var(--lime, #C8FF00);
 			outline-offset: 3px;
 		}
 		footer { color: #8A9A7E; }
-		footer a { color: #C8FF00; }
+		footer a { color: var(--lime, #C8FF00); }
+
+		/* Light theme: recolor hardcoded dark-mode SVG strokes/fills on the Fold card */
+		html[data-theme="light"] .topAction [style*="stroke:#C8FF00"],
+		html[data-theme="light"] .closeColor [style*="stroke:#C8FF00"] {
+			stroke: #075E46 !important;
+		}
+		html[data-theme="light"] .topAction [style*="fill:#C8FF00"] {
+			fill: #075E46 !important;
+		}
+		html[data-theme="light"] .actionBtn a [style*="stroke:#06110D"],
+		html[data-theme="light"] #cta [style*="stroke:#06110D"],
+		html[data-theme="light"] #dlKey [style*="stroke:#06110D"],
+		html[data-theme="light"] #copyURL [style*="stroke:#06110D"] {
+			stroke: #E8FFF2 !important;
+		}
+		html[data-theme="light"] .actionBtn a [style*="fill:#06110D"],
+		html[data-theme="light"] .actionBtn a [fill="#06110D"],
+		html[data-theme="light"] #cta [style*="fill:#06110D"] {
+			fill: #E8FFF2 !important;
+		}
+		html[data-theme="light"] #profilePhoto {
+			border-color: #075E46;
+			box-shadow: 0 0.35rem 1.25rem rgba(7, 94, 70, 0.2);
+		}
+		html[data-theme="light"] #topActions .site-nav__theme {
+			color: #075E46;
+			border-color: rgba(7, 94, 70, 0.18);
+			background: rgba(7, 94, 70, 0.06);
+		}
+
 
 </style>
 	
@@ -522,9 +552,9 @@
               Copy &amp; Send the URL to share my Business Card
     </p> <button id="copyURL"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M22 11a2 2 0 0 0-2-2h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-9Z" style="fill:none;stroke:#06110D;stroke-width:2px"></path><path d="M5 15H4c-1.097 0-2-.903-2-2V4c0-1.097.903-2 2-2h9c1.097 0 2 .903 2 2v1" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:2px"></path></svg></div> <span class="iconColor">Copy URL</span></button></div> <div id="qrView" class="textColor"><div id="qr"></div> <h3>Scan the QR Code</h3> <p>to view my Business Card on another device</p></div></div>
 	
-	<header><nav id="topActions" class="site-nav site-nav--fold" style="display: none;" aria-label="Site"><a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a> <div class="top-actions-end"><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#C8FF00;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#C8FF00" d="M15 15h2v2h-2z"></path></svg></div></a> <div class="site-nav__trailing"><!-- Light mode coming soon: toggle far right of Fold top actions; light cannot activate. -->
-				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
-					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+	<header><nav id="topActions" class="site-nav site-nav--fold" style="display: none;" aria-label="Site"><a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a> <div class="top-actions-end"><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#C8FF00;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#C8FF00" d="M15 15h2v2h-2z"></path></svg></div></a> <div class="site-nav__trailing"><button type="button" class="site-nav__theme" id="site-theme-toggle" aria-label="Switch to light theme" title="Light theme" data-theme-current="dark">
+					<svg class="site-nav__theme-icon site-nav__theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+					<svg class="site-nav__theme-icon site-nav__theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
 				</button>
 			</div></div></nav> <div class="headerImgC"> </div></header>
 	

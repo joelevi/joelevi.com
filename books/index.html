@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark" class="theme-dark">
 <head>
 	<meta charset="UTF-8" />
-	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<!-- Theme: dark (lime/BIO) ↔ light (forest/mint); localStorage override or prefers-color-scheme. -->
 	<script>
 		(function () {
-			var LIGHT_ENABLED = false;
+			var LIGHT_ENABLED = true;
 			var key = "joelevi-theme";
 			var theme = "dark";
 			try {
@@ -80,7 +80,7 @@
 	</script>
 	<script defer src="/_vercel/speed-insights/script.js"></script>
 	<style>
-		/* Dark theme tokens: /assets/theme.css ([data-theme="dark"] / prefers-color-scheme: dark). */
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
 		* { box-sizing: border-box; }
 		html { background: var(--navy-deep); }
 		body {
@@ -89,7 +89,7 @@
 			font-size: 1rem;
 			line-height: 1.55;
 			color: var(--ink);
-			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, #030907 100%);
+			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, var(--bio-deep) 100%);
 			min-height: 100vh;
 		}
 		a { color: var(--accent); text-decoration: none; }
@@ -105,9 +105,9 @@
 			border: 1px solid var(--rule);
 			border-radius: 1rem;
 			padding: 1.75rem 1.5rem 2rem;
-			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+			box-shadow: 0 18px 50px var(--shadow);
 		}
-		.library a { color: #C8FF00; }
+		.library a { color: var(--lime); }
 		.library h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(2rem, 5vw, 2.75rem);
@@ -117,7 +117,7 @@
 			color: var(--lime);
 		}
 		.library .lede {
-			color: #8A9A7E;
+			color: var(--muted);
 			margin: 0.5rem 0 1.25rem;
 			max-width: 42rem;
 		}
@@ -129,16 +129,16 @@
 			text-transform: uppercase;
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
-			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			border-bottom: 1px solid var(--rule);
 			color: var(--lime);
 		}
 		.library h2.author-h {
 			font-size: 1.15rem;
 			letter-spacing: 0.04em;
 			margin: 1.75rem 0 0.75rem;
-			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			border-bottom: 1px solid var(--rule);
 			text-transform: none;
-			color: #C8FF00;
+			color: var(--lime);
 		}
 		.library h3.card-title {
 			font-size: 1.05rem;
@@ -148,11 +148,11 @@
 			line-height: 1.3;
 		}
 		.book-card {
-			background: #102820;
-			border: 1px solid rgba(200, 255, 0, 0.16) !important;
+			background: var(--surface);
+			border: 1px solid var(--rule) !important;
 			border-radius: 0.75rem;
 			overflow: hidden;
-			box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+			box-shadow: 0 6px 18px var(--shadow);
 		}
 		.book-card .card-body {
 			padding: 0.85rem 1rem 1rem;
@@ -162,7 +162,7 @@
 		}
 		.cover-col {
 			width: 120px;
-			background: #0A1812;
+			background: var(--surface-deep);
 		}
 		.cover {
 			display: block;
@@ -173,13 +173,13 @@
 		}
 		.card-author {
 			margin: 0 0 0.45rem;
-			color: #8A9A7E;
+			color: var(--muted);
 			font-size: 0.92rem;
 			font-weight: 500;
 		}
 		.card-text {
 			margin: 0 0 0.85rem;
-			color: #C5D4B0;
+			color: var(--cream-ink);
 			font-size: 0.92rem;
 			flex: 1;
 		}
@@ -189,8 +189,8 @@
 			margin: 0 0 0.45rem;
 			padding: 0.2rem 0.55rem;
 			border-radius: 999px;
-			background: rgba(200,255,0,0.1);
-			border: 1px solid rgba(200,255,0,0.28);
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
 			color: var(--lime);
 			font-size: 0.75rem;
 			font-weight: 600;
@@ -225,7 +225,7 @@
 		.disclosure {
 			margin-top: 1rem;
 			font-size: 0.88rem;
-			color: #8A9A7E;
+			color: var(--muted);
 		}
 		footer.page-foot {
 			margin-top: 1.5rem;
@@ -241,9 +241,9 @@
 			.row.g-0 > .cover-col { flex: 0 0 96px; max-width: 96px; }
 		}
 
-		::selection { background: #C8FF00; color: #06110D; }
-		::-moz-selection { background: #C8FF00; color: #06110D; }
-		a:focus-visible, .btn-amazon:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible, .btn-amazon:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
 	</style>
 	<script type="application/ld+json">
 {
@@ -934,9 +934,9 @@
 				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
 					<span class="site-nav__burger" aria-hidden="true"></span>
 				</button>
-				<!-- Light mode coming soon: toggle visible to the right of hamburger; light cannot activate. -->
-				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
-					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" aria-label="Switch to light theme" title="Light theme" data-theme-current="dark">
+					<svg class="site-nav__theme-icon site-nav__theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+					<svg class="site-nav__theme-icon site-nav__theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
 				</button>
 			</div>
 			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>

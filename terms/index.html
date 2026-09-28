@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark" class="theme-dark">
 <head>
 	<meta charset="utf-8" />
-	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<!-- Theme: dark (lime/BIO) ↔ light (forest/mint); localStorage override or prefers-color-scheme. -->
 	<script>
 		(function () {
-			var LIGHT_ENABLED = false;
+			var LIGHT_ENABLED = true;
 			var key = "joelevi-theme";
 			var theme = "dark";
 			try {
@@ -49,9 +49,9 @@
 	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
 	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
 	<style>
-/* Dark theme tokens: /assets/theme.css ([data-theme="dark"] / .theme-dark). */
+/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
 * { box-sizing: border-box; }
-body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:#C5D4B0; background:var(--bg); line-height:1.6; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--cream-ink); background:var(--bg); line-height:1.6; }
 .wrap { max-width:42rem; margin:0 auto; padding:1.25rem 1.25rem 3rem; }
 header { margin-bottom:1.75rem; padding-bottom:1rem; border-bottom:1px solid var(--line); }
 h1 { margin:0.35rem 0 0; font-size:clamp(1.75rem,4vw,2.25rem); color:var(--accent); line-height:1.2; }
@@ -63,8 +63,8 @@ p, ul { margin:0.65rem 0; }
 ul { padding-left:1.25rem; }
 footer { margin-top:1.75rem; text-align:center; color:var(--muted); font-size:0.9rem; }
 
-::selection { background: #C8FF00; color: #06110D; }
-a:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
+::selection { background: var(--selection-bg); color: var(--selection-fg); }
+a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
 </style>
 
 	<script type="application/ld+json">
@@ -136,9 +136,9 @@ a:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
 				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
 					<span class="site-nav__burger" aria-hidden="true"></span>
 				</button>
-				<!-- Light mode coming soon: toggle visible to the right of hamburger; light cannot activate. -->
-				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
-					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" aria-label="Switch to light theme" title="Light theme" data-theme-current="dark">
+					<svg class="site-nav__theme-icon site-nav__theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+					<svg class="site-nav__theme-icon site-nav__theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
 				</button>
 			</div>
 			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>

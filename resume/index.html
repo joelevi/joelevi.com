@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark" class="theme-dark">
 <head profile="http://microformats.org/wiki/hresume">
 	<meta charset="UTF-8" />
-	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<!-- Theme: dark (lime/BIO) ↔ light (forest/mint); localStorage override or prefers-color-scheme. -->
 	<script>
 		(function () {
-			var LIGHT_ENABLED = false;
+			var LIGHT_ENABLED = true;
 			var key = "joelevi-theme";
 			var theme = "dark";
 			try {
@@ -82,7 +82,7 @@
 	</script>
 	<script defer src="/_vercel/speed-insights/script.js"></script>
 	<style>
-		/* Dark theme tokens: /assets/theme.css ([data-theme="dark"] / .theme-dark). */
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
 		* { box-sizing: border-box; }
 		abbr[title] {
 			position: relative;
@@ -103,7 +103,7 @@
 			padding: 0.35rem 0.55rem;
 			border-radius: 0.35rem;
 			background: var(--navy-deep);
-			color: #C8FF00;
+			color: var(--lime);
 			font-size: 0.82rem;
 			font-weight: 500;
 			letter-spacing: 0.01em;
@@ -120,7 +120,7 @@
 			font-size: 1rem;
 			line-height: 1.55;
 			color: var(--ink);
-			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, #030907 100%);
+			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, var(--bio-deep) 100%);
 			min-height: 100vh;
 		}
 		a { color: var(--accent); text-decoration: none; }
@@ -139,7 +139,7 @@
 			padding: 1.75rem 1.5rem 2rem;
 			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 		}
-		.hresume a { color: #C8FF00; }
+		.hresume a { color: var(--lime); }
 		h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(4rem, 10vw, 5.5rem);
@@ -156,7 +156,7 @@
 			text-transform: uppercase;
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
-			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			border-bottom: 1px solid var(--rule);
 			color: var(--lime);
 		}
 		h3 {
@@ -167,7 +167,7 @@
 		}
 		.summary {
 			font-style: italic;
-			color: #8A9A7E;
+			color: var(--muted);
 			margin: 0.5rem 0 1rem;
 			max-width: 40rem;
 		}
@@ -175,7 +175,7 @@
 			font-style: normal;
 			display: grid;
 			gap: 0.45rem;
-			color: #8A9A7E;
+			color: var(--muted);
 			font-size: 0.95rem;
 		}
 		.contact .fn { display: none; }
@@ -193,11 +193,11 @@
 			overflow: visible;
 		}
 		.contact-text { line-height: 1.45; }
-		.meta-line { color: #8A9A7E; font-size: 0.9rem; margin: 0 0 0.55rem; }
+		.meta-line { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
 		.experience, .education {
 			margin: 0 0 1.35rem;
 			padding-bottom: 1.15rem;
-			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			border-bottom: 1px solid var(--rule);
 		}
 		.experience:last-of-type, .education:last-of-type { border-bottom: none; }
 		.description { margin: 0.35rem 0 0; }
@@ -205,27 +205,27 @@
 			margin: 0.35rem 0 0;
 			padding-left: 1.2rem;
 		}
-		ul.description li, .skills li { margin: 0.25rem 0; color: #C5D4B0; }
+		ul.description li, .skills li { margin: 0.25rem 0; color: var(--cream-ink); }
 		.skill {
 			display: inline-block;
 			margin: 0.2rem 0.35rem 0.2rem 0;
 			padding: 0.2rem 0.55rem;
 			border-radius: 999px;
-			background: rgba(200,255,0,0.1);
-			border: 1px solid rgba(200,255,0,0.28);
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
 			color: var(--lime);
 			font-size: 0.88rem;
 			font-weight: 600;
 			text-decoration: none;
 		}
-		.skill:hover { background: rgba(200,255,0,0.18); text-decoration: none; color: var(--lime); }
+		.skill:hover { background: var(--tint-strong); text-decoration: none; color: var(--lime); }
 		.skill-group { margin: 0 0 1rem; }
-		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: #C8FF00; }
+		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--lime); }
 		blockquote.testimonial {
 			margin: 0.75rem 0;
 			padding: 0.75rem 1rem;
 			border-left: 3px solid var(--lime);
-			background: #0A1812;
+			background: var(--surface-deep);
 			border-radius: 0 0.5rem 0.5rem 0;
 			color: var(--cream-ink);
 			font-size: 0.95rem;
@@ -234,11 +234,11 @@
 			display: block;
 			margin-top: 0.5rem;
 			font-style: normal;
-			color: #8A9A7E;
+			color: var(--muted);
 			font-size: 0.85rem;
 		}
 		.refs ul { margin: 0.35rem 0 0; padding-left: 1.2rem; }
-		.refs li { color: #C5D4B0; }
+		.refs li { color: var(--cream-ink); }
 		footer.page-foot {
 			margin-top: 1.5rem;
 			text-align: center;
@@ -275,9 +275,9 @@
 			a.home { border-color: #999; color: #111; }
 		}
 
-		::selection { background: #C8FF00; color: #06110D; }
-		::-moz-selection { background: #C8FF00; color: #06110D; }
-		a:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
 	</style>
 
 	<script type="application/ld+json">
@@ -409,9 +409,9 @@
 				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
 					<span class="site-nav__burger" aria-hidden="true"></span>
 				</button>
-				<!-- Light mode coming soon: toggle visible to the right of hamburger; light cannot activate. -->
-				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
-					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" aria-label="Switch to light theme" title="Light theme" data-theme-current="dark">
+					<svg class="site-nav__theme-icon site-nav__theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+					<svg class="site-nav__theme-icon site-nav__theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
 				</button>
 			</div>
 			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>

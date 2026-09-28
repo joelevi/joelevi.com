@@ -1,14 +1,40 @@
 /**
- * Theme preference: dark (Synthetic Lime / BIO Black) is default and currently forced.
- * Light mode UI exists in the nav but cannot activate yet — coming soon.
- * localStorage key is ready for when light is enabled.
+ * Theme preference: dark (Synthetic Lime / BIO Black) ↔ light (Forest Code / Mint Fog).
+ * Persists override in localStorage ("joelevi-theme"). Without override, follows
+ * prefers-color-scheme and listens for system changes.
  */
 (function () {
 	"use strict";
 
 	var STORAGE_KEY = "joelevi-theme";
-	/* Flip to true when light palette ships. */
-	var LIGHT_ENABLED = false;
+	var LIGHT_ENABLED = true;
+	var THEME_COLOR = { dark: "#06110D", light: "#E8FFF2" };
+
+	function getStored() {
+		try {
+			return localStorage.getItem(STORAGE_KEY);
+		} catch (e) {
+			return null;
+		}
+	}
+
+	function hasOverride() {
+		var stored = getStored();
+		return stored === "light" || stored === "dark";
+	}
+
+	function systemTheme() {
+		if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+			return "light";
+		}
+		return "dark";
+	}
+
+	function resolveTheme() {
+		if (!LIGHT_ENABLED) return "dark";
+		if (hasOverride()) return getStored();
+		return systemTheme();
+	}
 
 	function applyTheme(theme) {
 		var root = document.documentElement;
@@ -17,26 +43,13 @@
 		root.classList.toggle("theme-light", theme === "light");
 		var meta = document.querySelector('meta[name="theme-color"]');
 		if (meta) {
-			meta.setAttribute("content", theme === "dark" ? "#06110D" : "#06110D");
+			meta.setAttribute("content", THEME_COLOR[theme] || THEME_COLOR.dark);
+		}
+		var ms = document.querySelector('meta[name="msapplication-navbutton-color"]');
+		if (ms) {
+			ms.setAttribute("content", THEME_COLOR[theme] || THEME_COLOR.dark);
 		}
 		syncToggle(theme);
-	}
-
-	function resolveTheme() {
-		var stored = null;
-		try {
-			stored = localStorage.getItem(STORAGE_KEY);
-		} catch (e) { /* ignore */ }
-
-		if (!LIGHT_ENABLED) {
-			/* Force dark; ignore stored light until light is enabled. */
-			return "dark";
-		}
-		if (stored === "light" || stored === "dark") return stored;
-		if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			return "dark";
-		}
-		return "light";
 	}
 
 	function syncToggle(theme) {
@@ -46,10 +59,7 @@
 		if (!LIGHT_ENABLED) {
 			btn.disabled = true;
 			btn.setAttribute("aria-disabled", "true");
-			btn.setAttribute(
-				"aria-label",
-				"Color theme: dark. Light mode coming soon."
-			);
+			btn.setAttribute("aria-label", "Color theme: dark. Light mode coming soon.");
 			btn.setAttribute("title", "Light mode coming soon");
 			return;
 		}
@@ -73,20 +83,36 @@
 	applyTheme(theme);
 
 	document.addEventListener("DOMContentLoaded", function () {
-		syncToggle(theme);
+		syncToggle(document.documentElement.getAttribute("data-theme") || theme);
 		var btn = document.getElementById("site-theme-toggle");
 		if (!btn) return;
 		btn.addEventListener("click", function (e) {
 			e.preventDefault();
 			e.stopPropagation();
 			if (!LIGHT_ENABLED) {
-				/* Light mode coming soon — stay dark. */
 				applyTheme("dark");
 				return;
 			}
-			var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+			var next =
+				document.documentElement.getAttribute("data-theme") === "dark"
+					? "light"
+					: "dark";
 			persist(next);
 			applyTheme(next);
 		});
 	});
+
+	/* Follow system only when the user has not set an override. */
+	if (LIGHT_ENABLED && window.matchMedia) {
+		var mq = window.matchMedia("(prefers-color-scheme: light)");
+		var onChange = function () {
+			if (hasOverride()) return;
+			applyTheme(systemTheme());
+		};
+		if (typeof mq.addEventListener === "function") {
+			mq.addEventListener("change", onChange);
+		} else if (typeof mq.addListener === "function") {
+			mq.addListener(onChange);
+		}
+	}
 })();

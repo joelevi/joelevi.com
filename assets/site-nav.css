@@ -27,12 +27,12 @@
 	border: 1px solid var(--sn-border);
 	padding: 0.4rem 0.85rem;
 	border-radius: 999px;
-	background: rgba(200, 255, 0, 0.04);
+	background: var(--tint-weak, rgba(200, 255, 0, 0.04));
 	text-decoration: none;
 }
 
 .site-nav__home:hover {
-	background: rgba(200, 255, 0, 0.1);
+	background: var(--tint, rgba(200, 255, 0, 0.1));
 	text-decoration: none;
 	border-color: var(--sn-gold);
 }
@@ -56,7 +56,7 @@
 	padding: 0;
 	border: 1px solid var(--sn-border);
 	border-radius: 0.5rem;
-	background: rgba(200, 255, 0, 0.04);
+	background: var(--tint-weak, rgba(200, 255, 0, 0.04));
 	color: var(--sn-fg);
 	cursor: pointer;
 	flex-shrink: 0;
@@ -71,15 +71,12 @@
 	box-shadow: 0 0 0 2px var(--sn-gold);
 }
 
-/* Light mode coming soon — control visible but inactive.
-   Keep full-strength ink/lime like sibling nav icons (no washed opacity). */
 .site-nav__theme:disabled,
 .site-nav__theme[aria-disabled="true"] {
 	opacity: 1;
 	cursor: not-allowed;
 	box-shadow: none;
 	color: var(--sn-fg);
-	/* Match hamburger / action icon strength */
 	filter: none;
 }
 
@@ -87,6 +84,14 @@
 	width: 1.15rem;
 	height: 1.15rem;
 	display: block;
+}
+
+/* Sun in dark (switch to light); moon in light (switch to dark) */
+.site-nav__theme[data-theme-current="dark"] .site-nav__theme-icon--moon {
+	display: none;
+}
+.site-nav__theme[data-theme-current="light"] .site-nav__theme-icon--sun {
+	display: none;
 }
 
 .site-nav__burger,
@@ -136,7 +141,7 @@
 	background: var(--sn-panel-bg);
 	border: 1px solid var(--sn-border);
 	border-radius: 0.75rem;
-	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+	box-shadow: 0 12px 32px var(--shadow, rgba(0, 0, 0, 0.45));
 }
 
 .site-nav__panel[hidden] {
@@ -169,14 +174,14 @@
 .site-nav__list a:focus-visible,
 .site-nav__list button.site-nav__action:hover,
 .site-nav__list button.site-nav__action:focus-visible {
-	background: rgba(200, 255, 0, 0.14);
+	background: var(--tint-strong, rgba(200, 255, 0, 0.14));
 	color: var(--sn-accent);
 	outline: none;
 	text-decoration: none;
 }
 
 .site-nav__list a[aria-current="page"] {
-	background: rgba(200, 255, 0, 0.2);
+	background: var(--tint-strong, rgba(200, 255, 0, 0.2));
 	color: var(--sn-accent);
 	font-weight: 600;
 	box-shadow: inset 3px 0 0 var(--sn-gold);
