@@ -71,12 +71,16 @@
 	box-shadow: 0 0 0 2px var(--sn-gold);
 }
 
-/* Light mode coming soon — control visible but inactive */
+/* Light mode coming soon — control visible but inactive.
+   Keep full-strength ink/lime like sibling nav icons (no washed opacity). */
 .site-nav__theme:disabled,
 .site-nav__theme[aria-disabled="true"] {
-	opacity: 0.55;
+	opacity: 1;
 	cursor: not-allowed;
 	box-shadow: none;
+	color: var(--sn-fg);
+	/* Match hamburger / action icon strength */
+	filter: none;
 }
 
 .site-nav__theme-icon {

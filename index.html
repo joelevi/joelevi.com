@@ -62,6 +62,7 @@
 	<title>Joe Levi | Digital Business Card</title>
 	
 	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preload" href="/photo.jpeg" as="image" fetchpriority="high" />
 	<link rel="stylesheet" href="/assets/fonts.css" />
 	
@@ -140,7 +141,7 @@
 		
 		.closeColor { color: #C8FF00; }
 		.topAction { }
-		.iconColor { color: var(--btn-fg, #06110D); }
+		.iconColor { color: #06110D; opacity: 1; -webkit-text-fill-color: #06110D; }
 
 		/* Fold homepage: reuse .site-nav__trailing theme control (far right of top actions) */
 		#topActions.site-nav {
@@ -180,16 +181,28 @@
 			opacity: 0;
 		}
 		
-		/* Homepage CTAs match Amazon .btn-amazon via shared --btn-* tokens (theme.css).
-		   Force bg + fg with !important so body/link lime color cannot win (no lime-on-lime). */
+		/* Homepage CTAs: lime fill + BIO Black label (strong contrast; not lime-on-lime).
+		   Body uses Gruppo (thin display) — CTA label must use Inter + weight so text
+		   reads as solid near-black on #C8FF00, matching Amazon Buy buttons. */
 		button:not(.site-nav__theme):not(.site-nav__toggle):not(.site-nav__action),
 		#dlKey,
 		#cta,
 		.actionBtn a {
-			background-color: var(--btn-bg, #C8FF00) !important;
-			background: var(--btn-bg, #C8FF00) !important;
-			color: var(--btn-fg, #06110D) !important;
-			border-color: var(--btn-border, #030907) !important;
+			background-color: #C8FF00 !important;
+			background: #C8FF00 !important;
+			color: #06110D !important;
+			border-color: #030907 !important;
+		}
+		#cta {
+			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
+			font-weight: 700 !important;
+			letter-spacing: 0.01em;
+			-webkit-text-fill-color: #06110D !important;
+			text-shadow: none !important;
+			-webkit-text-stroke: 0 !important;
+		}
+		body:not(.intro-pending) #cta {
+			opacity: 1;
 		}
 		#cta .iconColor,
 		#cta p,
@@ -198,7 +211,19 @@
 		#copyURL .iconColor,
 		#copyURL span,
 		.actionBtn a .iconColor {
-			color: var(--btn-fg, #06110D) !important;
+			color: #06110D !important;
+			-webkit-text-fill-color: #06110D !important;
+			opacity: 1 !important;
+			font-weight: 700 !important;
+			text-shadow: none !important;
+			-webkit-text-stroke: 0 !important;
+		}
+		#cta p {
+			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
+			font-weight: 700 !important;
+			font-size: 1.05rem !important;
+			line-height: 1.2 !important;
+			margin: 0 !important;
 		}
 		
 		footer .footer-line {
@@ -208,21 +233,6 @@
 			flex-wrap: wrap;
 			gap: 0.4rem;
 			margin: 0;
-		}
-		footer .badge {
-			display: inline-flex;
-			position: static;
-			padding: 0;
-			line-height: 0;
-			margin: 0;
-			flex: 0 0 auto;
-		}
-		footer .badge img {
-			width: 1.25em;
-			height: 1.25em;
-			object-fit: contain;
-			image-rendering: auto;
-			display: block;
 		}
 		
 		p.name {
@@ -314,10 +324,6 @@
 			}
 			#topActions a {
 				padding: 0.75rem !important;
-			}
-			footer .badge img {
-				width: 1.25em !important;
-				height: 1.25em !important;
 			}
 		}
 
@@ -578,7 +584,7 @@
 </article>
 
 <footer>
-	<p class="footer-line">© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> <a class="badge" href="https://microformats.org/wiki/h-card" target="_blank" rel="noopener noreferrer" title="This business card has been marked up using the h-card Microformat"><img src="./microformat_hcard.png" alt="h-card" width="18" height="18" /></a></p>
+	<p class="footer-line">© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
 </footer>
 
 <script>
