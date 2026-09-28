@@ -1,4 +1,4 @@
-/* Shared site hamburger nav — used on all pages except the homepage Fold card. */
+/* Shared site hamburger nav — used on all pages; Fold homepage reuses .site-nav__trailing theme control only. */
 .site-nav {
 	--sn-fg: var(--ink, #C8FF00);
 	--sn-muted: var(--muted, #8A9A7E);

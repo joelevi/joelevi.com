@@ -25,6 +25,7 @@
 		})();
 	</script>
 	<link rel="stylesheet" href="/assets/theme.css" />
+	<link rel="stylesheet" href="/assets/site-nav.css" />
 	<script defer src="/assets/theme.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -140,6 +141,29 @@
 		.closeColor { color: #C8FF00; }
 		.topAction { }
 		.iconColor { color: var(--btn-fg, #06110D); }
+
+		/* Fold homepage: reuse .site-nav__trailing theme control (far right of top actions) */
+		#topActions.site-nav {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0;
+			padding: 0.25rem 0.35rem 0;
+			z-index: 40;
+		}
+		#topActions .top-actions-end {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.15rem;
+			margin-left: auto;
+		}
+		#topActions .site-nav__trailing {
+			margin-left: 0.15rem;
+		}
+		#topActions .site-nav__theme {
+			/* Match other pages; keep clear of the lime icon-link paddings */
+			align-self: center;
+		}
 		.cardColor { color:#C8FF00 !important; }
 		.textColor { color:#C8FF00 !important; }
 		.seekbarColor { background:#C8FF00 !important; }
@@ -156,14 +180,25 @@
 			opacity: 0;
 		}
 		
-		/* Homepage CTAs match Amazon .btn-amazon via shared --btn-* tokens (theme.css) */
-		button,
+		/* Homepage CTAs match Amazon .btn-amazon via shared --btn-* tokens (theme.css).
+		   Force bg + fg with !important so body/link lime color cannot win (no lime-on-lime). */
+		button:not(.site-nav__theme):not(.site-nav__toggle):not(.site-nav__action),
 		#dlKey,
 		#cta,
-		.actionBtn a	{
-			background-color: var(--btn-bg, #C8FF00);
-			color: var(--btn-fg, #06110D);
-			border-color: var(--btn-border, #030907);
+		.actionBtn a {
+			background-color: var(--btn-bg, #C8FF00) !important;
+			background: var(--btn-bg, #C8FF00) !important;
+			color: var(--btn-fg, #06110D) !important;
+			border-color: var(--btn-border, #030907) !important;
+		}
+		#cta .iconColor,
+		#cta p,
+		#dlKey .iconColor,
+		#dlKey span,
+		#copyURL .iconColor,
+		#copyURL span,
+		.actionBtn a .iconColor {
+			color: var(--btn-fg, #06110D) !important;
 		}
 		
 		footer .footer-line {
@@ -481,7 +516,11 @@
               Copy &amp; Send the URL to share my Business Card
     </p> <button id="copyURL"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M22 11a2 2 0 0 0-2-2h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-9Z" style="fill:none;stroke:#06110D;stroke-width:2px"></path><path d="M5 15H4c-1.097 0-2-.903-2-2V4c0-1.097.903-2 2-2h9c1.097 0 2 .903 2 2v1" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:2px"></path></svg></div> <span class="iconColor">Copy URL</span></button></div> <div id="qrView" class="textColor"><div id="qr"></div> <h3>Scan the QR Code</h3> <p>to view my Business Card on another device</p></div></div>
 	
-	<header><div id="topActions" style="display: none;"><div><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#C8FF00;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#C8FF00" d="M15 15h2v2h-2z"></path></svg></div></a></div> <a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a></div> <div class="headerImgC"> </div></header>
+	<header><nav id="topActions" class="site-nav site-nav--fold" style="display: none;" aria-label="Site"><a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a> <div class="top-actions-end"><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#C8FF00;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#C8FF00" d="M15 15h2v2h-2z"></path></svg></div></a> <div class="site-nav__trailing"><!-- Light mode coming soon: toggle far right of Fold top actions; light cannot activate. -->
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
+					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				</button>
+			</div></div></nav> <div class="headerImgC"> </div></header>
 	
 	<main>
 		<img id="profilePhoto" src="./photo.jpeg" class="u-photo photo" alt="Joe Levi" itemprop="image" width="450" height="450" fetchpriority="high" decoding="sync" loading="eager">
