@@ -1,7 +1,7 @@
 /*
  * Site color themes.
  * Dark: Synthetic Lime #C8FF00 on BIO Black #06110D
- * Light: Forest Code #075E46 on Mint Fog #E8FFF2
+ * Light: Toxic Violet #4B0082 on Soft Chrome #F1F2F7
  */
 
 /* Dark theme via explicit preference or class */
@@ -91,43 +91,43 @@ html.theme-dark {
 }
 
 /*
- * Light theme — Forest Code on Mint Fog.
- * Buttons: Mint text on Forest (high contrast, Amazon-style CTA weight).
+ * Light theme — Toxic Violet on Soft Chrome.
+ * Buttons: Soft Chrome text on Toxic Violet (high contrast, Amazon-style CTA weight).
  */
 html[data-theme="light"],
 html.theme-light {
 	color-scheme: light;
 
-	--bio: #E8FFF2;           /* Mint Fog — page backgrounds */
-	--bio-deep: #D4F5E6;      /* slightly darker mint */
-	--bio-raised: #C8F0DC;    /* raised / panel mint */
-	--lime: #075E46;          /* Forest Code — text, accents, icons (token name kept) */
-	--lime-hover: #054536;    /* deeper forest hover */
-	--on-lime: #E8FFF2;       /* mint on forest buttons */
+	--bio: #F1F2F7;           /* Soft Chrome — page backgrounds */
+	--bio-deep: #E4E6ED;      /* slightly cooler / darker chrome */
+	--bio-raised: #D8DAE4;    /* raised / panel chrome */
+	--lime: #4B0082;          /* Toxic Violet — text, accents, icons (token name kept) */
+	--lime-hover: #34005B;    /* deeper violet hover */
+	--on-lime: #F1F2F7;       /* chrome on violet buttons */
 
-	--ink: #075E46;
-	--muted: #3D7A66;
-	--accent: #075E46;
-	--card: #D4F5E6;
-	--rule: rgba(7, 94, 70, 0.18);
-	--cream: #D4F5E6;
-	--cream-ink: #054536;
-	--body: #054536;
-	--surface: #C8F0DC;
-	--surface-deep: #B8EBD4;
+	--ink: #4B0082;
+	--muted: #6B4A8F;
+	--accent: #4B0082;
+	--card: #E4E6ED;
+	--rule: rgba(75, 0, 130, 0.18);
+	--cream: #E4E6ED;
+	--cream-ink: #36005D;
+	--body: #36005D;
+	--surface: #D8DAE4;
+	--surface-deep: #CCCEDA;
 	--navy: var(--bio);
 	--navy-deep: var(--bio-deep);
 	--gold: var(--lime);
 	--bg: var(--bio);
 	--line: var(--rule);
 
-	--tint-weak: rgba(7, 94, 70, 0.06);
-	--tint: rgba(7, 94, 70, 0.1);
-	--tint-strong: rgba(7, 94, 70, 0.16);
-	--tint-border: rgba(7, 94, 70, 0.28);
-	--selection-bg: #075E46;
-	--selection-fg: #E8FFF2;
-	--shadow: rgba(7, 94, 70, 0.18);
+	--tint-weak: rgba(75, 0, 130, 0.06);
+	--tint: rgba(75, 0, 130, 0.1);
+	--tint-strong: rgba(75, 0, 130, 0.16);
+	--tint-border: rgba(75, 0, 130, 0.28);
+	--selection-bg: #4B0082;
+	--selection-fg: #F1F2F7;
+	--shadow: rgba(75, 0, 130, 0.18);
 
 	--btn-bg: var(--lime);
 	--btn-fg: var(--on-lime);
@@ -140,36 +140,36 @@ html.theme-light {
 	html:not([data-theme="dark"]) {
 		color-scheme: light;
 
-		--bio: #E8FFF2;
-		--bio-deep: #D4F5E6;
-		--bio-raised: #C8F0DC;
-		--lime: #075E46;
-		--lime-hover: #054536;
-		--on-lime: #E8FFF2;
+		--bio: #F1F2F7;
+		--bio-deep: #E4E6ED;
+		--bio-raised: #D8DAE4;
+		--lime: #4B0082;
+		--lime-hover: #34005B;
+		--on-lime: #F1F2F7;
 
-		--ink: #075E46;
-		--muted: #3D7A66;
-		--accent: #075E46;
-		--card: #D4F5E6;
-		--rule: rgba(7, 94, 70, 0.18);
-		--cream: #D4F5E6;
-		--cream-ink: #054536;
-		--body: #054536;
-		--surface: #C8F0DC;
-		--surface-deep: #B8EBD4;
+		--ink: #4B0082;
+		--muted: #6B4A8F;
+		--accent: #4B0082;
+		--card: #E4E6ED;
+		--rule: rgba(75, 0, 130, 0.18);
+		--cream: #E4E6ED;
+		--cream-ink: #36005D;
+		--body: #36005D;
+		--surface: #D8DAE4;
+		--surface-deep: #CCCEDA;
 		--navy: var(--bio);
 		--navy-deep: var(--bio-deep);
 		--gold: var(--lime);
 		--bg: var(--bio);
 		--line: var(--rule);
 
-		--tint-weak: rgba(7, 94, 70, 0.06);
-		--tint: rgba(7, 94, 70, 0.1);
-		--tint-strong: rgba(7, 94, 70, 0.16);
-		--tint-border: rgba(7, 94, 70, 0.28);
-		--selection-bg: #075E46;
-		--selection-fg: #E8FFF2;
-		--shadow: rgba(7, 94, 70, 0.18);
+		--tint-weak: rgba(75, 0, 130, 0.06);
+		--tint: rgba(75, 0, 130, 0.1);
+		--tint-strong: rgba(75, 0, 130, 0.16);
+		--tint-border: rgba(75, 0, 130, 0.28);
+		--selection-bg: #4B0082;
+		--selection-fg: #F1F2F7;
+		--shadow: rgba(75, 0, 130, 0.18);
 
 		--btn-bg: var(--lime);
 		--btn-fg: var(--on-lime);

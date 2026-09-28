@@ -1,5 +1,5 @@
 /**
- * Theme preference: dark (Synthetic Lime / BIO Black) ↔ light (Forest Code / Mint Fog).
+ * Theme preference: dark (Synthetic Lime / BIO Black) ↔ light (Toxic Violet / Soft Chrome).
  * Persists override in localStorage ("joelevi-theme"). Without override, follows
  * prefers-color-scheme and listens for system changes.
  */
@@ -8,7 +8,7 @@
 
 	var STORAGE_KEY = "joelevi-theme";
 	var LIGHT_ENABLED = true;
-	var THEME_COLOR = { dark: "#06110D", light: "#E8FFF2" };
+	var THEME_COLOR = { dark: "#06110D", light: "#F1F2F7" };
 
 	function getStored() {
 		try {
