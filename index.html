@@ -1,8 +1,32 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="theme-dark">
 <head profile="http://microformats.org/profile/hcard">
 	<meta charset="UTF-8" />
+	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<script>
+		(function () {
+			var LIGHT_ENABLED = false;
+			var key = "joelevi-theme";
+			var theme = "dark";
+			try {
+				var stored = localStorage.getItem(key);
+				if (LIGHT_ENABLED && (stored === "light" || stored === "dark")) {
+					theme = stored;
+				} else if (LIGHT_ENABLED && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches && stored !== "dark") {
+					theme = "light";
+				} else {
+					theme = "dark";
+				}
+			} catch (e) {}
+			document.documentElement.setAttribute("data-theme", theme);
+			document.documentElement.classList.toggle("theme-dark", theme === "dark");
+			document.documentElement.classList.toggle("theme-light", theme === "light");
+		})();
+	</script>
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index, follow, archive" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +98,7 @@
 	
 	<style>
 		html {
-			background-color: #06110D;
+			background-color: var(--bio, #06110D);
 		}
 		
 		body {
@@ -115,28 +139,31 @@
 		
 		.closeColor { color: #C8FF00; }
 		.topAction { }
-		.iconColor { color:#06110D; }
+		.iconColor { color: var(--btn-fg, #06110D); }
 		.cardColor { color:#C8FF00 !important; }
 		.textColor { color:#C8FF00 !important; }
 		.seekbarColor { background:#C8FF00 !important; }
 		
 		main {
-			background-color: #0C1F18;
+			background-color: var(--card, #0C1F18);
 			margin-top: 5rem;
 		}
 		
 		#modal {
-			background-color: #0C1F18;
+			background-color: var(--card, #0C1F18);
 			visibility: hidden;
 			top: 2rem;
 			opacity: 0;
 		}
 		
+		/* Homepage CTAs match Amazon .btn-amazon via shared --btn-* tokens (theme.css) */
 		button,
 		#dlKey,
 		#cta,
 		.actionBtn a	{
-			background-color: #C8FF00;
+			background-color: var(--btn-bg, #C8FF00);
+			color: var(--btn-fg, #06110D);
+			border-color: var(--btn-border, #030907);
 		}
 		
 		footer .footer-line {

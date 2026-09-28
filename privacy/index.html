@@ -1,7 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="theme-dark">
 <head>
 	<meta charset="utf-8" />
+	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<script>
+		(function () {
+			var LIGHT_ENABLED = false;
+			var key = "joelevi-theme";
+			var theme = "dark";
+			try {
+				var stored = localStorage.getItem(key);
+				if (LIGHT_ENABLED && (stored === "light" || stored === "dark")) {
+					theme = stored;
+				} else if (LIGHT_ENABLED && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches && stored !== "dark") {
+					theme = "light";
+				} else {
+					theme = "dark";
+				}
+			} catch (e) {}
+			document.documentElement.setAttribute("data-theme", theme);
+			document.documentElement.classList.toggle("theme-dark", theme === "dark");
+			document.documentElement.classList.toggle("theme-light", theme === "light");
+		})();
+	</script>
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
 	<meta name="theme-color" content="#06110D" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Privacy Policy | Joe Levi</title>
@@ -25,7 +49,7 @@
 	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
 	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
 	<style>
-:root { --ink:#C8FF00; --muted:#8A9A7E; --bg:#06110D; --card:#0C1F18; --accent:#C8FF00; --line:rgba(200, 255, 0, 0.16); --bio:#06110D; --lime:#C8FF00; --cream:#0C1F18; --navy:#06110D; --gold:#C8FF00; --rule:rgba(200, 255, 0, 0.16); }
+/* Dark theme tokens: /assets/theme.css ([data-theme="dark"] / .theme-dark). */
 * { box-sizing: border-box; }
 body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:#C5D4B0; background:var(--bg); line-height:1.6; }
 .wrap { max-width:42rem; margin:0 auto; padding:1.25rem 1.25rem 3rem; }
@@ -108,9 +132,15 @@ a:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
 	<div class="wrap">
 		<nav class="site-nav" aria-label="Site">
 			<a class="site-nav__home" href="/">← JoeLevi.com</a>
-			<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
-				<span class="site-nav__burger" aria-hidden="true"></span>
-			</button>
+			<div class="site-nav__trailing">
+				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+					<span class="site-nav__burger" aria-hidden="true"></span>
+				</button>
+				<!-- Light mode coming soon: toggle visible to the right of hamburger; light cannot activate. -->
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
+					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				</button>
+			</div>
 			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
 				<ul class="site-nav__list">
 				<li><a href="/">Home</a></li>

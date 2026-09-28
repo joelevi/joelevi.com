@@ -37,7 +37,17 @@
 	border-color: var(--sn-gold);
 }
 
-.site-nav__toggle {
+/* Trailing controls: hamburger + theme toggle (theme sits to the right of hamburger) */
+.site-nav__trailing {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-left: auto;
+	flex-shrink: 0;
+}
+
+.site-nav__toggle,
+.site-nav__theme {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -53,10 +63,26 @@
 }
 
 .site-nav__toggle:hover,
-.site-nav__toggle:focus-visible {
+.site-nav__toggle:focus-visible,
+.site-nav__theme:hover:not(:disabled),
+.site-nav__theme:focus-visible:not(:disabled) {
 	border-color: var(--sn-gold);
 	outline: 2px solid transparent;
 	box-shadow: 0 0 0 2px var(--sn-gold);
+}
+
+/* Light mode coming soon — control visible but inactive */
+.site-nav__theme:disabled,
+.site-nav__theme[aria-disabled="true"] {
+	opacity: 0.55;
+	cursor: not-allowed;
+	box-shadow: none;
+}
+
+.site-nav__theme-icon {
+	width: 1.15rem;
+	height: 1.15rem;
+	display: block;
 }
 
 .site-nav__burger,

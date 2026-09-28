@@ -1,7 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="theme-dark">
 <head>
 	<meta charset="UTF-8" />
+	<!-- Theme: force dark (lime/BIO) until light mode ships; respect system dark by default. -->
+	<script>
+		(function () {
+			var LIGHT_ENABLED = false;
+			var key = "joelevi-theme";
+			var theme = "dark";
+			try {
+				var stored = localStorage.getItem(key);
+				if (LIGHT_ENABLED && (stored === "light" || stored === "dark")) {
+					theme = stored;
+				} else if (LIGHT_ENABLED && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches && stored !== "dark") {
+					theme = "light";
+				} else {
+					theme = "dark";
+				}
+			} catch (e) {}
+			document.documentElement.setAttribute("data-theme", theme);
+			document.documentElement.classList.toggle("theme-dark", theme === "dark");
+			document.documentElement.classList.toggle("theme-light", theme === "light");
+		})();
+	</script>
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index, follow, archive" />
 	<meta name="theme-color" content="#06110D" />
@@ -56,24 +80,7 @@
 	</script>
 	<script defer src="/_vercel/speed-insights/script.js"></script>
 	<style>
-		:root {
-			--bio: #06110D;
-			--bio-deep: #030907;
-			--bio-raised: #0C1F18;
-			--lime: #C8FF00;
-			--navy: var(--bio);
-			--navy-deep: var(--bio-deep);
-			--ink: #C8FF00;
-			--muted: #8A9A7E;
-			--accent: #C8FF00;
-			--card: #0C1F18;
-			--rule: rgba(200, 255, 0, 0.16);
-			--cream: #0C1F18;
-			--cream-ink: #C5D4B0;
-			--on-lime: #06110D;
-			--body: #C5D4B0;
-			--surface: #102820;
-		}
+		/* Dark theme tokens: /assets/theme.css ([data-theme="dark"] / prefers-color-scheme: dark). */
 		* { box-sizing: border-box; }
 		html { background: var(--navy-deep); }
 		body {
@@ -190,12 +197,15 @@
 			letter-spacing: 0.02em;
 			text-transform: uppercase;
 		}
+		/* Amazon affiliate CTAs — colors shared with homepage via --btn-* tokens */
 		.btn-amazon {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.4rem;
 			align-self: flex-start;
-			background: #C8FF00 !important;
-			border: 1px solid #030907 !important;
-			color: #06110D !important;
+			background: var(--btn-bg, #C8FF00) !important;
+			border: 1px solid var(--btn-border, #030907) !important;
+			color: var(--btn-fg, #06110D) !important;
 			font-weight: 600;
 			font-size: 0.9rem;
 			padding: 0.45rem 0.9rem;
@@ -203,8 +213,14 @@
 			text-decoration: none !important;
 		}
 		.btn-amazon:hover {
-			background: #A8D600 !important;
-			color: #06110D !important;
+			background: var(--btn-bg-hover, #A8D600) !important;
+			color: var(--btn-fg, #06110D) !important;
+		}
+		.btn-amazon__icon {
+			flex: 0 0 auto;
+			width: 1.1em;
+			height: 1.1em;
+			display: block;
 		}
 		.disclosure {
 			margin-top: 1rem;
@@ -914,9 +930,15 @@
 	<div class="wrap">
 		<nav class="site-nav" aria-label="Site">
 			<a class="site-nav__home" href="/">← JoeLevi.com</a>
-			<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
-				<span class="site-nav__burger" aria-hidden="true"></span>
-			</button>
+			<div class="site-nav__trailing">
+				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+					<span class="site-nav__burger" aria-hidden="true"></span>
+				</button>
+				<!-- Light mode coming soon: toggle visible to the right of hamburger; light cannot activate. -->
+				<button type="button" class="site-nav__theme" id="site-theme-toggle" disabled aria-disabled="true" aria-label="Color theme: dark. Light mode coming soon." title="Light mode coming soon" data-theme-current="dark">
+					<svg class="site-nav__theme-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+				</button>
+			</div>
 			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
 				<ul class="site-nav__list">
 				<li><a href="/">Home</a></li>
@@ -948,7 +970,7 @@
 										<h3 class="card-title">Miles the Muskrat's Special Spark</h3>
 										<p class="card-author">Joe Levi</p>
 										<p class="card-text">Ages 2–10. Miles feels different — he loves order and is sensitive to loud sounds — and wonders if he might be a robot. With family and friends, he discovers his “special spark” is what makes him shine. A gentle story of self-acceptance and individuality, with autism-related traits woven in without labels.</p>
-										<a class="btn btn-amazon" href="https://link.amazon/B09mN0olB" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://link.amazon/B09mN0olB" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -966,7 +988,7 @@
 										<h3 class="card-title">Miles the Muskrat and the New Neighbors</h3>
 										<p class="card-author">Joe Levi</p>
 										<p class="card-text">Ages 2–10. When beaver neighbors move in, Miles faces uncertainty — then befriends Bryn. A heartwarming tale about accepting differences, building friendship, and embracing what makes each of us unique.</p>
-										<a class="btn btn-amazon" href="https://link.amazon/B02WULqgt" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://link.amazon/B02WULqgt" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -984,7 +1006,7 @@
 										<h3 class="card-title">Miles the Muskrat Coloring Book</h3>
 										<p class="card-author">Joe Levi</p>
 										<p class="card-text">Ages 2–10. Inspired by Special Spark — hand-drawn riverbank scenes of Miles for creative, mindful coloring. Themes of individuality, sensory awareness, and quiet moments.</p>
-										<a class="btn btn-amazon" href="https://link.amazon/B09nMJGO3" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://link.amazon/B09nMJGO3" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1011,7 +1033,7 @@
 										<h3 class="card-title">Red Rabbit (1982)</h3>
 										<p class="card-author">Tom Clancy</p>
 										<p class="card-text">Young CIA analyst Jack Ryan is drawn into a Soviet plot to assassinate Pope John Paul II, weaving Cold War tradecraft with Clancy’s trademark procedural detail.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1030,7 +1052,7 @@
 										<h3 class="card-title">The Fountainhead</h3>
 										<p class="card-author">Ayn Rand</p>
 										<p class="card-text">Architect Howard Roark refuses to compromise his creative integrity, challenging collectivist pressures in a novel that helped define Rand’s Objectivist themes.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1054,7 +1076,7 @@
 										<h3 class="card-title">Red Rabbit (1982)</h3>
 										<p class="card-author">Tom Clancy</p>
 										<p class="card-text">Young CIA analyst Jack Ryan is drawn into a Soviet plot to assassinate Pope John Paul II, weaving Cold War tradecraft with Clancy’s trademark procedural detail.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4u5tyi3" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1073,7 +1095,7 @@
 										<h3 class="card-title">Without Remorse</h3>
 										<p class="card-author">Tom Clancy</p>
 										<p class="card-text">Navy SEAL John Kelly seeks justice after personal tragedy, and his path foreshadows the operative who becomes John Clark in the Ryan universe.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3Xyh3fJ" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3Xyh3fJ" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1092,7 +1114,7 @@
 										<h3 class="card-title">Patriot Games</h3>
 										<p class="card-author">Tom Clancy</p>
 										<p class="card-text">After foiling a terrorist attack in London, Jack Ryan and his family become targets in a thriller that blends domestic stakes with international intrigue.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4aTBHPq" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4aTBHPq" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1111,7 +1133,7 @@
 										<h3 class="card-title">The Hunt for Red October</h3>
 										<p class="card-author">Tom Clancy</p>
 										<p class="card-text">A Soviet submarine captain attempts to defect with a cutting-edge vessel, while Jack Ryan races to interpret the crisis before it sparks war.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4o2xyLV" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4o2xyLV" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1135,7 +1157,7 @@
 										<h3 class="card-title">Stranger in a Strange Land</h3>
 										<p class="card-author">Robert A. Heinlein</p>
 										<p class="card-text">Valentine Michael Smith, raised by Martians, returns to Earth and upends human ideas of religion, free thought, and community.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/48kRCED" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/48kRCED" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1154,7 +1176,7 @@
 										<h3 class="card-title">The Moon Is a Harsh Mistress</h3>
 										<p class="card-author">Robert A. Heinlein</p>
 										<p class="card-text">Lunar colonists, aided by a self-aware computer, rebel against Earth’s authority in a classic of revolutionary science fiction.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/46cDevO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/46cDevO" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1173,7 +1195,7 @@
 										<h3 class="card-title">Starship Troopers</h3>
 										<p class="card-author">Robert A. Heinlein</p>
 										<p class="card-text">Citizen-soldier Juan “Johnny” Rico fights an interstellar war while the novel debates civic duty, training, and the cost of franchise.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/45Y8qAe" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/45Y8qAe" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1197,7 +1219,7 @@
 										<h3 class="card-title">One Second After</h3>
 										<p class="card-author">William R. Forstchen</p>
 										<p class="card-text">An EMP strike blackouts the United States overnight, and a small North Carolina town struggles to survive the collapse that follows.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/452kakO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/452kakO" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1216,7 +1238,7 @@
 										<h3 class="card-title">One Year After</h3>
 										<p class="card-author">William R. Forstchen</p>
 										<p class="card-text">A year after the EMP, John Matherson’s community faces new threats as America tries to rebuild amid scarcity and outside pressure.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3I4Xg3r" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3I4Xg3r" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1235,7 +1257,7 @@
 										<h3 class="card-title">The Final Day</h3>
 										<p class="card-author">William R. Forstchen</p>
 										<p class="card-text">Matherson confronts the political and military endgame of the post-EMP world as factions compete to define America’s future.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3JP8BFk" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3JP8BFk" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1254,7 +1276,7 @@
 										<h3 class="card-title">Five Years After</h3>
 										<p class="card-author">William R. Forstchen</p>
 										<p class="card-text">Half a decade after the blackout, survivors confront lingering enemies and the hard work of restoring a fractured republic.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3V9EiMa" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3V9EiMa" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1278,7 +1300,7 @@
 										<h3 class="card-title">299 Days 1: The Preparation</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">Attorney Grant Matson begins quietly preparing his family for systemic collapse while still living a conventional suburban life.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4fl1KPE" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4fl1KPE" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1297,7 +1319,7 @@
 										<h3 class="card-title">299 Days 2: The Collapse</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">When order breaks down, Grant’s preparations are tested as supply chains fail and neighborhoods turn unstable.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/41H43qA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/41H43qA" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1316,7 +1338,7 @@
 										<h3 class="card-title">299 Days 3: The Community</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">Survivors organize mutual aid and local governance as Pierce Point becomes a fragile island of cooperation.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/41L7Xi8" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/41L7Xi8" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1335,7 +1357,7 @@
 										<h3 class="card-title">299 Days 4: The Stronghold</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">The community hardens defenses and routines while outside factions and scarcity keep pressure high.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4fEkYjj" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4fEkYjj" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1354,7 +1376,7 @@
 										<h3 class="card-title">299 Days 5: The Visitors</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">New arrivals and outside contacts force Pierce Point to decide whom to trust in a world without easy rules.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3Jm8Kjl" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3Jm8Kjl" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1373,7 +1395,7 @@
 										<h3 class="card-title">299 Days 6: The 17th Irregulars</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">Grant’s circle is drawn deeper into irregular warfare as competing authorities claim legitimacy.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mG86LO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mG86LO" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1392,7 +1414,7 @@
 										<h3 class="card-title">299 Days 7: The Change of Seasons</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">As seasons turn, Pierce Point adapts logistics, morale, and alliances for a longer emergency.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3UC6EOK" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3UC6EOK" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1411,7 +1433,7 @@
 										<h3 class="card-title">299 Days 8: The War</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">Open conflict arrives, and the community’s preparations become a matter of survival under fire.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mu5NMu" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mu5NMu" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1430,7 +1452,7 @@
 										<h3 class="card-title">299 Days 9: The Restoration</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">After the fighting, characters confront what “restoration” can mean when institutions and trust are broken.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mXArxA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mXArxA" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1449,7 +1471,7 @@
 										<h3 class="card-title">299 Days 10: The 43 Colonels</h3>
 										<p class="card-author">Glen Tate</p>
 										<p class="card-text">The series closes around leadership choices that will shape the political order after collapse.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/462x2aV" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/462x2aV" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1473,7 +1495,7 @@
 										<h3 class="card-title">A Great State 1: The Divide</h3>
 										<p class="card-author">Shelby Gallagher</p>
 										<p class="card-text">Political fracture and civil strife push ordinary people to choose sides as America divides.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/45FIgAO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/45FIgAO" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1492,7 +1514,7 @@
 										<h3 class="card-title">A Great State 2: The Aftermath</h3>
 										<p class="card-author">Shelby Gallagher</p>
 										<p class="card-text">In the wake of upheaval, survivors navigate danger, scarcity, and the politics of a broken map.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/416D8V6" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/416D8V6" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1511,7 +1533,7 @@
 										<h3 class="card-title">A Great State 3: The Rescue</h3>
 										<p class="card-author">Shelby Gallagher</p>
 										<p class="card-text">Alliances and risk escalate as characters attempt a rescue that could redefine their fight.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4fDqClO" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4fDqClO" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1535,7 +1557,7 @@
 										<h3 class="card-title">The Art of Deception</h3>
 										<p class="card-author">Kevin D. Mitnick</p>
 										<p class="card-text">Mitnick explains social-engineering tactics through real-world cases, showing how trust is exploited more than code.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/472TwtA" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/472TwtA" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1554,7 +1576,7 @@
 										<h3 class="card-title">The Art of Invisibility</h3>
 										<p class="card-author">Kevin D. Mitnick</p>
 										<p class="card-text">A practical guide to digital privacy habits, tracking risks, and reducing your everyday exposure online.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3V6oLMR" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3V6oLMR" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1573,7 +1595,7 @@
 										<h3 class="card-title">Ghost in the Wires</h3>
 										<p class="card-author">Kevin D. Mitnick</p>
 										<p class="card-text">Mitnick’s memoir of phone phreaking, hacking pursuits, and life as one of the FBI’s most-wanted cyber fugitives.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3UTnXLv" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3UTnXLv" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1597,7 +1619,7 @@
 										<h3 class="card-title">Animal Farm</h3>
 										<p class="card-author">George Orwell</p>
 										<p class="card-text">Farm animals overthrow their human master, only to watch revolutionary ideals curdle into a new tyranny.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mk13Zs" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mk13Zs" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1616,7 +1638,7 @@
 										<h3 class="card-title">1984</h3>
 										<p class="card-author">George Orwell</p>
 										<p class="card-text">Winston Smith struggles against a totalitarian state that polices thought, language, and truth itself.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3UyB849" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3UyB849" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1640,7 +1662,7 @@
 										<h3 class="card-title">The Fountainhead</h3>
 										<p class="card-author">Ayn Rand</p>
 										<p class="card-text">Architect Howard Roark refuses to compromise his creative integrity, challenging collectivist pressures in a novel that helped define Rand’s Objectivist themes.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/46tmQYf" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1659,7 +1681,7 @@
 										<h3 class="card-title">Atlas Shrugged</h3>
 										<p class="card-author">Ayn Rand</p>
 										<p class="card-text">As productive minds withdraw from a coercive society, Rand dramatizes her case for reason, individualism, and free enterprise.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/3HFquFP" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/3HFquFP" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1683,7 +1705,7 @@
 										<h3 class="card-title">The Martian</h3>
 										<p class="card-author">Andy Weir</p>
 										<p class="card-text">Astronaut Mark Watney is stranded on Mars and must science his way through survival while NASA races to bring him home.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4lR1I3Q" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4lR1I3Q" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1707,7 +1729,7 @@
 										<h3 class="card-title">Tomorrow and Tomorrow</h3>
 										<p class="card-author">Tom Sweterlitsch</p>
 										<p class="card-text">After a catastrophe destroys Pittsburgh, a man uses a high-tech archive of the past city to chase answers—and risk losing the present.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/472oq59" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/472oq59" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1731,7 +1753,7 @@
 										<h3 class="card-title">Written Out of History</h3>
 										<p class="card-author">Mike Lee</p>
 										<p class="card-text">Senator Mike Lee profiles lesser-known Founding-era figures he argues have been sidelined in popular American history.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4lzWB82" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4lzWB82" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1755,7 +1777,7 @@
 										<h3 class="card-title">The Liberty Amendments</h3>
 										<p class="card-author">Mark R. Levin</p>
 										<p class="card-text">Levin proposes a slate of constitutional amendments aimed at restraining federal power and restoring federalism.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/46XXSC9" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/46XXSC9" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1779,7 +1801,7 @@
 										<h3 class="card-title">The American Miracle: Divine Providence in the Rise of the Republic</h3>
 										<p class="card-author">Michael Medved</p>
 										<p class="card-text">Medved recounts pivotal episodes in early American history through a lens of providence, timing, and national purpose.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mugcb2" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mugcb2" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1803,7 +1825,7 @@
 										<h3 class="card-title">The Creature from Jekyll Island</h3>
 										<p class="card-author">G. Edward Griffin</p>
 										<p class="card-text">A critical narrative of the Federal Reserve’s origins on Jekyll Island and arguments about money, banking, and political power.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/4mMFNvq" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/4mMFNvq" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>
@@ -1827,7 +1849,7 @@
 										<h3 class="card-title">Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</h3>
 										<p class="card-author">Ashlee Vance</p>
 										<p class="card-text">A biography of Elon Musk covering PayPal, Tesla, SpaceX, and the high-stakes engineering culture around his companies.</p>
-										<a class="btn btn-amazon" href="https://amzn.to/418CqGW" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>
+										<a class="btn btn-amazon" href="https://amzn.to/418CqGW" target="_blank" rel="noopener noreferrer sponsored"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy on Amazon</span></a>
 									</div>
 								</div>
 							</div>

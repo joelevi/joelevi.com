@@ -1,0 +1,83 @@
+/*
+ * Site color themes.
+ * Dark (default / only active): Synthetic Lime #C8FF00 on BIO Black #06110D
+ * and derived neutrals from commit fbbe7df.
+ * Light: reserved — not enabled yet (toggle UI present but light cannot activate).
+ */
+
+/* Dark theme via explicit preference or class */
+html[data-theme="dark"],
+html.theme-dark {
+	color-scheme: dark;
+
+	--bio: #06110D;
+	--bio-deep: #030907;
+	--bio-raised: #0C1F18;
+	--lime: #C8FF00;
+	--lime-hover: #A8D600;
+	--on-lime: #06110D;
+
+	--ink: #C8FF00;
+	--muted: #8A9A7E;
+	--accent: #C8FF00;
+	--card: #0C1F18;
+	--rule: rgba(200, 255, 0, 0.16);
+	--cream: #0C1F18;
+	--cream-ink: #C5D4B0;
+	--body: #C5D4B0;
+	--surface: #102820;
+	--navy: var(--bio);
+	--navy-deep: var(--bio-deep);
+	--gold: var(--lime);
+	--bg: var(--bio);
+	--line: var(--rule);
+
+	/* Shared CTA / Amazon affiliate button colors */
+	--btn-bg: var(--lime);
+	--btn-fg: var(--on-lime);
+	--btn-border: var(--bio-deep);
+	--btn-bg-hover: var(--lime-hover);
+}
+
+/* System dark preference when no explicit theme yet (before blocking script) */
+@media (prefers-color-scheme: dark) {
+	html:not([data-theme="light"]) {
+		color-scheme: dark;
+
+		--bio: #06110D;
+		--bio-deep: #030907;
+		--bio-raised: #0C1F18;
+		--lime: #C8FF00;
+		--lime-hover: #A8D600;
+		--on-lime: #06110D;
+
+		--ink: #C8FF00;
+		--muted: #8A9A7E;
+		--accent: #C8FF00;
+		--card: #0C1F18;
+		--rule: rgba(200, 255, 0, 0.16);
+		--cream: #0C1F18;
+		--cream-ink: #C5D4B0;
+		--body: #C5D4B0;
+		--surface: #102820;
+		--navy: var(--bio);
+		--navy-deep: var(--bio-deep);
+		--gold: var(--lime);
+		--bg: var(--bio);
+		--line: var(--rule);
+
+		--btn-bg: var(--lime);
+		--btn-fg: var(--on-lime);
+		--btn-border: var(--bio-deep);
+		--btn-bg-hover: var(--lime-hover);
+	}
+}
+
+/*
+ * Light theme tokens — coming soon.
+ * Until light is enabled, theme.js forces data-theme="dark" and ignores stored light.
+ */
+html[data-theme="light"],
+html.theme-light {
+	/* Light palette intentionally unset while light mode is disabled. */
+}
