@@ -24,6 +24,37 @@
 			document.documentElement.classList.toggle("theme-light", theme === "light");
 		})();
 	</script>
+	<!-- Intro: skip Fold animation for 12h if already seen (cookie primary; localStorage backup). Must run before paint. -->
+	<script>
+		(function () {
+			var COOKIE = "joelevi-intro-seen";
+			var MAX_AGE_MS = 43200 * 1000;
+			function cookieHasSeen() {
+				try {
+					var m = document.cookie.match(/(?:^|;\s*)joelevi-intro-seen=([^;]*)/);
+					return !!(m && m[1]);
+				} catch (e) {
+					return false;
+				}
+			}
+			function storageHasSeen() {
+				try {
+					var raw = localStorage.getItem(COOKIE);
+					if (!raw) return false;
+					var ts = parseInt(raw, 10);
+					if (!isNaN(ts) && ts > 0) {
+						return Date.now() - ts < MAX_AGE_MS;
+					}
+					return raw === "1";
+				} catch (e) {
+					return false;
+				}
+			}
+			if (cookieHasSeen() || storageHasSeen()) {
+				document.documentElement.classList.add("intro-done", "no-intro");
+			}
+		})();
+	</script>
 	<link rel="stylesheet" href="/assets/theme.css" />
 	<link rel="stylesheet" href="/assets/site-nav.css" />
 	<script defer src="/assets/theme.js"></script>
@@ -367,6 +398,18 @@
 			opacity: 0;
 			transform: translateY(32px) scale(0.9);
 		}
+		/* Revisit within 12h: settled state before paint (html.intro-done / .no-intro from head script) */
+		html.intro-done body.intro-pending #cta,
+		html.intro-done body.intro-pending .actionsC,
+		html.no-intro body.intro-pending #cta,
+		html.no-intro body.intro-pending .actionsC {
+			opacity: 1;
+			transform: none;
+		}
+		html.intro-done #profilePhotoIntro,
+		html.intro-done #introPhotoScrim,
+		html.no-intro #profilePhotoIntro,
+		html.no-intro #introPhotoScrim { display: none !important; }
 		@media (prefers-reduced-motion: reduce) {
 			#profilePhotoIntro,
 			#introPhotoScrim { display: none !important; }
@@ -743,7 +786,24 @@
 
 <script>
 (function () {
+  var COOKIE = "joelevi-intro-seen";
+  var MAX_AGE = 43200;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var skipIntro =
+    document.documentElement.classList.contains("intro-done") ||
+    document.documentElement.classList.contains("no-intro");
+
+  function markIntroSeen() {
+    var secure = location.protocol === "https:" ? "; Secure" : "";
+    try {
+      document.cookie =
+        COOKIE + "=1; Max-Age=" + MAX_AGE + "; Path=/; SameSite=Lax" + secure;
+    } catch (e) {}
+    try {
+      localStorage.setItem(COOKIE, String(Date.now()));
+    } catch (e) {}
+    document.documentElement.classList.add("intro-done", "no-intro");
+  }
 
   function ready(fn) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -819,6 +879,11 @@
   }
 
   ready(async function () {
+    // Revisit within 12h: stay in settled final state (class set before paint).
+    if (skipIntro) {
+      return;
+    }
+
     document.body.classList.add("intro-pending");
 
     var given = document.querySelector(".name .p-given-name");
@@ -843,6 +908,7 @@
         l.style.transform = "none";
       });
       document.body.classList.remove("intro-pending");
+      markIntroSeen();
       return;
     }
 
@@ -851,6 +917,7 @@
       await animateLetters(letters);
       document.body.classList.remove("intro-pending");
       await flyButtons();
+      markIntroSeen();
       return;
     }
     if (!photo.complete) {
@@ -866,6 +933,7 @@
       await animateLetters(letters);
       document.body.classList.remove("intro-pending");
       await flyButtons();
+      markIntroSeen();
       return;
     }
 
@@ -934,6 +1002,7 @@
     await animateLetters(letters);
     document.body.classList.remove("intro-pending");
     await flyButtons();
+    markIntroSeen();
   });
 })();
 </script>
