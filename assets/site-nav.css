@@ -1,13 +1,15 @@
 /* Shared site hamburger nav — used on all pages except the homepage Fold card. */
 .site-nav {
-	--sn-fg: var(--ink, #1c1712);
-	--sn-muted: var(--muted, #5c5348);
-	--sn-accent: var(--accent, #1a2b44);
-	--sn-border: var(--rule, var(--line, rgba(26, 35, 64, 0.18)));
-	--sn-panel-bg: var(--card, #fffdf8);
-	--sn-cream: var(--cream, #f4efe4);
-	--sn-gold: var(--gold, #c9a84c);
-	--sn-navy: var(--navy, #222D52);
+	--sn-fg: var(--ink, #C8FF00);
+	--sn-muted: var(--muted, #8A9A7E);
+	--sn-accent: var(--accent, #C8FF00);
+	--sn-border: var(--rule, var(--line, rgba(200, 255, 0, 0.16)));
+	--sn-panel-bg: var(--card, #0C1F18);
+	--sn-cream: var(--cream, #0C1F18);
+	--sn-gold: var(--gold, #C8FF00);
+	--sn-navy: var(--navy, #06110D);
+	--sn-bio: var(--bio, #06110D);
+	--sn-lime: var(--lime, #C8FF00);
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -25,12 +27,12 @@
 	border: 1px solid var(--sn-border);
 	padding: 0.4rem 0.85rem;
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.04);
+	background: rgba(200, 255, 0, 0.04);
 	text-decoration: none;
 }
 
 .site-nav__home:hover {
-	background: rgba(255, 255, 255, 0.08);
+	background: rgba(200, 255, 0, 0.1);
 	text-decoration: none;
 	border-color: var(--sn-gold);
 }
@@ -44,7 +46,7 @@
 	padding: 0;
 	border: 1px solid var(--sn-border);
 	border-radius: 0.5rem;
-	background: rgba(255, 255, 255, 0.04);
+	background: rgba(200, 255, 0, 0.04);
 	color: var(--sn-fg);
 	cursor: pointer;
 	flex-shrink: 0;
@@ -104,7 +106,7 @@
 	background: var(--sn-panel-bg);
 	border: 1px solid var(--sn-border);
 	border-radius: 0.75rem;
-	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
 .site-nav__panel[hidden] {
@@ -137,14 +139,14 @@
 .site-nav__list a:focus-visible,
 .site-nav__list button.site-nav__action:hover,
 .site-nav__list button.site-nav__action:focus-visible {
-	background: rgba(201, 168, 76, 0.14);
+	background: rgba(200, 255, 0, 0.14);
 	color: var(--sn-accent);
 	outline: none;
 	text-decoration: none;
 }
 
 .site-nav__list a[aria-current="page"] {
-	background: rgba(201, 168, 76, 0.2);
+	background: rgba(200, 255, 0, 0.2);
 	color: var(--sn-accent);
 	font-weight: 600;
 	box-shadow: inset 3px 0 0 var(--sn-gold);

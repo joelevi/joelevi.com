@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index, follow, archive" />
-	<meta name="theme-color" content="#222D52" />
+	<meta name="theme-color" content="#06110D" />
 	<meta name="author" content="Joe Levi" />
 	<meta name="description" content="Joe’s Books — Miles the Muskrat titles Joe has written, plus books he’s currently reading and has recently read, with Amazon Associate buy links." />
 	<meta name="keywords" content="Joe Levi books, Miles the Muskrat, reading list, Amazon Associates" />
@@ -57,15 +57,22 @@
 	<script defer src="/_vercel/speed-insights/script.js"></script>
 	<style>
 		:root {
-			--navy: #222D52;
-			--navy-deep: #1a2340;
-			--ink: #e8ecf4;
-			--muted: #a8b0c4;
-			--accent: #7eb6ff;
-			--card: #2a365f;
-			--rule: rgba(255,255,255,0.12);
-			--cream: #f4efe4;
-			--cream-ink: #1a2340;
+			--bio: #06110D;
+			--bio-deep: #030907;
+			--bio-raised: #0C1F18;
+			--lime: #C8FF00;
+			--navy: var(--bio);
+			--navy-deep: var(--bio-deep);
+			--ink: #C8FF00;
+			--muted: #8A9A7E;
+			--accent: #C8FF00;
+			--card: #0C1F18;
+			--rule: rgba(200, 255, 0, 0.16);
+			--cream: #0C1F18;
+			--cream-ink: #C5D4B0;
+			--on-lime: #06110D;
+			--body: #C5D4B0;
+			--surface: #102820;
 		}
 		* { box-sizing: border-box; }
 		html { background: var(--navy-deep); }
@@ -75,7 +82,7 @@
 			font-size: 1rem;
 			line-height: 1.55;
 			color: var(--ink);
-			background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 40%, #151c33 100%);
+			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, #030907 100%);
 			min-height: 100vh;
 		}
 		a { color: var(--accent); text-decoration: none; }
@@ -93,17 +100,17 @@
 			padding: 1.75rem 1.5rem 2rem;
 			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 		}
-		.library a { color: #1a5fb4; }
+		.library a { color: #C8FF00; }
 		.library h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(2rem, 5vw, 2.75rem);
 			font-weight: 400;
 			letter-spacing: 0.03em;
 			margin: 0 0 0.35rem;
-			color: var(--navy);
+			color: var(--lime);
 		}
 		.library .lede {
-			color: #4a5568;
+			color: #8A9A7E;
 			margin: 0.5rem 0 1.25rem;
 			max-width: 42rem;
 		}
@@ -115,30 +122,30 @@
 			text-transform: uppercase;
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
-			border-bottom: 1px solid rgba(34,45,82,0.18);
-			color: var(--navy);
+			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			color: var(--lime);
 		}
 		.library h2.author-h {
 			font-size: 1.15rem;
 			letter-spacing: 0.04em;
 			margin: 1.75rem 0 0.75rem;
-			border-bottom: 1px solid rgba(34,45,82,0.12);
+			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
 			text-transform: none;
-			color: #2a365f;
+			color: #C8FF00;
 		}
 		.library h3.card-title {
 			font-size: 1.05rem;
 			font-weight: 600;
 			margin: 0 0 0.2rem;
-			color: var(--navy);
+			color: var(--lime);
 			line-height: 1.3;
 		}
 		.book-card {
-			background: #fff;
-			border: 1px solid rgba(34,45,82,0.12) !important;
+			background: #102820;
+			border: 1px solid rgba(200, 255, 0, 0.16) !important;
 			border-radius: 0.75rem;
 			overflow: hidden;
-			box-shadow: 0 6px 18px rgba(26,35,64,0.08);
+			box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 		}
 		.book-card .card-body {
 			padding: 0.85rem 1rem 1rem;
@@ -148,7 +155,7 @@
 		}
 		.cover-col {
 			width: 120px;
-			background: #e8e4da;
+			background: #0A1812;
 		}
 		.cover {
 			display: block;
@@ -159,13 +166,13 @@
 		}
 		.card-author {
 			margin: 0 0 0.45rem;
-			color: #5a6478;
+			color: #8A9A7E;
 			font-size: 0.92rem;
 			font-weight: 500;
 		}
 		.card-text {
 			margin: 0 0 0.85rem;
-			color: #3d4658;
+			color: #C5D4B0;
 			font-size: 0.92rem;
 			flex: 1;
 		}
@@ -175,9 +182,9 @@
 			margin: 0 0 0.45rem;
 			padding: 0.2rem 0.55rem;
 			border-radius: 999px;
-			background: rgba(34,45,82,0.1);
-			border: 1px solid rgba(34,45,82,0.22);
-			color: var(--navy);
+			background: rgba(200,255,0,0.1);
+			border: 1px solid rgba(200,255,0,0.28);
+			color: var(--lime);
 			font-size: 0.75rem;
 			font-weight: 600;
 			letter-spacing: 0.02em;
@@ -186,9 +193,9 @@
 		.btn-amazon {
 			display: inline-block;
 			align-self: flex-start;
-			background: var(--navy) !important;
-			border: 1px solid var(--navy-deep) !important;
-			color: #fff !important;
+			background: #C8FF00 !important;
+			border: 1px solid #030907 !important;
+			color: #06110D !important;
 			font-weight: 600;
 			font-size: 0.9rem;
 			padding: 0.45rem 0.9rem;
@@ -196,13 +203,13 @@
 			text-decoration: none !important;
 		}
 		.btn-amazon:hover {
-			background: var(--navy-deep) !important;
-			color: #fff !important;
+			background: #A8D600 !important;
+			color: #06110D !important;
 		}
 		.disclosure {
 			margin-top: 1rem;
 			font-size: 0.88rem;
-			color: #5a6478;
+			color: #8A9A7E;
 		}
 		footer.page-foot {
 			margin-top: 1.5rem;
@@ -217,6 +224,10 @@
 			.cover-col, .cover { width: 96px; }
 			.row.g-0 > .cover-col { flex: 0 0 96px; max-width: 96px; }
 		}
+
+		::selection { background: #C8FF00; color: #06110D; }
+		::-moz-selection { background: #C8FF00; color: #06110D; }
+		a:focus-visible, .btn-amazon:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
 	</style>
 	<script type="application/ld+json">
 {

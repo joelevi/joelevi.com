@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index, follow, archive" />
-	<meta name="theme-color" content="#222D52" />
+	<meta name="theme-color" content="#06110D" />
 	<meta name="author" content="Joe Levi" />
 	<meta name="description" content="Résumé of Joe Levi — webmaster at Bruker Biomedical Systems, systems architect, and technical specialist in Utah, with skills, experience, and education." />
 	<meta name="keywords" content="Joe Levi résumé, webmaster, Bruker, systems architect, web development, Utah" />
@@ -59,15 +59,22 @@
 	<script defer src="/_vercel/speed-insights/script.js"></script>
 	<style>
 		:root {
-			--navy: #222D52;
-			--navy-deep: #1a2340;
-			--ink: #e8ecf4;
-			--muted: #a8b0c4;
-			--accent: #7eb6ff;
-			--card: #2a365f;
-			--rule: rgba(255,255,255,0.12);
-			--cream: #f4efe4;
-			--cream-ink: #1a2340;
+			--bio: #06110D;
+			--bio-deep: #030907;
+			--bio-raised: #0C1F18;
+			--lime: #C8FF00;
+			--navy: var(--bio);
+			--navy-deep: var(--bio-deep);
+			--ink: #C8FF00;
+			--muted: #8A9A7E;
+			--accent: #C8FF00;
+			--card: #0C1F18;
+			--rule: rgba(200, 255, 0, 0.16);
+			--cream: #0C1F18;
+			--cream-ink: #C5D4B0;
+			--on-lime: #06110D;
+			--body: #C5D4B0;
+			--surface: #102820;
 		}
 		* { box-sizing: border-box; }
 		abbr[title] {
@@ -89,7 +96,7 @@
 			padding: 0.35rem 0.55rem;
 			border-radius: 0.35rem;
 			background: var(--navy-deep);
-			color: #fff;
+			color: #C8FF00;
 			font-size: 0.82rem;
 			font-weight: 500;
 			letter-spacing: 0.01em;
@@ -98,7 +105,7 @@
 			white-space: normal;
 			pointer-events: none;
 		}
-		abbr[title]:focus { outline: 2px solid var(--navy); outline-offset: 2px; }
+		abbr[title]:focus { outline: 2px solid var(--lime); outline-offset: 2px; }
 		html { background: var(--navy-deep); }
 		body {
 			margin: 0;
@@ -106,7 +113,7 @@
 			font-size: 1rem;
 			line-height: 1.55;
 			color: var(--ink);
-			background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 40%, #151c33 100%);
+			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, #030907 100%);
 			min-height: 100vh;
 		}
 		a { color: var(--accent); text-decoration: none; }
@@ -116,7 +123,7 @@
 			margin: 0 auto;
 			padding: 1.25rem 1.25rem 3rem;
 		}
-		/* Match Books page cream card on navy gradient */
+		/* Dark BIO-raised card on BIO gradient */
 		.hresume {
 			background: var(--cream);
 			color: var(--cream-ink);
@@ -125,14 +132,14 @@
 			padding: 1.75rem 1.5rem 2rem;
 			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 		}
-		.hresume a { color: #1a5fb4; }
+		.hresume a { color: #C8FF00; }
 		h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(4rem, 10vw, 5.5rem);
 			font-weight: 400;
 			letter-spacing: 0.03em;
 			margin: 0 0 0.35rem;
-			color: var(--navy);
+			color: var(--lime);
 		}
 		h2 {
 			font-family: Gruppo, sans-serif;
@@ -142,18 +149,18 @@
 			text-transform: uppercase;
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
-			border-bottom: 1px solid rgba(34,45,82,0.18);
-			color: var(--navy);
+			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
+			color: var(--lime);
 		}
 		h3 {
 			font-size: 1.05rem;
 			font-weight: 600;
 			margin: 0 0 0.2rem;
-			color: var(--navy);
+			color: var(--lime);
 		}
 		.summary {
 			font-style: italic;
-			color: #4a5568;
+			color: #8A9A7E;
 			margin: 0.5rem 0 1rem;
 			max-width: 40rem;
 		}
@@ -161,7 +168,7 @@
 			font-style: normal;
 			display: grid;
 			gap: 0.45rem;
-			color: #5a6478;
+			color: #8A9A7E;
 			font-size: 0.95rem;
 		}
 		.contact .fn { display: none; }
@@ -175,15 +182,15 @@
 			height: 1.1rem;
 			flex: 0 0 auto;
 			margin-top: 0.2rem;
-			color: var(--navy);
+			color: var(--lime);
 			overflow: visible;
 		}
 		.contact-text { line-height: 1.45; }
-		.meta-line { color: #5a6478; font-size: 0.9rem; margin: 0 0 0.55rem; }
+		.meta-line { color: #8A9A7E; font-size: 0.9rem; margin: 0 0 0.55rem; }
 		.experience, .education {
 			margin: 0 0 1.35rem;
 			padding-bottom: 1.15rem;
-			border-bottom: 1px solid rgba(34,45,82,0.12);
+			border-bottom: 1px solid rgba(200, 255, 0, 0.16);
 		}
 		.experience:last-of-type, .education:last-of-type { border-bottom: none; }
 		.description { margin: 0.35rem 0 0; }
@@ -191,27 +198,27 @@
 			margin: 0.35rem 0 0;
 			padding-left: 1.2rem;
 		}
-		ul.description li, .skills li { margin: 0.25rem 0; color: #3d4658; }
+		ul.description li, .skills li { margin: 0.25rem 0; color: #C5D4B0; }
 		.skill {
 			display: inline-block;
 			margin: 0.2rem 0.35rem 0.2rem 0;
 			padding: 0.2rem 0.55rem;
 			border-radius: 999px;
-			background: rgba(34,45,82,0.1);
-			border: 1px solid rgba(34,45,82,0.22);
-			color: var(--navy);
+			background: rgba(200,255,0,0.1);
+			border: 1px solid rgba(200,255,0,0.28);
+			color: var(--lime);
 			font-size: 0.88rem;
 			font-weight: 600;
 			text-decoration: none;
 		}
-		.skill:hover { background: rgba(34,45,82,0.16); text-decoration: none; color: var(--navy); }
+		.skill:hover { background: rgba(200,255,0,0.18); text-decoration: none; color: var(--lime); }
 		.skill-group { margin: 0 0 1rem; }
-		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: #2a365f; }
+		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: #C8FF00; }
 		blockquote.testimonial {
 			margin: 0.75rem 0;
 			padding: 0.75rem 1rem;
-			border-left: 3px solid var(--navy);
-			background: #e8e4da;
+			border-left: 3px solid var(--lime);
+			background: #0A1812;
 			border-radius: 0 0.5rem 0.5rem 0;
 			color: var(--cream-ink);
 			font-size: 0.95rem;
@@ -220,11 +227,11 @@
 			display: block;
 			margin-top: 0.5rem;
 			font-style: normal;
-			color: #5a6478;
+			color: #8A9A7E;
 			font-size: 0.85rem;
 		}
 		.refs ul { margin: 0.35rem 0 0; padding-left: 1.2rem; }
-		.refs li { color: #3d4658; }
+		.refs li { color: #C5D4B0; }
 		footer.page-foot {
 			margin-top: 1.5rem;
 			text-align: center;
@@ -260,6 +267,10 @@
 			.experience, .education { border-color: #ddd; page-break-inside: avoid; }
 			a.home { border-color: #999; color: #111; }
 		}
+
+		::selection { background: #C8FF00; color: #06110D; }
+		::-moz-selection { background: #C8FF00; color: #06110D; }
+		a:focus-visible { outline: 2px solid #C8FF00; outline-offset: 2px; }
 	</style>
 
 	<script type="application/ld+json">
