@@ -280,13 +280,13 @@
 			-webkit-text-stroke: 0 !important;
 		}
 
-		/* Primary action buttons: ~2× visual size (icon + padding) */
+		/* Circular action buttons: 75% of the previously enlarged size */
 		.actions .actionBtn a {
-			padding: 2rem;
+			padding: 1.5rem;
 		}
 		.actions .actionBtn .icon {
-			width: 3rem;
-			height: 3rem;
+			width: 2.25rem;
+			height: 2.25rem;
 		}
 		.actions .actionBtn p {
 			margin: 0.75rem 0 0;
@@ -339,35 +339,36 @@
 		.actions-more .actions {
 			margin-top: 0.5rem;
 		}
+		/* More / Less control: scale its internal size with the circles */
 		.actions-more-btn {
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			gap: 0.4rem;
+			gap: 0.3rem;
 			margin-top: 0.85rem;
-			padding: 0.85rem 1.75rem;
+			padding: 0.6375rem 1.3125rem;
 			border-radius: 5rem;
 			cursor: pointer;
 			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
 			font-weight: 700 !important;
-			font-size: 1.05rem !important;
+			font-size: 0.7875rem !important;
 			letter-spacing: 0.01em;
 			line-height: 1.2;
 			box-sizing: border-box;
 		}
 		.actions-more-btn .chevron {
 			display: inline-block;
-			width: 0.65rem;
-			height: 0.65rem;
-			border-right: 2.5px solid currentColor;
-			border-bottom: 2.5px solid currentColor;
+			width: 0.4875rem;
+			height: 0.4875rem;
+			border-right: 1.875px solid currentColor;
+			border-bottom: 1.875px solid currentColor;
 			transform: rotate(45deg);
 			transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-			margin-top: -0.2rem;
+			margin-top: -0.15rem;
 		}
 		.actions-more-btn[aria-expanded="true"] .chevron {
 			transform: rotate(-135deg);
-			margin-top: 0.25rem;
+			margin-top: 0.1875rem;
 		}
 		@media (prefers-reduced-motion: reduce) {
 			.actions-more {
@@ -472,11 +473,11 @@
 				padding: 0.35rem !important;
 			}
 			.actions .actionBtn a {
-				padding: 1.7rem !important;
+				padding: 1.275rem !important;
 			}
 			.actions .actionBtn .icon {
-				width: 2.7rem !important;
-				height: 2.7rem !important;
+				width: 2.025rem !important;
+				height: 2.025rem !important;
 			}
 			.actions .actionBtn p {
 				margin: 0.5rem 0 0 !important;
@@ -487,8 +488,8 @@
 				height: 1.35rem !important;
 			}
 			.actions-more-btn {
-				padding: 0.7rem 1.4rem !important;
-				font-size: 0.95rem !important;
+				padding: 0.525rem 1.05rem !important;
+				font-size: 0.7125rem !important;
 				margin-top: 0.5rem !important;
 			}
 			#topActions a {
