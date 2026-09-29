@@ -215,14 +215,44 @@
 		/* Homepage CTAs: lime fill + BIO Black label (strong contrast; not lime-on-lime).
 		   Body uses Gruppo (thin display) — CTA label must use Inter + weight so text
 		   reads as solid near-black on #C8FF00, matching Amazon Buy buttons. */
-		button:not(.site-nav__theme):not(.site-nav__toggle):not(.site-nav__action),
+		/* Primary filled CTAs (Save Contact, modal actions) — Amazon-style */
+		button:not(.site-nav__theme):not(.site-nav__toggle):not(.site-nav__action):not(.actions-more-btn),
 		#dlKey,
-		#cta,
-		.actionBtn a {
+		#cta {
 			background-color: var(--btn-bg, #C8FF00) !important;
 			background: var(--btn-bg, #C8FF00) !important;
 			color: var(--btn-fg, #06110D) !important;
 			border-color: var(--btn-border, #030907) !important;
+		}
+
+		/* Circular action buttons + More: outlined secondary (readable both themes) */
+		.actionBtn a,
+		.actions-more-btn {
+			background-color: var(--tint-weak, rgba(200, 255, 0, 0.04)) !important;
+			background: var(--tint-weak, rgba(200, 255, 0, 0.04)) !important;
+			color: var(--lime, #C8FF00) !important;
+			border: 2px solid var(--lime, #C8FF00) !important;
+			box-sizing: border-box;
+			-webkit-text-fill-color: var(--lime, #C8FF00) !important;
+		}
+		.actionBtn a:hover,
+		.actionBtn a:focus-visible,
+		.actions-more-btn:hover,
+		.actions-more-btn:focus-visible {
+			background-color: var(--tint, rgba(200, 255, 0, 0.1)) !important;
+			background: var(--tint, rgba(200, 255, 0, 0.1)) !important;
+		}
+		.actionBtn a .iconColor {
+			color: var(--lime, #C8FF00) !important;
+			-webkit-text-fill-color: var(--lime, #C8FF00) !important;
+		}
+		/* Dark-default: BIO Black SVG strokes/fills → Synthetic Lime on outlined buttons */
+		.actionBtn a [style*="stroke:#06110D"] {
+			stroke: #C8FF00 !important;
+		}
+		.actionBtn a [style*="fill:#06110D"],
+		.actionBtn a [fill="#06110D"] {
+			fill: #C8FF00 !important;
 		}
 		#cta {
 			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
@@ -231,6 +261,7 @@
 			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
 			text-shadow: none !important;
 			-webkit-text-stroke: 0 !important;
+			margin-top: 3rem;
 		}
 		body:not(.intro-pending) #cta {
 			opacity: 1;
@@ -240,8 +271,7 @@
 		#dlKey .iconColor,
 		#dlKey span,
 		#copyURL .iconColor,
-		#copyURL span,
-		.actionBtn a .iconColor {
+		#copyURL span {
 			color: var(--btn-fg, #06110D) !important;
 			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
 			opacity: 1 !important;
@@ -317,14 +347,12 @@
 			margin-top: 0.85rem;
 			padding: 0.85rem 1.75rem;
 			border-radius: 5rem;
-			border: 2px solid var(--btn-border, #030907);
 			cursor: pointer;
 			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
 			font-weight: 700 !important;
 			font-size: 1.05rem !important;
 			letter-spacing: 0.01em;
 			line-height: 1.2;
-			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
 			box-sizing: border-box;
 		}
 		.actions-more-btn .chevron {
@@ -430,7 +458,7 @@
 				max-width: min(100%, 40rem);
 			}
 			#cta {
-				margin-top: 0.65rem !important;
+				margin-top: 1.75rem !important;
 				padding: 0.85rem 1.35rem !important;
 				flex: 0 0 auto;
 				width: calc(100% - 0.5rem);
@@ -552,14 +580,20 @@
 		html[data-theme="light"] .topAction [style*="fill:#C8FF00"] {
 			fill: #4B0082 !important;
 		}
-		html[data-theme="light"] .actionBtn a [style*="stroke:#06110D"],
+		/* Outlined action buttons: Toxic Violet icons on Soft Chrome */
+		html[data-theme="light"] .actionBtn a [style*="stroke:#06110D"] {
+			stroke: #4B0082 !important;
+		}
+		html[data-theme="light"] .actionBtn a [style*="fill:#06110D"],
+		html[data-theme="light"] .actionBtn a [fill="#06110D"] {
+			fill: #4B0082 !important;
+		}
+		/* Filled primary CTAs: Soft Chrome icons on Toxic Violet fill */
 		html[data-theme="light"] #cta [style*="stroke:#06110D"],
 		html[data-theme="light"] #dlKey [style*="stroke:#06110D"],
 		html[data-theme="light"] #copyURL [style*="stroke:#06110D"] {
 			stroke: #F1F2F7 !important;
 		}
-		html[data-theme="light"] .actionBtn a [style*="fill:#06110D"],
-		html[data-theme="light"] .actionBtn a [fill="#06110D"],
 		html[data-theme="light"] #cta [style*="fill:#06110D"] {
 			fill: #F1F2F7 !important;
 		}
