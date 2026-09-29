@@ -1,9 +1,9 @@
 /* Shared site hamburger nav — header colors come from the active theme tokens. */
 
 /*
- * The colored nav sits above transparent spacing on every page. Paint the
- * surrounding layout with the active page token so that spacing never falls
- * back to browser white/black or a different surface color.
+ * Page chrome under the colored header must stay --bio (Soft Chrome / BIO).
+ * Do not leave empty margin that reveals a different sibling surface (--card
+ * / --cream) — that reads as a white/black strip under the lime/violet bar.
  */
 .wrap,
 .vcard {
@@ -28,10 +28,12 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
-	margin-bottom: 1.5rem;
+	/* Flush to following content; spacing belongs inside page panels, not as a bio band. */
+	margin-bottom: 0;
 	background: var(--sn-bg);
 	color: var(--sn-fg);
-	border-bottom: 1px solid var(--sn-border);
+	/* No bottom border: even a 1px rule read as a white/black hairline under the colored header. */
+	border-bottom: none;
 	z-index: 40;
 }
 

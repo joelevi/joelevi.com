@@ -200,8 +200,14 @@
 		.textColor { color: var(--lime, #C8FF00) !important; }
 		.seekbarColor { background: var(--lime, #C8FF00) !important; }
 		
+		/*
+		 * Page surface under the colored header must be continuous --bio
+		 * (Soft Chrome / BIO Black). Using --card here painted a contrasting
+		 * band in the photo-overlap margin gap (main margin-top), which read
+		 * as a white/black strip under the lime/violet nav.
+		 */
 		main {
-			background-color: var(--card, #0C1F18);
+			background-color: var(--bio, #06110D);
 			margin-top: 5rem;
 		}
 		
