@@ -573,13 +573,15 @@
 		footer { color: #8A9A7E; }
 		footer a { color: var(--lime, #C8FF00); }
 
-		/* Light theme: recolor hardcoded dark-mode SVG strokes/fills on the Fold card */
-		html[data-theme="light"] .topAction [style*="stroke:#C8FF00"],
-		html[data-theme="light"] .closeColor [style*="stroke:#C8FF00"] {
-			stroke: #4B0082 !important;
+		/* Light theme: header icons sit on BIO Black, so use readable chrome. */
+		html[data-theme="light"] .topAction [style*="stroke:#C8FF00"] {
+			stroke: var(--header-fg, #F1F2F7) !important;
 		}
 		html[data-theme="light"] .topAction [style*="fill:#C8FF00"] {
-			fill: #4B0082 !important;
+			fill: var(--header-fg, #F1F2F7) !important;
+		}
+		html[data-theme="light"] .closeColor [style*="stroke:#C8FF00"] {
+			stroke: #4B0082 !important;
 		}
 		/* Outlined action buttons: Toxic Violet icons on Soft Chrome */
 		html[data-theme="light"] .actionBtn a [style*="stroke:#06110D"] {
@@ -603,9 +605,9 @@
 			box-shadow: 0 0.35rem 1.25rem rgba(75, 0, 130, 0.2);
 		}
 		html[data-theme="light"] #topActions .site-nav__theme {
-			color: #4B0082;
-			border-color: rgba(75, 0, 130, 0.18);
-			background: rgba(75, 0, 130, 0.06);
+			color: var(--header-fg, #F1F2F7);
+			border-color: var(--header-border, rgba(200, 255, 0, 0.3));
+			background: var(--header-control-bg, rgba(241, 242, 247, 0.08));
 		}
 
 

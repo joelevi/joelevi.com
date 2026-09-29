@@ -16,6 +16,16 @@ html.theme-dark {
 	--lime-hover: #A8D600;
 	--on-lime: #06110D;
 
+	/* Header stays BIO Black in every theme; dark mode uses lime accents. */
+	--header-bg: #06110D;
+	--header-fg: #C8FF00;
+	--header-muted: #8A9A7E;
+	--header-accent: #C8FF00;
+	--header-border: rgba(200, 255, 0, 0.22);
+	--header-panel-bg: #0C1F18;
+	--header-control-bg: rgba(200, 255, 0, 0.04);
+	--header-control-hover: rgba(200, 255, 0, 0.1);
+
 	--ink: #C8FF00;
 	--muted: #8A9A7E;
 	--accent: #C8FF00;
@@ -58,6 +68,15 @@ html.theme-dark {
 		--lime: #C8FF00;
 		--lime-hover: #A8D600;
 		--on-lime: #06110D;
+
+		--header-bg: #06110D;
+		--header-fg: #C8FF00;
+		--header-muted: #8A9A7E;
+		--header-accent: #C8FF00;
+		--header-border: rgba(200, 255, 0, 0.22);
+		--header-panel-bg: #0C1F18;
+		--header-control-bg: rgba(200, 255, 0, 0.04);
+		--header-control-hover: rgba(200, 255, 0, 0.1);
 
 		--ink: #C8FF00;
 		--muted: #8A9A7E;
@@ -105,6 +124,16 @@ html.theme-light {
 	--lime-hover: #34005B;    /* deeper violet hover */
 	--on-lime: #F1F2F7;       /* chrome on violet buttons */
 
+	/* Keep the light page, but restore the dark BIO Black header. */
+	--header-bg: #06110D;
+	--header-fg: #F1F2F7;
+	--header-muted: #C5D4B0;
+	--header-accent: #C8FF00;
+	--header-border: rgba(200, 255, 0, 0.3);
+	--header-panel-bg: #0C1F18;
+	--header-control-bg: rgba(241, 242, 247, 0.08);
+	--header-control-hover: rgba(200, 255, 0, 0.14);
+
 	--ink: #4B0082;
 	--muted: #6B4A8F;
 	--accent: #4B0082;
@@ -146,6 +175,15 @@ html.theme-light {
 		--lime: #4B0082;
 		--lime-hover: #34005B;
 		--on-lime: #F1F2F7;
+
+		--header-bg: #06110D;
+		--header-fg: #F1F2F7;
+		--header-muted: #C5D4B0;
+		--header-accent: #C8FF00;
+		--header-border: rgba(200, 255, 0, 0.3);
+		--header-panel-bg: #0C1F18;
+		--header-control-bg: rgba(241, 242, 247, 0.08);
+		--header-control-hover: rgba(200, 255, 0, 0.14);
 
 		--ink: #4B0082;
 		--muted: #6B4A8F;

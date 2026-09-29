@@ -1,12 +1,15 @@
 /* Shared site hamburger nav — used on all pages; Fold homepage reuses .site-nav__trailing theme control only. */
 .site-nav {
-	--sn-fg: var(--ink, #C8FF00);
-	--sn-muted: var(--muted, #8A9A7E);
-	--sn-accent: var(--accent, #C8FF00);
-	--sn-border: var(--rule, var(--line, rgba(200, 255, 0, 0.16)));
-	--sn-panel-bg: var(--card, #0C1F18);
+	--sn-bg: var(--header-bg, #06110D);
+	--sn-fg: var(--header-fg, #C8FF00);
+	--sn-muted: var(--header-muted, #8A9A7E);
+	--sn-accent: var(--header-accent, #C8FF00);
+	--sn-border: var(--header-border, rgba(200, 255, 0, 0.16));
+	--sn-panel-bg: var(--header-panel-bg, #0C1F18);
+	--sn-control-bg: var(--header-control-bg, rgba(200, 255, 0, 0.04));
+	--sn-control-hover: var(--header-control-hover, rgba(200, 255, 0, 0.1));
 	--sn-cream: var(--cream, #0C1F18);
-	--sn-gold: var(--gold, #C8FF00);
+	--sn-gold: var(--header-accent, var(--gold, #C8FF00));
 	--sn-navy: var(--navy, #06110D);
 	--sn-bio: var(--bio, #06110D);
 	--sn-lime: var(--lime, #C8FF00);
@@ -16,6 +19,9 @@
 	align-items: center;
 	gap: 1rem;
 	margin-bottom: 1.5rem;
+	background: var(--sn-bg);
+	color: var(--sn-fg);
+	border-bottom: 1px solid var(--sn-border);
 	z-index: 40;
 }
 
@@ -27,12 +33,12 @@
 	border: 1px solid var(--sn-border);
 	padding: 0.4rem 0.85rem;
 	border-radius: 999px;
-	background: var(--tint-weak, rgba(200, 255, 0, 0.04));
+	background: var(--sn-control-bg);
 	text-decoration: none;
 }
 
 .site-nav__home:hover {
-	background: var(--tint, rgba(200, 255, 0, 0.1));
+	background: var(--sn-control-hover);
 	text-decoration: none;
 	border-color: var(--sn-gold);
 }
@@ -56,7 +62,7 @@
 	padding: 0;
 	border: 1px solid var(--sn-border);
 	border-radius: 0.5rem;
-	background: var(--tint-weak, rgba(200, 255, 0, 0.04));
+	background: var(--sn-control-bg);
 	color: var(--sn-fg);
 	cursor: pointer;
 	flex-shrink: 0;
@@ -174,14 +180,14 @@
 .site-nav__list a:focus-visible,
 .site-nav__list button.site-nav__action:hover,
 .site-nav__list button.site-nav__action:focus-visible {
-	background: var(--tint-strong, rgba(200, 255, 0, 0.14));
+	background: var(--sn-control-hover);
 	color: var(--sn-accent);
 	outline: none;
 	text-decoration: none;
 }
 
 .site-nav__list a[aria-current="page"] {
-	background: var(--tint-strong, rgba(200, 255, 0, 0.2));
+	background: var(--sn-control-hover);
 	color: var(--sn-accent);
 	font-weight: 600;
 	box-shadow: inset 3px 0 0 var(--sn-gold);
