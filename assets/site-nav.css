@@ -203,3 +203,9 @@
 @media print {
 	.site-nav { display: none !important; }
 }
+
+/* Keep the shared circular profile photo above the themed header edge. */
+#profilePhoto {
+	position: relative;
+	z-index: 41;
+}
