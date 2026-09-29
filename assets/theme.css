@@ -1,7 +1,7 @@
 /*
  * Site color themes.
- * Dark: Synthetic Lime #C8FF00 on BIO Black #06110D
- * Light: Toxic Violet #4B0082 on Soft Chrome #F1F2F7
+ * Dark: Synthetic Lime #C8FF00 header with BIO Black #06110D text
+ * Light: Toxic Violet #4B0082 header with Soft Chrome #F1F2F7 text
  */
 
 /* Dark theme via explicit preference or class */
@@ -16,15 +16,15 @@ html.theme-dark {
 	--lime-hover: #A8D600;
 	--on-lime: #06110D;
 
-	/* Header stays BIO Black in every theme; dark mode uses lime accents. */
-	--header-bg: #06110D;
-	--header-fg: #C8FF00;
-	--header-muted: #8A9A7E;
-	--header-accent: #C8FF00;
-	--header-border: rgba(200, 255, 0, 0.22);
-	--header-panel-bg: #0C1F18;
-	--header-control-bg: rgba(200, 255, 0, 0.04);
-	--header-control-hover: rgba(200, 255, 0, 0.1);
+	/* Header: Synthetic Lime with BIO Black text/icons. */
+	--header-bg: #C8FF00;
+	--header-fg: #06110D;
+	--header-muted: #243500;
+	--header-accent: #06110D;
+	--header-border: rgba(6, 17, 13, 0.34);
+	--header-panel-bg: #C8FF00;
+	--header-control-bg: rgba(6, 17, 13, 0.08);
+	--header-control-hover: rgba(6, 17, 13, 0.16);
 
 	--ink: #C8FF00;
 	--muted: #8A9A7E;
@@ -69,14 +69,14 @@ html.theme-dark {
 		--lime-hover: #A8D600;
 		--on-lime: #06110D;
 
-		--header-bg: #06110D;
-		--header-fg: #C8FF00;
-		--header-muted: #8A9A7E;
-		--header-accent: #C8FF00;
-		--header-border: rgba(200, 255, 0, 0.22);
-		--header-panel-bg: #0C1F18;
-		--header-control-bg: rgba(200, 255, 0, 0.04);
-		--header-control-hover: rgba(200, 255, 0, 0.1);
+		--header-bg: #C8FF00;
+		--header-fg: #06110D;
+		--header-muted: #243500;
+		--header-accent: #06110D;
+		--header-border: rgba(6, 17, 13, 0.34);
+		--header-panel-bg: #C8FF00;
+		--header-control-bg: rgba(6, 17, 13, 0.08);
+		--header-control-hover: rgba(6, 17, 13, 0.16);
 
 		--ink: #C8FF00;
 		--muted: #8A9A7E;
@@ -124,15 +124,15 @@ html.theme-light {
 	--lime-hover: #34005B;    /* deeper violet hover */
 	--on-lime: #F1F2F7;       /* chrome on violet buttons */
 
-	/* Keep the light page, but restore the dark BIO Black header. */
-	--header-bg: #06110D;
+	/* Header: Toxic Violet with Soft Chrome text/icons. */
+	--header-bg: #4B0082;
 	--header-fg: #F1F2F7;
-	--header-muted: #C5D4B0;
-	--header-accent: #C8FF00;
-	--header-border: rgba(200, 255, 0, 0.3);
-	--header-panel-bg: #0C1F18;
-	--header-control-bg: rgba(241, 242, 247, 0.08);
-	--header-control-hover: rgba(200, 255, 0, 0.14);
+	--header-muted: #E0D6EB;
+	--header-accent: #F1F2F7;
+	--header-border: rgba(241, 242, 247, 0.42);
+	--header-panel-bg: #4B0082;
+	--header-control-bg: rgba(241, 242, 247, 0.12);
+	--header-control-hover: rgba(241, 242, 247, 0.22);
 
 	--ink: #4B0082;
 	--muted: #6B4A8F;
@@ -176,14 +176,14 @@ html.theme-light {
 		--lime-hover: #34005B;
 		--on-lime: #F1F2F7;
 
-		--header-bg: #06110D;
+		--header-bg: #4B0082;
 		--header-fg: #F1F2F7;
-		--header-muted: #C5D4B0;
-		--header-accent: #C8FF00;
-		--header-border: rgba(200, 255, 0, 0.3);
-		--header-panel-bg: #0C1F18;
-		--header-control-bg: rgba(241, 242, 247, 0.08);
-		--header-control-hover: rgba(200, 255, 0, 0.14);
+		--header-muted: #E0D6EB;
+		--header-accent: #F1F2F7;
+		--header-border: rgba(241, 242, 247, 0.42);
+		--header-panel-bg: #4B0082;
+		--header-control-bg: rgba(241, 242, 247, 0.12);
+		--header-control-hover: rgba(241, 242, 247, 0.22);
 
 		--ink: #4B0082;
 		--muted: #6B4A8F;
@@ -214,4 +214,24 @@ html.theme-light {
 		--btn-border: var(--lime-hover);
 		--btn-bg-hover: var(--lime-hover);
 	}
+}
+
+/* Homepage header SVGs use inline colors; keep them readable on each header. */
+html[data-theme="dark"] .topAction [style*="stroke:#C8FF00"],
+html[data-theme="dark"] .topAction [style*="stroke:#06110D"] {
+	stroke: var(--header-fg, #06110D) !important;
+}
+html[data-theme="dark"] .topAction [style*="fill:#C8FF00"],
+html[data-theme="dark"] .topAction [style*="fill:#06110D"],
+html[data-theme="dark"] .topAction [fill="#06110D"] {
+	fill: var(--header-fg, #06110D) !important;
+}
+html[data-theme="light"] .topAction [style*="stroke:#C8FF00"],
+html[data-theme="light"] .topAction [style*="stroke:#06110D"] {
+	stroke: var(--header-fg, #F1F2F7) !important;
+}
+html[data-theme="light"] .topAction [style*="fill:#C8FF00"],
+html[data-theme="light"] .topAction [style*="fill:#06110D"],
+html[data-theme="light"] .topAction [fill="#06110D"] {
+	fill: var(--header-fg, #F1F2F7) !important;
 }

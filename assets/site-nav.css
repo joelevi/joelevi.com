@@ -1,4 +1,4 @@
-/* Shared site hamburger nav — used on all pages; Fold homepage reuses .site-nav__trailing theme control only. */
+/* Shared site hamburger nav — header colors come from the active theme tokens. */
 .site-nav {
 	--sn-bg: var(--header-bg, #06110D);
 	--sn-fg: var(--header-fg, #C8FF00);

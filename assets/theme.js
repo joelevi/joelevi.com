@@ -1,5 +1,5 @@
 /**
- * Theme preference: dark (Synthetic Lime / BIO Black) ↔ light (Toxic Violet / Soft Chrome).
+ * Theme preference: dark (Synthetic Lime header) ↔ light (Toxic Violet header).
  * Persists override in localStorage ("joelevi-theme"). Without override, follows
  * prefers-color-scheme and listens for system changes.
  */
