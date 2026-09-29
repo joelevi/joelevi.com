@@ -1,4 +1,14 @@
 /* Shared site hamburger nav — header colors come from the active theme tokens. */
+
+/*
+ * The colored nav sits above transparent spacing on every page. Paint the
+ * surrounding layout with the active page token so that spacing never falls
+ * back to browser white/black or a different surface color.
+ */
+.wrap,
+.vcard {
+	background-color: var(--bio, #06110D);
+}
 .site-nav {
 	--sn-bg: var(--header-bg, #06110D);
 	--sn-fg: var(--header-fg, #C8FF00);
