@@ -6,6 +6,7 @@
 
 	var toggle = nav.querySelector(".site-nav__toggle");
 	var panel = nav.querySelector(".site-nav__panel");
+	var printButton = nav.querySelector("[data-site-nav-print]");
 	if (!toggle || !panel) return;
 
 	function setOpen(open) {
@@ -40,14 +41,13 @@
 		}
 	});
 
-	panel.addEventListener("click", function (e) {
-		var printBtn = e.target.closest("[data-site-nav-print]");
-		if (printBtn) {
-			e.preventDefault();
-			setOpen(false);
+	if (printButton) {
+		printButton.addEventListener("click", function () {
 			window.print();
-			return;
-		}
+		});
+	}
+
+	panel.addEventListener("click", function (e) {
 		var link = e.target.closest("a");
 		if (link) setOpen(false);
 	});

@@ -70,7 +70,8 @@
 	flex-shrink: 0;
 }
 
-.site-nav__toggle {
+.site-nav__toggle,
+.site-nav__print {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -86,11 +87,23 @@
 }
 
 .site-nav__toggle:hover,
-.site-nav__toggle:focus-visible {
+.site-nav__toggle:focus-visible,
+.site-nav__print:hover,
+.site-nav__print:focus-visible {
 	border-color: transparent;
 	background: transparent;
 	outline: 2px solid transparent;
 	box-shadow: 0 0 0 2px var(--sn-accent-strong);
+}
+
+.site-nav__print svg {
+	width: 1.15rem;
+	height: 1.15rem;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
 /* Theme toggle removed — hide if leftover markup exists */
@@ -160,7 +173,9 @@
 
 .site-nav__list a,
 .site-nav__list button.site-nav__action {
-	display: block;
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
 	width: 100%;
 	padding: 0.65rem 0.85rem;
 	border: 0;
@@ -172,6 +187,17 @@
 	text-align: left;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.site-nav__icon {
+	width: 1.1rem;
+	height: 1.1rem;
+	flex: 0 0 1.1rem;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
 .site-nav__list a:hover,
