@@ -161,7 +161,7 @@
 	list-style: none;
 	/* Keep the header color visible through the open menu without losing contrast. */
 	background: rgba(47, 111, 237, 0.25);
-	background: color-mix(in srgb, var(--sn-panel-bg) 25%, transparent);
+	background: color-mix(in srgb, var(--sn-panel-bg) 75%, transparent);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	color: var(--sn-fg);
