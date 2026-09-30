@@ -25,7 +25,11 @@
 	gap: 1rem;
 	margin-bottom: 0;
 	padding: 0.85rem 1.15rem;
-	background: var(--sn-bg);
+	background-color: var(--sn-bg);
+	/* Match the homepage .card-header mosaic exactly on every inner-page header. */
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='220' viewBox='0 0 420 220' preserveAspectRatio='none'><polygon fill='%234A82F0' points='0,0 140,0 80,120 0,90'/><polygon fill='%231E5AD4' points='140,0 280,0 240,100 80,120'/><polygon fill='%235B9AFF' points='280,0 420,0 420,80 300,140 240,100'/><polygon fill='%232456C9' points='0,90 80,120 60,220 0,220'/><polygon fill='%233D7AF0' points='80,120 240,100 300,140 180,220 60,220'/><polygon fill='%231A4BB8' points='240,100 300,140 420,80 420,220 180,220'/></svg>");
+	background-size: cover;
+	background-position: center;
 	border-radius: 1rem 1rem 0 0;
 	color: var(--sn-fg);
 	border-bottom: none;
