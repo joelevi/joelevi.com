@@ -159,7 +159,13 @@
 	margin: 0;
 	padding: 0.5rem;
 	list-style: none;
-	background: var(--sn-panel-bg);
+	/* Keep the header color visible through the open menu without losing contrast. */
+	background: rgba(47, 111, 237, 0.25);
+	background: color-mix(in srgb, var(--sn-panel-bg) 25%, transparent);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	color: var(--sn-fg);
+	text-shadow: 0 1px 2px rgba(26, 31, 46, 0.72);
 	border: 1px solid var(--sn-border);
 	border-radius: 0.75rem;
 	box-shadow: 0 12px 32px var(--shadow, rgba(26, 31, 46, 0.18));
