@@ -1,73 +1,16 @@
-
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" class="theme-dark">
+<html lang="en">
 <head profile="http://microformats.org/profile/hcard">
 	<meta charset="UTF-8" />
-	<!-- Theme: dark (lime/BIO) ↔ light (violet/chrome); localStorage override or prefers-color-scheme. -->
-	<script>
-		(function () {
-			var LIGHT_ENABLED = true;
-			var key = "joelevi-theme";
-			var theme = "dark";
-			try {
-				var stored = localStorage.getItem(key);
-				if (LIGHT_ENABLED && (stored === "light" || stored === "dark")) {
-					theme = stored;
-				} else if (LIGHT_ENABLED && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches && stored !== "dark") {
-					theme = "light";
-				} else {
-					theme = "dark";
-				}
-			} catch (e) {}
-			document.documentElement.setAttribute("data-theme", theme);
-			document.documentElement.classList.toggle("theme-dark", theme === "dark");
-			document.documentElement.classList.toggle("theme-light", theme === "light");
-		})();
-	</script>
-	<!-- Intro: skip Fold animation for 12h if already seen (cookie primary; localStorage backup). Must run before paint. -->
-	<script>
-		(function () {
-			var COOKIE = "joelevi-intro-seen";
-			var MAX_AGE_MS = 43200 * 1000;
-			function cookieHasSeen() {
-				try {
-					var m = document.cookie.match(/(?:^|;\s*)joelevi-intro-seen=([^;]*)/);
-					return !!(m && m[1]);
-				} catch (e) {
-					return false;
-				}
-			}
-			function storageHasSeen() {
-				try {
-					var raw = localStorage.getItem(COOKIE);
-					if (!raw) return false;
-					var ts = parseInt(raw, 10);
-					if (!isNaN(ts) && ts > 0) {
-						return Date.now() - ts < MAX_AGE_MS;
-					}
-					return raw === "1";
-				} catch (e) {
-					return false;
-				}
-			}
-			if (cookieHasSeen() || storageHasSeen()) {
-				document.documentElement.classList.add("intro-done", "no-intro");
-			}
-		})();
-	</script>
-	<link rel="stylesheet" href="/assets/theme.css" />
-	<link rel="stylesheet" href="/assets/site-nav.css" />
-	<script defer src="/assets/theme.js"></script>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index, follow, archive" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="theme-color" content="#06110D" />
-	<meta name="msapplication-navbutton-color" content="#06110D" />
-	<!-- Based on --> <meta name="author" content="EnBizCard - An Open-Source Digital Business Card Generator" /> <meta name="designer" content="Vishnu Raghav" /> <meta name="url" content="https://enbizcard.vishnuraghav.com/" />
-	<!-- Heavily modified by --> <meta name="author" content="Joe Levi" /> <meta name="url" content="https://www.JoeLevi.com/" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="msapplication-navbutton-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="url" content="https://www.JoeLevi.com/" />
 
 	<meta name="description" content="Joe Levi — digital business card in Cache Valley, Utah. Author of Miles the Muskrat; Redoubt Solutions, LLC; and amateur radio callsign KF7NWA." />
 	<meta name="keywords" content="Joe Levi, Cache Valley, Utah, digital business card, Miles the Muskrat, KF7NWA, Redoubt Solutions" />
@@ -88,21 +31,21 @@
 	<meta name="twitter:description" content="Cross-discipline problem solver in Cache Valley, Utah. Miles the Muskrat author, Redoubt Solutions, and KF7NWA." />
 	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
 	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
-		<link rel="describedby" href="/llms.txt" />
-<link rel="canonical" href="https://www.joelevi.com/" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/" />
 	<title>Joe Levi | Digital Business Card</title>
-	
-	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+
 	<link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preload" href="/photo.jpeg" as="image" fetchpriority="high" />
 	<link rel="stylesheet" href="/assets/fonts.css" />
-	
-	
+	<link rel="stylesheet" href="/assets/theme.css" />
+
 	<script>
 		"http"==window.location.href.substr(0,4)&&"/"!=window.location.href.slice(-1)&&window.location.replace(window.location.href+"/");
-    </script>
-	
-		<!-- Google Analytics (GA4) — deferred until after load -->
+	</script>
+
+	<!-- Google Analytics (GA4) — deferred until after load -->
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -122,504 +65,12 @@
 		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 	</script>
 	<script defer src="/_vercel/insights/script.js"></script>
-	
 	<!-- Vercel Speed Insights -->
 	<script>
 		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 	</script>
 	<script defer src="/_vercel/speed-insights/script.js"></script>
-	
-	<style>
-		html {
-			background-color: var(--bio, #06110D);
-		}
-		body {
-			background-color: var(--bio, #06110D);
-			font-family: "Gruppo", sans-serif;
-			font-weight: 400;
-			font-style: normal;
-		}
-		
-		article {
-			box-shadow: 0 0 3rem 1rem var(--tint-strong, rgba(200, 255, 0, 0.18));
-		}
-		
-		input[type='range']::-moz-range-track {
-			background: none;
-		}
-		
-		input[type='range']::-moz-range-thumb {
-			-moz-appearance: none;
-			width: 1.5rem;
-			height: 1.5rem;
-			border-radius: 100%;
-			border: none;
-			background: var(--lime, #C8FF00);
-			z-index: 3;
-			cursor: pointer;
-		}
-		
-		input[type='range']::-webkit-slider-thumb {
-			-webkit-appearance: none;
-			width: 1.5rem;
-			height: 1.5rem;
-			border-radius: 100%;
-			border: none;
-			background: var(--lime, #C8FF00);
-			z-index: 3;
-			cursor: pointer;
-		}
-		
-		.closeColor { color: var(--lime, #C8FF00); }
-		.topAction { }
-		.iconColor { color: var(--btn-fg, #06110D); opacity: 1; -webkit-text-fill-color: var(--btn-fg, #06110D); }
 
-		/* Fold homepage: reuse .site-nav__trailing theme control (far right of top actions) */
-		#topActions.site-nav {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 0;
-			padding: 0.25rem 0.35rem 0;
-			z-index: 40;
-		}
-		#topActions .top-actions-end {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.15rem;
-			margin-left: auto;
-		}
-		#topActions .site-nav__trailing {
-			margin-left: 0.15rem;
-		}
-		#topActions .site-nav__theme {
-			/* Match other pages; keep clear of the lime icon-link paddings */
-			align-self: center;
-		}
-		.cardColor { color: var(--lime, #C8FF00) !important; }
-		.textColor { color: var(--lime, #C8FF00) !important; }
-		.seekbarColor { background: var(--lime, #C8FF00) !important; }
-		
-		/*
-		 * Page surface under the colored header must be continuous --bio
-		 * (Soft Chrome / BIO Black). Using --card here painted a contrasting
-		 * band in the photo-overlap margin gap (main margin-top), which read
-		 * as a white/black strip under the lime/violet nav.
-		 */
-		main {
-			background-color: var(--bio, #06110D);
-			margin-top: 5rem;
-		}
-		
-		#modal {
-			background-color: var(--card, #0C1F18);
-			visibility: hidden;
-			top: 2rem;
-			opacity: 0;
-		}
-		
-		/* Homepage CTAs: lime fill + BIO Black label (strong contrast; not lime-on-lime).
-		   Body uses Gruppo (thin display) — CTA label must use Inter + weight so text
-		   reads as solid near-black on #C8FF00, matching Amazon Buy buttons. */
-		/* Primary filled CTAs (Save Contact, modal actions) — Amazon-style */
-		button:not(.site-nav__theme):not(.site-nav__toggle):not(.site-nav__action):not(.actions-more-btn),
-		#dlKey,
-		#cta {
-			background-color: var(--btn-bg, #C8FF00) !important;
-			background: var(--btn-bg, #C8FF00) !important;
-			color: var(--btn-fg, #06110D) !important;
-			border-color: var(--btn-border, #030907) !important;
-		}
-
-		/* Circular action buttons + More: outlined secondary (readable both themes) */
-		.actionBtn a,
-		.actions-more-btn {
-			background-color: var(--tint-weak, rgba(200, 255, 0, 0.04)) !important;
-			background: var(--tint-weak, rgba(200, 255, 0, 0.04)) !important;
-			color: var(--lime, #C8FF00) !important;
-			border: 2px solid var(--lime, #C8FF00) !important;
-			box-sizing: border-box;
-			-webkit-text-fill-color: var(--lime, #C8FF00) !important;
-		}
-		.actionBtn a:hover,
-		.actionBtn a:focus-visible,
-		.actions-more-btn:hover,
-		.actions-more-btn:focus-visible {
-			background-color: var(--tint, rgba(200, 255, 0, 0.1)) !important;
-			background: var(--tint, rgba(200, 255, 0, 0.1)) !important;
-		}
-		.actionBtn a .iconColor {
-			color: var(--lime, #C8FF00) !important;
-			-webkit-text-fill-color: var(--lime, #C8FF00) !important;
-		}
-		/* Dark-default: BIO Black SVG strokes/fills → Synthetic Lime on outlined buttons */
-		.actionBtn a [style*="stroke:#06110D"] {
-			stroke: #C8FF00 !important;
-		}
-		.actionBtn a [style*="fill:#06110D"],
-		.actionBtn a [fill="#06110D"] {
-			fill: #C8FF00 !important;
-		}
-		#cta {
-			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
-			font-weight: 700 !important;
-			letter-spacing: 0.01em;
-			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
-			text-shadow: none !important;
-			-webkit-text-stroke: 0 !important;
-			margin-top: 3rem;
-		}
-		body:not(.intro-pending) #cta {
-			opacity: 1;
-		}
-		#cta .iconColor,
-		#cta p,
-		#dlKey .iconColor,
-		#dlKey span,
-		#copyURL .iconColor,
-		#copyURL span {
-			color: var(--btn-fg, #06110D) !important;
-			-webkit-text-fill-color: var(--btn-fg, #06110D) !important;
-			opacity: 1 !important;
-			font-weight: 700 !important;
-			text-shadow: none !important;
-			-webkit-text-stroke: 0 !important;
-		}
-
-		/* Circular action buttons: 75% of the previously enlarged size */
-		.actions .actionBtn a {
-			padding: 1.5rem;
-		}
-		.actions .actionBtn .icon {
-			width: 2.25rem;
-			height: 2.25rem;
-		}
-		.actions .actionBtn p {
-			margin: 0.75rem 0 0;
-			font-size: 1.05rem;
-			font-weight: 700;
-		}
-		/* Two columns on narrow screens so doubled circles fit */
-		.actions .actionsC {
-			width: 50%;
-		}
-		@media (min-width: 420px) {
-			.actions .actionsC {
-				width: 33.33%;
-			}
-		}
-
-		/* More / Less expand panel */
-		.actions-extra {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: 0.75rem;
-		}
-		.actions-more {
-			display: grid;
-			grid-template-rows: 0fr;
-			opacity: 0;
-			width: 100%;
-			transition: grid-template-rows 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-				opacity 0.35s ease;
-		}
-		.actions-more.is-open {
-			grid-template-rows: 1fr;
-			opacity: 1;
-		}
-		.actions-more__inner {
-			overflow: hidden;
-			min-height: 0;
-		}
-		.actions-more:not(.is-open) {
-			pointer-events: none;
-		}
-		.actions-more:not(.is-open) a {
-			visibility: hidden;
-		}
-		.actions-more.is-open a {
-			visibility: visible;
-		}
-		.actions-more .actions {
-			margin-top: 0.5rem;
-		}
-		/* More / Less control: scale its internal size with the circles */
-		.actions-more-btn {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			gap: 0.3rem;
-			margin-top: 0.85rem;
-			padding: 0.6375rem 1.3125rem;
-			border-radius: 5rem;
-			cursor: pointer;
-			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
-			font-weight: 700 !important;
-			font-size: 0.7875rem !important;
-			letter-spacing: 0.01em;
-			line-height: 1.2;
-			box-sizing: border-box;
-		}
-		.actions-more-btn .chevron {
-			display: inline-block;
-			width: 0.4875rem;
-			height: 0.4875rem;
-			border-right: 1.875px solid currentColor;
-			border-bottom: 1.875px solid currentColor;
-			transform: rotate(45deg);
-			transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-			margin-top: -0.15rem;
-		}
-		.actions-more-btn[aria-expanded="true"] .chevron {
-			transform: rotate(-135deg);
-			margin-top: 0.1875rem;
-		}
-		@media (prefers-reduced-motion: reduce) {
-			.actions-more {
-				transition: none;
-			}
-			.actions-more-btn .chevron {
-				transition: none;
-			}
-		}
-
-		#cta p {
-			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
-			font-weight: 700 !important;
-			font-size: 1.05rem !important;
-			line-height: 1.2 !important;
-			margin: 0 !important;
-		}
-		
-		footer .footer-line {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 0.4rem;
-			margin: 0;
-		}
-		
-		p.name {
-			white-space: nowrap;
-			font-size: 6rem;
-		}
-		
-		p.org {
-			white-space: nowrap;
-		}
-		
-		abbr {
-			text-decoration: none;
-		}
-		
-		body{margin:0 auto;width:100%;padding:0;max-width:min(100%,72rem);color:var(--ink,#C8FF00);position:relative}p{line-height:1.5;margin:0}h2,h3{margin:0}.icon{width:1.5rem;height:1.5rem}a{text-decoration:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#modal{display:flex;flex-direction:column;position:absolute;z-index:1;width:100%;bottom:0;transition:top .2s ease-out,opacity .1s ease-out;transform:translateZ(0)}#close{align-self:end;padding:1rem;cursor:pointer;line-height:0}#keyView,#copyView,#qrView{display:flex;flex-direction:column;align-items:center;margin:0 1rem;text-align:center}#keyView p,#copyView p,#qrView p{margin:2rem;text-align:center}#copyURL,#dlKey{display:flex;width:100%;align-items:center;justify-content:center;border-radius:5rem;padding:1rem 1.5rem;border:none;outline:none;cursor:pointer;box-sizing:border-box}#copyURL span,#dlKey span{margin-left:.5rem}#qrView h3{margin:2rem 2rem 0}#qrView p{margin:.5rem 2rem 0}#qr{margin:2rem;padding:2rem;background:#fff;border-radius:.5rem}header{display:flex;justify-content:flex-start;flex-direction:column}.headerImgC{display:grid;grid-template-columns:auto;grid-template-rows:auto;overflow:hidden}#cover{grid-column:1;grid-row:1;width:100%;height:20rem;-o-object-position:top center;object-position:top center;-o-object-fit:cover;object-fit:cover}#logo{max-height:6rem;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;grid-column:1;grid-row:1;align-self:center;justify-self:center}#topActions{flex-direction:row-reverse;justify-content:space-between;align-items:flex-start}#topActions>div{display:flex}#topActions a{padding:1rem;cursor:pointer;line-height:0}main{padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}#profilePhoto{width:10rem;height:10rem;border-radius:100%;box-sizing:content-box;border:0.35rem solid var(--lime,#C8FF00);box-shadow:0 0.35rem 1.25rem rgba(0,0,0,0.18);pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-top:-6rem}#info{display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:1rem;line-height:1.25;word-break:break-word}.name{font-weight:bold;font-size:1.5rem;margin:0}.pronouns{display:block;font-size:.9rem;opacity:.8;font-weight:normal;margin:0 0 .5rem}.bizname{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.bizaddr{font-size:.8rem;opacity:.6}.sub,.textC{font-size:1rem;white-space:pre-line;line-height:1.5}.sub{font-size:.9rem;margin:.5rem 0 0;opacity:.8}.textC{margin:1rem}#cta{display:flex;align-items:center;border-radius:5rem;margin-top:2rem;padding:1rem 1.5rem;cursor:pointer;line-height:0;width:100%;justify-content:center;box-sizing:border-box}#cta .icon{margin-right:.5rem}#cta p{margin:0}.actions{width:100%;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center}.actionsC{width:33.33%}.actionBtn{padding:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center}.actionBtn a{border-radius:100%;padding:1rem;line-height:0}.actionBtn p{margin:.5rem 0 0;font-size:.9rem}.secBtn{padding:1rem}.featured{display:flex;flex-direction:column;justify-content:center;margin:2rem 0 0;width:100%}.section{font-weight:bold;text-align:center;font-size:1.3rem;padding:1rem 0}.media{overflow:hidden;border-radius:1rem;margin-top:1rem}.media img{display:block;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}.embedded{position:relative;padding-top:100%}.embedded iframe{position:absolute;top:0;left:0;width:100%;height:100%}.music,.video{width:100%}.mediaC{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}video{width:100%}.controls{padding:1rem;font-size:.9rem;text-align:center;width:100%;box-sizing:border-box}.pCtrl,.docDl{display:none;flex-direction:column;align-items:center;width:100%}.docDl{display:flex}.seekBar{width:100%;height:.5rem;margin:1.5rem 0 .5rem;border-radius:5rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.playPause,.dlBtn{margin:1rem 0 .5rem;padding:1rem;border-radius:5rem;line-height:0;cursor:pointer}.pause{display:none}.title{font-size:1rem;font-weight:bold;margin:0}.prodInfo .sub{margin:-1rem 0 0}.price{margin:1rem 0 0;font-size:1rem;font-weight:bold}.label{display:inline-block;font-size:1rem;margin:1rem 0 .5rem;border-radius:5rem;letter-spacing:1px;padding:1rem 1.5rem}.label p{margin:0}footer{padding:4rem 1rem 2rem;font-size:.9rem;text-align:center}footer a{text-decoration:underline;color:inherit}
-	
-		/* Fill Fold cover height (~1080×2364) without scrolling — distribute, don't crush */
-		@media (max-height: 920px) {
-			html, body {
-				min-height: 100%;
-				height: 100%;
-			}
-			body {
-				display: flex;
-				flex-direction: column;
-			}
-			article.vcard {
-				position: relative;
-				flex: 1 1 auto;
-				min-height: 100dvh;
-				min-height: 100svh;
-				display: flex;
-				flex-direction: column;
-				box-sizing: border-box;
-			}
-			header {
-				flex: 0 0 auto;
-			}
-			main {
-				flex: 1 1 auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: space-evenly;
-				margin-top: 3rem !important;
-				padding: 0.75rem 1rem 1.25rem !important;
-				box-sizing: border-box;
-			}
-			#profilePhoto {
-				width: 8rem !important;
-				height: 8rem !important;
-				margin-top: -4.5rem !important;
-				flex: 0 0 auto;
-			}
-			#info {
-				margin-top: 0.35rem !important;
-				flex: 0 0 auto;
-			}
-			.jobtitle.description {
-				font-size: 0.92rem !important;
-				line-height: 1.35 !important;
-				max-width: min(100%, 40rem);
-			}
-			#cta {
-				margin-top: 1.75rem !important;
-				padding: 0.85rem 1.35rem !important;
-				flex: 0 0 auto;
-				width: calc(100% - 0.5rem);
-			}
-			.actions {
-				margin-top: 0 !important;
-				flex: 0 0 auto;
-				padding-bottom: 0.25rem;
-			}
-			.actionBtn {
-				padding: 0.35rem !important;
-			}
-			.actions .actionBtn a {
-				padding: 1.275rem !important;
-			}
-			.actions .actionBtn .icon {
-				width: 2.025rem !important;
-				height: 2.025rem !important;
-			}
-			.actions .actionBtn p {
-				margin: 0.5rem 0 0 !important;
-				font-size: 0.95rem !important;
-			}
-			.icon {
-				width: 1.35rem !important;
-				height: 1.35rem !important;
-			}
-			.actions-more-btn {
-				padding: 0.525rem 1.05rem !important;
-				font-size: 0.7125rem !important;
-				margin-top: 0.5rem !important;
-			}
-			#topActions a {
-				padding: 0.75rem !important;
-			}
-		}
-
-	
-
-
-		/* Headshot intro + name letters + action fly-in */
-		#profilePhotoIntro {
-			position: fixed;
-			z-index: 10001;
-			margin: 0;
-			border-radius: 50%;
-			object-fit: cover;
-			pointer-events: none;
-			-webkit-user-select: none;
-			user-select: none;
-			border: 0.4rem solid var(--lime, #C8FF00);
-			box-shadow:
-				0 0 0 0.15rem color-mix(in srgb, var(--lime, #C8FF00) 85%, transparent),
-				0 1.25rem 3rem var(--shadow, rgba(0, 0, 0, 0.35));
-			will-change: top, left, width, height;
-		}
-		#introPhotoScrim {
-			position: fixed;
-			inset: 0;
-			z-index: 10000;
-			background: var(--bio, #06110D);
-			opacity: 0.92;
-			pointer-events: none;
-			will-change: opacity;
-		}
-		body.intro-photo-active {
-			overflow: hidden;
-		}
-		.name .letter {
-			display: inline-block;
-			will-change: transform, opacity;
-		}
-		body.intro-pending #cta,
-		body.intro-pending .actionsC,
-		body.intro-pending .actions-more-btn {
-			opacity: 0;
-			transform: translateY(32px) scale(0.9);
-		}
-		/* Revisit within 12h: settled state before paint (html.intro-done / .no-intro from head script) */
-		html.intro-done body.intro-pending #cta,
-		html.intro-done body.intro-pending .actionsC,
-		html.intro-done body.intro-pending .actions-more-btn,
-		html.no-intro body.intro-pending #cta,
-		html.no-intro body.intro-pending .actionsC,
-		html.no-intro body.intro-pending .actions-more-btn {
-			opacity: 1;
-			transform: none;
-		}
-		html.intro-done #profilePhotoIntro,
-		html.intro-done #introPhotoScrim,
-		html.no-intro #profilePhotoIntro,
-		html.no-intro #introPhotoScrim { display: none !important; }
-		@media (prefers-reduced-motion: reduce) {
-			#profilePhotoIntro,
-			#introPhotoScrim { display: none !important; }
-			body.intro-pending #cta,
-			body.intro-pending .actionsC,
-			body.intro-pending .actions-more-btn {
-				opacity: 1;
-				transform: none;
-			}
-		}
-
-	
-		::selection { background: var(--selection-bg, #C8FF00); color: var(--selection-fg, #06110D); }
-		::-moz-selection { background: var(--selection-bg, #C8FF00); color: var(--selection-fg, #06110D); }
-		a:focus-visible, button:focus-visible, #cta:focus-visible, .actionBtn a:focus-visible {
-			outline: 2px solid var(--lime, #C8FF00);
-			outline-offset: 3px;
-		}
-		footer { color: #8A9A7E; }
-		footer a { color: var(--lime, #C8FF00); }
-
-		/* Light theme: header icons sit on BIO Black, so use readable chrome. */
-		html[data-theme="light"] .topAction [style*="stroke:#C8FF00"] {
-			stroke: var(--header-fg, #F1F2F7) !important;
-		}
-		html[data-theme="light"] .topAction [style*="fill:#C8FF00"] {
-			fill: var(--header-fg, #F1F2F7) !important;
-		}
-		html[data-theme="light"] .closeColor [style*="stroke:#C8FF00"] {
-			stroke: #4B0082 !important;
-		}
-		/* Outlined action buttons: Toxic Violet icons on Soft Chrome */
-		html[data-theme="light"] .actionBtn a [style*="stroke:#06110D"] {
-			stroke: #4B0082 !important;
-		}
-		html[data-theme="light"] .actionBtn a [style*="fill:#06110D"],
-		html[data-theme="light"] .actionBtn a [fill="#06110D"] {
-			fill: #4B0082 !important;
-		}
-		/* Filled primary CTAs: Soft Chrome icons on Toxic Violet fill */
-		html[data-theme="light"] #cta [style*="stroke:#06110D"],
-		html[data-theme="light"] #dlKey [style*="stroke:#06110D"],
-		html[data-theme="light"] #copyURL [style*="stroke:#06110D"] {
-			stroke: #F1F2F7 !important;
-		}
-		html[data-theme="light"] #cta [style*="fill:#06110D"] {
-			fill: #F1F2F7 !important;
-		}
-		html[data-theme="light"] #profilePhoto {
-			border-color: #4B0082;
-			box-shadow: 0 0.35rem 1.25rem rgba(75, 0, 130, 0.2);
-		}
-		html[data-theme="light"] #topActions .site-nav__theme {
-			color: var(--header-fg, #F1F2F7);
-			border-color: var(--header-border, rgba(200, 255, 0, 0.3));
-			background: var(--header-control-bg, rgba(241, 242, 247, 0.08));
-		}
-
-
-</style>
-	
-	<link rel="canonical" href="https://www.JoeLevi.com" />
 	<link rel="me" href="https://www.JoeLevi.com" />
 	<link rel="me" href="https://www.linkedin.com/in/joelevi" />
 	<link rel="profile" href="http://microformats.org/profile/hcard" />
@@ -681,527 +132,664 @@
       "url": "https://www.joelevi.com/",
       "name": "Joe Levi",
       "description": "Joe Levi — digital business card in Cache Valley, Utah. Author of Miles the Muskrat; Redoubt Solutions, LLC; and amateur radio callsign KF7NWA.",
-      "publisher": {
-        "@id": "https://www.joelevi.com/#person"
-      },
-      "author": {
-        "@id": "https://www.joelevi.com/#person"
-      }
+      "publisher": { "@id": "https://www.joelevi.com/#person" },
+      "author": { "@id": "https://www.joelevi.com/#person" }
     },
     {
-      "@type": [
-        "WebPage",
-        "ProfilePage"
-      ],
+      "@type": ["WebPage", "ProfilePage"],
       "@id": "https://www.joelevi.com/#webpage",
       "url": "https://www.joelevi.com/",
       "name": "Joe Levi | Digital Business Card",
       "description": "Joe Levi — digital business card in Cache Valley, Utah. Author of Miles the Muskrat; Redoubt Solutions, LLC; and amateur radio callsign KF7NWA.",
-      "isPartOf": {
-        "@id": "https://www.joelevi.com/#website"
-      },
-      "about": {
-        "@id": "https://www.joelevi.com/#person"
-      },
-      "mainEntity": {
-        "@id": "https://www.joelevi.com/#person"
-      },
+      "isPartOf": { "@id": "https://www.joelevi.com/#website" },
+      "about": { "@id": "https://www.joelevi.com/#person" },
+      "mainEntity": { "@id": "https://www.joelevi.com/#person" },
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://www.joelevi.com/photo.jpeg",
         "width": 450,
         "height": 450
-      },
-      "breadcrumb": {
-        "@id": "https://www.joelevi.com/#breadcrumb"
       }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.joelevi.com/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.joelevi.com/"
-        }
-      ]
-    },
-    {
-      "@type": "Book",
-      "@id": "https://www.milesthemuskrat.com/#book",
-      "name": "Miles the Muskrat",
-      "author": {
-        "@id": "https://www.joelevi.com/#person"
-      },
-      "url": "https://www.milesthemuskrat.com"
     }
   ]
 }
 	</script>
+
+	<style>
+		*, *::before, *::after { box-sizing: border-box; }
+		html, body {
+			margin: 0;
+			padding: 0;
+			background: #FFFFFF;
+			color: #1A1F2E;
+			font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-weight: 400;
+			line-height: 1.45;
+			-webkit-font-smoothing: antialiased;
+		}
+		a { color: inherit; text-decoration: none; }
+		button { font: inherit; }
+
+		.card {
+			max-width: 26rem;
+			margin: 0 auto;
+			min-height: 100vh;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+		}
+
+		/* —— Header banner —— */
+		.card-header {
+			position: relative;
+			height: 9.5rem;
+			padding: 1rem 1.15rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			color: #fff;
+			background-color: #2F6FED;
+			background-image:
+				url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='220' viewBox='0 0 420 220' preserveAspectRatio='none'><polygon fill='%234A82F0' points='0,0 140,0 80,120 0,90'/><polygon fill='%231E5AD4' points='140,0 280,0 240,100 80,120'/><polygon fill='%235B9AFF' points='280,0 420,0 420,80 300,140 240,100'/><polygon fill='%232456C9' points='0,90 80,120 60,220 0,220'/><polygon fill='%233D7AF0' points='80,120 240,100 300,140 180,220 60,220'/><polygon fill='%231A4BB8' points='240,100 300,140 420,80 420,220 180,220'/></svg>");
+			background-size: cover;
+			background-position: center;
+		}
+		.brand {
+			font-weight: 700;
+			font-size: 1.05rem;
+			letter-spacing: 0.01em;
+			text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		}
+		.menu-btn {
+			width: 2rem;
+			height: 2rem;
+			border-radius: 999px;
+			border: none;
+			background: rgba(255,255,255,0.22);
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			backdrop-filter: blur(4px);
+		}
+		.menu-btn:hover, .menu-btn:focus-visible {
+			background: rgba(255,255,255,0.35);
+			outline: none;
+		}
+		.menu-btn svg { width: 1.1rem; height: 1.1rem; }
+
+		.menu-panel {
+			position: absolute;
+			top: 3.25rem;
+			right: 1rem;
+			min-width: 11rem;
+			background: #fff;
+			color: #1A1F2E;
+			border-radius: 0.75rem;
+			box-shadow: 0 12px 32px rgba(26,31,46,0.18);
+			padding: 0.35rem;
+			z-index: 50;
+		}
+		.menu-panel[hidden] { display: none !important; }
+		.menu-panel button,
+		.menu-panel a {
+			display: block;
+			width: 100%;
+			text-align: left;
+			padding: 0.65rem 0.85rem;
+			border: 0;
+			border-radius: 0.5rem;
+			background: transparent;
+			color: #1A1F2E;
+			cursor: pointer;
+			font-size: 0.92rem;
+		}
+		.menu-panel button:hover,
+		.menu-panel a:hover {
+			background: #EEF2F8;
+		}
+
+		/* —— Body —— */
+		.card-body {
+			position: relative;
+			padding: 0 1.35rem 2rem;
+			text-align: center;
+			background: #fff;
+		}
+
+		.avatar-wrap {
+			margin-top: -3.6rem;
+			position: relative;
+			display: inline-block;
+			z-index: 2;
+		}
+		.avatar {
+			width: 7.25rem;
+			height: 7.25rem;
+			border-radius: 999px;
+			object-fit: cover;
+			border: 4px solid #fff;
+			box-shadow: 0 4px 16px rgba(26,31,46,0.12);
+			display: block;
+			background: #EEF2F8;
+		}
+
+		.identity {
+			margin-top: 0.85rem;
+		}
+		.name-row {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.4rem;
+			margin: 0;
+		}
+		.name-row .n {
+			font-size: 1.45rem;
+			font-weight: 700;
+			letter-spacing: -0.02em;
+			color: #1A1F2E;
+			margin: 0;
+		}
+		.verify {
+			width: 1.15rem;
+			height: 1.15rem;
+			border-radius: 999px;
+			background: #2F6FED;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+		}
+		.verify svg { width: 0.7rem; height: 0.7rem; }
+
+		.tagline {
+			margin: 0.45rem 0 0;
+			font-size: 0.92rem;
+			color: #1A1F2E;
+			font-weight: 400;
+			line-height: 1.4;
+			text-align: center;
+			max-width: 22rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.bio {
+			margin: 0.85rem 0 0;
+			font-size: 0.88rem;
+			color: #3A4255;
+			line-height: 1.5;
+			text-align: left;
+		}
+
+		/* Quick contacts — light blue circles */
+		.quick {
+			display: flex;
+			justify-content: center;
+			gap: 0.85rem;
+			margin: 1.25rem 0 0;
+		}
+		.quick a,
+		.quick button {
+			width: 2.65rem;
+			height: 2.65rem;
+			border-radius: 999px;
+			background: #A8C8F5;
+			color: #fff;
+			border: none;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 0.15s ease, transform 0.15s ease;
+		}
+		.quick a:hover,
+		.quick button:hover {
+			background: #8BB4F0;
+			transform: translateY(-1px);
+		}
+		.quick svg { width: 1.2rem; height: 1.2rem; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+		/* CTA pills */
+		.ctas {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0.65rem;
+			margin: 1.25rem 0 0;
+		}
+		.cta {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.65rem;
+			padding: 0 0.75rem;
+			border-radius: 999px;
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+		}
+		.cta--fill {
+			background: #2F6FED;
+			color: #fff;
+			border: 2px solid #2F6FED;
+		}
+		.cta--fill:hover { background: #2458C7; border-color: #2458C7; }
+		.cta--outline {
+			background: #fff;
+			color: #2F6FED;
+			border: 2px solid #2F6FED;
+		}
+		.cta--outline:hover { background: #EEF4FF; }
+		.cta.is-copied {
+			background: #2458C7;
+			color: #fff;
+			border-color: #2458C7;
+		}
+
+		/* Social circles */
+		.socials {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 0.7rem;
+			margin: 1.35rem 0 0;
+		}
+		.socials a {
+			width: 2.85rem;
+			height: 2.85rem;
+			border-radius: 999px;
+			background: #2F6FED;
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: background 0.15s ease, transform 0.15s ease;
+		}
+		.socials a:hover {
+			background: #2458C7;
+			transform: translateY(-1px);
+		}
+		.socials svg { width: 1.25rem; height: 1.25rem; }
+		.socials .fill-icon { fill: currentColor; stroke: none; }
+		.socials .stroke-icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+		/* Stacked link pills */
+		.links {
+			display: flex;
+			flex-direction: column;
+			gap: 0.7rem;
+			margin: 1.35rem 0 0;
+		}
+		.link-pill {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.75rem;
+			width: 100%;
+			min-height: 3rem;
+			padding: 0.7rem 1.15rem;
+			border-radius: 999px;
+			background: #2F6FED;
+			color: #fff;
+			font-weight: 600;
+			font-size: 0.95rem;
+			transition: background 0.15s ease;
+		}
+		.link-pill:hover { background: #2458C7; }
+		.link-pill svg {
+			width: 1.2rem;
+			height: 1.2rem;
+			flex-shrink: 0;
+			stroke: currentColor;
+			fill: none;
+			stroke-width: 2;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+
+		.site-footer {
+			text-align: center;
+			padding: 0.5rem 1.35rem 1.75rem;
+			font-size: 0.78rem;
+			color: #5A6478;
+		}
+		.site-footer a { color: #2F6FED; text-decoration: underline; text-underline-offset: 2px; }
+
+		/* Modal (share / QR / key) */
+		.modal {
+			position: fixed;
+			inset: 0;
+			background: rgba(26,31,46,0.45);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1.25rem;
+			z-index: 100;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.2s ease, visibility 0.2s ease;
+		}
+		.modal.is-open {
+			opacity: 1;
+			visibility: visible;
+		}
+		.modal__panel {
+			background: #fff;
+			border-radius: 1rem;
+			padding: 1.5rem 1.25rem 1.25rem;
+			max-width: 20rem;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			box-shadow: 0 20px 48px rgba(26,31,46,0.25);
+		}
+		.modal__close {
+			position: absolute;
+			top: 0.65rem;
+			right: 0.65rem;
+			width: 2rem;
+			height: 2rem;
+			border: none;
+			border-radius: 999px;
+			background: #EEF2F8;
+			color: #1A1F2E;
+			cursor: pointer;
+			font-size: 1.1rem;
+			line-height: 1;
+		}
+		.modal__panel h3 {
+			margin: 0.25rem 0 0.5rem;
+			font-size: 1.05rem;
+		}
+		.modal__panel p {
+			margin: 0;
+			font-size: 0.88rem;
+			color: #5A6478;
+		}
+		#qr {
+			display: flex;
+			justify-content: center;
+			margin: 0.75rem 0;
+		}
+		#qr canvas, #qr img { max-width: 100%; height: auto; }
+		.modal-actions {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			margin-top: 1rem;
+		}
+		.modal-actions a,
+		.modal-actions button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.4rem;
+			height: 2.5rem;
+			border-radius: 999px;
+			border: none;
+			background: #2F6FED;
+			color: #fff;
+			font-weight: 600;
+			font-size: 0.88rem;
+			cursor: pointer;
+		}
+		.modal-actions a:hover,
+		.modal-actions button:hover { background: #2458C7; }
+
+		@media (min-width: 480px) {
+			body { background: #EEF2F8; }
+			.card {
+				margin: 1.5rem auto;
+				min-height: auto;
+				border-radius: 1.25rem;
+				box-shadow: 0 12px 40px rgba(26,31,46,0.12);
+				overflow: hidden;
+			}
+		}
+	</style>
 </head>
+<body>
+<article class="card vcard h-card" itemscope itemtype="https://schema.org/Person">
+	<header class="card-header">
+		<div class="brand">Joe Levi</div>
+		<button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="More options" title="More">
+			<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.75" fill="currentColor" stroke="none"/></svg>
+		</button>
+		<div class="menu-panel" id="menuPanel" hidden role="menu">
+			<button type="button" id="menuShare" role="menuitem">Share card</button>
+			<button type="button" id="menuQR" role="menuitem">Show QR code</button>
+			<a href="./joe-levi-public-key.asc" download role="menuitem">Download PGP key</a>
+		</div>
+	</header>
 
-<body id="body"><article class="glow1 vcard h-card"  itemscope itemtype="https://schema.org/Person">
+	<main class="card-body">
+		<div class="avatar-wrap">
+			<img class="avatar u-photo photo" src="./photo.jpeg" alt="Joe Levi" itemprop="image" width="450" height="450" fetchpriority="high" decoding="sync" loading="eager" />
+		</div>
 
-	<div id="modal"><a id="close" class="closeColor"><div class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M18 6 6 18M6 6l12 12" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px"></path></svg></div></a> <div id="keyView"><p class="textColor">
-              Use my public key to send me secure emails
-    </p> <a download="" target="_blank" id="dlKey" rel="noreferrer" tabindex="-1" class="u-key" href="./joe-levi-public-key.asc"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M21 15v4c0 1.097-.903 2-2 2H5c-1.097 0-2-.903-2-2v-4m4-5 5 5 5-5m-5 5V3" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:2px"></path></svg></div> <span class="iconColor">Download Key</span></a></div>
-			
-	<div id="copyView"><p class="textColor">
-              Copy &amp; Send the URL to share my Business Card
-    </p> <button id="copyURL"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M22 11a2 2 0 0 0-2-2h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-9Z" style="fill:none;stroke:#06110D;stroke-width:2px"></path><path d="M5 15H4c-1.097 0-2-.903-2-2V4c0-1.097.903-2 2-2h9c1.097 0 2 .903 2 2v1" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:2px"></path></svg></div> <span class="iconColor">Copy URL</span></button></div> <div id="qrView" class="textColor"><div id="qr"></div> <h3>Scan the QR Code</h3> <p>to view my Business Card on another device</p></div></div>
-	
-	<header><nav id="topActions" class="site-nav site-nav--fold" style="display: none;" aria-label="Site"><a id="showKey"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="7" cy="148" r="5" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></circle><path d="m16 139 3 3 3-3-3-3" style="fill:none;fill-rule:nonzero;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path><path d="m21 134-10.465 10.465" style="fill:none;stroke:#C8FF00;stroke-width:2px" transform="translate(0 -132)"></path></svg></div></a> <div class="top-actions-end"><a id="share"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="17" cy="5" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="5" cy="12" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><circle cx="17" cy="19" r="3" style="fill:none;stroke:#C8FF00;stroke-width:2px"></circle><path d="m7.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path></g></g></svg></div></a> <a id="showQR"><div class="icon topAction"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M4 4h4v4H4V4Zm0 12h4v4H4v-4ZM16 4h4v4h-4V4Z" style="fill:none;stroke:#C8FF00;stroke-width:2px"></path><path d="M12 4v14c0 1.097.903 2 2 2h4c1.097 0 2-.903 2-2v-4c0-1.097-.903-2-2-2H4" style="fill:none;stroke:#C8FF00;stroke-width:2px;stroke-linejoin:miter"></path><path style="fill:#C8FF00" d="M15 15h2v2h-2z"></path></svg></div></a> <div class="site-nav__trailing"><button type="button" class="site-nav__theme" id="site-theme-toggle" aria-label="Switch to light theme" title="Light theme" data-theme-current="dark">
-					<svg class="site-nav__theme-icon site-nav__theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-					<svg class="site-nav__theme-icon site-nav__theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
-				</button>
-			</div></div></nav> <div class="headerImgC"> </div></header>
-	
-	<main>
-		<img id="profilePhoto" src="./photo.jpeg" class="u-photo photo" alt="Joe Levi" itemprop="image" width="450" height="450" fetchpriority="high" decoding="sync" loading="eager">
-		<div id="info" class="textColor">
-			<p class="name n" itemprop="name">
-				<span class="p-given-name given-name nickname" itemprop="givenName">Joe</span> <span class="p-family-name family-name" itemprop="familyName">Levi</span>
-			</p>
-			<p class="jobtitle description tagline p-note note p-role p-job-title" itemprop="jobTitle">
+		<div class="identity">
+			<div class="name-row">
+				<p class="name n" itemprop="name">
+					<span class="p-given-name given-name nickname" itemprop="givenName">Joe</span>
+					<span class="p-family-name family-name" itemprop="familyName">Levi</span>
+				</p>
+				<span class="verify" title="Verified" aria-hidden="true">
+					<svg viewBox="0 0 24 24"><path d="M5 12.5l5 5L19 7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</span>
+			</div>
+			<p class="tagline jobtitle description p-note note p-role p-job-title" itemprop="jobTitle">
 				a cross-discipline, multi-dimensional problem solver who thinks outside the box &mdash; but within reality&trade;
 			</p>
-</div>
-		
-		<div class="actions">
-			
-			<div class="actionsC"><div class="actionBtn"><a href="https://signal.me/#eu/kez2d3EnvXoe-gjPhHb-k60FX4wUPr8ib7FzcJlDBEMWAqf4C7NGHIFJYrARuQKG" target="_blank" rel="noopener noreferrer" aria-label="Signal"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M5.43 4.93A9.969 9.969 0 0 1 12.5 2c5.519 0 10 4.481 10 10 0 2.76-1.12 5.26-2.93 7.07l.001.001-.003.001A9.97 9.97 0 0 1 12.5 22a9.835 9.835 0 0 1-5.005-1.354l-4.187.546.546-4.187A9.835 9.835 0 0 1 2.5 12a9.97 9.97 0 0 1 2.928-7.068l.001-.003.001.001Z" style="fill:none;stroke:#06110D;stroke-width:2.86px" transform="matrix(.7 0 0 .7 3.75 3.6)"></path><path d="M5.43 4.93A9.969 9.969 0 0 1 12.5 2c5.519 0 10 4.481 10 10 0 2.76-1.12 5.26-2.93 7.07l.001.001-.003.001A9.97 9.97 0 0 1 12.5 22a9.835 9.835 0 0 1-5.005-1.354l-4.187.546.546-4.187A9.835 9.835 0 0 1 2.5 12a9.97 9.97 0 0 1 2.928-7.068l.001-.003.001.001Z" style="fill:none;stroke:#06110D;stroke-width:.91px;stroke-dasharray:2.73,2.73,0,0;stroke-dashoffset:1.82" transform="matrix(1.1 0 0 1.1 -1.25 -1.2)"></path></svg></div></a> <p class="textColor">
-              Signal
-            </p></div></div>
-				
-			<div class="actionsC"><div class="actionBtn"><a class="u-email email" href="mailto:Joe@JoeLevi.com" target="_blank" rel="noopener noreferrer" aria-label="Email" itemprop="email"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M22 33.75c0-.966-.896-1.75-2-1.75H4c-1.104 0-2 .784-2 1.75v10.5c0 .966.896 1.75 2 1.75h16c1.104 0 2-.784 2-1.75v-10.5Z" style="fill:none;stroke:#06110D;stroke-width:1.86px" transform="matrix(1 0 0 1.14286 0 -32.571)"></path><path d="m18 7.042-6 2.625-6-2.625" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:1.86px" transform="matrix(1 0 0 1.14286 0 1.952)"></path></svg></div></a> <p class="textColor">
-			  Email
-            </p></div></div>
-				
-			<div class="actionsC"><div class="actionBtn"><a class="p-tel tel" target="_blank" rel="noopener noreferrer" aria-label="Mobile" href="tel:+18013178563" itemprop="telephone"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M11.5 22a.952.952 0 0 1-1.052.945c-4.358-.544-7.851-4.338-8.379-8.39a.938.938 0 0 1 .936-1.046c.399-.009.847-.009 1.202-.009.388 0 .738.237.882.597l.478 1.196a.95.95 0 0 1-.21 1.025l-.107.107a.951.951 0 0 0-.181 1.091c.495.825 1.59 1.92 2.425 2.396a.927.927 0 0 0 1.066-.177c.05-.02.086-.056.122-.092a.95.95 0 0 1 1.025-.21l1.196.478c.36.144.597.494.597.882V22Z" style="fill:none;stroke:#06110D;stroke-width:.95px" transform="translate(-2.21 -26.421) scale(2.10526)"></path></svg></div></a> <p class="textColor">
-              Mobile
-            </p></div></div>
-				
-			<div class="actionsC"><div class="actionBtn"><a href="/resume" rel="noopener" aria-label="Resume"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="M89 109a2 2 0 0 1 2-2h6l6 6v10a2 2 0 0 1-2 2H91a2 2 0 0 1-2-2v-14Z" style="fill:none;stroke:#06110D;stroke-width:2px" transform="translate(-84 -104)"></path><path d="M97 107v4a2 2 0 0 0 2 2h4" style="fill:none;stroke:#06110D;stroke-width:2px" transform="translate(-84 -104)"></path></svg></div></a> <p class="textColor">
-              R&eacute;sum&eacute;
-             </p></div></div>
-
-				
-
-			<div class="actionsC"><div class="actionBtn"><a href="/books/" rel="noopener" aria-label="Books"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" style="fill:none;stroke:#06110D;stroke-width:2px"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" style="fill:none;stroke:#06110D;stroke-width:2px"/></svg></div></a> <p class="textColor">Books</p></div></div>
+			<p class="bio" itemprop="description">
+				Cross-discipline problem solver in Cache Valley, Utah. Webmaster, systems architect, and author of Miles the Muskrat.
+			</p>
 		</div>
 
-		<div class="actions-extra">
-			<div id="actionsMore" class="actions-more" aria-hidden="true">
-				<div class="actions-more__inner">
-					<div class="actions">
-<div class="actionsC"><div class="actionBtn"><a href="https://cachevalleymesh.com" target="_blank" rel="noopener noreferrer" aria-label="Cache Valley Mesh"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><circle cx="5" cy="12" r="2" style="fill:none;stroke:#06110D;stroke-width:2px"/><circle cx="19" cy="5" r="2" style="fill:none;stroke:#06110D;stroke-width:2px"/><circle cx="19" cy="19" r="2" style="fill:none;stroke:#06110D;stroke-width:2px"/><path d="M7 12h10M16.2 6.5 7.8 11M16.2 17.5 7.8 13" style="fill:none;stroke:#06110D;stroke-width:2px"/></svg></div></a> <p class="textColor">Mesh</p></div></div>
-			<div class="actionsC"><div class="actionBtn"><a href="https://github.com/joelevi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.586 2 12.253c0 4.537 2.865 8.383 6.839 9.743.5.094.682-.222.682-.49 0-.242-.009-.883-.014-1.733-2.782.62-3.369-1.37-3.369-1.37-.454-1.177-1.11-1.49-1.11-1.49-.908-.635.069-.622.069-.622 1.003.072 1.532 1.055 1.532 1.055.892 1.558 2.341 1.108 2.91.847.091-.66.35-1.108.636-1.363-2.22-.258-4.555-1.137-4.555-5.06 0-1.118.39-2.032 1.03-2.75-.103-.258-.447-1.3.098-2.71 0 0 .84-.274 2.75 1.05A9.35 9.35 0 0 1 12 7.14c.85.004 1.705.117 2.504.343 1.909-1.324 2.747-1.05 2.747-1.05.546 1.41.202 2.452.1 2.71.64.718 1.028 1.632 1.028 2.75 0 3.934-2.339 4.8-4.566 5.052.359.316.679.94.679 1.896 0 1.368-.012 2.47-.012 2.806 0 .27.18.588.688.488C19.138 20.632 22 16.786 22 12.253 22 6.586 17.523 2 12 2z" style="fill:#06110D"/></svg></div></a> <p class="textColor">GitHub</p></div></div>
-			<div class="actionsC"><div class="actionBtn"><a class="u-url url" href="https://www.linkedin.com/in/joelevi" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn" itemprop="sameAs"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path fill="#06110D" d="M6.94 6.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.5 9h3v12h-3V9zm5.5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V21h-3v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9V9z"/></svg></div></a> <p class="textColor">LinkedIn</p></div></div>
-			<div class="actionsC"><div class="actionBtn"><a class="u-url url" href="https://www.qrz.com/db/KF7NWA" target="_blank" rel="noopener noreferrer" aria-label="Amateur Radio QRZ KF7NWA" title="KF7NWA on QRZ"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path style="fill:none" d="M0 0h24v24H0z"/><path d="M12 21V9" style="fill:none;stroke:#06110D;stroke-width:2px;stroke-linecap:round"/><path d="M8 12h8M9.5 15h5M10.5 18h3" style="fill:none;stroke:#06110D;stroke-width:2px;stroke-linecap:round"/><path d="M9 21h6" style="fill:none;stroke:#06110D;stroke-width:2px;stroke-linecap:round"/><circle cx="12" cy="6.5" r="1.75" style="fill:#06110D"/><path d="M6.2 8.2a7.2 7.2 0 0 1 11.6 0" style="fill:none;stroke:#06110D;stroke-width:1.75px;stroke-linecap:round"/><path d="M3.8 5.6a10.5 10.5 0 0 1 16.4 0" style="fill:none;stroke:#06110D;stroke-width:1.75px;stroke-linecap:round"/></svg></div></a> <p class="textColor">QRZ</p></div></div>
-					</div>
-				</div>
-			</div>
-			<button type="button" id="actionsMoreToggle" class="actions-more-btn" aria-expanded="false" aria-controls="actionsMore">
-				<span class="actions-more-btn__label">More</span>
-				<span class="chevron" aria-hidden="true"></span>
+		<nav class="quick" aria-label="Quick contact">
+			<a class="p-tel tel" href="tel:+18013178563" aria-label="Call" itemprop="telephone" title="Call">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+			</a>
+			<a class="u-email email" href="mailto:Joe@JoeLevi.com" aria-label="Email" itemprop="email" title="Email">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+			</a>
+			<a href="https://signal.me/#eu/kez2d3EnvXoe-gjPhHb-k60FX4wUPr8ib7FzcJlDBEMWAqf4C7NGHIFJYrARuQKG" target="_blank" rel="noopener noreferrer" aria-label="Signal" title="Signal">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+			</a>
+			<button type="button" id="quickShare" aria-label="Share" title="Share">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
 			</button>
+		</nav>
+
+		<div class="ctas">
+			<a class="cta cta--fill" id="saveContact" rel="noreferrer" download href="joelevi.vcf" aria-label="Save Contact">Save Contact</a>
+			<button type="button" class="cta cta--outline" id="copyEmail" aria-label="Copy email">Copy email</button>
 		</div>
-		
-		<a id="cta" rel="noreferrer" download="" target="_blank" aria-label="Save Contact" href="joelevi.vcf"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="7" r="4" style="fill:none;stroke:#06110D;stroke-width:2.29px" transform="matrix(.875 0 0 .875 4.563 -.625)"></circle><path d="M86 181c0-3.863 3.137-7 7-7s7 3.137 7 7" style="fill:none;stroke:#06110D;stroke-width:2px" transform="translate(-81 -163)"></path><path d="M104 168v6m3-3-3 3-3-3" style="fill:none;fill-rule:nonzero;stroke:#06110D;stroke-width:2px" transform="translate(-92 -152)"></path></svg></div>
-		<p class="iconColor">Save Contact</p></a>
-		
 
+		<nav class="socials" aria-label="Social profiles">
+			<a class="u-url url" href="https://www.linkedin.com/in/joelevi" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn" itemprop="sameAs" title="LinkedIn">
+				<svg class="fill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 6.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.5 9h3v12h-3V9zm5.5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V21h-3v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9V9z"/></svg>
+			</a>
+			<a href="https://github.com/joelevi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+				<svg class="fill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.586 2 12.253c0 4.537 2.865 8.383 6.839 9.743.5.094.682-.222.682-.49 0-.242-.009-.883-.014-1.733-2.782.62-3.369-1.37-3.369-1.37-.454-1.177-1.11-1.49-1.11-1.49-.908-.635.069-.622.069-.622 1.003.072 1.532 1.055 1.532 1.055.892 1.558 2.341 1.108 2.91.847.091-.66.35-1.108.636-1.363-2.22-.258-4.555-1.137-4.555-5.06 0-1.118.39-2.032 1.03-2.75-.103-.258-.447-1.3.098-2.71 0 0 .84-.274 2.75 1.05A9.35 9.35 0 0 1 12 7.14c.85.004 1.705.117 2.504.343 1.909-1.324 2.747-1.05 2.747-1.05.546 1.41.202 2.452.1 2.71.64.718 1.028 1.632 1.028 2.75 0 3.934-2.339 4.8-4.566 5.052.359.316.679.94.679 1.896 0 1.368-.012 2.47-.012 2.806 0 .27.18.588.688.488C19.138 20.632 22 16.786 22 12.253 22 6.586 17.523 2 12 2z"/></svg>
+			</a>
+			<a href="https://cachevalleymesh.com" target="_blank" rel="noopener noreferrer" aria-label="Cache Valley Mesh" title="Mesh">
+				<svg class="stroke-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 12h10M16.2 6.5 7.8 11M16.2 17.5 7.8 13"/></svg>
+			</a>
+			<a class="u-url url" href="https://www.qrz.com/db/KF7NWA" target="_blank" rel="noopener noreferrer" aria-label="Amateur Radio QRZ KF7NWA" title="KF7NWA on QRZ">
+				<svg class="stroke-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V9"/><path d="M8 12h8M9.5 15h5M10.5 18h3"/><path d="M9 21h6"/><circle cx="12" cy="6.5" r="1.75" fill="currentColor" stroke="none"/><path d="M6.2 8.2a7.2 7.2 0 0 1 11.6 0"/><path d="M3.8 5.6a10.5 10.5 0 0 1 16.4 0"/></svg>
+			</a>
+		</nav>
 
-			<!-- <div class="actionsC"><div class="actionBtn"><a href="https://www.JoeLevi.com/articles" target="_blank" rel="noopener noreferrer" aria-label="Articles"><div class="icon iconColor" itemprop="url"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><g><path style="fill:none" d="M0 0h24v24H0z"></path><clipPath id="a"><path d="M0 0h24v24H0z"></path></clipPath><g clip-path="url(#a)"><circle cx="12" cy="12" r="10" style="fill:none;stroke:#06110D;stroke-width:2px"></circle><ellipse cx="40" cy="40" rx="4" ry="10" style="fill:none;stroke:#06110D;stroke-width:2px;stroke-linejoin:miter" transform="translate(-28 -28)"></ellipse><path d="M40 50s-2-4-2-10 2-10 2-10" style="fill:none;stroke:#06110D;stroke-width:2px" transform="rotate(-90 11.5 39.5)"></path></g></g></svg></div></a> <p class="textColor">
-              Articles
-            </p></div></div> -->
-				
-			<!-- <div class="actionsC"><div class="actionBtn"><a target="_blank" rel="noopener noreferrer" aria-label="Store" href="https://Unapologetic.Company"><div class="icon iconColor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"><path style="fill:none" d="M0 0h24v24H0z"></path><path d="m59 37 .721-4.329A2.001 2.001 0 0 1 61.694 31h12.612c.977 0 1.812.707 1.973 1.671L77 37" style="fill:none;stroke:#06110D;stroke-width:2px" transform="translate(-56 -28)"></path><path d="M71 39a2 2 0 0 1-4 0" style="fill:none;stroke:#06110D;stroke-width:1.33px" transform="matrix(1.5 0 0 1.5 -85.5 -49.5)"></path><path d="M71 39a2 2 0 0 1-4 0" style="fill:none;stroke:#06110D;stroke-width:1.33px" transform="matrix(1.5 0 0 1.5 -91.5 -49.5)"></path><path d="M71 39a2 2 0 0 1-4 0" style="fill:none;stroke:#06110D;stroke-width:1.33px" transform="matrix(1.5 0 0 1.5 -97.5 -49.5)"></path><path d="M61 39.235V47c0 .53.184 1.039.513 1.414.328.375.773.586 1.237.586h10.5c.464 0 .909-.211 1.237-.586A2.15 2.15 0 0 0 75 47v-7.765" style="fill:none;stroke:#06110D;stroke-width:1.86px" transform="matrix(1.14286 0 0 1 -65.714 -28)"></path></svg></div></a> <p class="textColor">
-              Store
-            </p></div></div></div> -->
-			
-			<!-- <span itemprop="callSign">KF7NWA</span> -->
-</main>
+		<nav class="links" aria-label="Pages">
+			<a class="link-pill" href="/resume/" rel="noopener">
+				<span>R&eacute;sum&eacute;</span>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+			</a>
+			<a class="link-pill" href="/books/" rel="noopener">
+				<span>Books</span>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+			</a>
+		</nav>
+	</main>
+
+	<footer class="site-footer">
+		<p>© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+	</footer>
 </article>
 
-<footer>
-	<p class="footer-line">© <span id="y"></span> Joe Levi · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
-</footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+	<div class="modal__panel">
+		<button type="button" class="modal__close" id="modalClose" aria-label="Close">&times;</button>
+		<div id="shareView">
+			<h3 id="modalTitle">Share this card</h3>
+			<p>Send Joe’s digital business card to another device.</p>
+			<div class="modal-actions">
+				<button type="button" id="copyURL">Copy URL</button>
+				<button type="button" id="nativeShare">Share…</button>
+			</div>
+		</div>
+		<div id="qrView" hidden>
+			<div id="qr"></div>
+			<h3>Scan the QR code</h3>
+			<p>to open this card on another device</p>
+		</div>
+	</div>
+</div>
 
 <script>
 	document.getElementById("y").textContent = new Date().getFullYear();
 </script>
-
-
-<script>
-    let m = document.getElementById("modal"),
-        c = document.getElementById("close"),
-        ki = document.getElementById("keyView"),
-        cv = document.getElementById("copyView"),
-        curl = document.getElementById("copyURL"),
-        qrv = document.getElementById("qrView"),
-        qr = document.getElementById("qr"),
-        s = document.getElementById("share"),
-        sqr = document.getElementById("showQR"),
-        sk = document.getElementById("showKey");
-    function tC(e) {
-        "2rem" == e.style.top
-            ? ((e.style.visibility = "visible"), (e.style.top = "0px"), (e.style.opacity = 1))
-            : ((e.style.top = "2rem"),
-              (e.style.opacity = 0),
-              setTimeout(() => {
-                  e.style.visibility = "hidden";
-              }, 200));
-    }
-    function dN(e) {
-        e.style.display = "none";
-    }
-    function ensureQr() {
-        if (qr.dataset.ready === "1") return Promise.resolve();
-        return new Promise(function (resolve, reject) {
-            if (window.QRCode) {
-                qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg();
-                qr.dataset.ready = "1";
-                resolve();
-                return;
-            }
-            var s = document.createElement("script");
-            s.src = "./qrcode.min.js";
-            s.async = true;
-            s.onload = function () {
-                qr.innerHTML = new QRCode({ content: window.location.href, container: "svg-viewbox", join: !0, ecl: "L", padding: 0 }).svg();
-                qr.dataset.ready = "1";
-                resolve();
-            };
-            s.onerror = reject;
-            document.head.appendChild(s);
-        });
-    }
-    window.addEventListener("load", () => {
-        document.querySelector("#topActions").style.display = "flex";
-    }),
-        navigator.canShare
-            ? s.addEventListener("click", () => {
-                  navigator.share({ title: document.title, text: "You can view my Digital Business Card here:", url: window.location.href });
-              })
-            : s.addEventListener("click", () => {
-                  tC(m), (cv.style.display = "flex"), dN(qrv), ki && dN(ki);
-              }),
-        sqr.addEventListener("click", () => {
-            ensureQr().then(function () {
-                tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki);
-            });
-        }),
-        sk &&
-            sk.addEventListener("click", () => {
-                tC(m), ki && (ki.style.display = "flex"), dN(cv), dN(qrv);
-            }),
-        c.addEventListener("click", () => tC(m)),
-        curl.addEventListener("click", async () => {
-            let e = curl.querySelectorAll(".iconColor")[1];
-            await navigator.clipboard.writeText(window.location.href).then((t) => {
-                (e.innerText = "Copied"),
-                    setTimeout(() => {
-                        e.innerText = "Copy URL";
-                    }, 1e3);
-            });
-        });
-</script>
-
-<script>
-    let pC = document.querySelectorAll(".pCtrl"),
-        pP = document.querySelectorAll(".playPause"),
-        srcs = document.querySelectorAll(".source");
-    srcs.forEach((e) => {
-        (e.style.pointerEvents = "none"), e.removeAttribute("controls");
-    }),
-        pC.forEach((e, l) => {
-            e.style.display = "flex";
-            let r = e.querySelector(".currentTime"),
-                s = e.querySelector(".seekBar"),
-                t = e.querySelector(".playPause"),
-                a = t.querySelector(".play"),
-                c = t.querySelector(".pause");
-            srcs[l].addEventListener("timeupdate", () => {
-                let e = srcs[l].currentTime,
-                    t = (100 / srcs[l].duration) * e;
-                (s.value = t), 100 == t && ((s.value = 0), (a.style.display = "block"), (c.style.display = "none"));
-                let o = Math.floor(e / 60),
-                    y = Math.floor(e % 60);
-                o.toString().length < 2 && (o = "0" + o), y.toString().length < 2 && (y = "0" + y), (r.value = o + ":" + y);
-            }),
-                s.addEventListener("change", () => {
-                    srcs[l].currentTime = srcs[l].duration * (parseInt(s.value) / 100);
-                }),
-                t.addEventListener("click", () => {
-                    srcs[l].paused
-                        ? (srcs.forEach((e, r) => {
-                              l != r && (e.paused || e.pause());
-                          }),
-                          pP.forEach((e, l) => {
-                              let r = e.querySelector(".play"),
-                                  s = e.querySelector(".pause");
-                              (r.style.display = "block"), (s.style.display = "none");
-                          }),
-                          srcs[l].play(),
-                          (a.style.display = "none"),
-                          (c.style.display = "block"))
-                        : (srcs[l].pause(), (c.style.display = "none"), (a.style.display = "block"));
-                });
-        });
-</script>
-
-
+<script src="./qrcode.min.js" defer></script>
 <script>
 (function () {
-  var COOKIE = "joelevi-intro-seen";
-  var MAX_AGE = 43200;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var skipIntro =
-    document.documentElement.classList.contains("intro-done") ||
-    document.documentElement.classList.contains("no-intro");
+	"use strict";
+	var EMAIL = "Joe@JoeLevi.com";
+	var menuBtn = document.getElementById("menuBtn");
+	var menuPanel = document.getElementById("menuPanel");
+	var modal = document.getElementById("modal");
+	var shareView = document.getElementById("shareView");
+	var qrView = document.getElementById("qrView");
+	var qrEl = document.getElementById("qr");
+	var qrBuilt = false;
 
-  function markIntroSeen() {
-    var secure = location.protocol === "https:" ? "; Secure" : "";
-    try {
-      document.cookie =
-        COOKIE + "=1; Max-Age=" + MAX_AGE + "; Path=/; SameSite=Lax" + secure;
-    } catch (e) {}
-    try {
-      localStorage.setItem(COOKIE, String(Date.now()));
-    } catch (e) {}
-    document.documentElement.classList.add("intro-done", "no-intro");
-  }
+	function closeMenu() {
+		menuPanel.hidden = true;
+		menuBtn.setAttribute("aria-expanded", "false");
+	}
+	function openMenu() {
+		menuPanel.hidden = false;
+		menuBtn.setAttribute("aria-expanded", "true");
+	}
+	menuBtn.addEventListener("click", function (e) {
+		e.stopPropagation();
+		if (menuPanel.hidden) openMenu(); else closeMenu();
+	});
+	document.addEventListener("click", function (e) {
+		if (!menuPanel.hidden && !menuPanel.contains(e.target) && e.target !== menuBtn) closeMenu();
+	});
+	document.addEventListener("keydown", function (e) {
+		if (e.key === "Escape") {
+			closeMenu();
+			closeModal();
+		}
+	});
 
-  function ready(fn) {
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-      setTimeout(fn, 0);
-    } else {
-      document.addEventListener("DOMContentLoaded", fn);
-    }
-  }
+	function openModal(mode) {
+		shareView.hidden = mode !== "share";
+		qrView.hidden = mode !== "qr";
+		modal.hidden = false;
+		requestAnimationFrame(function () { modal.classList.add("is-open"); });
+		if (mode === "qr") buildQR();
+	}
+	function closeModal() {
+		modal.classList.remove("is-open");
+		setTimeout(function () { modal.hidden = true; }, 200);
+	}
+	document.getElementById("modalClose").addEventListener("click", closeModal);
+	modal.addEventListener("click", function (e) {
+		if (e.target === modal) closeModal();
+	});
 
-  function wait(ms) {
-    return new Promise(function (resolve) {
-      setTimeout(resolve, ms);
-    });
-  }
+	function buildQR() {
+		if (qrBuilt || typeof QRCode === "undefined") return;
+		qrEl.innerHTML = "";
+		new QRCode(qrEl, {
+			text: window.location.href.split("#")[0],
+			width: 180,
+			height: 180,
+			correctLevel: QRCode.CorrectLevel.M
+		});
+		qrBuilt = true;
+	}
 
-  function splitLetters(el) {
-    var text = el.textContent;
-    el.textContent = "";
-    var letters = [];
-    for (var i = 0; i < text.length; i++) {
-      var ch = text.charAt(i);
-      var span = document.createElement("span");
-      span.className = "letter";
-      span.textContent = ch === " " ? "\u00a0" : ch;
-      span.style.opacity = "0";
-      span.style.transform = "translateY(1.1em) rotate(-8deg)";
-      el.appendChild(span);
-      letters.push(span);
-    }
-    return letters;
-  }
+	function openShare() {
+		closeMenu();
+		if (navigator.share) {
+			navigator.share({
+				title: "Joe Levi",
+				text: "Joe Levi’s digital business card",
+				url: window.location.href.split("#")[0]
+			}).catch(function () { openModal("share"); });
+		} else {
+			openModal("share");
+		}
+	}
 
-  function animateLetters(letters) {
-    return Promise.all(
-      letters.map(function (span, i) {
-        return span.animate(
-          [
-            { opacity: 0, transform: "translateY(1.1em) rotate(-8deg)" },
-            { opacity: 1, transform: "translateY(0) rotate(0deg)" },
-          ],
-          {
-            duration: 520,
-            delay: i * 55,
-            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-            fill: "forwards",
-          }
-        ).finished;
-      })
-    );
-  }
+	document.getElementById("quickShare").addEventListener("click", openShare);
+	document.getElementById("menuShare").addEventListener("click", openShare);
+	document.getElementById("menuQR").addEventListener("click", function () {
+		closeMenu();
+		openModal("qr");
+	});
+	document.getElementById("nativeShare").addEventListener("click", function () {
+		if (navigator.share) {
+			navigator.share({
+				title: "Joe Levi",
+				text: "Joe Levi’s digital business card",
+				url: window.location.href.split("#")[0]
+			}).catch(function () {});
+		}
+	});
+	document.getElementById("copyURL").addEventListener("click", function () {
+		var url = window.location.href.split("#")[0];
+		var btn = this;
+		function done() {
+			btn.textContent = "Copied!";
+			setTimeout(function () { btn.textContent = "Copy URL"; }, 1600);
+		}
+		if (navigator.clipboard && navigator.clipboard.writeText) {
+			navigator.clipboard.writeText(url).then(done).catch(function () {
+				window.prompt("Copy URL", url);
+			});
+		} else {
+			window.prompt("Copy URL", url);
+		}
+	});
 
-  function flyButtons() {
-    var nodes = Array.prototype.slice.call(
-      document.querySelectorAll("main > .actions > .actionsC, .actions-more-btn, #cta")
-    );
-    return Promise.all(
-      nodes.map(function (node, i) {
-        node.style.opacity = "0";
-        return node.animate(
-          [
-            { opacity: 0, transform: "translateY(36px) scale(0.88)" },
-            { opacity: 1, transform: "translateY(0) scale(1)" },
-          ],
-          {
-            duration: 580,
-            delay: i * 70,
-            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-            fill: "forwards",
-          }
-        ).finished;
-      })
-    );
-  }
-
-
-  // Homepage actions More / Less expand
-  (function () {
-    var panel = document.getElementById("actionsMore");
-    var btn = document.getElementById("actionsMoreToggle");
-    if (!panel || !btn) return;
-    var label = btn.querySelector(".actions-more-btn__label");
-
-    function setOpen(open) {
-      panel.classList.toggle("is-open", open);
-      panel.setAttribute("aria-hidden", open ? "false" : "true");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-      if (label) label.textContent = open ? "Less" : "More";
-      if (open) {
-        panel.removeAttribute("inert");
-      } else {
-        panel.setAttribute("inert", "");
-      }
-    }
-
-    panel.setAttribute("inert", "");
-    btn.addEventListener("click", function () {
-      setOpen(!panel.classList.contains("is-open"));
-    });
-  })();
-
-  ready(async function () {
-    // Revisit within 12h: stay in settled final state (class set before paint).
-    if (skipIntro) {
-      return;
-    }
-
-    document.body.classList.add("intro-pending");
-
-    var given = document.querySelector(".name .p-given-name");
-    var family = document.querySelector(".name .p-family-name");
-    var letters = [];
-    if (given && family) {
-      letters = splitLetters(given).concat(
-        (function () {
-          var space = document.createElement("span");
-          space.className = "letter";
-          space.textContent = "\u00a0";
-          space.style.opacity = "0";
-          given.parentNode.insertBefore(space, family);
-          return [space];
-        })().concat(splitLetters(family))
-      );
-    }
-
-    if (reduce) {
-      letters.forEach(function (l) {
-        l.style.opacity = "1";
-        l.style.transform = "none";
-      });
-      document.body.classList.remove("intro-pending");
-      markIntroSeen();
-      return;
-    }
-
-    var photo = document.getElementById("profilePhoto");
-    if (!photo) {
-      await animateLetters(letters);
-      document.body.classList.remove("intro-pending");
-      await flyButtons();
-      markIntroSeen();
-      return;
-    }
-    if (!photo.complete) {
-      await new Promise(function (resolve) {
-        photo.addEventListener("load", resolve, { once: true });
-        photo.addEventListener("error", resolve, { once: true });
-      });
-    }
-
-    await wait(40);
-    var end = photo.getBoundingClientRect();
-    if (!end.width || !end.height) {
-      await animateLetters(letters);
-      document.body.classList.remove("intro-pending");
-      await flyButtons();
-      markIntroSeen();
-      return;
-    }
-
-    var size = Math.min(window.innerWidth, window.innerHeight) * 0.92;
-    var startTop = (window.innerHeight - size) / 2;
-    var startLeft = (window.innerWidth - size) / 2;
-
-    var scrim = document.createElement("div");
-    scrim.id = "introPhotoScrim";
-    document.body.appendChild(scrim);
-
-    var clone = photo.cloneNode(true);
-    clone.id = "profilePhotoIntro";
-    clone.removeAttribute("itemprop");
-    clone.alt = "";
-    clone.setAttribute("aria-hidden", "true");
-    clone.setAttribute("loading", "eager");
-    clone.setAttribute("fetchpriority", "high");
-    clone.setAttribute("decoding", "sync");
-    clone.style.top = startTop + "px";
-    clone.style.left = startLeft + "px";
-    clone.style.width = size + "px";
-    clone.style.height = size + "px";
-    document.body.appendChild(clone);
-
-    document.body.classList.add("intro-photo-active");
-    photo.style.visibility = "hidden";
-
-    await wait(1100);
-
-    end = photo.getBoundingClientRect();
-    var duration = 1000;
-    var easing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
-
-    var fly = clone.animate(
-      [
-        {
-          top: startTop + "px",
-          left: startLeft + "px",
-          width: size + "px",
-          height: size + "px",
-        },
-        {
-          top: end.top + "px",
-          left: end.left + "px",
-          width: end.width + "px",
-          height: end.height + "px",
-        },
-      ],
-      { duration: duration, easing: easing, fill: "forwards" }
-    );
-
-    var fade = scrim.animate(
-      [{ opacity: 0.8 }, { opacity: 0 }],
-      { duration: duration, easing: easing, fill: "forwards" }
-    );
-
-    await Promise.all([fly.finished, fade.finished]);
-
-    clone.remove();
-    scrim.remove();
-    photo.style.visibility = "";
-    document.body.classList.remove("intro-photo-active");
-
-    // Name letters, then buttons
-    await animateLetters(letters);
-    document.body.classList.remove("intro-pending");
-    await flyButtons();
-    markIntroSeen();
-  });
+	var copyEmail = document.getElementById("copyEmail");
+	copyEmail.addEventListener("click", function () {
+		function done() {
+			copyEmail.textContent = "Copied!";
+			copyEmail.classList.add("is-copied");
+			setTimeout(function () {
+				copyEmail.textContent = "Copy email";
+				copyEmail.classList.remove("is-copied");
+			}, 1600);
+		}
+		if (navigator.clipboard && navigator.clipboard.writeText) {
+			navigator.clipboard.writeText(EMAIL).then(done).catch(function () {
+				window.prompt("Copy email", EMAIL);
+			});
+		} else {
+			window.prompt("Copy email", EMAIL);
+		}
+	});
 })();
 </script>
-
 </body>
 </html>

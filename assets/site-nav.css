@@ -1,38 +1,32 @@
-/* Shared site hamburger nav — header colors come from the active theme tokens. */
+/* Shared site hamburger nav — blue header tokens (no theme toggle). */
 
-/*
- * Page chrome under the colored header must stay --bio (Soft Chrome / BIO).
- * Do not leave empty margin that reveals a different sibling surface (--card
- * / --cream) — that reads as a white/black strip under the lime/violet bar.
- */
 .wrap,
 .vcard {
-	background-color: var(--bio, #06110D);
+	background-color: var(--bio, #FFFFFF);
 }
+
 .site-nav {
-	--sn-bg: var(--header-bg, #06110D);
-	--sn-fg: var(--header-fg, #C8FF00);
-	--sn-muted: var(--header-muted, #8A9A7E);
-	--sn-accent: var(--header-accent, #C8FF00);
-	--sn-border: var(--header-border, rgba(200, 255, 0, 0.16));
-	--sn-panel-bg: var(--header-panel-bg, #0C1F18);
-	--sn-control-bg: var(--header-control-bg, rgba(200, 255, 0, 0.04));
-	--sn-control-hover: var(--header-control-hover, rgba(200, 255, 0, 0.1));
-	--sn-cream: var(--cream, #0C1F18);
-	--sn-gold: var(--header-accent, var(--gold, #C8FF00));
-	--sn-navy: var(--navy, #06110D);
-	--sn-bio: var(--bio, #06110D);
-	--sn-lime: var(--lime, #C8FF00);
+	--sn-bg: var(--header-bg, #2F6FED);
+	--sn-fg: var(--header-fg, #FFFFFF);
+	--sn-muted: var(--header-muted, rgba(255, 255, 255, 0.85));
+	--sn-accent: var(--header-accent, #FFFFFF);
+	--sn-border: var(--header-border, rgba(255, 255, 255, 0.35));
+	--sn-panel-bg: var(--header-panel-bg, #2F6FED);
+	--sn-control-bg: var(--header-control-bg, rgba(255, 255, 255, 0.14));
+	--sn-control-hover: var(--header-control-hover, rgba(255, 255, 255, 0.24));
+	--sn-cream: var(--cream, #F5F8FC);
+	--sn-gold: var(--header-accent, #FFFFFF);
+	--sn-navy: var(--navy, #2F6FED);
+	--sn-bio: var(--bio, #FFFFFF);
+	--sn-lime: var(--lime, #2F6FED);
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
-	/* Flush to following content; spacing belongs inside page panels, not as a bio band. */
 	margin-bottom: 0;
 	background: var(--sn-bg);
 	color: var(--sn-fg);
-	/* No bottom border: even a 1px rule read as a white/black hairline under the colored header. */
 	border-bottom: none;
 	z-index: 40;
 }
@@ -55,7 +49,6 @@
 	border-color: var(--sn-gold);
 }
 
-/* Trailing controls: hamburger + theme toggle (theme sits to the right of hamburger) */
 .site-nav__trailing {
 	display: inline-flex;
 	align-items: center;
@@ -64,8 +57,7 @@
 	flex-shrink: 0;
 }
 
-.site-nav__toggle,
-.site-nav__theme {
+.site-nav__toggle {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -81,35 +73,15 @@
 }
 
 .site-nav__toggle:hover,
-.site-nav__toggle:focus-visible,
-.site-nav__theme:hover:not(:disabled),
-.site-nav__theme:focus-visible:not(:disabled) {
+.site-nav__toggle:focus-visible {
 	border-color: var(--sn-gold);
 	outline: 2px solid transparent;
 	box-shadow: 0 0 0 2px var(--sn-gold);
 }
 
-.site-nav__theme:disabled,
-.site-nav__theme[aria-disabled="true"] {
-	opacity: 1;
-	cursor: not-allowed;
-	box-shadow: none;
-	color: var(--sn-fg);
-	filter: none;
-}
-
-.site-nav__theme-icon {
-	width: 1.15rem;
-	height: 1.15rem;
-	display: block;
-}
-
-/* Sun in dark (switch to light); moon in light (switch to dark) */
-.site-nav__theme[data-theme-current="dark"] .site-nav__theme-icon--moon {
-	display: none;
-}
-.site-nav__theme[data-theme-current="light"] .site-nav__theme-icon--sun {
-	display: none;
+/* Theme toggle removed — hide if leftover markup exists */
+.site-nav__theme {
+	display: none !important;
 }
 
 .site-nav__burger,
@@ -159,7 +131,7 @@
 	background: var(--sn-panel-bg);
 	border: 1px solid var(--sn-border);
 	border-radius: 0.75rem;
-	box-shadow: 0 12px 32px var(--shadow, rgba(0, 0, 0, 0.45));
+	box-shadow: 0 12px 32px var(--shadow, rgba(26, 31, 46, 0.18));
 }
 
 .site-nav__panel[hidden] {
@@ -214,10 +186,4 @@
 
 @media print {
 	.site-nav { display: none !important; }
-}
-
-/* Keep the shared circular profile photo above the themed header edge. */
-#profilePhoto {
-	position: relative;
-	z-index: 41;
 }

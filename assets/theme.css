@@ -1,237 +1,72 @@
 /*
- * Site color themes.
- * Dark: Synthetic Lime #C8FF00 header with BIO Black #06110D text
- * Light: Toxic Violet #4B0082 header with Soft Chrome #F1F2F7 text
+ * Single site palette — medium blue + white (no dark/light themes).
+ * Legacy token names (--lime, --bio, etc.) remapped so inner pages stay readable.
  */
 
-/* Dark theme via explicit preference or class */
-html[data-theme="dark"],
-html.theme-dark {
-	color-scheme: dark;
-
-	--bio: #06110D;
-	--bio-deep: #030907;
-	--bio-raised: #0C1F18;
-	--lime: #C8FF00;
-	--lime-hover: #A8D600;
-	--on-lime: #06110D;
-
-	/* Header: Synthetic Lime with BIO Black text/icons. */
-	--header-bg: #C8FF00;
-	--header-fg: #06110D;
-	--header-muted: #243500;
-	--header-accent: #06110D;
-	--header-border: rgba(6, 17, 13, 0.34);
-	--header-panel-bg: #C8FF00;
-	--header-control-bg: rgba(6, 17, 13, 0.08);
-	--header-control-hover: rgba(6, 17, 13, 0.16);
-
-	--ink: #C8FF00;
-	--muted: #8A9A7E;
-	--accent: #C8FF00;
-	--card: #0C1F18;
-	--rule: rgba(200, 255, 0, 0.16);
-	--cream: #0C1F18;
-	--cream-ink: #C5D4B0;
-	--body: #C5D4B0;
-	--surface: #102820;
-	--surface-deep: #0A1812;
-	--navy: var(--bio);
-	--navy-deep: var(--bio-deep);
-	--gold: var(--lime);
-	--bg: var(--bio);
-	--line: var(--rule);
-
-	--tint-weak: rgba(200, 255, 0, 0.04);
-	--tint: rgba(200, 255, 0, 0.1);
-	--tint-strong: rgba(200, 255, 0, 0.18);
-	--tint-border: rgba(200, 255, 0, 0.28);
-	--selection-bg: #C8FF00;
-	--selection-fg: #06110D;
-	--shadow: rgba(0, 0, 0, 0.45);
-
-	/* Shared CTA / Amazon affiliate button colors */
-	--btn-bg: var(--lime);
-	--btn-fg: var(--on-lime);
-	--btn-border: var(--bio-deep);
-	--btn-bg-hover: var(--lime-hover);
-}
-
-/* System dark preference when no explicit light theme */
-@media (prefers-color-scheme: dark) {
-	html:not([data-theme="light"]) {
-		color-scheme: dark;
-
-		--bio: #06110D;
-		--bio-deep: #030907;
-		--bio-raised: #0C1F18;
-		--lime: #C8FF00;
-		--lime-hover: #A8D600;
-		--on-lime: #06110D;
-
-		--header-bg: #C8FF00;
-		--header-fg: #06110D;
-		--header-muted: #243500;
-		--header-accent: #06110D;
-		--header-border: rgba(6, 17, 13, 0.34);
-		--header-panel-bg: #C8FF00;
-		--header-control-bg: rgba(6, 17, 13, 0.08);
-		--header-control-hover: rgba(6, 17, 13, 0.16);
-
-		--ink: #C8FF00;
-		--muted: #8A9A7E;
-		--accent: #C8FF00;
-		--card: #0C1F18;
-		--rule: rgba(200, 255, 0, 0.16);
-		--cream: #0C1F18;
-		--cream-ink: #C5D4B0;
-		--body: #C5D4B0;
-		--surface: #102820;
-		--surface-deep: #0A1812;
-		--navy: var(--bio);
-		--navy-deep: var(--bio-deep);
-		--gold: var(--lime);
-		--bg: var(--bio);
-		--line: var(--rule);
-
-		--tint-weak: rgba(200, 255, 0, 0.04);
-		--tint: rgba(200, 255, 0, 0.1);
-		--tint-strong: rgba(200, 255, 0, 0.18);
-		--tint-border: rgba(200, 255, 0, 0.28);
-		--selection-bg: #C8FF00;
-		--selection-fg: #06110D;
-		--shadow: rgba(0, 0, 0, 0.45);
-
-		--btn-bg: var(--lime);
-		--btn-fg: var(--on-lime);
-		--btn-border: var(--bio-deep);
-		--btn-bg-hover: var(--lime-hover);
-	}
-}
-
-/*
- * Light theme — Toxic Violet on Soft Chrome.
- * Buttons: Soft Chrome text on Toxic Violet (high contrast, Amazon-style CTA weight).
- */
-html[data-theme="light"],
+:root,
+html,
+html[data-theme],
+html.theme-dark,
 html.theme-light {
 	color-scheme: light;
 
-	--bio: #F1F2F7;           /* Soft Chrome — page backgrounds */
-	--bio-deep: #E4E6ED;      /* slightly cooler / darker chrome */
-	--bio-raised: #D8DAE4;    /* raised / panel chrome */
-	--lime: #4B0082;          /* Toxic Violet — text, accents, icons (token name kept) */
-	--lime-hover: #34005B;    /* deeper violet hover */
-	--on-lime: #F1F2F7;       /* chrome on violet buttons */
+	--blue: #2F6FED;
+	--blue-hover: #2458C7;
+	--blue-deep: #1A4BB8;
+	--blue-soft: #D6E6FB;
+	--blue-soft-icon: #8BB4F0;
+	--page: #FFFFFF;
+	--ink: #1A1F2E;
+	--ink-muted: #5A6478;
 
-	/* Header: Toxic Violet with Soft Chrome text/icons. */
-	--header-bg: #4B0082;
-	--header-fg: #F1F2F7;
-	--header-muted: #E0D6EB;
-	--header-accent: #F1F2F7;
-	--header-border: rgba(241, 242, 247, 0.42);
-	--header-panel-bg: #4B0082;
-	--header-control-bg: rgba(241, 242, 247, 0.12);
-	--header-control-hover: rgba(241, 242, 247, 0.22);
+	/* Legacy aliases → blue/white */
+	--bio: var(--page);
+	--bio-deep: #EEF2F8;
+	--bio-raised: #E4EAF4;
+	--lime: var(--blue);
+	--lime-hover: var(--blue-hover);
+	--on-lime: #FFFFFF;
 
-	--ink: #4B0082;
-	--muted: #6B4A8F;
-	--accent: #4B0082;
-	--card: #E4E6ED;
-	--rule: rgba(75, 0, 130, 0.18);
-	--cream: #E4E6ED;
-	--cream-ink: #36005D;
-	--body: #36005D;
-	--surface: #D8DAE4;
-	--surface-deep: #CCCEDA;
-	--navy: var(--bio);
-	--navy-deep: var(--bio-deep);
-	--gold: var(--lime);
-	--bg: var(--bio);
+	--header-bg: var(--blue);
+	--header-fg: #FFFFFF;
+	--header-muted: rgba(255, 255, 255, 0.85);
+	--header-accent: #FFFFFF;
+	--header-border: rgba(255, 255, 255, 0.35);
+	--header-panel-bg: var(--blue);
+	--header-control-bg: rgba(255, 255, 255, 0.14);
+	--header-control-hover: rgba(255, 255, 255, 0.24);
+
+	--ink: #1A1F2E;
+	--muted: var(--ink-muted);
+	--accent: var(--blue);
+	--card: #F5F8FC;
+	--rule: rgba(47, 111, 237, 0.16);
+	--cream: #F5F8FC;
+	--cream-ink: #1A1F2E;
+	--body: #2A3142;
+	--surface: #EEF2F8;
+	--surface-deep: #E4EAF4;
+	--navy: var(--blue);
+	--navy-deep: var(--blue-deep);
+	--gold: var(--blue);
+	--bg: var(--page);
 	--line: var(--rule);
 
-	--tint-weak: rgba(75, 0, 130, 0.06);
-	--tint: rgba(75, 0, 130, 0.1);
-	--tint-strong: rgba(75, 0, 130, 0.16);
-	--tint-border: rgba(75, 0, 130, 0.28);
-	--selection-bg: #4B0082;
-	--selection-fg: #F1F2F7;
-	--shadow: rgba(75, 0, 130, 0.18);
+	--tint-weak: rgba(47, 111, 237, 0.05);
+	--tint: rgba(47, 111, 237, 0.1);
+	--tint-strong: rgba(47, 111, 237, 0.18);
+	--tint-border: rgba(47, 111, 237, 0.28);
+	--selection-bg: var(--blue);
+	--selection-fg: #FFFFFF;
+	--shadow: rgba(26, 31, 46, 0.18);
 
-	--btn-bg: var(--lime);
-	--btn-fg: var(--on-lime);
-	--btn-border: var(--lime-hover);
-	--btn-bg-hover: var(--lime-hover);
+	--btn-bg: var(--blue);
+	--btn-fg: #FFFFFF;
+	--btn-border: var(--blue-deep);
+	--btn-bg-hover: var(--blue-hover);
 }
 
-/* System light preference when no explicit dark theme */
-@media (prefers-color-scheme: light) {
-	html:not([data-theme="dark"]) {
-		color-scheme: light;
-
-		--bio: #F1F2F7;
-		--bio-deep: #E4E6ED;
-		--bio-raised: #D8DAE4;
-		--lime: #4B0082;
-		--lime-hover: #34005B;
-		--on-lime: #F1F2F7;
-
-		--header-bg: #4B0082;
-		--header-fg: #F1F2F7;
-		--header-muted: #E0D6EB;
-		--header-accent: #F1F2F7;
-		--header-border: rgba(241, 242, 247, 0.42);
-		--header-panel-bg: #4B0082;
-		--header-control-bg: rgba(241, 242, 247, 0.12);
-		--header-control-hover: rgba(241, 242, 247, 0.22);
-
-		--ink: #4B0082;
-		--muted: #6B4A8F;
-		--accent: #4B0082;
-		--card: #E4E6ED;
-		--rule: rgba(75, 0, 130, 0.18);
-		--cream: #E4E6ED;
-		--cream-ink: #36005D;
-		--body: #36005D;
-		--surface: #D8DAE4;
-		--surface-deep: #CCCEDA;
-		--navy: var(--bio);
-		--navy-deep: var(--bio-deep);
-		--gold: var(--lime);
-		--bg: var(--bio);
-		--line: var(--rule);
-
-		--tint-weak: rgba(75, 0, 130, 0.06);
-		--tint: rgba(75, 0, 130, 0.1);
-		--tint-strong: rgba(75, 0, 130, 0.16);
-		--tint-border: rgba(75, 0, 130, 0.28);
-		--selection-bg: #4B0082;
-		--selection-fg: #F1F2F7;
-		--shadow: rgba(75, 0, 130, 0.18);
-
-		--btn-bg: var(--lime);
-		--btn-fg: var(--on-lime);
-		--btn-border: var(--lime-hover);
-		--btn-bg-hover: var(--lime-hover);
-	}
-}
-
-/* Homepage header SVGs use inline colors; keep them readable on each header. */
-html[data-theme="dark"] .topAction [style*="stroke:#C8FF00"],
-html[data-theme="dark"] .topAction [style*="stroke:#06110D"] {
-	stroke: var(--header-fg, #06110D) !important;
-}
-html[data-theme="dark"] .topAction [style*="fill:#C8FF00"],
-html[data-theme="dark"] .topAction [style*="fill:#06110D"],
-html[data-theme="dark"] .topAction [fill="#06110D"] {
-	fill: var(--header-fg, #06110D) !important;
-}
-html[data-theme="light"] .topAction [style*="stroke:#C8FF00"],
-html[data-theme="light"] .topAction [style*="stroke:#06110D"] {
-	stroke: var(--header-fg, #F1F2F7) !important;
-}
-html[data-theme="light"] .topAction [style*="fill:#C8FF00"],
-html[data-theme="light"] .topAction [style*="fill:#06110D"],
-html[data-theme="light"] .topAction [fill="#06110D"] {
-	fill: var(--header-fg, #F1F2F7) !important;
+::selection {
+	background: var(--selection-bg);
+	color: var(--selection-fg);
 }
