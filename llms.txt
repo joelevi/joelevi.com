@@ -10,7 +10,7 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 
 - [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, QRZ (KF7NWA), résumé, Books, Mesh / GitHub, vCard, and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
-- [Books](https://www.joelevi.com/books/): Two sections — **Books Joe's Written** (Miles the Muskrat series by Joe Levi, with Amazon buy links and covers) and **Books Joe's Read** (currently reading + recently read bookshelf with Bootstrap-style cards, hosted covers, and Amazon Associate “Buy on Amazon” links). Former `/library/` redirects here.
+- [Books](https://www.joelevi.com/books/): Two sections — **Books Joe has Written** (Miles the Muskrat series by Joe Levi, with Amazon buy links and covers) and **Books Joe has Read** (currently reading + recently read bookshelf with Bootstrap-style cards, hosted covers, and Amazon Associate “Buy on Amazon” links). Former `/library/` redirects here.
 
 ## Contact
 
