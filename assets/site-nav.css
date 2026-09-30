@@ -1,8 +1,11 @@
 /* Shared site hamburger nav — blue header tokens (no theme toggle). */
 
-.wrap,
+.wrap {
+	background-color: transparent;
+}
+
 .vcard {
-	background-color: var(--bio, #FFFFFF);
+	background-color: var(--page, #FFFFFF);
 }
 
 .site-nav {
@@ -14,21 +17,31 @@
 	--sn-panel-bg: var(--header-panel-bg, #2F6FED);
 	--sn-control-bg: var(--header-control-bg, rgba(255, 255, 255, 0.14));
 	--sn-control-hover: var(--header-control-hover, rgba(255, 255, 255, 0.24));
-	--sn-cream: var(--cream, #F5F8FC);
-	--sn-gold: var(--header-accent, #FFFFFF);
-	--sn-navy: var(--navy, #2F6FED);
-	--sn-bio: var(--bio, #FFFFFF);
-	--sn-lime: var(--lime, #2F6FED);
+	--sn-accent-strong: var(--header-accent, #FFFFFF);
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
 	margin-bottom: 0;
+	padding: 0.85rem 1.15rem;
 	background: var(--sn-bg);
+	border-radius: 1rem 1rem 0 0;
 	color: var(--sn-fg);
 	border-bottom: none;
 	z-index: 40;
+}
+
+.hresume > .site-nav,
+.library > .site-nav {
+	margin-right: -1.5rem;
+	margin-left: -1.5rem;
+	margin-bottom: 1.75rem;
+}
+
+.hresume .site-nav__home,
+.library .site-nav__home {
+	color: var(--sn-fg);
 }
 
 .site-nav__home {
@@ -36,17 +49,17 @@
 	font-size: 1.15rem;
 	letter-spacing: 0.04em;
 	color: var(--sn-fg);
-	border: 1px solid var(--sn-border);
-	padding: 0.4rem 0.85rem;
+	border: 0;
+	padding: 0.4rem 0.25rem;
 	border-radius: 999px;
-	background: var(--sn-control-bg);
+	background: transparent;
 	text-decoration: none;
 }
 
 .site-nav__home:hover {
-	background: var(--sn-control-hover);
+	background: transparent;
 	text-decoration: none;
-	border-color: var(--sn-gold);
+	border-color: transparent;
 }
 
 .site-nav__trailing {
@@ -64,9 +77,9 @@
 	width: 2.5rem;
 	height: 2.5rem;
 	padding: 0;
-	border: 1px solid var(--sn-border);
+	border: 0;
 	border-radius: 0.5rem;
-	background: var(--sn-control-bg);
+	background: transparent;
 	color: var(--sn-fg);
 	cursor: pointer;
 	flex-shrink: 0;
@@ -74,9 +87,10 @@
 
 .site-nav__toggle:hover,
 .site-nav__toggle:focus-visible {
-	border-color: var(--sn-gold);
+	border-color: transparent;
+	background: transparent;
 	outline: 2px solid transparent;
-	box-shadow: 0 0 0 2px var(--sn-gold);
+	box-shadow: 0 0 0 2px var(--sn-accent-strong);
 }
 
 /* Theme toggle removed — hide if leftover markup exists */
@@ -174,7 +188,7 @@
 	background: var(--sn-control-hover);
 	color: var(--sn-accent);
 	font-weight: 600;
-	box-shadow: inset 3px 0 0 var(--sn-gold);
+	box-shadow: inset 3px 0 0 var(--sn-accent-strong);
 }
 
 .site-nav__divider {
@@ -182,6 +196,14 @@
 	margin: 0.35rem 0.5rem;
 	background: var(--sn-border);
 	border: 0;
+}
+
+@media (max-width: 560px) {
+	.hresume > .site-nav,
+	.library > .site-nav {
+		margin-right: -1rem;
+		margin-left: -1rem;
+	}
 }
 
 @media print {

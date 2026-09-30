@@ -82,8 +82,8 @@
 			max-width: min(18rem, 70vw);
 			padding: 0.35rem 0.55rem;
 			border-radius: 0.35rem;
-			background: var(--navy-deep);
-			color: var(--lime);
+			background: var(--blue-deep);
+			color: var(--blue);
 			font-size: 0.82rem;
 			font-weight: 500;
 			letter-spacing: 0.01em;
@@ -92,15 +92,15 @@
 			white-space: normal;
 			pointer-events: none;
 		}
-		abbr[title]:focus { outline: 2px solid var(--lime); outline-offset: 2px; }
-		html { background: var(--navy-deep); }
+		abbr[title]:focus { outline: 2px solid var(--blue); outline-offset: 2px; }
+		html { background: var(--surface); }
 		body {
 			margin: 0;
 			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 			font-size: 1rem;
 			line-height: 1.55;
 			color: var(--ink);
-			background: linear-gradient(180deg, var(--bio) 0%, var(--bio-deep) 40%, var(--bio-deep) 100%);
+			background: var(--surface);
 			min-height: 100vh;
 		}
 		a { color: var(--accent); text-decoration: none; }
@@ -110,23 +110,23 @@
 			margin: 0 auto;
 			padding: 1.25rem 1.25rem 3rem;
 		}
-		/* Dark BIO-raised card on BIO gradient */
+		/* White page shell on the shared blue/off-white palette */
 		.hresume {
-			background: var(--cream);
-			color: var(--cream-ink);
+			background: var(--page);
+			color: var(--ink);
 			border: 1px solid var(--rule);
 			border-radius: 1rem;
-			padding: 1.75rem 1.5rem 2rem;
-			box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
 		}
-		.hresume a { color: var(--lime); }
+		.hresume a { color: var(--blue); }
 		h1 {
 			font-family: Gruppo, sans-serif;
 			font-size: clamp(4rem, 10vw, 5.5rem);
 			font-weight: 400;
 			letter-spacing: 0.03em;
 			margin: 0 0 0.35rem;
-			color: var(--lime);
+			color: var(--blue);
 		}
 		h2 {
 			font-family: Gruppo, sans-serif;
@@ -137,17 +137,17 @@
 			margin: 2rem 0 0.85rem;
 			padding-bottom: 0.35rem;
 			border-bottom: 1px solid var(--rule);
-			color: var(--lime);
+			color: var(--blue);
 		}
 		h3 {
 			font-size: 1.05rem;
 			font-weight: 600;
 			margin: 0 0 0.2rem;
-			color: var(--lime);
+			color: var(--blue);
 		}
 		.summary {
 			font-style: italic;
-			color: var(--muted);
+			color: var(--ink-muted);
 			margin: 0.5rem 0 1rem;
 			max-width: 40rem;
 		}
@@ -155,7 +155,7 @@
 			font-style: normal;
 			display: grid;
 			gap: 0.45rem;
-			color: var(--muted);
+			color: var(--ink-muted);
 			font-size: 0.95rem;
 		}
 		.contact .fn { display: none; }
@@ -169,11 +169,11 @@
 			height: 1.1rem;
 			flex: 0 0 auto;
 			margin-top: 0.2rem;
-			color: var(--lime);
+			color: var(--blue);
 			overflow: visible;
 		}
 		.contact-text { line-height: 1.45; }
-		.meta-line { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
+		.meta-line { color: var(--ink-muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
 		.experience, .education {
 			margin: 0 0 1.35rem;
 			padding-bottom: 1.15rem;
@@ -185,7 +185,7 @@
 			margin: 0.35rem 0 0;
 			padding-left: 1.2rem;
 		}
-		ul.description li, .skills li { margin: 0.25rem 0; color: var(--cream-ink); }
+		ul.description li, .skills li { margin: 0.25rem 0; color: var(--ink); }
 		.skill {
 			display: inline-block;
 			margin: 0.2rem 0.35rem 0.2rem 0;
@@ -193,40 +193,40 @@
 			border-radius: 999px;
 			background: var(--tint);
 			border: 1px solid var(--tint-border);
-			color: var(--lime);
+			color: var(--blue);
 			font-size: 0.88rem;
 			font-weight: 600;
 			text-decoration: none;
 		}
-		.skill:hover { background: var(--tint-strong); text-decoration: none; color: var(--lime); }
+		.skill:hover { background: var(--tint-strong); text-decoration: none; color: var(--blue); }
 		.skill-group { margin: 0 0 1rem; }
-		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--lime); }
+		.skill-group h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--blue); }
 		blockquote.testimonial {
 			margin: 0.75rem 0;
 			padding: 0.75rem 1rem;
-			border-left: 3px solid var(--lime);
+			border-left: 3px solid var(--blue);
 			background: var(--surface-deep);
 			border-radius: 0 0.5rem 0.5rem 0;
-			color: var(--cream-ink);
+			color: var(--ink);
 			font-size: 0.95rem;
 		}
 		blockquote.testimonial cite {
 			display: block;
 			margin-top: 0.5rem;
 			font-style: normal;
-			color: var(--muted);
+			color: var(--ink-muted);
 			font-size: 0.85rem;
 		}
 		.refs ul { margin: 0.35rem 0 0; padding-left: 1.2rem; }
-		.refs li { color: var(--cream-ink); }
+		.refs li { color: var(--ink); }
 		footer.page-foot {
 			margin-top: 1.5rem;
 			text-align: center;
-			color: var(--muted);
+			color: var(--ink-muted);
 			font-size: 0.85rem;
 		}
 		@media (max-width: 560px) {
-			.hresume { padding: 1.25rem 1rem 1.5rem; border-radius: 0.75rem; }
+			.hresume { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
 			.wrap { padding: 1rem 0.85rem 2.5rem; }
 		}
 		@media print {
@@ -257,7 +257,7 @@
 
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
-		a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 	</style>
 
 	<script type="application/ld+json">
@@ -383,25 +383,26 @@
 </head>
 <body>
 	<div class="wrap">
-		<nav class="site-nav" aria-label="Site">
-			<a class="site-nav__home" href="/">← JoeLevi.com</a>
-			<div class="site-nav__trailing">
-				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
-					<span class="site-nav__burger" aria-hidden="true"></span>
-				</button>
-</div>
-			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
-				<ul class="site-nav__list">
-				<li><a href="/">Home</a></li>
-				<li><a href="/resume/" aria-current="page">Résumé</a></li>
-				<li><a href="/books/">Books</a></li>
-<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
-				<li><button type="button" class="site-nav__action" data-site-nav-print>Print</button></li>
-				</ul>
-			</div>
-		</nav>
 
 		<article class="hresume">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+	</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+					<li><a href="/">Home</a></li>
+					<li><a href="/resume/" aria-current="page">Résumé</a></li>
+					<li><a href="/books/">Books</a></li>
+	<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+					<li><button type="button" class="site-nav__action" data-site-nav-print>Print</button></li>
+					</ul>
+				</div>
+			</nav>
+
 			<header>
 				<h1 class="fn">Joe Levi</h1>
 				<p class="summary title">a cross-discipline, multi-dimensional problem solver who thinks outside the box – but within reality™</p>
