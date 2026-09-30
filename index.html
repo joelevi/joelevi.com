@@ -168,22 +168,25 @@
 			font-weight: 400;
 			line-height: 1.45;
 			-webkit-font-smoothing: antialiased;
-			overflow-x: clip; /* 100vw header bleed must not create a scrollbar */
 		}
 		a { color: inherit; text-decoration: none; }
 		button { font: inherit; }
 
 		.page {
+			/* Side gutters like resume/books .wrap — white page bg shows around the card */
 			min-height: 100vh;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			background: transparent;
+			background: #FFFFFF;
+			padding: 1rem 0.85rem 2.5rem;
+			box-sizing: border-box;
 		}
 
 		.card {
+			/* Rounded white shell (match resume/books .hresume/.library) */
 			--card-gutter: 1.35rem;
-			--card-radius: 0px;
+			--card-radius: 0.75rem;
 			width: 100%;
 			min-width: 0;
 			max-width: 26rem;
@@ -191,19 +194,19 @@
 			padding-inline: var(--card-gutter);
 			background: #fff;
 			position: relative;
-			overflow: visible; /* header must break out to the viewport edges */
+			border: 1px solid rgba(47, 111, 237, 0.16);
 			border-radius: var(--card-radius);
+			box-shadow: 0 12px 40px rgba(26,31,46,0.12);
 		}
 
 		/* —— Header banner —— */
 		.card-header {
-			/* Full-bleed to the SCREEN/viewport edges (not merely the card).
-			   Card stays max-width-centered/inset; mosaic spans 100vw. */
-			width: 100vw;
+			/* Bleed only to the card's outer edges (cancel .card padding-inline).
+			   Mosaic stays inside the rounded card shell (resume/books pattern). */
+			width: calc(100% + (2 * var(--card-gutter)));
 			max-width: none;
-			margin-left: calc(50% - 50vw);
-			margin-right: 0;
-			border-radius: 0;
+			margin-inline: calc(-1 * var(--card-gutter));
+			border-radius: var(--card-radius) var(--card-radius) 0 0;
 			position: relative;
 			height: 10.5rem;
 			padding: 1rem 1.15rem;
@@ -224,7 +227,7 @@
 			justify-content: flex-end;
 			padding: 1rem 1.15rem;
 			background: transparent;
-			border-radius: 0;
+			border-radius: var(--card-radius) var(--card-radius) 0 0;
 		}
 		.card-header > .site-nav .site-nav__panel {
 			top: calc(100% - 0.65rem);
@@ -540,17 +543,14 @@
 			border-color: #2458C7;
 		}
 
-		@media (min-width: 480px) {
-			body, .page { background: transparent; }
+		@media (min-width: 560px) {
+			.page {
+				padding: 1.25rem 1.25rem 3rem;
+			}
 			.card {
 				--card-radius: 1.25rem;
-				margin: 1.5rem auto 0;
+				margin: 0.25rem auto 0;
 				border-radius: var(--card-radius);
-				box-shadow: 0 12px 40px rgba(26,31,46,0.12);
-				overflow: visible; /* keep mosaic viewport bleed on Fold/desktop */
-			}
-			.card-body {
-				border-radius: 0 0 var(--card-radius) var(--card-radius);
 			}
 			.site-footer {
 				padding-top: 1.15rem;
