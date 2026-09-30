@@ -486,7 +486,7 @@
 		.site-footer a { color: #2F6FED; text-decoration: underline; text-underline-offset: 2px; }
 		.site-footer p { margin: 0; }
 
-		/* Modal (share / QR / key) */
+		/* QR modal */
 		.modal {
 			position: fixed;
 			inset: 0;
@@ -566,6 +566,15 @@
 		}
 		.modal-actions a:hover,
 		.modal-actions button:hover { background: #EEF4FF; }
+		.modal-actions .cta--fill {
+			background: #2F6FED;
+			color: #fff;
+			border-color: #2F6FED;
+		}
+		.modal-actions .cta--fill:hover {
+			background: #2458C7;
+			border-color: #2458C7;
+		}
 
 		@media (min-width: 480px) {
 			body, .page { background: transparent; }
@@ -590,10 +599,6 @@
 			<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.75" fill="currentColor" stroke="none"/></svg>
 		</button>
 		<div class="menu-panel" id="menuPanel" hidden role="menu">
-			<button type="button" id="menuShare" role="menuitem">
-				<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-				Share card
-			</button>
 			<button type="button" id="menuQR" role="menuitem">
 				<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>
 				Show QR code
@@ -680,18 +685,16 @@
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
 	<div class="modal__panel">
 		<button type="button" class="modal__close" id="modalClose" aria-label="Close">&times;</button>
-		<div id="shareView">
-			<h3 id="modalTitle">Share this card</h3>
-			<p>Send Joe’s digital business card to another device.</p>
-			<div class="modal-actions">
-				<button type="button" id="copyURL">Copy URL</button>
-				<button type="button" id="nativeShare">Share…</button>
-			</div>
-		</div>
-		<div id="qrView" hidden>
-			<div id="qr"></div>
-			<h3>Scan the QR code</h3>
+		<div id="qrView">
+			<h3 id="modalTitle">Scan the QR code</h3>
+			<div id="qr" role="img" aria-label="QR code for this page"></div>
 			<p>to open this card on another device</p>
+			<div class="modal-actions">
+				<button type="button" class="cta cta--fill" id="copyURL">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="10" height="10" rx="1.5"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>
+					<span id="copyLabel">Copy Link</span>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
@@ -706,8 +709,6 @@
 	var menuBtn = document.getElementById("menuBtn");
 	var menuPanel = document.getElementById("menuPanel");
 	var modal = document.getElementById("modal");
-	var shareView = document.getElementById("shareView");
-	var qrView = document.getElementById("qrView");
 	var qrEl = document.getElementById("qr");
 	var qrBuilt = false;
 
@@ -733,12 +734,10 @@
 		}
 	});
 
-	function openModal(mode) {
-		shareView.hidden = mode !== "share";
-		qrView.hidden = mode !== "qr";
+	function openModal() {
 		modal.hidden = false;
 		requestAnimationFrame(function () { modal.classList.add("is-open"); });
-		if (mode === "qr") buildQR();
+		buildQR();
 	}
 	function closeModal() {
 		modal.classList.remove("is-open");
@@ -751,56 +750,35 @@
 
 	function buildQR() {
 		if (qrBuilt || typeof QRCode === "undefined") return;
-		qrEl.innerHTML = "";
-		new QRCode(qrEl, {
-			text: window.location.href.split("#")[0],
+		qrEl.innerHTML = new QRCode({
+			content: window.location.href.split("#")[0],
 			width: 180,
 			height: 180,
-			correctLevel: QRCode.CorrectLevel.M
-		});
+			padding: 4,
+			color: "#1A1F2E",
+			background: "#FFFFFF",
+			ecl: "M"
+		}).svg();
 		qrBuilt = true;
 	}
 
-	function openShare() {
-		closeMenu();
-		if (navigator.share) {
-			navigator.share({
-				title: "Joe Levi",
-				text: "Joe Levi’s digital business card",
-				url: window.location.href.split("#")[0]
-			}).catch(function () { openModal("share"); });
-		} else {
-			openModal("share");
-		}
-	}
-
-	document.getElementById("menuShare").addEventListener("click", openShare);
 	document.getElementById("menuQR").addEventListener("click", function () {
 		closeMenu();
-		openModal("qr");
-	});
-	document.getElementById("nativeShare").addEventListener("click", function () {
-		if (navigator.share) {
-			navigator.share({
-				title: "Joe Levi",
-				text: "Joe Levi’s digital business card",
-				url: window.location.href.split("#")[0]
-			}).catch(function () {});
-		}
+		openModal();
 	});
 	document.getElementById("copyURL").addEventListener("click", function () {
 		var url = window.location.href.split("#")[0];
-		var btn = this;
+		var label = document.getElementById("copyLabel");
 		function done() {
-			btn.textContent = "Copied!";
-			setTimeout(function () { btn.textContent = "Copy URL"; }, 1600);
+			label.textContent = "Copied!";
+			setTimeout(function () { label.textContent = "Copy Link"; }, 1600);
 		}
 		if (navigator.clipboard && navigator.clipboard.writeText) {
 			navigator.clipboard.writeText(url).then(done).catch(function () {
-				window.prompt("Copy URL", url);
+				window.prompt("Copy Link", url);
 			});
 		} else {
-			window.prompt("Copy URL", url);
+			window.prompt("Copy Link", url);
 		}
 	});
 })();
