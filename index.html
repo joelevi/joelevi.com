@@ -179,7 +179,9 @@
 		}
 
 		.card {
+			--card-gutter: 1.35rem;
 			width: 100%;
+			min-width: 0;
 			max-width: 26rem;
 			margin: 0 auto;
 			background: #fff;
@@ -189,9 +191,13 @@
 
 		/* —— Header banner —— */
 		.card-header {
+			/* Bleed past the body gutter so the pattern reaches both card edges.
+			   The card's overflow clips it to the card's own top radius. */
+			width: calc(100% + (2 * var(--card-gutter)));
+			margin-inline: calc(-1 * var(--card-gutter));
 			position: relative;
 			height: 10.5rem;
-			padding: 1rem 1.15rem;
+			padding: 1rem calc(1.15rem + var(--card-gutter));
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-start;
@@ -273,7 +279,7 @@
 		.card-body {
 			position: relative;
 			display: flow-root; /* contain avatar negative margin; keep white below header */
-			padding: 0 1.35rem 1.75rem;
+			padding: 0 var(--card-gutter) 1.75rem;
 			text-align: left;
 			background: #fff;
 		}
