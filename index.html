@@ -694,10 +694,16 @@
 		if (e.target === modal) closeModal();
 	});
 
+	function cardURL() {
+		var url = new URL(window.location.href);
+		url.search = "";
+		url.hash = "";
+		return url.href;
+	}
 	function buildQR() {
 		if (qrBuilt || typeof QRCode === "undefined") return;
 		qrEl.innerHTML = new QRCode({
-			content: window.location.href.split("#")[0],
+			content: cardURL(),
 			width: 180,
 			height: 180,
 			padding: 4,
@@ -720,7 +726,7 @@
 		});
 	}
 	document.getElementById("copyURL").addEventListener("click", function () {
-		var url = window.location.href.split("#")[0];
+		var url = cardURL();
 		var label = document.getElementById("copyLabel");
 		function done() {
 			label.textContent = "Copied!";
