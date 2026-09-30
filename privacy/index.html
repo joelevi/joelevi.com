@@ -110,21 +110,25 @@ a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
 </head>
 <body>
 	<div class="wrap">
-		<nav class="site-nav" aria-label="Site">
-			<a class="site-nav__home" href="/">← JoeLevi.com</a>
-			<div class="site-nav__trailing">
-				<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
-					<span class="site-nav__burger" aria-hidden="true"></span>
-				</button>
-</div>
-			<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
-				<ul class="site-nav__list">
-				<li><a href="/">Home</a></li>
-				<li><a href="/resume/">Résumé</a></li>
-				<li><a href="/books/">Books</a></li>
-</ul>
-			</div>
-		</nav>
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/resume/">Résumé</a></li>
+						<li><a href="/books/">Books</a></li>
+						<li><button type="button" class="site-nav__action" data-site-nav-print>Print</button></li>
+					</ul>
+				</div>
+			</nav>
 
 		<header>
 			<h1>Privacy Policy</h1>
