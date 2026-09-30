@@ -168,6 +168,7 @@
 			font-weight: 400;
 			line-height: 1.45;
 			-webkit-font-smoothing: antialiased;
+			overflow-x: clip; /* 100vw header bleed must not create a scrollbar */
 		}
 		a { color: inherit; text-decoration: none; }
 		button { font: inherit; }
@@ -190,18 +191,19 @@
 			padding-inline: var(--card-gutter);
 			background: #fff;
 			position: relative;
-			overflow: hidden;
+			overflow: visible; /* header must break out to the viewport edges */
 			border-radius: var(--card-radius);
 		}
 
 		/* —— Header banner —— */
 		.card-header {
-			/* Full-bleed to the card's outer edges: cancel .card padding-inline.
-			   Overflow on .card clips; top radius matches the card. */
-			width: calc(100% + (2 * var(--card-gutter)));
+			/* Full-bleed to the SCREEN/viewport edges (not merely the card).
+			   Card stays max-width-centered/inset; mosaic spans 100vw. */
+			width: 100vw;
 			max-width: none;
-			margin-inline: calc(-1 * var(--card-gutter));
-			border-radius: var(--card-radius) var(--card-radius) 0 0;
+			margin-left: calc(50% - 50vw);
+			margin-right: 0;
+			border-radius: 0;
 			position: relative;
 			height: 10.5rem;
 			padding: 1rem 1.15rem;
@@ -222,7 +224,7 @@
 			justify-content: flex-end;
 			padding: 1rem 1.15rem;
 			background: transparent;
-			border-radius: var(--card-radius) var(--card-radius) 0 0;
+			border-radius: 0;
 		}
 		.card-header > .site-nav .site-nav__panel {
 			top: calc(100% - 0.65rem);
@@ -545,7 +547,10 @@
 				margin: 1.5rem auto 0;
 				border-radius: var(--card-radius);
 				box-shadow: 0 12px 40px rgba(26,31,46,0.12);
-				overflow: hidden;
+				overflow: visible; /* keep mosaic viewport bleed on Fold/desktop */
+			}
+			.card-body {
+				border-radius: 0 0 var(--card-radius) var(--card-radius);
 			}
 			.site-footer {
 				padding-top: 1.15rem;
