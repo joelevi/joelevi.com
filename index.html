@@ -182,24 +182,29 @@
 
 		.card {
 			--card-gutter: 1.35rem;
+			--card-radius: 0px;
 			width: 100%;
 			min-width: 0;
 			max-width: 26rem;
 			margin: 0 auto;
+			padding-inline: var(--card-gutter);
 			background: #fff;
 			position: relative;
 			overflow: hidden;
+			border-radius: var(--card-radius);
 		}
 
 		/* —— Header banner —— */
 		.card-header {
-			/* Bleed past the body gutter so the pattern reaches both card edges.
-			   The card's overflow clips it to the card's own top radius. */
+			/* Full-bleed to the card's outer edges: cancel .card padding-inline.
+			   Overflow on .card clips; top radius matches the card. */
 			width: calc(100% + (2 * var(--card-gutter)));
+			max-width: none;
 			margin-inline: calc(-1 * var(--card-gutter));
+			border-radius: var(--card-radius) var(--card-radius) 0 0;
 			position: relative;
 			height: 10.5rem;
-			padding: 1rem calc(1.15rem + var(--card-gutter));
+			padding: 1rem 1.15rem;
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-start;
@@ -209,14 +214,15 @@
 				url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='220' viewBox='0 0 420 220' preserveAspectRatio='none'><polygon fill='%234A82F0' points='0,0 140,0 80,120 0,90'/><polygon fill='%231E5AD4' points='140,0 280,0 240,100 80,120'/><polygon fill='%235B9AFF' points='280,0 420,0 420,80 300,140 240,100'/><polygon fill='%232456C9' points='0,90 80,120 60,220 0,220'/><polygon fill='%233D7AF0' points='80,120 240,100 300,140 180,220 60,220'/><polygon fill='%231A4BB8' points='240,100 300,140 420,80 420,220 180,220'/></svg>");
 			background-size: cover;
 			background-position: center;
+			background-repeat: no-repeat;
 		}
 		.card-header > .site-nav {
 			position: absolute;
 			inset: 0 0 auto;
 			justify-content: flex-end;
-			padding: 1rem calc(1.15rem + var(--card-gutter));
+			padding: 1rem 1.15rem;
 			background: transparent;
-			border-radius: 0;
+			border-radius: var(--card-radius) var(--card-radius) 0 0;
 		}
 		.card-header > .site-nav .site-nav__panel {
 			top: calc(100% - 0.65rem);
@@ -229,7 +235,7 @@
 		.card-body {
 			position: relative;
 			display: flow-root; /* contain avatar negative margin; keep white below header */
-			padding: 0 var(--card-gutter) 1.75rem;
+			padding: 0 0 1.75rem; /* horizontal gutter comes from .card */
 			text-align: left;
 			background: #fff;
 		}
@@ -535,8 +541,9 @@
 		@media (min-width: 480px) {
 			body, .page { background: transparent; }
 			.card {
+				--card-radius: 1.25rem;
 				margin: 1.5rem auto 0;
-				border-radius: 1.25rem;
+				border-radius: var(--card-radius);
 				box-shadow: 0 12px 40px rgba(26,31,46,0.12);
 				overflow: hidden;
 			}
