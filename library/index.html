@@ -21,6 +21,21 @@
 	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
 	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
 	<title>Redirecting to Books — Joe Levi</title>
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
 	<script>location.replace("/books/");</script>
 </head>
 <body>
