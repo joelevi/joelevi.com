@@ -2,7 +2,7 @@
 
 > A cross-discipline, multi-dimensional problem solver who thinks outside the box — but within reality. Based in Utah, USA. Amateur radio callsign KF7NWA. Author of the Miles the Muskrat children's book series.
 
-Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResume): https://www.joelevi.com/resume/ · Books: https://www.joelevi.com/books/
+Canonical host: `www.joelevi.com` (apex redirects to www). Full résumé (hResume): https://www.joelevi.com/resume/ · Books: https://www.joelevi.com/books/ · Articles: https://www.joelevi.com/blog/
 
 ## Pages
 
@@ -10,6 +10,7 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 
 - [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, QRZ (KF7NWA), résumé, Books, Mesh / GitHub, vCard, and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
+- [Articles](https://www.joelevi.com/blog/): Joe’s articles and blog posts (coming soon); individual posts will live at /blog/<slug>/
 - [Books](https://www.joelevi.com/books/): Two sections — **Books Joe has Written** (Miles the Muskrat series by Joe Levi, with Amazon buy links and covers) and **Books Joe has Read** (currently reading + recently read bookshelf with Bootstrap-style cards, hosted covers, and Amazon Associate “Buy on Amazon” links). Former `/library/` redirects here.
 
 ## Contact
