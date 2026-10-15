@@ -100,3 +100,10 @@ Full archive: 2494 posts at https://www.joelevi.com/blog/ (also listed in sitema
 
 - Résumé includes named references and testimonials; recent reading titles link via Amazon Associates on the résumé page (see footer disclosure there)
 - Books page lists Miles titles Joe has written, plus the fuller reading bookshelf with affiliate CTAs and the same Amazon Associate disclosure. `/library/` redirects to `/books/`.
+
+## Articles feed and archive
+
+- [Articles (blog index)](https://www.joelevi.com/blog/): Joe's article archive, including his original posts and his Pocketnow articles (each Pocketnow post links to and canonicalizes to the original on pocketnow.com)
+- [RSS feed](https://www.joelevi.com/blog/feed.xml): the 50 most recent articles
+- [Browse by category](https://www.joelevi.com/blog/categories/)
+- [Browse by tag](https://www.joelevi.com/blog/tags/)

@@ -265,7 +265,8 @@
       ],
       "articleSection": [
         "Smart Home"
-      ]
+      ],
+      "image": "https://www.joelevi.com/photo.jpeg"
     },
     {
       "@type": "BreadcrumbList",
@@ -292,10 +293,28 @@
       ]
     },
     {
-      "@id": "https://www.joelevi.com/#person"
+      "@type": "Person",
+      "@id": "https://www.joelevi.com/#person",
+      "name": "Joe Levi",
+      "url": "https://www.joelevi.com/",
+      "image": "https://www.joelevi.com/photo.jpeg",
+      "sameAs": [
+        "https://www.linkedin.com/in/joelevi",
+        "https://github.com/joelevi",
+        "https://pocketnow.com/author/joelevi-pn/",
+        "https://www.qrz.com/db/KF7NWA",
+        "https://www.milesthemuskrat.com"
+      ]
     },
     {
-      "@id": "https://www.joelevi.com/#website"
+      "@type": "WebSite",
+      "@id": "https://www.joelevi.com/#website",
+      "url": "https://www.joelevi.com/",
+      "name": "Joe Levi",
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "inLanguage": "en-US"
     },
     {
       "@type": "Product",
@@ -326,6 +345,24 @@
 	</script>
 	<link rel="stylesheet" href="/assets/site-nav.css" />
 	<script defer src="/assets/site-nav.js"></script>
+	<!-- seo-extra -->
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="alternate" type="application/rss+xml" title="Joe Levi — Articles" href="https://www.joelevi.com/blog/feed.xml" />
+	<meta property="article:author" content="https://www.joelevi.com/" />
+	<meta property="article:section" content="Smart Home" />
+	<meta property="article:tag" content="Home Assistant" />
+	<meta property="article:tag" content="Hassio" />
+	<meta property="article:tag" content="Hass.io" />
+	<meta property="article:tag" content="Smarthome" />
+	<meta property="article:tag" content="Smart Home" />
+	<meta property="article:tag" content="ESXi" />
+	<meta property="article:tag" content="ESX" />
+	<meta property="article:tag" content="Hyper-V" />
+	<meta property="article:tag" content="Windows Server" />
+	<meta property="article:tag" content="Raspberry Pi" />
+	<!-- /seo-extra -->
 </head>
 <body>
 	<div class="wrap">

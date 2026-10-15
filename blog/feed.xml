@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Joe Levi — Articles</title>
+    <link>https://www.joelevi.com/blog/</link>
+    <atom:link href="https://www.joelevi.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Articles by Joe Levi on technology, Android, smart homes, liberty, finances, gardening, and more.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Aug 2021 05:09:00 +0000</lastBuildDate>
+    <item>
+      <title>Tales From a Computer Guy: "Something Exploded in There"</title>
+      <link>https://www.joelevi.com/blog/tales-from-a-computer-guy-something-exploded-in-there/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/tales-from-a-computer-guy-something-exploded-in-there/</guid>
+      <pubDate>Thu, 19 Aug 2021 05:09:00 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Humor</category>
+      <description>If you read my previous article, you know that I used to work for the now-defunct Totally Awesome Computers (a chain of local computer sales/repair shops in…</description>
+    </item>
+    <item>
+      <title>The Great Hack of 2020</title>
+      <link>https://www.joelevi.com/blog/the-great-hack-of-2020/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/the-great-hack-of-2020/</guid>
+      <pubDate>Tue, 15 Dec 2020 11:30:19 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Activism</category>
+      <description>SolarWinds is a company that offers server monitoring (among other things). It does so through a user with administrative access to servers. Many companies…</description>
+    </item>
+    <item>
+      <title>Regarding Texas' Petition to the Supreme Court concerning the 2020 Election</title>
+      <link>https://www.joelevi.com/blog/regarding-texas-petition-to-the-supreme-court-concerning-the-2020-election/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/regarding-texas-petition-to-the-supreme-court-concerning-the-2020-election/</guid>
+      <pubDate>Fri, 11 Dec 2020 12:23:25 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Regarding the election, and Texas' petition to the US Supreme Court regarding the handling of the elections in the States named in their complaint, here are a…</description>
+    </item>
+    <item>
+      <title>Tales From a Computer Guy: "It Won't Turn On!!!"</title>
+      <link>https://www.joelevi.com/blog/tales-from-a-computer-guy-it-wont-turn-on/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/tales-from-a-computer-guy-it-wont-turn-on/</guid>
+      <pubDate>Mon, 09 Nov 2020 20:53:06 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Humor</category>
+      <description>I used to work for the now-defunct Totally Awesome Computers . This was a chain of local computer sales/repair shops in Northern Utah. What made us stand out…</description>
+    </item>
+    <item>
+      <title>OPPO Watch Extended Review: A Fresh Look at the "Google Watch"</title>
+      <link>https://www.joelevi.com/blog/oppo-watch-review/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/oppo-watch-review/</guid>
+      <pubDate>Fri, 18 Sep 2020 11:00:55 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>Apple has just released its new wearable which incrementally improves on their prior version. But despite all the new bells-and-whistles, Apple Watch series 6…</description>
+    </item>
+    <item>
+      <title>Product Review: KeySmart Pro, Star Trek Edition - with built-in Tile</title>
+      <link>https://www.joelevi.com/blog/product-review-keysmart-pro-star-trek-edition-with-built-in-tile/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/product-review-keysmart-pro-star-trek-edition-with-built-in-tile/</guid>
+      <pubDate>Wed, 10 Jun 2020 17:50:24 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>Background Some years ago, I was browsing Kickstarter and came across what I thought was a pretty cool gadget which was beautiful in its simplicity: two…</description>
+    </item>
+    <item>
+      <title>Home Assistant, Part 2: Installation and Hardware Considerations</title>
+      <link>https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/</guid>
+      <pubDate>Wed, 11 Dec 2019 09:01:32 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Smart Home</category>
+      <description>First off, the official Home Assistant "Getting Started" page has a bunch of information that is VERY useful. The problem with options is that sometimes it…</description>
+    </item>
+    <item>
+      <title>Home Assistant, Part 1: Yet Another Home Assistant Convert</title>
+      <link>https://www.joelevi.com/blog/ha-1-yet-another-home-assistant-convert/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/ha-1-yet-another-home-assistant-convert/</guid>
+      <pubDate>Tue, 10 Dec 2019 15:21:25 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Smart Home</category>
+      <description>Welcome to yet another article about Home Assistant . First, what is Home Assistant ? Second, why do we need yet another series of articles about it? What is…</description>
+    </item>
+    <item>
+      <title>Everything you need to know about 5G: What it is, what it isn’t</title>
+      <link>https://www.joelevi.com/blog/everything-you-need-to-know-about-5g-what-it-is-what-it-isnt/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/everything-you-need-to-know-about-5g-what-it-is-what-it-isnt/</guid>
+      <pubDate>Tue, 17 Sep 2019 18:00:54 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>5G is all the rage with wireless carriers these days, but as with everything new, there’s a lot of confusion and misinformation circulating. Let’s dig into…</description>
+    </item>
+    <item>
+      <title>Let's do something meaningful to stop mass-murders</title>
+      <link>https://www.joelevi.com/blog/do-something-meaningful-to-stop-mass-murders/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/do-something-meaningful-to-stop-mass-murders/</guid>
+      <pubDate>Thu, 08 Aug 2019 10:58:52 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Self-Defense</category>
+      <description>Have you noticed that the vast majority of these mass-murders occur in locations which have "no guns allowed" policies? These policies turn every person…</description>
+    </item>
+    <item>
+      <title>AREDN Node in Cache Junction</title>
+      <link>https://www.joelevi.com/blog/aredn-node-in-cache-junction/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/aredn-node-in-cache-junction/</guid>
+      <pubDate>Tue, 11 Jun 2019 12:48:45 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>HAM Radio</category>
+      <description>I'm a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work. Before I jump into what…</description>
+    </item>
+    <item>
+      <title>Why am I “Republican”?</title>
+      <link>https://www.joelevi.com/blog/why-am-i-republican/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/why-am-i-republican/</guid>
+      <pubDate>Sat, 01 Jun 2019 09:00:40 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Words have meaning. I know that sounds obvious, but think about it for a moment: to effectively communicate, we all have to have a basic understanding of what…</description>
+    </item>
+    <item>
+      <title>State Central Committee of the Utah Republican Party</title>
+      <link>https://www.joelevi.com/blog/scc/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/scc/</guid>
+      <pubDate>Wed, 10 Apr 2019 14:12:38 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Cache County SCC Attendance, 2017-2019 I do not have data on those who left early (leaving your voice unheard), but here is the attendance data, taken…</description>
+    </item>
+    <item>
+      <title>What is WiFi 6? And why it’s so important to the future of your mobile lifestyle</title>
+      <link>https://www.joelevi.com/blog/what-is-wifi-6/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/what-is-wifi-6/</guid>
+      <pubDate>Wed, 20 Feb 2019 11:00:43 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Wi-Fi (which is short for “Wireless Fidelity”) is on the brink of a major update: 802.11ax, also known as “WiFi 6”. For devices which include the new standard…</description>
+    </item>
+    <item>
+      <title>Our dog ate my new phone!</title>
+      <link>https://www.joelevi.com/blog/our-dog-ate-my-new-phone/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/our-dog-ate-my-new-phone/</guid>
+      <pubDate>Tue, 29 Jan 2019 15:02:17 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Humor</category>
+      <description>My daughter's phone finally kicked the bucket. She, being a vibrant teenager, had more "need" of a phone than her frumpy ol' dad. Being the nice guy that I…</description>
+    </item>
+    <item>
+      <title>Life's not so Good with our LG Dishwasher</title>
+      <link>https://www.joelevi.com/blog/lifes-not-so-good-with-our-lg-dishwasher/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/lifes-not-so-good-with-our-lg-dishwasher/</guid>
+      <pubDate>Wed, 29 Aug 2018 12:18:17 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>Updated August 2020! TL/dr I'd advise that you DO NOT BUY this or any LG appliance. Don't by any LG products until you know how this turns out , and then ONLY…</description>
+    </item>
+    <item>
+      <title>Choetech 50W 6-Port Desktop USB Charger (Product Review)</title>
+      <link>https://www.joelevi.com/blog/choetech-50w-6-port-desktop-usb-charger-product-review/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/choetech-50w-6-port-desktop-usb-charger-product-review/</guid>
+      <pubDate>Thu, 16 Aug 2018 14:32:55 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>For better or worse, most gadgets these days are charged via USB. Most use standard, A-Type connectors on the supply-side, but the load-side can vary widely…</description>
+    </item>
+    <item>
+      <title>Being Offended vs. Taking Offense</title>
+      <link>https://www.joelevi.com/blog/being-offended-vs-taking-offense/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/being-offended-vs-taking-offense/</guid>
+      <pubDate>Mon, 07 May 2018 10:56:58 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Definitions</category>
+      <description>of·fend·ed əˈfendəd/ adjective resentful or annoyed, typically as a result of a perceived insult. Whether its a flag, a religion, a dress, a political party…</description>
+    </item>
+    <item>
+      <title>Part 1: The Problem with Utah Politics</title>
+      <link>https://www.joelevi.com/blog/problem-with-utah-politics/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/problem-with-utah-politics/</guid>
+      <pubDate>Tue, 20 Mar 2018 14:05:39 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Politics: Poly, meaning many; Ticks, blood sucking bugs. Chapter 1: The Background I've always hated politics. In high school, one of my teachers offered an…</description>
+    </item>
+    <item>
+      <title>Gun Friends: Support Amazon March 1st, 2018!</title>
+      <link>https://www.joelevi.com/blog/gun-friends-support-amazon-march-1st-2018/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/gun-friends-support-amazon-march-1st-2018/</guid>
+      <pubDate>Wed, 28 Feb 2018 12:34:36 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Self-Defense</category>
+      <description>The Leftists have called for a boycott of Amazon because of their relationship with the National Rifle Association. Let's counter that boycott by buying…</description>
+    </item>
+    <item>
+      <title>URIs: The Anatomy of a Web Address</title>
+      <link>https://www.joelevi.com/blog/anatomy-web-address/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/anatomy-web-address/</guid>
+      <pubDate>Wed, 24 Jan 2018 21:49:51 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>Background We often take for granted the ease at which we can retrieve "stuff" over the Internet. Recently, at work, I was asked what sounded like an easy…</description>
+    </item>
+    <item>
+      <title>Finally, a Successfully UTGOP SCC Meeting!</title>
+      <link>https://www.joelevi.com/blog/finally-successfully-utgop-scc-meeting/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/finally-successfully-utgop-scc-meeting/</guid>
+      <pubDate>Tue, 19 Dec 2017 13:36:28 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>I got involved in the Utah Republican Party because I didn't like what I saw going on in Washington, D.C, and even in our own State. I felt like, despite my…</description>
+    </item>
+    <item>
+      <title>BREAKING: UTGOP Coup Happening NOW (video)</title>
+      <link>https://www.joelevi.com/blog/utgop-coup/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/utgop-coup/</guid>
+      <pubDate>Fri, 15 Dec 2017 14:50:53 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Heads UP It looks like there is a coup happening RIGHT NOW in the Utah Republican Party!! Why doesn't Chairman Anderson want the SCC to meet and resolve the…</description>
+    </item>
+    <item>
+      <title>My GEICO Horror Story: It feels like GEICO is punishing me for being the victim</title>
+      <link>https://www.joelevi.com/blog/geico-house-hits-car-part-2/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/geico-house-hits-car-part-2/</guid>
+      <pubDate>Thu, 21 Sep 2017 10:22:53 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>Never trust a talking lizard trying to sell you insurance. To recap, while taking my wife on a date, parts from a tiny house being towed hit my brand new car…</description>
+    </item>
+    <item>
+      <title>The Republic is dead. Long live the Republic!</title>
+      <link>https://www.joelevi.com/blog/republic-dead-long-live-republic/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/republic-dead-long-live-republic/</guid>
+      <pubDate>Wed, 16 Aug 2017 09:53:20 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Last night, Count My Vote, SB54, and the Buckshot Caucus won - and the Republican process lost. A "former" Democrat didn't care about your elected…</description>
+    </item>
+    <item>
+      <title>Report on Pocatello ARC Eclipse Event Planning Meeting</title>
+      <link>https://www.joelevi.com/blog/pocatello-arc-eclipse-planning-meeting/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/pocatello-arc-eclipse-planning-meeting/</guid>
+      <pubDate>Fri, 11 Aug 2017 09:46:58 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>My wife (Natalie, KG7EEZ) and I (Joe, KF7NWA) attended the Eclipse Event Planning Meeting held at ISU by the Pocatello ARC last night. Here are the notes and…</description>
+    </item>
+    <item>
+      <title>Help Keep Solar Affordable in Utah</title>
+      <link>https://www.joelevi.com/blog/help-keep-solar-affordable-utah/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/help-keep-solar-affordable-utah/</guid>
+      <pubDate>Wed, 09 Aug 2017 08:42:19 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>The Utah Public Service Commission is scheduled to hold a Public Witness Hearing (Net Metering 14-035-114) today, 09 August 2017 to discuss Investigation of…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: Secure Your Computer with your Samsung Galaxy smartphone</title>
+      <link>https://www.joelevi.com/blog/samsung-flow/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/samsung-flow/</guid>
+      <pubDate>Thu, 03 Aug 2017 01:34:20 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security &amp; Privacy: Secure Your Computer with your Samsung Galaxy smartphone (August 3, 2017): Security &amp; Privacy are two vitally important components of…</description>
+    </item>
+    <item>
+      <title>Song of the Day: Waiting For The End [LINKIN PARK COVER] feat. Linney</title>
+      <link>https://www.joelevi.com/blog/waiting-for-the-end/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/waiting-for-the-end/</guid>
+      <pubDate>Wed, 02 Aug 2017 07:32:30 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>Most of you probably don't know this: back in the day, I was in the Advanced A Cappella Choir at Layton High School. I love percussion and songs with strong…</description>
+    </item>
+    <item>
+      <title>Did my Chevy Volt just get hit by a HOUSE?!</title>
+      <link>https://www.joelevi.com/blog/chevy-volt-just-get-hit-house/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/chevy-volt-just-get-hit-house/</guid>
+      <pubDate>Sat, 29 Jul 2017 16:59:40 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Uncategorized</category>
+      <description>I was minding my own business, driving SB I-15 near Willard, Utah a when strips of vinyl siding from a tiny house flew off and collided with my brand new 2017…</description>
+    </item>
+    <item>
+      <title>Dell Schanze 'banned' from using Segways at Las Vegas Hotel</title>
+      <link>https://www.joelevi.com/blog/banned-from-using-segways/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/banned-from-using-segways/</guid>
+      <pubDate>Fri, 21 Jul 2017 20:43:13 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Nevada</category>
+      <description>Las Vegas, Nevada: According to a story which originally ran on KVVU-TV Fox 5 in Nevada, Dell Schanze and his wife recently ran into some trouble when they…</description>
+    </item>
+    <item>
+      <title>T-Mobile almost lost one of its most loyal customers today</title>
+      <link>https://www.joelevi.com/blog/t-mobile-screw-up/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/t-mobile-screw-up/</guid>
+      <pubDate>Thu, 06 Jul 2017 15:11:18 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <description>I've been with T-Mobile for a long time. How long? I had a VoiceStream-branded Nokia - that's how long. Over the years, I put up with VoiceStream's limited…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: The Hidden Risks of WiFi</title>
+      <link>https://www.joelevi.com/blog/hidden-risks-of-wifi/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/hidden-risks-of-wifi/</guid>
+      <pubDate>Thu, 29 Jun 2017 02:01:52 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security &amp; Privacy: The Hidden Risks of WiFi (June 29, 2017): Security &amp; Privacy are two vitally important components of any successful society. Today’s…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris</title>
+      <link>https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/</guid>
+      <pubDate>Wed, 14 Jun 2017 12:49:06 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris (June 14, 2017): Security and Privacy are two vitally important…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’</title>
+      <link>https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/</guid>
+      <pubDate>Wed, 07 Jun 2017 07:24:04 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’ (June 7, 2017): Security and Privacy are two vitally important components of any…</description>
+    </item>
+    <item>
+      <title>Thank you! What an Experience!</title>
+      <link>https://www.joelevi.com/blog/thank-you-what-an-experience/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/thank-you-what-an-experience/</guid>
+      <pubDate>Thu, 25 May 2017 15:12:25 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>About Joe Levi</category>
+      <category>Politics</category>
+      <description>It has been an honor and privilege to travel the state and meet so many passionate and courageous members of the Utah Republican Party. From the beginning, I…</description>
+    </item>
+    <item>
+      <title>The Art of Bartering</title>
+      <link>https://www.joelevi.com/blog/the-art-of-bartering/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/the-art-of-bartering/</guid>
+      <pubDate>Tue, 25 Apr 2017 16:48:26 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Finances</category>
+      <description>One of the often-overlooked topics in prepping is barter. bar·ter - ˈbärdər, verb (gerund or present participle: bartering) exchange (goods or services) for…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: How to Physically Secure Your Phone</title>
+      <link>https://www.joelevi.com/blog/how-to-physically-secure-your-phone/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/how-to-physically-secure-your-phone/</guid>
+      <pubDate>Thu, 20 Apr 2017 01:46:09 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security &amp; Privacy: How to Physically Secure Your Phone (April 20, 2017): Security and Privacy are two vitally important components of any successful…</description>
+    </item>
+    <item>
+      <title>Security &amp; Privacy: An introduction; concepts explained; theory</title>
+      <link>https://www.joelevi.com/blog/security-privacy-introduction/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/security-privacy-introduction/</guid>
+      <pubDate>Wed, 05 Apr 2017 14:11:26 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>Security and Privacy, two words that we all can agree are vitally important and an integral part of any successful society. That makes it sound like we’re…</description>
+    </item>
+    <item>
+      <title>Vote For Joe Levi</title>
+      <link>https://www.joelevi.com/blog/vote-joe-levi/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/vote-joe-levi/</guid>
+      <pubDate>Tue, 28 Mar 2017 15:19:45 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>About Joe Levi</category>
+      <category>Politics</category>
+      <description>💡 Who Is Joe Levi? When my wife and I married almost 20 years ago, we moved away from the hustle and bustle of the suburbs into a small farming community, off…</description>
+    </item>
+    <item>
+      <title>TOO LATE TO APOLOGIZE: A DECLARATION (video)</title>
+      <link>https://www.joelevi.com/blog/too-late-to-apologize-a-declaration-video/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/too-late-to-apologize-a-declaration-video/</guid>
+      <pubDate>Mon, 20 Mar 2017 09:36:52 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>“On this day, 227 years ago, 39 courageous men signed the Constitution and forever changed the course of history.” — Lee Skabelund, Leg 18 Chair Not one of my…</description>
+    </item>
+    <item>
+      <title>Symbolism of Flags</title>
+      <link>https://www.joelevi.com/blog/symbolism-of-flags/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/symbolism-of-flags/</guid>
+      <pubDate>Thu, 23 Feb 2017 16:02:58 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Why do we use flags? Flags are symbols, but they’re also made up of symbols. Throughout history, flags (or banners) have been flown to tell others that a…</description>
+    </item>
+    <item>
+      <title>Liberty Isn't Easy: Delegates, Here's your Call-To-Action</title>
+      <link>https://www.joelevi.com/blog/liberty-isnt-easy/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/liberty-isnt-easy/</guid>
+      <pubDate>Wed, 09 Nov 2016 10:40:34 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Here's my obligatory, post-election political post - but it's not what you might think. In Utah, we have something called the Caucus and Convention System…</description>
+    </item>
+    <item>
+      <title>The future of WiFi is Mesh, and Google might be missing out</title>
+      <link>https://www.joelevi.com/blog/future-of-wifi-is-mesh/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/future-of-wifi-is-mesh/</guid>
+      <pubDate>Tue, 25 Oct 2016 10:01:27 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Pocketnow</category>
+      <description>The secret to unlocking all the cool technological stuff you can do in your home is centered around a very reliable network. Smartphones and tablets; TVs and…</description>
+    </item>
+    <item>
+      <title>How to stop the buzzing when you play music from your phone in your car</title>
+      <link>https://www.joelevi.com/blog/stop-buzzing-play-music-phone-car/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/stop-buzzing-play-music-phone-car/</guid>
+      <pubDate>Mon, 26 Sep 2016 10:00:45 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>I've got a smartphone that I use to play music, podcasts, or even audio books during my daily commute. When I plug it into my AUX port I get an annoying…</description>
+    </item>
+    <item>
+      <title>The inconvenient truth behind Robin Hood</title>
+      <link>https://www.joelevi.com/blog/inconvenient-truth-behind-robin-hood/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/inconvenient-truth-behind-robin-hood/</guid>
+      <pubDate>Thu, 08 Sep 2016 14:29:57 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Everyone knows the story of Robin Hood. "Robin Hood is a heroic outlaw in English folklore who, according to legend, was a highly skilled archer and…</description>
+    </item>
+    <item>
+      <title>Best USB Wall Outlet I've used</title>
+      <link>https://www.joelevi.com/blog/best-usb-wall-outlet/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/best-usb-wall-outlet/</guid>
+      <pubDate>Fri, 02 Sep 2016 08:49:38 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>Plugging a wall wart into an outlet is a pain. You've got a thing dangling from the wall that drains power whenever it's plugged in, you have to plug a cord…</description>
+    </item>
+    <item>
+      <title>Save your lawn from the summer heat with Rachio, the smart sprinkler controller</title>
+      <link>https://www.joelevi.com/blog/save-lawn-summer-heat-rachio/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/save-lawn-summer-heat-rachio/</guid>
+      <pubDate>Mon, 29 Aug 2016 13:18:58 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>We just built our new home, and being the geek that I am, I've been equipping it as a "smart home". I can open and close my garage doors from the internet, I…</description>
+    </item>
+    <item>
+      <title>Hydro Flask Flip Straw</title>
+      <link>https://www.joelevi.com/blog/hydro-flask-flip-straw/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/hydro-flask-flip-straw/</guid>
+      <pubDate>Fri, 26 Aug 2016 10:36:28 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>Remember that Hydro Flask water bottle I told ya'll about yesterday? It's got a nice drink cap on it, but I prefer the straw with a nice finger loop. Do I…</description>
+    </item>
+    <item>
+      <title>Durable, Insulated Water Bottle</title>
+      <link>https://www.joelevi.com/blog/durable-insulated-water-bottle/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/durable-insulated-water-bottle/</guid>
+      <pubDate>Thu, 25 Aug 2016 13:43:45 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Product Reviews</category>
+      <description>I recently cut soda and caffeine out of my life and needed something to drink in its place. The obvious answer was water. Soda and energy drinks brought…</description>
+    </item>
+  </channel>
+</rss>
