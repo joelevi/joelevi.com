@@ -631,6 +631,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/national-defense-authorization-act-for-fiscal-year-2011/",
+      "destination": "/blog/tags/national-defense-authorization-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/national-defense-authorization-act-for-fiscal-year-2011",
+      "destination": "/blog/tags/national-defense-authorization-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/ndaa/",
+      "destination": "/blog/tags/national-defense-authorization-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/ndaa",
+      "destination": "/blog/tags/national-defense-authorization-act/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
