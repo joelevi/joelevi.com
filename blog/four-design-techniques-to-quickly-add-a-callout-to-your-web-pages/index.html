@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="There are times when you may want to call attention to something on your website. It could be a special event, an new product or service, an upcoming…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Four Design techniques to quickly add a callout to your web pages" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Four Design techniques to quickly add a callout to your web pages — Joe Levi" />
+	<meta property="og:description" content="There are times when you may want to call attention to something on your website. It could be a special event, an new product or service, an upcoming…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/" />
+	<meta property="article:published_time" content="2009-06-26T16:12:01" />
+	<meta property="article:modified_time" content="2009-06-26T16:12:01" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Four Design techniques to quickly add a callout to your web pages — Joe Levi" />
+	<meta name="twitter:description" content="There are times when you may want to call attention to something on your website. It could be a special event, an new product or service, an upcoming…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Four Design techniques to quickly add a callout to your web pages — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/#article",
+      "url": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/",
+      "headline": "Four Design techniques to quickly add a callout to your web pages",
+      "description": "There are times when you may want to call attention to something on your website. It could be a special event, an new product or service, an upcoming…",
+      "datePublished": "2009-06-26T16:12:01",
+      "dateModified": "2009-06-26T16:12:01",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Four Design techniques to quickly add a callout to your web pages",
+          "item": "https://www.joelevi.com/blog/four-design-techniques-to-quickly-add-a-callout-to-your-web-pages/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Four Design techniques to quickly add a callout to your web pages</h1>
+				<p class="post-meta"><time datetime="2009-06-26">June 26, 2009</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>There are times when you may want to call attention to something on your website. It could be a special event, an new product or service, an upcoming redesign, or any other number of things. If we haven’t previously answered this question from a design perspective (such as including a special “breaking news” element in our preexisting design, how can we call attention to this without radically rethinking our design?</p>  <p>Ideally these solutions should fit within your current design (in other words, you should have thought about this scenario and incorporated it into your initial design). But you didn’t, that’s why you’re here.</p>  <p>You need a solution that is visually elegant, but simple (and quick!) to develop and implement on your site.</p>  <p>So, the question becomes, what design techniques are available to add a call out that would “fit” your current design? </p>  <h3>Badges and Buttons</h3>  <p>Badges? We don’t need no stinking badges!</p>  <p>An often over-used design element with “Web 2.0” designs is the “badge”. This is reminiscent to the physical-world equivalent of slapping a sticker on a product to call out “New and Improved!”, “Price Reduced!”, “Clearance”, etc.</p>  <p>These are often referred to as “star bursts”.</p>  <ul>   <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb.png" width="244" height="116" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_3.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_3.png" width="244" height="133" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_4.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_4.png" width="244" height="133" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_5.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_5.png" width="244" height="151" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_6.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_6.png" width="244" height="137" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_7.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_7.png" width="244" height="118" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_8.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_8.png" width="244" height="124" /></a> </li> </ul>  <h3>Ribbons</h3>  <p>Just like the ribbons in the Miss America pageant that wrap around the contestants, web ribbons wrap around your web page. Ribbons typically “wrap” a band around one corner of your page, though sometimes they cover the entire corner. </p>  <p>A more elegant or “formal” looking ribbon hangs down from the top of the page like the banners you see hanging from castles.</p>  <ul>   <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_9.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_9.png" width="244" height="130" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_10.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_10.png" width="244" height="112" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_11.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_11.png" width="244" height="140" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_12.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_12.png" width="244" height="114" /></a> </li> </ul>  <h3>Dog-ear or Page Curl</h3>  <p>The librarian used to scold you when you’d dog-ear the pages of your books, now you can dog-ear your web pages, too!</p>  <p>If you don’t make a “crease” you’re left with a “curl”. Both look nice.</p>  <p>These are often implemented with some kind of motion to them, whether that means they “waggle” in the virtual breeze (to catch your attention) or animate open when you mouse-over them (or click and drag them), typically there is a larger message “behind” the page that you’re looking at that’s “opened” by interacting with the dog-ear.</p>  <ul>   <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_13.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_13.png" width="244" height="123" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_14.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_14.png" width="244" height="123" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_15.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_15.png" width="244" height="121" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_16.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_16.png" width="244" height="153" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598
+a0
+689cfa_D5AD/image_17.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_17.png" width="244" height="132" /></a> </li> </ul>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <h3>Sticky, Pinned, Clipped, or Stuck Notes</h3>  <p>From multi-colored sticky notes, notes “pinned” with push pins, “clipped” with paperclips, “dangling” from a string or dog-tag chain, “taped” in place, or just “stuck” behind the rest of your site, notes tend to grab your attention.</p>  <p>Real world notes usually contain short-hand or very brief snippets of information, exactly they type of message that you’re trying to convey to your web readers. The metaphor translates very well.</p>  <ul>   <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_18.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_18.png" width="244" height="151" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_19.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_19.png" width="244" height="136" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_20.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_20.png" width="244" height="113" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_21.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_21.png" width="244" height="146" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_22.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_22.png" width="244" height="129" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_23.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_23.png" width="244" height="117" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_24.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_24.png" width="244" height="116" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_25.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_25.png" width="244" height="118" /></a> </li>    <li><a href="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_26.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/files/blog-attachments/e598a0689cfa_D5AD/image_thumb_26.png" width="244" height="117" /></a> </li> </ul>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <h3>What now?</h3>  <p>Do you have another method that I didn’t mention? Do you have an example of one of the techniques noted above?</p>  <p>Please share your comments!</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-four-design-techniques-to-quickly-add-a-callout-to-your-web-pages -->
+</body>
+</html>

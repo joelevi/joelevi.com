@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="This article details how and why I switched from Mail2Web’s Hosted Exchange to Google’s services. If you just want to know how to make the switch yourself…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Free Exchange-like syncing to Windows Mobile" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Free Exchange-like syncing to Windows Mobile — Joe Levi" />
+	<meta property="og:description" content="This article details how and why I switched from Mail2Web’s Hosted Exchange to Google’s services. If you just want to know how to make the switch yourself…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/" />
+	<meta property="article:published_time" content="2009-06-05T06:09:00" />
+	<meta property="article:modified_time" content="2009-06-05T06:09:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Free Exchange-like syncing to Windows Mobile — Joe Levi" />
+	<meta name="twitter:description" content="This article details how and why I switched from Mail2Web’s Hosted Exchange to Google’s services. If you just want to know how to make the switch yourself…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Free Exchange-like syncing to Windows Mobile — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/#article",
+      "url": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/",
+      "headline": "Free Exchange-like syncing to Windows Mobile",
+      "description": "This article details how and why I switched from Mail2Web’s Hosted Exchange to Google’s services. If you just want to know how to make the switch yourself…",
+      "datePublished": "2009-06-05T06:09:00",
+      "dateModified": "2009-06-05T06:09:00",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Free Exchange-like syncing to Windows Mobile",
+          "item": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Free Exchange-like syncing to Windows Mobile</h1>
+				<p class="post-meta"><time datetime="2009-06-05">June 5, 2009</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>This article details how and why I switched from Mail2Web’s Hosted Exchange to Google’s services. If you just want to know how to make the switch yourself, jump down to the “<a href="#making-the-switch">Making the Switch</a>” section.</p>  <h3>Background</h3>  <p>Ever since the first Windows Mobile phone that I owned (called “Pocket PC Phone Edition” back in the day) I’ve had a data plan so I could get and send email, and eventually sync my contacts and calendar anywhere in the world (well, anywhere with data coverage).</p>  <p>Then the <strike>Crack-Berry</strike> BlackBerry came on the scene and the idea caught on with the “mainstream” users.</p>  <h3>The Early Days</h3>  <p>When I started out I was just pulling mail from my POP server every 15 minutes, and pushing mail to my SMTP server as messages were sent. My calendar and contacts were stored on my desktop computer and I had to sync them manually by physically (gasp!) cradling the phone when I’d get home at night. That worked fairly well, but if I had an Exchange Server to sync with, I could do all that over-the-air; email, calendar, contacts, and tasks (though I never use those for reasons I won’t get into in this article).</p>  <h3>Hosted Exchange</h3>  <p>Thanks to a post on <a href="https://pocketPcThoughts.com" target="_blank">Pocket PC Thoughts</a> years and years ago, I was pointed in the direction of a Hosted Exchange Server called Mail2Web. These guys basically ran an Exchange Server that they sold services for. They had paid services, and free services. The free version gave users an Exchange account with access via Outlook Web Access (OWA) and Syncing to a mobile device (BlackBerry, Windows Mobile, etc.). Their business model was such that your space was somewhat limited and you could not sync with a desktop/laptop under the free plan, but you could “upgrade” to a paid plan that expanded your storage and extended your syncing to include desktop/laptop computers. Nice, but I was okay with the free version.</p>  <p>Eventually Exchange 2007 came out, Mail2Web’s “free” customers were still being hosted on Exchange 2003, which was still okay with me.</p>  <p>Finally, the other shoe fell, Mail2Web decided to upgrade to Exchange 2007 across the board and killed their free service.</p>  <p>I decided to find out what other companies were out there offering free Hosted Exchange. I couldn’t find any that were less expensive than the $5/month Mail2Web was going to charge, let alone any free ones. I decided to have Mail2Web migrate my account to Exchange 2007 for their free trial.</p>  <p>The trial came with an upgraded OWA, emails could now be sync’d in html (not just plain text), and I now had the power to initiate a remote-wipe (should my device ever become lost or stolen). I was impressed – but was I $60/year impressed? No, but what were my options?</p>  <h3>Google</h3>  <p>My friend (<a href="https://www.MikeDopp.com" rel="friend met co-worker contact neighbor colleague" target="_blank">Mike Dopp</a>) and my brother (Josh) both picked up Google’s G-One phone, which syncs its calendar, contacts, and email with Google’s services. I played with the device, and I like it. It’s still a baby, and I don’t feel it out-classes my AT&amp;T Tilt (with HTC’s Tytn II ROM, unlocked, and running on T-Mobile), not yet anyway, but I’m impressed nonetheless.</p>  <p>What got me was the ease of use of Google’s services: Gmail and Google Calendar.</p>  <p>I’m already in love with Google Voice (I got on that train back when it was Grand Central), I already had a Gmail account (that I rarely used), so why not make the switch?</p>  <h3 id="making-the-switch" name="making-the-switch">Making the Switch</h3>  <p>My primary email address is my @JoeLevi.com account, so the first thing I did was turn off the “forward all” rule which was sending my @JoeLevi.com mail to Mail2Web.</p>  <p><a href="https://www.joelevi.com/files/blog-attachments/FreeExchangelikesyncingtoWindowsMobile_A6E5/image.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="image" border="0" alt="image" align="right" src="https://www.joelevi.com/files/blog-attachments/FreeExchangelikesyncingtoWindowsMobile_A6E5/image_thumb.png" width="244" height="133" /></a>Next, I set Gmail up to pull my messages from my @JoeLevi.com mailbox via POP3. To do this log in to your Gmail account and click the settings link in the upper-right, then open the Accounts and Import tab. On this tab you can Add a POP3 email account to check, and Send mail as that account (so sballmer@microsoft.com could pull his POP3 email into Gmail, and reply from the @microsoft address, rather than the @gmail account).</p>  <p><a href="https://www.joelevi.com/files/blog-attachments/FreeExchangelikesyncingtoWindowsMobile_A6E5/image_3.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="image" border="0" alt="image" align="right" src="https://www.joelevi.com/files/blog-attachments/FreeExchangelikesyncingtoWindowsMobile_A6E5/image_thumb_3.png" width="244" height="144" /></a>Next, we want to be able to get our mail from Gmail without having to visit the site. To do that we can use POP3 or IMAP. I prefer using IMAP because it can “sync” your email client with Gmail, rather than the default behavior of POP3 (which is to remove the messages from the server when downloaded to the client; Gmail lets you override this default behavior, but why not just use the protocol that was built to do this?). So we tick the “Enable IMAP” radiobutton and Save Changes.</p>  <p>To set up your email client, click IMAP “Configuration instructions” link for Google’s very thorough instructions for a pretty good variety of clients.</p>  <p>At this point you’re able to send and receive mail from your Gmail account as if it were coming from your own domain. We still need to set up Calendar and Contacts syncing.</p>  <p>Luckily, Google has that covered, too. Point your browser over to <a title="http://www.google.com/support/mobile/bin/answer.py?answer=138636&amp;topic=14299" href="https://www.google.com/support/mobile/bin/answer.py?answer=138636&amp;topic=14299">http://www.google.com/support/mobile/bin/answer.py?answer=138636&amp;topic=14299</a> and Google tells you how to set up ActiveSync on Windows Mobile to auto-sync your calendar and contacts (no tasks or email, but we already covered email with IMAP).</p>  <p>If you want to sync your desktop/laptop with your Gmail/Google Calendar, the steps are similar. You set up an IMAP connection to Gmail, and download/install Google Calendar Sync (<a title="http://www.google.com/support/calendar/bin/answer.py?answer=89955" href="https://www.google.com/support/calendar/bin/answer.py?answer=89955">http://www.google.com/support/calendar/bin/answer.py?answer=89955</a>). (No contacts yet, but soon? Maybe and LDAP solution someday? Plaxo lets you sync FROM Google to Plaxo, and from Plaxo to Outlook, so as long as you use your Gmail contacts as your data entry point, you’re covered if you go that route, as a note, if you use Plaxo you don’t need Google Calendar Sync if Plaxo Syncs calendar’s with Google.)</p>  <p>Looks like I’m not alone (<a title="http://www.asktheadmin.com/2009/05/mail2web-is-no-longer-free-but-i-have-a-solution-for-your-free-exchange-like-active-syncing.html" href="https://www.asktheadmin.com/2009/05/mail2web-is-no-longer-free-but-i-have-a-solution-for-your-free-exchange-like-active-syncing.html">http://www.asktheadmin.com/2009/05/mail2web-is-no-longer-free-but-i-have-a-solution-for-your-free-exchange-like-active-syncing.html</a>). Hat tip to <a href="https://www.MikeDopp.com" rel="friend met co-worker contact neighbor colleague" target="_blank">Mike Dopp</a> for pointing this article out to me – after the fact…</p>  <h3>The Results</h3>  <p>After having used the new Google setup for about a week, I can say that I won’t miss Mail2Web or hosted Exchange
+at
+ all. Let’s break down the pros and cons.</p>  <h4>What am I losing by not using Hosted Exchange?</h4>  <ul>   <li><strong>No more remote wipe.</strong> I never used it, and hope I never need to.</li>    <li><strong>No more push email.</strong> I’ve got IMAP to sync every 10 minutes, and Gmail checks for new messages at my POP server every 10 minutes, so I think I’m close enough to real-time to not worry about it much. Calendar events get pushed down immediately, since that goes through the ActiveSync, not the IMAP protocol.</li>    <li><strong>Can’t use T-Mobile’s T-Zones Internet to connect.</strong> T-Zone’s is all but gone. You can’t sign up for it (or down-grade from full internet to it) anymore, and rumor has it they’re axing the wap.voicestream.com gateway soon. So that’s a non-issue for most people.</li>    <li><strong>More configuration and setup.</strong> About twice as much on my Windows Mobile phone.</li> </ul>  <h4>What am I gaining by using Google instead?</h4>  <ul>   <li><strong>No $5/month fee for my email box.</strong> That’s an extra $60/year that I can pay off debt with. <a href="https://www.joelevi.com/blog/index.php/tag/dave-ramsey/">Dave Ramsey</a> would be proud.</li>    <li><strong>Usable online calendar.</strong> I can now publish my free/busy schedule to the world, so people can request meetings with me without having to <a href="https://www.joelevi.com/blog/index.php/contact/" target="_blank">contact me</a> to see when I’m available. This is a HUGE deal to me, and something that I’ve never been able to do very effectively before.</li>    <li><strong>Email aggregation.</strong> I don’t have to set up 3 email accounts in each of my email clients anymore. I just tell Gmail to go out and get messages from the other accounts and it aggregates them all together for me.</li>    <li><strong>A more “open” platform.</strong> If I decide to move to another platform (either for my mobile phone or desktop computer) I’m more likely to be able to get a native application/suite to get my “Outlook” data into.</li>    <li><strong>Desktop Synchronization.</strong> Sure, you can get this with Hosted Exchange, but it’ll cost an extra $10/month, which is an additional $120/year that I’m not spending.</li>    <li><strong>Faster Web Access.</strong> OWA is significantly slower than Google Calendar and Gmail. ’Nuff said.</li>    <li><strong>More reliable storage.</strong> Google’s “cloud” storage and track record for data reliability is impressive. Running on a Hosted Exchange setup is only as good as their data storage, which might just be a single hard drive (though hopefully it’s more redundant than that).</li> </ul>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-free-exchange-like-syncing-to-windows-mobile -->
+</body>
+</html>

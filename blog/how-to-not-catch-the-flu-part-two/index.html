@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="No, I didn’t intend for the title to rhyme. Sorry. Before you read this, make sure you read the disclaimer on the “part one”, it applies to this post, too…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, How to not catch the flu (part two)" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="How to not catch the flu (part two) — Joe Levi" />
+	<meta property="og:description" content="No, I didn’t intend for the title to rhyme. Sorry. Before you read this, make sure you read the disclaimer on the “part one”, it applies to this post, too…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/" />
+	<meta property="article:published_time" content="2009-06-12T18:26:00" />
+	<meta property="article:modified_time" content="2009-06-12T18:26:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="How to not catch the flu (part two) — Joe Levi" />
+	<meta name="twitter:description" content="No, I didn’t intend for the title to rhyme. Sorry. Before you read this, make sure you read the disclaimer on the “part one”, it applies to this post, too…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>How to not catch the flu (part two) — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/#article",
+      "url": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/",
+      "headline": "How to not catch the flu (part two)",
+      "description": "No, I didn’t intend for the title to rhyme. Sorry. Before you read this, make sure you read the disclaimer on the “part one”, it applies to this post, too…",
+      "datePublished": "2009-06-12T18:26:00",
+      "dateModified": "2009-06-12T18:26:00",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to not catch the flu (part two)",
+          "item": "https://www.joelevi.com/blog/how-to-not-catch-the-flu-part-two/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>How to not catch the flu (part two)</h1>
+				<p class="post-meta"><time datetime="2009-06-12">June 12, 2009</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>No, I didn’t intend for the title to rhyme. Sorry.</p>  <p>Before you read this, make sure you read the disclaimer on the “part one”, it applies to this post, too.</p>  <p>Picking up where we left off, here are some more things you can do to help stay healthy.</p>  <h3>Antimicrobial “stuff”</h3>  <p>Camphor, Eucalyptus, and Thieves oils all have antiviral and/or antimicrobial properties to them, and they smell good, too!</p>  <p>It’s said that infusing these oils into the air can actually disinfect it. Of course you can’t come out and state these claims, the FDA will get all up in a huff because you haven’t <strike>paid them off</strike> gone through the process of years worth of scientific studies, drug trials, and all the red tape that accompanies “making health related statements”. That’s why I’m not making health related statements here. Capisci?</p>  <p>So, if you were to believe this non-FDA evaluated or approved use of these oils, you could keep a cotton ball soaked in one of the oils in a cup in your car or at your desk. You could even keep a handkerchief in a re-sealable sandwich bag and use it in public places. Note: you may not want to use the handkerchief in the traditional sense as these oils may cause discomfort on sensitive noses.</p>  <h3>Antimicrobial Foods?</h3>  <p>Can you really eat something and be less likely to get sick? The FDA doesn’t think so, but health-food stores around the country have known some secrets they learned from our grandmothers.</p>  <ul>   <li>Chicken noodle soup really does help, but not the Campbell’s kind. For this old remedy to work you need to chock it full of as much onions and as much garlic as your pallet can take. For reasons unknown to me onions, garlic, and leeks all do tremendously well at making your body an uncomfortable place for illness. </li>    <li>Sour stomach, nausea? No problem, steep some ginger root in hot water and sip away to help calm and settle your stomach. Don’t have ginger root (or powdered ginger)? Try some Ginger Ale (or Crystal Pepsi if you’re hoarding some in your basement). </li>    <li>Got something that goes sour (like milk?), Colloidal silver (its microscopic silver particles in suspension) will keep it “good” much, much longer. This one even the plastic bandage folks are getting into (look for band-aids infused with colloidal silver next time you’re in the pharmacy section of your grocery store).</li> </ul>  <h3>Microbial Foods?!</h3>  <p>We just talked about how to kill microbes (including viruses) in your system, why on earth would we want to put some back in?!</p>  <p>Your intestines are PACKED with bacteria. Don’t freak out. These are symbiotic organisms that live inside us and help us break down the food that we eat. We then digest their byproducts (yes folks, that’s why beans give us gas).</p>  <p>When we take antibiotics (see my section on that, below), we kill off the “good” bacteria in our digestive tract. Not only does this open the way for “bad” bacteria to move in and set up shop, it also reduces our ability to metabolize nutrients while we’re taking the pills! Ever had diarrhea, or loose or foul smelling stools AFTER you started taking antibiotics? Yup, that’s because you just killed off part of your digestive system.</p>  <p>Your body will naturally “flush” bad stuff out through the process called “diarrhea” which also “washes out” your good bacteria as well. Don’t worry, your body has a way to combat this: your appendix. Yes, that little “useless” organ has a use after all, it’s supposed to provide a safe haven for some of those bacteria to live while your body is flushing itself out. After whatever made you sick has passed through and been flushed away the little critters creep back out and basically “reboot” that part of your digestive system. Antibiotics kill the little guys in your appendix, too. What moves in? Bad bacteria, they get all comfortable and cause problems, so now you have to have it cut out before it ruptures and causes REAL problems. Maybe we shouldn’t have taken the antibiotics in the first place (not advising, just postulating).</p>  <p>In any event, let’s say something has happened that’s caused your digestive bacteria to be absent (either diarrhea or antibiotics, or whatever). Your appendix (if you’ve still got it) might help out, but it would be wise to replenish the digestive bacteria. To do this, eat yogurt with “active cultures” regularly, and keep some acidophilus (sometimes called “pro-biotics”) in your fridge. Both methods help restore your normal balance and might help the recovery process.</p>  <h3>Antivirals</h3>  <p>Unfortunately, today we’re so pill-happy that every time we get the sniffles or a sore throat we run to the doctor to get antibiotics – often times for viral infections!</p>  <p>Antibiotics don’t touch viruses! Read that again. If you’ve got a virus (<a href="/blog/index.php/2007/08/19/miss-teen-south-carolina-answer-to-why-americans-cant-locate-the-us-on-a-world-map/">like, such as</a>, the flu) antibiotics won’t help! READ THAT AGAIN!</p>  <p>Anti-microbials may help (garlic, Thieves, eucalyptus, colloidal silver, etc.), depending on the strain and resistance of the virus.</p>  <p>Typically, there’s not much you can do to fight a virus with medicine. Your body has to fight it off by itself. The question should then be how you can help your body fight off viruses.</p>  <h3>How can you help your body fight off viruses?</h3>  <p>Have you heard the old adage “an ounce of prevention is worth a pound of cure”? This means to say it’s better to invest a little in preventative measure than it is to invest in after-the-fact “cures” or treatments.</p>  <p>First, make sure you’re getting enough water. If you’re not drinking 3 to 4 liters a day, you’re not drinking enough water (soda, juice, and milk DON’T COUNT!).</p>  <p>Second, Vitamin C is a proven immune-system booster. I’ve seen studies that recommend at least 1,000 to 5,000 mg per day (preferably via your diet, not via a pill). Try some echinacea, ginger, and garlic in your diet as well – if you can’t add it to your diet, fall back on pill-forms of these natural herbs.</p>  <p>Third, bad bacteria and viruses love a system with a bunch of refined sugar in it (especially high-fructose corn syrup (HFCS)). Sugar makes your body acidic, your immune system doesn’t like this, but bad germs do. Change your bodies acidity and the bad germs won’t like living in it. How do you do this? Drink more water and the right food (eliminate sugar, especially HFCS).</p>  <p>Aspertame (a phenlyketonuric called phenylalanine) isn’t any better, but it doesn’t have any calories. Splenda, Sucralose, Equal, and saccharine aren’t much better either. </p>  <p>If you want sweetness go with honey, pure maple syrup, stevia, xylatol, even unrefined cane sugar. These sweeteners are natural sugars and are much gentler on your system than refined sugars (diabetics, rejoice!).</p>  <p>Fourth, sleep correctly. Your body needs sleep. Go to bed early, get up early. Oversleeping can cause as much fatigue as under-sleeping. Learn what your body needs.</p>  <p>Fifth, eat well, eat healthy. Don’t over-eat, but don’t under eat. Eat the right amount for you, and make sure it’s as fresh and raw as possible. If you can grow it rather than buy it, you’re that much better off. And no, I’m talking raw vegetables here, not raw meat. Limit your meat intake or get rid of it entirely.</p>  <p>Sixth, don’t eat or drink stuff that will make you sick or fight your body’s ability to fight off illness. Caffeine is an insecticide. Carmel color is an immuno-inhibitor. ’Nuff said?</p>  <h3>After you’re already sick</h3>  <p>So you didn’t follow my advice and now you’ve gone and gotten yourself sick. What now?</p>  <ul>   <li>Keep warm so your body can fight what’s ailing it without trying to keep your warm as well. Hot baths with epsom salts can help you “feel” better. They keep your temperature up, they feel nice, th
+ey
+ will help add moisture to the air you’re breathing, and they’ll wash off many bad germs that may be on your skin. Wash with Thieves-infused soap for an extra kick.</li>    <li>Keep an eye on your temperature. It’s not the cold or flu that is giving you a fever, it’s your body that gives it to you. It does this to try and kill the germs that are causing you to feel this way. When your body is working properly it will heat up and cool down (your fever will “break”) to make sure it doesn’t cook your brain and cause permanent damage to your body. That said, your body may not be working properly and your fever may run “out of control” and need to be regulated. A fever of 104 degrees F may be okay for half-an-hour, but anything higher, or if the fever holds for any length of time, you probably should consult with a doctor. Don’t take my word for it, listen to your body and don’t take risks. When in doubt, ask a doctor.</li>    <li>Drink a lot of water. Chances are you are sweating, you may have diarrhea, and may be vomiting. All of these take water out of the system which needs to be replaced. Not only that, when you’re sick you need more water than normal to help your body’s internal workings flush out the germs, wherever they may be.</li> </ul>  <h3>Beware popular medications!</h3>  <p>Relenza® (Zanamivir) by GlaxoSmithKline and Tamiflu® (Oseltamirvir) by Hoffman-La Roche Pharmaceuticals (the Swiss company that created LSD) are both VERY popular anti-flu medications. Studies show these drugs may shorten the duration of the flu by 1.5 days. If it’s a 24 or 72 hour bug, is 1.5 days worth it? Both of these drugs are neuraminidase inhibitors; neuraminidase is a very important enzyme. Not only that, between 2000 and 2004 of people who took Tamiflu there were 64 recorded cases of serious psychological disorders (hallucinations, impaired consciousness, abnormal erratic behavior, including two “suicides” of people jumping from tall buildings) in Japan alone.</p>  <h3>Summary</h3>  <p>When it comes to any illness, not just Swine, Avian, H1N1, type A, B, or C, or ANY influenza or virus:</p>  <ul>   <li>Eat healthy stuff,</li>    <li>Don’t eat unhealthy stuff,</li>    <li>Drink plenty of CLEAN water,</li>    <li>Wash your hands frequently,</li>    <li>Wash your hands correctly,</li>    <li>Introduce natural antimicrobials into your diet,</li>    <li>Introduce natural antimicrobials into your daily routine,</li>    <li>Get enough (but not too much) sleep,</li>    <li>Breathe clean air, and</li>    <li>stay away from sick people – like you’d find at the doctor’s office or hospital.</li> </ul>  <h3>Teaser</h3>  <p>We’ve talked a lot about the flu, but we haven’t talked about the common cold… Specifically, can you “catch a cold” from being cold? We’ll talk about that in an upcoming <a href="/blog/index.php/tag/healthy/">health</a> article!</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-how-to-not-catch-the-flu-part-two -->
+</body>
+</html>

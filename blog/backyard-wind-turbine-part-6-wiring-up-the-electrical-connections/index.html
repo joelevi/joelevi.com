@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Project Table of Contents What kind of energy should I harvest? City ordinance and neighborhood considerations Installing the tower base Building and securing…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Backyard Wind Turbine, Part 6: Wiring up the electrical connections" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Backyard Wind Turbine, Part 6: Wiring up the electrical connections — Joe Levi" />
+	<meta property="og:description" content="Project Table of Contents What kind of energy should I harvest? City ordinance and neighborhood considerations Installing the tower base Building and securing…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/" />
+	<meta property="article:published_time" content="2008-11-19T07:27:00" />
+	<meta property="article:modified_time" content="2008-11-19T07:27:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Backyard Wind Turbine, Part 6: Wiring up the electrical connections — Joe Levi" />
+	<meta name="twitter:description" content="Project Table of Contents What kind of energy should I harvest? City ordinance and neighborhood considerations Installing the tower base Building and securing…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Backyard Wind Turbine, Part 6: Wiring up the electrical connections — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/#article",
+      "url": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/",
+      "headline": "Backyard Wind Turbine, Part 6: Wiring up the electrical connections",
+      "description": "Project Table of Contents What kind of energy should I harvest? City ordinance and neighborhood considerations Installing the tower base Building and securing…",
+      "datePublished": "2008-11-19T07:27:00",
+      "dateModified": "2008-11-19T07:27:00",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Backyard Wind Turbine, Part 6: Wiring up the electrical connections",
+          "item": "https://www.joelevi.com/blog/backyard-wind-turbine-part-6-wiring-up-the-electrical-connections/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Backyard Wind Turbine, Part 6: Wiring up the electrical connections</h1>
+				<p class="post-meta"><time datetime="2008-11-19">November 19, 2008</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<h3>Project Table of Contents</h3>  <ol>   <li><a href="https://www.joelevi.com/blog/index.php/2008/09/24/backyard-wind-turbine-part-1/">What kind of energy should I harvest?</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/09/26/backyard-wind-turbine-part-2-city-ordinance-and-neighborhood-considerations/">City ordinance and neighborhood considerations</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/16/backyard-wind-turbine-part-3-installing-the-tower-base/">Installing the tower base</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/27/backyard-wind-turbine-part-4-building-and-securing-the-tower/">Building and securing the tower</a> </li>    <li>Building and installing the wind turbine      <ul>       <li><a href="https://www.joelevi.com/blog/index.php/2008/11/06/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-1-of-5/">Selecting the type of turbine</a> </li>        <li><a href="https://www.joelevi.com/blog/index.php/2008/11/07/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-2-of-5/">Choosing AC or DC</a> </li>        <li><a href="https://www.joelevi.com/blog/index.php/2008/11/07/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-3-of-5/">Prototype, aka “Mark 1”</a> </li>        <li><a href="https://www.joelevi.com/blog/index.php/2008/11/07/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-4-of-5/">Building the “Mark 2”</a> </li>        <li><a href="https://www.joelevi.com/blog/index.php/2008/11/13/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-5-of-5/">Video of the finished Mark 2 in action</a> </li>        <li><a href="https://www.joelevi.com/blog/index.php/2008/11/13/backyard-wind-turbine-part-56-building-and-installing-the-wind-turbine/">First measureable power output</a> </li>     </ul>   </li>    <li>Wiring up the electrical connections (this article)      <ul>       <li>Ground </li>        <li>Punching through the house </li>        <li>Wiring </li>        <li>Preventing “reverse flow” </li>        <li>Regulating and controlling the charge </li>        <li>Batteries </li>        <li>Loads </li>        <li>Dump Loads </li>     </ul>   </li>    <li>Afterward… </li> </ol>  <h3>Wiring up the electrical connections</h3>  <h4>Grounding</h4>  <p>As I’ve mentioned in prior articles, the most important part of this project is properly grounding the turbine and the tower. If you’ve followed my advice you installed your tower as tall as you could afford and local regulations and code allow. This means you’ve also put up the tallest thing around. Some people would call that a “lightning rod.”</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00051.jpg"><img title="IMAG0005" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="81" alt="IMAG0005" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0005-thumb1.jpg" width="107" align="right" border="0" /></a>For my project, I purchased a quarter-inch grounding rod from Home Depot for less than 12-bucks. This is a copper-plated steel rod, 8-feet long, and quarter-inch diameter, driven almost all the way into the ground.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00061.jpg"><img title="IMAG0006" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="83" alt="IMAG0006" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0006-thumb1.jpg" width="109" align="right" border="0" /></a>From this post (pictured) I ran a heavy gauge grounding wire to a saddle clamp attached to the tower base (pictured). This serves to ground the tower.</p>  <p>From the saddle clamp the grounding wire runs into a conduit tee and up the tower to the Ametek motor (which has an integrated grounding wire in its wiring harness). If your motor/generator doesn’t have a ground-wire I’d highly recommend adding one to the motor housing and the tail-mount. This step will ensure <a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00071.jpg"><img title="IMAG0007" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="136" alt="IMAG0007" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0007-thumb1.jpg" width="103" align="right" border="0" /></a>that any static buildup from the blades or from the atmosphere will carry safely to ground, and will limit the damage done to your structure/electronics.</p>  <h4>Punching through the house</h4>  <p>Unless you’re going to build a weather-proof box outside your home (which is an option, especially if your turbine is portable and you plan on taking it camping or to a summer home, etc.)&#160; you’ll probably want to house your battery/ies and electronic components inside.</p>  <p>The first thing that you’ll need to do is punch through the house. This introduces a couple problems: you’ve now got a hole in your house through which air/heat can escape, you’ve got a hole through which rain and insects can enter your house.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00081.jpg"><img title="IMAG0008" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="184" alt="IMAG0008" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0008-thumb1.jpg" width="244" align="right" border="0" /></a>I purchased a conduit box with a weather-proof switched faceplate from Home Depot. To this box I attached my weather-proof conduit with wires already run. I used an auger bit to drill a hole through my siding and into my garage, then slathered up the back side and screw holes of my conduit box with caulk. The caulk makes an air and weather-tight seal which will keep the air/heat inside the garage, and keep the weather and critters out. Make sure you calk around your screw holes, too. Those are holes, too.</p>  <p>From there I fished the wires though the hole to the interior of the garage and left enough room to insert the tube from an “expando-foam” insulation product to fill the void made while drilling the hole this will seal up the hole and prevent air/heat loss. I haven’t taken that step yet because I haven’t installed my emergency cut-off switch in the box and will need to pull some slack back through the hole to do so.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00091.jpg"><img title="IMAG0009" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="244" alt="IMAG0009" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0009-thumb1.jpg" width="184" align="right" border="0" /></a>This cut-off switch will serve to disconnect the turbine from the electronics and will also return function as a brake by completing the circuit back to the motor and applying an artificial load on the motor. Flipping this switch will help protect the turbine during high winds, and acts as a safety while raising and lowering the turbine. Until I install the switch, I’ll just manually short the positive and negative wires to accomplish the same thing (this is what I’ve been doing up to this point of the installation).</p>  <h4>Preventing “reverse flow” </h4>  <p>A generator is just a motor running in reverse; instead of applying power and making the motor turn, we’re applying “turn” and making the motor spit out power.</p>  <p>On the other end of the motor is a battery, if we don’t stick something in the circuit, the battery will power the turbine, making it turn, and draining all the power.</p>  <p>What we need is called a blocking diode. This “el
+ectronic do-
+dad” serves as a “valve” that only lets power flow one direction, in our case from the turbine down to the batteries, but not back up the wire. For most installations you want to get a 30 – 50 amp blocking diode that you simply wire in-line.</p>  <p>I didn’t have to do that on mine, but I’ll get to that in a minute.</p>  <h4>Regulating and controlling the charge</h4>  <p>These are actually two separate topics, but they do basically the same thing: they protect your batteries from being destroyed.</p>  <p>If you’re going with the blocking diode method, above, you’ll want to add a fuse inline to break the circuit should your turbine spin too fast for your batteries to gobble up the power being fed to them. It functions just like a fuse in your car, too much power going through it and it cuts the circuit. This could be a bad thing, because now your wind turbine will spin unloaded, and could fly out of control if you don’t have another furling or braking system in place.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00131.jpg"><img title="IMAG0013" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="97" alt="IMAG0013" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0013-thumb1.jpg" width="128" align="right" border="0" /></a>I opted for the high tech version, which allowed me to skip the fuse <a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00101.jpg"><img title="IMAG0010" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="244" alt="IMAG0010" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0010-thumb1.jpg" width="184" align="left" border="0" /></a>and the blocking diode. A Charge Regulator or Charge Controller will not only (in my case, anyway) serve as a fuse and blocking diode all in one, it will also monitor the state of your batteries and make sure you don’t over-charge them. Other features vary by make and model. This is the more expensive way to go – at least until a wind storm over-charges your batteries and you have to replace them!</p>  <p>I opted for a Juta brand solar regulator, but don’t let that fool you! This is a 12/24VDC charge controller that monitors state of charge (SOC), loads, and will track the Amp Hours that you’ve pushed into your batteries.</p>  <p>All this comes at a cost, not only an out-of pocket expense (I pay about $80 delivered for mine on eBay), but it will also consume some of the precious power that you’re putting in your batteries. How much? I don’t know, hopefully not too much!</p>  <h4>Batteries </h4>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00111.jpg"><img title="IMAG0011" style="border-right: 0px; border-top: 0px; display: inline; margin-left: 0px; border-left: 0px; margin-right: 0px; border-bottom: 0px" height="184" alt="IMAG0011" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0011-thumb1.jpg" width="244" align="right" border="0" /></a>You’ve got to buffer the electricity that your wind turbine is harvesting. You can do this through a grid-tie inverter, but that is hugely outside the scope of this article series. Hooking your turbine to the grid will effectively make your power meter run backwards (when you’re pumping more power into the system than you’re taking out of it). This will help your power bill (if you live in a net metering area), but won’t help you at all if the grid goes down (i.e., a wind storm takes down a power line).</p>  <p>Even if you decide to go with the grid-tie option, I’d still recommend running your output into a battery bank, which your home would consume before going to grid power. That way you’re getting the best of both worlds.</p>  <p>Since our turbine is quite small, so is our battery solution. We’ll expand this by adding more storage capacity to our battery bank as time and budget allows, but for now, it’s&#160; a start.</p>  <p>I have two 12-volt batteries hooked up, one is a little UPS battery (which is specifically designed for deep cycles (being fully charged, then fully drained, again and again). The other battery is a spare car battery that I had sitting around. Car batteries don’t do well with deep discharges, so they’re not well suited for this environment, but it serves as a place for my dump load to go (we’ll get into dump loads later).</p>  <p>Ideally, you’d get a deep cycle battery, similar to a golf-cart battery or fork-lift battery. If you’ve got access to these, by all means, use them (and you can send some my way as a token of your appreciation if you’d like).</p>  <p>I’d like to point out that neither of the batteries pictures is wired permanently, just temporarily. I need to pick up some more hardware to make the permanent connections.</p>  <h4>Loads</h4>  <p>Loads are simply the “things” that you have connected to your battery bank that’s sucking power out of them. The easiest way to go is to wire up a DC socket (a “cigarette lighter” for us old fogies). Assuming you have a 12V battery bank you can then plug in anything that you’d plug in to your car’s DC power jack. This includes DC fridges, DC lighting, a DC-to-DC adaptor to power other DC electronics like webcams, routers, wireless access points, TV’s, a USB hub (to charge all your USB powered gadgets: cell phones, MP3 players, radios), etc., but if you need AC you can plug in an inverter.</p>  <p>An inverter takes the DC power and converts it into AC power and provides you with a standard AC power outlet. You can run anything you’d normally plug into an AC power jack from here given you don’t surpass the maximum and sustained wattage output from your inverter. Be advised, an inverter isn’t 100% efficient, meaning you’ll loose power just in the conversion, and it’ll gobble up power when it’s on.</p>  <h4>Dump Loads</h4>  <p>Hopefully you’ve set up your system to harvest more power than you’ll consume (or at least net zero). A lot of this will depend on the wind, which in my area isn’t very dependable. When the wind blows it REALLY blows, but when it doesn’t blow, I can go weeks with an expensive wind vane instead of a wind turbine.</p>  <p>As your experience in your particular setup increases you’ll be able to right-size your battery bank and have the capacity to store the power that’s harvested in those periods of high or sustained wind.</p>  <p>Until then (and even after) you’ll want to have a dump load, some place that you can “dump” the excess power. Typically this is to a heating element that’s run to a cold area or a water tank. On farms, this is usually run to a stock tank to keep it from freezing over in the winter; in suburban homes this can be run to a hot water heater to supplement heating culinary water (though special care must be taken if you decide to do this).</p>  <p>My “dump load” is a car battery, it’s not the best choice, but it’s better than nothing.</p>  <h4>Entire Setup</h4>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00121.jpg"><img title="IMAG0012" style="border-right: 0px; border-top: 0px; display: inline; margin-left: 0px; border-left: 0px; margin-right: 0px; border-bottom: 0px" height="244" alt="IMAG0012" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0012-thumb1.jpg" width="184" align="right" border="0" /></a>That’s the end-to-end solution. As I improve this project I’ll post them to the “afterward” article sometime in the indefinite future. This will include the cut-off switch, building out the battery bank, actual power harvested, installing a vented battery rack, etc.</p>  <p>Thanks for reading, and please comment with any questions or links to similar projects that you’re working on!</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-backyard-wind-turbine-part-6-wiring-up-the-electrical-connections -->
+</body>
+</html>

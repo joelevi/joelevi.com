@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="It seems that my “ What is a .MENC File?” article was HUGELY popular (pulling in around 750 page views per month)! That tells me there are a lot of people…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Recovering data from your .menc file" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/recovering-data-from-your-menc-file/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Recovering data from your .menc file — Joe Levi" />
+	<meta property="og:description" content="It seems that my “ What is a .MENC File?” article was HUGELY popular (pulling in around 750 page views per month)! That tells me there are a lot of people…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/recovering-data-from-your-menc-file/" />
+	<meta property="article:published_time" content="2009-06-30T06:00:00" />
+	<meta property="article:modified_time" content="2009-06-30T06:00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Recovering data from your .menc file — Joe Levi" />
+	<meta name="twitter:description" content="It seems that my “ What is a .MENC File?” article was HUGELY popular (pulling in around 750 page views per month)! That tells me there are a lot of people…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Recovering data from your .menc file — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/#article",
+      "url": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/",
+      "headline": "Recovering data from your .menc file",
+      "description": "It seems that my “ What is a .MENC File?” article was HUGELY popular (pulling in around 750 page views per month)! That tells me there are a lot of people…",
+      "datePublished": "2009-06-30T06:00:00",
+      "dateModified": "2009-06-30T06:00:00",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Recovering data from your .menc file",
+          "item": "https://www.joelevi.com/blog/recovering-data-from-your-menc-file/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Recovering data from your .menc file</h1>
+				<p class="post-meta"><time datetime="2009-06-30">June 30, 2009</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+It seems that my “<a href="https://www.joelevi.com/blog/index.php/2008/05/01/what-is-a-menc-file/" target="_blank">What is a .MENC File?”</a> article was HUGELY popular (pulling in around 750 page views per month)! That tells me there are a lot of people that had the same questions that I did:
+<ol>
+	<li>What on earth is a .MENC file?, and</li>
+	<li>How do I get my data out of a .MENC file?</li>
+</ol>
+So, let’s jump right in…
+<h3>What on earth is a .MENC file?</h3>
+Here’s what Microsoft has to say:
+<blockquote><strong>What's with the MENC extension?</strong>
+
+<p>The files are stored on disk with a MENC extension - this lets the encryption filter know quickly which files are encrypted and if they match the key on the device. If you put the storage card in a desktop card reader, or put it in another device, you will see that the files have a MENC extension. The point of the extension is that you can't read those files, so the extension makes it harder for you to try to load those files into an application that won't be able to read them anyway. We also were able to associate a lock icon with the extension to add an additional hint.</p>
+
+<p>If the encryption filter on the device is able to read and decrypt the files, it hides the MENC extension so the file looks like normal.</blockquote><br />
+Basically, Microsoft introduced a rather novel file encryption technique with Windows Mobile 6 to help keep your data secure in the event of a lost or stolen mobile phone (or storage card). WinMo can use what’s called “Windows Mobile 6 Storage Card Encryption” to encrypt your files so that they can be easily accessed by the unlocked device, but are very secure otherwise.</p>
+
+<p>When you unlock your phone you have access to your internal and external storage just like normal, no delays, no passwords, nada. The OS takes care of the encryption and decryption on the fly, similar to EFS in the desktop version of Windows.</p>
+
+<p>When you remove your storage card and try to read it on a desktop computer, you can’t get into the files, they’re encrypted, and that computer doesn’t have the key (or method) to unlock them.</p>
+
+<p>So, back to the phone, if you can’t unlock the phone (because you don’t know the PIN or password to the device) you can’t access the card. If you hard-reset the phone the encryption key is lost and a new one is generated, so you still don’t have access to the files.</p>
+
+<p>In the scenario it was designed for, the system functions great!</p>
+
+<div style="float:right;margin:6px;">
+
+<p></div></p>
+
+<p>Where it runs into complications is (1) if you want to transfer a bunch of files (images, photos, documents, etc.) off the phone to a desktop computer via a card reader and (2) if you get a new device (or have to hard-reset your old device).</p>
+
+<p>In the first scenario it’s just frustrating, you have to go through a process to get the files onto the desktop/laptop/netbook. In the second scenario, your data is inaccessible, kiss it goodbye.</p>
+
+That leads us to the next question…
+<h3>How do I get my data out of a .MENC file?</h3>
+Do you still have access to the phone that you created the file on?
+<ul>
+	<li>If the answer is no, it’s time to cut your losses and mourn over the fact that your data is gone.</li>
+	<li>If you do have access to the phone that created the file, continue on… your adventure is just beginning.</li>
+</ul>
+Have you had to hard-reset (or replace) the phone that created the file(s)?
+<ul>
+	<li>If you’ve replaced your phone (warranty replacement, upgrade, etc.) the encryption/decryption keys are no longer the same and your files are inaccessible.</li>
+	<li>If you’ve had to hard-reset (erase everything back to factory defaults), again, the encryption/decryption keys are no longer the same and your files are inaccessible.</li>
+</ul>
+So, the other scenario is that you still have access to the phone, and it hasn’t been hard-reset, great! We can probably get your files off! W00T!
+
+But what if you’ve forgotten the PIN or password to the phone? Then what? Well, if you sync with an Exchange Server, you can potentially recover the PIN (and then have access to the files)… Here’s what MSDN has to say about how to do that:
+<blockquote>“You can escrow a recovery pin up to the exchange server. Retrieve the recovery pin via OWA and use that to locally reset the password on the device.”</blockquote>
+Next thing you need to do is figure out how you want to get your data off. You can email it to yourself, you can use Live Mesh or some other syncing strategy, or if you have an FTP client you could even FTP it somewhere… You could Facebook the pictures… yadda yadda…
+
+<img style="display: inline; margin-left: 0px; margin-right: 0px;" src="https://images.intomobile.com/wp-content/uploads/2007/03/wm6-encryption.png" alt="" width="133" height="100" align="right" />But if you want to unencrypt the files and copy them off the memory card, you’re doing to have to turn the storage card encryption off (at least temporarily). Go to Start, Settings, System, Encryption (or someplace similar) and uncheck the “Encrypt files when placed on a storage card” box. Now all NEW files will be in-the-clear, but existing files will still be encrypted. (Don’t forget to toggle this back when you’re done if you want to.)
+
+<img style="display: inline; margin-left: 0px; margin-right: 0px;" src="https://i.msdn.microsoft.com/Bb416357.fab008f4-dbff-4fcd-a663-92b61c258a99(en-us,MSDN.10).gif" alt="" width="133" height="177" align="right" />Next, navigate to your File Explorer, then to your Storage Card. Make a new folder (name it something obvious like “Unencrypted Stuff”). Now, find whatever files you want to unencrypt and move (or copy) them into this folder.
+
+<p>Tada! Your files are no longer encrypted.</p>
+
+<p>You can now pop your storage card out and read them on any other computer (or on any phone for that matter). You also freed up between 8K and 16K per encrypted file.</p>
+
+<p>I’d suggest moving the files back into the folders that you got them from to ensure they’re still accessible by your programs.</p>
+
+<p><a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later™</a>.</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-recovering-data-from-your-menc-file -->
+</body>
+</html>

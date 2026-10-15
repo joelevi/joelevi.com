@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Alternate Title: How to Hack Your Local Election for about $30 and in only 4 Minutes Note: This post is not intended to be subversive or illegal in any way…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Rock Hack the Vote" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/rock-hack-the-vote/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Rock Hack the Vote — Joe Levi" />
+	<meta property="og:description" content="Alternate Title: How to Hack Your Local Election for about $30 and in only 4 Minutes Note: This post is not intended to be subversive or illegal in any way…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/rock-hack-the-vote/" />
+	<meta property="article:published_time" content="2006-10-25T06:48:22" />
+	<meta property="article:modified_time" content="2016-09-06T07:57:09" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Rock Hack the Vote — Joe Levi" />
+	<meta name="twitter:description" content="Alternate Title: How to Hack Your Local Election for about $30 and in only 4 Minutes Note: This post is not intended to be subversive or illegal in any way…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Rock Hack the Vote — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/rock-hack-the-vote/#article",
+      "url": "https://www.joelevi.com/blog/rock-hack-the-vote/",
+      "headline": "Rock Hack the Vote",
+      "description": "Alternate Title: How to Hack Your Local Election for about $30 and in only 4 Minutes Note: This post is not intended to be subversive or illegal in any way…",
+      "datePublished": "2006-10-25T06:48:22",
+      "dateModified": "2016-09-06T07:57:09",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/rock-hack-the-vote/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/rock-hack-the-vote/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/rock-hack-the-vote/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rock Hack the Vote",
+          "item": "https://www.joelevi.com/blog/rock-hack-the-vote/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Rock Hack the Vote</h1>
+				<p class="post-meta"><time datetime="2006-10-25">October 25, 2006</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<h2>Alternate Title: How to Hack Your Local Election for about $30 and in only 4 Minutes</h2>
+
+<blockquote><b>Note:</b> This post is not intended to be subversive or illegal in any way, shape or form! This information is provided to you so that you can become educated and informed about how unreliable and easily hackable e-Voting elections are. Additionally, once you have been presented with this information it's your civic duty to DEMAND a 100% physically verified election. Failure to do this will most likely result in an unelected government, a hacked government, that doesn't care about you or representing your views. If you don't <a href="mailto:elections@utah.gov,uag@utah.gov,gherbert@utah.gov,fstultz@utah.gov,gov17@utah.gov,governor@utah.gov,hpetersen@utah.gov,funk@co.emery.ut.us?subject=Stop the e-Voting Fraud in Utah&amp;body=Dear Governor Jon Huntsman: %0A %0A I am writing to express my appreciation and admiration for the responsible actions that Emery County Clerk Bruce Funk took to uncover the fraudulent sale of flawed voting machines to Utah, including machines which are easily hackable and were rejected from other states, and to call you to action in immediately taking action to correct this problem. %0AI am a resident of Utah and concerned with the security of Utah's new e-Voting machines. Recently I was directed to a series of articles (summarized at http://www.joelevi.com/blog/index.php/2006/10/25/rock-hack-the-vote/) which detail the insecurities of the class of machines that Utahan's will now be forced to use.%0ADue to these insecurities, and the ease of which these machines can be hacked, when I vote I REQUIRE that you give me the option to vote with a paper ballot, NOT ON A POTENTIALLY COMPROMISED MACHINE. Furthermore, I also REQUIRE that for all votes cast on such machines, that a 100% paper-to-digital validation be made (not the one or two percent that have been discussed in the media).%0AYour reply and immediate action (or lack thereof) will have a direct impact on how I vote.%0A %0A">act NOW</a>, after this election it may very well be too late.</blockquote>
+
+<p>[ <a title="Skip down to the video demonstrating how to hack your local election in under 4 minutes" href="#video">Skip Straight to the Video</a> ]</p>
+
+<p>The November mid-term elections are coming up fast, and Utah has a brand-new, electronic voting system that you'll have to use to "cast your ballot." (Maybe your state does, too!)</p>
+
+<h2>Ballots</h2>
+
+<p>Simply put, counting all those paper ballots by hand is just too darn hard! No, really, that's the reason the powers that be give for why we don't use paper ballots.</p>
+
+<p>This leads to an problem inherent in any type of voting: The count is only as accurate as the people (or machines) that are counting. Now, since no party on the ballot wants another party to be counting <i>their</i> votes, there are usually representatives from <abbr title="(at least 'both')">all</abbr> parties on hand to participate in and/or supervise the count. This makes sense for a couple reasons: 1) it keeps the people counting honest, and 2) all persons involved in the count then certify their count as being accurate and complete, therefore theoretically ruling out the possibility of embroiled recounts that seem to have no end (anyone remember Florida?).</p>
+
+<h2>There has to be a better way to count all those ballots</h2>
+
+<p>States have tried punch ballots that can be read by computers to help facilitate the counting of ballots. The idea is that you still have a paper ballot, so it's still accurate. The problem is with those darn hanging chads (not to mention that they're apparently too difficult to punch all the way out for voters of one state that juts out into the ocean in the Citrus Belt... But that's fodder for another rant.</p>
+
+<h2>e-Voting</h2>
+
+<p>So the logic has been: since computers count the ballots anyway, why not just have the people vote right on the computers? That way we can get rid of all those pesky ballots! And of course they're accurate (shhh... don't tell them there's no paper trail, or any other way to double-check the accuracy of the "ballots" cast).</p>
+
+<p>And then you get all the computer hackers in the world working on cracking them. Some do so with malicious intent.</p>
+
+<h2 id="video">Just how easy is it to crack one of these new-fangled contraptions?</h2>
+
+<p>Watch this video and see how you can hack an e-Voting machine with a $30 USB thumb drive (and adapters) and a #2 Phillips screwdriver in under 4 minutes.</p>
+
+<iframe src="https://www.youtube-nocookie.com/embed/aZws98jw67g" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<iframe src="https://www.youtube-nocookie.com/embed/8JESZiLpBLE" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<h2>Scared yet?</h2>
+
+<p>If that doesn't scare you, check into these links.</p>
+
+<ul>
+    <li><a href="https://utahcountvotes.org/" target="_blank">http://utahcountvotes.org/</a></li>
+    <li><a href="https://www.blackboxvoting.org" target="_blank">http://www.blackboxvoting.org</a></li>
+    <li><a href="https://www.blackboxvoting.com" target="_blank">http://www.blackboxvoting.com</a></li>
+    <li><a href="https://www.equalccw.com/dieboldtestnotes.html" target="_blank">http://www.equalccw.com/dieboldtestnotes.html</a></li>
+    <li><a href="https://www.missoulanews.com/News/News.asp?no=4508" target="_blank">http://www.missoulanews.com/News/News.asp?no=4508</a></li>
+    <li><a href="https://www.consortiumnews.com/2004/110604.html" target="_blank">http://www.consortiumnews.com/2004/110604.html</a></li>
+    <li>http://www.onlinejournal.com/Special_Reports/112504Madsen/112504madsen.html - I haven't seen any evidence regarding this one, but if it's true, it's huge.</li>
+    <li><a href="https://www.scoop.co.nz/mason/stories/HL0309/S00150.htm" target="_blank">http://www.scoop.co.nz/mason/stories/HL0309/S00150.htm</a></li>
+    <li><a href="https://www.votescam.com/" target="_blank">http://www.votescam.com/</a></li>
+    <li>http://www.whatreallyhappened.com/flawfound.html</li>
+    <li>http://ustogether.org/Florida_Election.htm</li>
+    <li>http://ustogether.org/election04/FloridaDataStats.htm</li>
+    <li>http://www.rubberbug.com/temp/Florida2004chart.htm</li>
+    <li>http://ustogether.org/election04/PA_vote_patt.htm</li>
+    <li>http://www.thehill.com/morris/110404.aspx</li>
+    <li><a href="https://www.makethemaccountable.com/" target="_blank">http://www.makethemaccountable.com/</a></li>
+    <li>http://www.votergate.tv/</li>
+    <li><a href="https://www.thomhartmann.com/" target="_blank">http://www.thomhartmann.com/</a></li>
+    <li><a href="https://www.rense.com/general59/wastheohioelectionhonest.htm" target="_blank">http://www.rense.com/general59/wastheohioelectionhonest.htm</a></li>
+    <li><a href="https://www.ejfi.org/Voting/Voting-18.htm" target="_blank">http://www.ejfi.org/Voting/Voting-18.htm</a></li>
+    <li>http://www.raba.com/press/TA_Report_AccuVote.pdf</li>
+    <li>http://eff.org/Activism/E-voting/#info-sheets</li>
+    <li><a href="https://www.mutanteggplant.com/singleagent.htm" target="_blank">http://www.mutanteggplant.com/singleagent.htm</a></li>
+    <li><a href="https://www.dailykos.com/story/2004/11/16/225713/53" target="_blank">http://www.dailykos.com/story/2004/11/16/225713/53</a></li>
+    <li>http://www.wired.com/news/evote/0,2645,61243,00.html?tw=wn_story_related</li>
+    <li>http://www.pcworld.com/news/article/0,aid,115608,00.asp</li>
+</ul>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-rock-hack-the-vote -->
+</body>
+</html>

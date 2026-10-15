@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="This is going to be a long post (just shy of 3000 words), but the history and the information is all very relevant. The questions at the very end, if read on…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, When should we start being paranoid? Does Google Know &amp;#8220;Too Much&amp;#8221; about you?" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="When should we start being paranoid? Does Google Know &amp;#8220;Too Much&amp;#8221; about you? — Joe Levi" />
+	<meta property="og:description" content="This is going to be a long post (just shy of 3000 words), but the history and the information is all very relevant. The questions at the very end, if read on…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/" />
+	<meta property="article:published_time" content="2009-12-11T06:34:00" />
+	<meta property="article:modified_time" content="2015-02-12T17:15:20" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="When should we start being paranoid? Does Google Know &amp;#8220;Too Much&amp;#8221; about you? — Joe Levi" />
+	<meta name="twitter:description" content="This is going to be a long post (just shy of 3000 words), but the history and the information is all very relevant. The questions at the very end, if read on…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>When should we start being paranoid? Does Google Know &amp;#8220;Too Much&amp;#8221; about you? — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/#article",
+      "url": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/",
+      "headline": "When should we start being paranoid? Does Google Know &#8220;Too Much&#8221; about you?",
+      "description": "This is going to be a long post (just shy of 3000 words), but the history and the information is all very relevant. The questions at the very end, if read on…",
+      "datePublished": "2009-12-11T06:34:00",
+      "dateModified": "2015-02-12T17:15:20",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "When should we start being paranoid? Does Google Know &#8220;Too Much&#8221; about you?",
+          "item": "https://www.joelevi.com/blog/when-should-we-start-being-paranoid-does-google-know-too-much-about-you/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>When should we start being paranoid? Does Google Know &amp;#8220;Too Much&amp;#8221; about you?</h1>
+				<p class="post-meta"><time datetime="2009-12-11">December 11, 2009</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>This is going to be a long post (just shy of 3000 words), but the history and the information is all very relevant.</p>
+
+<p>The questions at the very end, if read on their own, might sound paranoid or irrelevant, but when put in context of what Google is, and what Google knows about you, you might feel otherwise.</p>
+
+<p>Timelines are used as an illustrative narrative and may be out of sequence. Don’t let that worry you.</p>
+
+<p>Please sit down, keep your arms and legs inside the blog at all times, hold on, and enjoy the ride.</p>
+
+<h3>Google’s humble beginnings</h3>
+
+<p>Google started out as a search engine that “just worked”. It was clean, fast, and gave you very relevant results. When you searched with Google’s search engine you they knew where you came from (the referrer), what you were searching for, and where you went (the destination). That was no more than any other website in the world, so no one cared.</p>
+
+<p>Google used cookies so they “remember” stuff about you on your future trips to their site and began “databasing” this information to build a dossier on you. Google said this was so they could provide better search results, catered just to you. We didn’t care because that was what we wanted anyway.</p>
+
+<h3>Google knows where you surf</h3>
+
+<p>Google started putting advertisements on their search results pages, catered to you. We didn’t mind because they had to pay the bills some how, right?</p>
+
+<p>So, at that time, all this information Google was putting into their “You dossier” was when you visited their site. No problem, if you wanted your privacy, you just didn’t use Google.</p>
+
+<h3>Google knows what’s in your email</h3>
+
+<p>Google came out with Gmail, a web-based email client/server that didn’t cost you a thing (well, other than your privacy and requiring you to look at advertisements). They tempted us with grotesque amounts of storage space. We thought that was cool, so we all got in line, hoping to get an “invite” to Gmail.</p>
+
+<p>Google’s computers “read” your email so they could present “relevant ads”, but they put this information in the “You dossier”, too. Oh, and since it’s email, they now know who emails you, and who you email. They even provided Google Contacts for you to store all their information in as well. Now Google can start adding information to their “You dossier”, too!</p>
+
+<h3>Google knows what’s in your documents</h3>
+
+<p>Google soon realized that people were storing documents and spreadsheets in their Gmail box. Why not offer an “reader” so people could read those documents online without having to download them. So they did, and they even let those documents be “indexed” so you could find the contents inside of them just by searching. Later they even gave you the ability to create and edit those documents online. So now Google knows everything in all your documents, and they have that in the “You dossier”, too.</p>
+
+<p>So, at that point in time, all this still had to do with Google. If you wanted your privacy you just didn’t use Google or Gmail, and didn’t email anyone who used Gmail. But we didn’t really mind. After all, they weren’t Microsoft.</p>
+
+<h3>Google knows more places where you surf</h3>
+
+<p>Then Google started offering people with websites the ability to put Google’s ads on their websites and start earning money. And who doesn’t want free money, right? Ah, but now Google can add information in your customer’s “You dossier” every time they visit your site. Hmmm… this is getting a little bit concerning. But they say they “do no evil”, and they’re not Microsoft, so we can trust them.</p>
+
+<h3>Google knows even more places where you surf</h3>
+
+<p>But some people don’t want to put Google’s ads on their web pages, so how can Google gather data about them? Ah! Google acquired Urchin and turned it into Google Analytics, so now people with websites can learn about who their customers are, and ultimately offer a better website or better products/services. But Google now knows all about your customers anyway, and they can put all this information into their “You dossier”, too.</p>
+
+<h3>Google knows what video you watch, and record</h3>
+
+<p>Google realized that people like to watch videos on the web, so they bought YouTube. Now they know what TV shows, music videos, and home videos you watch, as well as who watches yours. File all that away in the “You dossier”.</p>
+
+<h3>Google knows what you’re looking for, right from the web browser</h3>
+
+<p>Google figured out that not everyone was using their search engine, so they came up with a toolbar that you could install and search right from there, without even going to Google.com. Later they expanded this to include Google Desktop search, so now you can search for stuff on the internet using Google, and stuff on your own computer using Google. You guessed it, this index goes into the “You dossier”, too.</p>
+
+<h3>Google makes it easier to know what you search for</h3>
+
+<p>But then other people started coming out with toolbars with search built-in, and they kind of fell out of vogue. So Google got behind Firefox to compete against Microsoft’s Internet Explorer. Firefox had a built-in search bar (no toolbar plugin needed!), of course, this was Google. Not only that, but Firefox’ homepage featured a Google search bar right there when the browser opened.</p>
+
+<h3>Google knows everything you do in their own web browser</h3>
+
+<p>Oh no! Others (Yahoo, Amazon, MSN (later Bing), etc.) figured out how to change that search provider, and Google’s dominance fell. To combat this Google decided to come out with their own web browser: Chrome. Chrome did away with the “search bar” and the “address bar” and replaced them both with one bar (to rule them all?). You can type and address in the bar, or a search term in the bar and Chrome will serve up whatever it can – but all that traffic is routed through Google, not just searches. So now, even if you don’t search using Google, the resultant website doesn’t run Google Ads or Google Analytics, Google still knows, and can place your entire surfing history into the “You dossier”.</p>
+
+<h3>Google knows what businesses you’re looking for via 411</h3>
+
+<p>Then Google realized that people were using their phones for a lot of stuff, and not many people had the internet on their phones back then. So Google came up with 1-800-GOOG-411, Google’s version of the 411 Information service offered by your telco. Now Google knows what city you’re in, and what your phone number is. Oh, and they can listen in on your phone calls. But it’s okay, because they only have business listings at 1-800-GOOG-411, so it’s not “personal”. Of course, they add all this information into the “You dossier”, too.</p>
+
+<h3>Google knows who you call, and who calls you</h3>
+
+<p>Google then acquired a little company called Grand Central which promised to be your one, universal phone number. People could call you at one number and all your phones would ring. It would also be your universal text/sms inbox, and voicemail box, too. Google bought them and called it Google Voice. Now they know ALL your phone numbers, not just your cell phone, and they know the phone numbers of everyone who calls you. Oh, and wouldn’t it be cool if Google automatically transcribed any voice messages into text? Yup, they do that, so now they know what you’re talking about and can put that into the “You dossier”.</p>
+
+<h3>Google knows who your contacts are</h3>
+
+<p>But what good is a universal inbox without a universal address book? Sure enough, now Gmail and Google Voice have names, email addresses, phone numbers, and category information about all your friends, family, and coworkers. All that is field in the “You dossier”, and “You dossier’s” on all of them are opened up. Wait, what?!</p>
+
+<h3>Google knows roughly where you are</h3>
+
+<p>Google realized that you still live in the “real” world, not just on the computer, and they weren’t gathering ANY of that data (well, just<br />
+yo<br />
+ur rough location based on your IP address, but that only got them into your county, they still didn’t know where you were). So Google acquired a company called Keyhole and provided satellite maps of the world (and later the Moon, Mars, and even the Galaxy). That was cool! You could get directions from point A to point B and actually SEE the track you’d take to get there. You didn’t even have to know where point B was exactly, you could search for it, after all, that’s what Google is good at. But now Google knows where you live and work (if they didn’t already when one of your friends put your contact information into their Google Contacts address book, or if you didn’t include your address in an email that you sent to one of your friends). Okay, now this is getting a little freaky.</p>
+
+<p>It’s highly likely that Google has a picture of your house taken from space.</p>
+
+<p>Google probably even has a picture of your house taken from a car driving down your street.</p>
+
+<h3>Google knows your credit score &amp; to whom you owe money</h3>
+
+<p>But Google is an advertising company, and just because they know your name, your surfing and searching habits, what business you call, who you call and who calls you, and your geographic locations, Google still didn’t know how much you make, and wouldn’t this come in really handy to an advertiser? I mean, if they knew your credit score, they could advertise payday loans to people with low scores, and luxury items to people with high scores. So Google got into the credit reporting business, but they promise they’ll only use your credit score to advertise luxury items to people with high credit scores (and won’t take advantage of those with low credit scores). In any case, your score (and what businesses you have accounts with?) are added to the “You dossier”.</p>
+
+<h3>Google knows everything you do in their own operating system</h3>
+
+<p>People stopped using their desktops as much and started using laptops, then netbooks. But netbooks were small and slow, well, slow when using desktop operating systems like Windows XP and Mac OS X. Linux was small and fast, so Google released Chrome OS, a Linux-based operating systems with Chrome Browser and links to Google Docs, Gmail, and all things Google. So EVERYTHING you do on that netbook now goes into the “You dossier”.</p>
+
+<h3>Google knows about you, even if you don’t know it’s Google</h3>
+
+<p>Google realized that with their huge Content Distribution Network (CDN) they could sell businesses application time on their servers and email/contact/calendar/to-do type “stuff” as well. Now when people go to JoeTheWebGuy.net, or email anyone at that domain, it may hosted at Google. Without the visitors even knowing it, their information is being added to their own “You dossier”.</p>
+
+<h3>Google knows what you do on your cell phone</h3>
+
+<p>People started using their phones to access the internet, no computer needed.</p>
+
+<p>Google started writing apps for smart phones (Windows Mobile, etc.), but then Google bought a mobile OS company so they could get an OS to put on “smart phones” of their own. Now Google’s Android phones are everywhere. They can sync to your company’s mail server and with your Google account (which now has email, search history, contacts, to-do lists, documents, calendars, …) and put all of that on your phone. Guess what you do with your phone? Yup, make phone calls, so now Google can know that, too. Even if they don’t tap in to your cell calls, they offer a Google Voice app so all your calls can go out through Google Voice and in through Google Voice (they also have this app for Windows Mobile and other cellular phones, too).</p>
+
+<h3>Google knows exactly where you are</h3>
+
+<p>Cellular phones have to be in range of a cellular tower to work, so now Google has your location zeroed down to the coverage area of the cell tower that you’re using (not just your county, like before). Oh, and what does every smart phone on the market have in it these days? That’s right! GPS! So now they know where you are within a few meters – but only if you turn your GPS receiver on.</p>
+
+<p>What could Google do to get you to turn on your GPS receiver? How about release an app to show you what’s around you? Google Places Directory does that. What about a navigation service? Google Maps Navigation does that. Even the camera app allows you to geo-tag your pictures so you know not only when you took them, but where.</p>
+
+<p>But that’s okay. You don’t have to have a Google phone, you don’t have to use Google Desktop, you don’t have to use Gmail (or send mail to those who do), you don’t have to have Google Voice… But you no longer know what websites are running Google Ads or Google Analytics, you no longer know what applications are running on Google’s CDN, you don’t know who is using Gmail as their email domain. It’s getting harder and harder to keep stuff out of Google’s “You dossier”.</p>
+
+<h3>Google knows about your body &amp; health</h3>
+
+<p>Google even offers Google Health, to which you can add “important medical records” and prescriptions, and can provide all your physical details (age, sex, height, BMI, medical conditions, medications, allergies, medical procedures, test results, immunizations, insurance information, files and images). Your doctors office or insurance provider can even sign up to sync up all the information they have about you into your Google Health account. Need I go on? Yup, all this is part of the “You dossier”.</p>
+
+<h3>And then Google went nuclear…</h3>
+
+<p>Everything you do on the internet has an IP address assigned to it, but you don’t know the IP address of Facebook, or Microsoft, well, anyone for that matter, right? You rely on something called DNS. DNS servers translate your request to go to JoeTheWebGuy.net into its IP address without you even knowing (or caring).</p>
+
+<p>Google recently announced that they are getting into the DNS business. This means people can remove at least one (usually two or three) servers from their rack and just use Google Public DNS. This will save money and manpower for whoever uses Google Public DNS instead of their own DNS servers. This means your employer, your school, even your ISP might soon be funneling every DNS request you make through Google. Google can then put all that information into the “You dossier”.</p>
+
+<h3>Google knows… let’s recap</h3>
+
+<ul>   <li>Everything you search for on the internet, on your cell phone, or on your netbook, or on your desktop computer, Google can know.</li>    <li>Every email you send or receive, Google can know.</li>    <li>Every phone call you make or receive (even VoIP), Google can know.</li>    <li>Every web page you visit, instant messenger you use, RSS feed you read, newsgroup you post to, Google can know.</li>    <li>Every document you have on your computer (and everything inside of it), Google can know.</li>    <li>Every company that you owe money to, every late payment you’ve made, and the resulting credit score, Google can know.</li>    <li>Every detail about you body (medications, conditions, operations, doctor’s notes), Google can know.</li>    <li>Google can even know your exactly location at any given time of the day or night.</li> </ul>
+
+<h3>What does Google have to say about your privacy?</h3>
+
+<p>As reported by <a href="https://www.itnews.com.au/News/118307,google-says-complete-privacy-does-not-exist.aspx" target="_blank">IT News</a>, after being sued by a Pennsylvania couple when Google allegedly trespassed on their private road to include Google Street View images, Google had this to say:</p>
+
+<blockquote>   “Today’s satellite image technology means that even in today’s desert, complete privacy does not exist.” </blockquote>
+
+<p>What does Google say about your online privacy? Google’s CEO, Eric Schmidt had this to say to CNBC’s Maria Bartiromo:
+
+<blockquote>   Search engines, including Google, do retain […] information for some time.</blockquote></p>
+
+<p>How long? Well, Google’s cookies don’t expire until 2030, if
+
+<p>that’s any indication. Schmidt continues:</p>
+
+<blockquote>   If you have something that you don’t want anyone to know, maybe you shouldn't be doing it in the first place<strong><em>.</em></strong></blockquote></p>
+
+<p>Now wait a minute… everyone in my family has a birthday, I don’t necessarily want everyone in the world to know those things, yet I have them in my Google Contacts.
+
+<p>I may have health information in my Google Heath account, but I don’t want everyone to know what prescription medication I may or may not be taking.</p>
+
+<p>I have a credit card that I use to buy things with via Google Checkout, I don’t want everyone in the world to know what it is.</p>
+
+<p>Ironically, in 2005<em>,</em> Schmidt “blacklisted” CNET by refusing to talk to their reporters for a year just because they published his personal information (including salary, neighborhood, hobbies and political donations), all obtained through Google searches.</p>
+
+<h3>The hard questions…</h3>
+
+<p>At what point is it okay for us to start being skeptical about Google’s “do no evil” policy?</p>
+
+<p>At what point are we justified in being paranoid?</p>
+
+<p>At what point do we stand up and that “that’s too much information for any one company to know”?</p></p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-when-should-we-start-being-paranoid-does-google-know-too-much-about-you -->
+</body>
+</html>

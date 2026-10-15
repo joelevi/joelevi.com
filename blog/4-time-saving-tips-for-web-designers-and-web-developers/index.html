@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="I&#x27;ve been a professional web developer since 1994 (they didn&#x27;t call us that back then, but that&#x27;s what we were). We&#x27;re the folks that take a concept and turn…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, 4 Time-Saving Tips for Web Designers and Web Developers" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="4 Time-Saving Tips for Web Designers and Web Developers — Joe Levi" />
+	<meta property="og:description" content="I&#x27;ve been a professional web developer since 1994 (they didn&#x27;t call us that back then, but that&#x27;s what we were). We&#x27;re the folks that take a concept and turn…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/" />
+	<meta property="article:published_time" content="2008-05-09T16:04:31" />
+	<meta property="article:modified_time" content="2008-05-09T16:04:31" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="4 Time-Saving Tips for Web Designers and Web Developers — Joe Levi" />
+	<meta name="twitter:description" content="I&#x27;ve been a professional web developer since 1994 (they didn&#x27;t call us that back then, but that&#x27;s what we were). We&#x27;re the folks that take a concept and turn…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>4 Time-Saving Tips for Web Designers and Web Developers — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/#article",
+      "url": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/",
+      "headline": "4 Time-Saving Tips for Web Designers and Web Developers",
+      "description": "I've been a professional web developer since 1994 (they didn't call us that back then, but that's what we were). We're the folks that take a concept and turn…",
+      "datePublished": "2008-05-09T16:04:31",
+      "dateModified": "2008-05-09T16:04:31",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "4 Time-Saving Tips for Web Designers and Web Developers",
+          "item": "https://www.joelevi.com/blog/4-time-saving-tips-for-web-designers-and-web-developers/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>4 Time-Saving Tips for Web Designers and Web Developers</h1>
+				<p class="post-meta"><time datetime="2008-05-09">May 9, 2008</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>I've been a professional web developer since 1994 (they didn't call us that back then, but that's what we were). We're the folks that take a concept and turn it into an interactive web project that can be viewed on a computer monitor (of any size and resolution), on any number of operating systems (Windows, Mac, Linux, etc.) using any number of web browsers (Firefox, Safari, Opera, that one browser by Microsoft, etc.). We're not like a print shop that can turn a design into a printed version pixel for pixel.</p> <p>Then again... Not even print shops can realize a design <em>exactly</em> like a designer wants. There may be issues with dpi, bleed, color saturation, glossiness, etc. Most of those are due to the medium in which the design will be published. </p> <p>And there is is: there are limitations to the print media itself; limitations that a designer must be acceptable with. Limitations that a <em>good </em>designer understands and is willing to work around, or just accept.</p> <p>The web is no different. There are limitations, nuances, and trade-offs that must be made. If you're a designer and you're not comfortable with this, you may want to stick with print.</p> <p>I've worked with many a graphic designed through the years many with fancy degree's like BFA or MFA. Most had substantial portfolios of their collected works (which is like a resume' crossed with "show and tell"). Most had ego's a mile high and could never be convinced that they were "wrong" about anything -- after all, they had a fancy degree and a substantial portfolio which would apparently prove otherwise.</p> <p>The root of all problems that I've run into when working with designers is that they're stuck in "print" mode. They're not entirely to blame. For example, even Photoshop doesn't let you specify the size of your fonts in pixels (just points).</p> <p>Getting the project off on the right foot should begin with a solid understanding of how the others involved will be delivering items, and how they should be delivered. Doing so will same time, money, and reduce frustration.</p> <p>That said, let's get right to the good stuff. </p> <h3>1. There is no such thing as DPI on the web</h3> <p>This is primarily because there are no standard subunits of measure in an inch on a monitor. No dots, no pixels, nothing; a 15 in monitor may have 640 pixels across, where another may have 1,280 pixels across.</p> <p>Contrary to popular opinion, monitors don't display stuff in 72dpi or 96dpi. They don't display DPI at all. They display pixels. The number of pixels per inch varies by monitor size, resolution, manufacturer, and model.</p> <p>DPI (or "dots per inch") is a measurement for level of detail on a printed page; monitors are different.</p> <h3>2. Don't use "points" or "picas" on the web</h3> <p>According to Wikipedia, there are 72 points to the inch (12 points per pica, and 6 picas per inch). Since there are no standards for dots or pixels per inch across monitors, there similarly can be no standard for points nor picas.</p> <h3>3. Use text for text</h3> <p>If you can read something on the screen, chances are you should use text -- not a graphic that has a series of organized dots in it that represent text. There are any number of reasons for this:</p> <ul> <li>search engines can't index organized dots inside images;</li> <li>screen readers can't read organized dots inside images;</li> <li>to internationalize graphics representing words you'd have to have a number of separate images (or separate sprites within a single image) to represent that word (or phrase) in each language;</li> <li>when you need to change a word it's much easier to do when it's text, and not a graphic;</li> <li>transmitted text is much smaller (and therefore much faster) than graphics;</li> <li>text can be machine translated into another language, whereas graphics cannot;</li> <li>when a page loads, text shows up right away; graphics can take some time to load in, leaving an empty spot on the page where your text should go.</li></ul> <p>Obviously, this is not an exhaustive list (and feel free to add your comments below), but the point is clear.</p> <p>There are some exceptions to this rule, namely:</p> <ul> <li>when the text is part of a graphical logo, it may be okay to use a graphic;</li> <li>when the text is part of a tagline, which logically extends a graphical logo, it may be okay to use a graphic;</li> <li>when the text is part of a graphic (a photo or some other picture), it may be okay to put the text inside that graphic.</li></ul> <p>What are poor arguments for using a graphic instead of text:</p> <ul> <li>I want the text to look just so, and I can't guarantee that with plain text;</li> <li>I want to use a certain font, and my audience doesn't have that on their machines, so I want to use a graphic;</li> <li>I'm not worried about speed or loading times, it loads fast enough on my machine;</li> <li>All our customers can read (insert language here), so I don't need to worry about internationalization or translation;</li> <li>This font helps communicate something to our customers, "default fonts" don't do that;</li> <li>I'm not worried about Search Engine Optimization, that's your job;</li> <li>All of our customers can see, they don't need screen readers;</li> <li>I'll be happy to create all the images in all the different languages that we need.</li></ul> <p>Again, not an exhaustive list, just excuses that I've actually heard over the years (please add excuses that you've heard in the comments below).</p> <h3>4. There is no CMYK</h3> <p>CMYK is for printers, RGB is for monitors. If you get your colors perfect in CMYK, know that we're only going to have to change them to RGB if you want them to show up on the screen. 'Nuff said.</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-4-time-saving-tips-for-web-designers-and-web-developers -->
+</body>
+</html>

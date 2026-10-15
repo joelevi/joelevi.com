@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="First off, the official Home Assistant &quot;Getting Started&quot; page has a bunch of information that is VERY useful. The problem with options is that sometimes it…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, Home Assistant, Part 2: Installation and Hardware Considerations" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Home Assistant, Part 2: Installation and Hardware Considerations — Joe Levi" />
+	<meta property="og:description" content="First off, the official Home Assistant &quot;Getting Started&quot; page has a bunch of information that is VERY useful. The problem with options is that sometimes it…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/" />
+	<meta property="article:published_time" content="2019-12-11T09:01:32" />
+	<meta property="article:modified_time" content="2020-06-11T15:31:32" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Home Assistant, Part 2: Installation and Hardware Considerations — Joe Levi" />
+	<meta name="twitter:description" content="First off, the official Home Assistant &quot;Getting Started&quot; page has a bunch of information that is VERY useful. The problem with options is that sometimes it…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Home Assistant, Part 2: Installation and Hardware Considerations — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/#article",
+      "url": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/",
+      "headline": "Home Assistant, Part 2: Installation and Hardware Considerations",
+      "description": "First off, the official Home Assistant \"Getting Started\" page has a bunch of information that is VERY useful. The problem with options is that sometimes it…",
+      "datePublished": "2019-12-11T09:01:32",
+      "dateModified": "2020-06-11T15:31:32",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Home Assistant, Part 2: Installation and Hardware Considerations",
+          "item": "https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Home Assistant, Part 2: Installation and Hardware Considerations</h1>
+				<p class="post-meta"><time datetime="2019-12-11">December 11, 2019</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>First off, the official <a href="https://www.home-assistant.io/getting-started/" target="_blank" rel="noopener noreferrer">Home Assistant "Getting Started" page</a> has a bunch of information that is VERY useful. The problem with options is that sometimes it take a lot of trial and error (which could take a significant amount of time and virtually limitless frustration) before you find out what is "right" for you. Note that what is "right" for me may not be "right" for you, but I'll explain what I did, the lessons I learned, and the reasons I went with the solution I did.</p>
+
+<h2>Basic Considerations</h2>
+
+<p>If you want to play around with Home Assistant, all you need is a Raspberry Pi 3 B+ or higher, an Application Class 2 microsd card (at least 32GB), a case, and a power supply that will give you at least 2.5A. It's also recommended to connect this to your home network via ethernet rather than WiFi. Alternatively, you can use an Intel NUC i3 or higher (though I'd suggest an i5 or i7). I didn't have a Pi handy, and I had some of the other options below readily available, so I went down that route instead.</p>
+
+<p>The next option is a virtual machine. VMs give you a lot of benefits (snapshots, ease of setup, ease of management, ability to run multiple lower-powered computers on one piece of hardware, reduced electrical and heat considerations, speed of setup, ability to migrate VMs to another physical host, etc.</p>
+
+<h2>Round One: The Experiment</h2>
+
+<p>That's the option I went with first: a Ubuntu workstation running on Windows Hyper-V, running Home Assistant in Docker. That was a fantastic setup and I learned quite a bit, but didn't have access to the USB ports on the host, so I couldn't use any USB Zigbee or ZWave hubs. This was an experimental build which I didn't intend to be a long-term solution, but there's no reason why it couldn't be (other than the USB port access)</p>
+
+<h2>Round Two: The Hassio Virtual Machine</h2>
+
+<p>My second setup used Hassio as a virtual appliance in Windows Hyper-V. The Home Assistant website even provides a .VHDX file to make setup super-quick and easy (a little too quick): <a href="https://www.home-assistant.io/hassio/installation/" target="_blank" rel="noopener noreferrer">https://www.home-assistant.io/hassio/installation/</a></p>
+
+<p>Just like the last VM, this one didn't give me access to the USB ports (if you're using ESX, that's probably not going to be a problem for you, but I was running Hyper-V). This version was where I really started to get integrations and automations set up. Everything would have been great and I probably would have stayed with this solution if it weren't for one fatal flaw: the supplied .VHDX is set to have a working partition of 6GB. After a month I ran out of space (with all my logging, snapshots, and plugins).</p>
+
+<p>This shouldn't be a problem since I have a total of 45TB (yes, TB) of disk space on the server hosting. So, I expanded the space in the .VHDX, and rebooted the VM... Nope, it still wouldn't boot into Home Assistant - apparently, Hass.io only expands its volume to fill the available disk space on install, and no one I asked could figure out how to get to a command prompt that would allow me to execute a command to expand it. I could have mounted the .VHDX in Windows and deleted enough files to get the VM to boot, but this would only delay the inevitable on that VM. Rather than starting over on the .VHDX solution, and since I had a couple bare-metal computers laying around, I opted for a physical solution.</p>
+
+<h3>Round Three: Ubuntu with Hassio running in Docker (updated 4/7/2020)</h3>
+
+<p>Since the best solution for me (thus far) has been Ubuntu with Hassio running in Docker, that's how I proceeded with this round. I started with Ubuntu Server and went through the software setup, but Home Assistant always hung at the "setting up... this may take up to 20 minutes" screen... An hour and multiple reboots later, I decided to go back to Ubuntu Workstation. Here's the setup that <a href="https://github.com/TJPoorman" target="_blank" rel="noopener noreferrer">my buddy TJ</a> put together (based on work by Frenck and others).</p>
+
+<p>After installing Ubuntu run:<br />
+<code><br />
+sudo apt update<br />
+sudo apt upgrade<br />
+</code></p>
+
+<p>After the updates have completed, run:<br />
+<code><br />
+sudo add-apt-repository universe<br />
+sudo apt update<br />
+sudo apt install -y apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common<br />
+sudo systemctl disable ModemManager<br />
+sudo apt purge modemmanager<br />
+sudo curl -fsSL get.docker.com | sh<br />
+sudo curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh" | sudo bash -s<br />
+</code></p>
+
+<p>Once that's done, you should have a fully updated Ubuntu installation, Docker installed, and Hassio installed into a docker container.</p>
+
+<p>One thing I could never get to work on the Docker configuration was USB: I couldn't figure out how to get my <a href="https://amzn.to/2zoHdu5" target="_blank" rel="noopener noreferrer">Zigbee</a> and <a href="https://amzn.to/37tVN00" target="_blank" rel="noopener noreferrer">Z-Wave-Plus</a> sticks recognized in Home Assistant. Everything else worked pretty well. I did have difficulty updating Home Assistant via the HA user interface, and often an upgrade would just hang. Because I did most of my work remotely (while on my lunch break at work), when HA wouldn't come back online after an update, I was stuck until I got home and could reboot the host computer.</p>
+
+<p>It got so bad that I finally just put a <a href="https://amzn.to/3fdrjBZ" target="_blank" rel="noopener noreferrer">TP-Link Kasa smart outlet</a> inline with the power to the Linux computer so I could use the Kasa app to power cycle the whole box. I know, I know, that's not a good idea - but I was frustrated, and it worked, but it wasn't a long-term solution.</p>
+
+<h2>Round Four: The Current (updated 6/1/2020)</h2>
+
+<p>I didn't really want to go the route of a Raspberry Pi because the Pi 4 doesn't have a a stable boot from USB option (at the time of this writing), and I didn't want to wear out a micro-SD card and have to start all over again. So I figured I'd run Home Assistant OS on an old computer - but there's not a generic image for that - but there is an image for the <a href="https://amzn.to/3fgI0N0" target="_blank" rel="noopener noreferrer">Intel NUC</a>!</p>
+
+<p>I went on Amazon to look into how much a NUC would cost. Ideally I wanted an i5, but I figured an i3 would be faster than a Pi, so I started digging. Most were in the $300 range (which isn't bad when you consider the cost of a Rasperry Pi 4, a high-end micro-sd card, a power supply, and a case/enclosure with cooling). But then I found something awesome: an Intel NUC i5, with 4GB RAM (and an empty slot for more, if needed), a 128GB NVME m.2 drive, a 1TB rotational SATA hard drive, USB 3.2 ports, ethernet port, Thunderbolt port, WiFi, Bluetooth, case and power supply included, and a copy of Windows 10 Pro - all that for $64.00. Yes, sixty-four US dollars! I bought it figuring there must be something wrong with it... It arrived, it worked as a Windows machine fantastically, and after I pulled the NVME and flashed Home Assistant on it (and removed the 1TB SATA drive), I was in business!</p>
+
+<p>Both my USB sticks worked great, it booted fast, and all was happy. So happy that I decided to buy a few more. Apparently there was a typo with the listing, and the current cost is $644.00 - not the $64.00 that I was charged. Even still, for that price, it's a fantastic machine for home use, but WAY over-powered for Home Assistant. Regardless, that's what I'm using now.</p>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=leviz&language=en_US&marketplace=amazon&region=US&placement=B07FVTDN35&asins=B07FVTDN35&linkId=89d0c7ad1f17839957609172e7ac0711&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<p>If you're not willing to spend $644, this is the NUC I'd suggest for now. With under 20W power consumption, it's only a matter of time before it pays for itself over my 350W PC.</p>
+
+<h2>Setup and Configuration</h2>
+
+<p>From here, from any computer on your network, navigate to your server at the Home Assistant port: http://111.111.111.111:8123 (using your server's IP address, of course). That may take up to 20 minutes, but mine took significantly less time (like under 2 minutes — this will depend on the speed of your CPU, etc.).</p>
+
+<p>From there, I set everything up locally, but that sounds like information for another post. ;)</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-ha-2-installation-hardware-considerations -->
+</body>
+</html>

@@ -10,7 +10,7 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 
 - [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, QRZ (KF7NWA), résumé, Books, Mesh / GitHub, vCard, and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
-- [Articles](https://www.joelevi.com/blog/): Joe’s articles and blog posts (coming soon); individual posts will live at /blog/<slug>/
+- [Articles](https://www.joelevi.com/blog/): 2123 archived articles and blog posts (1999–2021); individual posts at /blog/<slug>/
 - [Books](https://www.joelevi.com/books/): Two sections — **Books Joe has Written** (Miles the Muskrat series by Joe Levi, with Amazon buy links and covers) and **Books Joe has Read** (currently reading + recently read bookshelf with Bootstrap-style cards, hosted covers, and Amazon Associate “Buy on Amazon” links). Former `/library/` redirects here.
 
 ## Contact
@@ -61,6 +61,40 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 - [Cache Valley Mesh](https://cachevalleymesh.com/) — local mesh networking community
 - [Crave Broadband](https://www.cravebroadband.com/) — Northwest Cache Valley, Utah Wireless Internet Co-Op
 
+
+
+
+
+
+## Articles (newest)
+
+- [Tales From a Computer Guy: "Something Exploded in There"](https://www.joelevi.com/blog/tales-from-a-computer-guy-something-exploded-in-there/) — 2021-08-19
+- [The Great Hack of 2020](https://www.joelevi.com/blog/the-great-hack-of-2020/) — 2020-12-15
+- [Regarding Texas' Petition to the Supreme Court concerning the 2020 Election](https://www.joelevi.com/blog/regarding-texas-petition-to-the-supreme-court-concerning-the-2020-election/) — 2020-12-11
+- [Tales From a Computer Guy: "It Won't Turn On!!!"](https://www.joelevi.com/blog/tales-from-a-computer-guy-it-wont-turn-on/) — 2020-11-09
+- [OPPO Watch Extended Review: A Fresh Look at the "Google Watch"](https://www.joelevi.com/blog/oppo-watch-review/) — 2020-09-18
+- [Product Review: KeySmart Pro, Star Trek Edition - with built-in Tile](https://www.joelevi.com/blog/product-review-keysmart-pro-star-trek-edition-with-built-in-tile/) — 2020-06-10
+- [Home Assistant, Part 2: Installation and Hardware Considerations](https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/) — 2019-12-11
+- [Home Assistant, Part 1: Yet Another Home Assistant Convert](https://www.joelevi.com/blog/ha-1-yet-another-home-assistant-convert/) — 2019-12-10
+- [Let's do something meaningful to stop mass-murders](https://www.joelevi.com/blog/do-something-meaningful-to-stop-mass-murders/) — 2019-08-08
+- [AREDN Node in Cache Junction](https://www.joelevi.com/blog/aredn-node-in-cache-junction/) — 2019-06-11
+- [Why am I “Republican”?](https://www.joelevi.com/blog/why-am-i-republican/) — 2019-06-01
+- [State Central Committee of the Utah Republican Party](https://www.joelevi.com/blog/scc/) — 2019-04-10
+- [Our dog ate my new phone!](https://www.joelevi.com/blog/our-dog-ate-my-new-phone/) — 2019-01-29
+- [Life's not so Good with our LG Dishwasher](https://www.joelevi.com/blog/lifes-not-so-good-with-our-lg-dishwasher/) — 2018-08-29
+- [Choetech 50W 6-Port Desktop USB Charger (Product Review)](https://www.joelevi.com/blog/choetech-50w-6-port-desktop-usb-charger-product-review/) — 2018-08-16
+- [Being Offended vs. Taking Offense](https://www.joelevi.com/blog/being-offended-vs-taking-offense/) — 2018-05-07
+- [Part 1: The Problem with Utah Politics](https://www.joelevi.com/blog/problem-with-utah-politics/) — 2018-03-20
+- [Gun Friends: Support Amazon March 1st, 2018!](https://www.joelevi.com/blog/gun-friends-support-amazon-march-1st-2018/) — 2018-02-28
+- [URIs: The Anatomy of a Web Address](https://www.joelevi.com/blog/anatomy-web-address/) — 2018-01-24
+- [Finally, a Successfully UTGOP SCC Meeting!](https://www.joelevi.com/blog/finally-successfully-utgop-scc-meeting/) — 2017-12-19
+- [BREAKING: UTGOP Coup Happening NOW (video)](https://www.joelevi.com/blog/utgop-coup/) — 2017-12-15
+- [My GEICO Horror Story: It feels like GEICO is punishing me for being the victim](https://www.joelevi.com/blog/geico-house-hits-car-part-2/) — 2017-09-21
+- [The Republic is dead. Long live the Republic!](https://www.joelevi.com/blog/republic-dead-long-live-republic/) — 2017-08-16
+- [Report on Pocatello ARC Eclipse Event Planning Meeting](https://www.joelevi.com/blog/pocatello-arc-eclipse-planning-meeting/) — 2017-08-11
+- [Help Keep Solar Affordable in Utah](https://www.joelevi.com/blog/help-keep-solar-affordable-utah/) — 2017-08-09
+
+Full archive: 2123 posts at https://www.joelevi.com/blog/ (also listed in sitemap.xml).
 ## Optional
 
 - Résumé includes named references and testimonials; recent reading titles link via Amazon Associates on the résumé page (see footer disclosure there)

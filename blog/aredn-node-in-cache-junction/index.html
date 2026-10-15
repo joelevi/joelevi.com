@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="I&#x27;m a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work. Before I jump into what…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, AREDN Node in Cache Junction" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/aredn-node-in-cache-junction/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="AREDN Node in Cache Junction — Joe Levi" />
+	<meta property="og:description" content="I&#x27;m a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work. Before I jump into what…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/aredn-node-in-cache-junction/" />
+	<meta property="article:published_time" content="2019-06-11T12:48:45" />
+	<meta property="article:modified_time" content="2019-06-11T12:48:45" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="AREDN Node in Cache Junction — Joe Levi" />
+	<meta name="twitter:description" content="I&#x27;m a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work. Before I jump into what…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>AREDN Node in Cache Junction — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/#article",
+      "url": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/",
+      "headline": "AREDN Node in Cache Junction",
+      "description": "I'm a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work. Before I jump into what…",
+      "datePublished": "2019-06-11T12:48:45",
+      "dateModified": "2019-06-11T12:48:45",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AREDN Node in Cache Junction",
+          "item": "https://www.joelevi.com/blog/aredn-node-in-cache-junction/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>AREDN Node in Cache Junction</h1>
+				<p class="post-meta"><time datetime="2019-06-11">June 11, 2019</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<p>I'm a firm believer in HAM Radio as a tool for communications especially during emergencies when traditional methods may not work.</p>
+
+<p>Before I jump into what AREDN is, how to use it, and all the nitty-gritty details, here's some background for the non-HAMs in the audience. <a href="#aredn">For those of you who want to jump right into the AREDN goodies, you can jump right down to it</a>.</p>
+
+<h2>The Salt Lake Tornado of 1999</h2>
+
+<p>Back in 1999, a <abbr title="F2">major tornado</abbr> ripped through downtown Salt Lake City, Utah<sup><a title="Wikipedia: 1999 Salt Lake City tornado" href="https://en.wikipedia.org/wiki/1999_Salt_Lake_City_tornado" target="_blank" rel="noopener noreferrer">1</a></sup>. I was working for an ad agency one block South of its path. Due to the mountains on either side of the valley, it's rare for us to see tornados along the Wasatch Front, and this one was among the most notable tornadoes to hit west of the Great Plains in the 20th century — and only the second tornado to hit in Utah which resulted in a fatality since 1884. Luckily, my building was spared and none of my friends or co-workers were injured. City officials asked residents to stay off the phone lines as much as possible to allow for priority calls to make it through the circuits. My cell phone couldn't get through (whether due to towers being down, or airwaves being saturated with calls, I don't know). Internet was down at the office. After over 30-minutes of trying from a land-line, I was able to get through to my wife: "I'm okay. I'm safe. I'm at work. I don't know how soon I'll be able to get home tonight. They want us to keep the phone lines clear. I love you." In my effort to be brief, I'd neglected to tell her about the tornado, and she had no idea either. She had no idea what I was talking about. HAM Radio would have come in very handy to be able to communicate with her regarding my status.</p>
+
+<p>The mayor ordered the evacuation of the city of all non-residents and non-essential personnel. I headed home. My typical hour commute took me six. Despite evacuating at 4pm, I didn't make it home until after 10pm.</p>
+
+<p>Due to this and other personal experiences, my wife and I decided to obtain FCC licenses as HAM Radio operators.</p>
+
+<iframe style="width: 560px; max-width: 100; height: 315px; max-height: 315px;" src="https://www.youtube-nocookie.com/embed/aMiJV_eLkmI" frameborder="0" allowfullscreen="allowfullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe>
+
+<h2>Voice versus Data</h2>
+
+<p>Although it's arguably the most personal method, voice is one of the least efficient means of communication. Spoken protocols have to be put in place to ensure the accuracy of messages communicated by spoken words. To address this, radio operators around the world have devices various codes (Morse being one of the most famous) to reduce the bandwidth needed to communicate messages - dits and dahs are much easier to distinguish than words, and there's not dialect or accent to take into consideration.</p>
+
+<p>Later, HAM operators used a mechanism called PACKET to send and receive digital data. Just like computer modems, these devices could send low-speed (by today's metrics) transmissions, receive an acknowledgment, correct for errors, and request unclear packets to be re-sent. This concept allowed operators to send much more clear and information-rich messages in much smaller slices of time.</p>
+
+<p>Computer modems eventually gave way to proper network devices (routers, switches, interface cards, etc.). Finally, in the late 1990's, wireless networking (Wi-Fi) would start to become commercially available for businesses and home users. Today, you'll be hard-pressed to find a home without at least one Wi-Fi device in it.</p>
+
+<h2 id="aredn">Applying Data Network Concepts to HAM Radio</h2>
+
+<p>The Davis County Amateur Radio Club used this concept to track cross-country runners at an event called the "Antelope Island Buffalo Run", a footrace with segments up to 100 miles on Antelope Island. Antelope Island has virtually no telephone coverage (cellular or otherwise), and is challenging to communicate around using hand-held radios due to its mountainous topology. The club operates numerous repeaters on the island, which are able to bridge the far-reaches of the island via its mountain-top repeater station.</p>
+
+<p>As runners would come through each checkpoint, race officials would record their number and the time on a paper spreadsheet. HAM radio operators would then data-enter these hand-written records into custom-developed software clients which would batch and transmit to a central server which operated as a database. Race officials could ask for the location of a runner and we could report the last checkpoint they'd cleared, and the time at which they did so. The system worked great, but required some fairly expert knowledge and deployment to create and implement the system.</p>
+
+<p>As commercial technology has progressed, traditional data networks have, too, but they haven't had much overlap with HAM Radio — until recently.</p>
+
+<p>As Wi-Fi became more popular, HAMs started to take note of some of the frequencies which the commercial/residential Wi-Fi products were using, and that we have some overlap with our HAM bands. Before long, HAMs began cooking up custom firmware to run on off-the-shelf routers to take advantage of the operating privileges we have and built our own, HAM-private data network. Utilizing mesh networking (with auto-discovery and auto-"healing" concepts), we could deploy inexpensive networking equipment and build a Wi-Fi net.</p>
+
+<p>HSMM-Mesh, Broadband Hamnet, and later AREDN were born.</p>
+
+<p>Initially, these nodes (individual radios) were based on Linksys WRT54G routers (flashed with the custom firmware); and powered by battery, solar, or grid. Since these devices were now operated under the HAM Radio regulations, we could utilize higher gain antennas and greater power output than the "home" units were allowed. They could be deployed at intervals dictated by topography, to create a network which could be accessed by any other HAM user. Onto this network could be connected (via ethernet) cameras, VoIP phones, databases, web servers, file server, printers, chat clients, and really anything else that could be connected to any other ethernet-type network.</p>
+
+<p>As time went on, the limitations of the Linksys WRT54G (and similar) routers began to become more evident: the devices weren't weather resistant (requiring additional hardware to enclose them), they were more temperature-sensitive than permanent installations on roof-tops and mountain-tops would permit, and ultimately, the radio chip which they utilized was fairly "closed" in our ability to open them up to use other frequencies, such as -2 and -1 in the 2.4GHz Wi-Fi range. By accessing these channels, HAM operators could use the non-public portion of the 2.4GHz range, quieting the noise from residential and commercial Wi-Fi.</p>
+
+<h2>AREDN</h2>
+
+<p>The AREDN team was formed. <a title="Amateur Radio Emergency Data Network" href="https://www.arednmesh.org/" target="_blank" rel="noopener noreferrer">AREDN</a> stands for Amateur Radio Emergency Data Network and originally utilized primarily Ubiquity WISP equipment - running a custom firmware. This overcame the weather and temperature concerns, reduced the deployment cost (no more amplifiers, weather-proof enclosures, custom mounting solutions, and additional antenna purchases required), and provided a more appropriate platform un which to build the network - and we could access the -2 and -1 channels in the 2.4 GHz range.</p>
+
+<p>Since then, other vendor support has been added, as well as expansion into 5GHz, 3.8GHz, and 900Mhz; including dual-polarity for potentially doubled throughput on any one frequency.</p>
+
+<p>Altogether, this provided the hardware infrastructure to be able to deploy on mountain- and roof-tops, just like we do with traditional repeaters. Local HAMs can deploy low-cost nodes at their homes, businesses, and vehicles, and the equipment needed is small enough to be able to build go-kits which can be used to deploy at communication stations in emergency situations. The more nodes in an area, the faster the data throughput on the network becomes, and resiliency and redundancy are increased.</p>
+
+<h2>Possible Scenarios</h2>
+
+<ol>
+    <li>Imagine having a web server stationed at the EOC where HAMs can log in using their callsign, and fill out a web-form which then writes to a web database. That web database can be queried to pull data from, printed onto paper reports, distributed to emergency personnel, or used by dispatch to route first-responders.</li>
+    <li>A web/file server can host files and forms needed to fill out requisition and aid requests.</li>
+    <li>A VoIP server can be run which allows physical VoIP phones to be located at each station, each with their own extension which can be dialed by any other VoIP phone on the system. Voicemail can be configured to handle leaving voice messages.</li>
+    <li>An email server can be run to enable actual, real email, complete with the ability to attach documents to messages.</li>
+    <li>Cameras may be connected and accessed by users of the mesh to identify problem locations (riots, fires, traffic congestion, flooding, weather events, etc.).</li>
+    <li>Printers can be installed so a person at a station can edit a requisition document or memo, and literally print it out at the EOC (or any other station which has a connected printer) simply by using the "File, Print" capability built into most software packages today.</li>
+    <li>Chat clients can be run for text-based communication to be delivered throughout the mesh.</li>
+    <li>Digital dashboards can be created to provide real-time information in graphical formats to emergency management regarding the current status (negating the need to "call for an update" and occupying voice bandwidth and human-time).</li>
+    <li>Audio or video updates can be recorded and hosted on the EOC or event website (accessible inside the AREDN mesh) so all stations have the ability to see or hear the status updates first-hand, with the ability to pause, rewind, and replay the message.</li>
+</ol>
+
+<p>Virtually anything you can do on your home or business computer network, you can do on the AREDN mesh - subject to HAM Radio limitations, of course.</p>
+
+<h2>My AREDN Node</h2>
+
+<p>So, all of that background was to announce that my AREDN node is now up and running at my home between Cache Junction and Newton, Utah.</p>
+
+<p>I'm operating a Ubiquiti PowerBeam M2-400 on channel -2 at 10Mhz, and am pointed South East toward Utah State University. The node is powered via PoE which is connected to a UPS to help keep the node online during power failures.</p>
+
+<p><a href="/blog/media/uploads/kf7nwa-tower-looking-SE.jpg"><img class="aligncenter size-full wp-image-6870" src="/blog/media/uploads/kf7nwa-tower-looking-SE.jpg" alt="kf7nwa-tower-looking-SE" width="4000" height="3000" /></a></p>
+
+<p>If you'd like to join the mesh, just <a href="#hardware">grab some hardware</a>, <a href="https://downloads.arednmesh.org/firmware/ubnt/html/stable.html" target="_blank" rel="noopener noreferrer">flash the appropriate firmware</a>, <a href="https://arednmesh.readthedocs.io/en/latest/arednGettingStarted/aredn_overview.html" target="_blank" rel="noopener noreferrer">setup your node</a>, and point it my direction (or toward another AREDN node in your area). If you're in the Cache Valley, Utah area, a few of us have <a href="https://cachevalleymesh.slack.com/" target="_blank" rel="noopener noreferrer">a Slack Channel set up, if you'd like to join the conversation</a>.</p>
+
+<h2 id="hardware">Compatible Hardware</h2>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-aredn-node-in-cache-junction -->
+</body>
+</html>

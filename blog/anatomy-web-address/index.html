@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Background We often take for granted the ease at which we can retrieve &quot;stuff&quot; over the Internet. Recently, at work, I was asked what sounded like an easy…" />
+	<meta name="keywords" content="Joe Levi, articles, blog, URIs: The Anatomy of a Web Address" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/anatomy-web-address/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="URIs: The Anatomy of a Web Address — Joe Levi" />
+	<meta property="og:description" content="Background We often take for granted the ease at which we can retrieve &quot;stuff&quot; over the Internet. Recently, at work, I was asked what sounded like an easy…" />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/anatomy-web-address/" />
+	<meta property="article:published_time" content="2018-01-24T21:49:51" />
+	<meta property="article:modified_time" content="2018-01-25T10:30:34" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="URIs: The Anatomy of a Web Address — Joe Levi" />
+	<meta name="twitter:description" content="Background We often take for granted the ease at which we can retrieve &quot;stuff&quot; over the Internet. Recently, at work, I was asked what sounded like an easy…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>URIs: The Anatomy of a Web Address — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/anatomy-web-address/#article",
+      "url": "https://www.joelevi.com/blog/anatomy-web-address/",
+      "headline": "URIs: The Anatomy of a Web Address",
+      "description": "Background We often take for granted the ease at which we can retrieve \"stuff\" over the Internet. Recently, at work, I was asked what sounded like an easy…",
+      "datePublished": "2018-01-24T21:49:51",
+      "dateModified": "2018-01-25T10:30:34",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "mainEntityOfPage": "https://www.joelevi.com/blog/anatomy-web-address/",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/anatomy-web-address/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/anatomy-web-address/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "URIs: The Anatomy of a Web Address",
+          "item": "https://www.joelevi.com/blog/anatomy-web-address/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>URIs: The Anatomy of a Web Address</h1>
+				<p class="post-meta"><time datetime="2018-01-24">January 24, 2018</time> · <a href="/blog/">Articles</a></p>
+			</header>
+
+			<div class="post-body">
+<h2>Background</h2>
+
+<p><span></span>We often take for granted the ease at which we can retrieve "stuff" over the Internet. Recently, at work, I was asked what sounded like an easy enough question, but the answer was based upon multiple layers of prerequisite understanding. A simple question turned into a fairly lengthy explanation.</p>
+
+<p>Just in case that explanation is helpful to you, I've posted it here for you.</p>
+
+<h2>How do we ask for "stuff" on the Internet?</h2>
+
+<p>... and what, exactly is a "URI"? And why do we call it that instead of a "URL"?</p>
+
+<h3>Universal</h3>
+
+<ul>
+    <li>The industry-accepted standards (de facto or ratified) for addressing and/or identifying resources via web technologies.</li>
+</ul>
+
+<h3>Resource</h3>
+
+<ul>
+    <li>A “resource” is a “thing”. That thing may have references to, requests for, and/or dependencies upon other resources.</li>
+    <li>Most commonly, “resources” are HTML documents, images, CSS files, JS files, icons, videos, audio files, .PDF files, etc.</li>
+    <li>A resource may also be a reference to an action or intent (dial a certain phone number, send an email to a specific address, send a text message to a certain number, open an installed application to a certain state, etc.).</li>
+</ul>
+
+<h3>Indicator</h3>
+
+<ul>
+    <li><span></span>Resources are “indicated” and how they are handled depends on the context of the request (protocol/pseudo-protocol handler requested, phone vs. desktop computer, etc.).</li>
+    <li>Like most web technologies, we cannot explicitly control how a device handles these. The best we can do is “indicate” to the device (the “User Agent”) how we would like it to handle our request.</li>
+    <li>The reason we use URI instead of URL, is that the "indicator" part of a URI helps describe how a resource might be handled, not just how a resource should be "located" (the "L" in "URL" stands for "Locator").</li>
+</ul>
+
+<h3>Protocol/Pseudo-Protocol Handlers</h3>
+
+<ul>
+    <li>This is the first section of the URI and indicates the protocol by with the resource should be requested. The most common are <strong>http://</strong> and <strong><span></span>https://</strong> Both indicate to use the “Hypertext Transport Protocol”, the first being the standard variant of the protocol, the second being the “Secure” (encrypted) variant of the protocol.</li>
+    <li><span></span>Other protocols include (but are not limited to) FTP://, FTPS://, SFTP://, archie, gopher, etc.</li>
+</ul>
+
+<h4>Pseudo-protocols handlers are things like:</h4>
+
+<ul>
+    <li><strong><span></span>mailto:</strong> to ask the User Agent to send an email using their configured email client to the supplied email address (with subject and body content optionally supplied)</li>
+    <li><strong>tel:</strong> to ask the User Agent to open the configured dialer app and pre-populate the supplied phone number (user must interact with the “call” button to instantiate the phone call)</li>
+    <li><strong><span></span>skype:</strong> to ask the User Agent to open the app which handles Skype Communications and open a communique to the supplied Skype user</li>
+    <li><strong>wire:</strong> to ask the User Agent to open the app which handles Wire Encrypted Communications and open a communique to the supplied Wire user</li>
+    <li>etc.</li>
+</ul>
+
+<p>Although the protocol/pseudo-protocol handlers are not case-sensitive, the industry-best-practice is to refer to them in uppercase in documents like this, but in lowercase when in use (like on web pages).</p>
+
+<h2>IP Address</h2>
+
+<p><span></span>Think of an IP address like a “phone number” for your computer. In order to call you, I have to know your number. Since it’s unlikely I have it memorized, I usually consult with a directory (a Rolodex, your business card, my hand-written address book, a phone book; the company Active Directory, LDAP, the address book in my smartphone or computer; etc.). This “directory” lets me look up your name, which is associated with your number, which my phone then uses to call your phone.</p>
+
+<p>Computers operate much the same way. Their “phone numbers” are called IP addresses. There are currently two primary versions of IP (Internet Protocol): IPv4, and IPv6.</p>
+
+<p><span></span>IPv4 addresses look like 255.255.255.255 (where each octet can be 0 - 255). We have more devices than IPv4 addresses today – and have been limping along which how to address that for some years now. One solution to the shortage is IPv6, which, among other things, changes the formatting of the IP address. Without getting into a lot of detail, this would be like making your phone number 30 characters long, including both letters and numbers – and you thought memorizing an 11-digit phone number was hard!</p>
+
+<h2>DNS (Domain Name System)</h2>
+
+<p>Just like your smartphone or the white pages help you look up a person’s phone number by their name, DNS is a system through which User Agents can look up a computer’s address by an “easy to remember” name:</p>
+
+<ul>
+    <li>JoeLevi.com</li>
+    <li>Lifetime.com</li>
+    <li>HomeDepot.com</li>
+    <li>etc.</li>
+</ul>
+
+<p><span></span>DNS uses TLDs, Domains, and subdomains to pair computers names with their addresses.</p>
+
+<h2>Top-Level Domain (TLD)</h2>
+
+<p>Back in the early Internet, we had .COM, .ORG, .NET, .EDU, .GOV, .<span></span>MIL, and a very few other Top-Level Domains. As new countries started using the internet, they got their own country code TLDs (.TV, .LY, .UK, .AU, .MX, etc.). Eventually, the ccTLDs got repurposed:</p>
+
+<ul>
+    <li><strong><span></span>.TV (the ccTLD for the country of Tuvalu)</strong><span></span> was repurposed for Television stations, shows, and related sites</li>
+    <li><strong><span></span>.LY (the ccTLD for the country of Libya)</strong><span></span> was repurposed for URL shorteners (bit.ly, etc.), and “plays on words” (happi.ly, etc.)</li>
+    <li>etc.</li>
+</ul>
+
+<p><span></span>Today we have a lot of other TLDs (.site, .booking, .lawyer, .gop, .republican, etc.).</p>
+
+<p><span></span>Domains registered under these TLDs are controlled and maintained by “registrars” like Register.com, MyDomain, GoDaddy, Google, etc.</p>
+
+<p>The TLD is not case-sensitive.</p>
+
+<h2>Domain</h2>
+
+<p><span></span>The highest level a person or company can register and associate with a computer is the Domain (JoeLevi.com, Lifetime.com, etc.). By registering the domain, that entity has control over where it is pointed and the contact information associated with it.</p>
+
+<p>The Domain is not case-sensitive.</p>
+
+<p><strong><span></span>Subdomain</strong></p>
+
+<p><span></span>A subdomain is used to add specific uses to the domain:</p>
+
+<ul>
+    <li>mail.something.com, smtp.something.com, pop3.something.com could each be used for various email services</li>
+    <li>ftp.something .com could be used for a file-share accessible (via http, https, ftp, <span></span>ftps, or sftp)</li>
+    <li>www.something.com could be used to access the web server (via http<span></span> or https)</li>
+    <li>Uk.something.com could be used to access the version of the website specific to visitors from the United Kingdom</li>
+    <li>etc.</li>
+</ul>
+
+<h2>Folder/Directory (“route parameters”)</h2>
+
+<p><span></span>From a skeuomorphic or even “desktop computer” analogy, a Domain could be considered to be a building belonging to a corporation, a Subdomain could be a filing cabinet inside that building (labeled WWW or MAIL, etc.), and a Folder or Directory could be considered a handing folder inside that cabinet with its label (CUSTOMER SUPPORT, WARRANTY REGISTRATIONS, etc.).</p>
+
+<p><span></span>Inside those hanging folders can be individual documents (TABLE-OF-CONTENTS.doc, 2017-REGISTRATION-REPORT.xls, etc.), and/or manila folders (2017-REGISTRATIONS, 2016-REGISTRATIONS, etc.).</p>
+
+<p><span></span>Inside those manila folders can be individual documents, and/or even more manila folders.</p>
+
+<p>And so on.</p>
+
+<p>Folder/Directory names ARE case-sensitive, and industry-best-practices tell us they should be in all lowercase.</p>
+
+<p>Like the “file cabinet” analogy, a webserver<span></span> can get set up like your desktop computer, with drives (cabinets), folders, subfolders, and files within then. This is ironically called a “digital analog”.</p>
+
+<p><span></span>Unlike the “file cabinet”/desktop computer “digital analog”, most modern websites do not use static folders, subfolders, and files. Instead they utilize a concept called “routing” that goes something like this:</p>
+
+<ul>
+    <li>https://sub.domain.com/(parameter 1)/(parameter 2)/(parameter 3)</li>
+</ul>
+
+<p>In this example, the values of “parameter 1” and “parameter 2” might correspond to particular “folder” of contents, but might also display pages “within” it in a certain way.</p>
+
+<ul>
+    <li>· If the value of “Parameter 1” is “products”, the data retrieved and formatted might come from the a table called “products” in the database</li>
+    <li>If “Parameter 2” is representative of a category of products (“basketball”, for example), the site may do something like this:
+<ul>
+    <li>Limit the database request to just products of type “basketball”</li>
+    <li>Style the page with the color-scheme of the “basketball” product line</li>
+    <li>Pull in the text and images that relate to the “basketball” product line</li>
+    <li>Display a list of products within the “basketball” product line</li>
+</ul>
+</li>
+    <li>If “Parameter 3” is representative of a specific model number or sku of a particular product (“12345”, “6405”, etc.), the site may do something like this:
+<ul>
+    <li>Display the particular product including its featured image, and related image set</li>
+    <li>Display the variations and packaging options for the particular product</li>
+    <li>Display the stock/inventory level of the particular variations/packaging options for the particular product</li>
+    <li>Allow the customer to add the specific variation/packaging option for the particular product to their shopping cart</li>
+    <li>Display marketing information about the particular product</li>
+    <li>Display technical specifications about the particular product</li>
+    <li>Display assembly instructions for the particular product</li>
+    <li>Display helpful videos about the particular product</li>
+</ul>
+</li>
+    <li>etc.</li>
+</ul>
+
+<h2>Casing considerations</h2>
+
+<p><span></span>As mentioned previously, the domain, subdomain, and TLD are not case-sensitive, but in practice it’s generally all lowercase (to emphasize the visual importance of the Domain) or in all-uppercase (to match the stylistic implementation of the URI:</p>
+
+<ul>
+    <li>www.lifetime.com</li>
+    <li>www.Lifetime.com</li>
+    <li>www.LIFETIME.com</li>
+    <li>WWW.LIFETIME.COM</li>
+    <li>www.joelevi.com</li>
+    <li>www.JoeLevi.com</li>
+    <li>www.JOELEVI.com</li>
+    <li>WWW.JOELEVI.COM</li>
+</ul>
+
+<p><span></span>Utilizing mixed casing for the subdomain is advisable to help with readability:</p>
+
+<ul>
+    <li>www.Lifetime.com</li>
+    <li>www.EmotionKayaks.com</li>
+    <li>www.TheLifetimeSettlement.com.</li>
+</ul>
+
+<p><span></span>Everything after the TLD should be all lower-case except in rare cases. Even though on our server, the same page will be returned for www.Lifetime.com/myproduct, because of casing<span></span>, search engines will consider it to be different from (and will be indexed separately from) all of these, splitting search engine ranking between them:</p>
+
+<ul>
+    <li><span></span>www.Lifetime.com/MyProduct</li>
+    <li><span></span>www.Lifetime.com/MYPRODUCT</li>
+    <li><span></span>www.Lifetime.com/MYproduct</li>
+    <li><span></span>www.Lifetime.com/myPRODUCT</li>
+    <li><span></span>www.Lifetime.com/MyPrOdUcT</li>
+    <li><span></span>www.Lifetime.com/mYpRoDuCt</li>
+    <li>etc.</li>
+</ul>
+
+<p><span></span>This is referred to as “search engine schizophrenia” and is a fantastic way to kill your search engine ranking.</p>
+
+<h2>Default Documents</h2>
+
+<p><span></span>The document that is loaded from inside a folder by default (without having to supply the filename and extension). This could be:</p>
+
+<ul>
+    <li>index.htm</li>
+    <li>index.html</li>
+    <li>home.htm</li>
+    <li>home.html</li>
+    <li>index.asp</li>
+    <li>index.aspx</li>
+    <li>index.php</li>
+    <li>default.htm</li>
+    <li>default.html</li>
+    <li>default.asp</li>
+    <li>default.aspx</li>
+    <li>etc.</li>
+</ul>
+
+<p>The best practice is to omit the default document from the URL string so search engines and other linking sources point only to the folder, so if your technologies change, the folder structure is still intact, and you don’t lose all your page indexing and SEO-mojo when you switch from one tech to the other.</p>
+
+<h2>Link rel canonical</h2>
+
+<p>To overcome the challenges of including/not including:</p>
+
+<ul>
+    <li>default documents</li>
+    <li>sub-domain</li>
+</ul>
+
+<p>And to address the casing issues associated with “search engine schizophrenia”, the industry has adopted as a defacto standard the link rel canonical meta tag. This tag, essentially, tells the user agent “I really don’t care how you came to this page, but rather than giving you an error message or redirecting you a bunch of times, I’m going to load the page anyway, but THIS is what the REAL URI of this page/resource is”.</p>
+
+<p>Not every user agent respects the link rel canonical tag, and not all of them treat it the same way, but it’s the only thing we can reliably do to “suggest” to the user agent what the actual address for the resource should be.</p>
+
+<p>Got all that?</p>
+			</div>
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-anatomy-web-address -->
+</body>
+</html>
