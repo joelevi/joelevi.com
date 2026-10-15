@@ -181,6 +181,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/commercial/",
+      "destination": "/blog/tags/commercials/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/commercial",
+      "destination": "/blog/tags/commercials/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
