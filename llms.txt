@@ -63,11 +63,6 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 - [Cache Valley Mesh](https://cachevalleymesh.com/) — local mesh networking community
 - [Crave Broadband](https://www.cravebroadband.com/) — Northwest Cache Valley, Utah Wireless Internet Co-Op
 
-
-
-
-
-
 ## Articles (newest)
 
 - [Tales From a Computer Guy: "Something Exploded in There"](https://www.joelevi.com/blog/tales-from-a-computer-guy-something-exploded-in-there/) — 2021-08-19
