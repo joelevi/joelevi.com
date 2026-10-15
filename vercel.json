@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/blog/the-caucus-history-and-etymology",
+      "destination": "https://republicannatives.com/the-caucus-history-and-etymology/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-caucus-history-and-etymology/",
+      "destination": "https://republicannatives.com/the-caucus-history-and-etymology/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tough-economic-times-2/",
       "destination": "/blog/tough-economic-times/",
       "permanent": true

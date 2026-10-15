@@ -72,16 +72,6 @@
       <description>Background Some years ago, I was browsing Kickstarter and came across what I thought was a pretty cool gadget which was beautiful in its simplicity: two…</description>
     </item>
     <item>
-      <title>The Caucus, History and Etymology</title>
-      <link>https://www.joelevi.com/blog/the-caucus-history-and-etymology/</link>
-      <guid isPermaLink="true">https://www.joelevi.com/blog/the-caucus-history-and-etymology/</guid>
-      <pubDate>Sat, 29 Feb 2020 12:37:02 +0000</pubDate>
-      <dc:creator>Joe Levi</dc:creator>
-      <category>Republican Natives</category>
-      <category>Politics</category>
-      <description>In the winter of each year the eyes and ears of the country become focused on the Iowa Democratic “caucus”, and the word is current in every TV commentary…</description>
-    </item>
-    <item>
       <title>Home Assistant, Part 2: Installation and Hardware Considerations</title>
       <link>https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/</link>
       <guid isPermaLink="true">https://www.joelevi.com/blog/ha-2-installation-hardware-considerations/</guid>
@@ -457,6 +447,15 @@
       <dc:creator>Joe Levi</dc:creator>
       <category>Product Reviews</category>
       <description>I've got a smartphone that I use to play music, podcasts, or even audio books during my daily commute. When I plug it into my AUX port I get an annoying…</description>
+    </item>
+    <item>
+      <title>The inconvenient truth behind Robin Hood</title>
+      <link>https://www.joelevi.com/blog/inconvenient-truth-behind-robin-hood/</link>
+      <guid isPermaLink="true">https://www.joelevi.com/blog/inconvenient-truth-behind-robin-hood/</guid>
+      <pubDate>Thu, 08 Sep 2016 14:29:57 +0000</pubDate>
+      <dc:creator>Joe Levi</dc:creator>
+      <category>Politics</category>
+      <description>Everyone knows the story of Robin Hood. "Robin Hood is a heroic outlaw in English folklore who, according to legend, was a highly skilled archer and…</description>
     </item>
   </channel>
 </rss>
