@@ -189,6 +189,24 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* product-cards */
+		.product-cards { margin: 1.25rem 0 1.5rem; display: grid; gap: 0.75rem; }
+		.book-card { display: flex; background: var(--surface); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); max-width: 40rem; }
+		.book-card .cover-col { flex: 0 0 120px; width: 120px; background: var(--surface-deep); }
+		.book-card .cover { display: block; width: 120px; height: auto; margin: 0; border-radius: 0; }
+		.book-card .card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+		.book-card .card-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem; color: var(--blue); line-height: 1.3; }
+		.book-card .card-author { margin: 0 0 0.45rem; color: var(--ink-muted); font-size: 0.92rem; font-weight: 500; }
+		.book-card .card-text { margin: 0 0 0.85rem; color: var(--ink); font-size: 0.92rem; flex: 1; }
+		.btn-amazon { display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start; background: var(--btn-bg, #2F6FED); border: 1px solid var(--btn-border, #1A4BB8); color: var(--btn-fg, #FFFFFF) !important; font-weight: 600; font-size: 0.9rem; padding: 0.45rem 0.9rem; border-radius: 0.45rem; text-decoration: none !important; }
+		.btn-amazon:hover { background: var(--btn-bg-hover, #2458C7); }
+		.product-card .cover-col { background: #fff; display: flex; align-items: center; }
+		.product-card .cover { object-fit: contain; padding: 0.4rem; }
+		.affiliate-disclosure { margin: 0; font-size: 0.8rem; color: var(--ink-muted); }
+		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
+		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
 {
@@ -255,6 +273,18 @@
     },
     {
       "@id": "https://www.joelevi.com/#website"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.joelevi.com/blog/cross-combing-top-bar-hives/#beekeeping-supplies",
+      "name": "Beekeeping Supplies",
+      "image": "https://www.joelevi.com/assets/products/beekeeping-starter-kit.jpg",
+      "description": "Hives, frames, bee suits, smokers, hive tools, and feeders: the gear you need to start and maintain backyard honey bee colonies.",
+      "url": "https://link.amazon/B0g0hMnNP",
+      "brand": {
+        "@type": "Brand",
+        "name": "Various"
+      }
     }
   ]
 }
@@ -292,6 +322,20 @@
 
 			<div class="post-body">
 <p>My wife and I are first-time beekeepers, though we both have a familial history of tending hives and harvesting honey. Her dad and my late-date both kept bees while we were children. Neither of us was very involved in the hobby back then, but today we both feel a need to get back to basics and start providing for ourselves. Besides, have you seen how expensive honey is these days?! Yikes!</p>
+			<!-- product-cards -->
+			<div class="product-cards">
+				<article class="book-card product-card" id="beekeeping-supplies">
+					<div class="cover-col"><img class="cover" src="/assets/products/beekeeping-starter-kit.jpg" alt="Beekeeping Supplies" width="120" height="180" loading="lazy" /></div>
+					<div class="card-body">
+						<h3 class="card-title">Beekeeping Supplies</h3>
+						<p class="card-author">Various</p>
+						<p class="card-text">Hives, frames, bee suits, smokers, hive tools, and feeders: the gear you need to start and maintain backyard honey bee colonies.</p>
+						<a class="btn btn-amazon" href="https://link.amazon/B0g0hMnNP" target="_blank" rel="sponsored noopener"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy Now</span></a>
+					</div>
+				</article>
+				<p class="affiliate-disclosure">As an Amazon Associate, Joe earns from qualifying purchases.</p>
+			</div><!-- /product-cards -->
+
 
 <p>Our neighbors decided to try their hand at beekeeping, too. Learning is always more fun when more people are involved. We went with a traditional Langstroth hive (the box style that you probably picture when you think "beehive"). Our neighbors went with a top bar hive.</p>
 
