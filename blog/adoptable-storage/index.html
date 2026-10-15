@@ -217,6 +217,15 @@
 		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
 		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		.post-body::after { content: ""; display: table; clear: both; }
+		@media (min-width: 768px) {
+			.post-body .product-cards { float: right; clear: right; width: 50%; margin: 0.35rem 0 1.25rem 1.5rem; }
+			.post-body .product-cards .book-card { flex-direction: column; max-width: none; }
+			.post-body .product-cards .book-card .cover-col { flex: 0 0 auto; width: 100%; display: flex; justify-content: center; align-items: center; padding: 0.75rem 0; }
+			.post-body .product-cards .book-card .cover { width: 120px; max-height: 180px; }
+			.post-body .product-cards .product-card .cover { width: auto; max-width: 70%; max-height: 160px; }
+		}
+		@media (max-width: 767.98px) { .post-body .product-cards { float: none; width: 100%; margin: 1.25rem 0 1.5rem; } }
 		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
