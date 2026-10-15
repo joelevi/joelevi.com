@@ -221,6 +221,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/contact/",
+      "destination": "/blog/tags/contacts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/contact",
+      "destination": "/blog/tags/contacts/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
@@ -968,6 +978,66 @@
     {
       "source": "/blog/tags/powered-paragliding",
       "destination": "/blog/tags/paragliding/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prep/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prep",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/preparation/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/preparation",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepper/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepper",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepper-mindset/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepper-mindset",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepping/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepping",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepping-starts-with/",
+      "destination": "/blog/tags/preparedness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/prepping-starts-with",
+      "destination": "/blog/tags/preparedness/",
       "permanent": true
     },
     {
