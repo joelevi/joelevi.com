@@ -103,8 +103,15 @@
 			margin: 0 0 1.25rem;
 		}
 		.post-body {
-			max-width: 42rem;
+			width: 100%;
+			max-width: 100%;
+			min-width: 0;
+			box-sizing: border-box;
+			overflow-wrap: break-word;
 		}
+		.post-body img, .post-body video, .post-body iframe, .post-body embed, .post-body object, .post-body figure, .post-body .wp-caption, .post-body div[style*="width"], .post-body table, .post-body pre { max-width: 100% !important; box-sizing: border-box; }
+		.post-body img { height: auto; }
+		.post-body table, .post-body pre { display: block; overflow-x: auto; }
 		.post-body h2, .post-body h3, .post-body h4 {
 			font-family: Gruppo, sans-serif;
 			font-weight: 400;
@@ -343,7 +350,7 @@ Independent Women's Voice</p>
 
 		<footer class="page-foot">
 			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
-			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <span class="affiliate-note">As an Amazon Associate, Joe earns from qualifying purchases.</span></p>
 			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
 		</footer>
 
