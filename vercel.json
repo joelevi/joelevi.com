@@ -601,6 +601,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/mix-07/",
+      "destination": "/blog/tags/mix07/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mix-07",
+      "destination": "/blog/tags/mix07/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
