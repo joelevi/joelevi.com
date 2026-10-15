@@ -581,6 +581,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/mitt/",
+      "destination": "/blog/tags/mitt-romney/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mitt",
+      "destination": "/blog/tags/mitt-romney/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mitt-romey/",
+      "destination": "/blog/tags/mitt-romney/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mitt-romey",
+      "destination": "/blog/tags/mitt-romney/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
