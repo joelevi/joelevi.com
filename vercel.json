@@ -799,6 +799,26 @@
       "source": "/blog/tags/zune-technology-joe-family-friends-family",
       "destination": "/blog/tags/zune/",
       "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndrome/",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndrome",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndrome-aspergers-disorder/",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndrome-aspergers-disorder",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
     }
   ]
 }
