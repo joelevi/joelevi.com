@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -324,6 +329,8 @@
 				<h1>Time for a new theme</h1>
 				<p class="post-meta"><time datetime="2010-05-26">May 26, 2010</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/time-for-a-new-theme.jpg" alt="Share graphic for “Time for a new theme” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>The last theme that I was running looked pretty, I especially liked the wind turbines, but it had problems in Microsoft Internet Explorer. Why 30% of my visitors are still using the slowest, most yucky web browser made is still a mystery to me… but, I had to take action… so I went with an all html5 + css3 theme this time around.</p>

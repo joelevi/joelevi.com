@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -326,6 +331,8 @@
 				<h1>Web 2.0 is a concept, not a design aesthetic</h1>
 				<p class="post-meta"><time datetime="2007-12-03">December 3, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/web-20-is-a-concept-not-a-design-aesthetic.jpg" alt="Share graphic for “Web 2.0 is a concept, not a design aesthetic” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>Being a web developer (not a designer, thankfully) it's a lot easier to differentiate Web 1.x versus Web 2.0 sites. That's mainly due to the fact that I live &quot;behind&quot; what the user sees, whereas a designer defines what the user sees and how the user experiences the site (UI/UX).</p>

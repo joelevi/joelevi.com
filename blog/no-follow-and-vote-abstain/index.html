@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -328,6 +333,8 @@
 				<h1>No-Follow and Vote-Abstain</h1>
 				<p class="post-meta"><time datetime="2009-03-18">March 18, 2009</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/no-follow-and-vote-abstain.jpg" alt="Share graphic for “No-Follow and Vote-Abstain” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>The question was asked of me:</p>  <blockquote>   <p>When you post links to our sites on external sites, will they have a “no-follow” rule that will end up keeping them from helping us in search engine rankings?</p> </blockquote>  <p>Good question, but the answer isn’t so cut-and-dry…</p>  <p>There are several factors coming in to play in the “external link” scenario. Many of the sites will have “no-follow” or “vote-abstain” attributes assigned to them.</p>  <p>These attributes do not mean what the HTML specification defines them to be. Search engines, particularly Google, will recognize the “no-follow” attribute and will not give as much “Google Love” to those links, so they’re not as good as links without those attributes, but they are still helpful.</p>  <p>What does help is the link itself, and in a few different ways.</p>  <p>First, Google will still see and will still “follow” the link, they just don’t give it as high cross-link value as a link without “no-follow.” Google will, however, see that link and add it to the index (if it’s not already there), and will still add a bit of cross-link value to the linked page.</p>  <p>Second, and this has both Google and “real people” value. This is a link where previously there was none. People will follow the link (“click” on it and come to our site) which means the target page will get more traffic, more traffic equals more relevancy in Google’s eyes, which means the page value will increase.</p>  <p>Also, Google will see the traffic coming from the page with the “no-follow” link to the target page, and will begin to increase the cross-link value for the “no-follow” link.</p>  <p>More real people coming to our pages should equate into more sales (additional traffic to the page will increase the number of sales, given a consistent conversion rate per given page).</p>

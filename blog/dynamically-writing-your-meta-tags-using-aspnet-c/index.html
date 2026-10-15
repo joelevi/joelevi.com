@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -328,6 +333,8 @@
 				<h1>Dynamically writing your META tags using ASP.NET C#</h1>
 				<p class="post-meta"><time datetime="2007-12-26">December 26, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/dynamically-writing-your-meta-tags-using-aspnet-c.jpg" alt="Share graphic for “Dynamically writing your META tags using ASP.NET C#” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p></p>  <div class="csharpcode">Every year I have to go through our web sites and increment the copyright year to reflect the new year. This is time consuming and, frankly, the web site is run by a computer, so why can't it take care of itself?</div>  <div class="csharpcode">&#160;</div>  <div class="csharpcode">This is easy enough to do in a copyright line sitting somewhere on your displayed page, but somewhat obscure to get into the page's meta data.</div>  <div class="csharpcode">&#160;</div>  <div class="csharpcode">With that in mind I wrote a quick little method to handle writing the copyright meta tag for me. Afterwards I went back and made it generic to write any meta tag that you'd like.</div>  <div class="csharpcode">&#160;</div>  <div class="csharpcode">Simply call the WriteMetaTag() method at Page_Load, passing the page control (&quot;this&quot;), the tag to be written (title, copyright, description, keywords, etc.), and the value of the tag.</div>  <div class="csharpcode">&#160;</div>  <div class="csharpcode">   <pre class="alt"><span class="lnum">   1:  </span><span class="kwrd">protected</span> <span class="kwrd">void</span> Page_Load(<span class="kwrd">object</span> sender, EventArgs e)</pre>

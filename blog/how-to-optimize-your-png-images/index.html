@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -326,6 +331,8 @@
 				<h1>HOW TO: Optimize your .PNG Images</h1>
 				<p class="post-meta"><time datetime="2007-08-27">August 27, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/how-to-optimize-your-png-images.jpg" alt="Share graphic for “HOW TO: Optimize your .PNG Images” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>.PNG (Portable Network Graphic, pronounced "ping") is a modern graphics format that was created in part to address the "CompuServe Stranglehold on the .gif format" and to update type of images typically stored using the .JPEG format to a lossless format.</p> <p>.PNGs are lossless by nature and come in two flavors: Lime and Strawberry... er, PNG8 and PNG24.</p> <p>PNG8 is the most commonly used .PNG format, it's used to replace .GIFs (and does a very good job). The color depth of PNG8 is a bit better than that of .GIF, and both allow for single bit transparency. .PNG does not have a "animated" version like .GIF89a does, so if you want simple frame animations, you're still going to be using .GIF.</p> <p>.JPEG (or .JPG) is generally used for higher resolution pictures, but it, like .GIF, is a lossey format (meaning image data is lost in the process of compressing). .PNG answers this with the PNG24 format (which also enables alpha-transparency). PNG24 is also lossless, but the alpha-transparency isn't handled properly by Internet Explorer 6 and below (it does work fine with IE7, however).</p> <p>You can use IE conditional statements to load the "right" image for the right browser, it's not pretty, but seems to allow for the best of both worlds:</p> <div class="csharpcode"><pre class="alt"><span class="lnum">   1:  </span><span class="kwrd"><</span><span class="html">a</span> <span class="attr">id</span><span class="kwrd">="Logo"</span> <span class="attr">href</span><span class="kwrd">="/"</span> <span class="attr">title</span><span class="kwrd">="BACKYARDS Inc.&trade;"</span><span class="kwrd">></span></pre><pre><span class="lnum">   2:  </span>    <span class="kwrd"><!</span>[if gte IE 7]<span class="kwrd">><</span><span class="html">img</span> <span class="attr">src</span><span class="kwrd">="/design/backyards_inc-logo.png"</span> <span class="attr">alt</span><span class="kwrd">="BACKYARDS Inc.&trade;"</span> <span class="kwrd">/><!</span>[endif]<span class="kwrd">></span></pre><pre class="alt"><span class="lnum">   3:  </span>    <span class="rem"><!--[if lt IE 7]><img src="/design/backyards_inc-logo.gif" alt="BACKYARDS Inc.&trade;" /><![endif]--></span></pre><pre><span class="lnum">   4:  </span><span class="kwrd"></</span><span class="html">a</span><span class="kwrd">></span></pre></div>

@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -322,6 +327,8 @@
 				<h1>Adventures with Zune Wireless Sync</h1>
 				<p class="post-meta"><time datetime="2007-11-29">November 29, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/adventures-with-zune-wireless-sync.jpg" alt="Share graphic for “Adventures with Zune Wireless Sync” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p><!-- missing image: <a href="https://www.joelevi.com/images/AdventureswithZuneWirelessSync_8A87/image.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="372" alt="Zune" src="https://www.joelevi.com/images/AdventureswithZuneWirelessSync_8A87/image_thumb.png" width="442" align="right" border="0" /></a> --> Once upon a time a guy tried to sync his Zune 30 (with firmware version 2.2 (1040)) though his Linksys WRT54G (with DD-WRT micro flashed on it) to a Media Center PC running Windows Vista Ultimate (SP0)... This is his tale...</p>  <p>For security and performance reasons the WRT54G was set for G-only and set to use WPA2-TKIP. It is broadcasting is SSID, but that's more for convenience than anything.</p>  <p>The guy connected the Zune to the pc via USB and established a partnership then went to the Wireless Sync Settings and tried to &quot;automagically&quot; find and configure the network sync. No go... no networks found...</p>  <p>That's okay, this guy is somewhat knowledgeable about how networks work... so he went to the &quot;advanced settings&quot; to manually configure everything.</p>  <ul>   <li>SSID: keyed in</li>    <li>WPA-TKIP: keyed in</li>    <li>Settings saved: successfully</li>    <li>Connection: failed</li> </ul>  <p>Crap! Maybe it was the WPA2... okay, let's try setting the router to WPA-TKIP (rather than WPA2-TKIP).</p>  <ul>   <li>SSID: keyed in</li>    <li>WPA-TKIP: keyed in</li>    <li>Settings saved: successfully</li>    <li>Connection: failed</li> </ul>  <p>Maybe it doesn't like 802.11g, maybe it needs 802.11b... that'd suck, but let's try; set the router to &quot;mixed mode.&quot;</p>  <ul>   <li>SSID: keyed in</li>    <li>WPA-TKIP: keyed in</li>    <li>Settings saved: successfully</li>    <li>Connection: failed</li> </ul>  <p>Crap! Maybe it doesn't like WPA-TKIP... let's try WPA-AES... </p>  <ul>   <li>SSID: keyed in</li>    <li>WPA-AES: keyed in</li>    <li>Settings saved: successfully</li>    <li>Connection: failed</li> </ul>  <p>Well what's going on?! Maybe it doesn't like WPA at all, let's try WEP...</p>  <ul>   <li>Automatic detection: succeeded!</li>    <li>WEP Key: keyed in</li>    <li>Settings saved: successfully</li>    <li>Connection: succeeded!</li> </ul>  <p>So, he's in mixed mode, broadcast SSID, WEP, but it works.</p>  <p>I talked with my friend here at work, he said he couldn't get G-only to work either, nor could he get WPA2 to work, nor WPA-AES, but he did get WPA-TKIP working. I'll recommend that to this other guy and report the results of his testing when I can.</p>  <p>If you've had similar experiences please comment!</p>

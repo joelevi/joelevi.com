@@ -197,6 +197,11 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* og-header */
+		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
+		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
+		/* /og-header */
 	</style>
 	<script type="application/ld+json">
 {
@@ -320,6 +325,8 @@
 				<h1>PHP has encountered an Access Violation at 084493A2</h1>
 				<p class="post-meta"><time datetime="2008-08-15">August 15, 2008</time> · <a href="/blog/">Articles</a></p>
 			</header>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/php-has-encountered-an-access-violation-at-084493a2.jpg" alt="Share graphic for “PHP has encountered an Access Violation at 084493A2” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p></p>  <p></p>  <p>If, after you’ve upgraded your WordPress install, you get an error message similar to this one “PHP has encountered an Access Violation at 084493A2” you’re not alone.</p>  <p>Luckily the fix is quite easy:</p>  <ol>   <li>Point your browser to the following address: http://(www.yourblog.com)/(bloginstalldirectory)/wp-admin/upgrade.php where “(www.yourblog.com)” is the address to your blog, “(bloginstalldirectory)” is the folder in which your blog is installed (unless you installed it to the root, in which case leave this and one of the slashes out).</li>    <li>A message should tell you that your database it out-of-date and needs to be upgraded.</li>    <li>Click the obnoxiously big “upgrade” button.</li>    <li>If all goes well, you’re all done and the error should go away.</li> </ol>  <p><a title="Show your appreciation by donating via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>.</p>
