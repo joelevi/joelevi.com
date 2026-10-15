@@ -691,6 +691,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/nomination-of-elena-kagan/",
+      "destination": "/blog/tags/elena-kagan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/nomination-of-elena-kagan",
+      "destination": "/blog/tags/elena-kagan/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/nsa/",
       "destination": "/blog/tags/national-security-agency/",
       "permanent": true
