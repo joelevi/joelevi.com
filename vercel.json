@@ -951,6 +951,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/powered-paragliding/",
+      "destination": "/blog/tags/paragliding/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/powered-paragliding",
+      "destination": "/blog/tags/paragliding/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/president-u-s-executive-branch/",
       "destination": "/blog/tags/president/",
       "permanent": true
