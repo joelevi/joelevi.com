@@ -101,6 +101,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/bba/",
+      "destination": "/blog/tags/balanced-budget-amendment/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/bba",
+      "destination": "/blog/tags/balanced-budget-amendment/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
