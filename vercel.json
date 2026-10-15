@@ -671,6 +671,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/nbc-com/",
+      "destination": "/blog/tags/nbc/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/nbc-com",
+      "destination": "/blog/tags/nbc/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/ndaa/",
       "destination": "/blog/tags/national-defense-authorization-act/",
       "permanent": true
