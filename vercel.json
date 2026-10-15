@@ -911,6 +911,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/politically-correct/",
+      "destination": "/blog/tags/political-correctness/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/politically-correct",
+      "destination": "/blog/tags/political-correctness/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/president-u-s-executive-branch/",
       "destination": "/blog/tags/president/",
       "permanent": true
