@@ -11,7 +11,8 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 - [Home (digital business card)](https://www.joelevi.com/): Contact card — Signal, email, phone, LinkedIn, QRZ (KF7NWA), résumé, Books, Mesh / GitHub, vCard, and PGP downloads
 - [Résumé](https://www.joelevi.com/resume/): Experience, education, skills, references & testimonials, recent reading
 - [Pocketnow articles](https://www.joelevi.com/blog/categories/pocketnow/): 371 articles Joe Levi wrote for Pocketnow, republished with links and canonicals to the originals
-- [Articles](https://www.joelevi.com/blog/): 2494 archived articles and blog posts (1999–2021), including 371 republished from Pocketnow (2010–2019, canonical to the Pocketnow originals); individual posts at /blog/<slug>/
+- [Republican Natives editorials](https://www.joelevi.com/blog/categories/republican-natives/): 5 editorials Joe Levi published as president of the Utah Republican Native American Caucus (RepublicanNatives.com, 2017–2021), republished with links and canonicals to the originals
+- [Articles](https://www.joelevi.com/blog/): 2495 archived articles and blog posts (1999–2021), including 371 republished from Pocketnow (2010–2019, canonical to the Pocketnow originals); individual posts at /blog/<slug>/
 - [Books](https://www.joelevi.com/books/): Two sections — **Books Joe has Written** (Miles the Muskrat series by Joe Levi, with Amazon buy links and covers) and **Books Joe has Read** (currently reading + recently read bookshelf with Bootstrap-style cards, hosted covers, and Amazon Associate “Buy on Amazon” links). Former `/library/` redirects here.
 
 ## Contact
@@ -95,7 +96,7 @@ Each main page includes unique meta title/description/keywords, Open Graph, Twit
 - [Report on Pocatello ARC Eclipse Event Planning Meeting](https://www.joelevi.com/blog/pocatello-arc-eclipse-planning-meeting/) — 2017-08-11
 - [Help Keep Solar Affordable in Utah](https://www.joelevi.com/blog/help-keep-solar-affordable-utah/) — 2017-08-09
 
-Full archive: 2494 posts at https://www.joelevi.com/blog/ (also listed in sitemap.xml).
+Full archive: 2495 posts at https://www.joelevi.com/blog/ (also listed in sitemap.xml).
 ## Optional
 
 - Résumé includes named references and testimonials; recent reading titles link via Amazon Associates on the résumé page (see footer disclosure there)
@@ -103,7 +104,7 @@ Full archive: 2494 posts at https://www.joelevi.com/blog/ (also listed in sitema
 
 ## Articles feed and archive
 
-- [Articles (blog index)](https://www.joelevi.com/blog/): Joe's article archive, including his original posts and his Pocketnow articles (each Pocketnow post links to and canonicalizes to the original on pocketnow.com)
+- [Articles (blog index)](https://www.joelevi.com/blog/): Joe's article archive, including his original posts and his Pocketnow articles (each Pocketnow post links to and canonicalizes to the original on pocketnow.com), plus editorials republished from RepublicanNatives.com (each canonicalizes to its original)
 - [RSS feed](https://www.joelevi.com/blog/feed.xml): the 50 most recent articles
 - [Browse by category](https://www.joelevi.com/blog/categories/)
 - [Browse by tag](https://www.joelevi.com/blog/tags/)
