@@ -194,6 +194,24 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* product-cards */
+		.product-cards { margin: 1.25rem 0 1.5rem; display: grid; gap: 0.75rem; }
+		.book-card { display: flex; background: var(--surface); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); max-width: 40rem; }
+		.book-card .cover-col { flex: 0 0 120px; width: 120px; background: var(--surface-deep); }
+		.book-card .cover { display: block; width: 120px; height: auto; margin: 0; border-radius: 0; }
+		.book-card .card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+		.book-card .card-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem; color: var(--blue); line-height: 1.3; }
+		.book-card .card-author { margin: 0 0 0.45rem; color: var(--ink-muted); font-size: 0.92rem; font-weight: 500; }
+		.book-card .card-text { margin: 0 0 0.85rem; color: var(--ink); font-size: 0.92rem; flex: 1; }
+		.btn-amazon { display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start; background: var(--btn-bg, #2F6FED); border: 1px solid var(--btn-border, #1A4BB8); color: var(--btn-fg, #FFFFFF) !important; font-weight: 600; font-size: 0.9rem; padding: 0.45rem 0.9rem; border-radius: 0.45rem; text-decoration: none !important; }
+		.btn-amazon:hover { background: var(--btn-bg-hover, #2458C7); }
+		.product-card .cover-col { background: #fff; display: flex; align-items: center; }
+		.product-card .cover { object-fit: contain; padding: 0.4rem; }
+		.affiliate-disclosure { margin: 0; font-size: 0.8rem; color: var(--ink-muted); }
+		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
+		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
 {
@@ -273,6 +291,19 @@
     },
     {
       "@id": "https://www.joelevi.com/#website"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.joelevi.com/blog/does-using-a-faster-sdcard-make-your-phone-faster/#pny-premier-x-microsdxc-512gb",
+      "name": "PNY Premier-X 512GB microSDXC Memory Card",
+      "image": "https://www.joelevi.com/assets/products/pny-premier-x-microsd-512gb.jpg",
+      "description": "A fast, high-capacity microSDXC card (Class 10, U3, V30, and A1 rated) for adding storage to phones, tablets, drones, and cameras that have a microSD slot.",
+      "url": "https://link.amazon/B08r7WXWu",
+      "brand": {
+        "@type": "Brand",
+        "name": "PNY"
+      },
+      "sku": "B09R9B9XCJ"
     }
   ]
 }
@@ -310,7 +341,21 @@
 			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/does-using-a-faster-sdcard-make-your-phone-faster/" rel="noopener">Pocketnow</a> on <time datetime="2010-10-20">October 20, 2010</time>.</p>
 
 			<div class="post-body">
-<p>The theory is simple: get a faster hard drive and your desktop computer boots faster, runs faster, saves faster, and opens files faster. That's one of the main reasons people buy drives like the <a href="https://www.amazon.com/gp/product/B001A1TPFE?ie=UTF8&amp;ref_=sr_1_3&amp;s=electronics&amp;qid=1287606138&amp;sr=1-3&amp;linkCode=shr&amp;camp=213733&amp;creative=393189&amp;tag=pn-v2-74983gb-20&amp;ascsubtag=UUpnUeUpU17138&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fdoes-using-a-faster-sdcard-make-your-phone-faster%2F&amp;asc_campaign=Short-Term" rel="nofollow noopener noreferrer sponsored" target="_blank">VelociRaptor from Western Digital</a>, which spins at 10,000 RPM. The faster the platters spin, the faster you can access your data.</p> <p>Hard drives use rotating media, and we don't have those in our phones. We use solid-state media both for storing the OS (the ROM), and for supplemental storage (microsdhc cards). Just like hard drives which come in various speeds (4,200 and 5,400 RPM in laptops; 7,200 and 10,000 RPM in desktops) sdcards have different speeds, too.</p> <h2>
+<p>The theory is simple: get a faster hard drive and your desktop computer boots faster, runs faster, saves faster, and opens files faster. That's one of the main reasons people buy drives like the <a href="https://www.amazon.com/gp/product/B001A1TPFE?ie=UTF8&amp;ref_=sr_1_3&amp;s=electronics&amp;qid=1287606138&amp;sr=1-3&amp;linkCode=shr&amp;camp=213733&amp;creative=393189&amp;tag=pn-v2-74983gb-20&amp;ascsubtag=UUpnUeUpU17138&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fdoes-using-a-faster-sdcard-make-your-phone-faster%2F&amp;asc_campaign=Short-Term" rel="nofollow noopener noreferrer sponsored" target="_blank">VelociRaptor from Western Digital</a>, which spins at 10,000 RPM. The faster the platters spin, the faster you can access your data.</p>
+			<!-- product-cards -->
+			<div class="product-cards">
+				<article class="book-card product-card" id="pny-premier-x-microsdxc-512gb">
+					<div class="cover-col"><img class="cover" src="/assets/products/pny-premier-x-microsd-512gb.jpg" alt="PNY Premier-X 512GB microSDXC Memory Card" width="120" height="180" loading="lazy" /></div>
+					<div class="card-body">
+						<h3 class="card-title">PNY Premier-X 512GB microSDXC Memory Card</h3>
+						<p class="card-author">PNY</p>
+						<p class="card-text">A fast, high-capacity microSDXC card (Class 10, U3, V30, and A1 rated) for adding storage to phones, tablets, drones, and cameras that have a microSD slot.</p>
+						<a class="btn btn-amazon" href="https://link.amazon/B08r7WXWu" target="_blank" rel="sponsored noopener"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy Now</span></a>
+					</div>
+				</article>
+				<p class="affiliate-disclosure">As an Amazon Associate, Joe earns from qualifying purchases.</p>
+			</div><!-- /product-cards -->
+ <p>Hard drives use rotating media, and we don't have those in our phones. We use solid-state media both for storing the OS (the ROM), and for supplemental storage (microsdhc cards). Just like hard drives which come in various speeds (4,200 and 5,400 RPM in laptops; 7,200 and 10,000 RPM in desktops) sdcards have different speeds, too.</p> <h2>
                         How are Speeds Designated?
                </h2>
 <p>These speeds are ranked using a "class" designation. "Class 2" is arguably twice as fast as "Class 1" (or cards that don't have a class designation). Class 4 and 6 are "fast enough" for recording video, whereas Class 2 and below are just fine for storing data. Class 2 is what most newer Android phones are coming with.</p> <p>Following with our desktop computer example, does replacing your slower sdcard with a faster one make your phone any faster? To answer that question I picked up the fastest card I could get my hands on, a <a href="https://www.amazon.com/gp/product/B0036V9AGU?ie=UTF8&amp;ref_=sr_1_8&amp;qid=1287605894&amp;sr=8-8&amp;linkCode=shr&amp;camp=213733&amp;creative=393189&amp;tag=pn-v2-74983gb-20&amp;ascsubtag=UUpnUeUpU17138&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fdoes-using-a-faster-sdcard-make-your-phone-faster%2F&amp;asc_campaign=Short-Term" rel="nofollow noopener noreferrer sponsored" target="_blank">16GB Class 10 microsdhc card from Kingston Technologies</a>.</p> <p>Swapping out the 8GB Class 2 microsd card that comes with the T-Mobile G2 with the 16GB Class 10 was easy and painless. I didn't notice any difference in speed during the initial boot (faster or slower) or in general use of the device. Benchmarks didn't show any discernible speed difference with the new card versus the old card. Overall performance didn't seem to be improved either.</p> <p>So, on a stock Android phone, will plopping in a significantly faster storage card make a difference in speed? In a word: no.</p> <p>Why would someone want to buy a faster card? They're usually more expensive, so what benefits do you get?</p> <p>First off, when I transferred my data from my Class 2 card to the Class 10 card in my desktop computer the data transfer time was significantly reduced (both reading and writing) when using the Class 10 card. Of course, that's not going to be a common use, but it's worth mentioning.</p> <h2>

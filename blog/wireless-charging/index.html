@@ -194,6 +194,24 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* product-cards */
+		.product-cards { margin: 1.25rem 0 1.5rem; display: grid; gap: 0.75rem; }
+		.book-card { display: flex; background: var(--surface); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); max-width: 40rem; }
+		.book-card .cover-col { flex: 0 0 120px; width: 120px; background: var(--surface-deep); }
+		.book-card .cover { display: block; width: 120px; height: auto; margin: 0; border-radius: 0; }
+		.book-card .card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+		.book-card .card-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem; color: var(--blue); line-height: 1.3; }
+		.book-card .card-author { margin: 0 0 0.45rem; color: var(--ink-muted); font-size: 0.92rem; font-weight: 500; }
+		.book-card .card-text { margin: 0 0 0.85rem; color: var(--ink); font-size: 0.92rem; flex: 1; }
+		.btn-amazon { display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start; background: var(--btn-bg, #2F6FED); border: 1px solid var(--btn-border, #1A4BB8); color: var(--btn-fg, #FFFFFF) !important; font-weight: 600; font-size: 0.9rem; padding: 0.45rem 0.9rem; border-radius: 0.45rem; text-decoration: none !important; }
+		.btn-amazon:hover { background: var(--btn-bg-hover, #2458C7); }
+		.product-card .cover-col { background: #fff; display: flex; align-items: center; }
+		.product-card .cover { object-fit: contain; padding: 0.4rem; }
+		.affiliate-disclosure { margin: 0; font-size: 0.8rem; color: var(--ink-muted); }
+		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
+		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
 {
@@ -274,6 +292,19 @@
     },
     {
       "@id": "https://www.joelevi.com/#website"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.joelevi.com/blog/wireless-charging/#ugreen-qi2-wireless-charger",
+      "name": "UGREEN Qi2 25W Wireless Charging Pad",
+      "image": "https://www.joelevi.com/assets/products/ugreen-qi2-wireless-charger.jpg",
+      "description": "A Qi2-certified magnetic charging pad that tops up recent iPhones, AirPods, and other Qi-compatible devices without a cable. It includes a 5-foot USB-C cable; the wall adapter is sold separately.",
+      "url": "https://link.amazon/B0ij75vvQ",
+      "brand": {
+        "@type": "Brand",
+        "name": "UGREEN"
+      },
+      "sku": "B0FXGQ1NMC"
     }
   ]
 }
@@ -311,7 +342,21 @@
 			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/wireless-charging/" rel="noopener">Pocketnow</a> on <time datetime="2014-04-16">April 16, 2014</time>.</p>
 
 			<div class="post-body">
-<p>If you’ve never used wireless charging, you’re missing out, and you just can’t understand how convenient it is. Every time you need to charge your device, you’ve got to have a cord plugged into an electrical outlet (or a <a href="https://pocketnow.com/2014/04/14/zens-qi-portable-battery" rel="noopener" target="_blank">portable battery</a>). You probably have a few of these “tentacles” positioned in strategic locations that are quickly accessible throughout your day. Although somewhat convenient, that gets a bit messy and unorganized.</p> <p>I currently have four devices in my household that can charge wirelessly via the Qi standard. I wish I had more.</p> <p>To combat the widespread use of wall-wart chargers in my house, I’ve systematically replaced the outlets that get used for device charging with outlets that include built-in USB ports. It’s a step in the right direction, but it’s still nowhere near as convenient as simply setting your smartphone or tablet on a charger. Once that charger is plugged in you never have to fiddle with cords again — just place your device on the pad and you’re done. When you’re ready to go, just pick your phone or tablet up and you’re on your way — no unplugging or coiling of a cord, or leaving dangling unsightly from your wall.</p>
+<p>If you’ve never used wireless charging, you’re missing out, and you just can’t understand how convenient it is. Every time you need to charge your device, you’ve got to have a cord plugged into an electrical outlet (or a <a href="https://pocketnow.com/2014/04/14/zens-qi-portable-battery" rel="noopener" target="_blank">portable battery</a>). You probably have a few of these “tentacles” positioned in strategic locations that are quickly accessible throughout your day. Although somewhat convenient, that gets a bit messy and unorganized.</p>
+			<!-- product-cards -->
+			<div class="product-cards">
+				<article class="book-card product-card" id="ugreen-qi2-wireless-charger">
+					<div class="cover-col"><img class="cover" src="/assets/products/ugreen-qi2-wireless-charger.jpg" alt="UGREEN Qi2 25W Wireless Charging Pad" width="120" height="180" loading="lazy" /></div>
+					<div class="card-body">
+						<h3 class="card-title">UGREEN Qi2 25W Wireless Charging Pad</h3>
+						<p class="card-author">UGREEN</p>
+						<p class="card-text">A Qi2-certified magnetic charging pad that tops up recent iPhones, AirPods, and other Qi-compatible devices without a cable. It includes a 5-foot USB-C cable; the wall adapter is sold separately.</p>
+						<a class="btn btn-amazon" href="https://link.amazon/B0ij75vvQ" target="_blank" rel="sponsored noopener"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy Now</span></a>
+					</div>
+				</article>
+				<p class="affiliate-disclosure">As an Amazon Associate, Joe earns from qualifying purchases.</p>
+			</div><!-- /product-cards -->
+ <p>I currently have four devices in my household that can charge wirelessly via the Qi standard. I wish I had more.</p> <p>To combat the widespread use of wall-wart chargers in my house, I’ve systematically replaced the outlets that get used for device charging with outlets that include built-in USB ports. It’s a step in the right direction, but it’s still nowhere near as convenient as simply setting your smartphone or tablet on a charger. Once that charger is plugged in you never have to fiddle with cords again — just place your device on the pad and you’re done. When you’re ready to go, just pick your phone or tablet up and you’re on your way — no unplugging or coiling of a cord, or leaving dangling unsightly from your wall.</p>
 <figure><img alt="wireless charging coil" loading="lazy" src="/blog/media/pocketnow/2014/04/coil.jpg"/></figure>
 <p>The convenience of wireless charging is simply something you have to experience to “get” — but once you do, you’ll never want to go back! Why then, are OEMs so hesitant to put wireless charging into our devices?</p> <h2>
                         More Expensive

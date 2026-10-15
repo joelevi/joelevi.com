@@ -189,6 +189,24 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* product-cards */
+		.product-cards { margin: 1.25rem 0 1.5rem; display: grid; gap: 0.75rem; }
+		.book-card { display: flex; background: var(--surface); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); max-width: 40rem; }
+		.book-card .cover-col { flex: 0 0 120px; width: 120px; background: var(--surface-deep); }
+		.book-card .cover { display: block; width: 120px; height: auto; margin: 0; border-radius: 0; }
+		.book-card .card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+		.book-card .card-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem; color: var(--blue); line-height: 1.3; }
+		.book-card .card-author { margin: 0 0 0.45rem; color: var(--ink-muted); font-size: 0.92rem; font-weight: 500; }
+		.book-card .card-text { margin: 0 0 0.85rem; color: var(--ink); font-size: 0.92rem; flex: 1; }
+		.btn-amazon { display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start; background: var(--btn-bg, #2F6FED); border: 1px solid var(--btn-border, #1A4BB8); color: var(--btn-fg, #FFFFFF) !important; font-weight: 600; font-size: 0.9rem; padding: 0.45rem 0.9rem; border-radius: 0.45rem; text-decoration: none !important; }
+		.btn-amazon:hover { background: var(--btn-bg-hover, #2458C7); }
+		.product-card .cover-col { background: #fff; display: flex; align-items: center; }
+		.product-card .cover { object-fit: contain; padding: 0.4rem; }
+		.affiliate-disclosure { margin: 0; font-size: 0.8rem; color: var(--ink-muted); }
+		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
+		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
 {
@@ -254,6 +272,21 @@
     },
     {
       "@id": "https://www.joelevi.com/#website"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.joelevi.com/blog/nationwide-car-tracking-system/#1984-orwell",
+      "name": "1984",
+      "image": "https://www.joelevi.com/books/covers/1984-orwell.jpg",
+      "description": "Orwell's classic novel of a surveillance state where Big Brother watches everyone, history is rewritten to suit the Party, and independent thought is a crime.",
+      "url": "https://link.amazon/B099Oaz8V",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "George Orwell"
+        }
+      ],
+      "isbn": "1328869334"
     }
   ]
 }
@@ -307,7 +340,21 @@
 
 <p>So when someone tells you that they want to tax you "by the mile", don't get sucked into their propaganda! The real reason is to build a real-time tracking system to know where you are and infer where you're going.</p>
 
-<p>Sound like <em><a href="https://www.amazon.com/gp/product/B00BP0ODSE/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00BP0ODSE&amp;linkCode=as2&amp;tag=leviz&amp;linkId=CFFXZY5A6ELX7EK5" target="_blank">1984</a></em> to anyone else?</p>
+<p>Sound like <em><a href="https://link.amazon/B099Oaz8V" target="_blank" rel="sponsored noopener">1984</a></em> to anyone else?</p>
+			<!-- product-cards -->
+			<div class="product-cards">
+				<article class="book-card" id="1984-orwell">
+					<div class="cover-col"><img class="cover" src="/books/covers/1984-orwell.jpg" alt="Cover of 1984" width="120" height="180" loading="lazy" /></div>
+					<div class="card-body">
+						<h3 class="card-title">1984</h3>
+						<p class="card-author">George Orwell</p>
+						<p class="card-text">Orwell&#x27;s classic novel of a surveillance state where Big Brother watches everyone, history is rewritten to suit the Party, and independent thought is a crime.</p>
+						<a class="btn btn-amazon" href="https://link.amazon/B099Oaz8V" target="_blank" rel="sponsored noopener"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy Now</span></a>
+					</div>
+				</article>
+				<p class="affiliate-disclosure">As an Amazon Associate, Joe earns from qualifying purchases.</p>
+			</div><!-- /product-cards -->
+
 
 <p>Read more: <a href="https://www.foxnews.com/politics/2015/01/27/justice-department-working-on-national-car-tracking-database/" target="_blank">Fox news</a>, <a href="https://www.wsj.com/articles/u-s-spies-on-millions-of-cars-1422314779" target="_blank">The Wall Street Journal</a></p>
 			</div>

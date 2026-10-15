@@ -189,6 +189,24 @@
 		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
+		/* product-cards */
+		.product-cards { margin: 1.25rem 0 1.5rem; display: grid; gap: 0.75rem; }
+		.book-card { display: flex; background: var(--surface); border: 1px solid var(--rule); border-radius: 0.75rem; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); max-width: 40rem; }
+		.book-card .cover-col { flex: 0 0 120px; width: 120px; background: var(--surface-deep); }
+		.book-card .cover { display: block; width: 120px; height: auto; margin: 0; border-radius: 0; }
+		.book-card .card-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+		.book-card .card-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.2rem; color: var(--blue); line-height: 1.3; }
+		.book-card .card-author { margin: 0 0 0.45rem; color: var(--ink-muted); font-size: 0.92rem; font-weight: 500; }
+		.book-card .card-text { margin: 0 0 0.85rem; color: var(--ink); font-size: 0.92rem; flex: 1; }
+		.btn-amazon { display: inline-flex; align-items: center; gap: 0.4rem; align-self: flex-start; background: var(--btn-bg, #2F6FED); border: 1px solid var(--btn-border, #1A4BB8); color: var(--btn-fg, #FFFFFF) !important; font-weight: 600; font-size: 0.9rem; padding: 0.45rem 0.9rem; border-radius: 0.45rem; text-decoration: none !important; }
+		.btn-amazon:hover { background: var(--btn-bg-hover, #2458C7); }
+		.product-card .cover-col { background: #fff; display: flex; align-items: center; }
+		.product-card .cover { object-fit: contain; padding: 0.4rem; }
+		.affiliate-disclosure { margin: 0; font-size: 0.8rem; color: var(--ink-muted); }
+		.btn-amazon__icon { flex: 0 0 auto; width: 1.1em; height: 1.1em; display: block; }
+		.btn-amazon:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		@media (max-width: 560px) { .book-card .cover-col, .book-card .cover { width: 96px; flex-basis: 96px; } }
+		/* /product-cards */
 	</style>
 	<script type="application/ld+json">
 {
@@ -252,6 +270,21 @@
     },
     {
       "@id": "https://www.joelevi.com/#website"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://www.joelevi.com/blog/american-empire-before-the-fall-2/#american-empire-before-the-fall",
+      "name": "American Empire: Before the Fall",
+      "image": "https://www.joelevi.com/books/covers/american-empire-before-the-fall.jpg",
+      "description": "Former Reagan administration official Bruce Fein, writing for Campaign for Liberty, traces how far U.S. foreign policy has drifted from the Founders' intent and argues that permanent intervention abroad threatens liberty, prosperity, and the Constitution at home.",
+      "url": "https://link.amazon/B062eQB92",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Bruce Fein"
+        }
+      ],
+      "isbn": "1452829535"
     }
   ]
 }
@@ -293,13 +326,27 @@
 
 <p>Dear Friend of Liberty,</p>
 
-<p>Commissioned by Campaign for Liberty and written by former Reagan administration official Bruce Fein, <em><a href="https://www.amazon.com/gp/product/1452829535?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1452829535" target="_blank">American Empire: Before the Fall</a></em> chronicles how far our foreign policy has come from the Founders' intentions, details the threat to America's security and prosperity posed by mortgaging our future to support the rest of the world, and lays out a plan to strengthen our nation by restoring a foreign policy that adheres to the Constitution.</p>
+<p>Commissioned by Campaign for Liberty and written by former Reagan administration official Bruce Fein, <em><a href="https://link.amazon/B062eQB92" target="_blank" rel="sponsored noopener">American Empire: Before the Fall</a></em> chronicles how far our foreign policy has come from the Founders' intentions, details the threat to America's security and prosperity posed by mortgaging our future to support the rest of the world, and lays out a plan to strengthen our nation by restoring a foreign policy that adheres to the Constitution.</p>
+			<!-- product-cards -->
+			<div class="product-cards">
+				<article class="book-card" id="american-empire-before-the-fall">
+					<div class="cover-col"><img class="cover" src="/books/covers/american-empire-before-the-fall.jpg" alt="Cover of American Empire: Before the Fall" width="120" height="180" loading="lazy" /></div>
+					<div class="card-body">
+						<h3 class="card-title">American Empire: Before the Fall</h3>
+						<p class="card-author">Bruce Fein</p>
+						<p class="card-text">Former Reagan administration official Bruce Fein, writing for Campaign for Liberty, traces how far U.S. foreign policy has drifted from the Founders&#x27; intent and argues that permanent intervention abroad threatens liberty, prosperity, and the Constitution at home.</p>
+						<a class="btn btn-amazon" href="https://link.amazon/B062eQB92" target="_blank" rel="sponsored noopener"><svg class="btn-amazon__icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.25" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.25" fill="currentColor" stroke="none"/><path d="M3 4h2l1.6 9.2a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.45-1.1L20 7H6.2"/><path d="M15.5 2.5v5M13 5h5"/></svg> <span>Buy Now</span></a>
+					</div>
+				</article>
+				<p class="affiliate-disclosure">As an Amazon Associate, Joe earns from qualifying purchases.</p>
+			</div><!-- /product-cards -->
+
 
 <p>We want to get the word out on this important new work, and you can help us do that by <a href="https://paracom.paramountcommunication.com/ct/4442308:6645264019:m:1:171001347:78BDA59E2C912FBA50563FDA6E18A388" target="_blank">participating in our August 2nd “Book Bomb.”</a></p>
 
 <p>Let’s push the book into Amazon's Top One Hundred and demonstrate the strength of support for a constitutional, common sense foreign policy!</p>
 
-<p>As we continue fighting the war of ideas, <em><a href="https://www.amazon.com/gp/product/1452829535?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1452829535" target="_blank">American Empire: Before the Fall</a></em>’s vital and powerfully articulated arguments will arm us with the knowledge needed to successfully promote and defend a constitutional, noninterventionist foreign policy.</p>
+<p>As we continue fighting the war of ideas, <em><a href="https://link.amazon/B062eQB92" target="_blank" rel="sponsored noopener">American Empire: Before the Fall</a></em>’s vital and powerfully articulated arguments will arm us with the knowledge needed to successfully promote and defend a constitutional, noninterventionist foreign policy.</p>
 
 <p>In Liberty,</p>
 
@@ -309,7 +356,7 @@
 
 <p>President</p>
 
-<p>P.S. Campaign for Liberty’s first book, <em><a href="https://www.amazon.com/gp/product/1452829535?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1452829535" target="_blank">American Empire: Before the Fall</a></em>, is an intense, riveting examination of America’s foreign policy and the essential issues that will determine the future of a nation.  Help us promote this educational tool by <a href="https://paracom.paramountcommunication.com/ct/4442308:6645264019:m:1:171001347:78BDA59E2C912FBA50563FDA6E18A388" target="_blank">participating in our August 2nd “Book Bomb”</a>!</p>
+<p>P.S. Campaign for Liberty’s first book, <em><a href="https://link.amazon/B062eQB92" target="_blank" rel="sponsored noopener">American Empire: Before the Fall</a></em>, is an intense, riveting examination of America’s foreign policy and the essential issues that will determine the future of a nation.  Help us promote this educational tool by <a href="https://paracom.paramountcommunication.com/ct/4442308:6645264019:m:1:171001347:78BDA59E2C912FBA50563FDA6E18A388" target="_blank">participating in our August 2nd “Book Bomb”</a>!</p>
 			</div>
 			<!-- post-terms -->
 			<nav class="post-terms" aria-label="Categories and tags">
