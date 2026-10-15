@@ -141,6 +141,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/caddeine/",
+      "destination": "/blog/tags/caffeine/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/caddeine",
+      "destination": "/blog/tags/caffeine/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
