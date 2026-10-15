@@ -1,0 +1,304 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/categories/consume-protection/",
+      "destination": "/blog/categories/consumer-protection/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categories/consume-protection",
+      "destination": "/blog/categories/consumer-protection/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/911/",
+      "destination": "/blog/tags/9-11/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/911",
+      "destination": "/blog/tags/9-11/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/amon_ra/",
+      "destination": "/blog/tags/amon-ra/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/amon_ra",
+      "destination": "/blog/tags/amon-ra/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/android-2/",
+      "destination": "/blog/tags/android/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/android-2",
+      "destination": "/blog/tags/android/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndromea/",
+      "destination": "/blog/tags/asperger-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndromea",
+      "destination": "/blog/tags/asperger-syndrome/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndromeaspergers-disorder/",
+      "destination": "/blog/tags/asperger-syndrome-aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger-syndromeaspergers-disorder",
+      "destination": "/blog/tags/asperger-syndrome-aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/at-t/",
+      "destination": "/blog/tags/att/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/at-t",
+      "destination": "/blog/tags/att/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/attorney-general-state/",
+      "destination": "/blog/tags/attorney-general/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/attorney-general-state",
+      "destination": "/blog/tags/attorney-general/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/county-delegates-precinct-information/",
+      "destination": "/blog/tags/county-delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/county-delegates-precinct-information",
+      "destination": "/blog/tags/county-delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/davis-county-2/",
+      "destination": "/blog/tags/davis-county/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/davis-county-2",
+      "destination": "/blog/tags/davis-county/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/davis-school-district-2/",
+      "destination": "/blog/tags/davis-school-district/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/davis-school-district-2",
+      "destination": "/blog/tags/davis-school-district/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/food-water-watch/",
+      "destination": "/blog/tags/food-and-water-watch/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/food-water-watch",
+      "destination": "/blog/tags/food-and-water-watch/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/form_onload/",
+      "destination": "/blog/tags/form-onload/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/form_onload",
+      "destination": "/blog/tags/form-onload/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/galaxy-s-ii-at-t/",
+      "destination": "/blog/tags/galaxy-s-ii-att/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/galaxy-s-ii-at-t",
+      "destination": "/blog/tags/galaxy-s-ii-att/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/governor-2/",
+      "destination": "/blog/tags/governor/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/governor-2",
+      "destination": "/blog/tags/governor/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/health-2/",
+      "destination": "/blog/tags/health/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/health-2",
+      "destination": "/blog/tags/health/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/internet-2/",
+      "destination": "/blog/tags/internet/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/internet-2",
+      "destination": "/blog/tags/internet/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lighting-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/lighting/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lighting-technology-joe-family-friends-family",
+      "destination": "/blog/tags/lighting/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/microsoft-internet-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/microsoft/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/microsoft-internet-technology-joe-family-friends-family",
+      "destination": "/blog/tags/microsoft/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/orrin-hatch-2/",
+      "destination": "/blog/tags/orrin-hatch/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/orrin-hatch-2",
+      "destination": "/blog/tags/orrin-hatch/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/president-u-s-executive-branch/",
+      "destination": "/blog/tags/president/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/president-u-s-executive-branch",
+      "destination": "/blog/tags/president/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/rfbkc/",
+      "destination": "/blog/tags/rfb-kc/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/rfbkc",
+      "destination": "/blog/tags/rfb-kc/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/self-defense-activism-joe-family-friends-family/",
+      "destination": "/blog/tags/self-defense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/self-defense-activism-joe-family-friends-family",
+      "destination": "/blog/tags/self-defense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/state-delegates-precinct-information/",
+      "destination": "/blog/tags/state-delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/state-delegates-precinct-information",
+      "destination": "/blog/tags/state-delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/syracuse-city-2/",
+      "destination": "/blog/tags/syracuse-city/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/syracuse-city-2",
+      "destination": "/blog/tags/syracuse-city/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/vice-president-2/",
+      "destination": "/blog/tags/vice-president/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/vice-president-2",
+      "destination": "/blog/tags/vice-president/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/vista-operating-systems-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/vista/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/vista-operating-systems-technology-joe-family-friends-family",
+      "destination": "/blog/tags/vista/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/wordpress-web-development-internet-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/wordpress/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/wordpress-web-development-internet-technology-joe-family-friends-family",
+      "destination": "/blog/tags/wordpress/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/xbox-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/xbox/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/xbox-technology-joe-family-friends-family",
+      "destination": "/blog/tags/xbox/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/zune-technology-joe-family-friends-family/",
+      "destination": "/blog/tags/zune/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/zune-technology-joe-family-friends-family",
+      "destination": "/blog/tags/zune/",
+      "permanent": true
+    }
+  ]
+}
