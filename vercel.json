@@ -21,6 +21,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/alien/",
+      "destination": "/blog/tags/aliens/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/alien",
+      "destination": "/blog/tags/aliens/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/amon_ra/",
       "destination": "/blog/tags/amon-ra/",
       "permanent": true
@@ -38,6 +48,16 @@
     {
       "source": "/blog/tags/android-2",
       "destination": "/blog/tags/android/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/apps/",
+      "destination": "/blog/tags/app/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/apps",
+      "destination": "/blog/tags/app/",
       "permanent": true
     },
     {
@@ -121,6 +141,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/bills/",
+      "destination": "/blog/tags/bill/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/bills",
+      "destination": "/blog/tags/bill/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/bucket/",
+      "destination": "/blog/tags/buckets/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/bucket",
+      "destination": "/blog/tags/buckets/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/burn-out/",
       "destination": "/blog/tags/burnout/",
       "permanent": true
@@ -168,6 +208,16 @@
     {
       "source": "/blog/tags/campaign4liberty",
       "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/charger/",
+      "destination": "/blog/tags/chargers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/charger",
+      "destination": "/blog/tags/chargers/",
       "permanent": true
     },
     {
@@ -231,6 +281,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/content-distribution-network/",
+      "destination": "/blog/tags/cdn/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/content-distribution-network",
+      "destination": "/blog/tags/cdn/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cop/",
+      "destination": "/blog/tags/cops/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cop",
+      "destination": "/blog/tags/cops/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
@@ -238,6 +308,36 @@
     {
       "source": "/blog/tags/county-delegates-precinct-information",
       "destination": "/blog/tags/county-delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/customer/",
+      "destination": "/blog/tags/customers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/customer",
+      "destination": "/blog/tags/customers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cut/",
+      "destination": "/blog/tags/cuts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cut",
+      "destination": "/blog/tags/cuts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/czar/",
+      "destination": "/blog/tags/czars/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/czar",
+      "destination": "/blog/tags/czars/",
       "permanent": true
     },
     {
@@ -261,6 +361,76 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/delegate/",
+      "destination": "/blog/tags/delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/delegate",
+      "destination": "/blog/tags/delegates/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/developer/",
+      "destination": "/blog/tags/developers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/developer",
+      "destination": "/blog/tags/developers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/egg/",
+      "destination": "/blog/tags/eggs/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/egg",
+      "destination": "/blog/tags/eggs/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/elections/",
+      "destination": "/blog/tags/election/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/elections",
+      "destination": "/blog/tags/election/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/employees/",
+      "destination": "/blog/tags/employee/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/employees",
+      "destination": "/blog/tags/employee/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/feed/",
+      "destination": "/blog/tags/feeds/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/feed",
+      "destination": "/blog/tags/feeds/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/firearms/",
+      "destination": "/blog/tags/firearm/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/firearms",
+      "destination": "/blog/tags/firearm/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/food-water-watch/",
       "destination": "/blog/tags/food-and-water-watch/",
       "permanent": true
@@ -278,6 +448,16 @@
     {
       "source": "/blog/tags/form_onload",
       "destination": "/blog/tags/form-onload/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/fund/",
+      "destination": "/blog/tags/funds/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/fund",
+      "destination": "/blog/tags/funds/",
       "permanent": true
     },
     {
@@ -301,6 +481,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/games/",
+      "destination": "/blog/tags/game/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/games",
+      "destination": "/blog/tags/game/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/governor-2/",
       "destination": "/blog/tags/governor/",
       "permanent": true
@@ -308,6 +498,16 @@
     {
       "source": "/blog/tags/governor-2",
       "destination": "/blog/tags/governor/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/guns/",
+      "destination": "/blog/tags/gun/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/guns",
+      "destination": "/blog/tags/gun/",
       "permanent": true
     },
     {
@@ -731,6 +931,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/knot/",
+      "destination": "/blog/tags/knots/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/knot",
+      "destination": "/blog/tags/knots/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/lds/",
       "destination": "/blog/tags/church-of-jesus-christ-of-latter-day-saints/",
       "permanent": true
@@ -741,6 +951,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/lie/",
+      "destination": "/blog/tags/lies/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lie",
+      "destination": "/blog/tags/lies/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/lighting-technology-joe-family-friends-family/",
       "destination": "/blog/tags/lighting/",
       "permanent": true
@@ -748,6 +968,26 @@
     {
       "source": "/blog/tags/lighting-technology-joe-family-friends-family",
       "destination": "/blog/tags/lighting/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lights/",
+      "destination": "/blog/tags/light/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lights",
+      "destination": "/blog/tags/light/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/map/",
+      "destination": "/blog/tags/maps/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/map",
+      "destination": "/blog/tags/maps/",
       "permanent": true
     },
     {
@@ -848,6 +1088,16 @@
     {
       "source": "/blog/tags/nomination-of-elena-kagan",
       "destination": "/blog/tags/elena-kagan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/notification/",
+      "destination": "/blog/tags/notifications/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/notification",
+      "destination": "/blog/tags/notifications/",
       "permanent": true
     },
     {
@@ -1051,6 +1301,46 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/quotes/",
+      "destination": "/blog/tags/quote/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/quotes",
+      "destination": "/blog/tags/quote/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/regulation/",
+      "destination": "/blog/tags/regulations/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/regulation",
+      "destination": "/blog/tags/regulations/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/response/",
+      "destination": "/blog/tags/responses/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/response",
+      "destination": "/blog/tags/responses/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/review/",
+      "destination": "/blog/tags/reviews/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/review",
+      "destination": "/blog/tags/reviews/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/rfbkc/",
       "destination": "/blog/tags/rfb-kc/",
       "permanent": true
@@ -1058,6 +1348,46 @@
     {
       "source": "/blog/tags/rfbkc",
       "destination": "/blog/tags/rfb-kc/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/ringtones/",
+      "destination": "/blog/tags/ringtone/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/ringtones",
+      "destination": "/blog/tags/ringtone/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/roads/",
+      "destination": "/blog/tags/road/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/roads",
+      "destination": "/blog/tags/road/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/roms/",
+      "destination": "/blog/tags/rom/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/roms",
+      "destination": "/blog/tags/rom/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/rumor/",
+      "destination": "/blog/tags/rumors/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/rumor",
+      "destination": "/blog/tags/rumors/",
       "permanent": true
     },
     {
@@ -1131,6 +1461,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/songs/",
+      "destination": "/blog/tags/song/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/songs",
+      "destination": "/blog/tags/song/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sport/",
+      "destination": "/blog/tags/sports/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sport",
+      "destination": "/blog/tags/sports/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/state-delegates-precinct-information/",
       "destination": "/blog/tags/state-delegates/",
       "permanent": true
@@ -1151,6 +1501,66 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/taser/",
+      "destination": "/blog/tags/tasers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/taser",
+      "destination": "/blog/tags/tasers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tax/",
+      "destination": "/blog/tags/taxes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tax",
+      "destination": "/blog/tags/taxes/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tips/",
+      "destination": "/blog/tags/tip/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tips",
+      "destination": "/blog/tags/tip/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tree/",
+      "destination": "/blog/tags/trees/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/tree",
+      "destination": "/blog/tags/trees/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/unions/",
+      "destination": "/blog/tags/union/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/unions",
+      "destination": "/blog/tags/union/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/updates/",
+      "destination": "/blog/tags/update/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/updates",
+      "destination": "/blog/tags/update/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/vice-president-2/",
       "destination": "/blog/tags/vice-president/",
       "permanent": true
@@ -1168,6 +1578,46 @@
     {
       "source": "/blog/tags/vista-operating-systems-technology-joe-family-friends-family",
       "destination": "/blog/tags/vista/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/votes/",
+      "destination": "/blog/tags/vote/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/votes",
+      "destination": "/blog/tags/vote/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/wearable/",
+      "destination": "/blog/tags/wearables/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/wearable",
+      "destination": "/blog/tags/wearables/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/web-browser/",
+      "destination": "/blog/tags/web-browsers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/web-browser",
+      "destination": "/blog/tags/web-browsers/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/widget/",
+      "destination": "/blog/tags/widgets/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/widget",
+      "destination": "/blog/tags/widgets/",
       "permanent": true
     },
     {
