@@ -91,6 +91,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/barter/",
+      "destination": "/blog/tags/bartering/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/barter",
+      "destination": "/blog/tags/bartering/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
