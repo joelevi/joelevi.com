@@ -771,6 +771,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/one-subject-at-a-time/",
+      "destination": "/blog/tags/one-subject-at-a-time-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/one-subject-at-a-time",
+      "destination": "/blog/tags/one-subject-at-a-time-act/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
