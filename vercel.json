@@ -171,6 +171,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/chicken/",
+      "destination": "/blog/tags/chickens/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/chicken",
+      "destination": "/blog/tags/chickens/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
