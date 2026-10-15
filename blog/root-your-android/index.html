@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="When we talk about root or “rooting” your smartphone or tablet, we’re talking about bypassing the built-in securities and permissions that come prepackaged on…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Seven things you still need root to do, and two things that don’t" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/root-your-android/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Seven things you still need root to do, and two things that don’t — Joe Levi" />
+	<meta property="og:description" content="When we talk about root or “rooting” your smartphone or tablet, we’re talking about bypassing the built-in securities and permissions that come prepackaged on…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/01/android-root-changes.jpg" />
+	<meta property="og:image:alt" content="Seven things you still need root to do, and two things that don’t" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/root-your-android/" />
+	<meta property="article:published_time" content="2014-12-08T13:01:05" />
+	<meta property="article:modified_time" content="2014-12-08T13:01:05" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Seven things you still need root to do, and two things that don’t — Joe Levi" />
+	<meta name="twitter:description" content="When we talk about root or “rooting” your smartphone or tablet, we’re talking about bypassing the built-in securities and permissions that come prepackaged on…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/01/android-root-changes.jpg" />
+	<meta name="twitter:image:alt" content="Seven things you still need root to do, and two things that don’t" />
+	<title>Seven things you still need root to do, and two things that don’t — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/root-your-android/#article",
+      "url": "https://www.joelevi.com/blog/root-your-android/",
+      "headline": "Seven things you still need root to do, and two things that don’t",
+      "description": "When we talk about root or “rooting” your smartphone or tablet, we’re talking about bypassing the built-in securities and permissions that come prepackaged on…",
+      "datePublished": "2014-12-08T13:01:05",
+      "dateModified": "2014-12-08T13:01:05",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/root-your-android/",
+        "headline": "Seven things you still need root to do, and two things that don’t",
+        "datePublished": "2014-12-08T20:01:05Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/root-your-android/",
+      "mainEntityOfPage": "https://pocketnow.com/root-your-android/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/01/android-root-changes.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/root-your-android/#breadcrumb"
+      },
+      "keywords": [
+        "android power user",
+        "Editorial",
+        "Pocketnow Power User",
+        "root"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/root-your-android/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seven things you still need root to do, and two things that don’t",
+          "item": "https://www.joelevi.com/blog/root-your-android/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Seven things you still need root to do, and two things that don’t</h1>
+				<p class="post-meta"><time datetime="2014-12-08">December 8, 2014</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/root-your-android/" rel="noopener">Pocketnow</a> on <time datetime="2014-12-08">December 8, 2014</time>.</p>
+
+			<div class="post-body">
+<p>When we talk about root or “rooting” your smartphone or tablet, we’re talking about bypassing the built-in securities and permissions that come prepackaged on your device so you can obtain “privileged control” or “root access”. Our Apple-toting friends often call this “jailbreaking”, which, in a manner of speaking, it is. OEMs lock our devices down “for our own good”, to keep us from breaking them or allowing malicious software to get inside and do damage. A secondary objective is to make sure that we can’t do anything that the OEM, carrier, or OS vendor don’t want us to do – which makes “jailbreaking” a very appropriate term – though in actuality, we’ve done nothing wrong.</p> <p>Android is based on the Linux kernel and Linux is a full-blown operating system with lots of potential uses. It’s a pretty powerful OS when it comes right down to it. Back in the early days, many people saw Android’s heritage as a banner not only for what the OS <em>could</em> do, but as an ensign of what it <em>should</em> do. In its infancy, however, Android was not terribly powerful, but it was full of potential.</p>
+<figure><img alt="htcflashlight" loading="lazy" src="/blog/media/pocketnow/2010/02/htcflashlight.jpeg"/></figure>
+<p>As hardware specs evolved and progressed developers began to envision new and innovative ways to put those components to use. However, due to various restrictions and the lack of published APIs (application programming interfaces), many of these new components were untouchable to everyday users running with default permission levels. Root users, on the other hand, had much deeper access to the hardware – but only a small percentage of Android users had rooted their devices.</p> <h2>
+                        No Root Needed
+               </h2>
+<p>Let’s start out with a few of the more notable things that used to require root, but no longer do.</p> <p>Android-powered smartphones have included rear-facing cameras since the very earliest models. One of the features of virtually any camera is its flash. The LED module used to light up a dark scene while taking a picture can serve as a pretty decent short-duration flashlight. I mention short-duration because, unlike dedicated flashlights, the LEDs used for smartphone cameras typically don’t include any heat-dissipation hardware, which could cause premature burn-out if left on for any length of time.</p> <p>There wasn’t a standard API through which apps could emulate a flashlight using the camera’s LED module. Some app developers were able to hook into the camera software written by one OEM, but that method didn’t work for the camera software written by another OEM. This made camera apps “flakey” at best. To get around this, app developers could talk to the hardware directly, but only if you had rooted your phone.</p> <p>Thankfully, Google eventually opened up a camera API such that app developers could toggle the LED, and even set its intensity. Root access was no longer needed to turn your camera’s LED flash into an LED flashlight.</p> <p>That wasn’t the reason Google opened up the camera API. Rather, the API was added to enable more rapid development of camera hardware and drivers, which could now be decoupled from the camera software. Free from the constraints of each other, both could develop and evolve much quicker, resulting in better sensors as well as better camera apps – and even third party apps.</p> <h2>
+                        Still Need Root
+               </h2>
+<p>There are still plenty of things that still require root access. Some rightly so, and others that are just silly.</p> <p>The first item that still requires root, but shouldn’t have to: DNS settings. Here’s a quick rundown for you on how the Internet works: You ask for a website using its name (“Pocketnow.com”, for example). This request is then handed off to a Domain Name System server and the name is used to look up the address for that name. This is similar to how phone books work for looking up a person’s phone number (are phone books even still a thing these days?). This “lookup” can take a significant amount of time, relatively speaking. For simplicity, let’s say it takes one-third of a second to look up a name. Almost every website in the ‘verse has social sharing buttons for Twitter, Facebook, and Google+ (that’s three more thirds of a second), and Google Analytics running (another 1/3 second). Throw in ads being served from 3 sources, and all together you’re looking at almost three full seconds doing nothing but looking up addresses. In reality (speaking now as a web developer who lives and breathes this world every day), there are generally a dozen or so DNS lookups on any given page, which could total 4 full seconds of DNS resolution. Thankfully, DNS gets cached on your device for a period of time, so it doesn’t have to look up every single request, just those it hasn’t looked up recently.</p> 
+<div class="video"><iframe allowfullscreen="" frameborder="0" height="315" loading="lazy" src="https://www.youtube-nocookie.com/embed/iDbyYGrswtg" title="Embedded video" width="560"></iframe></div>
+<p><br/></p> <p>Why does all that matter? Not all DNS servers are created equally. Some have more processing power and RAM behind them, and some are geographically closer than others. If you’re in Los Angeles but your carrier’s DNS server is in Chicago, that request has to cross the entire country just to find out where it needs to go, which may be a server just down the road in San Diego. Some carriers recognize this and set your DNS settings to a server close to you, but many don’t. That’s where Google DNS, OpenDNS, and others come in to play.</p> <p>As I sit writing this article my router is configured to use OpenDNS as my primary DNS server, and Google DNS as its backup – even though I’m on a Comcast/XFINITY line, and that company has its own DNS server (which I don’t use). OpenDNS has more features that I enjoy, and Google DNS is faster. Android has the ability to let you configure your DNS however you’d like, but you’ll have to have root access to change it from your network’s default DNS.</p> <p>Sorry, that was pretty lengthy, but it’s a complicated subject. These next ones should be a bit quicker.</p> <p><strong>Full-system backup:</strong> there are still some apps that don’t store their data in the cloud. That means when you reset your device (or get a new one), you’ll need to backup your device to a file. Unfortunately, if you haven’t OEM unlocked your device prior to reaching that point in time, you’ll end up losing your data in the attempt to save it. Yes, developers have multiple cloud-based options at their disposal, but not all of them have implemented the feature.</p> <p><strong>Overclocking/underclocking:</strong> your SoC can go quite a bit faster than the line on the spec sheet indicates. It can also swallow your battery whole and burn itself out (and possibly take you with it) in the process. OEMs balance speed with power, heat, and battery consumption when setting the clock speeds of the SoCs inside your phone. You might want to change that, for whatever reason, to go faster or even slower than the OEM intended. You’ll need root to do that, and probably rightly so, since this one could cause significant damage if done wrong.</p> <p><strong>Tap-to-unlock:</strong> the new Nexus 6 was originally supposed to come with a cool “tap-to-unlock” feature. For whatever reason it didn’t make the cut to the final release. Having used phones with that feature, I can’t tell you how annoying it is to double-tap the screen and have it do nothing. Habits are hard to break, I suppose. However, with root access and the right app, you can re-enable that feature – not just on the Nexus 6, but on many, many other phones.</p> <p><strong>Notification LED:</strong> the Nexus 6 also includes an RGB notification LED hidden behind the speaker grille. Alas, it doesn’t light up when you get an incoming notification – unless, you guessed it, you’re rooted, and have the right app to enable that feature, too.</p>
+<figure><img alt="syncronize swatches" loading="lazy" src="/blog/media/pocketnow/2014/12/syncronize-swatches.jpg"/></figure>
+  <p> Synchronize Swatches!</p> 
+<p><strong>Clock setting:</strong> I don’t know about you, but I hate it when my clocks don’t match. I use phones on AT&amp;T, Verizon, and even Sprint. My family is all on T-Mobile, and my younger kiddos get to use my tablets over Wi-Fi. Each one has a clock. Each one is usually wrong.</p> <blockquote>
+<p>Give a man a watch and he always knows what time it is. Give him two and he never knows. — Unknown</p>
+</blockquote><p>I know, who cares, right? They’re all within 5 minutes of each other. Ny kids will argue until they’re blue in the face that they’re early, or it’s not time yet because the clock on their device is different than the one on mine. You have no idea how annoying that is!</p> <p>The solution? Use the same Time Server for all your devices. Yes, there are actually Internet Time Servers out there that exist with the sole purpose of “synchronizing swatches” – unfortunately you need root access to be able to do it.</p> <p><strong>USB thumbdrives:</strong> I would love to carry around a 128GB thumbdrive, loaded up with movies that I’ve purchased legitimately and ripped for my own private use to keep kids entertained on a long road-trip, or when I venture out of data range. Not only that, but there are some titles that Netflix simply doesn’t have. In those situations I would love to be able to plug in an adaptor and mount my USB thumbdrive so I could watch my movies or listen to my music collection on the go.</p> <p>Some OEMs have enabled this functionality, others have not, but it’s not consistent – not in my experience anyway. The solution? Uh huh, root access and a custom app.</p> <h2>
+                        Conclusion: Root your Android
+               </h2>
+<p>These lists are by no means exhaustive, they’re just a sampling of some of the things that you can do with root access that you probably shouldn’t have to have root access to be able to do – and one or two that you probably should.</p> <p>But enough about us! What’s your favorite “formerly-but-no-longer-root” activity? What feature do you like best that still requires you to root? We’re anxious to hear what you have to say! Head down to the comments and let us know!</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android-power-user/" rel="tag">android power user</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/pocketnow-power-user/" rel="tag">Pocketnow Power User</a></li><li><a href="/blog/tags/root/" rel="tag">root</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-root-your-android pocketnow-import -->
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="“They say time is the fire in which we burn.” It should go without saying that everyone who’s reading this article has had some experience with electronics. At…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Why do phones degrade with use?" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/phones-degrade/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Why do phones degrade with use? — Joe Levi" />
+	<meta property="og:description" content="“They say time is the fire in which we burn.” It should go without saying that everyone who’s reading this article has had some experience with electronics. At…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/07/old-electronics.jpg" />
+	<meta property="og:image:alt" content="Why do phones degrade with use?" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/phones-degrade/" />
+	<meta property="article:published_time" content="2013-07-08T09:34:04" />
+	<meta property="article:modified_time" content="2013-07-08T09:34:04" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Why do phones degrade with use? — Joe Levi" />
+	<meta name="twitter:description" content="“They say time is the fire in which we burn.” It should go without saying that everyone who’s reading this article has had some experience with electronics. At…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/07/old-electronics.jpg" />
+	<meta name="twitter:image:alt" content="Why do phones degrade with use?" />
+	<title>Why do phones degrade with use? — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/phones-degrade/#article",
+      "url": "https://www.joelevi.com/blog/phones-degrade/",
+      "headline": "Why do phones degrade with use?",
+      "description": "“They say time is the fire in which we burn.” It should go without saying that everyone who’s reading this article has had some experience with electronics. At…",
+      "datePublished": "2013-07-08T09:34:04",
+      "dateModified": "2013-07-08T09:34:04",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/phones-degrade/",
+        "headline": "Why do phones degrade with use?",
+        "datePublished": "2013-07-08T15:34:04Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/phones-degrade/",
+      "mainEntityOfPage": "https://pocketnow.com/phones-degrade/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/07/old-electronics.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/phones-degrade/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/phones-degrade/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why do phones degrade with use?",
+          "item": "https://www.joelevi.com/blog/phones-degrade/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Why do phones degrade with use?</h1>
+				<p class="post-meta"><time datetime="2013-07-08">July 8, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/phones-degrade/" rel="noopener">Pocketnow</a> on <time datetime="2013-07-08">July 8, 2013</time>.</p>
+
+			<div class="post-body">
+<blockquote>
+<p><em>“They say time is the fire in which we burn.”</em></p>
+</blockquote><p>It should go without saying that everyone who’s reading this article has had <em>some</em> experience with electronics. At some point in time, you’ve undoubtedly had some electronic device simply stop working. No doubt that’s what prompted a question that was recently asked of us, and one that’s perplexed more than one Pocketnow staff member: why do phones degrade with use?</p> <p>Most machines have moving parts inside them. These parts need lubrication, cleaning, repairing, and occasionally they need to be replaced. Physical components, over time, and with use (and abuse) wear down and break. Phones, however, don’t have “moving parts” in the traditional sense, so why do these “solid state” devices break down?</p> <h2>
+                        Solid State
+               </h2>
+<p>To begin with, phones and tablets are not “solid state” devices in the manner in which you’re probably picturing. The term “solid state electronics” was coined to denote those circuits or devices which are built from solid materials, rather than earlier technologies which employed vacuum and gas-discharge tube devices. It’s also common to exclude electro-mechanical devices like switches, relays, hard drives, and other devices with moving parts from the definition. Essentially, if the electrons are confined entirely within the solid material, the device is considered to be “solid state”.</p>
+<figure><img alt="tubes" loading="lazy" src="/blog/media/pocketnow/2013/07/tubes1.jpg"/></figure>
+  <p> This is what electronics used to look like.</p>  <p>Smartphones generally fall within that category, since the have few moving parts, and I’m not aware of any that uses vacuum tubes. We’ll cover moving parts more in a moment.</p> <p>Today, however, “solid state” is generally associated with RAM, ROM, processors, SSDs, and other fully-enclosed chips. These devices are generally encompassed within a protective shell, and are a continuous collection of circuitry. This device then plugs into a circuit board through which it communicates with other components similarly connected to the board.</p> <p>The internal wiring of these devices is fairly robust, but they must all connect to the circuit board via a socket, a soldered connection, a ribbon, or some other mechanism. Because these discreet solid state devices are separate from one another, I personally don’t consider smartphones and tablets to be true “solid state devices”. You, of course, have the right to disagree with me, and I’d love to hear your constructive comments below.</p> <p>Suffice it to say, because these components are separate from one another, they introduce connective circuitry that isn’t as “solid” as the name would imply. We’ll get to Electronic Circuitry in a moment as well, but for now I’ll rest on the part of the definition that excludes devices with moving parts, which are included in most of today’s phones.</p> <h2>
+                        Moving Parts
+               </h2>
+<p>Moving parts break. Like it or not, it’s a fact of life. If it moves, it will ultimately break. Friction, heat, and contaminants are some of the worst enemies of things that move. We can’t seem to get away from them. We have improved lubrication, fabricated parts to tighter tolerances, made ultra-smooth surfaces, enclosed parts in various heat-dissipation structures, and have even sealed components from the elements. Even after all that, moving parts still break.</p>
+<figure><img alt="broken joint" loading="lazy" src="/blog/media/pocketnow/2013/07/broken-joint.jpg"/></figure>
+  <p> If it can move, it can break.</p>  <p>I know, it sounds crazy, but your phone <em>does</em> have moving parts inside it. Your vibration motor is the most obvious one. Accelerometers are usually made with a few moving parts. If your phone has a removable battery, that could be considered a moving part (it’s connected to your phone by springs). The contacts for sdcards are a series of springs, as are the contacts to your SIM. If your back panel has an antenna (or two or three) in it, those contacts are made with springs. Your microphones and speakers are also constructed with moving parts.</p> <p>Every one of those parts could break down, and depending on which one it is, the problem you experience could include power problems, poor radio transmissions, bad GPS or other sensor-data, or even data corruption. Although they’re small, they’re still a moving part, and over time moving parts wear out.</p> <h2>
+                        Environmental Conditions
+               </h2>
+<p>Unless you’ve got one of those newfangled phones that you can take in the shower with you, it’s probably a good idea to keep it out of the water. That should’t be too much of a problem, right? What about when you carry your phone close to your body, whether in a back pocket or tucked inside your bra (yes guys, women do that). Women and men both sweat, whether we like to admit it or not. Having our phones that close to our bodies usually puts them in pretty close contact with our “body moisture” — which can, and does, kill phones.</p>
+<figure><img alt="xperia-shower" loading="lazy" src="/blog/media/pocketnow/2013/05/xperia-shower.jpg"/></figure>
+<p> Take my advice, even if it’s waterproof, don’t take your phone in the shower.</p>  <p>I’ve been the unfortunate recipient of a big raindrop hitting my phone right on the headset jack. It’s miserable! How much damage can one drop do? Plenty. Weather is all around us, and snow, rain, sleet, hail, or even high-humidity can introduce water into our electronics, which causes all kinds of problems. As electronic components are repeatedly exposed to “less than ideal” conditions, they begin to fail. Circuits become corroded. Resistance increases. Solder joints fail.</p> <h2>
+                        Electronic Circuitry
+               </h2>
+<p>The most overlooked “moving part” in your phone is a little bugger: the electron. This particle, and all his buddies, are the reason our devices work. Without our friend the electron, we wouldn’t have any of the electronic devices that make our lives what they are today.</p> <p>These little guys flow through electronic pathways and “do stuff”. If that pathway gets too hot, they can’t flow as efficiently. If that pathway gets damaged (by a power spike, a poorly constructed circuit, corrosion, etc.) the flow can stop, or worse, it can “short”. When a circuit “shorts”, electrons find a way back to the battery via a “shorter” path than what you wanted. This leads to overheating and physical damage to the device.</p> <p>So just because your smartphone doesn’t look as complex as your car, it still has moving parts, and they are still prone to breakage. Take care of your phone. Keep it clean and dry. Don’t subject it to falls, bumps, shocks, or other factors that might shorten its lifespan. However, don’t expect it to last forever, either. It, like every other man-made device, will eventually wear out.</p> <p>Quote: Tolian Soran quoting Delmore Schwartz’ poem<br/>Image credits: <a href="http://www.flickr.com/photos/aresauburnphotos/2984347029/sizes/l/in/photolist-5xHyp8-5Bsgyd-5JqbHj-5NMp8T-5NRFyh-5NRFZs-5SAwEu-5UUq5Q-5VU3HT-5XCqdU-5XCsTY-65ifqq-67yM1D-69Ybmv-6bA8kg-6cg2LY-6fNwb3-6hrj15-6i7Eru-6i7FbY-6ikTCH-6iq3jJ-6iq3nf-6iPqsk-6j5L2r-6oubZ5-6ov6xw-6zdgRC-6zUWHM-6zZ7bN-6KfxHy-6Ssxmk-6SwArh-6YrkUB-6YrmCB-6YroCD-6YvmAY-6Yvp4j-77WeWb-7vTq1n-7vXe9U-acoFQ7-eZJ7qJ-bYQFuC-9a63Mx-8TKqRg-8XRp3y-bye8Mb-9csXNs-arbzJy-8i1FLw/" rel="noopener nofollow" target="_blank">aresauburn™</a>; New World Economics</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-phones-degrade pocketnow-import -->
+</body>
+</html>

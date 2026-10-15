@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="I talk with a lot of people about mobile technology (a LOT of people), and I read a lot of comments. A common thread that comes up when people learn that I’m…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Android isn’t laggy, but your cheap phone or tablet may be" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/android-isnt-laggy/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Android isn’t laggy, but your cheap phone or tablet may be — Joe Levi" />
+	<meta property="og:description" content="I talk with a lot of people about mobile technology (a LOT of people), and I read a lot of comments. A common thread that comes up when people learn that I’m…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/11/android-isnt-laggy.jpg" />
+	<meta property="og:image:alt" content="Android isn’t laggy, but your cheap phone or tablet may be" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/android-isnt-laggy/" />
+	<meta property="article:published_time" content="2013-11-14T17:35:33" />
+	<meta property="article:modified_time" content="2013-11-14T17:35:33" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Android isn’t laggy, but your cheap phone or tablet may be — Joe Levi" />
+	<meta name="twitter:description" content="I talk with a lot of people about mobile technology (a LOT of people), and I read a lot of comments. A common thread that comes up when people learn that I’m…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/11/android-isnt-laggy.jpg" />
+	<meta name="twitter:image:alt" content="Android isn’t laggy, but your cheap phone or tablet may be" />
+	<title>Android isn’t laggy, but your cheap phone or tablet may be — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/android-isnt-laggy/#article",
+      "url": "https://www.joelevi.com/blog/android-isnt-laggy/",
+      "headline": "Android isn’t laggy, but your cheap phone or tablet may be",
+      "description": "I talk with a lot of people about mobile technology (a LOT of people), and I read a lot of comments. A common thread that comes up when people learn that I’m…",
+      "datePublished": "2013-11-14T17:35:33",
+      "dateModified": "2013-11-14T17:35:33",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/android-isnt-laggy/",
+        "headline": "Android isn’t laggy, but your cheap phone or tablet may be",
+        "datePublished": "2013-11-15T00:35:33Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/android-isnt-laggy/",
+      "mainEntityOfPage": "https://pocketnow.com/android-isnt-laggy/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/11/android-isnt-laggy.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/android-isnt-laggy/#breadcrumb"
+      },
+      "keywords": [
+        "android 4.4",
+        "Editorial",
+        "galaxy s 4",
+        "google play edition",
+        "htc one",
+        "kitkat",
+        "lag"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/android-isnt-laggy/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Android isn’t laggy, but your cheap phone or tablet may be",
+          "item": "https://www.joelevi.com/blog/android-isnt-laggy/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Android isn’t laggy, but your cheap phone or tablet may be</h1>
+				<p class="post-meta"><time datetime="2013-11-14">November 14, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/android-isnt-laggy/" rel="noopener">Pocketnow</a> on <time datetime="2013-11-14">November 14, 2013</time>.</p>
+
+			<div class="post-body">
+<p>I talk with a lot of people about mobile technology (a LOT of people), and I read a lot of comments. A common thread that comes up when people learn that I’m <a href="https://pocketnow.com/editor/joelevi" rel="noopener" target="_blank">Joe the Android Guy™</a> is the sentiment that “Android is laggy”. So let’s set the story straight: Android isn’t laggy — but your cheap phone or tablet may be.</p> <p>The problem isn’t with the operating system. Android itself is plenty snappy, but Android does things a bit differently than other mobile operating systems. Android runs tasks all the time, no much unlike most modern desktop computers. The more tasks you’re running, the slower your entire system gets. User interaction tasks, like key presses and mouse clicks, have to get in line just like every other task. Most of the time this approach works great, but sometimes things can get bogged down. When you run a lot of apps with a lot of tasks, lines can get long.</p> <h2>
+                        The perception of speed
+               </h2>
+<p>Think of your favorite reseller during a huge shopping day. Lines are long — ridiculously long. It doesn’t matter how smooth the checkout process is, or how friendly the people in line with you are, you’re going to be there a while — just like everyone else.</p> <p>If someone has a HUGE basket, or they have problems with their payment, or the system can’t find one of the products they’re trying to purchase, that line backs up. People have to either wait, or change to other lines so they can keep moving. That’s the way your desktop and laptop computer work, and it’s pretty much the same for Android. The solution? Open more lanes and optimize the process, right?</p>
+<figure><img alt="Strange things are afoot at the Circle-K." loading="lazy" src="/blog/media/pocketnow/2013/11/circle-k.jpg"/></figure>
+  <p> Strange things are afoot at the Circle-K.</p>  <p>Apple’s iOS is different, it puts its emphasis on the user interface above everything else. Essentially, any interaction by the user causes every other task to stop and wait for the user interaction to complete. In our shopping analogy, it would be like walking into the store and every employee stops what they’re doing to focus completely on you. That sounds wonderful, as long as you’re the one who gets all the attention. Everyone else hates you.  This gives the <em>impression</em> of a smooth and fluid experience, but tasks actually take longer to complete under this model than under the model that Android uses.</p> <h2>
+                        Sufficient hardware
+               </h2>
+<p>As long as your Android-powered device has sufficient hardware under its proverbial hood, you should be fine. A 1.2GHz dual-core processor (or above), a GIG of RAM (or more), and ample storage space should be plenty to keep your experience satisfactory. There are, however, two problems with this statement.</p> <p>First, apps are continually changing. They’re getting new features which take more time to process. The hardware that ran all your apps quickly and efficiently with the previous version of all your apps may struggle to run the versions that were just released, not to mention updates that will arrive sometime in the future. This obviously will make my previous statement obsolete and out-of-date sooner than we’d all like to admit.</p>
+<figure><img alt="Excellent!" loading="lazy" src="/blog/media/pocketnow/2013/11/excellent.jpg"/></figure>
+  <p> Excellent!</p>  <p>Second, not all versions of Android are created equal. There are two categories of Android: those that are AOSP-based, and those that are heavily customized by the OEM. HTC, Samsung, LG, Motorola, and others take “Android” and modify it — some more than others.</p> <p>These custom layers can add additional features and functionality, but they come at a cost. Often times that cost is lag. The perfect case-in-point are the <a href="https://pocketnow.com/tag/htc-one" rel="noopener" target="_blank">HTC One</a> and <a href="https://pocketnow.com/tag/galaxy-s-4" rel="noopener" target="_blank">Galaxy S 4</a> <a href="https://pocketnow.com/tag/google-play-edition" rel="noopener" target="_blank">Google Play Edition</a> devices compared to their OEM equivalents. Because these phones are so high-end, the difference in speed (and lag) may be hard to notice, but it’s there if you look closely enough. Those who own the devices powered by the Google Play Edition version of Android say they’re faster and less laggy than those directly from HTC or Samsung. I’m my experience, I concur.</p> <h2>
+                        Insufficient hardware
+               </h2>
+<p>It may seem obvious, but the opposite of “sufficient hardware” is “insufficient hardware”. Devices that fall into this category give every other Android-powered device a black-eye. People will see that a smartphone or tablet runs Android, look at an impossibly low price, then impulse buy it — without checking specs or user reviews. Sure, it might perform okay out of the box, but as apps are added or updated, it gets slower and slower until it’s almost unbearable to use.</p>
+<figure><img alt="Bogus!" loading="lazy" src="/blog/media/pocketnow/2013/11/science-on-screen_bill-and-teds-excellent-adventure_bill-and-ted-in-booth.jpg"/></figure>
+  <p> Bogus!</p>  <p>These devices are cheap — and they’re usually inexpensive, too. Yes, there is a difference. I’m of the opinion that cheap hardware is usually far too expensive when you factor in all the variables.</p> <p>This is probably Android’s biggest strength, too. Anyone can build a device powered by Android, even if it’s grotesquely under-powered. That’s why Android is currently selling on three out of every four handsets.</p> <h2>
+                        Android 4.4 KitKat to the rescue?
+               </h2>
+<p>Android 4.4 KitKat is lowering the memory footprint of the OS and core apps. Doing so should help low-end devices run apps more fluidly and will help to combat the perception of “lag” that so many complain about.</p>
+<figure><img alt="Come on, Ted. We've got some historical figures to rescue." loading="lazy" src="/blog/media/pocketnow/2013/11/princesses.jpg"/></figure>
+  <p> Come on, Ted. We’ve got some historical figures to rescue.</p>  <p>Unfortunately, current and previously released “cheap” Androids probably won’t see an update to Android 4.4, and will continue to lag in their laggy lagginess. New devices, once they come with KitKat pre-installed, may not suffer as badly, but I’m not going to hold my breath.</p> <h2>
+                        Why is iOS immune?
+               </h2>
+<p>In addition to the “perception” of speed that we talked about earlier, iOS has one major advantage over Android: Apple controls the hardware.</p>
+<figure><img alt="Hi, Missy! I mean, Mom." loading="lazy" src="/blog/media/pocketnow/2013/11/missy.jpg"/></figure>
+  <p> Hi, Missy! I mean, Mom.</p> 
+<p>Think about it, Apple makes every single iPhone and iPad on the market. It controls the version of iOS that runs on each unit, and tweaks the apps and the user experience to take advantage of the hardware powering each device. This means some devices don’t get the features that an OS updates touts, and others get a watered down implementation of the new features.</p> <p>Google doesn’t have that luxury with Android; OEMs can do as they please.</p> <h2>
+                        Android isn’t laggy
+               </h2>
+<p>Despite what the naysayers say, Android itself isn’t laggy. OEMs who make cheap and under-powered devices are laggy, but those devices would be laggy regardless of which OS they ran.</p>
+<figure><img alt="San Dimas High School football rules." loading="lazy" src="/blog/media/pocketnow/2013/11/rules.jpg"/></figure>
+  <p> Everything is different, but the same… things are more moderner than before… bigger, and yet smaller… it’s computers… San Dimas High School football rules!</p>  <p>OEMs (with otherwise sufficiently spec’d devices) that load bloated skins and launchers inadvertently make their devices feel slow and laggy.</p> <p>Next time someone tells you that “Android is laggy”, point them to this article, and politely tell them that some OEMs deliberately or accidentally “lag up” Android, and you’d gladly help them select a smartphone or tablet that will blow their socks off.</p> <p><em>Interested in another way <a href="https://pocketnow.com/2013/11/13/dalvik-vs-art" rel="noopener" target="_blank">Google is hoping to make Android even faster</a>? Want to learn more about Android 4.4 KitKat? Perhaps you want to <a href="https://pocketnow.com/2013/10/31/snapdragon-800-advantages" rel="noopener" target="_blank">learn more about the Snapdragon 800</a> SoC and why it’s so awesome. No problem, Pocketnow has got you covered!</em></p> <p>Image credits: <em>Bill and Ted’s Excellent Adventure</em></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android-4-4/" rel="tag">android 4.4</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/galaxy-s-4/" rel="tag">galaxy s 4</a></li><li><a href="/blog/tags/google-play-edition/" rel="tag">google play edition</a></li><li><a href="/blog/tags/htc-one/" rel="tag">htc one</a></li><li><a href="/blog/tags/kitkat/" rel="tag">kitkat</a></li><li><a href="/blog/tags/lag/" rel="tag">lag</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-android-isnt-laggy pocketnow-import -->
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Desktop and laptop computers are a huge mess of lax security. A program that you install on one of these devices is allowed by its operating systems to have…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, What is App Ops, and why did Google remove it from Android?" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/app-ops/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="What is App Ops, and why did Google remove it from Android? — Joe Levi" />
+	<meta property="og:description" content="Desktop and laptop computers are a huge mess of lax security. A program that you install on one of these devices is allowed by its operating systems to have…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/12/app-permissions-2.jpg" />
+	<meta property="og:image:alt" content="What is App Ops, and why did Google remove it from Android?" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/app-ops/" />
+	<meta property="article:published_time" content="2013-12-17T10:29:16" />
+	<meta property="article:modified_time" content="2013-12-17T10:29:16" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="What is App Ops, and why did Google remove it from Android? — Joe Levi" />
+	<meta name="twitter:description" content="Desktop and laptop computers are a huge mess of lax security. A program that you install on one of these devices is allowed by its operating systems to have…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/12/app-permissions-2.jpg" />
+	<meta name="twitter:image:alt" content="What is App Ops, and why did Google remove it from Android?" />
+	<title>What is App Ops, and why did Google remove it from Android? — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/app-ops/#article",
+      "url": "https://www.joelevi.com/blog/app-ops/",
+      "headline": "What is App Ops, and why did Google remove it from Android?",
+      "description": "Desktop and laptop computers are a huge mess of lax security. A program that you install on one of these devices is allowed by its operating systems to have…",
+      "datePublished": "2013-12-17T10:29:16",
+      "dateModified": "2013-12-17T10:29:16",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/app-ops/",
+        "headline": "What is App Ops, and why did Google remove it from Android?",
+        "datePublished": "2013-12-17T17:29:16Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/app-ops/",
+      "mainEntityOfPage": "https://pocketnow.com/app-ops/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/12/app-permissions-2.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/app-ops/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "EFF",
+        "permissions",
+        "Security"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/app-ops/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What is App Ops, and why did Google remove it from Android?",
+          "item": "https://www.joelevi.com/blog/app-ops/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>What is App Ops, and why did Google remove it from Android?</h1>
+				<p class="post-meta"><time datetime="2013-12-17">December 17, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/app-ops/" rel="noopener">Pocketnow</a> on <time datetime="2013-12-17">December 17, 2013</time>.</p>
+
+			<div class="post-body">
+<p>Desktop and laptop computers are a huge mess of lax security. A program that you install on one of these devices is allowed by its operating systems to have virtually unlimited access to everything.  Our mobile operating systems are a little more refined and most tell you, the end user, what access an application is requesting before you install it. Unfortunately, most of us don’t read those pesky permissions prompts and just say “yes” to everything. We are, however, given the chance to say “no”. Until somewhat recently that was our only option: either we accepted everything an app asked for, or we simply didn’t install the app. Then Google sneaked a new feature into Android: App Ops. And then, suddenly yanked it away.</p> <h2>
+                        App Permissions
+               </h2>
+<figure><img alt="old app permissions" loading="lazy" src="/blog/media/pocketnow/2013/12/old-app-permissions.jpg"/></figure>
+<p>When you load up Google (the search page) on your mobile device for the first time you might notice that it typically asks you to share your location. This, according to Google, lets search results be tailored better for where you are. Searching for someplace to eat, for example, will yield much more relevant results if Google can weed out restaurants more than an hour or so away from you.</p> <p>Traditional applications are no different. An app that provides restaurant reviews and reservations will need access to the Internet to get the listings and reviews, and will perform much better if it knows generally where you are. It may even be able to send a text to the bistro, requesting a table for your party of four at 7:30 — if the app has been given permission to do so.</p> <p>Continuing with the restaurant example, you can submit your own review, complete with photos of the place settings and to show the atmosphere of the establishment — as long as you’ve given the app permission to access your camera so you can take pictures through it.</p> <p>Maybe this app even gives you the ability to call the eatery right from the app, or invite your friends to meet you there — if you’ve given it access to your dialer and address book.</p> <p>As you can see, some apps have legitimate reasons to access various parts of your smartphone or tablet.</p> <p>A flashlight app needing access to your exact GPS location? That’s crossing the line.</p> <h2>
+                        User Control
+               </h2>
+<figure><img alt="app-permissions" loading="lazy" src="/blog/media/pocketnow/2013/12/app-permissions.png"/></figure>
+<p>Let’s switch over to that flashlight app, shall we? If you wanted to use your camera’s LED as a makeshift flashlight (or fall back to a bright-white screen if your device lacks a sufficient LED flash), you’d image that you might need to give such an app permission to your camera (to turn the LED flash on and off again), but not much else, right? In this case, that’s not all you were giving it. You were also giving it Internet access and the ability to identify you and where you were. With these components, the app could report this information to a web server, then sell the information to whoever wanted to buy it. Which is exactly what they were doing.</p> <p>In today’s Android ecosystem, the only recourse you had was to uninstall the app (or to have not installed it in the first place). That’s a disappointment, because all you really wanted to do was turn off its location awareness and disable its ability to report that back to who-knows-where.</p> <p>Ultimately, the amount of information a person gives an application should be entirely within that person’s control, right? Hold that thought, we’ll come back to it in just a moment.</p> <h2>
+                        App Ops
+               </h2>
+<figure><img alt="aolauncher2" loading="lazy" src="/blog/media/pocketnow/2013/12/aolauncher2.png"/></figure>
+<p>Thankfully, Google started including an app that would allow you to do just that in Android 4.3. (Whether or not your OEM kept that feature around or removed it is another topic entirely.) Just as people were starting to understand what this app was, Google removed it via a “security update” called “Android 4.4.2”.</p> <p>Most probably won’t even notice that it’s missing, but a certain group did: The Electronic Frontier Foundation (EFF).</p> <blockquote>
+<p>“The disappearance of App Ops is alarming news for Android users. The fact that they cannot turn off app permissions is a Stygian hole in the Android security model, and a billion people’s data is being sucked through. Embarrassingly, it is also one that Apple managed to fix in iOS years ago.”</p>
+</blockquote><p>When the EFF went to Google, they were told the feature had only ever been released by accident — that it was experimental, and that it could break some of the apps policed by it. The sky, it would seem, is falling, and this is proof-positive that Google is a huge, evil empire that wants to suck the life-force from your immortal soul as payment for all the “free” stuff of theirs you’ve using for all these years.</p> <p>Hold on! Put down your Holy Water and Crucifix, and let’s get to the bottom of this.</p> <h2>
+                        SELinux
+               </h2>
+<p>Not long ago Google switched Android over to SELinux. In the words of the Android devlopers:</p> <p><em>“As part of the Android security model, Android uses Security-Enhanced Linux (SELinux) to apply access control policies. SELinux enhances Android security, and contributions to it have been made by a number of companies and organizations; all Android code and contributors are publicly available for review on android.googlesource.com. With SELinux, Android can better control access to application data and system logs, reduce the effects of malicious software, and protect users from potential flaws in code on mobile devices.</em></p> <p><em>“Android includes SELinux in enforcing mode and a corresponding security policy that works by default across the Android Open Source Project. In enforcing mode, illegitimate actions are prevented and all potential violations are logged by the kernel to dmesg. Android device manufacturers should gather information about errors so they may refine their software and SELinux policies before enforcing them.”</em></p>
+<figure><img alt="SELinux Decision Process" loading="lazy" src="/blog/media/pocketnow/2013/12/SELinux_Decision_Process.png"/></figure>
+<p>Switching to SELinux was a huge step in the right direction due to the control it offers. Depending on the implementation, SELinux can use one of three “modes”:</p> <ul>
+<li>
+<strong>Enforcing:</strong> The default mode which will enable and enforce the SELinux security policy on the system, denying access and logging actions
+                        </li>
+<li>
+<strong>Permissive:</strong> In Permissive mode, SELinux is enabled but will not enforce the security policy, only warn and log actions. Permissive mode is useful for troubleshooting SELinux issues
+                        </li>
+<li>
+<strong>Disabled:</strong> SELinux is turned off
+                        </li>
+</ul>
+<p>Current versions of Android use the “Enforcing” mode of SELinux rather than the Permissive mode, which it used previously.</p> <p>Why the gradual adoption of SELinux and stair-stepping up its modes? Compatibility, of course. Starting with Permissive and logging any failures or violations of the security policies gave Google and developers time to fix their code. Moving up to Enforcing is the next step in tightening the controls the operating system has over apps.</p> <p>The last step will be letting the users select which permissions an app can use, and toggle them on and off at will, allowing SELinux in Enforcing mode to handle the enforcement of these policies.</p> <h2>
+                        What should an app do?
+               </h2>
+<figure><img alt="President Bush scratching his heat" loading="lazy" src="/blog/media/pocketnow/2012/08/bush-scratching-head.jpg"/></figure>
+  <p> “Fool me twice, and you can’t get fooled again.”</p>  <p>Therein lies the problem. Apps are developed with a manifest in place that dictates the permissions it needs to operate properly — according to the developer, of course — and operate under the assumption that access to those resources was granted. The developer made those assumptions during the development cycle because the app wouldn’t have been installed if permissions to those resources were denied.</p>
+<p>Previously this was correct, but now, in a world where users can turn things on and off at will, well, that introduces a whole bunch of potential problems that the developer didn’t address — they didn’t need to before.</p> <h2>
+                        What Now?
+               </h2>
+<p>Google likely recognized this and withdrew its app accordingly. It was the right decision — for now. Including the app in the first place may have been an innocent mistake, but it was also a shot across the bow, giving developers the time they need to update their apps to handle when permissions are revoked.</p> <p>What should they do when their app is denied the ability to collect information from your address book, or access the Internet, or send a text message, or access your camera? Should a message be returned to the app that the request was blocked? If so, how should the app handle it? Should it ask you to change the settings before letting you use the app? Should it fail-over gracefully? Should it provide you with an option to buy an in-app upgrade to an “ad-free” version because you’re blocking Internet access or location information which is needed for ad serving?</p>
+<figure><img alt="in-app purchase" loading="lazy" src="/blog/media/pocketnow/2013/12/in-app-purchase.png"/></figure>
+<p>As you can see, there are a lot of unanswered questions. App developers make a living by “selling” something. Sometimes they sell the app directly to you. Sometimes they sell your information or your “eyeballs” to advertisers. Being able to simply flip a switch to disable these is literally taking food out of their mouths.</p> <p>Don’t get me wrong. I’m not saying that a flashlight app should have access to your most intimate information and offer it for sale to the highest bidder. I think you, the end user, should have the option to turn that behavior off. However, I also think that developer deserves a chance to “disable” their app if you cut off their revenue stream — or give you another means to purchase it. After all, just because an app is “free”, doesn’t mean you’re not paying for it.</p> <p>•</p> <p><em>What other <a href="http://pocketnow.com/2013/12/11/new-in-android-4-4-2" rel="noopener" target="_blank" title="Android 4.4.2: Here’s what it brings to different Nexus devices">changes are inside Android 4.4.2</a>? How can you get some of the best features of KitKat on your older phone (without voiding your warranty)? Are you done with stock Android and want to put your faith in CyanogenMod? Luckily, Pocketnow has <a href="https://pocketnow.com/tag/android" rel="noopener" target="_blank">all that, and more</a>!</em></p>  <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/eff/" rel="tag">EFF</a></li><li><a href="/blog/tags/permissions/" rel="tag">permissions</a></li><li><a href="/blog/tags/security/" rel="tag">Security</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-app-ops pocketnow-import -->
+</body>
+</html>

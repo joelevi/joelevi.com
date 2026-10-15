@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="The story of the Trojan Horse originates from an ancient battle between the Greeks and their siege of the city of Troy. As the tale goes, the Greeks, after…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, What You Need to Know About Android Trojans" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/android-trojans/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="What You Need to Know About Android Trojans — Joe Levi" />
+	<meta property="og:description" content="The story of the Trojan Horse originates from an ancient battle between the Greeks and their siege of the city of Troy. As the tale goes, the Greeks, after…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/04/trojan-horse.jpg" />
+	<meta property="og:image:alt" content="What You Need to Know About Android Trojans" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/android-trojans/" />
+	<meta property="article:published_time" content="2013-04-03T14:08:04" />
+	<meta property="article:modified_time" content="2013-04-03T14:08:04" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="What You Need to Know About Android Trojans — Joe Levi" />
+	<meta name="twitter:description" content="The story of the Trojan Horse originates from an ancient battle between the Greeks and their siege of the city of Troy. As the tale goes, the Greeks, after…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/04/trojan-horse.jpg" />
+	<meta name="twitter:image:alt" content="What You Need to Know About Android Trojans" />
+	<title>What You Need to Know About Android Trojans — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/android-trojans/#article",
+      "url": "https://www.joelevi.com/blog/android-trojans/",
+      "headline": "What You Need to Know About Android Trojans",
+      "description": "The story of the Trojan Horse originates from an ancient battle between the Greeks and their siege of the city of Troy. As the tale goes, the Greeks, after…",
+      "datePublished": "2013-04-03T14:08:04",
+      "dateModified": "2013-04-03T14:08:04",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/android-trojans/",
+        "headline": "What You Need to Know About Android Trojans",
+        "datePublished": "2013-04-03T20:08:04Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/android-trojans/",
+      "mainEntityOfPage": "https://pocketnow.com/android-trojans/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/04/trojan-horse.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/android-trojans/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "Malware",
+        "trojan",
+        "virus"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/android-trojans/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What You Need to Know About Android Trojans",
+          "item": "https://www.joelevi.com/blog/android-trojans/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>What You Need to Know About Android Trojans</h1>
+				<p class="post-meta"><time datetime="2013-04-03">April 3, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/android-trojans/" rel="noopener">Pocketnow</a> on <time datetime="2013-04-03">April 3, 2013</time>.</p>
+
+			<div class="post-body">
+<p>The story of the Trojan Horse originates from an ancient battle between the Greeks and their siege of the city of Troy. As the tale goes, the Greeks, after trying to defeat Troy for 10 years, built a huge wooden horse — a supposed token of victory to the Trojans. They wheeled the large statue to the gates of Troy, then pretended to sail away. The Trojans pulled the horse inside the gates, not knowing that a Greek invasion force lay hid inside. When night fell, the Greeks crept out of the horse,  opened the gates, and allowed the rest of the Greek army in — they’d sailed back under cover of night. Long story short: the Greeks entered and destroyed the city of Troy, ending the war.</p> <h2>
+                        What’s that got to do with Android?
+               </h2>
+<p>Metaphorically a “Trojan Horse” has taken on the meaning of any sort of trick or stratagem which causes a target (you) to invite a foe (“bad guys”) inside its walls. Today we’re familiar with a class of software called “malware” — malicious software — that has plagued computer users for decades. In law, malware is sometimes known as a “computer contaminant”. In practice, malware can be much more than a simple “contaminant”.</p>
+<figure><img alt="Android Apps" loading="lazy" src="/blog/media/pocketnow/2013/04/apps.jpg"/></figure>
+  <p> With hundreds of thousands of apps, each with thousands of lines of code, eventually something malicious will get through.</p>  <p>Malware is a somewhat generic term that includes computer viruses, trojan horses, worms, ransomware, rootkits, keyloggers, spyware, adware, dialers, and other malicious programs. According to Microsoft, the majority of malware threats are usually worms or trojans, rather than viruses per se<sup>1</sup>.</p> <p>The lines differentiating the various types of malware are often very blurred, with one “computer contaminant”  being classified as multiple types of malware. For the purpose of this article we’ll use the more generic classification of a “trojan” as any software that includes an unwanted or unknown payload that’s “delivered” after you’ve willingly installed the “horse” program, and we’ll use some of the terms interchangeably. Fair enough?</p> <h2>
+                        Android trojans
+               </h2>
+<p>Trojan Horses on Android are typically disguised as legitimate software. That’s what makes them so sneaky.  Unlike the “olden days” of desktop computing, apps that run on our smartphones and tablets typically come from trusted sources like Google’s Play Store, the Amazon Appstore, or some other “store”. People, just like you and I, go to an app store, search for an app, download, and install it.</p> <p>These “stores” typically allow any app to be included in their catalog without doing any kind of validation on what the software actually does. Other stores, like those for Apple and Microsoft Phone devices, don’t automatically include apps. Instead they require all apps to go through an approval process.</p> <p>Unfortunately, this “approval” process doesn’t typically include a code review — at least not one looking for malicious code. Instead, these reviews are veiled in secrecy, with developers being told they are done to “ensure adherence to app guidelines”, or some similar wording. Malicious apps still get through. Anyone who thinks these so-called “reviews” will protect them from trojans or malware is embracing a fantasy. Security through obscurity isn’t <em>real</em> security, it’s just a false sense of safety.</p> <p>Google hasn’t sat idly by. They routinely run scans on every app in the Play Store to ensure they don’t have malicious code hidden within the apps in their catalog. They also update their scanners with newly discovered malware to help scrub their store of anything that shouldn’t be there. Google also has the ability to remotely remove apps they’ve identified as malicious and can even repair the damage done by most of those apps.</p> <p>Unlike their competition, Android apps don’t have to come from Google’s Play Store. There are several third-party app market places available, and most users can even “side-load” apps directly onto their devices, bypassing any kind of “store” (and whatever moderation may come from it) entirely.</p>
+<figure><img alt="Android Security Scanner" loading="lazy" src="/blog/media/pocketnow/2013/04/android42-security.jpg"/></figure>
+  <p> The Android Jelly Bean Security Scanner provides on-device protection.</p>  <p>To address this last circumstance, Google has included an optional security scanner in Android 4.2+ that will verify your apps to see if they contain anything that could be considered “harmful behavior”. While this is only Jelly Bean and above, we suspect all Android-powered devices will include this functionality — eventually.</p> <h2>
+                        Some notable Android “trojans”
+               </h2>
+<p><strong>DroidDream</strong> is an app that was included in Google’s Play Store and collected information from infected devices including the unique numbers cellular providers use identify handsets and SIM cards. Using this information “cybercrooks” could potentially clone your SIM card, allowing them to read your text messages, send premium-rate SMS messages, and more.</p>
+<figure><img alt="Setec Astronomy" loading="lazy" src="/blog/media/pocketnow/2013/04/setec.gif"/></figure>
+  <p> “Cootys rat ….”? Nah!</p>  <p><strong>Fakeneflic</strong> is a malicious copy of the popular Netflix app. Its “payload” was stealing the log in credentials of your Netflix account so the thieves could do who-knows-what with them. Maybe they just wanted to watch <em>Sneakers.</em></p> <p><strong>GGTracker</strong> targets U.S. Android users and milks money from their cellular account through a series of premium SMS subscription services.</p> <p><strong>Nickispy</strong> is a app with a somewhat legitimate purpose: some Chinese apps stores are marketing it as a way to see if your spouse or significant other is cheating on you. The app itself steals location information gathered by GPS and Wi-Fi, and records phone calls and text messages, then sends all this to a remote site without the user’s knowledge.</p> <p>The list goes on and on, but they all are essentially variants on the same themes: steal information, gather money through text messaging, spy on your location, and/or spy on your conversations.</p>
+<p>How can you stay safe?</p> <p><strong>Read the permissions.</strong> Whenever you install an app, whether from the Play Store or anywhere else, you’re told what permissions you’re giving the app. If you don’t think that battery saver needs access to send text messages, for example, cancel the install.</p> <p><strong>Check the reviews.</strong> Unless you’re installing an app that’s less than a few minutes old, it probably has more than a few reviews written about it. Generally speaking, those reviews should give you a pretty good picture of whether or not the app is any good. People can lie in the reviews, but if you see more than a few users telling you to stay clear of the app, you might want to do just that.</p> <p><strong>Avoid “shady” apps.</strong> There’s no such thing as a free lunch, and an app that seems too good to be true probably is. Apps that imply they can enable you to do illegal, immoral, or unethical things should also be avoided — not because of the type of activity they allegedly enable (who am I to step on your values or belief system?), but because the “bad guys” often prey on the type of user that that installs this sort of software by including malicious code in them.</p> <h2>
+                        Do you need a virus scanner?
+               </h2>
+<p>Are you following all the “how to stay safe” tips we mentioned above? If so, you probably don’t “need” a virus scanner. In all the time I’ve owned Android-powered phones and tablets I have never — not once — been infected. My kids and even my wife, however, have been hit by some adware and one app that allegedly stole browser history. All of these infections would have been prevented if they’d have read the permissions, checked the reviews, and remembered that “there’s no such thing as a free app”.</p> <p>What do I mean “there’s no such thing as a free app”? Of course there are! Just look in the Play Store! They’re all over the place! While it’s true that some apps don’t cost you money out-of-pocket to download and install on your device, virtually every app you see costs something. Some require a subscription (like Netflix and Hulu+), others require an account (like Facebook, Twitter, Google+, Pinterest, and LinkedIn) which make money off you in various ways, others present advertisements to you, and some are advertisements in and of themselves. Before you install a “free” app, ask yourself “how is the app developer paying for his or her time to make this app?” If you can’t fugure out the answer, you may want to avoid the app.</p> <p>Ultimately, every one of the smartphones and tablets in my house is now running <em>Lookout</em>. This app not only takes care of malware identification and removal, it also can serve as a middle-man when making calls or sending texts from apps (unless you tell it not to). It also handles basic backups, includes lost-phone recovery services, and even has the ability to remotely wipe your device. It’s a “freemium” app, meaning the basic features are free, but more advanced features are available through a purchased subscription. I use the basic, free version.</p> <p>There are many other antivirus solutions out there, and I’m not advocating one above another. Use what you think is right for you — or nothing at all if you can abide by the simple rules of “how to stay safe”.</p> <h2>
+                        What about you?
+               </h2>
+<p>Do you use an antivirus program? Why or why not, and which one? Have you been hit by a virus or trojan? If so what was the damage? What methods do you use to keep yourself safe? Let us know all these any any stories that you’d like to share in the comments!</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/malware/" rel="tag">Malware</a></li><li><a href="/blog/tags/trojan/" rel="tag">trojan</a></li><li><a href="/blog/tags/virus/" rel="tag">virus</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-android-trojans pocketnow-import -->
+</body>
+</html>

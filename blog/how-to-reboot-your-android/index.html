@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="With Android running a modified Linux kernel is it any doubt that we&#x27;re starting to see laptop/desktop-style reboot options emerge. What do I mean by &quot;reboot…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, How to Reboot Your Android" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/how-to-reboot-your-android/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="How to Reboot Your Android — Joe Levi" />
+	<meta property="og:description" content="With Android running a modified Linux kernel is it any doubt that we&#x27;re starting to see laptop/desktop-style reboot options emerge. What do I mean by &quot;reboot…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2010/10/hot-reboot1-337x600.png" />
+	<meta property="og:image:alt" content="How to Reboot Your Android" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/how-to-reboot-your-android/" />
+	<meta property="article:published_time" content="2010-10-04T21:00:01" />
+	<meta property="article:modified_time" content="2010-10-04T21:00:01" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="How to Reboot Your Android — Joe Levi" />
+	<meta name="twitter:description" content="With Android running a modified Linux kernel is it any doubt that we&#x27;re starting to see laptop/desktop-style reboot options emerge. What do I mean by &quot;reboot…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2010/10/hot-reboot1-337x600.png" />
+	<meta name="twitter:image:alt" content="How to Reboot Your Android" />
+	<title>How to Reboot Your Android — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/how-to-reboot-your-android/#article",
+      "url": "https://www.joelevi.com/blog/how-to-reboot-your-android/",
+      "headline": "How to Reboot Your Android",
+      "description": "With Android running a modified Linux kernel is it any doubt that we're starting to see laptop/desktop-style reboot options emerge. What do I mean by \"reboot…",
+      "datePublished": "2010-10-04T21:00:01",
+      "dateModified": "2010-10-04T21:00:01",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/how-to-reboot-your-android/",
+        "headline": "How to Reboot Your Android",
+        "datePublished": "2010-10-05T03:00:01Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/how-to-reboot-your-android/",
+      "mainEntityOfPage": "https://pocketnow.com/how-to-reboot-your-android/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2010/10/hot-reboot1-337x600.png",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/how-to-reboot-your-android/#breadcrumb"
+      },
+      "keywords": [
+        "android",
+        "Editorial"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/how-to-reboot-your-android/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Reboot Your Android",
+          "item": "https://www.joelevi.com/blog/how-to-reboot-your-android/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>How to Reboot Your Android</h1>
+				<p class="post-meta"><time datetime="2010-10-04">October 4, 2010</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/how-to-reboot-your-android/" rel="noopener">Pocketnow</a> on <time datetime="2010-10-04">October 4, 2010</time>.</p>
+
+			<div class="post-body">
+<p>With Android running a modified Linux kernel is it any doubt that we're starting to see laptop/desktop-style reboot options emerge. What do I mean by "reboot options"? I'm glad you asked!</p> <p>For the purpose of this article we're going to over-simplify what "rebooting" is, and generalize it a bit. We're going to say that "rebooting" means "turning it on", which to the average non-geek is fairly accurate. (Of course, to us geeks, we know there's a lot more involved that just that.)</p> <p>"Turning it on" is fairly simple to understand: you push the power button, some stuff happens, and it turns on. Step two is fairly ambiguous, wouldn't you say? It is, and it depends on the state of the device when you push the power button. To understand what I mean when I say "state of the device" we need to talk about turning the device off.</p> <p>Turning the device off isn't as easy to explain as "turning it on", because there are various ways to turn it off, each resulting in a different state. Stay with me, you'll understand what I mean as I explain the differences.</p> <h2>
+                        Standby, Sleep
+               </h2>
+<p>When the device is on and you push the power button, or after a pre-determined amount of inactivity, the devices enters something called "standby" or "sleep" mode. "Standby" or "sleep" mode is a state which uses less battery power than "on" but still uses some power. In this state the screen turns off, WiFi and 4G may turn off, the processor and RAM may be slowed down, and various processes may be suspended.</p> <p>This allows the device to use less power (which equates to longer battery life) but still allows the device to be "woken up" when some condition is triggered.</p> <p>These conditions may be something like pushing the power button, receiving an incoming call or text, or when an alarm or calendar event needs to be presented.</p> <p>"Sleep" mode saves some power, but not as much as some other "states". It is the fastest state to "boot up" (or resume from).</p> <h2>
+                        Hibernation
+               </h2>
+<p>"Hibernation" can be thought of as a deep sleep. In this state, RAM is typically written to a file and the device is powered off. When done right, hibernation requires zero power to maintain. The downsides?</p> <p>That hibernation file takes up quite a bit of space. If you have 512MB RAM, you'll likely need the same amount of disk space in which to write the hibernation data (on desktop/laptop computers this file can be several GB in size).</p> <p>Hibernating devices are off. If you get a phone call, text, or reminder while your device is hibernating you won't know about it until you turn on your device.</p> <p>Turning on a hibernating device is the same as turning it one from any other state. The difference being that hibernation takes longer to resume from than "sleep", but is significantly faster than booting up from a full power off without hibernation.</p> <p>Hibernation hasn't been around on Android devices until just recently. Devices running HTC's new Sense HD have something called "quick boot" which functions very similarly to "hibernation" on desktop/laptop computers. Cyanogen is working on his version of the feature to include in an upcoming version of CyanogenMod ROM.</p> <h2>
+                        Power-Off
+               </h2>
+<p>Powering off means just that, turning the device all the way off. To do this you press and hold the power button until a menu is presented. The contents of this menu vary by device, but they all include a "Power off" option (or the equivalent).</p> <p>Powering off literally shuts the device down and turns all the electronics off. Nothing will wake it up until you do. Rebooting from this state takes quite a while. In desktop computer "lingo" this is called a "cold boot".</p> <p>Cold booting can solve problems with something that's "gone wrong" in RAM and can solve many problems. (Do this when you're getting inexplicable Force Close type errors.) It also takes the longest amount of time to reboot from.</p>
+<p>Some CyanogenMod ROM's have the option to "reboot". This shuts down the device, then powers it right back on. Some people call this a "warm boot" rather than a "cold boot".</p> <h2>
+                        Reload GUI
+               </h2>
+<p>Reloading the GUI is akin to the olden days of exiting Windows to a DOS prompt, then reloading Windows. You didn't really reboot the computer, you just dumped the graphical user interface and reloaded it. This can solve solve problems, and should be the fastest way to reboot the device.</p> <p>No ROMs (to my knowledge) have this option built in, but at least one developer is letting root users access this reboot method, which some people call a "hot reboot".</p> <p>The <em>Hot Reboot</em> app is available in the Market for under a Euro.</p> <p>(Source: <a href="http://www.droid-life.com/2010/09/29/hot-reboot/" rel="nofollow noopener noreferrer" target="_blank">Droid-Life</a>)</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android/" rel="tag">android</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-how-to-reboot-your-android pocketnow-import -->
+</body>
+</html>

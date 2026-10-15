@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/they-know-where-you-are-location-tracking/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’ — Joe Levi" />
+	<meta property="og:description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2017/06/Location-Tracking.jpg" />
+	<meta property="og:image:alt" content="Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/" />
+	<meta property="article:published_time" content="2017-06-07T07:24:04" />
+	<meta property="article:modified_time" content="2017-06-07T07:24:04" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’ — Joe Levi" />
+	<meta name="twitter:description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2017/06/Location-Tracking.jpg" />
+	<meta name="twitter:image:alt" content="Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’" />
+	<title>Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’ — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/#article",
+      "url": "https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/",
+      "headline": "Security & Privacy: Location Tracking, ergo ‘They Know Where You Are’",
+      "description": "Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…",
+      "datePublished": "2017-06-07T07:24:04",
+      "dateModified": "2017-06-07T07:24:04",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/they-know-where-you-are-location-tracking/",
+        "headline": "Security & Privacy: Location Tracking, ergo ‘They Know Where You Are’",
+        "datePublished": "2017-06-07T13:24:04Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/they-know-where-you-are-location-tracking/",
+      "mainEntityOfPage": "https://pocketnow.com/they-know-where-you-are-location-tracking/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2017/06/Location-Tracking.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "GPS",
+        "location",
+        "maps",
+        "Privacy",
+        "Security"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security & Privacy: Location Tracking, ergo ‘They Know Where You Are’",
+          "item": "https://www.joelevi.com/blog/they-know-where-you-are-location-tracking/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Security &amp; Privacy: Location Tracking, ergo ‘They Know Where You Are’</h1>
+				<p class="post-meta"><time datetime="2017-06-07">June 7, 2017</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/they-know-where-you-are-location-tracking/" rel="noopener">Pocketnow</a> on <time datetime="2017-06-07">June 7, 2017</time>.</p>
+
+			<div class="post-body">
+<p><em><a href="https://pocketnow.com/category/security-privacy">Security and Privacy</a> are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share all our details on social networks, makes them even more so.</em></p> <div class="widget-block">
+<p><em>This section of Pocketnow is devoted to <a href="https://pocketnow.com/category/security-privacy">why security and privacy are important</a>, how you can protect yourself in today’s connected world, and pitfalls to be aware of and avoid — with the objective of helping you and your loved ones stay safe in an ever-changing world.</em></p>
+<p><em>~</em></p>
+<p>So far <a href="https://pocketnow.com/2017/04/05/security-privacy-introduction" rel="noopener noreferrer" target="_blank">in this series</a>, we’ve talked about encrypting your Internet traffic using a VPN, how to avoid getting infected by malware, <a href="https://pocketnow.com/2017/04/19/how-to-physically-secure-your-phone" rel="noopener noreferrer" target="_blank">how to physically secure your phone</a>, how to encrypt your communications, and more. To review our definitions, Privacy is the state or condition of being free from being observed by other people, and Security is the state of being free from danger or threat (which is the literal application of Privacy).</p>
+<p>Unfortunately, one of the biggest “features” of our mobile devices is also one of the largest areas of concern when it comes to privacy: location tracking.</p>
+<h2>Location Tracking</h2>
+<p>Ten years ago, if I’d have told you that your service provider (T-Mobile, Verizon, Virgin, Xfinity, etc.), your ecosystem provider (Apple, Microsoft, Google, Samsung, etc.), and even websites you visit could know where you are, you would probably have argued they couldn’t or simply dismissed my claims out of hand. Even then, however, carriers <em>could</em> tell where you were to a startling degree of accuracy, and even websites could identify roughly where you were based only on your IP address.</p>
+<img alt="Location Tracking" loading="lazy" src="/blog/media/pocketnow/2017/06/Google-Search-My-Location.jpg"/>
+<p>Today, GPS, aGPS, and GLOSNASS can pinpoint your location down to a few feet – and nobody bats an eye. We use these “location services” for navigation, car services (like Lyft and Uber), to find restaurants and entertainment nearby, and even to track family members. The pictures we snap are tagged with the date, time, and location of where they were taken. Facebook and other social networks tell us when a “friend” is nearby. Again, we aren’t concerned because all these features are “convenient”.</p>
+<p>Don’t believe me? Check out Google’s <a href="https://www.google.com/maps/timeline" rel="sponsored" target="_blank">Timeline</a> to see what location data one such company is collecting about you.</p>
+<p>We’re trading our privacy for convenience.</p>
+<h2>GPS Not Required</h2>
+<p>The argument I’m often met with is that this location data is “private” – it’s not accessible to the public. That’s simply not true. Take a look at your “friends” on Facebook, for example. How many of them are actually your friends? How many of them are you comfortable with knowing where you are? How many are you comfortable with knowing who your children are, where they are, and what their schedules are? If you said you’re comfortable with all of them knowing, you’re more trustworthy than I am.</p>
+<img alt="Location Tracking Satellite" loading="lazy" src="/blog/media/pocketnow/2011/11/gps-61.jpg"/>
+<p>That notwithstanding, how many of those friends are using secure passwords? How many are using passwords unique to each site they log into (versus the same password for virtually every site they log into)? How many use 2-factor authentication? You’re not sure? All it takes is one of your friends’ accounts to be hacked or compromised and your pictures, your status updates, and your kids’ schedules are now accessible to a complete stranger. You can deny this happens, but every week we’re hearing about another hack and are being told to reset our passwords – and that’s just the intrusions that are reported by the media, how many go unreported, or even unnoticed?</p>
+<p>The response I typically get to pointing out that inconvenient reality is that they can simply “turn their GPS off”. That’s nice – but there is a bigger problem, and it’s built into your cellphone and the way it works. You can’t “turn off” this vulnerability without taking the battery out of your phone or putting it in a bag that blocks electromagnetic waves.</p>
+<h2>Stingray</h2>
+<p>Even with WiFi and GPS/GLOSNASS turned off, your phone still “talks” to cell phone towers. It’s usually in communication with a few of them at any given time and, generally speaking, is connected to the one with the strongest signal. There is some overhead in hopping between towers, and a tower with a stronger signal may already be “full” and not able to take your phone’s connection, but the only way your phone can know that is by “talking” (albeit briefly, and without your knowledge) to any tower that it “hears”.</p>
+<img alt="FBI Stingray Device" loading="lazy" src="/blog/media/pocketnow/2017/06/stingray.jpg"/>
+<p>What if the cell phone tower that your phone is talking to isn’t really a cell phone tower? That’s exactly the case with the “Stingray”, a secret device used by various law enforcement and government agencies to spy on and track people – and most of the time (as court records have shown) without a warrant.</p>
+<p>The way these devices work is by imitating a cell phone tower, devices then “see” them and try to connect with them, in so doing they disclose your phone’s unique identifier and the reported signal strength at which your phone “hears” the Stingray. With this information and some signal processing software, whoever is in control of these devices can identify and map the locations of every cellular device (phones, laptops, tablets, and now even smart watches and connected cars). The argument I hear most often about these is “if you have nothing to hide, you have nothing to fear”. But how many of these devices exist? Are all of them accounted for, or are a number of them “missing”? Are they always used only when authorized by a judge with a lawful warrant justifying their use? Is the information of all the other devices “seen” by these “spy boxes” discarded immediately, or is that data held on to for some undetermined time? The government won’t answer these questions – that alone should concern you.</p>
+<p>Even if you’re comfortable with their use by law enforcement when supported by a sufficient warrant, are you comfortable with anyone in general having access to such hardware – because if even one such device is “in the wild” or “lost”, you can rest assured that it’s being duplicated and other such devices are being sold to whoever wants to buy them.</p>
+<h2>What Can You Do?</h2>
+<p>This is one of those articles where there really isn’t much that you, as an individual, can do. Yes, you can turn off location services or tell your photos app not to tag the location where your pictures are taken, but just by having your phone on, cellular providers and those with access to Stingray-type devices can know where you are.</p>
+<img alt="Two-Factor-Authentication" loading="lazy" src="/blog/media/pocketnow/2017/06/Two-Factor-Authentication.jpg"/>
+<p>What about inadvertently sharing private information with “friends” who are at an increased risk for having their accounts compromised (due to weak passwords, old passwords, failure to use 2-factor authentication, etc.)? To address those concerns I’m calling upon social network providers to add those as privacy options. For example, I should be able to choose to share my posts with friends and friends of friends, but only those who (a) are using “strong passwords”, and (b) have 2-factor authentication turned on and configured. Then, when “friends” would have seen one of my posts in their timeline, I’d like a big, red “NO” sign displayed alongside a message that says “Your friend has limited their posts to be seen by friends with secure accounts, and yours isn’t secure enough for them. Click here to change your password to a stronger one and to add 2-factor authentication to your account so you can see your friend’s posts”.</p>
+<p>In the meantime, if you’re not using two-factor (or two-step) authentication on your accounts, go set it up. Google Authenticator is a pretty good app which works on Apple as well as Android devices and has support for several of the sites which I use.</p>
+<p>I realize that this article, unlike the others so far, doesn’t include a lot of “here’s the problem, here’s the solution” scenarios. In this case, the best “solution” I can offer is the knowledge that the problems exist – and can fairly easily be exploited. Now it’s up to you to harden your accounts and put pressure on service providers, friends, and even family to do the same.</p>
+</div><div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/gps/" rel="tag">GPS</a></li><li><a href="/blog/tags/location/" rel="tag">location</a></li><li><a href="/blog/tags/maps/" rel="tag">maps</a></li><li><a href="/blog/tags/privacy/" rel="tag">Privacy</a></li><li><a href="/blog/tags/security/" rel="tag">Security</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-they-know-where-you-are-location-tracking pocketnow-import -->
+</body>
+</html>

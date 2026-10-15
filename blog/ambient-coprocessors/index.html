@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="We truly live in an amazing time. We have some of the most technologically advanced consumer electronics known to man, and we carry them around in our pockets!…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Ambient Coprocessors: The Android-equivalent of the Apple M7" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/ambient-coprocessors/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Ambient Coprocessors: The Android-equivalent of the Apple M7 — Joe Levi" />
+	<meta property="og:description" content="We truly live in an amazing time. We have some of the most technologically advanced consumer electronics known to man, and we carry them around in our pockets!…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/10/m7.jpg" />
+	<meta property="og:image:alt" content="Ambient Coprocessors: The Android-equivalent of the Apple M7" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/ambient-coprocessors/" />
+	<meta property="article:published_time" content="2013-10-07T09:39:09" />
+	<meta property="article:modified_time" content="2013-10-07T09:39:09" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Ambient Coprocessors: The Android-equivalent of the Apple M7 — Joe Levi" />
+	<meta name="twitter:description" content="We truly live in an amazing time. We have some of the most technologically advanced consumer electronics known to man, and we carry them around in our pockets!…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/10/m7.jpg" />
+	<meta name="twitter:image:alt" content="Ambient Coprocessors: The Android-equivalent of the Apple M7" />
+	<title>Ambient Coprocessors: The Android-equivalent of the Apple M7 — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/ambient-coprocessors/#article",
+      "url": "https://www.joelevi.com/blog/ambient-coprocessors/",
+      "headline": "Ambient Coprocessors: The Android-equivalent of the Apple M7",
+      "description": "We truly live in an amazing time. We have some of the most technologically advanced consumer electronics known to man, and we carry them around in our pockets!…",
+      "datePublished": "2013-10-07T09:39:09",
+      "dateModified": "2013-10-07T09:39:09",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/ambient-coprocessors/",
+        "headline": "Ambient Coprocessors: The Android-equivalent of the Apple M7",
+        "datePublished": "2013-10-07T15:39:09Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/ambient-coprocessors/",
+      "mainEntityOfPage": "https://pocketnow.com/ambient-coprocessors/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/10/m7.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/ambient-coprocessors/#breadcrumb"
+      },
+      "keywords": [
+        "apple",
+        "Editorial",
+        "iPhone 5s",
+        "M7",
+        "Moto X",
+        "motorola",
+        "X8"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/ambient-coprocessors/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ambient Coprocessors: The Android-equivalent of the Apple M7",
+          "item": "https://www.joelevi.com/blog/ambient-coprocessors/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Ambient Coprocessors: The Android-equivalent of the Apple M7</h1>
+				<p class="post-meta"><time datetime="2013-10-07">October 7, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/ambient-coprocessors/" rel="noopener">Pocketnow</a> on <time datetime="2013-10-07">October 7, 2013</time>.</p>
+
+			<div class="post-body">
+<p>We truly live in an amazing time. We have some of the most technologically advanced consumer electronics known to man, and we carry them around in our pockets! Although processors and GPUs have progressed at an almost alarming rate, one vital component has not kept up: the battery.</p> <p>Doing anything with our smartphones and tablets requires that they’re “awake” — the processor, RAM, and who knows what else has to be warmed up and consuming power to check email or get notifications. Today’s processors can quickly scale from just a few hundred MHz up to a few thousand fairly quickly, and they can even run on just one of their many cores. Some devices even have special cores that are used specifically for low-power or low-priority tasks. The issue still remains: some general-purpose processor has to “turn on” periodically to take care of whatever business is pending.</p> <p>And even with all of that, these devices are still <em>reactive</em> — they haven’t yet made the leap to being <em>proactive</em>.</p> <h2>
+                        Specialty chips to the rescue!
+               </h2>
+<p>“Waking up” the CPU to check on variables (notifications, location, etc.) and perform logic (sounding an alert, blinking an LED, and so forth) requires power. That power adds up over time. Think of it this way: when your phone’s battery gets low you run out to the car, plug it in, and start up the engine to turn the alternator to provide the power with which to charge your phone. That sounds terribly inefficient, but it works, right? That’s the same thing that’s going on inside your phone — well, the inefficiency part.</p>
+<figure><img alt="Apple M7 Chip" loading="lazy" src="/blog/media/pocketnow/2013/10/apple-motherboard.png"/></figure>
+<p>To combat this disparity of processing power versus stored electricity, many new and novel things are being done. <a href="https://pocketnow.com/tag/m7" rel="noopener" target="_blank">Apple’s M7 </a>co-processor and <a href="https://pocketnow.com/tag/x8" rel="noopener" target="_blank">Motorola’s X8</a> come to mind.</p> <p>Both of these solutions feature highly specialized, very energy efficient designs which help off-load “ambient” tasks to these special processors, which the OS then handles. What’s notable is that they do it without having to heat up the traditional CPU.</p> <h2>
+                        Motorola’s lead
+               </h2>
+<p>That’s where the difference between the two biggest smartphone platforms becomes evident. Apple’s solution will be present in devices starting with the iPhone 5S. Android doesn’t have an equivalent.</p> <p>Let that sink in for a moment, then underscore it with the fact that I, Joe the Android Guy™, am the one saying it.</p> <blockquote>
+<p><em>Android doesn’t have an equivalent.</em></p>
+</blockquote>
+<figure><img alt="motorola x8" loading="lazy" src="/blog/media/pocketnow/2013/08/motorola-x8.jpg"/></figure>
+<p>Motorola has its X8 chipset, and Motorola is owned by Google. Android, the operating system, does not have anything built into it that comes close to what Apple’s OS does to leverage the M7. Apple controls the hardware. Apple controls the software. The two sides can work together beautifully.</p> <p>Android, on the other hand, is an open platform which any OEM can install onto their hardware. Android itself has a lot of APIs through which the OS and apps can talk to various sensors in your phone regardless of who made it, but the hardware has to be supported by the OS.</p> <p>Not long ago Google introduced a barometer in their Nexus devices to help us get a faster, better geo-location. Not all devices had barometers, so they couldn’t take advantage of the new feature. That was okay, devices simply “fell back” to what they could do, and the end-user didn’t know anything was different — except GPS locks took a little longer and their battery-life was a little shorter than some of the newer devices.</p> <p>Today, with Motorola breaking from the mold and forging ahead with their own specialized, “ambient-information” processors, it’s done something that Android in general cannot — because Motorola has built software that the generic flavor of Android does not include.</p> <p>This puts all other OEMs at a disadvantage to Motorola, since they will have to reinvent the proverbial wheel. This also puts Motorola at a disadvantage, because their branch of Android is now significantly different from the trunk. Apple, on the other hand, has neither of those challenges.</p> <h2>
+                        The day will come…
+               </h2>
+<figure><img alt="Domino" loading="lazy" src="/blog/media/pocketnow/2013/10/domino.jpg"/></figure>
+<p>The day will come Android will get code that supports the same type of dedicated chips that the current smartphones from Motorola include. The API to talk those types of chips will will eventually be universally available across all future Android-powered devices. It will just be up to the OEMs to make the chips, and put them into our smartphones and tablets.</p> <p>Until then, Apple has a head start, but Motorola and Google are pretty tight. I doubt it will be long before we get not only what Apple’s M7 brings to its phones, and what Motorola’s X8 brings to its phones. I think it will be something even better. It will be something that will leverage the collective creativity of all of Android’s partners. It will be something that will be greater than the sum of its parts.</p> <h2>
+                        What will it do for us?
+               </h2>
+<p>The most obvious advantage that we’ll all gain as these types of chips gain in popularity, and next generations learn from the previous ones, will be battery life. Our devices will last longer because they won’t gobble as much power to spin up “old fashioned” CPUs.</p> <p>That’s thinking small.</p>
+<figure><img alt="beautiful_seedling" loading="lazy" src="/blog/media/pocketnow/2013/10/beautiful_seedling.jpg"/></figure>
+<p>With “ambient chips”, your smartphone or tablet will understand <em>context</em>. It will know where you are, albeit roughly. It will know your mode of travel (planes, trains, automobiles, bikes, boats, or walking). It will know what kind of environment you’re in just by listening to what’s going on around you.</p>
+<p>It will know when you’re at work, home, or school, and will be able to customize its interactions with you to fit what you’ll most likely need from it at the time.</p> <p>Moreover, it will know where you are now, and when you need to get on your way so you can get to where ever it is you need to be. It will take weather, traffic conditions, and transit delays into consideration, and will not only tell you when you need to leave, but the best way to get to where you’re going.</p> <p>Your device will learn about you, your likes and dislikes, your circles of friends, and your daily routine. It will be there, ready and waiting to give you the information you need, when you need it… but it will have that information ready <em>before</em> you need it.</p> <p><em>That</em> is the true power of an ambient coprocessor when teamed up with a powerful OS and services… and that’s just the tip of the iceberg!</p> <p>Now it’s your turn. Head down to the comments, and fill in the rest of the future. What will these ambient coprocessors enable you to do? How will they help in your everyday life? What are the downsides to all of it?</p> <p><em>Image Credit: Chipworks, Motorolla, <a href="http://forum.sensiseeds.com/fdata/gallery/chrissyblaze/beautiful_seedling.jpg" rel="noopener nofollow" target="_blank">Sensisseeds</a></em></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/apple/" rel="tag">apple</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/iphone-5s/" rel="tag">iPhone 5s</a></li><li><a href="/blog/tags/m7/" rel="tag">M7</a></li><li><a href="/blog/tags/moto-x/" rel="tag">Moto X</a></li><li><a href="/blog/tags/motorola/" rel="tag">motorola</a></li><li><a href="/blog/tags/x8/" rel="tag">X8</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-ambient-coprocessors pocketnow-import -->
+</body>
+</html>

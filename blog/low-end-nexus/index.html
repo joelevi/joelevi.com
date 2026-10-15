@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="When other sites review a phone, many simply unbox it and fiddle around with it for a few hours before pulling out the laptop and penning a review. When we…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, 5 cool things you can do with Google’s low-end Nexus" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/low-end-nexus/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="5 cool things you can do with Google’s low-end Nexus — Joe Levi" />
+	<meta property="og:description" content="When other sites review a phone, many simply unbox it and fiddle around with it for a few hours before pulling out the laptop and penning a review. When we…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/11/nexus-5x-thin.jpg" />
+	<meta property="og:image:alt" content="5 cool things you can do with Google’s low-end Nexus" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/low-end-nexus/" />
+	<meta property="article:published_time" content="2015-11-03T17:19:27" />
+	<meta property="article:modified_time" content="2015-11-03T17:19:27" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="5 cool things you can do with Google’s low-end Nexus — Joe Levi" />
+	<meta name="twitter:description" content="When other sites review a phone, many simply unbox it and fiddle around with it for a few hours before pulling out the laptop and penning a review. When we…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/11/nexus-5x-thin.jpg" />
+	<meta name="twitter:image:alt" content="5 cool things you can do with Google’s low-end Nexus" />
+	<title>5 cool things you can do with Google’s low-end Nexus — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/low-end-nexus/#article",
+      "url": "https://www.joelevi.com/blog/low-end-nexus/",
+      "headline": "5 cool things you can do with Google’s low-end Nexus",
+      "description": "When other sites review a phone, many simply unbox it and fiddle around with it for a few hours before pulling out the laptop and penning a review. When we…",
+      "datePublished": "2015-11-03T17:19:27",
+      "dateModified": "2015-11-03T17:19:27",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/low-end-nexus/",
+        "headline": "5 cool things you can do with Google’s low-end Nexus",
+        "datePublished": "2015-11-04T00:19:27Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/low-end-nexus/",
+      "mainEntityOfPage": "https://pocketnow.com/low-end-nexus/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2015/11/nexus-5x-thin.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/low-end-nexus/#breadcrumb"
+      },
+      "keywords": [
+        "Android Marshmallow",
+        "google",
+        "LG",
+        "Nexus 5X"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/low-end-nexus/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "5 cool things you can do with Google’s low-end Nexus",
+          "item": "https://www.joelevi.com/blog/low-end-nexus/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>5 cool things you can do with Google’s low-end Nexus</h1>
+				<p class="post-meta"><time datetime="2015-11-03">November 3, 2015</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/low-end-nexus/" rel="noopener">Pocketnow</a> on <time datetime="2015-11-03">November 3, 2015</time>.</p>
+
+			<div class="post-body">
+<p><em>When other sites review a phone, many simply unbox it and fiddle around with it for a few hours before pulling out the laptop and penning a review. When we <a href="http://pocketnow.com/reviews" rel="noopener" target="_blank">review</a> a new smartphone, we try and put several days of actual, real-world use on it. We put it through all the tests and scenarios that we can think of. Even still, sometimes some of the finer details, the intricate settings or features that don’t immediately jump out at us get overlooked or we have to limit what we include in our reviews so they don’t balloon to 5,000 words or more. However, some phones are deserving of a deeper dive, and a follow-up to the formal review.</em></p> <p><strong>·</strong></p> <p>Such is the case with the Nexus 5X, Google’s low-end Nexus. Normally, after I review a phone for a week, it gets wiped and sent along to the next person on the Pocketnow team, so they can put their hands on it. This lets us share experiences from multiple perspectives along the way. This time, however, I kept it.</p> <p>Instead of going back to my daily driver, in this case my original Nexus 6 running Android 6.0 Marshmallow, I’ve kept using the Nexus 5X. Eventually I’ll swap it out for my personal Nexus 6P (my order is still “Pending”), but in the meantime, I’ve been toying around with the 5X. I’ve found a few gems along the way, and have been further impressed by other features that we’ve previously talked about.</p> <p>With all that having been said, here are five cool things you can do with Google’s low-end Nexus.</p> <h2>
+                        VoIP/SIP Calling
+               </h2>
+<p>Some carriers offer something called “WiFi Calling”, which lets you make and receive phone calls over a WiFi network. If your phone and your carrier support the two, other than enabling the feature, there’s really no setup involved. WiFi calling isn’t SIP-based (<a href="http://developer.android.com/guide/topics/connectivity/sip.html" rel="noopener nofollow" target="_blank">Session Initiation Protocol</a>) VoIP calling though. SIP is much more powerful and flexible than carrier-based WiFi calling.</p>
+<figure><img alt="SIP VoIP Calling settings" loading="lazy" src="/blog/media/pocketnow/2015/11/spi-voip-calling.png"/></figure>
+<p>The Nexus 5X includes true SIP-based VoIP support. This isn’t something new to the Nexus 5X. It’s not even new to Android 6.0 Marshmallow – it’s been around since Android 2.3 Gingerbread. Android includes a full SIP protocol stack and integrated call management services that let applications easily set up outgoing and incoming voice calls, without having to manage sessions, or transport-level communication. All of that is accomplished through the API included in Android.</p> <p>Many OEMs remove this feature from the phone’s Settings, which prevents you from inputting your SIP server and credentials (unless you obtain a third-party app to enable this feature), even though the API is still there. Google’s Nexus phones, however, include everything you need to set up and actually use your SIP provider.</p> <ol>
+<li>
+                                        Open the Dialer
+                        </li>
+<li>
+                                        Tap Settings under the “dots” menu
+                        </li>
+<li>
+                                        Tap Calls
+                        </li>
+<li>
+                                        Tap Calling Accounts
+                        </li>
+</ol>
+<p>There you will see a section called “SIP settings” where you can add your SIP account. I use Les.net, and after about 10 minutes of fiddling with credentials and servers I was able to make a SIP call over WiFi and LTE.</p> <p>It may sound like a lot of trouble, but if you’re traveling (for example), as long as you’ve got access to a reliable Internet connection, you can make phone calls at the same rates as you would if you were back home.</p> <p>Again, this isn’t exclusive to Google’s low end Nexus, but it works just great on the phone – once it’s set up.</p> <h2>
+                        Quick-Launch the Camera
+               </h2>
+<figure><img alt="Nexus 5X" loading="lazy" src="/blog/media/pocketnow/2015/10/Nexus-5X1.jpg"/></figure>
+<p>Before the Nexus 5X was launched, rumors were circulating that a simple double-twist of the wrist would automatically launch the camera. Those rumors proved to be false, but we got something else instead – even though it’s a little buggy: double-press the power button.</p> <p>By pressing the power button twice in quick succession, whether your phone is on or locked, your camera app will launch and you’ll be one tap away from catching that precious moment – and it’s faster than double-twisting your wrist!</p> <p>Some have reported problems using this method of launching the camera (myself included), but there’s a quick and easy fix.</p> <ol>
+<li>
+                                        Open Settings
+                        </li>
+<li>
+                                        Tap Security
+                        </li>
+<li>
+                                        Turn <em>off</em> “Power button instantly locks”
+                        </li>
+</ol>
+<p>As far as I can tell, these two settings don’t get along well, and turning off the “Power button instantly locks” feature has cleared up the problems I was experiencing.</p> <h2>
+                        Smart Case
+               </h2>
+<p>The battery inside the Nexus 5X isn’t huge. Sure, it will get you through your day, but not much more. To help extend your battery life you’ll want to turn off the screen as quickly as you can after you’re done using it. Most of us simply rely on our display’s sleep settings.</p>
+<figure><img alt="Nexus 5X folio case" loading="lazy" src="/blog/media/pocketnow/2015/11/nexus-5x-folio-case.png"/></figure>
+<p>After one minute of inactivity, my Nexus 5X will automatically turn off the display. This can be reduced to as little as 15 seconds or increased to as much as <em>30 minutes</em>. If you check your phone 10 times an hour, in a typical 8-hour day you’re adding 80-minutes of screen on time if you let your phone automatically sleep after 1 minute – twice that if you’ve got it set to 2-minutes.</p> <p>The obvious solution is to remember to press that power button when you’re done using your phone. An easier solution is to use a smart case that will tell your phone to turn off the screen automatically when you close the cover. The opposite is true as well: the screen will automatically turn on when the cover is opened. This last point has been very convenient in the past, but thanks to Nexus Imprint, that part of the feature loses a lot of its utility.</p> <p>The official “Folio Case” is available for US$40 and handles this perfectly. The smart case for the original Nexus 5 was made from a rigid plastic that hung on to the chamfered edges of the phone and sat flush with the screen. The Folio Case for the Nexus 5X is made from a pliable TPU (elastomer) that sits proud of the screen – not something I’m a fan of.</p> <p>Nonetheless, the benefits of this case when it comes to your battery life make it a worthwhile accessory.</p> <h2>
+                        Recharge Really Fast
+               </h2>
+<figure><img alt="Nexus 5X" loading="lazy" src="/blog/media/pocketnow/2015/10/nexus-5x-usb-type-c.jpg"/></figure>
+<p>Despite being the first modern Nexus to do away with Qi wireless charging, and coupled with the absence of Qualcomm Quick Charge, all is not lost! The Nexus 5X includes USB Type-C charging. The Type-C connector is very convenient, quite solid, and when used with the included charger (and select others) will charge the phone very “rapidly”.</p>
+<p>In general, batteries charge faster when they’re empty, and slower as they get full. Based on my experience, from an empty battery to about 1/4-full takes around 20 minutes. Charging up to 3/4-full takes slightly more than an hour. A 90% charge can be reached in under 90 minutes, and from virtually empty to 100% takes 1 hour and 50 minutes.</p> <p>All told, the lack of Qi is quickly offset with just how fast the battery in the Nexus 5X charges. I just wish we had some USB Type-C car chargers to choose from.</p> <h2>
+                        Take Great Pictures
+               </h2>
+<figure><img alt="IMG_20151020_192427" loading="lazy" src="/blog/media/pocketnow/2015/10/IMG_20151020_192427.jpg"/></figure>
+<p>Thanks to the camera module inside the Nexus 5X, pictures look <em>amazing</em> – especially in low-light situations thanks to the 1.55 µm pixel sensor, <em>f</em>/2.0 aperture, and broad-spectrum CRI-90 dual flash. Focus is almost instantaneous and always “right” thanks to the IR laser-assisted autofocus.</p> <p>The 12.3 MP images taken with the Nexus 5X are nothing short of beautiful – which means we no longer have excuses for taking crappy pictures.</p> <h2>
+                        Conclusions
+               </h2>
+<p>Sometimes our opinions of a device sour after the “honeymoon” phase is over. That’s one reason we’re fans of the <em><a href="https://pocketnow.com/tag/after-the-buzz" rel="noopener" target="_blank">After the Buzz</a></em> treatment – to see just how well a phone ages. We’re nowhere close to that point yet, but it’s nice to see that the Nexus 5X is still performing admirably, and that we’re still being surprised with features and benefits along the way.</p> <p>If you have some lesser-known features of the Nexus 5X, or any other features that you feel are worth sharing, head down to the comments and let us know!</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android-marshmallow/" rel="tag">Android Marshmallow</a></li><li><a href="/blog/tags/google/" rel="tag">google</a></li><li><a href="/blog/tags/lg/" rel="tag">LG</a></li><li><a href="/blog/tags/nexus-5x/" rel="tag">Nexus 5X</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-low-end-nexus pocketnow-import -->
+</body>
+</html>

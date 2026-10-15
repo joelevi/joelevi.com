@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="One of the problems with technology in general its reliance on the widespread adoption of that technology before it&#x27;s of much value. Take WiFi, for example.…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, 8 Scenarios Where NFC Would Make Sense" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/nfc-use-cases/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="8 Scenarios Where NFC Would Make Sense — Joe Levi" />
+	<meta property="og:description" content="One of the problems with technology in general its reliance on the widespread adoption of that technology before it&#x27;s of much value. Take WiFi, for example.…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2023/04/pn.png" />
+	<meta property="og:image:alt" content="8 Scenarios Where NFC Would Make Sense" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/nfc-use-cases/" />
+	<meta property="article:published_time" content="2013-01-02T16:34:16" />
+	<meta property="article:modified_time" content="2013-01-02T16:34:16" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="8 Scenarios Where NFC Would Make Sense — Joe Levi" />
+	<meta name="twitter:description" content="One of the problems with technology in general its reliance on the widespread adoption of that technology before it&#x27;s of much value. Take WiFi, for example.…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2023/04/pn.png" />
+	<meta name="twitter:image:alt" content="8 Scenarios Where NFC Would Make Sense" />
+	<title>8 Scenarios Where NFC Would Make Sense — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/nfc-use-cases/#article",
+      "url": "https://www.joelevi.com/blog/nfc-use-cases/",
+      "headline": "8 Scenarios Where NFC Would Make Sense",
+      "description": "One of the problems with technology in general its reliance on the widespread adoption of that technology before it's of much value. Take WiFi, for example.…",
+      "datePublished": "2013-01-02T16:34:16",
+      "dateModified": "2013-01-02T16:34:16",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/nfc-use-cases/",
+        "headline": "8 Scenarios Where NFC Would Make Sense",
+        "datePublished": "2013-01-02T23:34:16Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/nfc-use-cases/",
+      "mainEntityOfPage": "https://pocketnow.com/nfc-use-cases/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2023/04/pn.png",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/nfc-use-cases/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "NFC"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/nfc-use-cases/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "8 Scenarios Where NFC Would Make Sense",
+          "item": "https://www.joelevi.com/blog/nfc-use-cases/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>8 Scenarios Where NFC Would Make Sense</h1>
+				<p class="post-meta"><time datetime="2013-01-02">January 2, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/nfc-use-cases/" rel="noopener">Pocketnow</a> on <time datetime="2013-01-02">January 2, 2013</time>.</p>
+
+			<div class="post-body">
+<p>One of the problems with technology in general its reliance on the widespread adoption of that technology before it's of much value. Take WiFi, for example. Back in 1998 wireless networking was all but was limited to proprietary point-to-point transmission and the GPRS in our phones. WiFi would change all that by extending networks to mobile devices, and to areas that we never would have imagined would have high-speed Internet access. Widespread WiFi adoption didn't happen over night, why? It was expensive and why would we deploy networks that relatively few people were able to use. On the other hand, why would device manufacturers put WiFi chips inside their phones and laptops when there were so few wireless access points?</p> <p>We find ourselves in a similar situation with NFC today. Near Field Communication has the potential to be the "next WiFi" — no, not in the same ways as WiFi, but in a collection of new and ubiquitous use-case scenarios that could become part of our everyday lives. At least that's what the buzz-words and propaganda want us to believe.</p> <h2>
+                        What is NFC?
+               </h2>
+<p>Before we start confirming or debunking the NFC-propaganda, what exactly are NFC tags and how do they work? Most of you already know what NFC is — little microchips encoded with data that are embedded into a sticker or paper or some other sort of "tangible" material.</p> <p>Considering what NFC tags can do, they're not much dissimilar from QR codes — two-dimensional bar codes with relatively short bits of information encoded into them. This one, for example, takes you to my page here on Pocketnow.</p> <p>You can put almost any text that you want inside a QR code, up to a point — there is a size limitation. By using the right app you can scan these codes and take action based on their content which can be plain text (a note or message perhaps), a URL to take you to a web page, or a phone number that can be immediately called or to which a text message can be sent. You can even embed your entire business card (in proper VCard format) into a QR code.</p> <p>The downside to QR codes is that once they're printed, that's it, you can't change them and your users have to recognize what they are and what to do with them if you want to find out what's hiding inside them.</p> <p>NFC tags are very similar to QR codes. They can contain small amounts of data in various formats that your phone or tablet (with the right app or configuration) can do something with. Rather than a printed pattern, NFC tags use a microchip which is wired up to a very large antenna. When a device is placed near the NFC tag the radio power from the device is captured by the antenna and powers the chip. From there the chip simply responds with a short radio signal of its contents. It's quite ingenious but it does require you to be in very close proximity to the tag that you're trying to read, hence the "Near" in its name.</p> <h2>
+                        Real-World Scenarios Where NFC Makes Sense
+               </h2>
+<p>Now that we've cleared up a little of the "magic and mystery" around NFC, what are some real-world scenarios? Sure, there are plenty of cool things that NFC can do like switching profiles on your device, transferring pictures wirelessly, configuring a WiFi hotspot, or sharing what you're looking at on your device with a friend on their device. Unfortunately, most of these use-cases aren't all that widespread yet.</p> <p>Luckily, there are some use-cases where today's implementation of NFC not only makes sense, but could make our lives so much easier!</p> <h3>
+            Boarding Passes and Transit Tickets
+    </h3>
+<p>I know, in a paperless world, getting a paper boarding pass or transit ticket seems strange. But we don't live in that world, not yet anyway. We still have paper, but we can make it more intelligent by putting an NFC tag inside it — or several! These tags could include a calendar event so you can quickly add your flight, train, or bus ride to your calendar. They could include geo-location coordinates so you know exactly where your terminal is and help you get navigation or walking directions. Last, but certainly not least, the boarding agent could use an NFC reader to validate the ticket and let you board. Something like this isn't too far off either! Some airlines are <a href="http://www.nfcworld.com/2012/08/02/317115/alaska-airlines-prepares-for-nfc/" rel="nofollow noopener noreferrer" target="_blank">experimenting with using NFC</a> for boarding passes already.</p> <h3>
+            Ticket Stubs
+    </h3>
+<p>Getting into concerts, clubs, the ballet, symphony, monster truck rally, or whatever event you may be interested in usually requires a ticket with a bar code on it. The bar code isn't for your use, it's for the venue to validate your ticket. Replacing this bar code with an NFC chip would free up quite a bit of ticket space that could be used to either make them smaller (saving paper), or re-purpose the space by printing more information (ads, survey links, etc.). For you, the ticket-holder, the NFC tag could contain a calendar event and location for the event, maybe even a link to a social networking site to help spread the word. You could even use your ticket stub, NFC, and your smartphone to get discounts on merchandise.</p> <h3>
+            Business Cards
+    </h3>
+<p>Paper-based business cards aren't going to go away any time soon. They are a universal medium that everyone understands. Imagine,however, if your business card had an NFC tag inside it with the contents of your card encoded into it. With a simple tap your information could be immediately accessible inside your contact's address book.</p> <h3>
+            High Tech Credit Card
+    </h3>
+<p>This scenario is one that you may be able to use today. I've used my Galaxy Nexus smartphone and even my Nexus 7 tablet at my local convenience store and home improvement store. It's just as convenient as using a credit card, and I don't have to worry about keeping the paper receipt because I've got a digital receipt stored in my digital wallet. There aren't tons of places to use NFC to pay for your goods and services, not yet anyway, and you can't do device-to-device payments (so it's not going to replace Square any time soon), but it's on its way.</p> <h3>
+            Parking Meters
+    </h3>
+<p>Every time I'm in the city and have to use a parking meter, I have to spend forever hunting through my car to find loose change. I rarely carry cash, let alone change! I do, however, always carry my smartphone! There are some disadvantages to putting physical credit card readers on parking meters (weather, vandalism, physical failure, skimmers, etc.), but if parking meters could take payments via NFC, all they'd need is a reader inside its hard shell. This, too, isn't that far off, <a href="http://lifehacker.com/5943006/Paying%20for%20your%20parking%20meter%20is%20also%20possible%20with%20NFC%20stickers" rel="nofollow noopener noreferrer" target="_blank">some cities, like San Franciso</a>, are already experimenting with the technology.</p> <h3>
+            Unlocking Doors and Starting Cars
+    </h3>
+<p>I wear a key ring that has about a dozen keys on it. It's a pain. Keys are noisy, heavy, and prone to breakage. Where I live you've also got to protect your keyholes from water because we're frozen solid for three months out of the year. Have you ever tried to unlock something with a frozen keyhole? NFC-enabled locks on our house doors and cars could come in very handy! What's more, you could theoretically share a key with anyone you wanted, and disable that key whenever you wanted as well. BMW is already playing with this in their <a href="http://www.nfcworld.com/2012/04/23/315235/bmw-uses-nfc-car-keys-to-open-hotel-room-doors/" rel="nofollow noopener noreferrer" target="_blank">NFC-enabled car keys</a> — but they're applying to hotel rooms, too — not just cars.</p> <h3>
+            Timer Triggers
+    </h3>
+<p>Have you ever started cooking something only to go off and forget about, then are reminded when your smoke detectors go off? Maybe you've put in a load to wash and then gone off and done something else and were met with a wet, mildew-covered load of your clothes in the morning. What if our appliances had an NFC chip in them that could tell your smartphone how long it's going to be until the task is complete? Think of it as an intelligent "start timer" using your smartphone as the timer! No more burnt pasta, no more re-washing loads of laundry. Thank you technology!</p> <h3>
+            Bluetooth Pairing
+    </h3>
+<p>I've had my fair share of Bluetooth devices in my life. Many of them have the same pairing code: 0000, 1234, 9999, or something similar. They're not supposed to have the same code, and doing so makes them less secure than they should be with a somewhat random code. Unfortunately, it looks like most of us can't remember a four-digit sequence — and we're willing to give up our security because of it. Why not use NFC? A device could have a strong passcode programmed into it and store in an NFC chip. Tap your device to the Bluetooth accessory and it would not only pair, but it would use the high-strength pass code! This method would be easier, and it would also be more secure! That sounds like a win-win to me!</p> <h2>
+                        Your Turn
+               </h2>
+<p>So there are eight or so of our ideas for using NFC in everyday life to make things easier, simpler, safer, or more convenient. Did we stir up any thoughts or grand ideas in your mind? How might NFC make your life easier? We'd love to hear your thoughts in the comments below!</p>
+<p><em>Image credit: <a href="http://www.nfcworld.com/2011/06/28/38358/hicel-launches-nfc-business-cards/" rel="nofollow noopener noreferrer" target="_blank">NFC World</a>, <a href="http://dvice.com/archives/2012/09/nfc-business-ca.php" rel="nofollow noopener noreferrer" target="_blank">DVICE</a>, <a href="http://beautifulpixels.com/iphone/minimalist-timer/" rel="nofollow noopener noreferrer" target="_blank">Beautiful Pixels</a></em></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/nfc/" rel="tag">NFC</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-nfc-use-cases pocketnow-import -->
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="When dual core processors were announced we knew it was only a matter of time before they&#x27;d be upstaged by quad-core chips. What we didn&#x27;t expect was how soon…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Octa-Core Chips Are Coming; Here is How They Will Change Your Life" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/benefits-of-octa-core-chips/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Octa-Core Chips Are Coming; Here is How They Will Change Your Life — Joe Levi" />
+	<meta property="og:description" content="When dual core processors were announced we knew it was only a matter of time before they&#x27;d be upstaged by quad-core chips. What we didn&#x27;t expect was how soon…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/01/8-core-processors.jpg" />
+	<meta property="og:image:alt" content="Octa-Core Chips Are Coming; Here is How They Will Change Your Life" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/benefits-of-octa-core-chips/" />
+	<meta property="article:published_time" content="2013-01-14T17:12:47" />
+	<meta property="article:modified_time" content="2013-01-14T17:12:47" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Octa-Core Chips Are Coming; Here is How They Will Change Your Life — Joe Levi" />
+	<meta name="twitter:description" content="When dual core processors were announced we knew it was only a matter of time before they&#x27;d be upstaged by quad-core chips. What we didn&#x27;t expect was how soon…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/01/8-core-processors.jpg" />
+	<meta name="twitter:image:alt" content="Octa-Core Chips Are Coming; Here is How They Will Change Your Life" />
+	<title>Octa-Core Chips Are Coming; Here is How They Will Change Your Life — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/benefits-of-octa-core-chips/#article",
+      "url": "https://www.joelevi.com/blog/benefits-of-octa-core-chips/",
+      "headline": "Octa-Core Chips Are Coming; Here is How They Will Change Your Life",
+      "description": "When dual core processors were announced we knew it was only a matter of time before they'd be upstaged by quad-core chips. What we didn't expect was how soon…",
+      "datePublished": "2013-01-14T17:12:47",
+      "dateModified": "2013-01-14T17:12:47",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/benefits-of-octa-core-chips/",
+        "headline": "Octa-Core Chips Are Coming; Here is How They Will Change Your Life",
+        "datePublished": "2013-01-15T00:12:47Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/benefits-of-octa-core-chips/",
+      "mainEntityOfPage": "https://pocketnow.com/benefits-of-octa-core-chips/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/01/8-core-processors.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/benefits-of-octa-core-chips/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/benefits-of-octa-core-chips/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Octa-Core Chips Are Coming; Here is How They Will Change Your Life",
+          "item": "https://www.joelevi.com/blog/benefits-of-octa-core-chips/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Octa-Core Chips Are Coming; Here is How They Will Change Your Life</h1>
+				<p class="post-meta"><time datetime="2013-01-14">January 14, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/benefits-of-octa-core-chips/" rel="noopener">Pocketnow</a> on <time datetime="2013-01-14">January 14, 2013</time>.</p>
+
+			<div class="post-body">
+<p>When dual core processors were announced we knew it was only a matter of time before they'd be upstaged by quad-core chips. What we didn't expect was how soon after we started seeing devices with four cores that chips with eight-core would be announced! The first mobile SoC we've heard about that will be running on an eight-core architecture is Samsung's Exynos 5 Octa.</p> <p>Without getting into technical details about one particular chip, let's dig into different ways chip makers could implement 8-cores, along with the benefits and disadvantages of each method, and how devices based on 8-core technology will impact your life.</p> <h2>
+                        Eight Real Cores
+               </h2>
+<p>Before we had multi-core chips for our desktop PCs there were machines that could run multiple individual processors. Dual- and quad-processor machines are typically severs or high-end workstations which divide the workload as equally as possible between their separate chips. Each chip contains all the components of all the other CPUs in the system. Their bottleneck is in the connections between the distinct chips and the system's RAM. To get around this bottleneck, chip makers began putting multiple-cores on individual chips. This not only saved production costs, but sped things up on the board itself by putting the components closer together.</p> <p>Intel, however, did something interesting — they implemented a "virtual" second core which they called Hyperthreading. Chips based on this technology looked like they were running two (or later four) cores, and they pretty much were — except they shared some parts between the cores. Even though they weren't true "dual-" or "quad-" cores, they performed faster than single core processors. They weren't a true "multi-core" processor.</p> <p>On mobile devices, when most people think "8-core" they're probably thinking about eight completely "separate but equal" cores all running at the same time, at the same speed, on the same chip. The advantage to eight "real" cores on one chip center primarily on their proximity and status as equals, which each core being assigned as equal a processing load as possible.</p> <h2>
+                        Dual Quad-Core, High Performance
+               </h2>
+<p>A more realistic approach chip makers might take is teaming two high-end quad-core chips together. We already have quad-core chips, and this approach is probably the fastest and easiest to put into practice. Tasks will likely be assigned to each processor rather than to each core, and there may be some efficiency lost in this approach rather than the "true 8-core" approach. or perhaps not. Time will tell.</p> <h2>
+                        Dual Quad-Core, Hybrid
+               </h2>
+<p>Taking a page from ARM's playbook is the big.Little concept. The logic behind this approach is teaming a high-powered multi-core chip with a low-powered single- or multi-core chip. This concept let's us have incremental improvement in multi-core performance while maintaining decent performance on a low-powered chip.</p> <p>While not being able as powerful as either of the other configurations we've talked about so far, this solution is likey to be the one we'll see in high-end smartphones and tablets this year. It aims to balance performance with battery life while solving the problem of "lag" that can be present when a fifth low-power CPU is used, or when running the primary CPU cores at very low speeds to save power.</p> <h2>
+                        How Will 8-Cores Change Your Life?
+               </h2>
+<h3>
+            Games
+    </h3>
+<p>Games put more demand on CPUs and GPUs than almost any other kind of app out there. NVIDIA is addressing this by putting in ridiculous amounts of graphics processing units in their SoCs. You'll see games get more realistic and faster, and you'll start seeing them running on larger screens and at higher resolutions than the what we have on our smartphones and tablets today.</p> <h3>
+            Ultra-High Resolution
+    </h3>
+<p>720P packs a whole lot of pixels onto a screen. Each one has to be "figured out" and placed on the display.</p> <p>1080P screen have even more pixels to juggle. At <a href="https://pocketnow.com/tag/ces-2013">CES 2013</a> we got a taste of ultra-high definition, going by the name of "4K" or "4K Ultra". The latest "Ultra" resolutions, as one might imagine, have a staggering number of pixels that CPUs and GPUs have to worry about. Devices running these displays are going to need a lot more processing power than we have available today just to keep up. Everything you see will look even better than it does today, and we're quickly approaching the day when we'll have photo-realistic displays on our televisions, tablets, and smartphones.</p> <h3>
+            Multi-Window
+    </h3>
+<p>Samsung is one of the very few OEMs who has shown us what it's like to run two apps on our mobile devices simultaneously. Sure, we've got multi-tasking on Android and it's not difficult to swap between running programs, but running two apps in two separate windows at the same time, that's something only Samsung has been able to "get right" — so far.</p>
+<p>This obviously requires a bit more processing "umph" than simply swapping between apps does — each app needs to be responsive and lag-free. As we see more Samsung devices incorporate this feature other OEMs will begin to follow suit.</p> <p>As far as multi-core CPUs go, we're only going to see more cores packed into even smaller packages as time goes by. 2013 promises to be an exciting year of new products, new technologies, and higher-powered chips to power it all!</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-benefits-of-octa-core-chips pocketnow-import -->
+</body>
+</html>

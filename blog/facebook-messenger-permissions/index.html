@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Last week the Internet exploded with people complaining about the security permissions required by the latest update to the Facebook Messenger app for Android.…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Facebook Messenger Permissions: How worried should you be?" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/facebook-messenger-permissions/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Facebook Messenger Permissions: How worried should you be? — Joe Levi" />
+	<meta property="og:description" content="Last week the Internet exploded with people complaining about the security permissions required by the latest update to the Facebook Messenger app for Android.…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/03/facebook-phone.jpg" />
+	<meta property="og:image:alt" content="Facebook Messenger Permissions: How worried should you be?" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/facebook-messenger-permissions/" />
+	<meta property="article:published_time" content="2014-08-14T12:04:22" />
+	<meta property="article:modified_time" content="2014-08-14T12:04:22" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Facebook Messenger Permissions: How worried should you be? — Joe Levi" />
+	<meta name="twitter:description" content="Last week the Internet exploded with people complaining about the security permissions required by the latest update to the Facebook Messenger app for Android.…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/03/facebook-phone.jpg" />
+	<meta name="twitter:image:alt" content="Facebook Messenger Permissions: How worried should you be?" />
+	<title>Facebook Messenger Permissions: How worried should you be? — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/facebook-messenger-permissions/#article",
+      "url": "https://www.joelevi.com/blog/facebook-messenger-permissions/",
+      "headline": "Facebook Messenger Permissions: How worried should you be?",
+      "description": "Last week the Internet exploded with people complaining about the security permissions required by the latest update to the Facebook Messenger app for Android.…",
+      "datePublished": "2014-08-14T12:04:22",
+      "dateModified": "2014-08-14T12:04:22",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/facebook-messenger-permissions/",
+        "headline": "Facebook Messenger Permissions: How worried should you be?",
+        "datePublished": "2014-08-14T18:04:22Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/facebook-messenger-permissions/",
+      "mainEntityOfPage": "https://pocketnow.com/facebook-messenger-permissions/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/03/facebook-phone.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/facebook-messenger-permissions/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "facebook",
+        "Messenger",
+        "permissions",
+        "Security"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/facebook-messenger-permissions/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Facebook Messenger Permissions: How worried should you be?",
+          "item": "https://www.joelevi.com/blog/facebook-messenger-permissions/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Facebook Messenger Permissions: How worried should you be?</h1>
+				<p class="post-meta"><time datetime="2014-08-14">August 14, 2014</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/facebook-messenger-permissions/" rel="noopener">Pocketnow</a> on <time datetime="2014-08-14">August 14, 2014</time>.</p>
+
+			<div class="post-body">
+<p>Last week the Internet exploded with people complaining about the security permissions required by the latest update to the Facebook Messenger app for Android. Now that some of the initial knee-jerk reaction has passed, is there anything you need to be worried about? And if so, how worried should you be?</p> <p>Let’s dig into some background before we dive into that. Facebook is huge. It’s been just more than a decade since being founded, employs more than 7,000 people, and has over 1.28 billion active users. Add to the fact that we recently learned that Facebook has been “experimenting with the emotions of its users” and many might be rightly concerned over what Facebook is doing with all the personal information that we’re freely handing over.</p> <p>Here in the States, Facebook is pretty big, but over in Europe, Facebook is one of the primary “go-to” apps when it comes to messaging. Regardless of where you live, the permissions that are being requested are the same. They’re broad, and they’re pretty scary.</p> <h2>
+                        Why a separate app?
+               </h2>
+<figure><img alt="Facebook Messenger" loading="lazy" src="/blog/media/pocketnow/2013/04/facebook-banner-logo.jpg"/></figure>
+<p><a href="https://pocketnow.com/2014/08/13/do-you-hate-facebook-messenger" rel="noopener" target="_blank">Why does Facebook even need a separate app for messaging?</a> The answer to this question partially answers the concerns raised over why Facebook Messenger needs the permissions that it does. Computer programmers are taught to break problems down into tasks, and tasks down into the smallest possible component. A complex task might be made up of dozens (or even hundreds) of smaller tasks. Separating these into their own discreet methods allows for apps to be more easily understood and maintained, and allows those methods to be reused in other parts of the app, reducing the need for redundant or duplicate code.</p> <p>The core ideology is to do one thing, and do it extremely well. The Facebook app strays far, far away from that programming ideology. It’s a news reader and poster, an image viewer and poster, a people tagger, and, yes, an instant messenger (plus a whole lot more). By separating Messenger from the core Facebook app, Facebook is actually doing us a favor. Those who only use Facebook Messenger don’t have to deal with the bloat of the core app, and vice versa. Not only that, the permissions needed by one don’t have to be included in the other.</p> <p>This diversification goes beyond good computer programming ideology. “What we’re doing with Creative Labs is basically unbundling the big blue app,” Facebook’s Zuckerberg told <em>The New York Times</em> last April. “I think on mobile, people want different things. In mobile there’s a big premium on creating single-purpose, first-class experiences.”</p> <p>Facebook tried to do that by creating its very own, branded phone. It failed – miserably.</p> <p>Facebook tried again by <a href="https://pocketnow.com/2013/11/21/facebook-home-vs-google-now" rel="noopener" target="_blank">creating its own launcher and home screen</a>. Again it failed. Again, miserably.</p> <p>Now, however, splitting the functionality of its network into separate apps offers the people to install what they want, without the overhead of installing functionality they may not want.</p> <h2>
+                        Android Permissions
+               </h2>
+<figure><img alt="app-permissions" loading="lazy" src="/blog/media/pocketnow/2013/12/app-permissions.png"/></figure>
+<p>Every app that runs on Android has to “declare” what access it needs in something called the “manifest”. If your app doesn’t ask for permission to access the camera, for example, your app simply cannot access the camera.</p> <p>Prior to installing any app, the user is presented with a list of permissions that the app needs to run. At that point you have the opportunity to use your own best judgement and decide if that particular app should have access to those particular permissions. If you don’t think it does, simply cancel the installation and live without the app.</p> <p>Some phones, like those running recent versions of <a href="https://pocketnow.com/tag/cyanogenmod" rel="noopener" target="_blank">CyanogenMod</a> custom ROM and <a href="https://pocketnow.com/tag/blackphone" rel="noopener" target="_blank">Blackphone</a>, include modified permissions managers that let you toggle permissions on and off per app. This might mean the app can’t work properly, but your security is maintained.</p> <p>An example of this was a barcode scanner that <a href="https://pocketnow.com/editor/michael-fisher" rel="noopener" target="_blank">Michael Fisher</a> tried to install on his Blackphone. When he ran the app it failed, telling him it could not access his camera. Why? Since Blackphone defaults to “super-secure”, the app wasn’t given permission to anything it asked for, and Michael forgot to give the app access to his camera. A quick change corrected that, but helps illustrate the point of permissions very well.</p> <p>The new Facebook Messenger app asks for several permissions. Here’s Facebook’s explanation about why the app needs them:</p> <ul>
+<li>
+                                        Take pictures and videos: This permission allows you to take photos and videos within the Facebook Messenger app to easily send to your friends and other contacts
+                        </li>
+<li>
+                                        Record audio: This permission allows you to send voice messages, make free voice calls, and send videos within Facebook Messenger
+                        </li>
+<li>
+                                        Directly call phone numbers: This permission allows you to call a Facebook Messenger contact by tapping on the person’s phone number, found in a menu within your message thread with the person
+                        </li>
+<li>
+                                        Receive text messages (SMS): If you add a phone number to your Facebook Messenger account, this allows you to confirm your phone number by finding the confirmation code that we send via text message
+                        </li>
+<li>
+                                        Read your contacts: This permission allows you to add your phone contacts as Facebook Messenger contacts if you choose to do so. You can always stop syncing your phone contacts by going to your Facebook Messenger settings
+                        </li>
+</ul>
+<p>For a messaging app, those make sense, right?</p> <p>Even still, it sure is giving up a lot of your security. That’s where your better judgement comes in to play. Do you know the company? Do you trust it with your information? Do the permissions the app is asking for seem appropriate for the type of app?</p> <p>If you’re installing a Live Wallpaper from a developer you’ve never heard of before, you might be a bit hesitant to accept all those permissions. Why would a Live Wallpaper be able to take pictures and videos, record audio, read your contacts, call phone numbers, and receive text messages? To me, that seems insane.</p>
+<p>Now, if that app were a replacement launcher that combined contacts and communications with app launching, perhaps those permissions are justified.</p> <p>In the case of Facebook Messenger, of course the permissions are warranted. The real question is whether or not you trust Facebook with those permissions. If you do, then this is a big deal over nothing. If you don’t, then you should not have Facebook, Facebook Messenger, Instagram, or any other Facebook-related app on your smartphone or tablet.</p> <p>While it may sound simple, it isn’t any more complicated than that.</p>  <p><em>References: <a href="http://www.latimes.com/nation/nationnow/la-na-nn-facebook-research-20140629-story.html" rel="noopener nofollow" target="_blank">LA Times</a>, <a href="https://www.facebook.com/help/347452185405260" rel="noopener nofollow" target="_blank">Facebook</a></em></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/facebook/" rel="tag">facebook</a></li><li><a href="/blog/tags/messenger/" rel="tag">Messenger</a></li><li><a href="/blog/tags/permissions/" rel="tag">permissions</a></li><li><a href="/blog/tags/security/" rel="tag">Security</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-facebook-messenger-permissions pocketnow-import -->
+</body>
+</html>

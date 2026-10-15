@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Some have referred to Blackphone as a smartphone for people who are “paranoid”, I don’t see it that way. Blackphone offers something that, as a society, we…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, 10 ways Blackphone keeps you secure" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/blackphone-keeps-you-secure/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="10 ways Blackphone keeps you secure — Joe Levi" />
+	<meta property="og:description" content="Some have referred to Blackphone as a smartphone for people who are “paranoid”, I don’t see it that way. Blackphone offers something that, as a society, we…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/08/blackphone.jpg" />
+	<meta property="og:image:alt" content="10 ways Blackphone keeps you secure" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/blackphone-keeps-you-secure/" />
+	<meta property="article:published_time" content="2014-08-12T11:53:44" />
+	<meta property="article:modified_time" content="2014-08-12T11:53:44" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="10 ways Blackphone keeps you secure — Joe Levi" />
+	<meta name="twitter:description" content="Some have referred to Blackphone as a smartphone for people who are “paranoid”, I don’t see it that way. Blackphone offers something that, as a society, we…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/08/blackphone.jpg" />
+	<meta name="twitter:image:alt" content="10 ways Blackphone keeps you secure" />
+	<title>10 ways Blackphone keeps you secure — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/blackphone-keeps-you-secure/#article",
+      "url": "https://www.joelevi.com/blog/blackphone-keeps-you-secure/",
+      "headline": "10 ways Blackphone keeps you secure",
+      "description": "Some have referred to Blackphone as a smartphone for people who are “paranoid”, I don’t see it that way. Blackphone offers something that, as a society, we…",
+      "datePublished": "2014-08-12T11:53:44",
+      "dateModified": "2014-08-12T11:53:44",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/blackphone-keeps-you-secure/",
+        "headline": "10 ways Blackphone keeps you secure",
+        "datePublished": "2014-08-12T17:53:44Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/blackphone-keeps-you-secure/",
+      "mainEntityOfPage": "https://pocketnow.com/blackphone-keeps-you-secure/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/08/blackphone.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/blackphone-keeps-you-secure/#breadcrumb"
+      },
+      "keywords": [
+        "Blackphone",
+        "Editorial",
+        "Encryption",
+        "Privacy",
+        "Security",
+        "Silent Circle",
+        "VoIP",
+        "VPN"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/blackphone-keeps-you-secure/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "10 ways Blackphone keeps you secure",
+          "item": "https://www.joelevi.com/blog/blackphone-keeps-you-secure/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>10 ways Blackphone keeps you secure</h1>
+				<p class="post-meta"><time datetime="2014-08-12">August 12, 2014</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/blackphone-keeps-you-secure/" rel="noopener">Pocketnow</a> on <time datetime="2014-08-12">August 12, 2014</time>.</p>
+
+			<div class="post-body">
+<p>Some have referred to <a href="https://pocketnow.com/tag/blackphone" rel="noopener" target="_blank">Blackphone</a> as a smartphone for people who are “paranoid”, I don’t see it that way. Blackphone offers something that, as a society, we give away too freely: our privacy.</p> <p>Many will say “if you don’t have anything to hide, you don’t have anything to worry about”, yet these people still close the door on the stall when using the restroom, and have curtains over their windows to keep people from snooping. That’s what Blackphone does, only for your personal communications. How it does that is a little complicated, so let’s walk through what kinds of security Blackphone provides and how to set it up, as well as what’s not covered.</p> <p>When you open the box, pop in your SIM and an sdcard if you’d like, followed by the 2,000 mAh LiPo battery. From there, booting up your Blackphone is essentially like any other Android-powered device – with some security-centric nuances.</p> <h2>
+                        1. Mandatory Screen Lock
+               </h2>
+<p>The first difference you’ll likely note is that you cannot continue the device setup without first providing a PIN or password that you’ll use every time you turn on your device. Out of the box, the “None”, “Slide”, and “Pattern” unlocking methods are “disabled by administrator, encryption policy, or credential storage”. “Face Unlock” is nowhere to be found.</p> <p>This one simple step (that you can do on any Android-powered phone or tablet) is one of the best ways to keep your data safe. You can change the amount of time before your phone automatically locks from “immediately” all the way up to 30 minutes. I set mine at 1 minute, which seems to work best to balance convenience and security for my usage patterns. You can also use the power button to immediately lock your device, or not, it’s up to you.</p>
+<figure><img alt="Encrypt your data" loading="lazy" src="/blog/media/pocketnow/2014/08/Screenshot_2000-01-01-01-02-02.png"/></figure>
+<h2>
+                        2. Whole Phone Encryption
+               </h2>
+<p>Very early on in the setup process, you’ll be asked to “Encrypt your data”. This is essentially <a href="https://pocketnow.com/2014/02/04/android-encryption" rel="noopener" target="_blank" title="How to encrypt your Android for extra security (video)">the same process that stock Android offers</a>, but presented in a much more visible (and much less “optional”) manner. The battery in our test unit didn’t come charged enough to complete this step out of the box, but allowed us to “skip” the process, assuring us that we’d be reminded to encrypt our device later.</p> <p>On the surface, encrypting the storage on your device may seem like an unnecessary step, especially since setting up a PIN or password to gain access is mandatory. However, this is likely the single most important thing that you can do to keep your device secure, and answers a concern that we’ve had for a very long time.</p> <p>The problem has to do with files and the way they’re handled on storage media. When a file is created, an entry is made that points to where the file starts on the storage device. When that file is “deleted”, the pointer to its location is removed, but the data still exists – if you know where to look. Wiping the data takes time, and I/O processes are already somewhat “slow”. Additionally, flash storage has a limit to how many times it can be written, and wiping would reduce that number significantly.</p> <p>Encrypting your file system solves both issues. When you factory reset your device, if encryption was previously used, the bits on the device are encrypted with a key that was destroyed as part of the factory reset process. This hasn’t wiped your data, but it keeps your data from being accessed by anyone without the original key, which could be even better than, and significantly more secure than wiping.</p>
+<figure><img alt="SpiderOak" loading="lazy" src="/blog/media/pocketnow/2014/08/spideroak-setup.jpg"/></figure>
+<h2>
+                        3. Cloud Storage
+               </h2>
+<p>Storing data in the cloud is extremely convenient, but it’s equally insecure. Here in the States, your cloud storage can be accessed by anyone with a general court order, rather than a Warrant describing the particular place to be searched and the particular things to be seized. Again, the argument of “nothing to hide, nothing to worry about” will be brought up, but we’ve heard reports of government agents who collect and even trade “intimate” photos they’ve encountered during their investigations.</p> <p>You put frosted “privacy glass” in your bathroom so people can’t watch you shower, encrypted cloud storage is the same thing.</p> <p>Like Google Drive, Dropbox, and others, SpiderOak makes it possible for you to store, sync, share, and access your data from anywhere. SpiderOak uses a concept called “Zero-Knowledge privacy”, which means the server never knows the plaintext contents of the data it is storing. This ensures your data is “never at risk of being compromised or abused by either internal threats or external hackers”.</p> <p>Setting up SpiderOak requires a significantly more “involved” process, and cannot be completed without a desktop or laptop computer. Additionally, there is some delay between setting up the desktop client before you can log in with the mobile client. This isn’t explicitly stated, so be patient while the process completes. Once it’s configured, saving and syncing files operates just like you’ve come to expect with other cloud storage services.</p>
+<figure><img alt="Smarter Wi-Fi Manager" loading="lazy" src="/blog/media/pocketnow/2014/08/smarter-wifi-manager.jpg"/></figure>
+<h2>
+                        4. Smarter Wi-Fi Manager
+               </h2>
+<p>Did you know that if you leave your Wi-Fi turned on that you’re feely giving away a uniquely identifying piece of information, and your general location? Yup. Your Wi-Fi radio identifies itself with something called a MAC address, and every wireless access point in the world is actively “listening” for devices to come into range. Most WAPs use that information for what it’s original intent: allowing access via the wireless network. Others, however, are being used to log the MAC address, date, time, and other information of all devices within their reach.</p> <p>To be clear, not every WAP does this, but as more distributed “hotspot” networks are deployed, many are seeing this as yet another way to sell your information to interested parties.</p> <p>Smarter Wi-Fi Manager is built into Blackphone and helps to reduce this from happening. Using the IDs of nearby cell towers, this app will either toggle your Wi-Fi on, or off. If you’re near a trusted WAP (one that you’ve connected to before), your Wi-Fi will automatically be turned on when you’re near it, allowing the network to automatically connect. When you leave the area your Wi-Fi is automatically turned off.</p> <p>In addition to keeping your private information safe from snooping WAPs, this can help with your battery life as well .</p>
+<figure><img alt="Disconnect VPN" loading="lazy" src="/blog/media/pocketnow/2014/08/disconnect.jpg"/></figure>
+<h2>
+                        5. Secure Wireless via VPN
+               </h2>
+<p>Whenever you send data over the air, there’s a possibility that someone is listening in. Your first line of defense is only connecting to trusted wireless providers. This goes for cellular data as well as Wi-Fi, but since it’s easier to setup a Wi-Fi hotspot than a cellular access point, the  former is typically of more concern.</p> <p>The second line of defense is encrypting the wireless connection itself. This is usually accomplished by inputting a password or PIN, or by pressing a button on the WAP to initiate a secure connection. These methods are fairly inconvenient when connecting to a public hotspot, so many of them allow you to connect in the clear. This is obviously not secure, and anyone can “listen in” on your traffic with a laptop and the right software.</p> <p>Blackphone includes Disconnect, an app and associated service that lets you encrypt all your traffic through a Virtual Private Network. You can toggle this on for “untrusted networks”, or disable it for “trusted networks”, like the one at your home or office.</p> <p>Blackphone comes with 1GB per month of VPN traffic, but you can upgrade that to unlimited for $3/month or $30/year if you’re in the USA. If you’re outside the States, prices and amounts may vary.</p> <h2>
+                        6. Remote Wipe
+               </h2>
+<p>Google offers remote wiping through the Google Apps package that comes preinstalled on most Androids. GAPPS are absent on Blackphone for reasons that are fairly obvious. To ensure that you can still erase a device if it ever is “in the wind”, Blackphone includes a Remote Wipe service that functions pretty much the same as Google’s, but also includes a “Brace for Impact” function that can “force quit” any apps that you specify. In particular, apps that contain sensitive information and are protected behind passwords can be terminated, disallowing access to them until the app’s password is re-entered on the device. This would prevent someone who’d “acquired” your phone from making encrypted phone calls, sending encrypted texts, or accessing your encrypted address book, for example. All without having to completely wipe the device.</p> <p>This functionality is protected behind a password, and it’s arguably the most important password for the entire device. It must be at least 12 characters long, and cannot be recovered if you lose it or forget it.</p>
+<figure><img alt="App Permissions" loading="lazy" src="/blog/media/pocketnow/2014/08/app-permissions.jpg"/></figure>
+<h2>
+                        7. App Security
+               </h2>
+<p>One of the main features of PrivatOS (the variant of Android that runs on Blackphone) is the ability to specify what resources installed apps can access.</p> <p>Need a barcode scanner? No problem, install it and you’re asked what permissions you want to grant the app – they’re all disabled by default. Since you want to scan barcodes, if you don’t enable access to the camera, it won’t work. For a barcode scanning app, that access to that resource (the camera) should be fairly obvious, but what about some other app that you don’t think should need access to your camera, network, location, contacts, etc.? On Blackphone, those permissions are turned off by default, but can be turned on if you think the app rightly needs them.</p> <h2>
+                        8. Secure Contacts
+               </h2>
+<p>Guilt by association shouldn’t be a consideration, but it often is. To protect your associates from unwanted attention and scrutiny (whether from a law enforcement agency, an embittered ex-spouse, or a former employer) Blackphone offers an encrypted address book. It functions just like the regular contacts app, which is still present, but is protected behind a password, and the contents are encrypted.</p> <h2>
+                        9. Secure Texting
+               </h2>
+<p>Sending quick texts or chat messages is something that has become more popular and commonplace on our smartphones that actually picking up the phone and talking to someone with our voices. Blackphone includes Silent Text, an app which utilizes the Jabber protocol to send truly secure messages to anyone on the Silent Circle network. Unlike SMS, these messages aren’t limited to 160 characters, aren’t sent in plain text, and can include inline images. Conversations or specific texts or images can be set to “self-destruct” after a pre-determined amount of time, just in case their content is extra-sensitive.</p>
+<p>Since these conversations utilize peer-to-peer encryption, they’re safe from prying eyes along the way, including anyone that might be watching on the server itself.</p>
+<figure><img alt="Silent Phone" loading="lazy" src="/blog/media/pocketnow/2014/08/silent-phone.jpg"/></figure>
+<h2>
+                        10. Secure Calling
+               </h2>
+<p>For those times when a phone call is more helpful than a text, Blackphone lets you call other users on the Silent Circle network using Silent Phone. Rather than using your cellular voice plan, Silent Phone is a secure Voice Over IP SIP client that’s pre-configured to use the Silent Circle network. As with Silent Text, these conversations use peer-to-peer encryption, so your conversation is secure from your phone to the other party’s phone.</p> <p>Voice as well as video can be made from the app, but you’ll need a reliable and strong Internet connection to do either.</p> <h2>
+                        What’s not included?
+               </h2>
+<p>Some things that you think might be included, aren’t.</p> <p>The first thing you’ll find that isn’t there is an app store, most notably the Google Play Store. If you want to install any apps that aren’t pre-loaded, you’ll need to enable the ability to install apps from unknown sources, which you can do in the Security settings. On the surface, you might think this would punch a huge hole in the security that Blackphone offers. To an extent, you’d be correct, but thanks to the very granular App Permissions which you can turn on or off per app, the hole is only as big as you want to make it. We utilized the Amazon Appstore to supply the majority of the apps that we typically use.</p> <p>Next, there is no secure email client, nor a client that includes PGP or GPG encrypted emails by default. The way email “works” is insecure, and it all has to do with meta-data. In an interview with ZDNet, Silent Circle CEO Michael Janke had this to say:</p> <blockquote>
+<p>“We knew that metadata was just as dangerous as email content regardless if the contents of an email are encrypted. Who, when, where, why, the message header, your ISP, what operating system you’re using, geolocating, and who you’re communicating with are all very dangerous bits of data to retain.”</p>
+</blockquote><p>The stock Android email client is included on Blackphone, with the ability to set up an IMAP, POP3, or Exchange account. Just remember, anything you send over email, even if you PGP or GPG encrypt it with a third-party app, is still insecure because of the problem with meta-data.</p> <h2>
+                        More
+               </h2>
+<p>There’s even more hidden under the covers of Blackphone and PrivatOS, but the items mentioned above should cover what most people need to know. Stay tuned for <a href="https://pocketnow.com/tag/blackphone" rel="noopener" target="_blank">even more coverage of Blackphone and PrivatOS</a> in the coming weeks here at Pocketnow.</p> <p>As a final note, our review device comes to us on loan from the good people at GSM Nation, a global smartphone retailer which offers two regional variants of Blackphone for preorder at this page. If you’re jonesing for additional smartphone security right now and you simply can’t wait for our full review, pay them a visit – and tell them Pocketnow sent you.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/blackphone/" rel="tag">Blackphone</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/encryption/" rel="tag">Encryption</a></li><li><a href="/blog/tags/privacy/" rel="tag">Privacy</a></li><li><a href="/blog/tags/security/" rel="tag">Security</a></li><li><a href="/blog/tags/silent-circle/" rel="tag">Silent Circle</a></li><li><a href="/blog/tags/voip/" rel="tag">VoIP</a></li><li><a href="/blog/tags/vpn/" rel="tag">VPN</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-blackphone-keeps-you-secure pocketnow-import -->
+</body>
+</html>

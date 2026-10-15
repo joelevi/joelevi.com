@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/your-fingerprint-isnt-your-password/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris — Joe Levi" />
+	<meta property="og:description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/10/Fingerprint.jpg" />
+	<meta property="og:image:alt" content="Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/" />
+	<meta property="article:published_time" content="2017-06-14T12:49:06" />
+	<meta property="article:modified_time" content="2017-06-14T12:49:06" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris — Joe Levi" />
+	<meta name="twitter:description" content="Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/10/Fingerprint.jpg" />
+	<meta name="twitter:image:alt" content="Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris" />
+	<title>Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/#article",
+      "url": "https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/",
+      "headline": "Security & Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris",
+      "description": "Security and Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…",
+      "datePublished": "2017-06-14T12:49:06",
+      "dateModified": "2017-06-14T12:49:06",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/your-fingerprint-isnt-your-password/",
+        "headline": "Security & Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris",
+        "datePublished": "2017-06-14T18:49:06Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/your-fingerprint-isnt-your-password/",
+      "mainEntityOfPage": "https://pocketnow.com/your-fingerprint-isnt-your-password/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2015/10/Fingerprint.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "fingerprint",
+        "iris",
+        "Password",
+        "Pin"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security & Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris",
+          "item": "https://www.joelevi.com/blog/your-fingerprint-isnt-your-password/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Security &amp; Privacy: Your Fingerprint isn’t your Password – and neither is your face or iris</h1>
+				<p class="post-meta"><time datetime="2017-06-14">June 14, 2017</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/your-fingerprint-isnt-your-password/" rel="noopener">Pocketnow</a> on <time datetime="2017-06-14">June 14, 2017</time>.</p>
+
+			<div class="post-body">
+<p><em><a href="category/security-privacy">Security and Privacy</a> are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share all our details on social networks, makes them even more so.</em></p> <p>So far <a href="https://pocketnow.com/2017/04/05/security-privacy-introduction" rel="noopener noreferrer" target="_blank">in this series</a>, we’ve talked about encrypting your Internet traffic using a VPN, how to avoid getting infected by malware, <a href="https://pocketnow.com/2017/04/19/how-to-physically-secure-your-phone" rel="noopener noreferrer" target="_blank">how to physically secure your phone</a>, how to encrypt your communications, and more.</p> <p>~</p> <p>By now most of us know how important passwords are. To recap:</p> <ol>
+<li>
+                                        We shouldn’t be reusing passwords across websites. When one site is compromised, if you’ve used the same password on other sites, your accounts on those sites can be compromised, too.
+                        </li>
+<li>
+                                        We shouldn’t be using short passwords. Passwords less than a dozen characters (some would argue less than 16) are vulnerable to brute-force attacks.
+                        </li>
+<li>
+                                        We shouldn’t be using simple passwords. Passwords should contain a combination of uppercase and lowercase letters, numbers, and symbols.
+                        </li>
+<li>
+                                        We shouldn’t be using passwords that are easy to guess. Names of family members, important dates, names of pets, and similar information shouldn’t be used in passwords.
+                        </li>
+<li>
+                                        We shouldn’t be using passwords that are found in the dictionary. Believe it or not, there aren’t that many words in the dictionary. Running through all of them takes a surprisingly little amount of time when you consider how much computing power modern computers have at their disposal.
+                        </li>
+<li>
+                                        And more…
+                        </li>
+</ol>
+<figure><img alt="XKCD&amp;amp;colon; I wonder how many people changed their password to correcthorsebatterystaple" loading="lazy" src="/blog/media/pocketnow/2013/01/correcthorse.jpg"/></figure>
+  <p> I wonder how many people changed their password to correcthorsebatterystaple</p>  <p>If all of that sounds complicated, you’re not wrong!</p> <p>To make things easier for us (and potentially for criminals) we use password managers (like LastPass, KeePassX, and the one which your web browser has built in). The downside to this is that they are only as secure as (1) the password which protects them, and (2) the password which protects the device on which they’re used – your phone, tablet, or even your computer.</p> <p>In addition to these traditional password managers, you may have your wallet (Apple Pay, Android Pay, or Samsung Pay; Coinbase, Google Wallet, Square, PayPal; and even your banking app) set up on your phone – meaning if you don’t secure your device, you’re putting real money at risk.</p> <p>To make things easier for us (I think I see a pattern developing here), OEMs have started building ways which we can confirm our identity into the hardware itself. From face recognition, iris scanning, and fingerprint readers, most of them attempt to scan something which should be personally identifiable and at all times within our control (assuming we haven’t had an eye or finger removed).</p> <p>But identity isn’t a password – and that’s an important distinction.</p> <p>When I show someone my driver’s license or Tribal ID card, I’m providing proof of who I am.  I am not paying a bill. I am not buying a soda. I am not unlocking a door. I am not doing anything more than proving who I am. Somewhere along the line, this analog got confused, and along with it, our security got compromised.</p>
+<p>Yes, there are those who will say we’re more secure than we were before. If “before” was when we didn’t use passwords or PINs to secure our devices, you’re probably right. If, however, you had a PIN, password, or even a pattern on your device before, and now unlock it with your finger, face, or iris, I’d argue that you’re now less secure than you were before.</p>
+<figure><img alt="" loading="lazy" src="/blog/media/pocketnow/2012/08/patternlock.jpg"/></figure>
+<p>To illustrate the point, imagine you’re coming home from vacation and customs (or some other law enforcement or intelligence agency) wants to “inspect” your device. Hopefully, you took the advice we recommended in an earlier article and turned your device OFF before you found yourself in this situation. (When powered on, most modern devices require you to enter your PIN or password even if you’ve set it up to use a fingerprint, iris, face, or voice.) If you haven’t followed our advice, and you don’t want the agent to access your device without first obtaining a warrant, all they have to do is hold the device up to your face or push your finger against the scanner, and they have access.</p> <p>Sure, some of you are going to argue that same, tired line: “if you have nothing to hide, you have nothing to fear”. For those of you who continue to support this logical fallacy, replace that government agent with a mugger, someone who has taken you hostage, or any manner of other criminals. Do you still feel safe?</p> <p>Regardless of whether or not you’re one of the “paranoid” people who doesn’t want others snooping in their personal effects, your fingerprint, iris, face, or voice isn’t your password, and you’d be wise not to treat it as such.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/fingerprint/" rel="tag">fingerprint</a></li><li><a href="/blog/tags/iris/" rel="tag">iris</a></li><li><a href="/blog/tags/password/" rel="tag">Password</a></li><li><a href="/blog/tags/pin/" rel="tag">Pin</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-your-fingerprint-isnt-your-password pocketnow-import -->
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="For those of you who didn’t already know, I just got back from an epic road-trip vacation that covered more than 2,500 miles (4,000 km), and took me through…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Google Maps Offline completely misses the point, but it’s a great feature" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Google Maps Offline completely misses the point, but it’s a great feature — Joe Levi" />
+	<meta property="og:description" content="For those of you who didn’t already know, I just got back from an epic road-trip vacation that covered more than 2,500 miles (4,000 km), and took me through…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/07/google-maps-v7.jpg" />
+	<meta property="og:image:alt" content="Google Maps Offline completely misses the point, but it’s a great feature" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/" />
+	<meta property="article:published_time" content="2015-06-29T21:08:49" />
+	<meta property="article:modified_time" content="2015-06-29T21:08:49" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Google Maps Offline completely misses the point, but it’s a great feature — Joe Levi" />
+	<meta name="twitter:description" content="For those of you who didn’t already know, I just got back from an epic road-trip vacation that covered more than 2,500 miles (4,000 km), and took me through…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/07/google-maps-v7.jpg" />
+	<meta name="twitter:image:alt" content="Google Maps Offline completely misses the point, but it’s a great feature" />
+	<title>Google Maps Offline completely misses the point, but it’s a great feature — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/#article",
+      "url": "https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/",
+      "headline": "Google Maps Offline completely misses the point, but it’s a great feature",
+      "description": "For those of you who didn’t already know, I just got back from an epic road-trip vacation that covered more than 2,500 miles (4,000 km), and took me through…",
+      "datePublished": "2015-06-29T21:08:49",
+      "dateModified": "2015-06-29T21:08:49",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/",
+        "headline": "Google Maps Offline completely misses the point, but it’s a great feature",
+        "datePublished": "2015-06-30T03:08:49Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/",
+      "mainEntityOfPage": "https://pocketnow.com/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/07/google-maps-v7.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "google maps",
+        "offline"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Maps Offline completely misses the point, but it’s a great feature",
+          "item": "https://www.joelevi.com/blog/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Google Maps Offline completely misses the point, but it’s a great feature</h1>
+				<p class="post-meta"><time datetime="2015-06-29">June 29, 2015</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/google-maps-offline-completely-misses-the-point-but-its-a-great-feature/" rel="noopener">Pocketnow</a> on <time datetime="2015-06-29">June 29, 2015</time>.</p>
+
+			<div class="post-body">
+<p>For those of you who didn’t already know, I just got back from an epic road-trip vacation that covered more than 2,500 miles (4,000 km), and took me through four states. What’s more, the route I selected took us through some very out-of-the-way locales and far from cellular data coverage. Being the tech nerd that I am, I loaded up my smartphone with Google Maps and went about pre-loading areas for offline use.</p> 
+<figure><img alt="Google Maps" loading="lazy" src="/blog/media/pocketnow/2015/06/Screenshot_2015-06-29-16-14-13.png"/></figure>
+<p>When offline ability first came to Google Maps it was a pain to use. You’d select an arbitrary area, and zoom in and out until you could save the selection to your device. These areas varied in geographic size depending on the density and complexity of the roads in whatever area you were trying to save. The same process would need to be repeated over and over until a patchwork of areas were saved to your device.</p> <p>Along the line, Google decided to remove this feature from Maps, only to bring it back just recently. This time, offline maps have a 30 day expiration tied to them. Why? Roads and road conditions change. It might be an inconvenience that offline maps can’t know current road conditions, but a map from three years ago might not know that the road that used to be an on-ramp to the freeway now dead-ends at the city reservoir, and the corresponding turn-by-turn directions could end horrifically.</p> <p>Directions aren’t all that maps are about these days. Just like paper maps of old, current online and digital maps include Points of Interest (POI). In the past, these might have been rivers, bridges, summits, mountain peaks, or campsites; now, POIs are Starbucks, the church house across town, your brother’s house, and that pizza parlor that you loved so much back when you were in college. Today’s points of interest are as personal as you are, and they are constantly changing. With this update, POIs will potentially be refreshed every 30 days, and with them business hours, phones numbers, and all kinds of other stuff that might be enabled before long – and all of that available when you’re offline.</p> <p>Another “cherry on top” of offline maps will be turn-by-turn navigation, something that’s really important when you’ve followed the map into the middle of nowhere, and away from data coverage, and need to find your way home again.</p> <p>Offline maps also mean that I can pre-load maps when I’m at home, on my high-speed, unmetered cable Internet connection. I don’t have to worry about slow data speeds, data caps or overages, roaming charges, or even the lack of any data coverage.</p> <h2>
+                        Missing the point
+               </h2>
+<p>The current implementation of offline support in Google Maps is a great feature, but it completely misses the point.</p> <p>Knowing how to save sections of “the map” offline, then taking the time to repeat the process until you’ve made a patchwork of overlapping segments that are stored somewhere on your smartphone isn’t something that a lot of people are going to know how to do. Remembering to go through all that hassle before you venture out into the wild simply isn’t going to happen in most cases. What if you didn’t have to?</p>
+<figure><img alt="Google Maps offline" loading="lazy" src="/blog/media/pocketnow/2015/06/google-maps-offline.jpg"/></figure>
+<p>Google Now knows where I parked. It knows when my flight leaves. It knows what restaurants are around me. It even suggests things for me to do when I’m in a new city. Pretty cool, right?</p> <p>Why isn’t Google Now smart enough to know where I plan on going, when I plan on leaving, and how I intend to get there, then intelligently pre-load the maps that I’ll likely need?</p> <p>If I’m flying, why not pre-load maps from my place to the airport? Then also pre-load maps of the city I’ll be arriving in, and maybe even maps of layovers, just in case the connecting flight is delayed and I end up spending the night?</p> <p>If I’m driving from (for example) Utah to California through Mesa, Arizona, why doesn’t Google Now pre-load the maps that I’ll need get there?</p>
+<p>Once Google Now knows that I spend any amount of time in a particular area (home, work, favorite places, etc.), why not pre-load the maps surrounding them so they’re available offline?</p> <p>Unfortunately, the answer to those questions is a big “we don’t know” – not right now anyway.</p> <p>What we do know is that offline support has been added back into Google Maps, and Google has a habit of extending functionality of apps with seamless and sometimes transparent updates to Google Now. Does this mean everything I’ve mentioned may be coming to Google Now and Google Maps in the future? Perhaps. With the mechanisms now in place, it definitely means that Google <em>could</em> do all of that (and more) if it wanted to.</p> <p>Your move, Google.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/google-maps/" rel="tag">google maps</a></li><li><a href="/blog/tags/offline/" rel="tag">offline</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-google-maps-offline-completely-misses-the-point-but-its-a-great-feature pocketnow-import -->
+</body>
+</html>

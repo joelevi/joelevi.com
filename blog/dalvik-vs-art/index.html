@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="A huge advantage that devices powered by the Android operating system have over virtually every other OS is the use of a virtual machine in which apps run.…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Dalvik vs. ART: Android virtual machines and the battle for better performance" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/dalvik-vs-art/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Dalvik vs. ART: Android virtual machines and the battle for better performance — Joe Levi" />
+	<meta property="og:description" content="A huge advantage that devices powered by the Android operating system have over virtually every other OS is the use of a virtual machine in which apps run.…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/11/dalvik-vs-art-2.jpg" />
+	<meta property="og:image:alt" content="Dalvik vs. ART: Android virtual machines and the battle for better performance" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/dalvik-vs-art/" />
+	<meta property="article:published_time" content="2013-11-13T16:28:15" />
+	<meta property="article:modified_time" content="2013-11-13T16:28:15" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Dalvik vs. ART: Android virtual machines and the battle for better performance — Joe Levi" />
+	<meta name="twitter:description" content="A huge advantage that devices powered by the Android operating system have over virtually every other OS is the use of a virtual machine in which apps run.…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2013/11/dalvik-vs-art-2.jpg" />
+	<meta name="twitter:image:alt" content="Dalvik vs. ART: Android virtual machines and the battle for better performance" />
+	<title>Dalvik vs. ART: Android virtual machines and the battle for better performance — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/dalvik-vs-art/#article",
+      "url": "https://www.joelevi.com/blog/dalvik-vs-art/",
+      "headline": "Dalvik vs. ART: Android virtual machines and the battle for better performance",
+      "description": "A huge advantage that devices powered by the Android operating system have over virtually every other OS is the use of a virtual machine in which apps run.…",
+      "datePublished": "2013-11-13T16:28:15",
+      "dateModified": "2013-11-13T16:28:15",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/dalvik-vs-art/",
+        "headline": "Dalvik vs. ART: Android virtual machines and the battle for better performance",
+        "datePublished": "2013-11-13T23:28:15Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/dalvik-vs-art/",
+      "mainEntityOfPage": "https://pocketnow.com/dalvik-vs-art/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2013/11/dalvik-vs-art-2.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/dalvik-vs-art/#breadcrumb"
+      },
+      "keywords": [
+        "android 4.4",
+        "art",
+        "dalvik",
+        "Editorial",
+        "kitkat"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/dalvik-vs-art/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dalvik vs. ART: Android virtual machines and the battle for better performance",
+          "item": "https://www.joelevi.com/blog/dalvik-vs-art/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Dalvik vs. ART: Android virtual machines and the battle for better performance</h1>
+				<p class="post-meta"><time datetime="2013-11-13">November 13, 2013</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/dalvik-vs-art/" rel="noopener">Pocketnow</a> on <time datetime="2013-11-13">November 13, 2013</time>.</p>
+
+			<div class="post-body">
+<p>A huge advantage that devices powered by the Android operating system have over virtually every other OS is the use of a virtual machine in which apps run. Yes, virtual machines, but we’ll get to those in just a moment. What makes all this relevant now is the decision by Google to include a new runtime in <a href="https://pocketnow.com/tag/kitkat" rel="noopener" target="_blank">Android 4.4 KitKat</a> — one that promises to make your device faster, your battery last longer, and give you thicker, more manageable hair. Wait, not that last one.</p> <p>Before we jump into this brand new VM, and why it’s turned off by default, let’s make sure everyone understands what we’re talking about.</p> <h2>
+                        What’s a virtual machine?
+               </h2>
+<p>Physical machines are just that: physical. They’re tangible, you can touch them. They’re the computer under your desk, the notebook on your lap, the server in the closet down the hall. When you think of a computer, this is what you’re probably picturing.</p>
+<figure><img alt="ball bearings" loading="lazy" src="/blog/media/pocketnow/2013/11/fletch-ball-bearings.jpg"/></figure>
+  <p> Virtual machines?! “Heyya! It’s all ball bearings nowadays!”</p>  <p>Virtual machines aren’t physical, but they do run on physical hardware. Confused yet? Say your desktop computer is a Mac and you’re running some flavor of OS X. You’ve got a couple programs that you want to run that don’t work in your OS. You might want to load up a couple virtual machines and install Windows into one and Linux into another. These virtual machines emulate all the hardware that is needed for you to install and run an operating system. You can literally run a complete Windows environment in a window on your Mac, and the same goes for Linux or almost any other operating system. Pretty cool, eh?</p> <p>Other than the obvious, one of the main advantages of utilizing a virtual machine is the physical separation of each environment. Apps that run in the VM are separate from those running in the host environment. Viruses, malware, and even crashed apps are all kept apart from your main OS, insulating you from the implications of such occurrences. Another advantage of VMs is the ability to run programs written for one architecture on a box that runs something different. For example, the ability to run programs compiled to run on an ARM-based CPU when your computer is running an Intel-based processor.</p> <p>To better illustrate that last point, let’s take a look back at Windows Mobile and Pocket PC. Back then developers would write their apps, then compile them for several platforms: ARM version 4, Intel XScale, MIPS, or SH3 CPUs. Each processor had its own advantages and disadvantages, but they all required separately compiled versions of every app that you hoped to run on any one of them. When Pocket PC 2002 was announced, Microsoft standardized on ARM.</p> <p>Today’s Androids use a specialized virtual machine in which they run their apps. Developers write code which you, the end user, install from the Play Store or some other source. This code is mostly uncompiled. That means it’s slower than compiled code would be, but your device gets the “insulation” advantages that VMs provide, and developers don’t have to worry about re-compiling their code to run on some other CPU — like a new tablet, PC,  TV, watch, or even a rice cooker.</p> <h2>
+                        JIT vs. AOT
+               </h2>
+<p>When you install an app on your Android today it will use the Dalvik VM to compile and run it. This process utilizes a concept called just-in-time, or JIT. It’s a great concept, but one that has quite a bit of overhead when you first launch apps.</p> <p>Let’s take the process apart and see how it works. You download and install an app to your phone or tablet. It sits there on your internal storage until you launch it. When you do, Android pulls all the uncompiled data together, compiles it, and loads the app into memory (RAM). As long as the app is there, after the initial load time, it’s pretty snappy.  If you use a task killer, manually kill the app, or navigate away and load up other apps, the first app is unloaded, freeing up the RAM it had been using. When you go back to it, it’s got to go through the whole process all over again.</p>
+<figure><img alt="" loading="lazy" src="/blog/media/pocketnow/2013/11/fletch-moon-river.jpg"/></figure>
+  <p> ART should increase performance by… “Moon River! … Yeah, breathe easy. Using the whole fist, Doc?!”</p>  <p>Android 4.4 KitKat, at least on the Nexus 5, includes a new runtime call “Android runtime”, ART. Though it’s not a very creative name, it is pretty creative in what it does. Unlike JIT, which must compile every app whenever it’s loaded, ART works on a concept called ahead-of-time (AOT) compilation. With ART, when you download and install an app it automatically pre-compiles. This takes up more space on your device and takes longer to initially install when compared to Dalvik. However, apps launch quicker and are arguably faster when run using ART rather than Dalvik. What’s more, since less time is required to run apps, your processor doesn’t get worked as hard and your battery life may benefit as a result.</p> <p>All that sounds great, right? It is! Or, rather, it will be.</p> <h2>
+                        ART is experimental
+               </h2>
+<p>ART is currently experimental. Very experimental. Not every app works properly in ART, and if you already installed all your apps under Dalvik, you’ll need to reboot and wait up to 20 minutes (less if you have fewer apps, more if you’ve got a bunch) for that first boot to complete. You see, it’s got to pre-compile all of them so they’re ready for you. For all of those reasons, ART is disabled by default.</p>
+<figure><img alt="Fletch afro" loading="lazy" src="/blog/media/pocketnow/2013/11/fletch-afro.jpg"/></figure>
+  <p> Experimental? No more than a white guy with an afro playing for the Lakers!</p>
+ <p>The benefits? Some sources are reporting a 50% increase in speed. Others say it’s closer to 100%. Many claim they’ve seen their battery life increase by 25% or more! Still more say that all of this is likely just a placebo effect, and the reality is much less noticeable. So, we’re not going to go on the record with a bunch of synthetic benchmark scores between Dalvik and ART, nor are we going to claim you’ll see a huge improvement in everything. Not right now anyway.</p> <p>Sure, I tried ART for a few days. It was fabulous, and horrible, and not noteworthy — all at the same time. Feel free to try it out yourself, just don’t expect that it will be fantastic. Not now.</p> <p>AOT compilation is the future, and ART is the way Google is going to get us there. This is just the first little step toward a much more lofty goal. Perhaps ART will be the standard runtime in Android 5.0?</p> <h2>
+                        Your turn
+               </h2>
+<p>Have you played with ART on your Nexus 5? Did you notice anything good, bad, or ugly? Let us know your experience with AOT compilation in the comments below!</p> <p><em>Want more information about <a href="https://pocketnow.com/tag/android-4-4" rel="noopener" target="_blank">Android 4.4</a> <a href="https://pocketnow.com/tag/kitkat" rel="noopener" target="_blank">KitKat</a>? Haven’t gotten your fill of news about the <a href="https://pocketnow.com/tag/nexus-5" rel="noopener" target="_blank">Nexus 5</a>? Tired of reading and just want to <a href="https://pocketnow.com/tag/podcast" rel="noopener" target="_blank">listen to us</a> for a while? Pocketnow’s got you covered!</em></p> <p>Image Credits: <a href="http://www.imdb.com/title/tt0089155/" rel="noopener nofollow" target="_blank"><em>Fletch</em></a></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android-4-4/" rel="tag">android 4.4</a></li><li><a href="/blog/tags/art/" rel="tag">art</a></li><li><a href="/blog/tags/dalvik/" rel="tag">dalvik</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/kitkat/" rel="tag">kitkat</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-dalvik-vs-art pocketnow-import -->
+</body>
+</html>

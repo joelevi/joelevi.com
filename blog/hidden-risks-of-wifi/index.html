@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Security &amp; Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Security &amp; Privacy: The Hidden Risks of WiFi" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/hidden-risks-of-wifi/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Security &amp; Privacy: The Hidden Risks of WiFi — Joe Levi" />
+	<meta property="og:description" content="Security &amp; Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/01/5GHzWiFiLeader.jpg" />
+	<meta property="og:image:alt" content="Security &amp; Privacy: The Hidden Risks of WiFi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/hidden-risks-of-wifi/" />
+	<meta property="article:published_time" content="2017-06-29T02:01:52" />
+	<meta property="article:modified_time" content="2017-06-29T02:01:52" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Security &amp; Privacy: The Hidden Risks of WiFi — Joe Levi" />
+	<meta name="twitter:description" content="Security &amp; Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/01/5GHzWiFiLeader.jpg" />
+	<meta name="twitter:image:alt" content="Security &amp; Privacy: The Hidden Risks of WiFi" />
+	<title>Security &amp; Privacy: The Hidden Risks of WiFi — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/hidden-risks-of-wifi/#article",
+      "url": "https://www.joelevi.com/blog/hidden-risks-of-wifi/",
+      "headline": "Security & Privacy: The Hidden Risks of WiFi",
+      "description": "Security & Privacy are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share…",
+      "datePublished": "2017-06-29T02:01:52",
+      "dateModified": "2017-06-29T02:01:52",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/hidden-risks-of-wifi/",
+        "headline": "Security & Privacy: The Hidden Risks of WiFi",
+        "datePublished": "2017-06-29T08:01:52Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/hidden-risks-of-wifi/",
+      "mainEntityOfPage": "https://pocketnow.com/hidden-risks-of-wifi/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/01/5GHzWiFiLeader.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/hidden-risks-of-wifi/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "location tracking",
+        "wifi"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/hidden-risks-of-wifi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security & Privacy: The Hidden Risks of WiFi",
+          "item": "https://www.joelevi.com/blog/hidden-risks-of-wifi/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Security &amp; Privacy: The Hidden Risks of WiFi</h1>
+				<p class="post-meta"><time datetime="2017-06-29">June 29, 2017</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/hidden-risks-of-wifi/" rel="noopener">Pocketnow</a> on <time datetime="2017-06-29">June 29, 2017</time>.</p>
+
+			<div class="post-body">
+<p><em><a href="http://pocketnow.com/2017/06/14/category/security-privacy">Security &amp; Privacy</a> are two vitally important components of any successful society. Today’s connected world, where we carry computers in our pockets and share all our details on social networks, makes them even more so. </em><em>So far <a href="http://pocketnow.com/2017/04/05/security-privacy-introduction" rel="noopener noreferrer" target="_blank">in this series</a>, we’ve talked about encrypting your Internet traffic using a VPN, how to avoid getting infected by malware, <a href="http://pocketnow.com/2017/04/19/how-to-physically-secure-your-phone" rel="noopener noreferrer" target="_blank">how to physically secure your phone</a>, how to encrypt your communications, and more.</em></p> <p><em>—</em></p> <p>When I worked for an advertising agency in the late 1990’s, a client of ours had developed one of the first PCMCIA-based WiFi adaptors. They didn’t call it WiFi back then, it was “wireless networking adaptor” using “802.11a” and the brand-new “802.11b” wireless networking protocols. Those weren’t very catchy names, and it was our job as an ad agency to sell them to an audience who didn’t know what they were – let alone why they “needed” them. Back then, to connect to the Internet you typically connected a phone line to a modem, dialed out, listened to a series of squeaks and squawks, and when your ISP picked up you were online – sometimes at a whopping 33.6Kbps (yes, <em>kilo</em>bits per second). Today, my smartphone connects at around 10 <em>mega</em>bits per second – that’s about three-hundred times faster.</p>
+<figure><img alt="Modem, image by ComputerHope.com" loading="lazy" src="/blog/media/pocketnow/2015/05/modem.jpg"/></figure>
+<p>Similar to your home computer (which had a port or slot you could plug a modem into), your PDA (personal digital assistant) had a slot you could plug a modem into. These modems plugged into the telephone line. ISPs had racks and racks of modems hooked up to hundreds of phone lines waiting for your computer to call. Of course you had to be close to a phone line (an actual, physical phone line) to connect, but it worked. Some cell phones had wireless internet capabilities – GPRS (not LTE, not HSPA, not even EDGE) – but most of them didn’t, which is why they needed these new “wireless network adaptors”.</p> <p>With the rise of what would eventually be called “WiFi”, those ports (or slots) could be connected to a <em>wireless</em> modem. Unlike the modems which were commonplace back then, these wireless network adaptors required a high speed internet connection, a router, a hub or switch, and a wireless access point to be able to get your device online. These devices were typically separate pieces of hardware and required a pretty good understanding of computer networking to install and maintain. Today, all of these devices are usually combined into one unit and are relatively easy to install.</p> <p>Moving from the corded modems of yesteryear and going wireless brought with it a whole bunch of freedom – but with that freedom came some pretty hefty security and privacy concerns.</p> <h2>
+                        Wireless Security
+               </h2>
+<p>Security was a big concern back in the late 1990’s – so much so that they named the method for security this newfangled networking protocol “Wired Equivalent Privacy” (WEP). Yes, they actually claimed that their security protocol was every bit as “private” as if you were connected via a physical wire – despite being able to connect wirelessly from thousands of feet away.</p> <p>Unfortunately, eventually in practice, WEP was anything <em>but</em> private. An iteration of WEP came and went, followed by newer security protocols. Today we’re “secured” by things like WPA2, PSK, AES, and TKIP. We’re not going to talk much about what these are and what they do, but each plays its part in trying to make our wireless communications “private”.</p>
+<figure><img alt="" loading="lazy" src="/blog/media/pocketnow/2007/07/wifi.jpg"/></figure>
+<p>To take advantage of this “privacy” (regardless of how strong or secure it actually is), you’ve got to configure your wireless device to talk to the wireless access point using some kind of key. Short keys aren’t as secure as long ones, and long ones are hard to remember, hard to type in, and are a pain to use.</p> <h2>
+                        Traffic Monitoring, Packet Sniffing
+               </h2>
+<p>To make things easier for users, many network providers don’t secure their access points with keys – they just leave them unsecured. Doing so makes it super-easy for customers to login, but also super-easy for even casual “data voyeurs” to spy on your network traffic.</p>
+<figure><img alt="Google Wallet, BlockChain, America First Credit Union, PayPal, Amazon" loading="lazy" src="/blog/media/pocketnow/2014/06/wallets.jpg"/></figure>
+<p>What’s “network traffic”, you ask? Think about everything you do online: sharing pictures (whether casual or intimate), sending and receiving email, posting detailed information about your daily activities, buying and selling stuff, and even banking. Without a secure connection (such as “belkin54g” in the image above), all your information is sent over an unencrypted connection from your device to the wireless access point.</p> <p>Thankfully, financial institutions have been using SSL/HTTPS as their communications protocol for a very long time. This means that your information is encrypted and sent to their server regardless of what kind of network you’re on or how it’s secured. Most social media networks default their traffic to HTTPS, and there’s a push for every website and web service to use HTTPS by default. Google is even starting to penalize sites which aren’t reachable via the encrypted protocol.</p> <p>Now, we even have VPNs (encrypted, virtual private networks) which serve as another layer of encrypting security (which I highly recommend using), and can help mitigate “unsecure networks” which don’t use encrypting protocols.</p> <h2>
+                        Spoofing
+               </h2>
+<p>When connecting to public Wifi, a trick the bad guys sometimes employ is “spoofing” the name of what you might think is a legitimate access point, and setting up their own with a similar name.</p> <p>For example, while drinking your favorite hot chocolate beverage at Starbucks you may see networks named “Starbucks”, “Starbucks Premium”, “Starbucks 5G”, or “Starbucks (High Speed)”. Which of those is the legitimate wireless network hosted by Starbucks? Even the employees may not know. One (or more) could be some guy on a laptop who is bridging the imposter WiFi network with his cellular connection (or even the legitimate Starbucks network), trying to trick you into using his network instead of the real one.</p>
+<figure><img alt="" loading="lazy" src="/blog/media/pocketnow/2015/06/CertifiedEthicalHackerCourse_780x473.jpg"/></figure>
+<p>Since he’s the “man in the middle”, he can snoop on your traffic and even serve up fake versions of websites (PayPal, Amazon, your bank, social networking sites, etc.) to collect your login information so he can use for “less than honorable” purposes.</p> <p>To avoid being duped by these sorts of spoofing techniques, you’ve got to know what to look for – and actually be looking for it. Neither is an easy task.</p> <h2>
+                        Location Tracking
+               </h2>
+<p>The last item I’d like to address is something a bit more concerning – but something not a lot of people seem to be worried about yet: location tracking.</p> <p>A local employer I am aware of utilizes a pretty sophisticated wireless access point system for their guests and employees. This system allows the company to monitor traffic and apply rules to what sites can and cannot be visited. While there’s nothing overtly wrong with that, the technology also provides a “heatmap”  to “help identify areas of poor coverage”. That sounds really cool! After all, we all want a strong WiFi signal, right?</p> <p>What it really does is use triangulation to map the locations of each client device within range of the access point.</p>
+<p>Read that again.</p> <p>Notice that they system isn’t locating (and plotting on a map) each client device <em>connected</em> to the access point, but each and every device <em>within <strong>range</strong></em> of the access point.</p> <p>Yes, that means a person with a phone, tablet, or even a WiFi-enabled smartwatch or even a car with a WiFi hotspot in it will show up as a device (complete with MAC address and other identifying information) on the map. An employer or retailer can know where you are, when you’re there, how much time you spent there – and if you connect to their network through a portal where you provide your name, email address, or phone number, now they can personally identify you – and wherever you are.</p>
+<figure><img alt="Location Tracking" loading="lazy" src="/blog/media/pocketnow/2017/06/Location-Tracking.jpg"/></figure>
+<p>While that’s scary enough when applied to a school, employer, or even a shopping mall, imagine the implications when municipalities and other governmental entities offer “free WiFi” to residents, workers, and visitors. New York City and London recently rolled systems like this by converting their payphones and even light poles into “municipal WiFi hotspots” and “kiosks”.</p> <p>Every person who carries a WiFi enabled device with them can be tracked. The people they’re with can be tracked. Even if you have the WiFi on your device turned off, the device will occasionally turn it back on to “look around”, and then turn itself back off again – allowing it to be seen by any wireless access points in the vicinity.</p> <p>No, it’s not sci-fi. It’s a story set in some dystopian future. It’s not a conspiracy theory. It’s here and it’s now, and short of putting your device in a <a href="http://amzn.to/2skIYPl" rel="noopener nofollow" target="_blank">signal-blocking Faraday pouch</a>, there’s nothing you can do about it.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/location-tracking/" rel="tag">location tracking</a></li><li><a href="/blog/tags/wifi/" rel="tag">wifi</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-hidden-risks-of-wifi pocketnow-import -->
+</body>
+</html>

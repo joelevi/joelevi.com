@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="I’m a big fan of Qi wireless charging (just in case you didn’t know that already). I use an Anker charger on my desk at home. My Moto 360 smartwatch came with…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Does wireless charging make sense for tablets?" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/charging-tablets-wirelessly/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Does wireless charging make sense for tablets? — Joe Levi" />
+	<meta property="og:description" content="I’m a big fan of Qi wireless charging (just in case you didn’t know that already). I use an Anker charger on my desk at home. My Moto 360 smartwatch came with…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/11/nexus-9-hands.jpg" />
+	<meta property="og:image:alt" content="Does wireless charging make sense for tablets?" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/charging-tablets-wirelessly/" />
+	<meta property="article:published_time" content="2015-01-05T13:01:48" />
+	<meta property="article:modified_time" content="2015-01-05T13:01:48" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Does wireless charging make sense for tablets? — Joe Levi" />
+	<meta name="twitter:description" content="I’m a big fan of Qi wireless charging (just in case you didn’t know that already). I use an Anker charger on my desk at home. My Moto 360 smartwatch came with…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/11/nexus-9-hands.jpg" />
+	<meta name="twitter:image:alt" content="Does wireless charging make sense for tablets?" />
+	<title>Does wireless charging make sense for tablets? — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/charging-tablets-wirelessly/#article",
+      "url": "https://www.joelevi.com/blog/charging-tablets-wirelessly/",
+      "headline": "Does wireless charging make sense for tablets?",
+      "description": "I’m a big fan of Qi wireless charging (just in case you didn’t know that already). I use an Anker charger on my desk at home. My Moto 360 smartwatch came with…",
+      "datePublished": "2015-01-05T13:01:48",
+      "dateModified": "2015-01-05T13:01:48",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/charging-tablets-wirelessly/",
+        "headline": "Does wireless charging make sense for tablets?",
+        "datePublished": "2015-01-05T20:01:48Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/charging-tablets-wirelessly/",
+      "mainEntityOfPage": "https://pocketnow.com/charging-tablets-wirelessly/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/11/nexus-9-hands.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/charging-tablets-wirelessly/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "qi",
+        "Wireless Charging"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/charging-tablets-wirelessly/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Does wireless charging make sense for tablets?",
+          "item": "https://www.joelevi.com/blog/charging-tablets-wirelessly/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Does wireless charging make sense for tablets?</h1>
+				<p class="post-meta"><time datetime="2015-01-05">January 5, 2015</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/charging-tablets-wirelessly/" rel="noopener">Pocketnow</a> on <time datetime="2015-01-05">January 5, 2015</time>.</p>
+
+			<div class="post-body">
+<p>I’m a big fan of <a href="https://pocketnow.com/tag/qi" target="_blank">Qi wireless charging</a> (just in case you didn’t know that already). I use an <a href="http://www.amazon.com/gp/product/B00HIZ3ZI4/ref=as_li_tl?tag=pn-v2-23rnvmo-20&amp;ascsubtag=UUpnUeUpU15847&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fcharging-tablets-wirelessly%2F&amp;asc_campaign=Short-Term" rel="sponsored nofollow" target="_blank">Anker charger</a> on my desk at home. My <a href="https://pocketnow.com/tag/moto-360" target="_blank">Moto 360</a> smartwatch came with its own Qi wireless charging stand (but I can put it on any other charger just in case I need to top it off throughout the day). I have two chargers at work. I even have a wireless charger in my car and a <a href="https://pocketnow.com/tag/zens" target="_blank">Zens battery</a> with Qi built right in. (And just in case your phone or tablet doesn’t come with Qi out of the box, <a href="https://pocketnow.com/2014/12/31/how-to-retrofit-your-smartphone-or-tablet-with-qi-wireless-charging-video" target="_blank">you can add it quickly, easily, and very inexpensively!</a>)</p> <p>It sounds perfect, right? There is, however, a problem with wireless charging.</p> <h2>
+                        Location
+               </h2>
+<figure><img alt="qi-energizer" loading="lazy" src="/blog/media/pocketnow/2014/07/qi-energizer.jpg"/></figure>
+<p>Look on the back of any Qi-compatible device (smartphone, tablet, whatever). Where is the charging coil? You can’t see it, can you? If you’re looking at a smartphone, that’s probably not a big deal. Many Qi chargers have multiple coils to ensure your device is charging, regardless of where you set it.</p> <p>I bought two <a href="http://www.amazon.com/gp/product/B00JA7HNZO/ref=as_li_tl?tag=pn-v2-23rnvmo-20&amp;ascsubtag=UUpnUeUpU15847&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fcharging-tablets-wirelessly%2F&amp;asc_campaign=Short-Term" rel="sponsored nofollow" target="_blank">CHOE-branded wireless chargers</a> that I gave as gifts recently. This particular charger features three coils to help ensure one of them lines up with the coil in your phone or tablet. Even if your charger has only one coil inside it, most smartphones are small enough that getting the coils to line up is pretty easy (you probably haven’t even given it any thought – it just works).</p> <p>That’s not the case when it comes to tablets, and even large phones like the <a href="https://pocketnow.com/tag/nexus-6" target="_blank">Nexus 6</a>. These devices have a lot of surface area, and it’s not easy to find the sweet-spot where wireless charging magically happens. Most chargers include an indicator light to tell you when charging is taking place, but when the entire charger is covered by the tablet itself, how is one expected to see the indicator light?</p> <p>My son has an Energizer wireless charger that he uses to charge his <a href="https://pocketnow.com/tag/nexus-7" target="_blank">Nexus 7</a>. We have to lay the tablet sideways on the charger to see the light, which leaves half the tablet dangling over the edge of a comparatively wide charger. Small chargers (like the Anker I mentioned earlier), especially when combined with large tablets (like the <a href="https://pocketnow.com/tag/nexus-9" target="_blank">Nexus 9</a> and <a href="https://pocketnow.com/tag/nexus-10" target="_blank">Nexus 10</a>), just don’t work well together.</p> <h2>
+                        That’s too bad
+               </h2>
+<p>Some may jump to the conclusion that Qi wireless charging simply doesn’t make sense for tablets, and in its current form I’d be right there with you. However, the potential is there, especially with Bluetooth accessories, to make our tablets “desktop replacements” – just by dropping them on a Qi-enabled dock.</p> <p>I use my Nexus 9 at work with a Logitech Bluetooth keyboard. It’s a great combination, but I hate plugging it in. The screen has to stay on most of the time to make it “glanceable” and able to be used the way I need it to be. This means I need to have a very long screen timeout, which results in drastically reduced battery life. What I really need is a Qi wireless charging solution that will hold my tablet at the proper viewing angle, allow me to keep the screen on (while charging), and keep the battery topped off.</p>
+<figure><img alt="aukey-luna-qi-wireless-charger" loading="lazy" src="/blog/media/pocketnow/2015/01/aukey-luna-qi-wireless-charger.jpg"/></figure>
+<p><a href="https://pocketnow.com/editor/michael-fisher" target="_blank">Michael Fisher</a> showed us exactly how this can be done – and done in <em>style</em> – with the <a href="http://www.amazon.com/dp/B00MUPF88W/ref=cm_sw_su_dp?tag=pn-v2-23rnvmo-20&amp;ascsubtag=UUpnUeUpU15847&amp;asc_refurl=https%3A%2F%2Fpocketnow.com%2Fcharging-tablets-wirelessly%2F&amp;asc_campaign=Short-Term" rel="sponsored nofollow" target="_blank">AUKEY Luna</a> which we featured in our <a href="https://pocketnow.com/2014/12/05/google-nexus-6-review" target="_blank">Nexus 6 review</a>.</p>
+<p>While many of the current Qi wireless chargers may technically work with today’s tablets, most of them don’t work well. Wireless charging is all about convenience <em>so easy</em> that you don’t even have to think about it.</p> <p>For now, we’ll have to wait for more incredible chargers like the AUKEY Luna and others that are specially designed to work with our tablets. Once that day arrives, be ready for a <em>huge</em> jump in the usefulness and utility from your tablet!</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/qi/" rel="tag">qi</a></li><li><a href="/blog/tags/wireless-charging/" rel="tag">Wireless Charging</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-charging-tablets-wirelessly pocketnow-import -->
+</body>
+</html>

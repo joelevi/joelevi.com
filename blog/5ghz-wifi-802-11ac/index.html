@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Back in 1999 we got our first real taste of our wireless future: WiFi. The first variant was called 802.11a and operated in the 5GHz spectrum (later on, 3.7GHz…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, The Pros and Cons of 5GHz WiFi 802.11ac" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/5ghz-wifi-802-11ac/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="The Pros and Cons of 5GHz WiFi 802.11ac — Joe Levi" />
+	<meta property="og:description" content="Back in 1999 we got our first real taste of our wireless future: WiFi. The first variant was called 802.11a and operated in the 5GHz spectrum (later on, 3.7GHz…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/11/WiFiLeader.jpg" />
+	<meta property="og:image:alt" content="The Pros and Cons of 5GHz WiFi 802.11ac" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/5ghz-wifi-802-11ac/" />
+	<meta property="article:published_time" content="2015-11-18T23:31:37" />
+	<meta property="article:modified_time" content="2015-11-18T23:31:37" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="The Pros and Cons of 5GHz WiFi 802.11ac — Joe Levi" />
+	<meta name="twitter:description" content="Back in 1999 we got our first real taste of our wireless future: WiFi. The first variant was called 802.11a and operated in the 5GHz spectrum (later on, 3.7GHz…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2015/11/WiFiLeader.jpg" />
+	<meta name="twitter:image:alt" content="The Pros and Cons of 5GHz WiFi 802.11ac" />
+	<title>The Pros and Cons of 5GHz WiFi 802.11ac — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/5ghz-wifi-802-11ac/#article",
+      "url": "https://www.joelevi.com/blog/5ghz-wifi-802-11ac/",
+      "headline": "The Pros and Cons of 5GHz WiFi 802.11ac",
+      "description": "Back in 1999 we got our first real taste of our wireless future: WiFi. The first variant was called 802.11a and operated in the 5GHz spectrum (later on, 3.7GHz…",
+      "datePublished": "2015-11-18T23:31:37",
+      "dateModified": "2015-11-18T23:31:37",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/5ghz-wifi-802-11ac/",
+        "headline": "The Pros and Cons of 5GHz WiFi 802.11ac",
+        "datePublished": "2015-11-19T06:31:37Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/5ghz-wifi-802-11ac/",
+      "mainEntityOfPage": "https://pocketnow.com/5ghz-wifi-802-11ac/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2015/11/WiFiLeader.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/5ghz-wifi-802-11ac/#breadcrumb"
+      },
+      "keywords": [
+        "802.11ac",
+        "Editorial",
+        "Pocketnow Power User",
+        "wifi"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/5ghz-wifi-802-11ac/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Pros and Cons of 5GHz WiFi 802.11ac",
+          "item": "https://www.joelevi.com/blog/5ghz-wifi-802-11ac/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>The Pros and Cons of 5GHz WiFi 802.11ac</h1>
+				<p class="post-meta"><time datetime="2015-11-18">November 18, 2015</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/5ghz-wifi-802-11ac/" rel="noopener">Pocketnow</a> on <time datetime="2015-11-18">November 18, 2015</time>.</p>
+
+			<div class="post-body">
+<p>Back in 1999 we got our first real taste of our wireless future: WiFi. The first variant was called 802.11a and operated in the 5GHz spectrum (later on, 3.7GHz support was added). Back then, 5GHz radios were more expensive than 2.4GHz equipment, and 802.11b quickly surpassed 802.11a in popularity. For years we happily surfed the web, streamed our music, and watched our videos over the 2.4GHz spectrum. But we weren’t alone.</p> 
+<figure><img alt="Uhura knew about Jawbone before Jawbone knew about Jawbone." loading="lazy" src="/blog/media/pocketnow/2013/10/Uhura-BT.jpg"/></figure>
+  <p> Uhura knew about Jawbone before Jawbone knew about Jawbone.</p>  <p>Another technology started competing for the same wireless spectrum with our WiFi: Bluetooth. It promised to bring “personal area networks” to our mobile devices and into our lives. At first we were limited to wireless headsets, much like Star Trek’s Uhura used to monitor the comms, but before long wireless keyboards and mice started to gain popularity. We could also transfer files, beam business cards and calendar appointments between our devices, and so much more!</p> <p>Other devices soon started crowding into the 2.4GHz spectrum, and the number devices connected to WiFi started to increase significantly.</p> <p>Today in my home, I have numerous smartphones and tablets all connected to my wireless router. I have various gaming consoles connected to the network. We even have a few streaming devices (a couple Chromecasts and a Roku) tied to our router. Thanks to the Internet of Things (IoT), the number of wirelessly connected devices is increasing. Currently we have one Nest Protect smoke/CO2 detector, a Nest Learning Thermostat, and even a Withings scale connected to our WiFi. Our new home will increase that number significantly!</p> <p>That’s a whole lot of signals saturating the air. “Congestion” is what they call it.</p> <h2>
+                        5GHz WiFi 802.11ac
+               </h2>
+<p>My family and I currently live on a quarter-acre lot in a suburban city. From my living room I can see about a dozen wireless networks. If each of them has a similar number of wireless devices connected to it, well, you can just imagine how noisy that 2.4GHz spectrum is getting.</p> <p>The more devices in that spectrum, the slower and less reliable things are. What’s the solution? Higher power output? Bigger antennas? No. Those will only enhance the problem by letting devices reach further and “yell” louder – including those that are causing interference.</p>
+<figure><img alt="municipal wifi" loading="lazy" src="/blog/media/pocketnow/2014/05/municipal-wifi.jpg"/></figure>
+<p>What we need is a different spectrum. What we need is 5GHz WiFi 802.11ac.</p> <h2>
+                        Pro: Speed
+               </h2>
+<p>Over the years WiFi has seen a lot of improvements. 802.11n is theoretically capable of data rates up to 600 Mbit/s in the 2.4GHz spectrum, but only under ideal situations. Real-world data rates are typically significantly slower, mostly because of the congestion in the 2.4GHz spectrum.</p> <p>802.11ac operates in the 5GHz spectrum and has significantly wider bandwidth than the various WiFi standards in using 2.4GHz. <a href="http://www.cisco.com/c/en/us/products/collateral/wireless/aironet-3600-series/white_paper_c11-713103.html" rel="nofollow" target="_blank">Cisco says</a> 802.11ac is even capable of “product configurations operating at up to 3.47 Gbps”.</p> <h2>
+                        Pro: Less Crowded
+               </h2>
+<p>5GHz WiFi deployments are relatively rare compared to 2.4GHz WiFi deployments – there are simply fewer devices that operate on 5GHz than 2.4GHz. This means that the noise floor is much lower – there aren’t as many devices making noise that gets in the way of your signals.</p>
+<figure><img alt="5GHz WiFi" loading="lazy" src="/blog/media/pocketnow/2014/01/5ghz-wifi.jpg"/></figure>
+<p>Less noise generally results in faster speeds and more reliable connections.</p> <h2>
+                        Pro: More Channels
+               </h2>
+<p>This falls right in line with “less crowded”, but for different reasons. Deploying your home network in the 5GHz frequency gives you more channels (subdivisions of the available spectrum) which you can use to use to isolate yourself from other networks than WiFi operating in the 2.4GHz rage offers.</p> <h2>
+                        Pro: Dynamic Management
+               </h2>
+<p>Let’s face it. Most users aren’t going to know how to change the channel on their router, let alone how to run a site survey to determine which channel is best for their specific environment.</p>
+<p>Thankfully, 802.11ac devices are a bit “smarter” than their predecessors. Some of today’s routers support DFS (Dynamic Frequency Selection) to detect military radar and dynamically shift the channel to a non-interfering band. Some manufacuturers are using similar approach to automatically detect congested channels and adjust accordingly. Some routers also support TPC (Transmitting Power Control) which increases or reduces the power output of a radio transmitter so the router can maintain the link with a certain quality, and can do so without radiating any more power than is necessary. This reduces interference with other devices and decreases the overall power consumed by the router.</p> <h2>
+                        Pro: Shorter Distance &amp; Penetration
+               </h2>
+<p>5GHz signals don’t travel as far and don’t penetrate walls as efficiently as 2.4GHz signals (this is because waves attenuate faster at higher frequencies). Your signals aren’t going to go as far, and they’re not going to interfere with signals from your neighbors like further-reaching 2.4GHz signals will. As more people adopt 5GHz solutions, hopefully fewer devices will use the 2.4GHz spectrum, making the frequency “quieter” for everyone.</p>
+<figure><img alt="5ghz-wifi-comment-atlasredux-steve-marin" loading="lazy" src="/blog/media/pocketnow/2015/11/5ghz-wifi-comment-atlasredux-steve-marin.jpg"/></figure>
+<h2>
+                        Con: Shorter Distance &amp; Penetration
+               </h2>
+<p>5GHz signals don’t travel as far and don’t penetrate walls as efficiently as 2.4GHz signals.</p> <blockquote>
+<p>“Wait! You just said that was a ‘pro’!, how can it be a ‘con’, too?”</p>
+</blockquote><p>5GHz signals don’t go as far and don’t penetrate as much as 2.4GHz signals do. This can result in a signal that’s simply unacceptable for your particular deployment. On the other hand, it might be just what you need to finally stream full HD to your Chromecast.</p>
+<figure><img alt="smartphone wifi performance" loading="lazy" src="/blog/media/pocketnow/2013/06/smartphone-wifi-performance.jpg"/></figure>
+<p>More advanced devices attempt to mitigate some of these disadvantages through beamforming – adapting the signal via spatial filtering and signal processing for directional signal transmission or reception.</p> <h2>
+                        Conclusions
+               </h2>
+<ol>
+<li>
+                                        5GHz has a shorter range compared to 2.4GHz
+                        </li>
+<li>
+                                        5GHz is much less crowded (and therefore less congested) than 2.4GHz
+                        </li>
+<li>
+                                        5GHz is capable of higher speeds than 2.4GHz
+                        </li>
+<li>
+                                        Routers supporting 5GHz WiFi 802.11ac are typically more advanced and include newer features like beamforming, Dynamic Frequency Selection, and Transmitting Power Control
+                        </li>
+</ol>
+<p>Will 5GHz WiFi 802.11ac work for you? You’ll just need to set it up and try for yourself. Thankfully, most of these routers also support 802.11n on 2.4GHz, so you can set up two networks (one on each frequency), and use whichever one works best for you.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/802-11ac/" rel="tag">802.11ac</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/pocketnow-power-user/" rel="tag">Pocketnow Power User</a></li><li><a href="/blog/tags/wifi/" rel="tag">wifi</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-5ghz-wifi-802-11ac pocketnow-import -->
+</body>
+</html>

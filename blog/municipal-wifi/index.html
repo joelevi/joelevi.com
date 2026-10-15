@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Everyone loves “free”, and everyone loves wireless Internet access. Combining the two, what could possibly go wrong? When talking about broadband Internet, we…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Here’s why city-wide WiFi deployments are a bad idea" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/municipal-wifi/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Here’s why city-wide WiFi deployments are a bad idea — Joe Levi" />
+	<meta property="og:description" content="Everyone loves “free”, and everyone loves wireless Internet access. Combining the two, what could possibly go wrong? When talking about broadband Internet, we…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/05/municipal-wifi.jpg" />
+	<meta property="og:image:alt" content="Here’s why city-wide WiFi deployments are a bad idea" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/municipal-wifi/" />
+	<meta property="article:published_time" content="2014-05-08T09:11:53" />
+	<meta property="article:modified_time" content="2014-05-08T09:11:53" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Here’s why city-wide WiFi deployments are a bad idea — Joe Levi" />
+	<meta name="twitter:description" content="Everyone loves “free”, and everyone loves wireless Internet access. Combining the two, what could possibly go wrong? When talking about broadband Internet, we…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/05/municipal-wifi.jpg" />
+	<meta name="twitter:image:alt" content="Here’s why city-wide WiFi deployments are a bad idea" />
+	<title>Here’s why city-wide WiFi deployments are a bad idea — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/municipal-wifi/#article",
+      "url": "https://www.joelevi.com/blog/municipal-wifi/",
+      "headline": "Here’s why city-wide WiFi deployments are a bad idea",
+      "description": "Everyone loves “free”, and everyone loves wireless Internet access. Combining the two, what could possibly go wrong? When talking about broadband Internet, we…",
+      "datePublished": "2014-05-08T09:11:53",
+      "dateModified": "2014-05-08T09:11:53",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/municipal-wifi/",
+        "headline": "Here’s why city-wide WiFi deployments are a bad idea",
+        "datePublished": "2014-05-08T15:11:53Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/municipal-wifi/",
+      "mainEntityOfPage": "https://pocketnow.com/municipal-wifi/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/05/municipal-wifi.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/municipal-wifi/#breadcrumb"
+      },
+      "keywords": [
+        "Editorial",
+        "wifi"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/municipal-wifi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Here’s why city-wide WiFi deployments are a bad idea",
+          "item": "https://www.joelevi.com/blog/municipal-wifi/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Here’s why city-wide WiFi deployments are a bad idea</h1>
+				<p class="post-meta"><time datetime="2014-05-08">May 8, 2014</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/municipal-wifi/" rel="noopener">Pocketnow</a> on <time datetime="2014-05-08">May 8, 2014</time>.</p>
+
+			<div class="post-body">
+<p>Everyone loves “free”, and everyone loves wireless Internet access. Combining the two, what could possibly go wrong?</p> <p>When talking about broadband Internet, we often hear about the cursed “last mile” thrown around. Though it’s not necessarily a true mile, the term represents the wiring that connects an individual subscriber to the closest “central office” (or CO). The CO is a facility that takes all the incoming residential, business, and government lines, and connects them to a much faster network, capable of handling significantly more data at much higher speeds. Upgrading the connection from the CO to the next step along the line isn’t cheap, but it’s very inexpensive when compared to upgrading all the lines from the CO to the individual subscribers.</p> <p>Some people use traditional copper phone lines to deliver data over DSL, ISDN, T1, or a similar technology. Others get their data access provided over coaxial cable lines. The lucky ones have fiber run right to their home or office. There are even some who get their data delivered over the air via proprietary wireless networks.</p> <p>There is one other way to handle the “last mile”, and many see it as the perfect solution: municipal WiFi.</p> <h2>
+                        Costs
+               </h2>
+<figure><img alt="give-a-man-to-fish" loading="lazy" src="/blog/media/pocketnow/2014/05/give-a-man-to-fish.jpg"/></figure>
+<p>Many people are enamoured with the idea of “free WiFi”. Let’s be frank. It’s not free at all. A wireless router costs money. The cabling to that router costs money. The data access to that router costs money. The electricity needed to run it costs money. The weather-proof housing that it’s enclosed within costs money. Installing it costs money. Maintaining it costs money.</p> <p>Since WiFi has a relatively short reach, you’ve got to multiply all of those costs by each node on the network. Running the numbers, that’s usually several hundred dollars per node for the initial installation. Maintenance and the cost of supplying the data and electricity are variable — but they’re not cheap.</p> <blockquote>
+<p><em>Nothing is free. Those who tell you differently are trying to sell you something.</em></p>
+</blockquote><p>The other side of the argument is that <em>access</em> is free, not the costs behind it. So ask yourself the question: how does something that’s “free” get paid for?</p> <p>If you want WiFi in your home or office, it’s you who has to pay for everything. Those costs don’t go away when municipalities provide them. Instead, they pay for them through things like taxes, fees, surcharges, levies, and other fancy government terms that essentially mean you don’t have a choice. Whether you use it or not. Whether you buy your own or not. You have to pay for someone else to access the Internet for “free”.</p> <h2>
+                        Performance
+               </h2>
+<p>Some businesses offer “free WiFi” to their customers. Sometimes even editors at Pocketnow park at such places to bring high-quality news, articles, and editorials to you, our readers. These businesses may tell you that it’s “free WiFi”, but what they really mean is that “access to our public WiFi network is included with the cost of your meal”. Again, the costs have to be covered somehow.</p>
+<figure><img alt="Taylor" loading="lazy" src="/blog/media/pocketnow/2014/05/Taylor.jpg"/></figure>
+<p>Most of the businesses around me that offer WiFi to their customers all suffer from a few issues. First, they typically put you behind a web-based portal through which you must agree to terms and conditions of acceptable use. This covers their collective keisters, but means that although your status indicator may show that you’ve got “full bars”, you might actually have no Internet connection. If you’re waiting for someone to Skype with you and the call never comes, it might be because you’re not really online. Oh sure, you’re connected to the network, just not to the Internet — and you have no way of knowing until you try and access the Internet.</p> <p>Next is performance. When I go to lunch to escape the monotony that is the life of being a Webmaster (my other job), I often like to open up Netflix and catch an episode of <em>Dirty Jobs with Mike Rowe</em>, or re-runs of <em>Firefly</em>. That’s a perfect use of a restaurant’s WiFi! I seek out those establishments that offer “free WiFi”, and buy their food so I can watch my shows.</p> <p>Most of the time the experience is lacking. Shows stutter and buffer. Video quality is “low” — and that’s putting it kindly. Running Speedtest.net quickly shows the problem: their speed is slow. How slow? I live in Northern Utah. Cellular data speeds out here aren’t bad, but they’re nothing particularly noteworthy. Cellular data speeds are usually at least double the speeds that I can get over a restaurant’s WiFi. That’s sad.</p> <p>Stop and think about that for a moment. These food joints have a vested interest in making sure they are attracting customers into their establishment. If they don’t, those people will go next door or down the street. They also have a fixed number of people who can visit at any given time. You’ve seen those “Maximum Occupancy” signs they have to post? Ironically, that’s the maximum amount of people that can occupy the business at any given time. In other words, the business knows what the maximum number of people is that could possibly use their WiFi at any given time — and they still fail to provide adequate coverage and speed.</p> <p>Compare this to a city. Although the City may know how many residences and businesses are under a particular bubble, there’s no way to know what the maximum number of people under that bubble could be, let alone to account for it. What’s even worse is that, unlike getting up and going to the restaurant next door, you can’t easily pick up and move to the next town when your municipal WiFi isn’t up to speed.</p> <h2>
+                        Security
+               </h2>
+<figure><img alt="Master_Padlock" loading="lazy" src="/blog/media/pocketnow/2012/08/Master_Padlock.jpg"/></figure>
+<p>If we haven’t made the case already, let’s look at security. WiFi is a pretty widely known and used standard. It’s not all that secure. The original security protocol, “Wired Equivalent Protocol” or WEP for short, isn’t secure at all. It’s easily hacked.</p> <p>WPA is much the same. WPA2 is quite a bit better, but what you really need is a Radius server and the highest encryption available. Remember, this is your personal information that’s literally flying around the air, and anyone with an antenna can pick it up. Whether or not they can read it depends on how much security your smartphone or tablet and the access point provide.</p> <p>We do our banking online. We share pictures of our children online. We post our vacation notes online. We store our calendar online. We do our shopping online. This is very private data that we don’t want to broadcast to the world (well, except that we do, we just call it “Social Networking”, but that’s another topic entirely). Security is of paramount importance, but because setting up a secure encryption key is so “difficult” or “inconvenient”, many WiFi networks are run wide open, ready for anyone to eavesdrop on our most intimate conversations.</p> <h2>
+                        Location Privacy
+               </h2>
+<p>Are you the kind of person that turns off the geotagging feature of your phone’s camera to help maintain your privacy? Do you turn off your GPS because you don’t want websites and who knows who else to know where you are? Yeah, me too. Unfortunately that’s not going to do it! Cell towers have been used since long before smartphones were around to triangulate our positions. Using signals from as little as one node on one tower “they” could know roughly where we were. Add more nodes on more towers and this data got even more accurate.</p>
+<figure><img alt="Also&amp;amp;colon; fog horns. We mustn't forget the plight of the lighthouse-keeper." loading="lazy" src="/blog/media/pocketnow/2013/06/loud-michael-fisher.jpg"/></figure>
+<p>Cell towers cover a wide area compared to WiFi. Once “they” know which WiFi node you’re connected to, your location is much more accurate than trying to figure that out from cellular data. They’re doing it today — and telling us it’s a “feature”. It <em>is</em> a feature. WiFi location finding is usually much faster and significantly less costly when talking about power consumption on our mobile devices. Even if we have WiFi turned off, modern operating systems usually have a feature to “peek” at WiFi every once in a while to get a rough location without hammering our batteries. Why do they do this? What’s around you is much more relevant to you than stuff that’s half a continent away. It’s a “feature”!</p> <p>Even still, it’s your location. It’s your movements. It’s your data, and “they” need to respect that — but <em>you</em> need to know what you’re giving them to help “pay” for “free”.</p> <p>Once municipal WiFi is a reality, just look at what law enforcement will be able to do. Let’s say there’s a robbery in town and someone dies. The police know from your MAC (which can be spoofed, by the way) that you (or someone pretending to be you) were in the area. The perp is roughly your height, your weight, and has the same color skin as you. Guess what, you just became a suspect.</p> <p>The next day police officers will show up at your work, handcuff you in front of your coworkers and after having shown their warrant to your boss and take you “downtown”. You’re not going to get paid for those hours that you’ll spend being “interrogated”. Your coworkers will pass judgement on you, and you may lose your job. Ultimately, you’ll be released because you have an alibi, but even though you weren’t imprisoned, damage has already been done. You may even have lost your job. Why? Because your phone was near the scene of the crime. Not <em>you</em>… your <em>phone</em>. No one needed to see <em>you</em> there. In fact, no one did.</p> <p>The other side of that argument is “if it helps solve just one crime” or helps put “just one criminal behind bars” isn’t it “worth it”? No. No, it’s not. One of the reasons these United States have our Fourth Amendment is to ensure security from unreasonable searches and seizures, to enshrine our Right to Privacy in an Amendment to our Constitution — the document that is the very basis of our entire government. So while we don’t want to see a violent person roaming the streets, taking away our privacy in order to do so is too high a price to pay. We’ll all be suspects all the time, just like the Salem Witch Trials. We don’t want to repeat those dark days.</p> <h2>
+                        Government Monitoring
+               </h2>
+<figure><img alt="spying" loading="lazy" src="/blog/media/pocketnow/2011/09/spying.jpg"/></figure>
+<p>This item goes hand-in-hand with the one we just discussed.</p>
+<p>Let’s say you’re looking for a new backpack for the camping trip you’re going to take this summer. Your spouse also wants you to get some canning supplies so this year you’ll be able to save some of those apricots from grandma’s old tree in the backyard. Guess what? You just looked for “big bags” and “pressure cookers”. You know what that makes you? You’re a terrorist, just like the ones who carried out the attack in Boston.</p> <p>Congratulations! Your home will be visited by some very heavily armed men who will break down your door, scare your wife and kids, and may end up killing you in the process because you didn’t know what was going on and were somehow “resisting”.</p> <p>When a government agency has access to your browsing information, they’ll concoct all kinds of crazy ideas. They’re only doing it to “protect the children”, so it’s okay, even if a few innocent people get killed along the way, right? No! It’s not.</p> <p>I know, I know. This sounds crazy and could never possibly happen, but it already has. We’re seeing stories in the papers increasing every day where over-zealous law enforcement agencies use some online data to justify a raid of an innocent person — and people get hurt or killed.</p> <h2>
+                        Municipal WiFi is a bad idea
+               </h2>
+<p>Hopefully we’ve covered the major points behind why municipal WiFi is a bad idea. There are many, many more, but these are a few of the biggies. You don’t have to agree with our conclusions, but we hope that we’ve opened your eyes to what could potentially happen so you can take whatever measures you feel are right to protect your data, yourself, and your loved ones.</p> <p>Now it’s your turn. Do you have other concerns that we didn’t include? Are we being paranoid and need to add another layer to our tin-foil hats? Perhaps you’re glad that someone finally had the nerve to say what you’ve been thinking. Whatever your opinion is, we want to hear it! Head down to the comments and let us know what you think about municipal WiFi.</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/wifi/" rel="tag">wifi</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-municipal-wifi pocketnow-import -->
+</body>
+</html>

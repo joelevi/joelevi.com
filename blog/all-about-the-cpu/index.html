@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="We live in a day and age where electronic devices are an integral part of our daily routine. What’s inside them that gives them the power to do so many amazing…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Pocketnow Power User: Everything you need to know about the CPU (video)" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/all-about-the-cpu/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Pocketnow Power User: Everything you need to know about the CPU (video) — Joe Levi" />
+	<meta property="og:description" content="We live in a day and age where electronic devices are an integral part of our daily routine. What’s inside them that gives them the power to do so many amazing…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/04/PNPU.jpg" />
+	<meta property="og:image:alt" content="Pocketnow Power User: Everything you need to know about the CPU (video)" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/all-about-the-cpu/" />
+	<meta property="article:published_time" content="2014-05-10T00:11:30" />
+	<meta property="article:modified_time" content="2014-05-10T00:11:30" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Pocketnow Power User: Everything you need to know about the CPU (video) — Joe Levi" />
+	<meta name="twitter:description" content="We live in a day and age where electronic devices are an integral part of our daily routine. What’s inside them that gives them the power to do so many amazing…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2014/04/PNPU.jpg" />
+	<meta name="twitter:image:alt" content="Pocketnow Power User: Everything you need to know about the CPU (video)" />
+	<title>Pocketnow Power User: Everything you need to know about the CPU (video) — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/all-about-the-cpu/#article",
+      "url": "https://www.joelevi.com/blog/all-about-the-cpu/",
+      "headline": "Pocketnow Power User: Everything you need to know about the CPU (video)",
+      "description": "We live in a day and age where electronic devices are an integral part of our daily routine. What’s inside them that gives them the power to do so many amazing…",
+      "datePublished": "2014-05-10T00:11:30",
+      "dateModified": "2014-05-10T00:11:30",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/all-about-the-cpu/",
+        "headline": "Pocketnow Power User: Everything you need to know about the CPU (video)",
+        "datePublished": "2014-05-10T06:11:30Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/all-about-the-cpu/",
+      "mainEntityOfPage": "https://pocketnow.com/all-about-the-cpu/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2014/04/PNPU.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/all-about-the-cpu/#breadcrumb"
+      },
+      "keywords": [
+        "android power user",
+        "CPU",
+        "Editorial",
+        "Pocketnow Power User",
+        "SoC",
+        "video"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/all-about-the-cpu/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pocketnow Power User: Everything you need to know about the CPU (video)",
+          "item": "https://www.joelevi.com/blog/all-about-the-cpu/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Pocketnow Power User: Everything you need to know about the CPU (video)</h1>
+				<p class="post-meta"><time datetime="2014-05-10">May 10, 2014</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/all-about-the-cpu/" rel="noopener">Pocketnow</a> on <time datetime="2014-05-10">May 10, 2014</time>.</p>
+
+			<div class="post-body">
+<p>We live in a day and age where electronic devices are an integral part of our daily routine. What’s inside them that gives them the power to do so many amazing things? On today’s episode of Pocketnow Power User we’re going to talk about the brain that powers your device: the CPU.</p> <p>The Central Processing Unit, or CPU for short, has been around for quite some time, but has changed significantly over the years. Traditionally the CPU has been the “traffic-cop”, the component that handles and routes all the commands flowing through the system to the place where they need to go. It’s backed up by other components like the ALU for processing mathematical computations, storage for the long-term retention of data, RAM in which applications run, GPU for outputting what you see on your screen, and numerous other subsystems.</p> <p>Today, many of these subsystems are built into just a few chips, often called a System on a Chip, or SoC. Regardless of how many subsystems are integrated into an SoC, the CPU still lives at the heart and does most of the leg-work.</p> <p>The “faster” a CPU is, the quicker you can get things done, but “fast” is a relative term. To find out what it really means we need to dig a little deeper.</p> <h2>
+                        All About the CPU
+               </h2>
+<div class="video"><iframe allowfullscreen="" frameborder="0" height="315" loading="lazy" src="https://www.youtube-nocookie.com/embed/DVsVXupt3L8" title="Embedded video" width="560"></iframe></div>
+<h2>
+                        RISC versus CISC
+               </h2>
+<p>Not all CPUs talk the same lingo. Some CPUs are built around RISC where others use CISC. Your desktop computer probably uses a CISC processor — “Complex Instruction Set Computing”. Your smartphone and tablet probably use RISC processors — “Reduced Instruction Set Computing”.</p> <p>The definitions of these terms continues to evolve, but from a basic perspective RISC processors and the programs that ran on them were much more basic than the complex programs that could run on CISC processors. RISC was used for embedded and specialized hardware (or such was the theory) whereas CISC was used for larger and more powerful systems.</p> <p>Today we see those lines blurred, and the instruction sets of many RISC-based processors are just as large as their CISC counterparts.</p> <h2>
+                        Clock Rate
+               </h2>
+<p>The clock rate or “frequency” is the speed at which a CPU executes instructions. The faster the clock speed, the more instructions the CPU can execute in any given time.</p> <p>Just like your heart, the CPU can only operate within a predefined set of frequencies. Run it too fast and things get unstable (and very hot), run it too slowly and your system slows to a crawl. To pump more data through, just like your heart pumping more blood, you either need to go bigger, or add more pumps.</p> <h2>
+                        Moore’s Law
+               </h2>
+<p>To increase CPU speeds, engineers add more transistors. This essentially makes the CPU bigger and able to handle more data in the same amount of time. Gordon E. Moore, co-founder of Intel Corporation, described a trend in a paper he wrote in 1965.  He predicted that the capabilities of electronic devices would improve at roughly exponential rates. The concept that transistor counts and densities would double at a fairly predictable rate has guided the semiconductor industry for decades.</p> <p>Originally this period was approximately 18 months, so you could count on your computer doubling in speed about every year-and-a-half. Today that rate has slowed to about every two to three years.</p> <h2>
+                        Megahertz Myth
+               </h2>
+<p>We often equate processing speed to the frequency at which the CPU operates. While frequency (measured in megahertz or gigahertz) is certainly an important factor, there are many other considerations to take into account when talking about speed. This has led chip manufacturers like Intel, AMD, and others to shy away from marketing their chips based primarily on their “speeds”.</p> <p>Now manufacturers emphasize model numbers over clock speeds.</p> <h2>
+                        Cores
+               </h2>
+<p>A “core” is essentially a single processor. If you want to make things go faster, simply add more processors! Some computers, such as high-end servers, have multiple sockets to accept multiple individual processors. As you can imagine, this takes up quite a bit of space on a motherboard. To provide a similar benefit without doubling the required space, manufacturers began building additional processors onto a single chip.</p> <p>Today we have dual-core, quad-core, and so on.</p> <p>While this approach certainly increases observed performance, there becomes a point where the CPU is no longer the bottleneck, and some other component or subsystem holds the system back.</p> <h2>
+                        Size Matters
+               </h2>
+<p>CPUs consume quite a bit of power. RISC chips generally consume less power than their CISC counterparts. As chips get faster they run hotter and they use more electricity to power them. To mitigate these factors, chips are made smaller and more efficient. “Smaller” is measured in nanometers. This size has progressed from 90nm to 45nm, and we’re now down into the 20’s. Chips built using smaller construction techniques require fewer raw materials to make them, consume less power, and put off less heat. All are beneficial in portable electronics.</p> <h2>
+                        What Does it All Mean?
+               </h2>
+<p>There was a time when you could easily calculate the cost-benefit of upgrading to a faster processor. Back then it was almost entirely focused around megahertz. Today there are many more variables to consider when evaluating the CPU inside a device you’re looking at. Speed is only one component of the equation, power consumption is now almost equally as important.</p>
+<p>Because there are so many variables, deciding which is “the best” is no longer black-and-white, it will vary by application, and more importantly by what’s important to the individual — what’s important to <em>you</em>. You’ll need to weigh each feature individually to come up with what best satisfies <em>your</em> needs.</p> <p>Now that you know a little more about what goes into a CPU, you’ll be much better prepared to understand why one CPU may be better for you than another, and decide where to put your money.</p> <p>·</p> <p><em>Thanks for joining us for the first episode of the second season of the Pocketnow Power User! Make sure you tell your friends, and tune in next week when we’ll dig into another component that powers your mobile lifestyle.</em></p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android-power-user/" rel="tag">android power user</a></li><li><a href="/blog/tags/cpu/" rel="tag">CPU</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/pocketnow-power-user/" rel="tag">Pocketnow Power User</a></li><li><a href="/blog/tags/soc/" rel="tag">SoC</a></li><li><a href="/blog/tags/video/" rel="tag">video</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-all-about-the-cpu pocketnow-import -->
+</body>
+</html>

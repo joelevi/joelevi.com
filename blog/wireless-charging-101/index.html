@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Electricity has always been a thing of wonder, but like most technological advancements, it&#x27;s had its challenges and even a fight for what standard to adopt.…" />
+	<meta name="keywords" content="Joe Levi, Pocketnow, articles, Everything You Need To Know About Wireless Charging" />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://pocketnow.com/wireless-charging-101/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Everything You Need To Know About Wireless Charging — Joe Levi" />
+	<meta property="og:description" content="Electricity has always been a thing of wonder, but like most technological advancements, it&#x27;s had its challenges and even a fight for what standard to adopt.…" />
+	<meta property="og:image" content="https://www.joelevi.com/blog/media/pocketnow/2012/11/wireless-charging.jpg" />
+	<meta property="og:image:alt" content="Everything You Need To Know About Wireless Charging" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/wireless-charging-101/" />
+	<meta property="article:published_time" content="2012-11-16T14:12:56" />
+	<meta property="article:modified_time" content="2012-11-16T14:12:56" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Everything You Need To Know About Wireless Charging — Joe Levi" />
+	<meta name="twitter:description" content="Electricity has always been a thing of wonder, but like most technological advancements, it&#x27;s had its challenges and even a fight for what standard to adopt.…" />
+	<meta name="twitter:image" content="https://www.joelevi.com/blog/media/pocketnow/2012/11/wireless-charging.jpg" />
+	<meta name="twitter:image:alt" content="Everything You Need To Know About Wireless Charging" />
+	<title>Everything You Need To Know About Wireless Charging — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.post-meta {
+			color: var(--ink-muted);
+			font-size: 0.95rem;
+			margin: 0 0 1.25rem;
+		}
+		.post-body {
+			max-width: 42rem;
+		}
+		.post-body h2, .post-body h3, .post-body h4 {
+			font-family: Gruppo, sans-serif;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: var(--blue);
+			margin: 1.75rem 0 0.65rem;
+		}
+		.post-body h2 { font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+		.post-body h3 { font-size: 1.15rem; }
+		.post-body p { margin: 0 0 1rem; }
+		.post-body ul, .post-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+		.post-body li { margin: 0.25rem 0; }
+		.post-body blockquote {
+			margin: 1rem 0;
+			padding: 0.65rem 1rem;
+			border-left: 3px solid var(--blue);
+			background: var(--tint);
+			color: var(--ink-muted);
+		}
+		.post-body img, .post-body video {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.35rem;
+		}
+		.post-body figure.wp-caption {
+			margin: 1.25rem 0;
+		}
+		.post-body figcaption {
+			font-size: 0.9rem;
+			color: var(--ink-muted);
+			margin-top: 0.35rem;
+		}
+		.post-body pre, .post-body code {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+			font-size: 0.9em;
+		}
+		.post-body pre {
+			overflow-x: auto;
+			padding: 0.85rem 1rem;
+			background: var(--tint);
+			border: 1px solid var(--tint-border);
+			border-radius: 0.5rem;
+		}
+		.post-body .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+		.post-body .alignleft { float: left; margin: 0 1rem 0.75rem 0; max-width: 50%; }
+		.post-body .alignright { float: right; margin: 0 0 0.75rem 1rem; max-width: 50%; }
+		.post-gallery {
+			list-style: none;
+			margin: 1rem 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+			gap: 0.65rem;
+		}
+		.post-gallery img { width: 100%; height: 8rem; object-fit: cover; border-radius: 0.35rem; }
+		.post-nav {
+			margin-top: 2rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+			.post-body .alignleft, .post-body .alignright {
+				float: none; margin: 0 0 1rem; max-width: 100%;
+			}
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		.pn-origin { margin: 0 0 1.25rem; padding: 0.65rem 1rem; border-left: 3px solid var(--blue); background: var(--tint); font-size: 0.95rem; }
+		.post-body figure { margin: 1.25rem 0; }
+		.post-body figure.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.65rem; }
+		.post-body .video { position: relative; aspect-ratio: 16 / 9; margin: 1.25rem 0; }
+		.post-body .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0.35rem; }
+		.post-body table { border-collapse: collapse; margin: 0 0 1rem; }
+		.post-body td, .post-body th { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.joelevi.com/blog/wireless-charging-101/#article",
+      "url": "https://www.joelevi.com/blog/wireless-charging-101/",
+      "headline": "Everything You Need To Know About Wireless Charging",
+      "description": "Electricity has always been a thing of wonder, but like most technological advancements, it's had its challenges and even a fight for what standard to adopt.…",
+      "datePublished": "2012-11-16T14:12:56",
+      "dateModified": "2012-11-16T14:12:56",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://www.joelevi.com/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pocketnow",
+        "url": "https://pocketnow.com/"
+      },
+      "isBasedOn": {
+        "@type": "NewsArticle",
+        "url": "https://pocketnow.com/wireless-charging-101/",
+        "headline": "Everything You Need To Know About Wireless Charging",
+        "datePublished": "2012-11-16T21:12:56Z",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pocketnow",
+          "url": "https://pocketnow.com/"
+        }
+      },
+      "sameAs": "https://pocketnow.com/wireless-charging-101/",
+      "mainEntityOfPage": "https://pocketnow.com/wireless-charging-101/",
+      "image": "https://www.joelevi.com/blog/media/pocketnow/2012/11/wireless-charging.jpg",
+      "isPartOf": {
+        "@id": "https://www.joelevi.com/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://www.joelevi.com/blog/wireless-charging-101/#breadcrumb"
+      },
+      "keywords": [
+        "battery",
+        "charging",
+        "DROID DNA",
+        "Editorial",
+        "nexus 4",
+        "Nokia Lumia 920",
+        "wireless"
+      ],
+      "articleSection": [
+        "Pocketnow"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.joelevi.com/blog/wireless-charging-101/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.joelevi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.joelevi.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Everything You Need To Know About Wireless Charging",
+          "item": "https://www.joelevi.com/blog/wireless-charging-101/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.joelevi.com/#person"
+    },
+    {
+      "@id": "https://www.joelevi.com/#website"
+    }
+  ]
+}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<h1>Everything You Need To Know About Wireless Charging</h1>
+				<p class="post-meta"><time datetime="2012-11-16">November 16, 2012</time> · <a href="/blog/">Articles</a></p>
+			</header>
+			<p class="pn-origin">Originally published on <a href="https://pocketnow.com/wireless-charging-101/" rel="noopener">Pocketnow</a> on <time datetime="2012-11-16">November 16, 2012</time>.</p>
+
+			<div class="post-body">
+<p>Electricity has always been a thing of wonder, but like most technological advancements, it's had its challenges and even a fight for what standard to adopt.</p> <p>Thomas Edison developed what would become the first commercially available electrical power transmission using direct current (DC). One of the drawbacks of DC is its relatively limited range due to loss as distribution lines stretched further away from the power plants. Eventually power plants were created in neighborhoods and business districts to overcome the loss, but the plants were large, somewhat noisy, and generally undesirable in all but industrial areas. Nikola Tesla had a different idea for electricity, alternating current (AC), which allowed for much smaller power stations and simplified transmission over distances.</p> <h2>
+                        Fast-forward to today
+               </h2>
+<p>We live in a world where power is transmitted to our homes and electrical outlets using AC, then converted into DC for use in most of our electronic devices. Most of our smartphones and tablets are charged through micro-USB cables that are either connected to computers or to "wall-warts" which convert the electricity from AC to DC for us. It wasn't always that way.</p> <p>Not that long ago it seemed like every manufacturer had a different connector to get that direct current into our devices. Some tablets still suffer from this illness, but we won't point any fingers at the culprits. Now we are looking at what could be the widespread adoption of "wireless charging" as a standard.</p> <p>Some of us at Pocketnow think <a href="https://pocketnow.com/smartphone-news/hey-2012-wheres-my-wireless-charging">wireless charging will become commonplace</a> and could end up inside speaker and other docks to recharge our devices while listening to music or watching movies — it will probably even end up in our cars.</p> <h2>
+                        How does inductive charging work?
+               </h2>
+<figure><img alt="locomotive" loading="lazy" src="/blog/media/pocketnow/2012/11/locomotive.jpg"/></figure>
+  <p> What does a train have to do with wireless charging?!</p>  <p>Put simply, when an electric charge is run through a wire, not only are electrons pushed down the wire, but an electromagnetic field travels with it — on the outside of the wire. Think of it like a train running down a track. The track is analogous to the wire, the train would then be the electrical charge moving down the wire. Have you ever stood by a railroad crossing as a train passed? They usually throw off a lot of "wind" — air that's being displaced as the train races by. That's similar to the electromagnetic field that accompanies electricity racing down a wire.</p>
+<figure><img alt="Induction" loading="lazy" src="/blog/media/pocketnow/2012/11/elctromagnetic-induction.jpg"/></figure>
+  <p> Induction sends electromagnetic waves over short distances to induce a current in an otherwise disconnected wire. How geeky is that?!</p>  <h2>
+                        Sounds great! What's the problem?
+               </h2>
+<p>We have the technology to implement inductive charging today, but just like AC versus DC, there's a standards battle brewing.</p> <p><strong>Power Matters Alliance</strong> has their version called "PMA" and is backed by Duracell, Google, AT&amp;T, Starbucks, and apparently hip hop artist <a href="http://en.wikipedia.org/wiki/Jay-Z" rel="nofollow noopener noreferrer" target="_blank">Jay-Z</a>. This standard is the one powering Duracell's PowerMat which is currently available as an aftermarket solution.</p> <p>Power Matters Alliance's biggest challenger is the <strong>Wireless Power Consortium</strong> with members that include LG Electronics, Energizer, and Nokia. This version calls their technology "Qi" and is being built into smartphones today (<a href="https://pocketnow.com/tag/nexus-4">Nexus 4</a>, Lumia 920, and LG Spectrum 2). The irony, of course, is that Google backs PMA, but Google's newest flagship phone, the Nexus 4, uses the Qi standard.</p> <p>There's a third player in the game: <strong>Alliance for Wireless Power</strong> (A4WP). Backers for this standard include over 20 companies, including Qualcomm and Samsung. Just in case you weren't ware, Samsung is the world's largest phone maker.</p> <blockquote>
+<p>The market opportunity is wide open. The wireless industry is full of examples where original-equipment manufacturers have started down one technology path only to find out they need to quickly change.</p>
+<p>— Kamil Grajski, president of A4WP</p>
+</blockquote><p>The three "alliances" aren't necessarily equivalent to standards per se. To make things even more confusing, Powermat and others in the PMA have joined onto the A4WP.</p> <h2>
+                        Not a matter of "if", but "when"
+               </h2>
+<p>It looks like it's not a matter of "if" but "when" we'll see wireless charging as a standard in our smartphones and tablets. Which standard that turns out to be is still up for debate. For various auto makers, they're hedging their bets and working on the possibility of supporting multiple charging standards.</p> <p>In the meantime, that micro-USB port isn't looking so bad, is it?</p> <p><strong>UPDATE 1:</strong> Michael Fisher has been able to confirm that the HTC DNA can charge wirelessly via the Nokia 920 wireless charging plate.</p>
+<p><strong>UPDATE 2:</strong> "The Wireless Power Consortium's Qi wireless charging standard has been announced as a key feature in the new HTC Droid DNA, the new flagship smartphone from WPC members HTC and Verizon Wireless."</p>
+<figure><img alt="" loading="lazy" src="/blog/media/pocketnow/2012/11/htc-dna-wireless-charging.jpg"/></figure>
+  <p> Yes, the HTC Droid DNA is features fully integrated Qi wireless charging!</p>  <p>*Induction Image Source: <a href="http://www.cellphones.ca/news/post002384/" rel="nofollow noopener noreferrer" target="_blank">Cellphones.ca</a>Locomotive Image Source: <a href="http://en.wikipedia.org/wiki/File:Three-loco-styles.jpg" rel="nofollow noopener noreferrer" target="_blank">Wikipedia</a></p> <p>Via: <a href="http://www.businessweek.com/articles/2012-11-08/the-coming-war-over-wireless-charging#p2" rel="nofollow noopener noreferrer" target="_blank">BusinessWeek</a>; Powermat (<a href="http://powermat.com/2012/03/power-matters-alliance-opens-for-business-vint-cerf-google-chief-internet-evangelist-appointed-honorary-chairman/" rel="nofollow noopener noreferrer" target="_blank">1</a>), (<a href="http://powermat.com/2012/05/global-technology-power-players-unite-to-form-alliance-for-wireless-power-creating-spatial-freedom-in-consumer-electronics-charging/" rel="nofollow noopener noreferrer" target="_blank">2</a>)*</p> <div id="article-waypoint"></div>
+			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/pocketnow/">Pocketnow</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/battery/" rel="tag">battery</a></li><li><a href="/blog/tags/charging/" rel="tag">charging</a></li><li><a href="/blog/tags/droid-dna/" rel="tag">DROID DNA</a></li><li><a href="/blog/tags/editorial/" rel="tag">Editorial</a></li><li><a href="/blog/tags/nexus-4/" rel="tag">nexus 4</a></li><li><a href="/blog/tags/nokia-lumia-920/" rel="tag">Nokia Lumia 920</a></li><li><a href="/blog/tags/wireless/" rel="tag">wireless</a></li></ul>
+			</nav><!-- /post-terms -->
+
+			<p class="post-nav"><a href="/blog/">← All articles</a></p>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-post-wireless-charging-101 pocketnow-import -->
+</body>
+</html>
