@@ -222,12 +222,12 @@
     },
     {
       "source": "/blog/tags/h-r-1540/",
-      "destination": "/blog/tags/hr-1540/",
+      "destination": "/blog/tags/national-defense-authorization-act/",
       "permanent": true
     },
     {
       "source": "/blog/tags/h-r-1540",
-      "destination": "/blog/tags/hr-1540/",
+      "destination": "/blog/tags/national-defense-authorization-act/",
       "permanent": true
     },
     {
@@ -548,6 +548,16 @@
     {
       "source": "/blog/tags/hjr37",
       "destination": "/blog/tags/hjr-37/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hr-1540/",
+      "destination": "/blog/tags/national-defense-authorization-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hr-1540",
+      "destination": "/blog/tags/national-defense-authorization-act/",
       "permanent": true
     },
     {
