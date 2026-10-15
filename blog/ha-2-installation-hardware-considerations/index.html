@@ -475,7 +475,7 @@ sudo curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-insta
 
 <h2>Round Four: The Current (updated 6/1/2020)</h2>
 
-<p>I didn't really want to go the route of a Raspberry Pi because the Pi 4 doesn't have a a stable boot from USB option (at the time of this writing), and I didn't want to wear out a micro-SD card and have to start all over again. So I figured I'd run Home Assistant OS on an old computer - but there's not a generic image for that - but there is an image for the <a href="https://amzn.to/3fgI0N0" target="_blank" rel="noopener noreferrer">Intel NUC</a>!</p>
+<p>I didn't really want to go the route of a Raspberry Pi because the Pi 4 doesn't have a stable boot from USB option (at the time of this writing), and I didn't want to wear out a micro-SD card and have to start all over again. So I figured I'd run Home Assistant OS on an old computer - but there's not a generic image for that - but there is an image for the <a href="https://amzn.to/3fgI0N0" target="_blank" rel="noopener noreferrer">Intel NUC</a>!</p>
 
 <p>I went on Amazon to look into how much a NUC would cost. Ideally I wanted an i5, but I figured an i3 would be faster than a Pi, so I started digging. Most were in the $300 range (which isn't bad when you consider the cost of a Rasperry Pi 4, a high-end micro-sd card, a power supply, and a case/enclosure with cooling). But then I found something awesome: an Intel NUC i5, with 4GB RAM (and an empty slot for more, if needed), a 128GB NVME m.2 drive, a 1TB rotational SATA hard drive, USB 3.2 ports, ethernet port, Thunderbolt port, WiFi, Bluetooth, case and power supply included, and a copy of Windows 10 Pro - all that for $64.00. Yes, sixty-four US dollars! I bought it figuring there must be something wrong with it... It arrived, it worked as a Windows machine fantastically, and after I pulled the NVME and flashed Home Assistant on it (and removed the 1TB SATA drive), I was in business!</p>
 
@@ -490,7 +490,7 @@ sudo curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-insta
 <p>From here, from any computer on your network, navigate to your server at the Home Assistant port: http://111.111.111.111:8123 (using your server's IP address, of course). That may take up to 20 minutes, but mine took significantly less time (like under 2 minutes — this will depend on the speed of your CPU, etc.).</p>
 
 <p>From there, I set everything up locally, but that sounds like information for another post. ;)</p>
-			</div>
+			<!-- proofread:f45cb212a226 --></div>
 			<!-- post-terms -->
 			<nav class="post-terms" aria-label="Categories and tags">
 				<p class="post-terms__cats">Filed under <a href="/blog/categories/smart-home/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 18V6a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v2"/><path d="M3 18l2.6-7.1A1.5 1.5 0 0 1 7 10h14a1 1 0 0 1 .95 1.3L19.6 18.6A2 2 0 0 1 17.7 20H5a2 2 0 0 1-2-2z"/></svg>Smart Home</a></p>

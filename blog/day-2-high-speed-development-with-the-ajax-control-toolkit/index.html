@@ -352,13 +352,13 @@ Good way to show data in a collapseable (and animatable) manner.
 <h3>Update Panel Animation Extender</h3>
 When you're updating a panel asynchronously, sometimes the changes can happen so fast that the user may not realize that the data in the panel has changed (I haven't had a problem with this yet, but, nonetheless). The Update Panel Animation Extender serves to provide an animation control to "style" the panel with an animation behavior (or several parallel animations should you so desire) to, say, fade out the old data, perform the update, and fade in the new data.
 
-<p>To test this out add a System.Threading.Thread.Sleep(1000); line to your code. This simply adds some time to the process. Of course its just for a development environment to simulate actual data connections where the user's client browser is "far away" from the server that it's getting its data from. You'll want to remove that before you go live. ;)</p>
+<p>To test this out add a System.Threading.Thread.Sleep(1000); line to your code. This simply adds some time to the process. Of course it's just for a development environment to simulate actual data connections where the user's client browser is "far away" from the server that it's getting its data from. You'll want to remove that before you go live. ;)</p>
 
 <h3>Submit Disable Extender</h3>
 This extender lets you disable your submit button asynchronously, which should help reduce duplicate clicks, or clicks that you don't want until a set of parameters has been met. It can set the button as disabled, change the value of the button (the text on the button), etc.
 
 <p>One trick, however, if you set the button to disabled onSubmit, the form won't be posted, why? The button's disabled. That's funny.  But here's how you get around it: <code>window.setTimeout (function () {e.disabled = true;}, 10);</code> This effectively sets the disabled property to fire 10 milliseconds after the submit event has fired.</p>
-			</div>
+			<!-- proofread:d415d3508e76 --></div>
 			<!-- post-terms -->
 			<nav class="post-terms" aria-label="Categories and tags">
 				<p class="post-terms__cats">Filed under <a href="/blog/categories/web-development/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 18V6a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v2"/><path d="M3 18l2.6-7.1A1.5 1.5 0 0 1 7 10h14a1 1 0 0 1 .95 1.3L19.6 18.6A2 2 0 0 1 17.7 20H5a2 2 0 0 1-2-2z"/></svg>Web Development</a></p>
