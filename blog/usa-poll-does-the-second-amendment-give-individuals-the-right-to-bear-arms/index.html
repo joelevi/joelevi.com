@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/usa-poll-does-the-second-amendment-give-individuals-the-right-to-bear-arms/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Education",
+        "About Joe Levi",
+        "Politics",
+        "Self-Defense"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>It seems like a silly question for anyone who’s actually read the Bill of Rights or is familiar with the outcome of the Supreme Court’s Heller case, but <a href="https://www.google.com/url?sa=t&amp;source=web&amp;ct=res&amp;cd=1&amp;url=http%3A%2F%2Fwww.usatoday.com%2Fnews%2Fquickquestion%2F2007%2Fnovember%2Fpopup5895.htm&amp;ei=VUW1SfWCC5PGM4SZhOME&amp;usg=AFQjCNF0F5ZllQBxJRruEwpArCCcSe2QIg&amp;sig2=By0lZqgZ-qNmcZoM07kF5A" target="_blank">USA Today is asking</a> anyway.</p>  <p><a href="https://www.google.com/url?sa=t&amp;source=web&amp;ct=res&amp;cd=1&amp;url=http%3A%2F%2Fwww.usatoday.com%2Fnews%2Fquickquestion%2F2007%2Fnovember%2Fpopup5895.htm&amp;ei=VUW1SfWCC5PGM4SZhOME&amp;usg=AFQjCNF0F5ZllQBxJRruEwpArCCcSe2QIg&amp;sig2=By0lZqgZ-qNmcZoM07kF5A" target="_blank"><img title="image" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="222" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2009/03/image11.png" width="244" border="0" /></a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/education/">Education</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, <a href="/blog/categories/politics/">Politics</a>, and <a href="/blog/categories/self-defense/">Self-Defense</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

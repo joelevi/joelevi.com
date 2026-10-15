@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/todays-links/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -287,6 +297,10 @@
 gy
  (DOE) to make plug-in hybrid electric vehicles (PHEVs) cost competitive with other cars by 2014, Ford has delivered a plug-in hybrid electric flex-fuel Escape to the DOE to join its test fleet of other PHEVs currently undergoing research and testing.            <li>     <h5><a href="https://www.guardian.co.uk/world/2008/jun/14/eu.ireland1">Ireland rejects EU treaty</a><em></em></h5>   </li>    <ul>     <li>       <h5><em>guardian.co.uk —</em> Ireland vote of no to ratifying proposed EU treaty puts the project in jeopardy around Europe.</h5>     </li>   </ul>    <li>     <h5><a href="https://www.aol.com.au/lifestyle/story/Straight-Lesbians-in-Greek-wrestle/586131/index.html">Greek Island of Lesbos Preventing Homosexuals From Using 'Lesbian'</a><em></em></h5>   </li>    <ul>     <li>       <h5><em>aol.com.au —</em> The Greek island of Lesbos is attempting to stop homosexual women from calling themselves lesbians. "Until 1924, according to the Oxford English dictionary, a Lesbian was a native of our isle. Now, because of its new connotations, our womenfolk are unable to call themselves such and that is wrong."</h5>     </li>   </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

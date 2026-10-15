@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/im-a-professional-booger/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p><a title="bLaugh Comic: It says here that you&#39;re a professional booger?" href="https://blaugh.com/2007/01/04/act-like-a-professional" target="_blank" rel="bookmark"><img height="106" src="https://blaugh.com/cartoons/070104_booger-blogger.gif" width="190" align="right" /></a></p>  <p>&quot;It says here that you're a professional 'booger?'&quot; &quot;Blogger.&quot;</p>  <p>That's the punch line from a comic at blaugh.com. Those of you have been following my posts for a while know that I've just been some guy on the Internet posting &quot;stuff&quot; from my life that I hope someone else out there will find helpful. I run ads and have a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank" rel="nofollow">PayPal donation link</a> if you want to shower me with money, but I've never done any of that to make money, more to just break even.</p>  <p>Well, today I'd like to officially announce, I've added the title of &quot;Professional Blogger&quot; to my resume' as I'm one of the bloggers on <a href="https://www.Lifetime.com" target="_blank">Lifetime Products</a> new blog: <a title="Lifetime365" href="https://blog.lifetime.com/lifetime365" target="_blank" rel="vote-for bookmark">Lifetime365</a>. And no, I didn't pick the color scheme, and yes, it hurts my eyes when I look at it, too. Thank goodness for <a title="Lifetime365 RSS Feed" href="https://feeds.feedburner.com/Lifetime365" target="_blank">RSS Feeds</a>!</p>  <p>&#160;</p>  <p><a title="bLaugh Comic: It says here that you&#39;re a professional booger?" href="https://blaugh.com/2007/01/04/act-like-a-professional" target="_blank" rel="bookmark">&#160;</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

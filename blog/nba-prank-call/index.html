@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/nba-prank-call/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Humor"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +289,10 @@
 
 <p><strong>Kid 1:</strong> This is the National Basketball Association and we bought a hoop from your company about three weeks ago, installed it into our gym for the New Jersey Nets and Vince Carter did a dunk on it and now he's in the hospital ...</p> <p><strong>Kid 2:</strong> Vince Carter are you okay? I'm here to see you. I brought you flowers in a basketball.</p> <p><strong>Kid 1:</strong> ... he broke both his wrists and a bunch of little kids are here to see him in the hospital and we would like to know how much money are you willing to pay for his doctor bills and his um, his um, and everything else like that.</p> <p><strong>Kid 2:</strong> Vince Carter, can you sign my basketball?</p> <p><strong>Kid 1, Vince Carter Impression:</strong> No, get outta my face!</p> <p><strong>Kid 1:</strong> See, Vince Carter is very mad right now. So call us back at whatever number we called you at.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/humor/">Humor</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/election-results/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +291,10 @@
 
 <ol>   <li>State School Vouchers failed, but this may have an unexpected twist that I'll write about later.</li>    <li>Davis County Residents said &quot;no&quot; to an increased 0.25% sales tax.</li>    <li>Syracuse's Mayor shall retain his title as CEO; the attempt to re-structure/re-define the form of government by the City Council was overthrown.</li>    <li>Doug Hammond (19.79%), Alan L Clark (18.06%), and Doug Peterson (18.06%) were voted on to the City Council; that replaces all three incumbents (Danny Hammon, Wally Peterson, Dean Steel (who had been appointed to the City Council to fill a vacancy, were all ousted).</li>    <li>Municipal Referendum 2 also passed (by a large margin).</li> </ol>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

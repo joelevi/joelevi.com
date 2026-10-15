@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/prostate-cancer/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Health"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>(The following is a <a href="https://www.joelevi.com/blog/index.php/2007/03/28/getting-paid-to-blog-with-sponsored-reviews/" target="_blank">sponsored review</a>)</p> <p>The other day I heard a bit from a comedian... </p> <blockquote> <p>I was going to catch a plane and was delayed with all the new security screenings they put you through. Quite invasive, some of them! After a long process the security person said "well, I have some good news and some bad news. The good news is that you're cleared to get on the plane. The bad news is you have an enlarged prostate.</p></blockquote> <p>Out of curiosity I started doing a little research... Most of the time we hear about breast cancer and how devastating it is to women and their families. But what about prostate cancer? What are the numbers of cases of prostate cancer compared to breast cancer cases?</p> <p>The answer may surprise you: Statistically speaking, the annual number of prostate cancer cases in men compared to the number of prostate cancer cases in women is the same.</p> <p>The next question: how much money is spent on awareness, education, prevention, diagnosis, treatment, and research for each? This answer may astound you: more money is spent on breast cancer in one day than is spent on prostate cancer in a year.</p> <p>You read that right.</p> <p>But there are still advancements being made in prostate cancer prevention and treatment. </p> <p><a href="https://www.internationalhifu.com/what-is-hifu.html" target="_blank">High Intensity Focused Ultrasound</a> (<a href="https://www.internationalhifu.com/what-is-hifu.html" target="_blank">HIFU</a>) with something call the "Sonablate® 500" -- no, that's not some new SuperSoaker(tm) water cannon that all the kids want -- uses the power of ultrasound to destroy deep-seated tissue with pinpoint accuracy for the minimally invasive treatment of Prostate cancer and <a href="https://www.internationalhifu.com/hifu-for-bph.html" target="_blank">benign prostatic hyperplasia</a> (<a href="https://www.internationalhifu.com/hifu-for-bph.html" target="_blank">BPH</a>), also known as, enlarged prostate. (Compare this with <a href="https://www.internationalhifu.com/comparison-of-hifu-devices.html" target="_blank">ablatherm</a>.)</p> <p>Over 5000 men, in nearly 100 HIFU centers worldwide, have already chosen <a href="https://www.internationalhifu.com/what-is-hifu.html" target="_blank">HIFU</a> with the Sonablate® 500 because it is the most effective, least invasive and most advanced <a href="https://www.internationalhifu.com/what-is-hifu.html" target="_blank">HIFU</a> therapy available.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/health/">Health</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/aspnet-error-it-is-an-error-to-use-a-section-beyond-application-level/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +295,10 @@
 
 <ul> <li><a title="http://www.dotnet247.com/247reference/msgs/23/118734.aspx" href="https://www.dotnet247.com/247reference/msgs/23/118734.aspx" target="_blank">http://www.dotnet247.com/247reference/msgs/23/118734.aspx</a></li> <li>http://blogs.msdn.com/robgruen/archive/2005/09/12/464196.aspx</li> <li><a title="http://www.google.com/search?q=It+is+an+error+to+use+a+section+registered+as+allowDefinition%3D%27MachineToApplication%27+beyond+application+level.++This+error+can+be+caused+by+a+virtual+directory+not+being+configured+as+an+application+in+IIS&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a" href="https://www.google.com/search?q=It+is+an+error+to+use+a+section+registered+as+allowDefinition%3D%27MachineToApplication%27+beyond+application+level.++This+error+can+be+caused+by+a+virtual+directory+not+being+configured+as+an+application+in+IIS&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">Google Search Results</a></li></ul></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

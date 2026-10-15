@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/sponsored-reviews-how-much-should-you-charge/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "About Joe Levi",
+        "Web Development"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/index.php/2007/03/28/getting-paid-to-blog-with-sponsored-reviews/" target="_blank">Sponsored Reviews</a>&nbsp;is concept where advertisers are matched with content providers; people who want to sell stuff find people who like to write stuff, and pay them to write about their "stuff." </p> <p>The question is, how much should I charge? The flip-side of the question is how much should an advertiser pay? (No, they're not necessarily the same.)</p> <p>According to <a href="https://www.google.com/analytics" target="_blank">Google Analytics</a>,&nbsp;last week <a href="https://www.joelevi.com/blog/" target="_blank">this site</a> (<a href="https://www.JoeLevi.com">www.JoeLevi.com</a>) had 1,857 visits, 2,352 page views (which is 1.27 pages/visit), an average time on the site of 5:14 minutes, a link popularity of 3, a Technorati&nbsp; rank of 2, an Alexa rank of 2, a Google Page Rank of 2, and a Total Rank of 2.</p> <p>Theoretically, I should be able to calculate the statistics for other sites with a Total Rank of 2 and then compare my site with the others and charge accordingly.</p> <p><strong>Let's look at the numbers:</strong></p> <ul> <li>Number of Sponsored Reviewers with a PR of 2:&nbsp;1,323</li> <li>Minimum amount charged: $5.00</li> <li>Maximum amount charged: $2,000.00</li> <li>Average/Mean amount charged: $33.16</li> <li>Median amount charged: $24.00</li> <li>Standard Deviation: 64.4675547</li></ul> <p>So, if you are a PR2 (<a href="https://joelevi.com" target="_blank">like me</a>) if your content is on par with the average PR2 site, you should expect advertisers to pay you around $33.16 per sponsored review. If you feel your content/site is better than other PR2 sites then you should charge more; if it's not as good as other PR2 sites then you should charge less.</p> <p>Note that there is one gap in this logic: the numbers used in this&nbsp;analysis are NOT the actual paid amounts, rather, they are the "requested" amounts (a $50 site can charge up to $50 per review, but doesn't have to charge that much).</p> <p>In light of the above, a <a href="https://www.joelevi.com/blog/index.php/2007/03/28/getting-paid-to-blog-with-sponsored-reviews/" target="_blank">sponsored review</a> on <a href="https://www.joelevi.com" target="_blank">my site</a> will run approximately $30 for an average length review.</p> <p>Do any other <a href="https://www.joelevi.com/blog/index.php/2007/03/28/getting-paid-to-blog-with-sponsored-reviews/" target="_blank">sponsored review</a>ers care to comment?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/about-joe-levi/">About Joe Levi</a> and <a href="/blog/categories/web-development/">Web Development</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

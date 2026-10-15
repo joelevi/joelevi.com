@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/mrs-clinton-is-not-president-and-doesnt-reside-here/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Humor",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>I got this in an email the other day... thought it was worth repeating... <blockquote> <p>One sunny day in 2008, an old man approached the White House from across Pennsylvania Avenue, where he’d been sitting on a park bench. He spoke to the Marine standing guard and said, “I would like to go in and meet with President Hillary Clinton.” </p><p>The Marine replied, “Sir, Mrs. Clinton is not President and doesn’t reside here.” The old man said, “Okay,” and walked away. </p><p>The following day, the same man approached the White House and said to the same Marine, “I would like to go in and meet with President Hillary Clinton.” </p><p>The Marine again told the man, ” Sir, as I said yesterday, Mrs. Clinton is not President and doesn’t reside here.” The man thanked him and again walked away. </p><p>The third day, the same man approached the White House and spoke to the very same Marine, saying, “I would like to go in and meet with President Hillary Clinton.” </p><p>The Marine, understandably agitated at this point, looked at the man and said, “Sir, this is the third day in a row you have been here asking to speak to Mrs. Clinton. I’ve told you already several times that Mrs. Clinton is not the President and doesn’t reside here. Don’t you understand?” </p><p>The old man answered, “Oh, I understand you just fine. I just love hearing your answer!” The Marine snapped to attention, saluted, and said, “See you tomorrow.” </p><p>(Author Unknown)</p></blockquote></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/humor/">Humor</a> and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

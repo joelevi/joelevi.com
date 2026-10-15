@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/sued-for-63-zillion-dollars/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Humor",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p></p> <p><a href="https://www.joelevi.com/images/Suedfor63ZillionDollars_87EA/image.png" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="207" alt="image" src="https://www.joelevi.com/images/Suedfor63ZillionDollars_87EA/image_thumb.png" width="240" align="right" border="0"/></a> According to <a href="https://www.foxnews.com/story/0,2933,293268,00.html" target="_blank">FoxNews.com</a>, Michael Vick has been sued for "$63,000,000,000 Billion Dollars" in a suit alleging Al Queda Ties.</p> <p>63 Billion Billion dollars? Is that 63 Zillion dollars or 63 Bajillion dollars? 63 Hextillion dollars? Can someone help me here? ;)</p> <p>In other news, an opening for Managing Editor has just&nbsp;been listed for Fox Media Group.</p> <p>(Via <a href="https://digg.com/world_news/Michael_Vick_outed_as_an_Al_Qaeda_operative_sued_for_63_zillion_dollars" target="_blank">DIGG</a>)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/humor/">Humor</a> and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

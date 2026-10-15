@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/2nd-annual-cedar-band-of-paiutes-thanksgiving-pow-wow/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>For all those interested in participating in "the other side of Thanksgiving" the Cedar Band of Paiutes is holding their 2nd Annual Thanksgiving Pow Wow on November 23-24, 2007.</p> <h3>Location</h3> <p>Paiute Indian Tribe of Utah - Gym<br />440 North Paiute Drive<br />Cedar City, Utah [<a href="https://maps.live.com/?v=2&amp;sp=Point.q8ddv05kbnqt_Paiute%20Indian%20Tribe%20of%20Utah___&amp;encType=1 " target="_blank">map</a>]</p> <h3>Head Staff</h3> <p>MC: JERRY BEAR – SKULL VALLEY, UT<br />ARENA DIRECTOR: Damon Polk - Cedar City, UT<br />NORTHERN HOST DRUM: Wood Stock/Randy Wood – St. George, UT<br />SOUTHERN HOST DRUM: TBA<br />HEAD MAN: Picked per session<br />HEAD WOMAN: Picked per session</p> <h3>Grand Entry</h3> <p>FRIDAY - 7PM<br />SATURDAY - 12PM AND 6PM<br />DINNER BREAK 4 PM<br />ALL DRUM GROUP WELCOME<br />PLEASE BRING YOUR OWN CHAIRS</p> <h3>For Additional Information</h3> <p>ROBERT PETE: 435-586-0549<br />Jennifer Hussey: 435-590-0878</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

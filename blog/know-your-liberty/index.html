@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/know-your-liberty/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Education",
+        "Family",
+        "Finances",
+        "Friends",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <div class="wlWriterEditableSmartContent" id="scid:6B020045-44C2-4efd-A1E3-80B19875D75F:d85c9e32-57bf-414d-a02a-0693e6845bd8" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><div class="vcalendar"><table class="vevent" border="0" padding="3"><tr><td valign="top" align="right"><b>What:</b></td><td><span class="summary">Know Your Liberty, Connecting the Dots: How to select a worthy candidate</span><br /><span class="description">This event is free! Please come and enjoy this wonderful evening with Stephen Pratt. You are welcome to invite friends, family, co-workers, and neighbors. Outher topics to be discussed during the evening are: &quot;What has the government done with your money?&quot; and  &quot;Republic of the Republics.&quot; Mature and quiet children are welcome. DVDs, books, and other materials will be available.</span></td></tr><tr><td valign="top" align="right"><b>When:</b></td><td><abbr class="dtstart" title="2008-10-24T18:45:00">Friday, October 24, 2008 6:45 PM</abbr> to <abbr class="dtend" title="2008-10-24T21:30:00">9:30 PM</abbr></td></tr><tr><td valign="top" align="right"><b>Where:</b></td><td class="location vcard"><span class="fn org">Layton City Hall Council Chambers</span><div class="adr"><span class="street-address">437 N Wasatch Drive</span><br /><span class="locality">Layton</span>, <span class="region">Utah</span> <span class="postal-code">84041</span> &nbsp;&nbsp;<span class="country-name">USA</span></div></td></tr></table></div></div>  <p></p>  <p></p>  <div class="wlWriterEditableSmartContent" id="scid:84E294D0-71C9-4bd0-A0FE-95764E0368D9:5d18dcb4-c9d1-425f-a725-0b7f019fb7cd" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><a href="https://maps.live.com/default.aspx?v=2&amp;cp=qv9ydm5p2wrb&amp;lvl=1&amp;style=o&amp;scene=25049518&amp;mkt=en-us&amp;FORM=LLWR" id="map-878a7d34-b99a-419e-ab11-fb7d13eb0a3d" alt="Click to view this map on Live.com" title="Click to view this map on Live.com"><img src="https://www.joelevi.com/blog/wp-content/uploads/2008/10/mapfbfb2d855076.jpg" width="320" height="240" alt="Map picture"/></a></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/education/">Education</a>, <a href="/blog/categories/family/">Family</a>, <a href="/blog/categories/finances/">Finances</a>, <a href="/blog/categories/friends/">Friends</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

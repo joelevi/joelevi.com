@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/aspnet-11-error-systemxmlxmlreader-is-inaccessible-due-to-its-protection-level/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image.png" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="105" alt="image" src="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image_thumb.png" width="240" align="right" border="0"/></a>While recompiling an ASP.NET 1.1 (legacy) application recently I was met with a series of errors that "System.Xml.XmlReader is inaccessible due to its protection level" (along with other System.Xml related messages). I couldn't find a good answer to why I would be getting an error like this searching online, so I figured I'd share what I found in the hopes that I someone else having the same problems won't have to dig as deep as I did.</p> <p><strong></strong><strong><a href="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image_3.png" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="156" alt="image" src="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image_thumb_3.png" width="199" align="right" border="0"/></a></strong>Background: This is a legacy ASP.NET 1.1 solution that I need to support in a Virtual Machine development environment. We lost the VM that the solution was developed on but had a copy of the source code backed up. I created a new solution in Visual Studio.net 2003 and dropped all the files into the solution (including those in folders). When I tried to run the app I was met with 13 build errors regarding System.Xml inaccessibility.</p> <p><strong><a href="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image_4.png" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="188" alt="image" src="https://www.joelevi.com/images/ASP.XmlReaderisinaccessibleduetoitsprote_CC7F/image_thumb_4.png" width="240" align="right" border="0"/></a>Solution:</strong> Looking at the references I noticed that System.Xml was missing. Right-click References and click Add Reference. Find System.Xml.dll from the list, double-click it (to move it to the Selected Components) and click OK.</p> <p>Even thought the .cs codebehind file had the appropriate "Using" statement, the reference to the corresponding .dll was required.</p> <p>Hope it helps!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

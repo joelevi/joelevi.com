@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/obama-to-blame-for-fannyfreddie-failure/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Finances",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <blockquote>   <p>A group called the Center for Responsive Politics keeps track of which politicians get Fannie and Freddie political contributions. The top three U.S. Senators getting big Fannie and Freddie political bucks were Democrats and number two is Senator Barack Obama.      <br />Now, remember, he has only been in the Senate four years but still managed to grab the number two spot ahead of John Kerry, decades in the senate, and Chris Dodd who is chairman of the Senate Banking Committee. <strong>Fannie and Freddie have been creations of the congressional democrats and the Clinton white house</strong>, designed to make mortgages available to more people, and as it turned out, some people who couldn’t afford them.</p>    <p>Fannie and Freddie have also been places for big Washington Democrats to go to work in the semi-private sector and pocket millions. The Clinton administration’s White House budget director Franklin Raines ran Fannie and collected 50 million dollars. Jamie Gurilli, Clinton Justice Apartment Official, worked for Fannie and took home 26 million dollars. Big Democrat Jim Johnson, recently on Obama’s VP search committee has hauled in millions from his Fannie Mae C.E.O. job.</p>    <p>Now remember, Obama’s ads and stump speeches attack McCain and Republican policies for the current financial turmoil. It is demonstrably not Republican policy and worse, it appears the man attacking McCain, Senator Obama, was at the head of the line when the piggy’s lined up at the Fannie and Freddie trough for campaign bucks.</p>    <p>-- John Gibson, Fox</p></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/finances/">Finances</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

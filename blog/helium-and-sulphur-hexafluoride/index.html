@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/helium-and-sulphur-hexafluoride/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Humor",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p><strong>File this under “Don’t try this at home.”</strong></p>  <p>Remember how when you inhale helium your voice gets really high-pitched for a while, and it sounds really funny? That’s because helium is much <em>less</em> dense than air and comes our differently than regular air when it crosses your vocal cords.</p>  <p>But didn’t you always wonder what would happen if you inhaled something much <em>more</em> dense than air… you know, if it didn’t kill you?</p>  <p>Be advised, that inhaling anything other than air <strong>could kill you</strong>, so we don’t recommend inhaling anything other than air. That said, take a look:</p>  <div class="wlWriterSmartContent" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:4d9ab1d0-f2e5-4f7a-9cb5-b00d33a9aef6" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/d-XbjFn3aqE&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en&amp;fs=1"></param><param name="wmode" value="transparent"></param><embed src="https://www.youtube.com/v/d-XbjFn3aqE&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en&amp;fs=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></div></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/humor/">Humor</a> and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

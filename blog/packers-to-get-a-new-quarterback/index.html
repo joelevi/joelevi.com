@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/packers-to-get-a-new-quarterback/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Humor",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p>In a news conference Deanna Favre announced she will be the starting QB for the Packers this coming Sunday.</p>  <p>Deanna asserts that she is qualified to be starting QB because she has spent the past 16 years married to Brett while he played QB for the Packers. </p>  <p>During this period of time she became familiar with the definition of a corner blitz, and is now completely comfortable with other terminology of the Packers offense.</p>  <p>A survey of Packers fans shows that 50% of those polled supported the move.    <br /></p>  <h3>Does this sounds idiotic and unbelievable to you?</h3>  <p>Well, Hillary Clinton makes the same claims as to why she is qualified to be President, and 50% of democrats polled agreed. She has never run a City, County, or State.</p>  <p>When told Hillary Clinton has experience because she has 8 years in the white house, consider that the pastry chef and Monica Lewinski do, too!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/humor/">Humor</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

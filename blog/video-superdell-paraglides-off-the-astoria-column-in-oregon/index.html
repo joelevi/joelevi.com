@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/video-superdell-paraglides-off-the-astoria-column-in-oregon/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "astoria",
+        "locations",
+        "oregon",
+        "paragliding"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -297,6 +310,10 @@
 
 <p><embed type='application/x-shockwave-flash' salign='l' flashvars='&amp;titleAvailable=true&amp;playerAvailable=true&amp;searchAvailable=false&amp;shareFlag=N&amp;singleURL=http://kstu.vidcms.trb.com/alfresco/service/edge/content/60513a34-75bc-4d09-a1bf-2745b6b319d5&amp;propName=kstu.com&amp;hostURL=http://www.fox13now.com&amp;swfPath=http://kstu.vid.trb.com/player/&amp;omAccount=triblocaltvglobal&amp;omnitureServer=fox13now.com' allowscriptaccess='always' allowfullscreen='true' menu='true' name='PaperVideoTest' bgcolor='#ffffff' devicefont='false' wmode='transparent' scale='showall' loop='true' play='true' pluginspage='http://www.macromedia.com/go/getflashplayer' quality='high' src='https://kstu.vid.trb.com/player/PaperVideoTest.swf' align='middle' height='450' width='300'/></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/astoria/">astoria</a>, <a href="/blog/categories/locations/">locations</a>, <a href="/blog/categories/oregon/">oregon</a>, and <a href="/blog/categories/paragliding/">paragliding</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

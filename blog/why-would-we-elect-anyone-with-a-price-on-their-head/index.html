@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/why-would-we-elect-anyone-with-a-price-on-their-head/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>A <a href="https://www.frontpagemag.com/Articles/Read.aspx?GUID=1F297C14-C64D-41B1-AEBB-E0325C823CD8" target="_blank">new investigation</a> into Barack Hussien Obama's religious history confirms what many of us have been saying all along: Obama was Muslim in his youth. (<em><a href="https://www.frontpagemag.com/Articles/Read.aspx?GUID=1F297C14-C64D-41B1-AEBB-E0325C823CD8" target="_blank">Confirmed: Barack Obama Practiced Islam</a></em>)</p>  <p>While religion shouldn't be a qualifying or disqualifying factor to any candidate (even Mitt Romney, a practicing member of the <a href="https://www.lds.org" target="_blank">LDS faith</a>, a Christian religion sometimes called &quot;the <a href="https://www.mormon.org" target="_blank">Mormons</a>&quot;), religion and upbringing both play a part in early character development and can tell us a lot about a person.</p>  <p>In addition to character, additional information can be deduced from this revelation: since Barack Hussien Obama <em>was</em> a Muslim, and now claims to be Catholic, he is now what Islamic law calls a <i>murtadd</i> (an apostate; an ex-Muslim converted to another religion).</p>  <p>Under Islamic law, all <em>murtadd</em>'s must be executed. (This is what the mass media calls &quot;the religion of peace&quot;?)</p>  <p>Were Barack Hussein Obama elected president of the United States, his status as a <em>murtadd</em> would clearly have large potential implications for his relationship with the Muslim world -- and beyond.</p>  <p>Why would we elect anyone with a price on their head?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/about-joe-levi/">About Joe Levi</a> and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

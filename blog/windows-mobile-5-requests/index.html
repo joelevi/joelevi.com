@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/windows-mobile-5-requests/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -280,6 +290,10 @@
 There are a few things Microsoft decided to kill from version 2003 to WM 5, and a lot of things they should have fixed that they didn't. That said, here's my list:
 <ol><li>Ability to activate Reader.</li><li>Where did Ink Support in Pocket Word go? It was there in 2003, but gone in WM5.</li><li>S.P.O.T. integration with a Today Screen component to display the content.</li><li>Make a standard mini-USB port for sync and charge part of the hardware spec; get rid of proprietary connectors.</li><li>Tie in video phone capability to built-in phone application.</li><li>Build SIP functionality into built-in phone applications (i.e., Skype could run natively in the phone app, etc.).</li><li>Standardize "Wireless" control panels so bluetooth, GSM, GPS, Radio, WiFi, etc. are all on-off-able and configurable from one standard control panel.</li><li>Make the X button really close. The reason for having it minimize before was because the programs were already in RAM (as was the OS), and "closing" them didn't accomplish anything, since they were still installed in RAM (that was the theory anyway). Now that programs are installed to persistant storage, and must be loaded into RAM, just like on a PC, the old functionality of the close button is no longer appropriate.</li><li>Build in MS Voice Command so 3rd party apps aren't needed (of course, allow voice command to be "turned off" for those that want a different voice command application).</li><li>Mandate 3G Wireless with every Phone Edition.</li><li>Where text is in focus, enable the hardware volume control to be used as a jog-dial.</li></ol>To see some other people's lists, check this link: <a href="https://www.pocketpcthoughts.com/forums/viewtopic.php?t=48503">http://www.pocketpcthoughts.com/forums/viewtopic.php?t=48503</a>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

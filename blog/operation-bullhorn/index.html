@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/operation-bullhorn/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p>I wanted to write a quick “keep this in mind” note from <a href="https://twitter.com/FairTaxWriteIn" target="_blank">@FairTaxWriteIn</a>:</p>  <h3>The Impetus- </h3>  <p>For over a decade the FairTax bill (H.R.25) has been parked in the House Ways and Means Committee. No aggressive action has been taken in that time, despite almost 20% of House members and 7 Presidential candidates stepping forward in support of this reform.    <br /></p>  <p>Something has to change.    <br /></p>  <h3>The Action- </h3>  <p>Enter Operation:Bullhorn. Our goal is to hit politicians where it hurts: the ballot box. By taking away a percentage of an incumbent's voting base in the form of a write-in vote for the FairTax, we can send a strong message to hesitant elected officials that the FairTax is a necessary tax reform that will bring their constituents to the polls.    <br /></p>  <h3>The Reaction- </h3>  <p>In a tough election cycle, even 5% of the vote can tip the balance. Politically savvy representatives will recognize this fact and start doing their jobs- representing their constituents. Bam! Another FairTax co-sponsor has been added to the rolls.    <br />Inertia is everything in Washington D.C. If this write-in campaign can get Bob Goodlatte off the fence in the 6th District of Virginia, it can work in other districts across the country. Once House members begin talking to their colleagues about why they have suddenly decided to become FairTax supporters, that D.C. inertia will kick in. 70 co-sponsors already has the ball rolling, and with enough people writing in &quot;FairTax&quot; in our local Congressional elections, we can create a few more to help move that ball forward.     <br /></p>  <p><a href="https://www.runboard.com/boperationbullhorn.f2.t3" target="_blank">Spread the word.</a>     <br />And thank you,     <br />Brad</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

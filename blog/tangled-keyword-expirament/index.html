@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/tangled-keyword-expirament/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -280,6 +290,10 @@
  <p>"In the name of science and discovery, here is keyword-stuffed paragraph to begin the experiment.</p>
 <p>"Once there was a girl named Paris Hilton who wanted to play NCAA basketball. She went to lots of games and chatted with folks like Tara Reid and Shannon Elizabeth to see what they thought of her playing. She even went to see a leprechaun, who told her to go to spring break in a prom dress. She looked at her maps to get directions and then looked at an online dictionary to find out about the IRS and what March Madness was. She learned about taxes and was shocked to find out that Mario Vazquez only had a 50 cent tax because his accountant was an American Idol from the amazon.</p>   <p>"Just then, music lyrics came into her mind. The song was Whiskey Lullaby by Allison Krauss and she wondered what would usher such musical poems into her mind. Then she remembered it was the green day, commonly known as St. Patrick's Day, and that the lyrics in her head where from an MP3. She decided to watch the Star Wars Trailer with a boy named Harry Potter and call it a day.</p>   <p>"I didn't use some of the more . . . explicit terms to avoid certain associations or censorship of my blog. There are limits to what I will do in the name of science."</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

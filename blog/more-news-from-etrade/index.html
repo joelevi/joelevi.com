@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/more-news-from-etrade/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Finances",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>To All E*TRADE Customers:</p>  <p>The old adage &quot;there is no such thing as bad publicity&quot; does not apply to E*TRADE FINANCIAL this week. Seemingly by the stroke of a pen... or a few clicks from a keyboard... a Company with a core business that has generated impressive growth quarter after quarter has been bombarded by rumored reports of its imminent demise. </p>  <p>Well, we want customers to know that the entire E*TRADE team has come together with resolve and commitment, taking appropriate and decisive action to manage through this issue and to ensure that E*TRADE FINANCIAL continues to deliver the best value in the marketplace for our customers. </p>  <p>I have spoken with scores of customers over the past week. Many of you have openly expressed your confidence in E*TRADE. It is genuinely gratifying to know that our retail customers&#8212;the heart of our business&#8212;understand the value in our model and the strength of the franchise. </p>  <p><b>Many of you have also asked me about asset protection, so to be clear&#8212;your money is safe at E*TRADE FINANCIAL. Here are the facts:</b></p>  <ul>   <li>FDIC insures all E*TRADE Bank accounts to at least $100,000 and Extended Insurance Sweep Deposit Accounts to $500,000.</li>    <li>SIPC protects E*TRADE Securities customers up to $500,000 (including $100,000 for claims for cash). </li>    <li>Additional E*TRADE Securities protection provides up to $150 million per brokerage account, underwritten by London insurers (aggregate $600 million).</li>    <li>E*TRADE is well-capitalized by regulatory standards. </li> </ul>  <p>E*TRADE was founded on the concept of empowering the individual investor. This value is still at the heart of our business. We look forward to continuing to provide you with the products, pricing, service and functionality you have come to expect in order to help you manage your financial world. </p>  <p>We haven't lost focus on our customers, our business or our future. The credit crunch has had a tremendous impact, but we are taking appropriate and decisive action to manage through it. </p>  <p>Thank you for your continued business,    <br /><img title="Jarrett Lilien" alt="Jarrett Lilien" src="https://a248.e.akamai.net/n/248/1777/1119200708/www.etrade.com/images/JarrettLilien.gif" />    <br /><strong>&#8212;Jarrett Lilien</strong>    <br />President, COO and Director, E*TRADE FINANCIAL</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/finances/">Finances</a> and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

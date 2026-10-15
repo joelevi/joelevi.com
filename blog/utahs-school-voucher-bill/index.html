@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/utahs-school-voucher-bill/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Education",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p>According to a story at KSL.com, a poll indicates there may not be enough support for school vouchers to pass it's November's vote.  </p><p>According to the story, "A Dan Jones poll for KSL-TV and the Deseret Morning News found 34 percent of voters plan to support vouchers while 60 percent plan to vote against them. Seven percent were undecided." </p><p>Last spring the Utah State Legislature approved the voucher program as part of a larger, comprehensive education spending bill, which included raises for teachers and administrators, additional funding for textbooks, extra funding for repair and maintenance of pre-existing schools, and additional funding for new schools. </p><p>The Bill was fought by the UEA and NEA in the courts before a petition put the issue on the ballot.  </p><p>If the voucher part of the school bill is shot down (whether by judge or by popular vote) shouldn't the rest of the bill be nullified as well?  </p><p>The Governor can't "line item veto" parts of bills that he doesn't like, why should voters be allowed to?  </p><p>So, if we vote against vouchers we should also be nullifying the raises for teachers and administrators, additional funding for textbooks, additional funding for school maintenance, repairs, and improvements... and to get ANY of those back we'd need to go through the bill passage process again.  </p><p>It's only fair. </p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/education/">Education</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

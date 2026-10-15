@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/24/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Humor",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -287,6 +298,10 @@ I'm an avid fan of the television series 24. Maybe too much so. Season 3 was air
 <ul><li>Jack Bauer once beat Super Mario Bros. 3 without touching the controller. He just stared at the TV until the game beat itself.</li><li>When Jack Bauer was a child, he made his mother finish his vegetables. </li><li>If you spell Jack Bauer in a Scrabble game, you win. Forever. </li><li>Jack Bauer won the Tour de France on a unicycle to prove to Lance Armstrong it wasn't a big deal. He thinks yellow wristbands are lame. </li><li>Superman wears Jack Bauer pyjamas. </li><li>If it tastes like chicken, looks like chicken, and feels like chicken, but Jack Bauer says its beef, then it's beef. </li><li>Osama bin Laden's recent proposal for truce is a direct result of him finding out that Jack Bauer is, in fact, still alive. </li><li>Jack Bauer is the leading cause of death in Middle Eastern men.</li><li>Jack Bauer’s calendar goes from March 31st to April 2nd, no one fools Jack Bauer.</li><li>Jack Bauer played Russian Roulette with a fully loaded gun and won. </li><li>Jack Bauer once ate an entire case of sleeping pills. He blinked, but they're not certain that it had any relation to the pills.</li><li>What color is Jack Bauer's blood? Trick question. Jack Bauer does not bleed. </li><li>Jack Bauer once won a game of Connect 4 in 3 moves. </li><li>You can lead a horse to water. Jack Bauer can make him drink. </li><li>Simon Says should be renamed to Jack Bauer Says because if Jack Bauer says something then you better do it. </li><li>When Google can't find something, it asks Jack Bauer for help. </li><li>When Jack Bauer watches a pot, it boils immediately. </li><li>Jack Bauer can get McDonald's breakfast after 10:30. </li><li>In kindergarten, Jack Bauer killed a terrorist for Show and Tell. </li><li>When the boogie man goes to sleep, he checks his closet for Jack Bauer. </li><li>Jack Bauer once killed a group of Samurai Warriors with only a ball point pen. This lead to the phrase "The pen is mightier than the sword."</li><li>People with amnesia still remember Jack Bauer.</li><li>Jack Bauer has been to Mars. That’s why there’s no life on Mars.</li><li>Superman's only weakness is Kryptonite. Jack Bauer laughs at Superman for having a weakness.</li><li>If Jack and MacGyver were locked in a room together, Jack would make a bomb out of MacGyver and get out.</li><li>Jack Bauer once killed so many terrorists that at one point, the #5 CIA Most Wanted fugitive was an 18-year-old teenager in Malaysia who downloaded the movie Dodgeball.</li><li>Guns dont kill people, Jack Bauer kills people.</li><li>If you send someone to kill Jack Bauer, the only thing you accomplish is supplying him a fresh set of weapons to kill you with. </li><li>ESPN rated Kobe Bryant for Vlade Divac as the second worst trade in history, after Jack Bauer for Behrooz Araz. </li><li>Jack Bauer makes onions cry. </li><li>If Jack was in a room with Stalin, Hitler and Nina and had two bullets, he would shoot Nina twice. </li><li>Jack Bauer and Superman once had an arm wrestling match; the loser had to wear their underwear on the outside.
 </li></ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/humor/">Humor</a> and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

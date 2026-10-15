@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/mock-dialog-by-james-cook/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Finances",
+        "Humor",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>American: Do you think you could help me?</p>  <p>Chinese: What do you mean?</p>  <p>American: I need some money.</p>  <p>Chinese: How much?</p>  <p>American: Three trillion.</p>  <p>Chinese: Wow! You’re not bashful.</p>  <p>American: What do you say?</p>  <p>Chinese: I don’t think so.</p>  <p>American: Pretty, pretty please.</p>  <p>Chinese: I already loaned you a bundle.</p>  <p>American: It’s gone. I have to have more.</p>  <p>Chinese: What am I going to do with all your IOUs?</p>  <p>American: Keep holding them. I’ll pay you interest.</p>  <p>Chinese: How much?</p>  <p>American: I can’t pay much, a couple of points.</p>  <p>Chinese: It’s too low. Call me if you can pay more.</p>  <p>American: I need it now.</p>  <p>Chinese: Hey, I’ve been selling your IOUs lately.</p>  <p>American: I heard that.</p>  <p>Chinese: Frankly, I don’t have as much as you need.</p>  <p>American: I’ll buy some toys and stuffed animals from you.</p>  <p>Chinese: Okay, but will you quit throwing your weight around so much?</p>  <p>American: I’ll try.</p>  <p>Chinese: I might get you part of it.</p>  <p>American: I can print up the rest.</p>  <p>Chinese: That will make my IOUs worthless.</p>  <p>American: I’ll do it in the night.</p>  <p>Chinese: You’re going from bad to worse.</p>  <p>American: Listen, I’ll double my order for stuffed animals.</p>  <p>Chinese: I don’t think so.</p>  <p>American: You won’t help me?</p>  <p>Chinese: No, I just can’t do it.</p>  <p>American: What am I going to do?</p>  <p>Chinese: There’s a Japanese guy lives down the street. Try him.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/finances/">Finances</a>, <a href="/blog/categories/humor/">Humor</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/spring-break/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Uncategorized"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -287,6 +297,10 @@
 
 <p>I got a Pioneer AO7 DVD+-R/RW drive at long last. Now I can burn DVD&#x27;s of my episodes of Enterprise! Only 3 discs per season, versus 26! Yeah! I know that it&#x27;s not legal to mak copies of purchased &quot;Hollywood&quot; DVD&#x27;s, but until the DMCA is ammended to mandate that publishers replace damaged (or lost) discs within a 24 hour guaranteed turn-around period (of course upon proof of purchase (such as the pieces of the broken disc), I&#x27;ll be a criminal for applying the Fair Use clause of the Copyright Act of 1976 to copy-protected materials such as commercial DVDs. I hope the RIAA and Motion Picture Association lawyers don&#x27;t read this... It would be a shame to sue me and release a convicted murderer or rapist just to make room for the &quot;true criminal.&quot;</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

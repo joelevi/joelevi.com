@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/on-a-personal-note/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Friends",
+        "Health",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p>While I try not to personalize this 'blog all that much, this is one of those times that I'm making an exception to that rule.</p> <p>Allison (Earl) Goodworth,&nbsp;a good friend of mine (since junior high school, has it been that long?) and her family are undergoing a particularly difficult time in their lives. Her oldest son has been diagnosed with a <a href="https://en.wikipedia.org/wiki/Brain_tumor" target="_blank">brain</a> and <a href="https://en.wikipedia.org/wiki/Spinal_cancer" target="_blank">spinal tumor</a> and is presently at <a href="https://en.wikipedia.org/wiki/Primary_Children%27s_Medical_Center" target="_blank">Primary Children's Medical Center</a> in <a href="https://en.wikipedia.org/wiki/Salt_lake_city" target="_blank">Salt Lake City</a>, <a href="https://en.wikipedia.org/wiki/Utah" target="_blank">Utah</a>.</p> <p>Since my audience extends beyond just friends and family (yes, you complete strangers out there), I'd ask for your thoughts and prayers for this friend, her son, and her family. </p> <p>You can get semi-regular updates from her 'blog: <a href="https://lifewithlittleboys.blogspot.com" target="_blank">LifeWithLittleBoys</a></p> <p>We now return you to our regularly scheduled program already in progress...</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/friends/">Friends</a>, <a href="/blog/categories/health/">Health</a>, and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

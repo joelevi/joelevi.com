@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/php-has-encountered-an-access-violation-at-084493a2/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "About Joe Levi",
+        "Web Development"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p></p>  <p></p>  <p>If, after you’ve upgraded your WordPress install, you get an error message similar to this one “PHP has encountered an Access Violation at 084493A2” you’re not alone.</p>  <p>Luckily the fix is quite easy:</p>  <ol>   <li>Point your browser to the following address: http://(www.yourblog.com)/(bloginstalldirectory)/wp-admin/upgrade.php where “(www.yourblog.com)” is the address to your blog, “(bloginstalldirectory)” is the folder in which your blog is installed (unless you installed it to the root, in which case leave this and one of the slashes out).</li>    <li>A message should tell you that your database it out-of-date and needs to be upgraded.</li>    <li>Click the obnoxiously big “upgrade” button.</li>    <li>If all goes well, you’re all done and the error should go away.</li> </ol>  <p><a title="Show your appreciation by donating via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/about-joe-levi/">About Joe Levi</a> and <a href="/blog/categories/web-development/">Web Development</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -136,6 +136,11 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* browse */
+		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+		.browse a { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
+		.browse a:hover { background: var(--blue-soft); }
+		/* /browse */
 		.term-list { list-style: none; margin: 0; padding: 0; columns: 16rem auto; column-gap: 2rem; }
 		.term-list li { padding: 0.3rem 0; break-inside: avoid; }
 		.term-list .n { color: var(--ink-muted); font-size: 0.85rem; }
@@ -178,7 +183,7 @@
 				<h1>Browse by tag</h1>
 			</header>
 			<p class="lede">All 2401 tags used across the article archive, alphabetical, with post counts.</p>
-			<p class="browse"><a href="/blog/">All articles</a></p>
+			<p class="browse"><a href="/blog/">All articles</a><a href="/blog/categories/">Browse by category</a></p>
 			<ul class="term-list">
 				<li><a href="/blog/tags/patriotact/">#patriotact</a> <span class="n">(1)</span></li>
 				<li><a href="/blog/tags/utpol/">#utpol</a> <span class="n">(1)</span></li>

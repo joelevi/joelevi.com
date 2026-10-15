@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/what-pork-is-in-the-bailout-barrel/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Activism",
+        "Finances",
+        "About Joe Levi",
+        "Politics"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p>The Bailout Bill, also known as the “Emergency Economic Stabilization Act of 2008’’.” has some very “interesting” pork built into it. For example:</p>  <p>The Senate added a provision repealing a 39 cent excise tax on wooden arrows made for children. You can thank Senators Ron Wyden (D, Oregon) and Gordon Smith (R, Oregon), this addition was added to benefit Oregon’s toy arrow manufacturers such as Rose City Archery in Myrtle Point, Oregon, which will save about $200,000 a year. Guess who gets to pay that missing tax revenue now? (<a title="http://news.aol.com/political-machine/2008/10/02/the-wooden-arrow-bailout/" href="https://news.aol.com/political-machine/2008/10/02/the-wooden-arrow-bailout/">http://news.aol.com/political-machine/2008/10/02/the-wooden-arrow-bailout/</a>) It reads: SEC. 503. EXEMPTION FROM EXCISE TAX FOR CERTAIN WOODEN ARROWS DESIGNED FOR USE BY CHILDREN.</p>  <p>SEC. 504. INCOME AVERAGING FOR AMOUNTS RECEIVED IN CONNECTION WITH THE EXXON VALDEZ LITIGATION. </p>  <blockquote>   <p>(1) any qualified taxpayer who receives any qualified settlement income in any taxable year shall be treated as engaged in a fishing business (determined without regard to the commercial nature of the business), and (2) such qualified settlement income shall be treated as income attributable to such a fishing business for such taxable year.</p> </blockquote>  <p>The full text (all 451 pages) is available here: <a title="http://banking.senate.gov/public/_files/latestversionAYO08C32_xml.pdf" href="https://banking.senate.gov/public/_files/latestversionAYO08C32_xml.pdf">http://banking.senate.gov/public/_files/latestversionAYO08C32_xml.pdf</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/activism/">Activism</a>, <a href="/blog/categories/finances/">Finances</a>, <a href="/blog/categories/about-joe-levi/">About Joe Levi</a>, and <a href="/blog/categories/politics/">Politics</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

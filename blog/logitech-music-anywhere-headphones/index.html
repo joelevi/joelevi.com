@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/logitech-music-anywhere-headphones/#breadcrumb"
-      }
+      },
+      "articleSection": [
+        "Friends",
+        "About Joe Levi"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -283,6 +294,10 @@
 
 <ul> <li>Grab a heavy-duty paper-clip and a roll of electrical tape, unfold and double-over the paper-clip to make reinforcing spring out of it (make sure the ends are rolled over to prevent any unfortunate pokes to the back of your skull), bend it to match the curvature&nbsp;in the back, then tape it in place across the back of the headphones, no more "stress snaps" from your fat head!</li> <li>Keep it plugged in when not in use. Doing so seems to keep the battery healthy (it has for mine). Also, be gentle with the power connector; it seems that many "battery crapped out" problems are caused by the connector being broken and not charging the battery.</li> <li>Repairing is a part of life. If at first you don't hear music, unplug the transmitter and re-plug. If that doesn't work repair the two by holding the button on one until it starts flashing red and blue; repeat for the other; pairing takes about 90 seconds.</li> <li>Drivers and software: if you've lost or damaged yours you're pretty much hosed. Windows Vista doesn't need the cd, but doesn't give you a UI to "talk" to the headphones (I haven't needed it). If you don't have Windows XP then you'll need the drivers/software, but Logitech doesn't support them anymore (in other words, you won't get the drivers/software from them). What is one to do? Luckily, a friend of mine got Logitech's blessing to host the drivers/software for you! I don't know how you want to thank him, but you really should. ;)</li></ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/friends/">Friends</a> and <a href="/blog/categories/about-joe-levi/">About Joe Levi</a></p>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>
