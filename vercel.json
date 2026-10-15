@@ -191,6 +191,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/conflicker/",
+      "destination": "/blog/tags/conficker/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/conflicker",
+      "destination": "/blog/tags/conficker/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/conflicker-b/",
+      "destination": "/blog/tags/conficker/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/conflicker-b",
+      "destination": "/blog/tags/conficker/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
