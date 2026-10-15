@@ -41,23 +41,33 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/asperger/",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/asperger",
+      "destination": "/blog/tags/aspergers-disorder/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/asperger-syndromea/",
-      "destination": "/blog/tags/asperger-syndrome/",
+      "destination": "/blog/tags/aspergers-disorder/",
       "permanent": true
     },
     {
       "source": "/blog/tags/asperger-syndromea",
-      "destination": "/blog/tags/asperger-syndrome/",
+      "destination": "/blog/tags/aspergers-disorder/",
       "permanent": true
     },
     {
       "source": "/blog/tags/asperger-syndromeaspergers-disorder/",
-      "destination": "/blog/tags/asperger-syndrome-aspergers-disorder/",
+      "destination": "/blog/tags/aspergers-disorder/",
       "permanent": true
     },
     {
       "source": "/blog/tags/asperger-syndromeaspergers-disorder",
-      "destination": "/blog/tags/asperger-syndrome-aspergers-disorder/",
+      "destination": "/blog/tags/aspergers-disorder/",
       "permanent": true
     },
     {
@@ -608,6 +618,16 @@
     {
       "source": "/blog/tags/mix-07",
       "destination": "/blog/tags/mix07/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/monstanto/",
+      "destination": "/blog/tags/monsanto/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/monstanto",
+      "destination": "/blog/tags/monsanto/",
       "permanent": true
     },
     {
