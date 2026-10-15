@@ -171,13 +171,23 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/c4l/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/c4l",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/c4l-cfl/",
-      "destination": "/blog/tags/c4l/",
+      "destination": "/blog/tags/campaign-for-liberty/",
       "permanent": true
     },
     {
       "source": "/blog/tags/c4l-cfl",
-      "destination": "/blog/tags/c4l/",
+      "destination": "/blog/tags/campaign-for-liberty/",
       "permanent": true
     },
     {
@@ -207,6 +217,26 @@
     },
     {
       "source": "/blog/tags/campaign4liberty",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cfl/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cfl",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cfl-c4l/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cfl-c4l",
       "destination": "/blog/tags/campaign-for-liberty/",
       "permanent": true
     },
@@ -938,6 +968,16 @@
     {
       "source": "/blog/tags/hr5297",
       "destination": "/blog/tags/hr-5297/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/i-am-campaign-for-liberty/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/i-am-campaign-for-liberty",
+      "destination": "/blog/tags/campaign-for-liberty/",
       "permanent": true
     },
     {
