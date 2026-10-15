@@ -791,6 +791,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/oppo-watch/",
+      "destination": "/blog/tags/oppo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/oppo-watch",
+      "destination": "/blog/tags/oppo/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
