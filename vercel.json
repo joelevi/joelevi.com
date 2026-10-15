@@ -1,6 +1,26 @@
 {
   "redirects": [
     {
+      "source": "/blog/statement-on-mitt-romney",
+      "destination": "https://republicannatives.com/statement-on-mitt-romney/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/statement-on-mitt-romney/",
+      "destination": "https://republicannatives.com/statement-on-mitt-romney/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/utah-native-american-advocacy-group",
+      "destination": "https://republicannatives.com/utah-native-american-advocacy-group/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/utah-native-american-advocacy-group/",
+      "destination": "https://republicannatives.com/utah-native-american-advocacy-group/",
+      "permanent": true
+    },
+    {
       "source": "/blog/the-caucus-history-and-etymology",
       "destination": "https://republicannatives.com/the-caucus-history-and-etymology/",
       "permanent": true
