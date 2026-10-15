@@ -231,6 +231,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/cm10/",
+      "destination": "/blog/tags/cyanogenmod/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cm10",
+      "destination": "/blog/tags/cyanogenmod/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/commercial/",
       "destination": "/blog/tags/commercials/",
       "permanent": true
@@ -328,6 +338,26 @@
     {
       "source": "/blog/tags/cut",
       "destination": "/blog/tags/cuts/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cyanogen/",
+      "destination": "/blog/tags/cyanogenmod/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cyanogen",
+      "destination": "/blog/tags/cyanogenmod/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cyanogenmod-10/",
+      "destination": "/blog/tags/cyanogenmod/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/cyanogenmod-10",
+      "destination": "/blog/tags/cyanogenmod/",
       "permanent": true
     },
     {
@@ -1308,6 +1338,16 @@
     {
       "source": "/blog/tags/quotes",
       "destination": "/blog/tags/quote/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/real-id/",
+      "destination": "/blog/tags/real-id-act/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/real-id",
+      "destination": "/blog/tags/real-id-act/",
       "permanent": true
     },
     {
