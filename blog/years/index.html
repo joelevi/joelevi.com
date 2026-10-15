@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/theme.css" />
+	<script defer src="/assets/theme.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow, archive" />
+	<meta name="theme-color" content="#2F6FED" />
+	<meta name="author" content="Joe Levi" />
+	<meta name="description" content="Browse all 2492 articles in Joe Levi&#x27;s archive by year, 1999–2021, with post counts." />
+	<link rel="describedby" href="/llms.txt" />
+	<link rel="canonical" href="https://www.joelevi.com/blog/years/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Joe Levi" />
+	<meta property="og:title" content="Articles by Year — Joe Levi" />
+	<meta property="og:description" content="Browse all 2492 articles in Joe Levi&#x27;s archive by year, 1999–2021, with post counts." />
+	<meta property="og:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta property="og:image:alt" content="Photo of Joe Levi" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:image:height" content="450" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:url" content="https://www.joelevi.com/blog/years/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Articles by Year — Joe Levi" />
+	<meta name="twitter:description" content="Browse all 2492 articles in Joe Levi&#x27;s archive by year, 1999–2021, with post counts." />
+	<meta name="twitter:image" content="https://www.joelevi.com/photo.jpeg" />
+	<meta name="twitter:image:alt" content="Photo of Joe Levi" />
+	<title>Articles by Year — Joe Levi</title>
+	<link rel="preload" href="/fonts/gruppo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="stylesheet" href="/assets/fonts.css" />
+	<!-- Google Analytics (GA4) -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		window.addEventListener("load", function () {
+			var s = document.createElement("script");
+			s.src = "https://www.googletagmanager.com/gtag/js?id=G-6V4LCMVCZV";
+			s.async = true;
+			s.onload = function () {
+				gtag("js", new Date());
+				gtag("config", "G-6V4LCMVCZV");
+			};
+			document.head.appendChild(s);
+		});
+	</script>
+	<!-- Vercel Web Analytics -->
+	<script>
+		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
+	<!-- Vercel Speed Insights -->
+	<script>
+		window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/speed-insights/script.js"></script>
+	<style>
+		/* Theme tokens: /assets/theme.css ([data-theme="dark"|"light"]). */
+		* { box-sizing: border-box; }
+		html { background: var(--page); }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--ink);
+			background: var(--page);
+			min-height: 100vh;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.wrap {
+			max-width: 56rem;
+			margin: 0 auto;
+			padding: 1.25rem 1.25rem 3rem;
+		}
+		.library {
+			background: var(--page);
+			color: var(--ink);
+			border: 1px solid var(--rule);
+			border-radius: 1rem;
+			padding: 0 1.5rem 2rem;
+			box-shadow: 0 18px 50px var(--shadow);
+		}
+		.library a { color: var(--blue); }
+		.library h1 {
+			font-family: Gruppo, sans-serif;
+			font-size: clamp(2rem, 5vw, 2.75rem);
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			margin: 0 0 0.35rem;
+			color: var(--blue);
+		}
+		.library .lede {
+			color: var(--ink-muted);
+			margin: 0.5rem 0 1.25rem;
+			max-width: 42rem;
+		}
+		.post-list { list-style: none; margin: 0; padding: 0; }
+		.post-list__item {
+			padding: 1rem 0;
+			border-bottom: 1px solid var(--rule);
+		}
+		.post-list__item:last-child { border-bottom: 0; }
+		.post-list__title {
+			font-family: Gruppo, sans-serif;
+			font-size: 1.25rem;
+			font-weight: 400;
+			letter-spacing: 0.02em;
+			margin: 0 0 0.25rem;
+			line-height: 1.3;
+		}
+		.post-list__meta {
+			color: var(--ink-muted);
+			font-size: 0.9rem;
+			margin: 0 0 0.4rem;
+		}
+		.post-list__excerpt {
+			margin: 0;
+			color: var(--ink);
+			font-size: 0.95rem;
+		}
+		footer.page-foot {
+			margin-top: 1.5rem;
+			text-align: center;
+			color: var(--ink-muted);
+			font-size: 0.85rem;
+		}
+		@media (max-width: 560px) {
+			.library { padding: 0 1rem 1.5rem; border-radius: 0.75rem; }
+			.wrap { padding: 1rem 0.85rem 2.5rem; }
+		}
+		::selection { background: var(--selection-bg); color: var(--selection-fg); }
+		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
+		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+		.browse a { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
+		.browse a:hover { background: var(--blue-soft); }
+		/* /browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+		.term-list { list-style: none; margin: 0; padding: 0; columns: 16rem auto; column-gap: 2rem; }
+		.term-list li { padding: 0.3rem 0; break-inside: avoid; }
+		.term-list .n { color: var(--ink-muted); font-size: 0.85rem; }
+		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+		.browse a, .chip { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); background: transparent; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
+		.browse a:hover { background: var(--blue-soft); }
+		.crumbs { font-size: 0.9rem; color: var(--ink-muted); margin: 0 0 0.5rem; }
+		/* date-icon */
+		.date-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+		/* /date-icon */
+	</style>
+	<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "@id": "https://www.joelevi.com/blog/years/#page", "url": "https://www.joelevi.com/blog/years/", "name": "Articles by Year — Joe Levi", "description": "Browse all 2492 articles in Joe Levi's archive by year, 1999–2021, with post counts.", "inLanguage": "en-US", "isPartOf": {"@id": "https://www.joelevi.com/#website"}, "author": {"@id": "https://www.joelevi.com/#person"}, "breadcrumb": {"@id": "https://www.joelevi.com/blog/years/#breadcrumb"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 20, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://www.joelevi.com/blog/years/2021/", "name": "2021"}, {"@type": "ListItem", "position": 2, "url": "https://www.joelevi.com/blog/years/2020/", "name": "2020"}, {"@type": "ListItem", "position": 3, "url": "https://www.joelevi.com/blog/years/2019/", "name": "2019"}, {"@type": "ListItem", "position": 4, "url": "https://www.joelevi.com/blog/years/2018/", "name": "2018"}, {"@type": "ListItem", "position": 5, "url": "https://www.joelevi.com/blog/years/2017/", "name": "2017"}, {"@type": "ListItem", "position": 6, "url": "https://www.joelevi.com/blog/years/2016/", "name": "2016"}, {"@type": "ListItem", "position": 7, "url": "https://www.joelevi.com/blog/years/2015/", "name": "2015"}, {"@type": "ListItem", "position": 8, "url": "https://www.joelevi.com/blog/years/2014/", "name": "2014"}, {"@type": "ListItem", "position": 9, "url": "https://www.joelevi.com/blog/years/2013/", "name": "2013"}, {"@type": "ListItem", "position": 10, "url": "https://www.joelevi.com/blog/years/2012/", "name": "2012"}, {"@type": "ListItem", "position": 11, "url": "https://www.joelevi.com/blog/years/2011/", "name": "2011"}, {"@type": "ListItem", "position": 12, "url": "https://www.joelevi.com/blog/years/2010/", "name": "2010"}, {"@type": "ListItem", "position": 13, "url": "https://www.joelevi.com/blog/years/2009/", "name": "2009"}, {"@type": "ListItem", "position": 14, "url": "https://www.joelevi.com/blog/years/2008/", "name": "2008"}, {"@type": "ListItem", "position": 15, "url": "https://www.joelevi.com/blog/years/2007/", "name": "2007"}, {"@type": "ListItem", "position": 16, "url": "https://www.joelevi.com/blog/years/2006/", "name": "2006"}, {"@type": "ListItem", "position": 17, "url": "https://www.joelevi.com/blog/years/2005/", "name": "2005"}, {"@type": "ListItem", "position": 18, "url": "https://www.joelevi.com/blog/years/2004/", "name": "2004"}, {"@type": "ListItem", "position": 19, "url": "https://www.joelevi.com/blog/years/2003/", "name": "2003"}, {"@type": "ListItem", "position": 20, "url": "https://www.joelevi.com/blog/years/1999/", "name": "1999"}]}}, {"@type": "BreadcrumbList", "@id": "https://www.joelevi.com/blog/years/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.joelevi.com/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.joelevi.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Years", "item": "https://www.joelevi.com/blog/years/"}]}]}
+	</script>
+	<link rel="stylesheet" href="/assets/site-nav.css" />
+	<script defer src="/assets/site-nav.js"></script>
+	<!-- seo-extra -->
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="alternate" type="application/rss+xml" title="Joe Levi — Articles" href="https://www.joelevi.com/blog/feed.xml" />
+	<!-- /seo-extra -->
+</head>
+<body>
+	<div class="wrap">
+
+		<article class="library">
+			<nav class="site-nav" aria-label="Site">
+				<a class="site-nav__home" href="/">← JoeLevi.com</a>
+				<div class="site-nav__trailing">
+					<button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open menu">
+						<span class="site-nav__burger" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="site-nav__panel" id="site-nav-panel" role="region" aria-label="Site menu" hidden>
+					<ul class="site-nav__list">
+						<li><a href="/?qr=1" data-site-nav-qr><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v6M14 20h3"/></svg>Show QR code</a></li>
+						<li><a href="/joe-levi-public-key.asc" download><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 15h9v-2a3 3 0 0 0-3-3h-2M17 10V7"/></svg>Download PGP key</a></li>
+						<li role="separator" class="site-nav__divider" aria-hidden="true"></li>
+						<li><a href="/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg>Home</a></li>
+						<li><a href="/resume/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8.5 16c.8-1.7 2-2.5 3.5-2.5s2.7.8 3.5 2.5"/></svg>Résumé</a></li>
+						<li><a href="/books/"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 5.5V21M8 7h8M8 11h8"/></svg>Books</a></li>
+						<li><a href="/blog/" aria-current="page"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Articles</a></li>
+					</ul>
+				</div>
+			</nav>
+			<header>
+				<p class="crumbs"><a href="/">Home</a> › <a href="/blog/">Articles</a></p>
+				<h1>Browse by year</h1>
+			</header>
+			<p class="lede"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>All 2492 articles by year of publication, 1999–2021, with post counts.</p>
+			<p class="browse"><a href="/blog/">All articles</a><a href="/blog/categories/">Browse by category</a><a href="/blog/tags/">Browse by tag</a></p>
+			<ul class="term-list">
+				<li><a href="/blog/years/2021/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2021</a> <span class="n">(1)</span></li>
+				<li><a href="/blog/years/2020/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2020</a> <span class="n">(5)</span></li>
+				<li><a href="/blog/years/2019/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2019</a> <span class="n">(9)</span></li>
+				<li><a href="/blog/years/2018/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2018</a> <span class="n">(7)</span></li>
+				<li><a href="/blog/years/2017/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2017</a> <span class="n">(22)</span></li>
+				<li><a href="/blog/years/2016/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2016</a> <span class="n">(21)</span></li>
+				<li><a href="/blog/years/2015/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2015</a> <span class="n">(91)</span></li>
+				<li><a href="/blog/years/2014/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2014</a> <span class="n">(95)</span></li>
+				<li><a href="/blog/years/2013/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2013</a> <span class="n">(87)</span></li>
+				<li><a href="/blog/years/2012/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2012</a> <span class="n">(175)</span></li>
+				<li><a href="/blog/years/2011/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2011</a> <span class="n">(416)</span></li>
+				<li><a href="/blog/years/2010/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2010</a> <span class="n">(473)</span></li>
+				<li><a href="/blog/years/2009/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2009</a> <span class="n">(205)</span></li>
+				<li><a href="/blog/years/2008/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2008</a> <span class="n">(311)</span></li>
+				<li><a href="/blog/years/2007/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2007</a> <span class="n">(320)</span></li>
+				<li><a href="/blog/years/2006/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2006</a> <span class="n">(150)</span></li>
+				<li><a href="/blog/years/2005/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2005</a> <span class="n">(30)</span></li>
+				<li><a href="/blog/years/2004/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2004</a> <span class="n">(43)</span></li>
+				<li><a href="/blog/years/2003/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>2003</a> <span class="n">(17)</span></li>
+				<li><a href="/blog/years/1999/"><svg class="term-icon date-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>1999</a> <span class="n">(14)</span></li>
+			</ul>
+		</article>
+
+		<footer class="page-foot">
+			<p><a href="/">Back to digital business card</a> · <a href="/resume/">Résumé</a> · <a href="/books/">Books</a> · <a href="/blog/">Articles</a></p>
+			<p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <span class="affiliate-note">As an Amazon Associate, Joe earns from qualifying purchases.</span></p>
+			<p>© <span id="y"></span> Joe Levi. All rights reserved.</p>
+		</footer>
+
+		<script>
+			document.getElementById("y").textContent = new Date().getFullYear();
+		</script>
+	</div>
+	<!-- deploy-check: blog-years-index -->
+</body>
+</html>
