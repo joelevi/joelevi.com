@@ -121,6 +121,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/burn-out/",
+      "destination": "/blog/tags/burnout/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/burn-out",
+      "destination": "/blog/tags/burnout/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
