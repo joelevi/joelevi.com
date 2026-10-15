@@ -190,6 +190,7 @@
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 		/* post-terms */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
 		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
 		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -356,8 +357,8 @@ DownsizeDC.org, Inc.</p>
 			</div>
 			<!-- post-terms -->
 			<nav class="post-terms" aria-label="Categories and tags">
-				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/">Uncategorized</a></p>
-				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/fbi/" rel="tag">FBI</a></li><li><a href="/blog/tags/downsizedc/" rel="tag">Downsizedc</a></li></ul>
+				<p class="post-terms__cats">Filed under <a href="/blog/categories/uncategorized/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 18V6a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v2"/><path d="M3 18l2.6-7.1A1.5 1.5 0 0 1 7 10h14a1 1 0 0 1 .95 1.3L19.6 18.6A2 2 0 0 1 17.7 20H5a2 2 0 0 1-2-2z"/></svg>Uncategorized</a></p>
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/fbi/" rel="tag"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>FBI</a></li><li><a href="/blog/tags/downsizedc/" rel="tag"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Downsizedc</a></li></ul>
 			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>

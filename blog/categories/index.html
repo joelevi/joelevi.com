@@ -137,10 +137,12 @@
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 		/* browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
 		.browse a { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
 		.browse a:hover { background: var(--blue-soft); }
 		/* /browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.term-list { list-style: none; margin: 0; padding: 0; columns: 16rem auto; column-gap: 2rem; }
 		.term-list li { padding: 0.3rem 0; break-inside: avoid; }
 		.term-list .n { color: var(--ink-muted); font-size: 0.85rem; }
@@ -183,41 +185,41 @@
 				<h1>Browse by category</h1>
 			</header>
 			<p class="lede">All 33 categories used across the article archive, alphabetical, with post counts.</p>
-			<p class="browse"><a href="/blog/">All articles</a><a href="/blog/tags/">Browse by tag</a></p>
+			<p class="browse"><a href="/blog/">All articles</a><a href="/blog/tags/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Browse by tag</a></p>
 			<ul class="term-list">
-				<li><a href="/blog/categories/about-joe-levi/">About Joe Levi</a> <span class="n">(725)</span></li>
-				<li><a href="/blog/categories/activism/">Activism</a> <span class="n">(271)</span></li>
-				<li><a href="/blog/categories/astoria/">Astoria</a> <span class="n">(3)</span></li>
-				<li><a href="/blog/categories/books/">Books</a> <span class="n">(4)</span></li>
-				<li><a href="/blog/categories/california/">California</a> <span class="n">(2)</span></li>
-				<li><a href="/blog/categories/computers/">Computers</a> <span class="n">(8)</span></li>
-				<li><a href="/blog/categories/consumer-protection/">Consumer Protection</a> <span class="n">(26)</span></li>
-				<li><a href="/blog/categories/definitions/">Definitions</a> <span class="n">(3)</span></li>
-				<li><a href="/blog/categories/education/">Education</a> <span class="n">(92)</span></li>
-				<li><a href="/blog/categories/family/">Family</a> <span class="n">(48)</span></li>
-				<li><a href="/blog/categories/finances/">Finances</a> <span class="n">(100)</span></li>
-				<li><a href="/blog/categories/friends/">Friends</a> <span class="n">(38)</span></li>
-				<li><a href="/blog/categories/gardening/">Gardening</a> <span class="n">(38)</span></li>
-				<li><a href="/blog/categories/ham-radio/">HAM Radio</a> <span class="n">(1)</span></li>
-				<li><a href="/blog/categories/health/">Health</a> <span class="n">(25)</span></li>
-				<li><a href="/blog/categories/humor/">Humor</a> <span class="n">(162)</span></li>
-				<li><a href="/blog/categories/imperial-beach/">Imperial Beach</a> <span class="n">(2)</span></li>
-				<li><a href="/blog/categories/locations/">Locations</a> <span class="n">(7)</span></li>
-				<li><a href="/blog/categories/mindset/">Mindset</a> <span class="n">(5)</span></li>
-				<li><a href="/blog/categories/nevada/">Nevada</a> <span class="n">(1)</span></li>
-				<li><a href="/blog/categories/oregon/">Oregon</a> <span class="n">(3)</span></li>
-				<li><a href="/blog/categories/paragliding/">Paragliding</a> <span class="n">(7)</span></li>
-				<li><a href="/blog/categories/pocketnow/">Pocketnow</a> <span class="n">(371)</span></li>
-				<li><a href="/blog/categories/politics/">Politics</a> <span class="n">(207)</span></li>
-				<li><a href="/blog/categories/product-reviews/">Product Reviews</a> <span class="n">(10)</span></li>
-				<li><a href="/blog/categories/self-defense/">Self-Defense</a> <span class="n">(34)</span></li>
-				<li><a href="/blog/categories/smart-home/">Smart Home</a> <span class="n">(2)</span></li>
-				<li><a href="/blog/categories/sponsors/">Sponsors</a> <span class="n">(1)</span></li>
-				<li><a href="/blog/categories/technology/">Technology</a> <span class="n">(1)</span></li>
-				<li><a href="/blog/categories/trouble-with-the-law/">Trouble with the Law</a> <span class="n">(3)</span></li>
-				<li><a href="/blog/categories/uncategorized/">Uncategorized</a> <span class="n">(761)</span></li>
-				<li><a href="/blog/categories/utah/">Utah</a> <span class="n">(3)</span></li>
-				<li><a href="/blog/categories/web-development/">Web Development</a> <span class="n">(135)</span></li>
+				<li><a href="/blog/categories/about-joe-levi/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>About Joe Levi</a> <span class="n">(725)</span></li>
+				<li><a href="/blog/categories/activism/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Activism</a> <span class="n">(271)</span></li>
+				<li><a href="/blog/categories/astoria/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Astoria</a> <span class="n">(3)</span></li>
+				<li><a href="/blog/categories/books/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Books</a> <span class="n">(4)</span></li>
+				<li><a href="/blog/categories/california/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>California</a> <span class="n">(2)</span></li>
+				<li><a href="/blog/categories/computers/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Computers</a> <span class="n">(8)</span></li>
+				<li><a href="/blog/categories/consumer-protection/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Consumer Protection</a> <span class="n">(26)</span></li>
+				<li><a href="/blog/categories/definitions/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Definitions</a> <span class="n">(3)</span></li>
+				<li><a href="/blog/categories/education/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Education</a> <span class="n">(92)</span></li>
+				<li><a href="/blog/categories/family/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Family</a> <span class="n">(48)</span></li>
+				<li><a href="/blog/categories/finances/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Finances</a> <span class="n">(100)</span></li>
+				<li><a href="/blog/categories/friends/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Friends</a> <span class="n">(38)</span></li>
+				<li><a href="/blog/categories/gardening/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Gardening</a> <span class="n">(38)</span></li>
+				<li><a href="/blog/categories/ham-radio/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>HAM Radio</a> <span class="n">(1)</span></li>
+				<li><a href="/blog/categories/health/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Health</a> <span class="n">(25)</span></li>
+				<li><a href="/blog/categories/humor/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Humor</a> <span class="n">(162)</span></li>
+				<li><a href="/blog/categories/imperial-beach/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Imperial Beach</a> <span class="n">(2)</span></li>
+				<li><a href="/blog/categories/locations/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Locations</a> <span class="n">(7)</span></li>
+				<li><a href="/blog/categories/mindset/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Mindset</a> <span class="n">(5)</span></li>
+				<li><a href="/blog/categories/nevada/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Nevada</a> <span class="n">(1)</span></li>
+				<li><a href="/blog/categories/oregon/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Oregon</a> <span class="n">(3)</span></li>
+				<li><a href="/blog/categories/paragliding/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Paragliding</a> <span class="n">(7)</span></li>
+				<li><a href="/blog/categories/pocketnow/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Pocketnow</a> <span class="n">(371)</span></li>
+				<li><a href="/blog/categories/politics/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Politics</a> <span class="n">(207)</span></li>
+				<li><a href="/blog/categories/product-reviews/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Product Reviews</a> <span class="n">(10)</span></li>
+				<li><a href="/blog/categories/self-defense/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Self-Defense</a> <span class="n">(34)</span></li>
+				<li><a href="/blog/categories/smart-home/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Smart Home</a> <span class="n">(2)</span></li>
+				<li><a href="/blog/categories/sponsors/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Sponsors</a> <span class="n">(1)</span></li>
+				<li><a href="/blog/categories/technology/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Technology</a> <span class="n">(1)</span></li>
+				<li><a href="/blog/categories/trouble-with-the-law/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Trouble with the Law</a> <span class="n">(3)</span></li>
+				<li><a href="/blog/categories/uncategorized/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Uncategorized</a> <span class="n">(761)</span></li>
+				<li><a href="/blog/categories/utah/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Utah</a> <span class="n">(3)</span></li>
+				<li><a href="/blog/categories/web-development/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Web Development</a> <span class="n">(135)</span></li>
 			</ul>
 		</article>
 

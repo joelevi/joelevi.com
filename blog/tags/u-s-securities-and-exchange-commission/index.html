@@ -137,10 +137,12 @@
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 		/* browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
 		.browse a { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
 		.browse a:hover { background: var(--blue-soft); }
 		/* /browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.term-list { list-style: none; margin: 0; padding: 0; columns: 16rem auto; column-gap: 2rem; }
 		.term-list li { padding: 0.3rem 0; break-inside: avoid; }
 		.term-list .n { color: var(--ink-muted); font-size: 0.85rem; }
@@ -182,8 +184,8 @@
 				<p class="crumbs"><a href="/">Home</a> › <a href="/blog/">Articles</a> › <a href="/blog/tags/">Tags</a></p>
 				<h1>U.S. Securities and Exchange Commission</h1>
 			</header>
-			<p class="lede">1 article filed under the tag “U.S. Securities and Exchange Commission,” newest first.</p>
-			<p class="browse"><a href="/blog/tags/">All tags</a><a href="/blog/">All articles</a></p>
+			<p class="lede"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>1 article filed under the tag “U.S. Securities and Exchange Commission,” newest first.</p>
+			<p class="browse"><a href="/blog/tags/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>All tags</a><a href="/blog/">All articles</a></p>
 			<ul class="post-list">
 				<li class="post-list__item"><h2 class="post-list__title"><a href="/blog/the-sec-transparency-act/">The SEC Transparency Act</a></h2><p class="post-list__meta"><time datetime="2010-08-13">August 13, 2010</time></p></li>
 			</ul>

@@ -138,6 +138,7 @@
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 		/* browse */
+		.term-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 0.3em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 		.browse { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
 		.browse a { display: inline-block; padding: 0.3rem 0.85rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.15s ease; }
 		.browse a:hover { background: var(--blue-soft); }
@@ -223,7 +224,7 @@
 			<header>
 				<h1>Articles</h1>
 				<p class="lede" id="articles-h">Writing on technology, web development, leadership, amateur radio, smart home, and life — 2494 posts from 1999–2021, including 371 originally published on Pocketnow.</p>
-				<p class="browse"><a href="/blog/categories/">Browse by category</a><a href="/blog/tags/">Browse by tag</a></p>
+				<p class="browse"><a href="/blog/categories/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Browse by category</a><a href="/blog/tags/"><svg class="term-icon" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Browse by tag</a></p>
 			</header>
 
 			<section aria-labelledby="articles-h">
