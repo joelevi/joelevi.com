@@ -211,6 +211,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/congress-org/",
+      "destination": "/blog/tags/congress/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/congress-org",
+      "destination": "/blog/tags/congress/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
