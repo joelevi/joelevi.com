@@ -861,6 +861,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/partisan/",
+      "destination": "/blog/tags/partisan-politics/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/partisan",
+      "destination": "/blog/tags/partisan-politics/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/president-u-s-executive-branch/",
       "destination": "/blog/tags/president/",
       "permanent": true
