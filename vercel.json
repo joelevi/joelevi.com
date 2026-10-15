@@ -681,6 +681,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/lds/",
+      "destination": "/blog/tags/church-of-jesus-christ-of-latter-day-saints/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/lds",
+      "destination": "/blog/tags/church-of-jesus-christ-of-latter-day-saints/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/lighting-technology-joe-family-friends-family/",
       "destination": "/blog/tags/lighting/",
       "permanent": true
@@ -738,6 +748,16 @@
     {
       "source": "/blog/tags/monstanto",
       "destination": "/blog/tags/monsanto/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mormon/",
+      "destination": "/blog/tags/church-of-jesus-christ-of-latter-day-saints/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/mormon",
+      "destination": "/blog/tags/church-of-jesus-christ-of-latter-day-saints/",
       "permanent": true
     },
     {
