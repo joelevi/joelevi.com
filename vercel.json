@@ -91,6 +91,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/balanced-budget/",
+      "destination": "/blog/tags/balanced-budget-amendment/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/balanced-budget",
+      "destination": "/blog/tags/balanced-budget-amendment/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/barter/",
       "destination": "/blog/tags/bartering/",
       "permanent": true
@@ -601,6 +611,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/kagan/",
+      "destination": "/blog/tags/elena-kagan/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/kagan",
+      "destination": "/blog/tags/elena-kagan/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/lighting-technology-joe-family-friends-family/",
       "destination": "/blog/tags/lighting/",
       "permanent": true
@@ -708,6 +728,36 @@
     {
       "source": "/blog/tags/nsa",
       "destination": "/blog/tags/national-security-agency/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offence/",
+      "destination": "/blog/tags/offense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offence",
+      "destination": "/blog/tags/offense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offended/",
+      "destination": "/blog/tags/offense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offended",
+      "destination": "/blog/tags/offense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offensive/",
+      "destination": "/blog/tags/offense/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/offensive",
+      "destination": "/blog/tags/offense/",
       "permanent": true
     },
     {
