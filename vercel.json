@@ -661,6 +661,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/nsa/",
+      "destination": "/blog/tags/national-security-agency/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/nsa",
+      "destination": "/blog/tags/national-security-agency/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/orrin-hatch-2/",
       "destination": "/blog/tags/orrin-hatch/",
       "permanent": true
