@@ -131,6 +131,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/galaxy-s-2/",
+      "destination": "/blog/tags/galaxy-s-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/galaxy-s-2",
+      "destination": "/blog/tags/galaxy-s-ii/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/galaxy-s-ii-at-t/",
       "destination": "/blog/tags/galaxy-s-ii-att/",
       "permanent": true
@@ -151,6 +161,366 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/h-r-1098/",
+      "destination": "/blog/tags/hr-1098/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1098",
+      "destination": "/blog/tags/hr-1098/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1207/",
+      "destination": "/blog/tags/hr-1207/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1207",
+      "destination": "/blog/tags/hr-1207/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1264/",
+      "destination": "/blog/tags/hr-1264/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1264",
+      "destination": "/blog/tags/hr-1264/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1364/",
+      "destination": "/blog/tags/hr-1364/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1364",
+      "destination": "/blog/tags/hr-1364/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1473/",
+      "destination": "/blog/tags/hr-1473/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1473",
+      "destination": "/blog/tags/hr-1473/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1540/",
+      "destination": "/blog/tags/hr-1540/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1540",
+      "destination": "/blog/tags/hr-1540/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1586/",
+      "destination": "/blog/tags/hr-1586/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-1586",
+      "destination": "/blog/tags/hr-1586/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-217/",
+      "destination": "/blog/tags/hr-217/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-217",
+      "destination": "/blog/tags/hr-217/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-2560/",
+      "destination": "/blog/tags/hr-2560/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-2560",
+      "destination": "/blog/tags/hr-2560/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-2749/",
+      "destination": "/blog/tags/hr-2749/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-2749",
+      "destination": "/blog/tags/hr-2749/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3/",
+      "destination": "/blog/tags/hr-3/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3",
+      "destination": "/blog/tags/hr-3/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3081/",
+      "destination": "/blog/tags/hr-3081/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3081",
+      "destination": "/blog/tags/hr-3081/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3082/",
+      "destination": "/blog/tags/hr-3082/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3082",
+      "destination": "/blog/tags/hr-3082/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-358/",
+      "destination": "/blog/tags/hr-358/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-358",
+      "destination": "/blog/tags/hr-358/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3590/",
+      "destination": "/blog/tags/hr-3590/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-3590",
+      "destination": "/blog/tags/hr-3590/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4/",
+      "destination": "/blog/tags/hr-4/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4",
+      "destination": "/blog/tags/hr-4/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4173/",
+      "destination": "/blog/tags/hr-4173/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4173",
+      "destination": "/blog/tags/hr-4173/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4213/",
+      "destination": "/blog/tags/hr-4213/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4213",
+      "destination": "/blog/tags/hr-4213/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-459/",
+      "destination": "/blog/tags/hr-459/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-459",
+      "destination": "/blog/tags/hr-459/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4872/",
+      "destination": "/blog/tags/hr-4872/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4872",
+      "destination": "/blog/tags/hr-4872/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4995/",
+      "destination": "/blog/tags/hr-4995/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-4995",
+      "destination": "/blog/tags/hr-4995/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-514/",
+      "destination": "/blog/tags/hr-514/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-514",
+      "destination": "/blog/tags/hr-514/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5175/",
+      "destination": "/blog/tags/hr-5175/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5175",
+      "destination": "/blog/tags/hr-5175/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5297/",
+      "destination": "/blog/tags/hr-5297/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5297",
+      "destination": "/blog/tags/hr-5297/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-554/",
+      "destination": "/blog/tags/hr-554/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-554",
+      "destination": "/blog/tags/hr-554/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5741/",
+      "destination": "/blog/tags/hr-5741/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5741",
+      "destination": "/blog/tags/hr-5741/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5970/",
+      "destination": "/blog/tags/hr-5970/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-5970",
+      "destination": "/blog/tags/hr-5970/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-6416/",
+      "destination": "/blog/tags/hr-6416/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-6416",
+      "destination": "/blog/tags/hr-6416/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-67/",
+      "destination": "/blog/tags/hr-67/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/h-r-67",
+      "destination": "/blog/tags/hr-67/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb0059/",
+      "destination": "/blog/tags/hb-0059/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb0059",
+      "destination": "/blog/tags/hb-0059/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb0076/",
+      "destination": "/blog/tags/hb-0076/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb0076",
+      "destination": "/blog/tags/hb-0076/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb253/",
+      "destination": "/blog/tags/hb-253/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb253",
+      "destination": "/blog/tags/hb-253/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb477/",
+      "destination": "/blog/tags/hb-477/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb477",
+      "destination": "/blog/tags/hb-477/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb49/",
+      "destination": "/blog/tags/hb-49/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb49",
+      "destination": "/blog/tags/hb-49/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb52/",
+      "destination": "/blog/tags/hb-52/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb52",
+      "destination": "/blog/tags/hb-52/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb71/",
+      "destination": "/blog/tags/hb-71/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hb71",
+      "destination": "/blog/tags/hb-71/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/health-2/",
       "destination": "/blog/tags/health/",
       "permanent": true
@@ -158,6 +528,26 @@
     {
       "source": "/blog/tags/health-2",
       "destination": "/blog/tags/health/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hjr37/",
+      "destination": "/blog/tags/hjr-37/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hjr37",
+      "destination": "/blog/tags/hjr-37/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hr5297/",
+      "destination": "/blog/tags/hr-5297/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/hr5297",
+      "destination": "/blog/tags/hr-5297/",
       "permanent": true
     },
     {
@@ -218,6 +608,66 @@
     {
       "source": "/blog/tags/rfbkc",
       "destination": "/blog/tags/rfb-kc/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/s3/",
+      "destination": "/blog/tags/s-3/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/s3",
+      "destination": "/blog/tags/s-3/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/s3111/",
+      "destination": "/blog/tags/s-3111/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/s3111",
+      "destination": "/blog/tags/s-3111/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb113/",
+      "destination": "/blog/tags/sb-113/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb113",
+      "destination": "/blog/tags/sb-113/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb261/",
+      "destination": "/blog/tags/sb-261/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb261",
+      "destination": "/blog/tags/sb-261/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb43/",
+      "destination": "/blog/tags/sb-43/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb43",
+      "destination": "/blog/tags/sb-43/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb54/",
+      "destination": "/blog/tags/sb-54/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/sb54",
+      "destination": "/blog/tags/sb-54/",
       "permanent": true
     },
     {
