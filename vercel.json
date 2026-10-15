@@ -151,6 +151,26 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/campaign-for-liverty/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/campaign-for-liverty",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/campaign4liberty/",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/campaign4liberty",
+      "destination": "/blog/tags/campaign-for-liberty/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
