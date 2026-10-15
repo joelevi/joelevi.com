@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/rights-to-representation-getting-trampled-by-politics-your-help-needed/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "North Cedar Hills",
+        "State",
+        "State Senate",
+        "sb113"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -306,6 +319,10 @@
 
 <p><a href="mailto:waddoups@utahsenate.org" target="_blank">waddoups@utahsenate.org</a>, <a href="mailto:sjenkins@utahsenate.org" target="_blank">sjenkins@utahsenate.org</a>, <a href="mailto:wniederhauser@utahsenate.org" target="_blank">wniederhauser@utahsenate.org</a>, <a href="mailto:pknudson@utahsenate.org" target="_blank">pknudson@utahsenate.org</a>,<a href="mailto:rromero@utahsenate.org" target="_blank">rromero@utahsenate.org</a>,<a href="mailto:kmorgan@utahsenate.org" target="_blank">kmorgan@utahsenate.org</a>, <a href="mailto:pjones@utahsenate.org" target="_blank">pjones@utahsenate.org</a>, <a href="mailto:lrobles@utahsenate.org" target="_blank">lrobles@utahsenate.org</a>, <a href="mailto:bmcadams@utahsenate.org" target="_blank">bmcadams@utahsenate.org</a>,<a href="mailto:gdavis@utahsenate.org" target="_blank">gdavis@utahsenate.org</a>,<a href="mailto:kmayne@utahsenate.org" target="_blank">kmayne@utahsenate.org</a>, <a href="mailto:hstephenson@utahsenate.org" target="_blank">hstephenson@utahsenate.org</a>, <a href="mailto:dcbuttars@utahsenate.org" target="_blank">dcbuttars@utahsenate.org</a>, <a href="mailto:dthatcher@utahsenate.org" target="_blank">dthatcher@utahsenate.org</a>,<a href="mailto:mmadsen@utahsenate.org" target="_blank">mmadsen@utahsenate.org</a>,<a href="mailto:jvalentine@utahsenate.org" target="_blank">jvalentine@utahsenate.org</a>, <a href="mailto:mdayton@utahsenate.org" target="_blank">mdayton@utahsenate.org</a>, <a href="mailto:curt@cbramble.com" target="_blank">curt@cbramble.com</a>, <a href="mailto:screid@utahsenate.org" target="_blank">screid@utahsenate.org</a>,<a href="mailto:achristensen@utahsenate.org" target="_blank">achristensen@utahsenate.org</a>,<a href="mailto:jwstevenson@utahsenate.org" target="_blank">jwstevenson@utahsenate.org</a>, <a href="mailto:jsadams@utahsenate.org" target="_blank">jsadams@utahsenate.org</a>, <a href="mailto:dliljenquist@utahsenate.org" target="_blank">dliljenquist@utahsenate.org</a>, <a href="mailto:rokerlund@utahsenate.org" target="_blank">rokerlund@utahsenate.org</a>,<a href="mailto:lhillyard@utahsenate.org" target="_blank">lhillyard@utahsenate.org</a>,<a href="mailto:kvantassell@utahsenate.org" target="_blank">kvantassell@utahsenate.org</a>, <a href="mailto:dhinkins@utahsenate.org" target="_blank">dhinkins@utahsenate.org</a>, <a href="mailto:dstowell@utahsenate.org" target="_blank">dstowell@utahsenate.org</a>, <a href="mailto:surquhart@utahsenate.org" target="_blank">surquhart@utahsenate.org</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/north-cedar-hills/" rel="tag">North Cedar Hills</a></li><li><a href="/blog/tags/state/" rel="tag">State</a></li><li><a href="/blog/tags/state-senate/" rel="tag">State Senate</a></li><li><a href="/blog/tags/sb113/" rel="tag">sb113</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

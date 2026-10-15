@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/i-drink-too-much-caffeine/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>A co-worker of mind started stacking his Dr. Pepper cans on the wall, so <a href="https://www.mikedopp.com" target="_blank">Mike</a> and I decided to contribute our Diet Mt. Dew and Mt. Dew (respectively).</p>  <p>The scary thing about this wall? There are 300 cans per layer… and we’re half done with our 3rd layer.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0390.jpg"><img title="IMAG0390" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0390" src="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0390-thumb.jpg" width="244" border="0" /></a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-4-building-and-securing-the-tower/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Projects",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -281,6 +293,10 @@ ed
 
 n the eve (on two sides, into the edge of the roof (and into the eve) on the third side). I heavily caulked these anchor points to keep water out of the holes.</p>  <p>To the anchors I attached a quick link (pictured), then the turnbuckle (you’ll want two eye-bolts on your turnbuckle, not a hook and eye) then the “thimbled” guy wire. </p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/10/image10.png"><img title="image" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="100" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/10/image-thumb9.png" width="75" align="right" border="0" /></a> With the turnbuckle fully extended, I pulled the wire as tightly as I could by hand, then clamped it in place using three wire-rope clamps (see illustration for proper clamping method).</p>  <p><a href="https://www.tpub.com/content/construction/14251/img/14251_138_1.jpg" target="_blank"><img title="image" style="border-top-width: 0px; display: block; border-left-width: 0px; float: none; border-bottom-width: 0px; margin-left: auto; margin-right: auto; border-right-width: 0px" height="289" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/10/image11.png" width="358" border="0" /></a></p>  <p></p>  <p></p>  <p></p>  <h3>Article Conclusion</h3>  <p>Wow, that was a lot of information to digest, but possibly the most important part of your wind turbine installation.</p>  <p>So now, if you’re following along with me, you should have a 30-foot grounded and guyed tower standing against your house, seated on a pivoting base (to help you raise and lower the tower), and a means of securing the tower when erected.</p>  <p>All that’s left now is the actual turbine and the electrical!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

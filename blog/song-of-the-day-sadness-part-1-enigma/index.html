@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/song-of-the-day-sadness-part-1-enigma/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products",
+        "Music",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p>Somewhat dark vocals, tribal flute, Gregorian chants, with a strong beat to hold everything together.</p>  <p>Fitting for what’s been happening at work…</p>  <div class="wlWriterSmartContent" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:ac3b8193-c6b0-4e6e-9b85-906c7addfa01" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><div id="f782e6e4-7855-47d9-9489-e52b72557dda" style="margin: 0px; padding: 0px; display: inline;"><div><a href="https://www.youtube.com/watch?v=_tK-u7fCK8M" target="_new"><img src="https://www.joelevi.com/blog/wp-content/uploads/2008/08/videoae97151860431.jpg" galleryimg="no" onload="var downlevelDiv = document.getElementById('f782e6e4-7855-47d9-9489-e52b72557dda'); downlevelDiv.innerHTML = "<div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/_tK-u7fCK8M"></param><param name="wmode" value="transparent"></param><embed src="https://www.youtube.com/v/_tK-u7fCK8M" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></div>";" alt=""/></a></div></div></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/music/" rel="tag">Music</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

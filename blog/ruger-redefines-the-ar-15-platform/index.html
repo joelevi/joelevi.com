@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/ruger-redefines-the-ar-15-platform/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "ar-15",
+        "nato",
+        "piston driven",
+        "rifle",
+        "ruger",
+        "sr-556",
+        "tactical rifle"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <p><a href="https://www.ruger.com/" target="_blank">Ruger</a> just introduced their first AR-15, the SR-556™, a two-stage piston driver AR-style rifle. According to <a href="https://www.ruger.com/SR556/index.html" target="_blank">their website</a>, the piston driven SR-556™ “runs cleaner, cooler, and is easier to maintain than gas-driven rifles.” </p>  <p>Awesome. For anyone out there, my birthday is in September. ;) </p> <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="995" height="500">       <param name="movie" value="http://www.ruger.com/SR556/flash/video.swf">       </param><param name="quality" value="high">       </param><param name="wmode" value="opaque">       <embed src="https://www.ruger.com/SR556/flash/video.swf" width="995" height="500" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="opaque"></embed>     </param></object>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/ar-15/" rel="tag">ar-15</a></li><li><a href="/blog/tags/nato/" rel="tag">nato</a></li><li><a href="/blog/tags/piston-driven/" rel="tag">piston driven</a></li><li><a href="/blog/tags/rifle/" rel="tag">rifle</a></li><li><a href="/blog/tags/ruger/" rel="tag">ruger</a></li><li><a href="/blog/tags/sr-556/" rel="tag">sr-556</a></li><li><a href="/blog/tags/tactical-rifle/" rel="tag">tactical rifle</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

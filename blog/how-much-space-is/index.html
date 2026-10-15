@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/how-much-space-is/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Dialog box",
+        "storage space",
+        "windows"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/files/blog-attachments/Howmuchspaceis_D420/DiskCleanup.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="Disk-Cleanup" border="0" alt="Disk-Cleanup" align="right" src="https://www.joelevi.com/files/blog-attachments/Howmuchspaceis_D420/DiskCleanup_thumb.png" width="356" height="414" /></a> My buddy was using the Windows Disk Cleanup Wizard and was presented with this dialog box. That leaves us both wondering, exactly how much is “()+///.*-” worth of Temporary Internet Files?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/dialog-box/" rel="tag">Dialog box</a></li><li><a href="/blog/tags/storage-space/" rel="tag">storage space</a></li><li><a href="/blog/tags/windows/" rel="tag">windows</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

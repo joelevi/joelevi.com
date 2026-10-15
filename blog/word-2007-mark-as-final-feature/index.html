@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/word-2007-mark-as-final-feature/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/images/Word2007MarkasFinalfeature_B94C/image.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="244" alt="image" src="https://www.joelevi.com/images/Word2007MarkasFinalfeature_B94C/image_thumb.png" width="201" align="right" border="0" /></a> Word 2007 has a feature called &quot;Mark as Final&quot; where one can &quot;Let readers know the document is final and make it read-only.&quot; You can mark your document as final by going to the &quot;ball menu&quot; and mousing over Prepare. Additionally, you can see if a document has been marked as final by looking in the status bar (see figures to the right).<a href="https://www.joelevi.com/images/Word2007MarkasFinalfeature_B94C/image_3.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="46" alt="image" src="https://www.joelevi.com/images/Word2007MarkasFinalfeature_B94C/image_thumb_3.png" width="244" align="right" border="0" /></a> </p>  <p>Marking as Final sounds pretty good, right?</p>  <p>It should be noted that this does not redact any personal information, nor does it scrub any document history, nor does it ask for any additional information (meta-data). For those you'll want to use the &quot;Inspect Document&quot; feature and &quot;Properties&quot; feature in the same menu.</p>  <p>Also of note is that the &quot;Mark as Final&quot; process does not digitally sign (or prompt you to add a digital signature). That also is another feature in the same menu.</p>  <p>I mention these because they (in my mind) are all part of the same &quot;finalization&quot; process and should probably be offered in a &quot;one click&quot; wizard or dialog... but they're not.</p>  <p>Which brings me to my next tidbit of information... if you find yourself wanting to edit one of the files that you've previously marked as final, you cannot edit it. Instead you're met with an error message which reads &quot;This modification is not allowed because the selection is locked.&quot; Well, that makes sense, but how do you UN-lock it? Right-click on the status-bar icon? No, go to the review tab and find &quot;unlock document&quot;? No again.</p>  <p>Instead, to unlock the document you go back to the ball-menu, back to prepare, and back to &quot;Mark as Final.&quot; When a document is already marked as final, clicking &quot;Mark as Final&quot; does the opposite of what it says, it UN-marks as final. Confusing? Sure. But now you know how to do it. You can thank me however you'd like. ;)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

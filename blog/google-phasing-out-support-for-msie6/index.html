@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,19 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/google-phasing-out-support-for-msie6/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "800 pound gorilla",
+        "chrome",
+        "firefox",
+        "gmail",
+        "Google",
+        "internet explorer",
+        "mozilla",
+        "msie6",
+        "safari",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -293,6 +312,10 @@
 
 <p>If you are running Internet Explorer, please take a moment to upgrade to either <a title="Download Chrome" href="https://www.google.com/chrome/?utm_campaign=en&amp;utm_source=en-ha-na-us-bk-gen&amp;utm_medium=ha" target="_blank">Chrome</a>, <a title="Download Firefox" href="https://www.mozilla.com/en-US/firefox/firefox.html" target="_blank">Firefox</a>, or <a title="Download Safari" href="https://www.apple.com/safari/download/" target="_blank">Safari</a>.</p></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/800-pound-gorilla/" rel="tag">800 pound gorilla</a></li><li><a href="/blog/tags/chrome/" rel="tag">chrome</a></li><li><a href="/blog/tags/firefox/" rel="tag">firefox</a></li><li><a href="/blog/tags/gmail/" rel="tag">gmail</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/internet-explorer/" rel="tag">internet explorer</a></li><li><a href="/blog/tags/mozilla/" rel="tag">mozilla</a></li><li><a href="/blog/tags/msie6/" rel="tag">msie6</a></li><li><a href="/blog/tags/safari/" rel="tag">safari</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

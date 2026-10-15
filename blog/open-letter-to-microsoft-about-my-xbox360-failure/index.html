@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/open-letter-to-microsoft-about-my-xbox360-failure/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Media Center",
+        "Open Letter",
+        "Red Ring of Death",
+        "Technical Support",
+        "Vista",
+        "XBOX",
+        "XBOX 360",
+        "XBOX360"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -283,6 +300,10 @@
 
 <p>Continued at source: http://blog.joelevi.com/post/2008/04/Open-Letter-to-Microsoft-about-my-XBOX360-Failure.aspx</p></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/media-center/" rel="tag">Media Center</a></li><li><a href="/blog/tags/open-letter/" rel="tag">Open Letter</a></li><li><a href="/blog/tags/red-ring-of-death/" rel="tag">Red Ring of Death</a></li><li><a href="/blog/tags/technical-support/" rel="tag">Technical Support</a></li><li><a href="/blog/tags/vista-operating-systems-technology-joe-family-friends-family/" rel="tag">Vista</a></li><li><a href="/blog/tags/xbox-technology-joe-family-friends-family/" rel="tag">XBOX</a></li><li><a href="/blog/tags/xbox-360/" rel="tag">XBOX 360</a></li><li><a href="/blog/tags/xbox360/" rel="tag">XBOX360</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/more-star-trek-awesomeness-for-your-home/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "gendy alimurung",
+        "LCARS",
+        "nerdy decor",
+        "science fiction",
+        "star trek",
+        "thinkgeek",
+        "TNG"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +301,10 @@
 
 <p>And if you’re one of the people that likes putting little fishes on your car, they’ve got this, too.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/gendy-alimurung/" rel="tag">gendy alimurung</a></li><li><a href="/blog/tags/lcars/" rel="tag">LCARS</a></li><li><a href="/blog/tags/nerdy-decor/" rel="tag">nerdy decor</a></li><li><a href="/blog/tags/science-fiction/" rel="tag">science fiction</a></li><li><a href="/blog/tags/star-trek/" rel="tag">star trek</a></li><li><a href="/blog/tags/thinkgeek/" rel="tag">thinkgeek</a></li><li><a href="/blog/tags/tng/" rel="tag">TNG</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

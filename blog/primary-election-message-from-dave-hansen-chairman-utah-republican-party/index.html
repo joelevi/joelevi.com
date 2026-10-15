@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/primary-election-message-from-dave-hansen-chairman-utah-republican-party/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "vote",
+        "utah republican party",
+        "utah gop",
+        "dave hansen",
+        "chairman",
+        "#utpol"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -293,6 +308,10 @@
 
 <p>For early voting locations, click <a href="https://r20.rs6.net/tn.jsp?et=1103489677772&amp;s=35928&amp;e=001QQp43irQJWtIr6o-ZCmf-rZM6A-jffA5VgUOqT9YTn9hFPmqvnOpQMICTe7YIsjTZOzWrBEIMh9J0bmQsbERAb9AnCetpNB7bOABHCGlYWIpfrt-Nke151U7TJAEItdBaX1a538YWHq2MB1yD3An1_cCj0zEqdnG89Sl667pMELFQkYz1TLXTw==">here</a>. For Primary information, click <a href="https://r20.rs6.net/tn.jsp?et=1103489677772&amp;s=35928&amp;e=001QQp43irQJWvOJs2ciEMdPRpIx-Sl-goKwVPCzcYpATfNGWWMpBV-5EP0S0o9uAFQMGHE6CkxA6HXbA2m-x6oYGg64o-iIBzG2jgqiD_1PGOzI1D3r7Ab2k8vCH90U0b-RRPCxV4jGMM=">here</a>.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/vote/" rel="tag">vote</a></li><li><a href="/blog/tags/utah-republican-party/" rel="tag">utah republican party</a></li><li><a href="/blog/tags/utah-gop/" rel="tag">utah gop</a></li><li><a href="/blog/tags/dave-hansen/" rel="tag">dave hansen</a></li><li><a href="/blog/tags/chairman/" rel="tag">chairman</a></li><li><a href="/blog/tags/utpol/" rel="tag">#utpol</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

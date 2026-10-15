@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,22 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/amazon-web-services-sale/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "amazon",
+        "amazon web services",
+        "aws",
+        "cdn",
+        "cloud",
+        "content distribution network",
+        "Google",
+        "hosted storage",
+        "podcast",
+        "sale",
+        "teaser",
+        "Freelance",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +299,10 @@
 			<div class="post-body">
 <h3>Background</h3>  <p>If you’re not familiar with Amazon Web Services (AWS), it’s a set of services that Amazon uses for their business and has extended to the general public as well. Most notably is their cloud storage and content distribution network (CDN), which I have been tinkering with.</p>  <p>Cloud storage and CDN allow a provider to keep files online (“in the cloud”) and spread over a redundant amount of servers; that in and of itself is pretty cool from a stability and reliability standpoint. Where it gets even cooler is through the advantages that a CDN provides.</p>  <p>Take Google for example. There is no single “Google Server” out there. Whenever you use any of Google’s (rapidly expanding number of) services you hit their Content Distribution Network. Your data is then retrieved from the closest point on the CDN and relayed to you. This not only distributes the load across Google’s servers, it also spreads the load across the innerwebs and speeds up the overall process.</p>  <p>Amazon does their same thing with their CDN. With their storage solution, you can contract with them to host your files, then serve them back to you (if you’re using it as a private, off-site backup) or the the public (if you’re using them as your file host). You are then billed for the storage, the number of access requests, and the amount of data transferred.</p>  <p>That last sentence probably scared a bunch of people off, but it shouldn’t. This isn’t a commercial or paid post for Amazon, so I’m not going to get into details about their pricing (you can find that out for yourself), but I will tell you it’s dirt cheap. A run-of-the-mill podcaster could host their audio files on Amazon’s CDN, and with the little money they bring in from Google Ads, inLinks, or in-audio ads, be able to more than pay for the bandwidth (by my reckoning, I haven’t tested podcasting yet – yes, that’s a teaser).</p>  <h3>So why am I telling you all this?</h3>  <p>Anyhow, that’s a really long intro to a very simple post (but for my non-techie readers, a necessary one).</p>  <p>I got an email from AWS this morning that contained the following:</p>  <blockquote>   <p>We also want to remind you to take advantage of <a href="https://www.amazon.com/gp/r.html?R=2W20EOI6F0VZZ&amp;C=36R0KDFENUVDT&amp;H=AHABZ6YIHUAFWIEUFGQP1KAGX58A&amp;T=C&amp;U=http%3A%2F%2Faws.amazon.com%2Fs3">Amazon S3's anniversary pricing</a> of data transfer in for only <strong>$0.03 per GB</strong>. This offer <strong>ends June 30</strong> so it is a good time to upload your existing data into Amazon S3 and benefit from this discounted rate (regularly $0.10 per GB). [ed: emphasis added.]</p> </blockquote>  <p>There you go, 70% off data transfers before the end of June. If you need to do a lot of backups (or start backing up to an off-site location), this is your chance to get the bulk of your data up there – after that incremental backups are much smaller.</p>  <p>So there ya go, you’ve been told.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/amazon/" rel="tag">amazon</a></li><li><a href="/blog/tags/amazon-web-services/" rel="tag">amazon web services</a></li><li><a href="/blog/tags/aws/" rel="tag">aws</a></li><li><a href="/blog/tags/cdn/" rel="tag">cdn</a></li><li><a href="/blog/tags/cloud/" rel="tag">cloud</a></li><li><a href="/blog/tags/content-distribution-network/" rel="tag">content distribution network</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/hosted-storage/" rel="tag">hosted storage</a></li><li><a href="/blog/tags/podcast/" rel="tag">podcast</a></li><li><a href="/blog/tags/sale/" rel="tag">sale</a></li><li><a href="/blog/tags/teaser/" rel="tag">teaser</a></li><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/mitt-romney-backs-obamacares-individual-mandate/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "mitt",
+        "President",
+        "U.S. Executive Branch",
+        "mitt romney",
+        "obamacare",
+        "romney"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -283,6 +298,10 @@
 
 <p>"Our experience also demonstrates that getting every citizen insured doesn’t have to break the bank. <strong>First, we established incentives for those who were uninsured to buy insurance. Using tax penalties, as we did, or tax credits, as others have proposed, encourages 'free riders' to take responsibility for themselves rather than pass their medical costs on to others.</strong> This doesn’t cost the government a single dollar. Second, we helped pay for our new program by ending an old one — something government should do more often. The federal government sends an estimated $42 billion to hospitals that care for the poor: Use those funds instead to help the poor buy private insurance, as we did.”</blockquote></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/mitt/" rel="tag">mitt</a></li><li><a href="/blog/tags/president-u-s-executive-branch/" rel="tag">President</a></li><li><a href="/blog/tags/u-s-executive-branch/" rel="tag">U.S. Executive Branch</a></li><li><a href="/blog/tags/mitt-romney/" rel="tag">mitt romney</a></li><li><a href="/blog/tags/obamacare/" rel="tag">obamacare</a></li><li><a href="/blog/tags/romney/" rel="tag">romney</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

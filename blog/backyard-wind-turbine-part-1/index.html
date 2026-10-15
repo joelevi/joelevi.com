@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-1/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Projects",
+        "Solar Power",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -349,6 +362,10 @@
 
 <ol>   <li>Mook, for inspiring me to action </li>    <li>Brett, for bouncing ideas off </li>    <li>My <a href="https://natalie.joelevi.com" target="_blank" rel="met contact spouse sweetheart muse collegue neighbor">wife</a> and family, for putting up with “crazy dad” </li>    <li><a href="https://www.syracuseut.com" target="_blank">Syracuse City</a> Ordinance Department, for helping us through the red tape </li>    <li><a href="https://www.TheKevDog.com" target="_blank">theKevDog</a>, for detailing his project       <ol>       <li><a title="http://www.thekevdog.com/projects/wind_generator/" href="https://www.thekevdog.com/projects/wind_generator/">http://www.thekevdog.com/projects/wind_generator/</a> </li>     </ol>   </li>    <li>Vela Creations, for publishing their plans      <ol>       <li><a title="http://www.velacreations.com/" href="https://www.velacreations.com/">http://www.velacreations.com/</a> </li>        <li><a title="http://www.velacreations.com/chispito.html" href="https://www.velacreations.com/chispito.html">http://www.velacreations.com/chispito.html</a> </li>        <li><a title="http://www.velacreations.com/chispitoinstall.html" href="https://www.velacreations.com/chispitoinstall.html">http://www.velacreations.com/chispitoinstall.html</a> </li>     </ol>   </li>    <li>Larry Lawrence, Jr., for detailing his projects (especially regarding cutting blades)       <ol>       <li>http://larrylawrencejr.com/wind-generator-faq/ </li>        <li>http://larrylawrencejr.com/category/wind-generators/ </li>        <li>http://larrylawrencejr.com/category/wind-generators/blades/ </li>     </ol>   </li>    <li><a href="https://www.windstuffnow.com" target="_blank">Ed Lenz</a>, for being the guy that piqued my curiosity when I went looking for vertical-axis wind turbines (VAWTs) and for coming up with the “Lenz Turbine 2” design (which I plan on building later)       <ol>       <li><a title="http://www.palebludot.com/2008/01/08/ed-lenzs-wind-turbine-powered-home/" href="https://www.palebludot.com/2008/01/08/ed-lenzs-wind-turbine-powered-home/">http://www.palebludot.com/2008/01/08/ed-lenzs-wind-turbine-powered-home/</a> </li>        <li><a title="http://www.windstuffnow.com/main/" href="https://www.windstuffnow.com/main/">http://www.windstuffnow.com/main/</a> </li>        <li>http://www.windstuffnow.com/main/ametek_motor.htm </li>        <li><a title="http://www.windstuffnow.com/main/vawt.htm" href="https://www.windstuffnow.com/main/vawt.htm">http://www.windstuffnow.com/main/vawt.htm</a> </li>        <li><a title="http://www.windstuffnow.com/main/lenz2_turbine.htm" href="https://www.windstuffnow.com/main/lenz2_turbine.htm">http://www.windstuffnow.com/main/lenz2_turbine.htm</a> </li>        <li><a title="http://www.popsci.com/diy/article/2007-07/going-wind" href="https://www.popsci.com/diy/article/2007-07/going-wind">http://www.popsci.com/diy/article/2007-07/going-wind</a> </li>     </ol>   </li> </ol>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/solar-power/" rel="tag">Solar Power</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

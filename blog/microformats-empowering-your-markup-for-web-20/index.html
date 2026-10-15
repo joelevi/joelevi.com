@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,23 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/microformats-empowering-your-markup-for-web-20/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "book",
+        "code",
+        "design",
+        "html",
+        "library",
+        "meta-data",
+        "review",
+        "semantics",
+        "Web Development",
+        "xHTML",
+        "Freelance",
+        "Reviews",
+        "Totally Awesome Computers",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +300,10 @@
 			<div class="post-body">
 <p>I’ve been a web developer in some capacity since 1994. That makes me an old-timer (or “early adopter” depending on your perspective). I’ve taken training courses, college classes, and attended user groups and big-dollar conventions regarding how exactly to write good pages for the interwebs.</p>  <p>Let me be bold, <em>Microformats: Empowering Your Markup for Web 2.0</em> is the single most valuable books about marking up content and writing web-code that I’ve ever seen. More so, it should be required reading for anyone who wants to put even a scrap of data up on the web.</p>  <p>The book says it’s all about Microformats, using rich semantics in your markup to make it machine-readable without sacrificing human-readability. But before author John Allsopp gets to that point he gives you a concise history of the web, its humble beginnings, and the root intent of the text-markup we call HTML. He then advocates semantic markup, using tags the way they’re intended, clean separation of content from design, and warns against the use of tags for the sole purpose of design (DIV-hell, tabular layout, etc.).</p>  <p>After all that, then Allsopp gets into the guts: Microformats, what they are, and how and when to use them. They’re little nuggets of goodness that wrap various types of data such as contacts, calendar events, reviews, locations and addresses, etc. He provides a standard way of marking these up so users can achieve a consistent appearance, but more importantly, so scripts and spiders can “read” this information in a much richer format because with microformats they now not only know the words, but they know the meaning behind the words (that’s called meta-data for all you noobs, oh, and if you don’t know what a noob is, you probably are one).</p>  <p>If you do any kind of markup, you owe it to yourself to read this book!</p> <iframe style="width: 120px; height: 240px" marginheight="0" src="https://rcm.amazon.com/e/cm?t=leviz&amp;o=1&amp;p=8&amp;l=as1&amp;asins=1590598148&amp;md=10FE9736YVPPT7A0FBG2&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=0000FF&amp;bc1=000000&amp;bg1=FFFFFF&amp;f=ifr" frameborder="0" marginwidth="0" scrolling="no"></iframe>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/book/" rel="tag">book</a></li><li><a href="/blog/tags/code/" rel="tag">code</a></li><li><a href="/blog/tags/design/" rel="tag">design</a></li><li><a href="/blog/tags/html/" rel="tag">html</a></li><li><a href="/blog/tags/library/" rel="tag">library</a></li><li><a href="/blog/tags/meta-data/" rel="tag">meta-data</a></li><li><a href="/blog/tags/review/" rel="tag">review</a></li><li><a href="/blog/tags/semantics/" rel="tag">semantics</a></li><li><a href="/blog/tags/web-development/" rel="tag">Web Development</a></li><li><a href="/blog/tags/xhtml/" rel="tag">xHTML</a></li><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/reviews/" rel="tag">Reviews</a></li><li><a href="/blog/tags/totally-awesome-computers/" rel="tag">Totally Awesome Computers</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

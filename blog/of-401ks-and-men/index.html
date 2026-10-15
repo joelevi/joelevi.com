@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/of-401ks-and-men/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "401k",
+        "investment",
+        "retirement",
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>My employer matched my 401(k) contribution 50% (up to 4% of my annual wage). That's not a whole lot, but it's a lot better than nothing!</p> <p>I was able to begin participation in our 401(k) right when the economy decided to tank. Murphy's Law.</p> <p>I'm only contributing 4% (and my employer throws in 2%) while I pay off some debt that I accrued while working for peanuts for my prior employer.</p> <p>In the two years that I've been contributing, according to the Principal.com tools, I'm down 11.31%. Yes, that's right, -11.31% growth. On the surface that's pretty un-cool.</p> <p>Then again, when you factor in that my employer is giving me 50%, I'm really up 38.69%; can't argue with a return like that! </p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/401k/" rel="tag">401k</a></li><li><a href="/blog/tags/investment/" rel="tag">investment</a></li><li><a href="/blog/tags/retirement/" rel="tag">retirement</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

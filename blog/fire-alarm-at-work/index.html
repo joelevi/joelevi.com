@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/fire-alarm-at-work/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>This morning the fire alarm went off at work, prompting the evacuation of the building. Luckily this led to some impromptu meetings between us (IT) and Marketing regarding a recent announcement (which I can’t discuss yet, stay tuned) and a rough strategy how we’re going to tackle the upcoming months).</p>  <p>About ten minutes after we evacuated the fire truck (only one) showed up.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0366.jpg"><img title="IMAG0366" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="123" alt="IMAG0366" src="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0366-thumb.jpg" width="244" border="0" /></a></p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0368.jpg"><img title="IMAG0368" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="106" alt="IMAG0368" src="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0368-thumb.jpg" width="244" border="0" /></a></p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0369.jpg"><img title="IMAG0369" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0369" src="https://www.joelevi.com/blog/wp-content/uploads/2008/07/imag0369-thumb.jpg" width="244" border="0" /></a></p>  <p>The reason all this is noteworthy is due to the fact that we employ a very high-tech powder-coating process to coat the metal parts of our products. Powder-coating is much better than paint because of the way in which it binds with the metal that it’s applied to; it chips less and is much more durable than a painted surface, and also adds a high-degree of “rust-proof-ness” to the finished product.</p>  <p>The down-side is that at high temperatures the raw materials used in the process may be somewhat explosive and the resulting fire may burn very, very hot.</p>  <p>Luckily, those temperatures are very high and this was just a false-alarm.</p>  <p>Back to work!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

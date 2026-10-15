@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-front-moves-in/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Projects",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +297,10 @@
 
 <p>On a related note, Bryon Saxton of the Standard-Examiner Davis Bureau wrote an interesting article titled <em><a href="https://www.standard.net/live/news/145648/" target="_blank">A new wind blows in Layton / Alternative energy putting down roots near Weber Canyon</a></em> which talks about the winds that flow into and out of Weber Canyon and local regulations (and the lack thereof). I’m a bit put out by reporters saying it costs several thousand dollars to put up a wind turbine. If you’re thrifty if can be done for under $200 bucks. Mine cost under $500.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

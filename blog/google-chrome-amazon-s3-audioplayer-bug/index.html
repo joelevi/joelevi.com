@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/google-chrome-amazon-s3-audioplayer-bug/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "amazon",
+        "audioplayer",
+        "bug",
+        "chrome",
+        "Google",
+        "s3",
+        "ssl",
+        "wordpress",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +295,10 @@
 			<div class="post-body">
 <p>Here’s a fun little bug that took me a while to diagnose…</p>  <p>I recently set up an Amazon S3 account to host my large files (audio files in particular). This will offset the bandwidth and server requirements for allowing visitors to stream and/or download files from my sites. (<a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank"></a><a title="Donate any amount via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>™.) This will become more important as I expand my sites in the (hopefully not too distant) future. I have requested that the files served from my S3 account be SSL encrypted (which makes your web surfing more secure).</p>  <p>I use WordPress to power my site. (WordPress <abbr title="FTW: For the win">FTW</abbr>!)</p>  <p>I use a WordPress plugin by <a href="https://www.1pixelout.net" target="_blank">Martin Laine</a> called AudioPlayer to enable me to stream audio files so my visitors just click the “play” button to listen to whatever is contained in the audio file. As long as they have Flash installed they don’t need any other media player, and they don’t have to download the file before they listen to it.</p>  <p>I use Firefox for my development browser, but Chrome for my everyday surfing browser (it’s much, much faster).</p>  <p>So there’s the setup.</p>  <p>The bug occurs in Google’s Chrome browser when I attempt to stream the .MP3 file from my S3 account into Martin’s plugin. You click the “play” button and it never connects.</p>  <p>After doing some digging, it looks like Chrome is being a bit too paranoid regarding Amazon S3’s application of a wildcard SSL certificate when trying to access the .MP3. Chrome throws an error that you don’t see warning you about the SSL “mismatch” and preventing the file to load until you act on the error (did I mention that you don’t see it through the player?).</p>  <p>The solution is to navigate to the fully qualified path of the .MP3 file, and read and accept the error message, then everything works fine (both downloading and streaming).</p>  <p>This is Chrome trying to do a good job at warning users of a potential security problem, and S3 doing a good job by allowing people like me to offer their files via SSL. The two just aren’t playing well together.</p>  <p>No you know. <a title="Donate any amount via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>™.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/amazon/" rel="tag">amazon</a></li><li><a href="/blog/tags/audioplayer/" rel="tag">audioplayer</a></li><li><a href="/blog/tags/bug/" rel="tag">bug</a></li><li><a href="/blog/tags/chrome/" rel="tag">chrome</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/s3/" rel="tag">s3</a></li><li><a href="/blog/tags/ssl/" rel="tag">ssl</a></li><li><a href="/blog/tags/wordpress-web-development-internet-technology-joe-family-friends-family/" rel="tag">wordpress</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

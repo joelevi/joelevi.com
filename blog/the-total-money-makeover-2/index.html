@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-total-money-makeover-2/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "book",
+        "Dave Ramsey",
+        "finances",
+        "freedom",
+        "library",
+        "money",
+        "Lifetime Products",
+        "Reviews"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +302,10 @@
 
 <p>Of course, it’s not as simple as that, and Dave explains why, but he also explains how. So far it’s working fabulously well at my house. We’re 4 pay-checks into applying the principles in the book and have already accomplished Baby Step #1. What’s that, you ask? Read the book! (<a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>.)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/book/" rel="tag">book</a></li><li><a href="/blog/tags/dave-ramsey/" rel="tag">Dave Ramsey</a></li><li><a href="/blog/tags/finances/" rel="tag">finances</a></li><li><a href="/blog/tags/freedom/" rel="tag">freedom</a></li><li><a href="/blog/tags/library/" rel="tag">library</a></li><li><a href="/blog/tags/money/" rel="tag">money</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/reviews/" rel="tag">Reviews</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

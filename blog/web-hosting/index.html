@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/web-hosting/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>(Some postings on this site may be <a href="https://www.joelevi.com/blog/index.php/2007/03/28/getting-paid-to-blog-with-sponsored-reviews/" target="_blank">sponsored</a>)</p> <p>Whether you are an experienced, novice, professional, or hobbyist web developer we all have one thread in common: web hosting.</p> <p>Even the world's best web site, web application, or web log ('blog) doesn't matter in the slightest if it's not hosting where others can find it.</p> <p>Even for the experienced professional web developer, finding a hosting solution can be a daunting task. Reliability of the provider's customer support, hardware, network infrastructure, and backbone connectivity/redundancy rank near the top of the list when searching for a reliable host. After all, you don't want you "next-big-thing" idea to constantly go on- and off-line due to traffic coming to a site that's on the same box (or even the same network) as yours, right?</p> <p>The next set of requirements are often placed before the first set: hosting type. Is your site going to run on a Linux server, running Apache, MySql, and PHP; or are you more of an IIS6, MS SQL 2005, ASP.NET kind of developer?</p> <p>Next, how much power do you need behind your site? How much data traffic? What kind of administration tools?</p> <p>Find a reliable host first, then find out what their offerings are, and what their costs are for the muscle that you'll need... and make sure you can easily upgrade -- possibly on a moment's notice.</p> <p>That's a lot of stuff to look for! Luckily, there are web sites out there that serve that particular purpose. The one I'd like to mention by name is <a href="https://www.webhostinginformation.net/">webhostinginformation.net/</a>. While they're not the end-all, definitive source, they are an EXCELLENT starting point and are platform agnostic.</p> <p>Happy coding!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

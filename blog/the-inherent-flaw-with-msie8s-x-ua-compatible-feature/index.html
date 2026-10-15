@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-inherent-flaw-with-msie8s-x-ua-compatible-feature/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "internet explorer",
+        "Internet",
+        "Microsoft",
+        "msie6",
+        "MSIE7",
+        "MSIE8",
+        "x-ua-compatible"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <p>For more than a decade it’s been the web developer’s most frustrating challenge: different browsers rendering the same stuff in different ways. The problem is that there are no internet police to enforce the laws of the W3C… then again, the W3C has incomplete and ambiguous “laws” so it wouldn’t do much to enforce them. But I digress.</p>  <p>When Microsoft began work on MSIE8 one of their objectives was to make the browser more standards-complaint. All in all, they did a pretty good job. But therein was a problem: pages written with MSIE7 in mind didn’t always render the same way in MSIE8, which meant lots of things might break or look ugly.</p>  <p>Microsoft put a full-court press on advising its clients and customers about this difference and told them to add a meta tag to the header of websites that didn’t render correctly in MSIE8. That tag is the now infamous X-UA-Compatible tag, and it lets you tell MSIE8 that it should display the page as if it were MSIE7 (why they didn’t go all the way back to MSIE6, I don’t know).</p>  <p>So, rather than having corporate web developers go and “fix” their pages to render correctly, Microsoft said “just add this tag to your header and you’re done.” Ugly.</p>  <p>We all had to write around MSIE7 when it came out, now we have to write around MSIE8, too. I’ve never had to rewrite a page for Firefox or Safari version “n + 1”, why do I have to with MSIE… all the time.</p>  <h3>What they should have done</h3>  <p>Rather than (or in addition to) adding the X-UA-Compatible feature into MSIE8, Microsoft should have pushed an update to MSIE6 and MSIE7 to enable MSIE8 rendering using an X-UA-Compatible meta-tag. Yes, this would require significant, work, but the foundation was laid with MSIE8, why not backdate it?</p>  <h3>What would that have accomplished?</h3>  <p>By adding the X-UA-Compatible tag to prior versions of MSIE, Microsoft would have allowed developers to write code once for MSIE8, and have it work in MSIE6, 7, and 8. Sweet, right?</p>  <p>Instead, why devote more time to write for MSIE8, when you already have to write for MSIE6 and MSIE7, when you can just add a tag and have MSIE8 think it’s MSIE7?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet-explorer/" rel="tag">internet explorer</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/microsoft-internet-technology-joe-family-friends-family/" rel="tag">Microsoft</a></li><li><a href="/blog/tags/msie6/" rel="tag">msie6</a></li><li><a href="/blog/tags/msie7/" rel="tag">MSIE7</a></li><li><a href="/blog/tags/msie8/" rel="tag">MSIE8</a></li><li><a href="/blog/tags/x-ua-compatible/" rel="tag">x-ua-compatible</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/dave-ramsey-says-to-sell-a-bunch-of-stuff/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Store"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +289,10 @@
 om-width: 0px; border-l
 eft-width: 0px" title="IMAG0069" border="0" alt="IMAG0069" src="https://www.joelevi.com/blog/wp-content/uploads/2009/03/imag0069-thumb1.jpg" width="91" height="108" /></a><a title="Add to Cart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=4268831" target="_blank"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" src="https://www.paypal.com/en_US/i/btn/btn_cart_SM.gif" /></a> $5 + shipping. Lifetime Products Mug filled with goodies, new. </li>    <li><a title="Add to Cart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=4268682" target="_blank"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" src="https://www.paypal.com/en_US/i/btn/btn_cart_SM.gif" /></a> $2.50 + shipping. Lifetime Products neck lanyard, new. </li> </ul>  <p><a title="Checkout with PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&amp;business=NV6KRTWWMHLHE&amp;display=1" target="_blank"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2009/03/image21.png" width="134" height="40" /></a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/store/" rel="tag">Store</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

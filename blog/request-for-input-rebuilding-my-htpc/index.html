@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/request-for-input-rebuilding-my-htpc/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Home Theater",
+        "HTPC",
+        "MCE",
+        "Media Center",
+        "System Builder",
+        "Vista",
+        "Vista Ultimate"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <p>To all my loyal readers out there, I'm normally here dolling out my information to you all, and I do so without expectation of any compensation... but today I am asking for some help... no, no, no: put your wallets away... ;)</p>  <p>It's come time when I've finally outgrown the capabilities of my Media Center PC (or Home Theater PC), I'm getting jerky encoding on my ATSC HD TV programs when I'm recording another and watching another on my 1080i HDTV... Yes, that's pretty heavy usage.</p>  <p>So, I'm going to get a Quadcore Intel processor, which means I'll need a new motherboard and new RAM (probably going to go with 2 or 3 gig there), and a new PSU.</p>  <p>That's where I'm having problems: I have two Avermedia ATSC PCI HDTV tuner cards, one Avermedia NTSC PCI Analog TV tuner card, a Adaptec RAID5 PCI controller card, a SoundBlaster Audigy 2 PCI sound card, and a USR PCI modem. That's six PCI cards... and I can't find any Quadcore compatible motherboards that have any more than 2 PCI slots (yes, they have PCI-express, but only a couple of those).</p>  <p>I don't want to get a new RAID controller card, so I need that one PCI slot, if my motherboard has digital audio (at least 5.1) on it I can ditch my Audigy, and I really don't use my modem (Vista MCE doesn't to onscreen caller ID like XP MCE used to), so all I have left are my 3 TV tuner cards.</p>  <ul>   <li>I need 2 digital tuners (ATSC) and 1 analog tuner (NTSC). Should I get a dual card (that will record from both analog and digital sources at once)&#160; plus another single digital card? Or should I get a a dual digital (ATSC) card and a single analog (NTSC) card? And what cards do you all recommend?</li>    <li>I prefer Intel motherboards, but Asus will do as well. Thoughts on what board to choose?</li>    <li>I want a &quot;green&quot; power supply that will handle all my stuff (including 3*500GB SATA HDDs in RAID 5 configuration). Ideas on the PSU?</li>    <li>What video card should I get to run out to my TV via HDMI (I'm partial to Nvidia, but since they don't support DirectX 10.1 I'm on the fence)?</li> </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/home-theater/" rel="tag">Home Theater</a></li><li><a href="/blog/tags/htpc/" rel="tag">HTPC</a></li><li><a href="/blog/tags/mce/" rel="tag">MCE</a></li><li><a href="/blog/tags/media-center/" rel="tag">Media Center</a></li><li><a href="/blog/tags/system-builder/" rel="tag">System Builder</a></li><li><a href="/blog/tags/vista-operating-systems-technology-joe-family-friends-family/" rel="tag">Vista</a></li><li><a href="/blog/tags/vista-ultimate/" rel="tag">Vista Ultimate</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

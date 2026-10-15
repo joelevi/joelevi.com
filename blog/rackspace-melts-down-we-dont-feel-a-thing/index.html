@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/rackspace-melts-down-we-dont-feel-a-thing/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet",
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/images/RackspaceMeltsDownWedontfeelathing_9482/image.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="402" alt="image" src="https://www.joelevi.com/images/RackspaceMeltsDownWedontfeelathing_9482/image_thumb.png" width="174" align="right" border="0" /></a> At <a href="https://www.Lifetime.com" target="_blank">work</a> we use <a href="https://www.Rackspace.com" target="_blank">Rackspace</a> as our Managed Hosting Provider. Overall, we've been pretty happy with them. You can form an opinion about any company when things are going just peachy, but the true level of their character and the true value of their service really shines when the wheels fall off and the worst possible scenario comes true.</p>  <p>That's what happened on Monday, November 12, 2007. The root cause: Someone drove their truck into a utility pole/transformer. From there a series of events cascaded that ultimately led to the manual powering down of servers to keep them from melting down -- literally.</p>  <p>Our server didn't even hiccup. It failed over to battery power until the generators kicked in, and is small enough (relatively speaking) that it wasn't one of the machines that had to be powered down. Furthermore, the infrastructure (the network and connectivity, etc.) didn't fail, so we stayed up through the whole process.</p>  <p>You can read the whole story here: <a href="https://www.rackspace.com/information/announcements/datacenter.php">http://www.rackspace.com/information/announcements/datacenter.php</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

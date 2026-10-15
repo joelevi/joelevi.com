@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/win-the-s-510-food-fight/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "c4l",
+        "campaign for liberty",
+        "cfl",
+        "food safety and modernization",
+        "s.510",
+        "tax",
+        "unconstitutional",
+        "Rob Bishop",
+        "U.S. House"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -309,6 +327,10 @@
 
 <p>P.S. The War on Food is unfortunately not the only leftover the statists hope to clear off their plates during the Lame Duck.  If you are able, <a href="https://paracom.paramountcommunication.com/ct/4960969:7528045643:m:1:171001347:BDC2983C14F4931F70373EA1C34FB02E" target="_blank">please chip in $10 today</a> so C4L can continue fighting for freedom.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/c4l/" rel="tag">c4l</a></li><li><a href="/blog/tags/campaign-for-liberty/" rel="tag">campaign for liberty</a></li><li><a href="/blog/tags/cfl/" rel="tag">cfl</a></li><li><a href="/blog/tags/food-safety-and-modernization/" rel="tag">food safety and modernization</a></li><li><a href="/blog/tags/s-510/" rel="tag">s.510</a></li><li><a href="/blog/tags/tax/" rel="tag">tax</a></li><li><a href="/blog/tags/unconstitutional/" rel="tag">unconstitutional</a></li><li><a href="/blog/tags/rob-bishop/" rel="tag">Rob Bishop</a></li><li><a href="/blog/tags/u-s-house/" rel="tag">U.S. House</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

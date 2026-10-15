@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/restocked-my-chicken-flock/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Chickens",
+        "Environment",
+        "Rabbits"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p>As some of you know, <a href="https://www.syracuseut.com" target="_blank">Syracuse City</a>, Utah recently overhauled its Land Use Ordinance (Municipal Title X) which included a provision allowing R1 and R2 zoned residences to have chickens (hens) for eggs or meat-stock (AG zones aren’t prohibited from having chickens).</p>  <p>This means that the bulk of residential properties (excluding town-homes, apartments, and some duplexes, basically R3 zones) can have a small flock of chickens in their backyard (no roosters, just hens).</p>  <p>We had 5 hens (and a rabbit) which were recently culled when our neighbors dog broke through the fence.</p>  <p>Since then we’ve been keeping our eye out to see if anyone is selling hens, thinking people might be selling off hens they got as chicks for Easter and we could gradually build back up our flock.</p>  <p>I answered a KSL.com ad and purchased a bunch of “ugly chickens” from a very nice guy out in the West Haven, Utah area. They’re just coming through a molt, so their feathers are spotty and they look really “rough around the edges” but they’re healthy looking birds, good feet and toes.</p>  <p>These are a hybrid variety, they come from a White Leghorn rooster and a Rhode Island Red hen. This was done to bring out the best qualities of both varieties.</p>  <p>Leghorns are a hardy, white feathered, small bird, with a good sized comb. They don’t eat a lot due to their smaller size. They are a good white egg-laying variety. They aren’t as hearty in cold Utah winters as Reds are.</p>  <p>Rhode Island Reds are a very hearty variety, they lay good-sized brown eggs, and are hearty even in Utah’s winters. They’re a bigger bird, so they eat more than their Leghorn cousins do, and they have very small combs.</p>  <p>They took well to their new digs, so hopefully we’ll be getting half-dozen or more brown eggs per day again soon!</p>  <p>Wish me luck!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/chickens/" rel="tag">Chickens</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/rabbits/" rel="tag">Rabbits</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

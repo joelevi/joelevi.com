@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,19 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/scala-and-kolacny-brothers/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "a capella",
+        "a cappella",
+        "brothers",
+        "bulgaria",
+        "bulgarian",
+        "choir",
+        "cover",
+        "kolacny",
+        "music",
+        "scala"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -290,6 +309,10 @@ Most songs are covers of well-known bands such as Radiohead, U2, Nirvana, Depech
 
 <p><object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/5ft7UvrqnhA&hl=en&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/5ft7UvrqnhA&hl=en&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/a-capella/" rel="tag">a capella</a></li><li><a href="/blog/tags/a-cappella/" rel="tag">a cappella</a></li><li><a href="/blog/tags/brothers/" rel="tag">brothers</a></li><li><a href="/blog/tags/bulgaria/" rel="tag">bulgaria</a></li><li><a href="/blog/tags/bulgarian/" rel="tag">bulgarian</a></li><li><a href="/blog/tags/choir/" rel="tag">choir</a></li><li><a href="/blog/tags/cover/" rel="tag">cover</a></li><li><a href="/blog/tags/kolacny/" rel="tag">kolacny</a></li><li><a href="/blog/tags/music/" rel="tag">music</a></li><li><a href="/blog/tags/scala/" rel="tag">scala</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

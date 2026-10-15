@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/led-eyelashes/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "beauty",
+        "eyelash",
+        "japan",
+        "LED",
+        "light"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>Whether it’s to offset those unsightly (pun intended) dark under-eye rings, or just to draw attention to oneself, LED eyelashes do both… </p>  <p>Whether that’s a good thing or not I leave up to you.</p>  <p>   <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:14b92b9d-7795-4a9f-8a6e-aba3610a724c" class="wlWriterEditableSmartContent"><div id="2ec59554-49f4-497f-b384-40710d679a13" style="margin: 0px; padding: 0px; display: inline;"><div><a href="https://www.youtube.com/watch?v=N5484m-tCeA&feature=player_embedded" target="_new"><img src="https://www.joelevi.com/files/blog-attachments/LEDEyelashes_9B1C/video34f9d9959b46.jpg" style="border-style: none" galleryimg="no" onload="var downlevelDiv = document.getElementById('2ec59554-49f4-497f-b384-40710d679a13'); downlevelDiv.innerHTML = "<div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/N5484m-tCeA&hl=en"></param><embed src="https://www.youtube.com/v/N5484m-tCeA&hl=en" type="application/x-shockwave-flash" width="425" height="355"></embed></object></div>";" alt=""/></a></div></div></div></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/beauty/" rel="tag">beauty</a></li><li><a href="/blog/tags/eyelash/" rel="tag">eyelash</a></li><li><a href="/blog/tags/japan/" rel="tag">japan</a></li><li><a href="/blog/tags/led/" rel="tag">LED</a></li><li><a href="/blog/tags/light/" rel="tag">light</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

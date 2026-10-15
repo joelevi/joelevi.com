@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-truth-behind-90/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "phone",
+        "scam"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <h3>Background</h3>  <p>Have you gotten an email that says something like “I got a call from AT&amp;T saying they were running a test on the line and to press 90#, but I was suspicious and didn’t do it”?</p>  <p>Various versions of this scam have gone around, some with stories attached saying that it cost them thousands of dollars, or that their business was stuck with a ten thousand <a href="https://www.joelevi.com/blog/index.php/2008/12/02/the-destruction-of-the-us-dollar/">dollar</a> phone bill. Others have mentioned that “phone calls to embarrassing phone numbers” have shown up on their bill and cost them their marriage.</p>  <h3>Is it true?</h3>  <p>This is a “fear-mongering scam email” that’s been circulating the internet for almost a decade.</p>  <h3>Who does it affect?</h3>  <p>First, this scam doesn’t&#160; affect home users! If you’ve got a landline phone, a cell phone, or a VoIP phone, you’re safe from 90#.</p>  <p>90# only affects companies that are running a private branch exchange (PBX) system. Not only that, but it doesn’t work on all PBX systems! Even on those that do run PBX’s that allow 90# (or #90 in some cases), most PBX administrators are smart enough to disable this feature on user-lines and only keep them active on administrative lines.</p>  <p>AT&amp;T even had an official page back in February of 2002 detailing the problem: <a title="http://web.archive.org/web/20020223071837/http://www.att.com/features/0398/90pound.html" href="https://web.archive.org/web/20020223071837/http://www.att.com/features/0398/90pound.html">http://web.archive.org/web/20020223071837/http://www.att.com/features/0398/90pound.html</a></p>  <h3>What was it supposed to do?</h3>  <p>9-0-# is the key code to enable external forwarding, and allows a person to forward phone calls through that line of service.</p>  <p>This feature was often used by business travelers to make long-distance phone calls through their phone line at work rather than paying very high prices for those calls from hotel rooms while on the road. </p>  <p>It never has given anyone “full access to your phone line” or “access to your account.”</p>  <p>Now, forward this back to everyone that you forwarded the scam to, along with an apology stating your regret. ;)</p>  <p><a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/phone/" rel="tag">phone</a></li><li><a href="/blog/tags/scam/" rel="tag">scam</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

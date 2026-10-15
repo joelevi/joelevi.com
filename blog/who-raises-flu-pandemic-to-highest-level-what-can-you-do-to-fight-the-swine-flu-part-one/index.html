@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,20 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/who-raises-flu-pandemic-to-highest-level-what-can-you-do-to-fight-the-swine-flu-part-one/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "epidemic",
+        "Environment",
+        "flu",
+        "h1n1",
+        "healthy",
+        "ill",
+        "influenza",
+        "pandemic",
+        "panic",
+        "preparedness",
+        "sick"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +297,10 @@
 			<div class="post-body">
 <p>According to <a href="https://www.msnbc.msn.com/id/31207627/" target="_blank">MSNBC</a>, H1N1 (also known as the Swine Flu) is the “First global epidemic in 41 years”. Ironically, WHO “officials urge nations not to restrict travel”.</p>  <p>This isn’t an article about how dangerous H1N1 is (or is not). It’s not a “everyone should panic” article either. This article falls right in line with what I’ve been preaching for as far back as I can remember: be prepared. (Yup, I was a Boy Scout, how could you tell?)</p>  <h3>How is H1N1 different than the “normal” flu?</h3>  <p>First and foremost, this flu isn’t that much different than every other flu out there. It’s spread the same way, it presents the same way. As another bit of irony, the Swine Flu killed less people last year than did the “traditional flu”, so why are you freaking out? Because it has two “cool” names.</p>  <p>Of course there are different “types” of influenza (A, B, and C), but we’re not going into that much detail here. They’re all viruses, they all make you feel sick, and the following advice applies to helping you not get sick!</p>  <p>Of course, these are just suggestions, not guarantees, the FDA has not read or approved these statements, I am not a doctor, do your own research before you try any of this stuff, etc. Disclaimer done.</p>  <p>How can you prepare?</p>  <h3>Keep yourself healthy and strong</h3>  <p>In other words: Don’t get sick! But how do you do that?</p>  <h3>Clean air and water</h3>  <p>Clean air and clean water are very important to keeping the human body healthy.</p>  <ul>   <li>Replace your air filters in your home and your vehicle with the best you can afford. These puppies are there to scrub the air that re-circulates through the places that you spend a lot of your time.</li>    <li>You can supplement these with an “air purifier” to help assist the cleansing of the air.</li>    <li>When possible, open the windows. Let the air move through your house. Not only will this replace the stale, dirty air that you’ve been re-breathing all winter long, it may also lower your electricity bill. Leaving the upstairs windows open all the way and opening the down-stairs windows allows natural convection to occur. Hot air rises and automatically vents out the higher windows, pulling in cooler air in the process. Not only does this swap out the air, it swaps it for cooler air. Give it a try.</li>    <li>Buy a water filter or (better yet) an evaporative distiller (with a carbon filter) to clean the muck out of your water. Remember, your body uses water for everything: it’s used to cleanse your systems, it’s used to regulate your body temperature, it’s used to deliver oxygen and nutrients to every cell in your body, make sure it’s clean (that means chlorine, fluorine, salts, sediment, heavy metals, debris, etc.).</li>    <li>DRINK water! It doesn’t do you much good to clean your water if you’re not actually drinking it. Before you drink and tea, coffee, soda, milk, juice, or slushies drink your daily intake of water. After you’ve done that, drink whatever you want FOLLOWED by an equal amount of water. How much water is enough? Two 8-ounce glasses every 2-3 hours – at LEAST 3 to 4 liters a day. Try it, you’ll feel much better!</li> </ul>  <h3>Wash your hands -- and anything your hands touch</h3>  <p>While it’s true that some germs spread on the air, they do much better at spreading when they’re encapsulated in a nice droplet of water and moved from person to person.</p>  <ul>   <li>Don’t touch your eyes, nose, mouth, or any other orifice or mucous membrane with your hands unless you wash them with soap and hot water first. Following this one simple rule will help more than almost anything else you’ll hear or read – from anyone!</li>    <li>Clean your keyboards, doorknobs, purse straps, faucet handles, steering wheel, and any other surface that comes in contact with your hands.</li>    <li>Most people do not wash their hands long enough to actually “do the job”. You’re supposed to wet your hands, apply soap, lather while you sing the alphabet song twice, and rinse (if you used a bar of soap, repeat). Dry thoroughly – did you just touch a paper-towel dispenser or push a button to turn on a hand dryer? If so, you just “un-did” the washing.</li>    <li>Beware of antibacterial soaps. Because most people don’t wash their hands the right way, all the antibacterial soaps are doing is killing off the weakest bacteria of the bunch, this leaves only the strong and resistant ones behind to make even stronger and more resistant strains. Besides, antibacterial soaps don’t kill viruses.</li>    <li>Beware of hand “sanitizers”. For the same reasons as above, typically you’re just killing off the weak bacteria, leaving the strong ones to breed and make even stronger ones. Again, these kill bacteria, not viruses. Also, they tend to dry out your hands, making them more likely to harbor bad germs.</li> </ul>  <h3>More</h3>  <p>Yikes, that’s a lot of text… I’ll let you digest that for a while and have some more for you tomorrow night.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/epidemic/" rel="tag">epidemic</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/flu/" rel="tag">flu</a></li><li><a href="/blog/tags/h1n1/" rel="tag">h1n1</a></li><li><a href="/blog/tags/healthy/" rel="tag">healthy</a></li><li><a href="/blog/tags/ill/" rel="tag">ill</a></li><li><a href="/blog/tags/influenza/" rel="tag">influenza</a></li><li><a href="/blog/tags/pandemic/" rel="tag">pandemic</a></li><li><a href="/blog/tags/panic/" rel="tag">panic</a></li><li><a href="/blog/tags/preparedness/" rel="tag">preparedness</a></li><li><a href="/blog/tags/sick/" rel="tag">sick</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

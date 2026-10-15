@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/day-3-making-money-with-rss-bd009/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +289,10 @@
 
 <p>In the e-comm world, you probably want to enable your viewers to sort by name, by date, by price, etc., and filter by cetegory, maybe by price, etc. That's pretty cool. Imagine if CraigsList.org did this, you could filter by Zip-Code and sort by price. With eBay you could subscribe to an RSS "search result" feed and watch the number of bids on, say, a Zune, sort that by price, and watch the process as the bidding occurs, right there in your RSS reader (IE7, for example), and all of this without all the eBay look and feel <strike>crap</strike> GUI.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

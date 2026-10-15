@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/5-real-world-ways-to-improve-your-web-development-habits/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Freelance",
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p>I overheard a conversation between two web developers at my place of employment today that I thought could help other web developers out there in the wide world of web... </p><p>One developer had been assigned to a new project and the maintenance of the old website was handed over to the second web developer. Developer Two (D2) was complimenting Developer One (D1): "May I just say you are one hell of a web developer." </p><p>The reason? D2 had been tasked with adding new product pages to the website, pages that look "kind of like this page, but with this other category's color scheme." Sounds easy enough on the surface, but any developer will tell you, there's nothing worse than a simple "yeah, just like that, but with different colors" request. </p><p>D2, on the other hand, was able to take the page structure from one page, and the external style sheet from another page, replace the content, and have a new, page within minutes.</p> <p>D1 went on to explain his web development strategies:</p> <ol> <li><strong>Think in templates. </strong>Don't develop individual pages, rather, develop a set of rules (which will later become external css styles) that can be reused throughout all the pages in that section of the website.</li> <li><strong>Allow enough time.</strong> Typically, template development may take bit longer than page development... but the site will look more consistent (which may be enough to convince a time-centric manager to provide this time). The trade-off pays off in the long run: when you're asked to add a new page or new section, you've already got a framework that you can drop content into. Quick, easy, consistent.</li> <li><strong>Make your templates clean.</strong> Templates should be very clean, from the markup to the concepts behind how the content is developed. You should be able to open your un-styled code in a browser and see a very nicely organized document, complete with hierarchical headings, paragraphs, and outlines. (This also helps with Search Engine placement, too!)</li> <li><strong>Make your templates durable.</strong> You may have 10 sections to your website, but you may only have 3 or 4 types of pages (those, my friend, are your templates). The index page for Category A should be the same template as the index page for Category B, and so on. Yes, the style will change (colors, graphics, etc.), but that's STYLE-, not CONTENT-, and certainly not TEMPLATE-specific.</li> <li><strong>Be nice to your replacement.</strong> It's a fact, sooner or later we all get replaced. In this example D1 was assigned to a new project while D2 was assigned to maintain the prior work of D2. Other examples could have one developer moving on to another department, or another company. He could just as easily be hit buy a bus or win the lotto. In any event, the easier it is for the person that comes after you to understand and use/re-use your code, the better! After all, it may be YOU who has to maintain it.</li></ol>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

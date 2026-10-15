@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/firearms-training/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "ar-15",
+        "firearm",
+        "rifle",
+        "strategic tactical group",
+        "training"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/files/blog-attachments/FirearmsTraining_B3E1/image.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="image" border="0" alt="image" align="right" src="https://www.joelevi.com/files/blog-attachments/FirearmsTraining_B3E1/image_thumb.png" width="100" height="75" /></a> <a href="https://www.strategictacticalgroup.com/" target="_blank">Strategic Tactical Group</a> is offering 3 two-day training courses in Wendover, Utah on June 27th &amp; 28th, 2009.</p>  <p>The courses being offered are</p>  <ul>   <li>     <h5>Building Clearing (for the Home Owner),</h5>   </li>    <li>     <h5>Tactical Carbine (AR-15), and</h5>   </li>    <li>     <h5>Precision Rifle.</h5>   </li> </ul>  <h5>See <a title="http://sittingduckpolicy.com/index.php/2009/05/12/defensive-training-courses-wendover-utah/" href="https://sittingduckpolicy.com/index.php/2009/05/12/defensive-training-courses-wendover-utah/" target="_blank">http://sittingduckpolicy.com/index.php/2009/05/12/defensive-training-courses-wendover-utah/</a> for details, contact, and registration information.</h5>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/ar-15/" rel="tag">ar-15</a></li><li><a href="/blog/tags/firearm/" rel="tag">firearm</a></li><li><a href="/blog/tags/rifle/" rel="tag">rifle</a></li><li><a href="/blog/tags/strategic-tactical-group/" rel="tag">strategic tactical group</a></li><li><a href="/blog/tags/training/" rel="tag">training</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

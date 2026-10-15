@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/how-creativity-is-being-strangled-by-the-law/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet",
+        "Music"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p><a href="https://www.ted.com/speakers/view/id/167">Larry Lessig</a> gets TEDsters to their feet, whooping and whistling, following this elegant presentation of &quot;three stories and an argument.&quot; The Net's most adored lawyer brings together John Philip Sousa, celestial copyrights, and the &quot;ASCAP cartel&quot; to build a case for creative freedom. He pins down the key shortcomings of our dusty, pre-digital intellectual property laws, and reveals how bad laws beget bad code. Then, in an homage to cutting-edge artistry, he throws in some of the most hilarious remixes you've ever seen.</p>  <p><object id="VE_Player" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" height="285" width="432" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="_cx" value="11430"></param><param name="_cy" value="7541"></param><param name="FlashVars" value=""></param><param name="Movie" value="http://static.videoegg.com/ted/flash/loader.swf"></param><param name="Src" value="http://static.videoegg.com/ted/flash/loader.swf"></param><param name="WMode" value="Window"></param><param name="Play" value="0"></param><param name="Loop" value="-1"></param><param name="Quality" value="High"></param><param name="SAlign" value="LT"></param><param name="Menu" value="-1"></param><param name="Base" value=""></param><param name="AllowScriptAccess" value="always"></param><param name="Scale" value="NoScale"></param><param name="DeviceFont" value="0"></param><param name="EmbedMovie" value="0"></param><param name="BGColor" value="FFFFFF"></param><param name="SWRemote" value=""></param><param name="MovieData" value=""></param><param name="SeamlessTabbing" value="1"></param><param name="Profile" value="0"></param><param name="ProfileAddress" value=""></param><param name="ProfilePort" value="0"></param><param name="AllowNetworking" value="all"></param><param name="AllowFullScreen" value="false"> <embed src="https://static.videoegg.com/ted/flash/loader.swf" flashvars="bgColor=FFFFFF&amp;file=http://static.videoegg.com/ted/movies/LARRYLESSIG-2007_high.flv&amp;autoPlay=false&amp;fullscreenURL=http://static.videoegg.com/ted/flash/fullscreen.html&amp;forcePlay=false&amp;logo=&amp;allowFullscreen=true" quality="high" allowscriptaccess="always" bgcolor="#FFFFFF" scale="noscale" wmode="window" width="432" height="285" name="VE_Player" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed></param></object></p>  <h3>About Larry Lessig</h3>  <p>Stanford professor Larry Lessig is one of our foremost authorities on copyright issues. In a time when &#8220;content&#8221; is not confined to a film canister, Lessig has a vision for reconciling creative freedom with marketplace competition. <a href="https://www.ted.com/index.php/speakers/view/id/167">Read full bio &#187;</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/music/" rel="tag">Music</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

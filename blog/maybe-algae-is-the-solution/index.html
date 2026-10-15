@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/maybe-algae-is-the-solution/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Solar Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -281,6 +292,10 @@
 
 <p><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="320" height="240" id="FLVPlayer">   <param name="movie" value="http://cc.pubco.net/www.valcent.net/i/misc/Vertigro/FLVPlayer_Progressive.swf" />   <param name="salign" value="lt" />   <param name="quality" value="high" />   <param name="scale" value="noscale" />   <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_3&amp;streamName=Vertigrorevised&amp;autoPlay=true&amp;autoRewind=false" />   <embed src="https://cc.pubco.net/www.valcent.net/i/misc/Vertigro/FLVPlayer_Progressive.swf" flashvars="&MM_ComponentVersion=1&skinName=Clear_Skin_3&streamName=Vertigrorevised&autoPlay=true&autoRewind=false" quality="high" scale="noscale" width="320" height="240" name="FLVPlayer" salign="LT" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" /> </object></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/solar-power/" rel="tag">Solar Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

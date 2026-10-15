@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/i-think-one-of-our-rabbits-may-not-be-a-boy/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Science"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>My wife runs a preschool and daycare out of our home. It’s different kind of preschool, it’s hands-on and all about teaching the children to explore the world around them. They go on field tips to the fire station, the police station, city hall, the library, parks, etc., and have the run our our backyard. We have bird-feeders that we try to keep stocked, a garden with lots of kid-friendly food in it, 5 hens (that are finally starting to lay eggs), and a rabbit.</p>  <p>We try to let the hens and rabbit run free in the backyard, which is a really unique educational opportunity for the children growing up in suburbia.</p>  <p>One of our neighbors had two rabbits that were continually getting loose so we volunteered to let them stay in our backyard. They were “both male” so we didn’t take any precautions mixing them in with our male rabbit.</p>  <p>Long story short, one of the new rabbits ran away (and was adopted by another family), but our original rabbit and the remaining new rabbit became friends – good friends. </p>  <p>A few days ago we saw some “mice” scurrying around our spruce tree… upon closer inspection, they’re not mice at all, but baby rabbits! We caught two of them (we know there are at least three).</p>  <p>So, I’m not a veterinarian, but I think one of our adult rabbits may not be a boy. </p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0389.jpg"><img title="IMAG0389" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0389" src="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0389-thumb.jpg" width="244" border="0" /></a> <a href="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0388.jpg"><img title="IMAG0388" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0388" src="https://www.joelevi.com/blog/wp-content/uploads/2008/08/imag0388-thumb.jpg" width="244" border="0" /></a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

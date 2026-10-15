@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/google-maps-navigation/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "android",
+        "Internet",
+        "android apps",
+        "gps",
+        "maps",
+        "navigation"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p>Yes, folks, the day that you’ve been waiting for is almost here: Google Maps with GPS Navigation features.</p>  <p>Before you start flaming me with messages like “you’ve been able to GPS navigate with Google Maps for a long time now” just hang on. This is basically Tom-Tom-style navigation by Google.</p>  <p>That’s the good news. Now, the bad news: it’s only for Android 2.0 devices (read: none, as of this writing). When it is eventually released, just like Google Maps today, Google promises the Navigation version to be free (but will require a data-enabled service plan, which may not be free).</p>  <p>What I’d really like to see is Waze-style social networking built in. I don’t want to give up the ability to report a road hazard, speed trap, or real-time heavy traffic, all things I’ve gotten used to with Waze, but I <em>really</em> want the satellite navigation, and street-view of upcoming turns are game changers.</p>  <p>Take a look at some of the videos:</p>  <p><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/tGXK4jKN_jY&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;feature=player_embedded&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="https://www.youtube.com/v/tGXK4jKN_jY&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;feature=player_embedded&amp;fs=1" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="425" height="344"></embed></object></p> <object width="480" height="295"><param name="movie" value="http://www.youtube-nocookie.com/v/SxB7bqkmXtI&amp;hl=en&amp;fs=1&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube-nocookie.com/v/SxB7bqkmXtI&amp;hl=en&amp;fs=1&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object><object width="480" height="295"><param name="movie" value="http://www.youtube-nocookie.com/v/zS1fj8Wyt6I&amp;hl=en&amp;fs=1&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube-nocookie.com/v/zS1fj8Wyt6I&amp;hl=en&amp;fs=1&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android/" rel="tag">android</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/android-apps/" rel="tag">android apps</a></li><li><a href="/blog/tags/gps/" rel="tag">gps</a></li><li><a href="/blog/tags/maps/" rel="tag">maps</a></li><li><a href="/blog/tags/navigation/" rel="tag">navigation</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

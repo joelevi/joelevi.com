@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/web-guy-vs-sales-dude-the-sequel/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p> Be advised... this isn't for everyone... but it sure is funny!<br />  <embed src="https://www.thewebsiteisdown.com/swf/fpd.swf?config=%7Bembedded%3Atrue%2CbaseURL%3A%27http%3A%2F%2Fwww%2Ethewebsiteisdown%2Ecom%2Fswf%27%2CcontrolsOverVideo%3A%27ease%27%2CmenuItems%3A%5B0%2C0%2C0%2C0%2C1%2C1%2C1%5D%2CshowStopButton%3Atrue%2CinitialScale%3A%27fit%27%2CcontrolBarBackgroundColor%3A%279999%27%2Cname%3A%27%27%2CautoRewind%3Atrue%2CstartingBufferLength%3A1%2CautoBuffering%3Afalse%2Cloop%3Afalse%2CsplashImageFile%3A%27http%3A%2F%2Fbitcast%2Da%2Ebitgravity%2Ecom%2Fwebsitedown%2Fimages%2Fexcelhell%5Fthumb%2Ejpg%27%2CautoPlay%3Afalse%2CvideoFile%3A%27http%3A%2F%2Fbitcast%2Da%2Ebitgravity%2Ecom%2Fwebsitedown%2Fflv%2Feh539%5F592x448%2Emp4%27%7D" width="600" height="450" scale="noscale" bgcolor="111111" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always" allowNetworking="all" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/our-electric-future/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Prius",
+        "Science",
+        "Solar Power",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <blockquote>   <p>“The politics of energy is warping diplomacy in certain parts of the world,” said Secretary of State Condoleezza Rice in recent Senate testimony.</p>    <p></p>    <p></p>    <p></p>    <p></p> </blockquote>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/07/image5.png"><img title="image" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="236" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/07/image-thumb5.png" width="244" align="right" border="0" /></a>From the July/August 2008 issue of <a href="https://www.american.com" target="_blank">The American</a>, <a href="https://www.american.com/author_search?Creator=Andy%20Grove">Andy Grove</a> (former CEO Intel Corp.) <a href="https://www.american.com/archive/2008/july-august-magazine-contents/our-electric-future" target="_blank">makes a compelling argument</a> for shifting our transportation infrastructure from oil/gasoline to electricity.</p>  <p>In his article, Grove states the following, a history that has been lost to the younger generations:</p>  <blockquote>   <p>In the early 1970s, President Nixon kicked off Project Independence, defining a national goal in his State of the Union address: “At the end of this decade, in the year 1980, the United States will not be dependent on any other country for the energy we need to provide our jobs, to heat our homes, and to keep our transportation moving.”</p>    <p>The failure to meet that goal was dramatic.</p>    <p>After Nixon, president after president set similar goals. Every target was missed. We became more and more dependent on imported petroleum. Net energy imports doubled between 1970 and 1980, and then again by 1990.</p>    <p>Not only did America fail to meet the goals, but the goals themselves were unwise. A faulty goal leads to the wrong actions; so even if we execute flawlessly, we fail.</p> </blockquote>  <p>It’s very painful to have a (primarily) single-source of energy (gasoline/petrol) that literally moves our nation. We’re entirely at the mercy of the supply and demand of that resource. Transitioning to an electrical transportation infrastructure frees us from this single source.</p>  <p>The bottom line of the article, from my perspective, is that it’s easier to make changes (in efficiency, reduced pollution, regulations, etc.) at the industrial level than it is at the individual transportation level. Additionally, the source of energy to be converted into electricity can vary from solar, wind, hydro, nuclear, petroleum, coal, etc. We have more options with electricity generation which frees us from any one source; if the price of oil goes up, we just ramp up our power generation from one (or more) of the other sources.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/prius/" rel="tag">Prius</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li><li><a href="/blog/tags/solar-power/" rel="tag">Solar Power</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

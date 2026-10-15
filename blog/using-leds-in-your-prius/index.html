@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/using-leds-in-your-prius/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Prius"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <strong>What LEDs can I use in my Prius?</strong>  <ul> <li><a title="http://evnut.com/prius_bulbs.htm" href="https://evnut.com/prius_bulbs.htm">http://evnut.com/prius_bulbs.htm</a></li></ul> <p><strong>Where can I get LEDs for use in my Prius?</strong></p> <ul> <li><a title="http://stores.ebay.com/warden-jp2002" href="https://stores.ebay.com/warden-jp2002">http://stores.ebay.com/warden-jp2002</a></li> <li><a title="http://superbrightleds.com/1157.htm" href="https://superbrightleds.com/1157.htm">http://superbrightleds.com/1157.htm</a></li></ul> <p><strong>What should I know before "upgrading" my Prius' lamps to LEDs?</strong></p> <ul> <li><a title="http://superbrightleds.com/carbulb-notes.htm" href="https://superbrightleds.com/carbulb-notes.htm">http://superbrightleds.com/carbulb-notes.htm</a></li> <li>You'll need to replace your signal flasher module if you want LED turn signal LEDs to blink at the correct rate... otherwise they'll blink so fast your wife will think your car is having a seizure. (If anyone can tell me what part number this is and where to get it I'd be much obliged.)</li> <li>I haven't been able to successfully replace the side marker lamps in the headlamp housing without the LEDs "burning out" due to heat.</li> <li>You can't (yet) replace your headlamps with an LED lamp.</li> <li>I have seen an LED fog-lamp online, but I have&nbsp;not checked to see if they have a part to fit the Prius, nor do I have any pictures/experience with them. (Your comments on this topic are appreciated.)&nbsp;</li> <li>I have not been able to find an LED solution that's bright enough to replace my tail lamps, though I haven't tried any lamps from Warden-jp2002 yet.</li></ul> <p><strong>Will replacing my Prius' lamps increase my MPG?</strong></p> <ul> <li>While it's true that LEDs consume less power than the factory incandescent lamps, and the power from the lamps do come from one of the two battery sources, I have not noticed (nor did I expect) any change in MPG.</li></ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/prius/" rel="tag">Prius</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

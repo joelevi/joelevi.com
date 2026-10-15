@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/pitfalls-of-a-global-economy/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "america",
+        "big box store",
+        "china",
+        "export",
+        "import",
+        "made in USA",
+        "USA",
+        "Lifetime Products"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +294,10 @@
 			<div class="post-body">
 <p><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="image" border="0" alt="image" align="right" src="https://www.joelevi.com/files/blog-attachments/PitfallsofaGlobalEconomy_81DF/image.png" width="172" height="240" /> I work for a local company that makes quality products at fair prices. Notice I didn’t say “cheap prices.” This stuff is high quality, it’s built to last. As the company has grown they’ve had to put warehouses and distribution points across the country to better serve our direct customers (big box stores). Eventually they had to put a warehouse in Mexico (for a number of reasons: as a portal to Mexico and Central and Southern America, as well as an import/export gateway).</p>  <p>Additionally, they have put in a warehouse and fabrication facilities in mainland China. The reality of business is that China makes “stuff” less expensively than can be done in the USA. <!--more-->Several of the big boxes dictate the prices at which they’ll buy your product. If you don’t like that, tough beans, they’ll buy somewhere else.</p>  <p>Since when does the customer get to dictate the price they’ll pay for a product – and force the seller to drop their prices, or else. Can you imagine going in to buy a Prius and telling Toyota that you’ll only buy it for a certain price – and that price often has virtually no margin (meaning they won’t make much money on the sale), or is below cost (meaning they will lose money on the sale).</p>  <p>It sounds ridiculous, doesn’t it? A company doing that would go out of business – unless they could cut the costs of their product to match.</p>  <p>That’s exactly what’s happening. Big box stores are forcing manufactures down to a price point. The manufacturer then has to do whatever is necessary to meet that price point: eat into margins, set up warehouses in Mexico to take advantage of lower import/export fees, reduce packaging, reduce manpower (or the price of that manpower) required per product, and redesign products to use less raw materials. Typically (but not always) this means cutting quality.</p>  <p>And to drive you even more insane, some big box stores even <em>require </em>you to ship by the container from China. Yes, you read that correctly: they force you to ship your goods from China. Some manufacturers will eat the cost of shipping a container from the USA to China, just for it to be off-loaded at the dock and re-loaded to be shipped to the big box store. Insane.</p>  <p>The reason I bring all this up is an email that was sent to my employers customer care department:</p>  <blockquote>   <p>Dear Sir or Madam, I feel compelled to write. I own 26 of you folding chairs and value their quality, price and I am only to happy to buy “Made in America” products. I recently purchased two of your 6-ft fold-in half tables - only to learn they are made in China. What a shame!</p> </blockquote>  <p>First off, owning 26 of anything is impressive. Coming back to that manufacturer to but a related product, that’s loyalty! That shows me that they’re doing something right – very, very right.</p>  <p>Second, that’s a problem! There are end-customers that want goods and services that are “Made in America” but the big box stores force the goods and services over-seas.</p>  <p>So, what is a manufacturer to do? Should they not sell a product to a big-box-store and risk going out of business, or do what this company has done and established a beach-front in China to manufacturer those products, but kept other manufacturing at home, in the good ol’ US of A?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/america/" rel="tag">america</a></li><li><a href="/blog/tags/big-box-store/" rel="tag">big box store</a></li><li><a href="/blog/tags/china/" rel="tag">china</a></li><li><a href="/blog/tags/export/" rel="tag">export</a></li><li><a href="/blog/tags/import/" rel="tag">import</a></li><li><a href="/blog/tags/made-in-usa/" rel="tag">made in USA</a></li><li><a href="/blog/tags/usa/" rel="tag">USA</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

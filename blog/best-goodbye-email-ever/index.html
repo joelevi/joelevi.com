@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/best-goodbye-email-ever/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>My <a href="https://www.Lifetime.com" target="_blank">employer</a> (like most in the country) are going through “right-sizing” (which is the politically correct way of saying “down-sizing” or “layoffs”). So far I’ve kept my head down and have made it through the cuts, but one of my co-workers (and a good friend) had his position eliminated.</p>  <p>Rather than being bitter or spiteful, this is the email which he sent to the department, notifying us of his departure.</p>  <blockquote>   <p>Hi Everyone,</p>    <p>It has been wonderful working with all of you!&#160; I am sad that I am leaving such a wonderful team of people but I do plan on staying in touch.&#160; Here is my contact info:</p>    <p>(contact information redacted)</p>    <p>I’m not much for speeches so just imagine me standing before you saying something eloquent, poignant, and beautiful to mark the occasion.&#160; And since you’re at it, imagine that I have a Ferrari and a private jet.</p>    <p>(signature redacted)</p> </blockquote>  <p>Witty, upbeat, funny… just like my buddy.</p>  <p>How are things at your job? Please comment!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

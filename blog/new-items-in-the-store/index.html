@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/new-items-in-the-store/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Apparel",
+        "Store"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <div style="text-align:center;line-height:150%"><a href="https://www.zazzle.com/i_voted_shirt-235450771333363313?rf=238042966697139180"><img src="https://rlv.zcache.com/i_voted_shirt-p2354507713333633134b5d_325.jpg" alt="I-Voted shirt" style="border:0;" /></a><br /><a href="https://www.zazzle.com/i_voted_shirt-235450771333363313?rf=238042966697139180">I-Voted</a> by <a href="https://www.zazzle.com/joelevi*">joelevi</a><br />Make <a href="https://www.zazzle.com/custom/tshirts?rf=238042966697139180">personalized tshirts</a> At <a href="https://www.zazzle.com/?rf=238042966697139180">Zazzle.com</a></div>    <embed wmode="transparent" src="https://www.zazzle.com/utl/getpanel?tl=My+Zazzle+Panel&amp;at=238042966697139180&amp;cn=238042966697139180&amp;st=date_created" FlashVars="feedId=0&path=http://www.zazzle.com/assets/swf/zp/skins" width="450" height="300" TYPE="application/x-shockwave-flash"></embed>   <br /><a href="https://www.zazzle.com/joelevi*" target="_blank">buy unique gifts</a> at <a href="https://www.zazzle.com/joelevi*" target="_blank">Zazzle</a>.
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/apparel/" rel="tag">Apparel</a></li><li><a href="/blog/tags/store/" rel="tag">Store</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

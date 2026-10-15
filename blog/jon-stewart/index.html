@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/jon-stewart/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "ndaa",
+        "Mike Lee",
+        "Orrin Hatch",
+        "U.S. Senate",
+        "tyranny"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -283,6 +297,10 @@
 
 <div style="background-color:#000000;width:520px;"><div style="padding:4px;"><embed src="https://media.mtvnservices.com/mgid:cms:video:thedailyshow.com:403790" width="512" height="288" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always" base="." flashVars=""/><p style="text-align:left;background-color:#FFFFFF;padding:4px;margin-top:4px;margin-bottom:0px;font-family:Arial, Helvetica, sans-serif;font-size:12px;"><b><a href="https://www.thedailyshow.com/watch/wed-december-7-2011/arrested-development">The Daily Show</a></b><br />Get More: <a href='https://www.thedailyshow.com/full-episodes/'>Daily Show Full Episodes</a>,<a href='https://www.indecisionforever.com/'>Political Humor & Satire Blog</a>,<a href='https://www.facebook.com/thedailyshow'>The Daily Show on Facebook</a></p></div></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/ndaa/" rel="tag">ndaa</a></li><li><a href="/blog/tags/mike-lee/" rel="tag">Mike Lee</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/tyranny/" rel="tag">tyranny</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

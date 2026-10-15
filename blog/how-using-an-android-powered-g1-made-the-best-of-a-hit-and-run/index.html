@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,27 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/how-using-an-android-powered-g1-made-the-best-of-a-hit-and-run/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "accident",
+        "android",
+        "crunch",
+        "date",
+        "dinner",
+        "evernote",
+        "fandango",
+        "g1",
+        "google local search",
+        "google voice",
+        "hit-and-run",
+        "movie",
+        "parking lot",
+        "police",
+        "sherpa",
+        "tweetcaster",
+        "wife",
+        "wreck"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +312,10 @@
 
 <p>Read the full article (and find out what happens) at <a href="https://pocketnow.com" target="_blank">pocketnow.com</a>: <a href="https://pocketnow.com/how-to/how-using-an-android-powered-g1-made-the-best-of-a-hit-and-run">http://pocketnow.com/how-to/how-using-an-android-powered-g1-made-the-best-of-a-hit-and-run</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/accident/" rel="tag">accident</a></li><li><a href="/blog/tags/android/" rel="tag">android</a></li><li><a href="/blog/tags/crunch/" rel="tag">crunch</a></li><li><a href="/blog/tags/date/" rel="tag">date</a></li><li><a href="/blog/tags/dinner/" rel="tag">dinner</a></li><li><a href="/blog/tags/evernote/" rel="tag">evernote</a></li><li><a href="/blog/tags/fandango/" rel="tag">fandango</a></li><li><a href="/blog/tags/g1/" rel="tag">g1</a></li><li><a href="/blog/tags/google-local-search/" rel="tag">google local search</a></li><li><a href="/blog/tags/google-voice/" rel="tag">google voice</a></li><li><a href="/blog/tags/hit-and-run/" rel="tag">hit-and-run</a></li><li><a href="/blog/tags/movie/" rel="tag">movie</a></li><li><a href="/blog/tags/parking-lot/" rel="tag">parking lot</a></li><li><a href="/blog/tags/police/" rel="tag">police</a></li><li><a href="/blog/tags/sherpa/" rel="tag">sherpa</a></li><li><a href="/blog/tags/tweetcaster/" rel="tag">tweetcaster</a></li><li><a href="/blog/tags/wife/" rel="tag">wife</a></li><li><a href="/blog/tags/wreck/" rel="tag">wreck</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

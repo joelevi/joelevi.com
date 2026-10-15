@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/30-things-you-hope-never-show-up-on-your-performance-evaluation/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>Face it, we all have them: Employee Evaluations. They're almost always foreboding, and at the end we wish we'd have done better... just remember, it could have been worse.</p> <ol> <li>Since my last report, this employee has reached rock-bottom and has started to dig.</li> <li>I would not allow this employee to breed.</li> <li>This employee is really not so much of a has-been, but more of a definite won't be.</li> <li>Works well when under constant supervision and cornered like a rat in a trap.</li> <li>When she opens her mouth, it seems that it is only to change feet.</li> <li>He sets low personal standards and then consistently fails to achieve them.</li> <li>This employee is depriving a village somewhere of an idiot.</li> <li>This employee should go far, and the sooner he starts the better.</li> <li>Got a full 6-pack, but lacks the plastic thingy to hold it all together.</li> <li>Takes him 2 hours to watch <em>60-minutes</em>.</li> <li>A gross ignoramus -- 144 times worse than an ordinary ignoramus.</li> <li>He doesn't have ulcers, but he's a carrier.</li> <li>I would like to go hunting with him sometime.</li> <li>He's been working with glue too much.</li> <li>He would argue with a signpost.</li> <li>He brings a lot of joy whenever he leaves the room.</li> <li>When his IQ reaches 50, he should sell.</li> <li>If you see two people talking and one looks bored, he's the other one.</li> <li>A photographic memory but with the lens cover glued on.</li> <li>A prime candidate for natural de-selection.</li> <li>Donated his brain to science before he was done using it.</li> <li>Gates are down, the lights are flashing, but the train isn't coming.</li> <li>He's got two brains cells, one is lost and the other is out looking for it.</li> <li>If he were any more stupid, he'd have to be watered twice a week.</li> <li>If you give him a penny for his thoughts, you'd get change.</li> <li>If you stand close enough to him, you can hear the ocean.</li> <li>It's hard to believe he beat out 1,000,000 other sperm.</li> <li>One neuron short of a synapse.</li> <li>Some drink from the fountain of knowledge; he only gargled.</li> <li>Suffers from delusions of adequacy.</li></ol> <p>(Hat tip to Angela)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

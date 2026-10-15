@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,21 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/free-exchange-like-syncing-to-windows-mobile/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "activesync",
+        "exchange",
+        "g-one",
+        "g1",
+        "gmail",
+        "gone",
+        "Google",
+        "hosted",
+        "over-the-air",
+        "Windows Mobile",
+        "Internet",
+        "Projects"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +300,10 @@
 at
  all. Let’s break down the pros and cons.</p>  <h4>What am I losing by not using Hosted Exchange?</h4>  <ul>   <li><strong>No more remote wipe.</strong> I never used it, and hope I never need to.</li>    <li><strong>No more push email.</strong> I’ve got IMAP to sync every 10 minutes, and Gmail checks for new messages at my POP server every 10 minutes, so I think I’m close enough to real-time to not worry about it much. Calendar events get pushed down immediately, since that goes through the ActiveSync, not the IMAP protocol.</li>    <li><strong>Can’t use T-Mobile’s T-Zones Internet to connect.</strong> T-Zone’s is all but gone. You can’t sign up for it (or down-grade from full internet to it) anymore, and rumor has it they’re axing the wap.voicestream.com gateway soon. So that’s a non-issue for most people.</li>    <li><strong>More configuration and setup.</strong> About twice as much on my Windows Mobile phone.</li> </ul>  <h4>What am I gaining by using Google instead?</h4>  <ul>   <li><strong>No $5/month fee for my email box.</strong> That’s an extra $60/year that I can pay off debt with. <a href="https://www.joelevi.com/blog/index.php/tag/dave-ramsey/">Dave Ramsey</a> would be proud.</li>    <li><strong>Usable online calendar.</strong> I can now publish my free/busy schedule to the world, so people can request meetings with me without having to <a href="https://www.joelevi.com/blog/index.php/contact/" target="_blank">contact me</a> to see when I’m available. This is a HUGE deal to me, and something that I’ve never been able to do very effectively before.</li>    <li><strong>Email aggregation.</strong> I don’t have to set up 3 email accounts in each of my email clients anymore. I just tell Gmail to go out and get messages from the other accounts and it aggregates them all together for me.</li>    <li><strong>A more “open” platform.</strong> If I decide to move to another platform (either for my mobile phone or desktop computer) I’m more likely to be able to get a native application/suite to get my “Outlook” data into.</li>    <li><strong>Desktop Synchronization.</strong> Sure, you can get this with Hosted Exchange, but it’ll cost an extra $10/month, which is an additional $120/year that I’m not spending.</li>    <li><strong>Faster Web Access.</strong> OWA is significantly slower than Google Calendar and Gmail. ’Nuff said.</li>    <li><strong>More reliable storage.</strong> Google’s “cloud” storage and track record for data reliability is impressive. Running on a Hosted Exchange setup is only as good as their data storage, which might just be a single hard drive (though hopefully it’s more redundant than that).</li> </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/activesync/" rel="tag">activesync</a></li><li><a href="/blog/tags/exchange/" rel="tag">exchange</a></li><li><a href="/blog/tags/g-one/" rel="tag">g-one</a></li><li><a href="/blog/tags/g1/" rel="tag">g1</a></li><li><a href="/blog/tags/gmail/" rel="tag">gmail</a></li><li><a href="/blog/tags/gone/" rel="tag">gone</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/hosted/" rel="tag">hosted</a></li><li><a href="/blog/tags/over-the-air/" rel="tag">over-the-air</a></li><li><a href="/blog/tags/windows-mobile/" rel="tag">Windows Mobile</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

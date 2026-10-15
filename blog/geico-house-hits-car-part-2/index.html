@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,21 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/geico-house-hits-car-part-2/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Commute",
+        "Geico",
+        "Tiny House",
+        "Chevy",
+        "Volt",
+        "wreck",
+        "dash cam",
+        "Video",
+        "GeicoHorrorStory",
+        "insurance",
+        "Lawyer Up",
+        "Know Your Rights"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -365,6 +386,10 @@
 
 <p>All this over the remaining damages - less than $700 - which GEICO refuses to pay.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/commute/" rel="tag">Commute</a></li><li><a href="/blog/tags/geico/" rel="tag">Geico</a></li><li><a href="/blog/tags/tiny-house/" rel="tag">Tiny House</a></li><li><a href="/blog/tags/chevy/" rel="tag">Chevy</a></li><li><a href="/blog/tags/volt/" rel="tag">Volt</a></li><li><a href="/blog/tags/wreck/" rel="tag">wreck</a></li><li><a href="/blog/tags/dash-cam/" rel="tag">dash cam</a></li><li><a href="/blog/tags/video/" rel="tag">Video</a></li><li><a href="/blog/tags/geicohorrorstory/" rel="tag">GeicoHorrorStory</a></li><li><a href="/blog/tags/insurance/" rel="tag">insurance</a></li><li><a href="/blog/tags/lawyer-up/" rel="tag">Lawyer Up</a></li><li><a href="/blog/tags/know-your-rights/" rel="tag">Know Your Rights</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/wordpress-2-9/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "blog",
+        "export",
+        "fail",
+        "frustration",
+        "import",
+        "MySQL",
+        "upgrade",
+        "wordpress"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -289,6 +306,10 @@
 
 <p>That explains why things were &quot;wonky&quot; today. I&#x27;ve also made the decision to axe Disqus for my commenting engine. I&#x27;m going with the stock WP comments. I really dislike giving control of &quot;my&quot; content to a 3rd party who doesn&#x27;t work all the time (I&#x27;ve had problems with both Disqus and Intense Debate).  So, if you lost your comments in the shuffle, I apologize. Please repost them and I&#x27;ll be happy to approve them.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/blog/" rel="tag">blog</a></li><li><a href="/blog/tags/export/" rel="tag">export</a></li><li><a href="/blog/tags/fail/" rel="tag">fail</a></li><li><a href="/blog/tags/frustration/" rel="tag">frustration</a></li><li><a href="/blog/tags/import/" rel="tag">import</a></li><li><a href="/blog/tags/mysql/" rel="tag">MySQL</a></li><li><a href="/blog/tags/upgrade/" rel="tag">upgrade</a></li><li><a href="/blog/tags/wordpress-web-development-internet-technology-joe-family-friends-family/" rel="tag">wordpress</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

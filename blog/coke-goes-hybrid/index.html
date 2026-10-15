@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/coke-goes-hybrid/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "7-11",
+        "coke",
+        "fleet",
+        "ford",
+        "hybrid",
+        "pickup",
+        "Prius",
+        "toyota",
+        "Environment"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +295,10 @@
 			<div class="post-body">
 <p>I was stopped by a Coke manager at the local 7-11 this morning. He asked if he could ask me a bunch of questions about my Toyota Prius. Always the advocate I took 10 minutes to answer everything her threw at me.</p>  <p>He asked if it drove any differently, if it had much power, if it was just a “glorified golf cart,” if there was much room in it, all sorts of stuff.</p>  <p>I replied that other than the shifter being next to the steering column and the gas engine shutting off when you’re “idling” it’s just like any other car. Since it uses both the gas and electric motors for startups, acceleration is pretty snappy, and since it’s got a continuously variable transmission there are no “jerks” when speeding up like you have with a traditional manual or automatic transmission. I went on to explain that I have hauled 10- and 12-foot lengths of lumber in it without a problem, and that it’s a VERY roomy car.</p>  <p>I asked what his interest was, business or personal. He said Coke was replacing their fleet of manager trucks (little Ford pickups with a shell) and were going to do it entirely with Priuses (Prii?). The reasoning? The cost is about the same as the pickup, but at 45-50 miles per gallon average combined driving, they’d pay for themselves in “under two years.”</p>  <p>So, next time you see a cola representative in your local convenience store, check the parking lot and see if they’re driving a hybrid.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/7-11/" rel="tag">7-11</a></li><li><a href="/blog/tags/coke/" rel="tag">coke</a></li><li><a href="/blog/tags/fleet/" rel="tag">fleet</a></li><li><a href="/blog/tags/ford/" rel="tag">ford</a></li><li><a href="/blog/tags/hybrid/" rel="tag">hybrid</a></li><li><a href="/blog/tags/pickup/" rel="tag">pickup</a></li><li><a href="/blog/tags/prius/" rel="tag">Prius</a></li><li><a href="/blog/tags/toyota/" rel="tag">toyota</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

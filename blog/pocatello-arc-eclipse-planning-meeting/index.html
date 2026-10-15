@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/pocatello-arc-eclipse-planning-meeting/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Eclipse",
+        "HAM Radio",
+        "PARC",
+        "Pocatello",
+        "Amateur Radio",
+        "Emergency Communications"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -372,6 +387,10 @@
 
 <p>If you have questions for PARC, or would like to volunteer or participate, their next net is Sunday at 8am on 147.360+ (if you're in the area or can hit it) and their website is <a href="https://www.pocatelloarc.org/" target="_blank" rel="noopener">www.pocatelloarc.org</a>.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/eclipse/" rel="tag">Eclipse</a></li><li><a href="/blog/tags/ham-radio/" rel="tag">HAM Radio</a></li><li><a href="/blog/tags/parc/" rel="tag">PARC</a></li><li><a href="/blog/tags/pocatello/" rel="tag">Pocatello</a></li><li><a href="/blog/tags/amateur-radio/" rel="tag">Amateur Radio</a></li><li><a href="/blog/tags/emergency-communications/" rel="tag">Emergency Communications</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

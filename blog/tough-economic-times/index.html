@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/tough-economic-times/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Lifetime Products"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>Let’s face it, times are getting pretty tough. We’re officially in a recession, the current “Economic Stimulus Package” hasn’t helped anybody yet, foreclosure and unemployment rates are still climbing, and there’s no end in sight.</p>  <p>People like you and I are spending and traveling less, which hurts the bottom line of companies in every sector of the economy. These companies then have to react to stay in business. <a href="https://www.Lifetime.com" target="_blank">Lifetime Products, Inc.</a>, like many companies across America, has felt the pinch – and they’re adapting. But not like a lot of companies.</p>  <p>Sure, they’ve had to tighten their belts, but because of the philosophy of founder and co-owner, and the way the executives have structured the company, Lifetime is in a lot better fiscal shape than a lot of other companies: it’s privately held (<a href="https://www.lifetime.com/company/history.aspx" target="_blank">and has been in the 1970’s</a>) and it’s not “highly leveraged” (which is economic lingo for “deeply in debt”).</p>  <p><a title="Dave Ramsey&#39;s The Total Money Makeover" href="https://www.amazon.com/gp/product/0785289089?ie=UTF8&amp;amp;tag=leviz&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0785289089" target="_blank"><img title="image" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="164" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2009/02/image91.png" width="128" align="right" border="0" /></a>But it doesn’t stop there, Lifetime’s founder believes that a company is made up of quality people, and those employees are feeling the pinch, too. So as part of Lifetime’s “streamlining” initiatives, the owner is buying each and every employee a copy of Dave Ramsey’s Book, <a href="https://www.amazon.com/gp/product/0785289089?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0785289089">The Total Money Makeover: A Proven Plan for Financial Fitness</a>. I can only imagine that his purpose behind this is that employees that are in control of their own finances are better employees. </p>  <p>Anyhow, my <a href="https://natalie.joelevi.com" target="_blank" rel="met contact spouse sweetheart muse collegue neighbor">wife</a> and I have decided to follow Dave’s advice and have already started down the path.</p>  <p>Anyone else out there on Dave’s plan?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

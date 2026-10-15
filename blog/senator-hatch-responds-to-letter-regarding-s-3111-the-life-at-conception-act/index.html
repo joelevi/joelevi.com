@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/senator-hatch-responds-to-letter-regarding-s-3111-the-life-at-conception-act/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "U.S. Senate",
+        "Orrin Hatch",
+        "senate",
+        "s3111",
+        "roe v. wade",
+        "ogh",
+        "life at conception",
+        "hhh",
+        "abortion"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +297,10 @@
 
 <blockquote>   <p>May 10, 2010</p>    <p>Dear [Constituent]:</p>    <p>Thank you for your letter expressing your support for the Life at Conception Act and your opposition to abortion.</p>    <p>I am horrified by abortion and, throughout my Senate career, I have sponsored legislation and even constitutional amendments that would overturn the Supreme Court’s decision in Roe v. Wade – a decision that has fueled one of the most deeply divisive moral debates our nation has ever faced. Although this work is far from over, I have been successful in a number of efforts to protect the sanctity of human life. For example, when I was chairman of the Senate Judiciary Committee, I worked with my colleagues to pass the Partial Birth Abortion Act and the Unborn Victims of Violence Act, both of which were signed into law by President Bush.</p>    <p>As you know, the most recent version of the Life at Conception Act (S. 3111) was introduced by Senator Roger Wicker on June 11, 2008 and is currently pending before the Senate Judiciary Committee. Those of us who support S. 3111 continue to encourage the Senate Judiciary Chairman, Patrick Leahy, to schedule consideration of this bill as soon as possible. Rest assured that I will seriously consider any future efforts to protect the unborn. Toward that end, I appreciate your comments regarding this legislation.</p>    <p>Thank you, once again, for writing.</p>    <p>Sincerely,</p>    <p>[signed]</p>    <p>Orrin G. Hatch</p>    <p>United States Senator</p>    <p>OGH:hhh</p></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/senate/" rel="tag">senate</a></li><li><a href="/blog/tags/s3111/" rel="tag">s3111</a></li><li><a href="/blog/tags/roe-v-wade/" rel="tag">roe v. wade</a></li><li><a href="/blog/tags/ogh/" rel="tag">ogh</a></li><li><a href="/blog/tags/life-at-conception/" rel="tag">life at conception</a></li><li><a href="/blog/tags/hhh/" rel="tag">hhh</a></li><li><a href="/blog/tags/abortion/" rel="tag">abortion</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

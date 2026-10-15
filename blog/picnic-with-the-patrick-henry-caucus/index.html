@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/picnic-with-the-patrick-henry-caucus/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "picnic",
+        "patrick henry caucus",
+        "10th amendment"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +297,10 @@
 
 <blockquote>   <div id="scid:6B020045-44C2-4efd-A1E3-80B19875D75F:cf461954-38e3-4c3e-b6a2-4dc9a56e5a7e" class="wlWriterEditableSmartContent"><div class="vcalendar"><table class="vevent" border="0" padding="3"><tr><td valign="top" align="right"><b>What:</b></td><td><span class="summary">Picnic with the Patric Henry Caucus</span><br /><span class="description">Picnic with The Patrick Henry Caucus   SAVE THE DATE!   Come and enjoy a casual evening with the company of like-minded state sovereignty supporters. You will need to supply your own picnic dinner and drinks.  There will not be a formal program, instead guests will engage in a discussion with PHC legislators on state and federal issues pertaining to the 10th Amendment of the U.S. Constitution.  We will also cover the 12 state sovereignty bills that were passed in the Utah Legislature this year as well as future goals.  We invite you to bring friends along to learn about our important cause.  This is a FREE event.  Of course, donations are always appreciated to help grow the caucus and spread the movement.  We will also have PHC t-shirts available for a donation.  Rain or shine, we will be there!   About The Patrick Henry Caucus:  The PHC was formed in 2009 by a group of Utah Representatives to be the legislative voice of the 9-12, Tea Party and other citizen political activist groups.  The focus of PHC is to unify citizens and state legislators in an effort to reassert the powers of the states and to preserve individual freedoms.  Visit www.ThePatrickHenryCaucus.org for more information.  Contact PublicRelations@thepatrickhenrycaucus.org with inquiries about this event.</span></td></tr><tr><td valign="top" align="right"><b>When:</b></td><td><abbr class="dtstart" title="2010-06-18T19:00:00">Friday, June 18, 2010 7:00 PM</abbr> to <abbr class="dtend" title="2010-06-18T21:00:00">9:00 PM</abbr></td></tr><tr><td valign="top" align="right"><b>Where:</b></td><td class="location vcard"><span class="fn org">Emma Russell Park</span><div class="adr"><span class="street-address">4300 West 5700 South</span><br /><span class="locality">Roy</span>, <span class="region">Utah</span> <span class="postal-code">84067</span> &nbsp;&nbsp;<span class="country-name">United States</span></div></td></tr></table></div></div></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/picnic/" rel="tag">picnic</a></li><li><a href="/blog/tags/patrick-henry-caucus/" rel="tag">patrick henry caucus</a></li><li><a href="/blog/tags/10th-amendment/" rel="tag">10th amendment</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,21 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-evolution-of-tv-and-the-death-of-traditional-cable/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "adsl",
+        "cable",
+        "clear",
+        "clear communicatins",
+        "comcast",
+        "dsl",
+        "Internet",
+        "qwest",
+        "sdsl",
+        "wi-fi",
+        "wi-max",
+        "wireless"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +298,10 @@
 			<div class="post-body">
 <p>The days of Cable and Satellite TV are numbered, but Cable will survive.</p>  <p>With most tech-savvy homes in America having some sort of DVR (Windows Media Center, Tivo, and generics), TV can be watched on your schedule, not on the network’s, which is liberating for us, but frustrating for them.</p>  <p>This still requires a signal of some sort (be it a digital satellite or cable feed, or an over the air (OTA) signal), but we’re seeing that go away.</p>  <h3>What do I mean signals are going away?</h3>  <p>The vast majority of the “TV” watching in my house is NOT done from traditional broadcast feeds.</p>  <p>All our children’s shows come from Netflix streamed to our XBOX 360.</p>  <p>Most of our first-run shows come from NBC.com, CBS.com, or Hulu.com (with the latter being the preferred source).</p>  <p>Our re-runs come streamed from Netflix.</p>  <p>Add the XBOX, Zune, and iTunes marketplaces to the list of possible sources to get your fix, and who needs “traditional” TV anymore?</p>  <p>But what do all of these have in common? A high-speed internet connection, which just happens to be cable.</p>  <h3>The Internet is The Future – the Future is now</h3>  <p>What’s important is a fast, reliable internet connection.</p>  <p>Let me say that again: fast, reliable, internet.</p>  <p>Once you have that you can do almost anything. You can email, you can fax, you can telephone, you can video conference, you can watch your TV and movies, you can even “go to work” using your internet connection.</p>  <p>The problem with these is that they all require the internet, and even today, internet options are limited.</p>  <p>For example, at my house I can (finally) get cable internet at about 3Mbps. I can (allegedly) get DSL at about 1.5Mbps. And I can get one of a couple of different kinds of wireless internet. Others a couple cities over can get fiber to the wall, which I’d kill to have (figuratively, of course).</p>  <p>The problem with cable, DSL, fiber, and even neighborhood LANs is location. You can’t get all of them at any given location, therefore your choices suffer, and your prices aren’t competitive. </p>  <p>Wireless internet solves those problems, but suffers from bandwidth, interference, line-of-sight considerations, latency, and through-put. It’s an option, depending on location, so we’re back to the location argument again.</p>  <h3>Wi-Max solves all that</h3>  <p>Wi-Max is the next generation wireless internet. It has the bandwidth, throughput, and latency requirements that today’s savvy ‘net. What’s more, it has the potential to cover areas that hard-wires solutions cannot.</p>  <p>The only problem with Wi-Max is it’s age: it’s pretty young, doesn’t have a lot of hardware options (for service providers, nor for consumers) and coverage is currently lacking in all but a very select metropolitan areas (Portland and Atlanta spring to mind).</p>  <h3>In the meantime</h3>  <p>In the meantime I wait, paying my monthly cable internet bill, waiting for the day I can jump ship to Wi-Max…</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/adsl/" rel="tag">adsl</a></li><li><a href="/blog/tags/cable/" rel="tag">cable</a></li><li><a href="/blog/tags/clear/" rel="tag">clear</a></li><li><a href="/blog/tags/clear-communicatins/" rel="tag">clear communicatins</a></li><li><a href="/blog/tags/comcast/" rel="tag">comcast</a></li><li><a href="/blog/tags/dsl/" rel="tag">dsl</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/qwest/" rel="tag">qwest</a></li><li><a href="/blog/tags/sdsl/" rel="tag">sdsl</a></li><li><a href="/blog/tags/wi-fi/" rel="tag">wi-fi</a></li><li><a href="/blog/tags/wi-max/" rel="tag">wi-max</a></li><li><a href="/blog/tags/wireless/" rel="tag">wireless</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

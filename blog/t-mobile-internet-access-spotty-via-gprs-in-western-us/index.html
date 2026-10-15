@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/t-mobile-internet-access-spotty-via-gprs-in-western-us/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>A<a href="https://www.joelevi.com/images/TMobileInternetAccessSpottyviaGPRSinWest_9A0A/image.png" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="98" alt="image" src="https://www.joelevi.com/images/TMobileInternetAccessSpottyviaGPRSinWest_9A0A/image_thumb.png" width="98" align="right" border="0"/></a>s of approximately 1am Mountain Time T-Mobile's Data has been spotty, particularly over GPRS.</p> <p>Symptoms include inability to sync via Exchange ("Synchronization could not be completed. Try again Later. Support Code: 0x80072F7D"), and errors when surfing the web ("This page contains errors and cannot be displayed."). Still others state they are being taken to a "T-Zones Subscribe" page that doesn't allow the user to proceed further.</p> <p>According to an unnamed T-Mobile source&nbsp;there was a "schedule maintenance event" around 1am that still has an open ticket.&nbsp;This "maintenance event" is rumored to be another "data users purge" as has been done in the past.</p> <p>What makes this situation frustrating is that many users are not experiencing problems, whereas others (with an identical configuration) are.</p> <p><strong>UPDATE: </strong>As of around 11:20am data access seems to have been restored. Users may need to reset their devices for the "changes" to take effect.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

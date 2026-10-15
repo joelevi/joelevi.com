@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/thinking-like-sukrat/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "akismet",
+        "spam",
+        "sukrat",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p>I’ve gotten a couple comments to varying posts which say simply</p>  <blockquote>   <p>I think you are thinking like sukrat, but I think you should cover the other side of the topic in the post too…</p> </blockquote>  <p>These comments have been on some of my more controversial posts, and have all been caught by Akismet.</p>  <p>I started doing a little digging, who or what is a “sukrat”?</p>  <p>It turns out this is most likely a semi-random arrangement of letters used for the purpose of circumventing spam filters on blog and CMS engines. In this particular case, the commenter is peddling “enlargement” and medical goods/services. Further, this exact comment occurred twice in my Akismet filter, and numerous times across the web when I Googled it.</p>  <p>It is just more spam… Delete it and move along.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/akismet/" rel="tag">akismet</a></li><li><a href="/blog/tags/spam/" rel="tag">spam</a></li><li><a href="/blog/tags/sukrat/" rel="tag">sukrat</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

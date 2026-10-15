@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/tuesdays-song-libra-by-mucc/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Music"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p></p>  <p></p>  <p>Today’s song cross the pond once again, this time to the island nation of Japan and a band called Mucc. Wikipedia says <a href="https://en.wikipedia.org/wiki/Mucc" target="_blank">Mucc</a> (ムック, <i>mukku</i>) is a Japanese rock band formed in 1997. Named after a character from the Japanese children's TV show Ponkickies, the band is also known by the name 69 since &quot;sixnine&quot; can be pronounced &quot;muku&quot; in Japanese.</p>  <p>The song, <em>Libra</em>, features a solid drum track, “classic rock” vocals, with somewhat of a “music box” thread running through the verses. It is, of course, sung in Japanese. I’m especially impressed with the incorporation of “triplets” in a few of the verses.</p>  <p>&#160;</p>  <p>   <div class="wlWriterSmartContent" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:6ebbabc2-84d8-49ff-8b3d-3593e8139512" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ixS2c1Ac2n0"></param><param name="wmode" value="transparent"></param><embed src="https://www.youtube.com/v/ixS2c1Ac2n0" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></div></div></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/music/" rel="tag">Music</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/telemarketing-call-from-auto-services/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Auto Services",
+        "Dealer Services",
+        "do-not-call-list",
+        "TCPA",
+        "telecommunications protection act",
+        "telemarketer",
+        "telemarketing",
+        "Warranty"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +294,10 @@
 			<div class="post-body">
 <p>I just got a call from Auto Services trying to sell me an extended warranty on my new (used) vehicle. I didn't note the number they were calling from, but I did obtain the following information:</p>  <ul>   <li>Initially an automated call comes in (which is a violation of the TCPA) and tells you that this is your &quot;final chance&quot; to extend your vehicle warranty. Press 1 to be removed from the list, press 2 to speak with a customer service rep.</li>    <li>I spoke with Josh (rep. 208) who just so happens to be a floor supervisor (without a manager, I might add)</li>    <li>I asked if he would place me on their do-not-call list, he asked for my number and said he would</li>    <li>I asked if his company had a written policy concerning the use of their do-not-call list: not that he knows of (another TCPA violation)</li>    <li>I asked if he had any training on the user of their do-not-call-policy: no (another TCPA violation)</li>    <li>I asked to be transferred to someone in their legal department or corporate offices: he can't do that</li>    <li>I asked for a number to the corporate office: for security reasons he's not allowed to do that (another TCPA violation)</li>    <li>I asked for the physical address of the corporate office: for security reasons he's not allowed to do that (another TCPA violation)</li>    <li>I asked what City/State he's in: Atlanta, GA</li>    <li>I asked what company he's calling for: Auto Services</li>    <li>I asked if they have a website: not that we knows of</li>    <li>I asked for the name and contact number of an Authorized agent in either Utah or Georgia: he doesn't know what that is</li>    <li>I asked if he worked directly for Auto Services, or if he worked for another company under contract to Auto Services: the latter, but he refused to give their name and mailing address (another violation of the TCPA)</li>    <li>I asked if he had a do-not-call-policy for the parent company: not that he's aware of (another violation of the TCPA)</li>    <li>I asked that all my numbers be placed on the do-not-call list for both Auto Solutions AND his parent company: he said he would</li>    <li>I asked that he send me a written copy of the do-not-call-policies for both Auto Solutions AND his parent company: he re-stated that he did not even know of the existence of such a policy; I reminded him that under the TCPA he's required to mail me a copy upon request and that failure to do so is a violation of Federal Law. He asked if there was anything else he could do for me and bid me a &quot;good day.&quot;</li> </ul>  <p>That's, what, seven violations of the TCPA at $500 each (plus two more if I don't get written copies of the do-not-call-policies for each company). So that one phone call could potentially cost the company $3,500... plus another $1,000 if I don't get the DNC policies... and if a court awards treble damages that's up to $13,500. That's a big risk for a company to take... unfortunately I do not have a phone number or address (both are required by Law)... funny he wasn't &quot;allowed&quot; to give that information out.</p>  <p>Is this related to the Dealer Services calls that I've gotten in the past... just under a new/different name?</p>  <p>Have any of you gotten these calls? Have any contact information?</p>  <div class="wlWriterSmartContent" id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:b1f31064-d9c4-4122-937b-5ad54c58d551" style="padding-right: 0px; display: inline; padding-left: 0px; padding-bottom: 0px; margin: 0px; padding-top: 0px">del.icio.us Tags: <a href="https://del.icio.us/popular/Dealer%20Services" rel="tag">Dealer Services</a>,<a href="https://del.icio.us/popular/Auto%20Services" rel="tag">Auto Services</a>,<a href="https://del.icio.us/popular/Warranty" rel="tag">Warranty</a>,<a href="https://del.icio.us/popular/TCPA" rel="tag">TCPA</a>,<a href="https://del.icio.us/popular/do-not-call-list" rel="tag">do-not-call-list</a>,<a href="https://del.icio.us/popular/telecommunications%20protection%20act" rel="tag">telecommunications protection act</a>,<a href="https://del.icio.us/popular/telemarketer" rel="tag">telemarketer</a>,<a href="https://del.icio.us/popular/telemarketing" rel="tag">telemarketing</a></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/auto-services/" rel="tag">Auto Services</a></li><li><a href="/blog/tags/dealer-services/" rel="tag">Dealer Services</a></li><li><a href="/blog/tags/do-not-call-list/" rel="tag">do-not-call-list</a></li><li><a href="/blog/tags/tcpa/" rel="tag">TCPA</a></li><li><a href="/blog/tags/telecommunications-protection-act/" rel="tag">telecommunications protection act</a></li><li><a href="/blog/tags/telemarketer/" rel="tag">telemarketer</a></li><li><a href="/blog/tags/telemarketing/" rel="tag">telemarketing</a></li><li><a href="/blog/tags/warranty/" rel="tag">Warranty</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

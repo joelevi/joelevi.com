@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,25 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/update-from-orrin-hatch-u-s-senator/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "update",
+        "unemployment",
+        "twitter",
+        "senator",
+        "repeal",
+        "on the brink",
+        "obamacare",
+        "news",
+        "hatch",
+        "drug testing",
+        "benefits",
+        "U.S. Senate",
+        "Orrin Hatch",
+        "welfare",
+        "updates",
+        "orrin hatch"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -335,6 +360,10 @@
     <li><a href="https://www.amazon.com/gp/product/0446561932?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0446561932"><img src="https://ecx.images-amazon.com/images/I/51lxy3Kei8L._SL160_.jpg" border="0" alt="" /></a><img style="border: none !important; margin: 0px !important;" src="https://www.assoc-amazon.com/e/ir?t=leviz&amp;l=as2&amp;o=1&amp;a=0446561932" border="0" alt="" width="1" height="1" /></li>
 </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/update/" rel="tag">update</a></li><li><a href="/blog/tags/unemployment/" rel="tag">unemployment</a></li><li><a href="/blog/tags/twitter/" rel="tag">twitter</a></li><li><a href="/blog/tags/senator/" rel="tag">senator</a></li><li><a href="/blog/tags/repeal/" rel="tag">repeal</a></li><li><a href="/blog/tags/on-the-brink/" rel="tag">on the brink</a></li><li><a href="/blog/tags/obamacare/" rel="tag">obamacare</a></li><li><a href="/blog/tags/news/" rel="tag">news</a></li><li><a href="/blog/tags/hatch/" rel="tag">hatch</a></li><li><a href="/blog/tags/drug-testing/" rel="tag">drug testing</a></li><li><a href="/blog/tags/benefits/" rel="tag">benefits</a></li><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/welfare/" rel="tag">welfare</a></li><li><a href="/blog/tags/updates/" rel="tag">updates</a></li><li><a href="/blog/tags/orrin-hatch-2/" rel="tag">orrin hatch</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

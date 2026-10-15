@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/firefly/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "firefly",
+        "joss whedon",
+        "sci-fi",
+        "science fiction",
+        "serenity",
+        "Science"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p>Some time ago my <a href="https://natalie.joelevi.com" target="_blank" rel="met contact spouse sweetheart muse collegue neighbor">wife</a> and I saw a poster at our local movie theater advertising a show called <em>Serenity.</em> It looked pretty good, both action/adventure (which my wife enjoys) and Sci-fi (which I enjoy).</p>  <p>We watched it and loved it!</p>  <p>Later I was talking about with with a friend and a co-worker overheard. “You know that’s based on a TV series, right?” he asked. “There’s a whole season out that takes place before the movie. It’s called <em>FireFly</em>.” He loaded me hid discs and my wife and I loved every minute of it, which only made watching the movie that much more sad (after you’d invested yourself in the characters, only to have them killed or die in the move, and knowing it was the “last episode” was disheartening).</p>  <p>Here’s one of my favorite scenes from <em>FireFly</em>:</p>  <p>   <div class="wlWriterEditableSmartContent" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:bfe7edd1-50e7-4063-96c3-59a79b3b3f4a" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px"><div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/8mq_96Entks&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;feature=player_embedded&amp;fs=1&amp;hl=en"></param><embed src="https://www.youtube.com/v/8mq_96Entks&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;feature=player_embedded&amp;fs=1&amp;hl=en" type="application/x-shockwave-flash" width="425" height="355"></embed></object></div></div></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/firefly/" rel="tag">firefly</a></li><li><a href="/blog/tags/joss-whedon/" rel="tag">joss whedon</a></li><li><a href="/blog/tags/sci-fi/" rel="tag">sci-fi</a></li><li><a href="/blog/tags/science-fiction/" rel="tag">science fiction</a></li><li><a href="/blog/tags/serenity/" rel="tag">serenity</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,21 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/for-hire-seo-site-review/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "consultant",
+        "seach engine",
+        "search engine marketing",
+        "search engine optimization",
+        "search engine placement",
+        "search engine positioning",
+        "sem",
+        "seo",
+        "sep",
+        "Freelance",
+        "Internet",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +298,10 @@
 			<div class="post-body">
 <p>I’ve been doing quite a bit of Search Engine Optimization (SEO) for the company that I work for and have found out some very interesting things.</p>  <ul>   <li>Professional SEO companies charge a LOT of money with little (to no) guarantee for results.</li>    <li>Most of their “tricks” are things that anyone with a little knowledge of HTML can do.</li> </ul>  <p>Based on that premise I’ve decided that I’m going to start selling my services as an SEO Consultant. Here’s where I stand out:</p>  <ul>   <li><strong>$50 for my initial report:</strong> You tell me what webpage(s) you want me to evaluate (up to 3 pages), I’ll evaluate them and list the places that you can improve.</li>    <li><strong>Email/voicemail only:</strong> I’m not going to be onsite, I’m not going to talk to you “live” so you don’t have to worry about setting up meetings and all that jazz. This saves you money by letting me work on my schedule (and keep my day job).</li>    <li><strong>$10 for each additional inquiry/question:</strong> I’ll provide my initial report, then for each question you have you’ll pay me an additional $10 to answer.</li> </ul>  <p>The initial report is CHEAP. You can use this as a way to double-check the information a highly-paid SEO consultant is feeding you a line or not.</p>  <h3>What do you think?</h3>  <p>Rather than spending $500 to $5000 on an highly paid SEO consultant you can get similar quality as a MUCH lower price. Even if you’re a small fish in the big pond, you can afford this!</p>  <p><a href="https://www.joelevi.com/blog/index.php/contact/" target="_blank">Contact me</a> and let’s see what I can do for you!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/consultant/" rel="tag">consultant</a></li><li><a href="/blog/tags/seach-engine/" rel="tag">seach engine</a></li><li><a href="/blog/tags/search-engine-marketing/" rel="tag">search engine marketing</a></li><li><a href="/blog/tags/search-engine-optimization/" rel="tag">search engine optimization</a></li><li><a href="/blog/tags/search-engine-placement/" rel="tag">search engine placement</a></li><li><a href="/blog/tags/search-engine-positioning/" rel="tag">search engine positioning</a></li><li><a href="/blog/tags/sem/" rel="tag">sem</a></li><li><a href="/blog/tags/seo/" rel="tag">seo</a></li><li><a href="/blog/tags/sep/" rel="tag">sep</a></li><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

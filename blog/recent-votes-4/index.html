@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,23 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/recent-votes-4/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "U.S. Senate",
+        "U.S. House",
+        "Rob Bishop",
+        "Orrin Hatch",
+        "Bob Bennett",
+        "S.3816",
+        "Foreign Operations",
+        "DISCLOSE",
+        "National Defense Authorization Act for Fiscal Year 2011",
+        "Department of State",
+        "H.R.3081",
+        "Democracy is Strengthened by Casting Light on Spending in Elections",
+        "Creating American Jobs and Ending Offshoring Act",
+        "and Related Programs Appropriations Act"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -309,6 +332,10 @@ Sen. Robert Bennett voted NO</p>
 
 <p>The Senate is also scheduled to work this bill that will likely be the vehicle for a continuing resolution to keep the government funded after Sept. 30, the end of the fiscal year.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/u-s-house/" rel="tag">U.S. House</a></li><li><a href="/blog/tags/rob-bishop/" rel="tag">Rob Bishop</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/bob-bennett/" rel="tag">Bob Bennett</a></li><li><a href="/blog/tags/s-3816/" rel="tag">S.3816</a></li><li><a href="/blog/tags/foreign-operations/" rel="tag">Foreign Operations</a></li><li><a href="/blog/tags/disclose/" rel="tag">DISCLOSE</a></li><li><a href="/blog/tags/national-defense-authorization-act-for-fiscal-year-2011/" rel="tag">National Defense Authorization Act for Fiscal Year 2011</a></li><li><a href="/blog/tags/department-of-state/" rel="tag">Department of State</a></li><li><a href="/blog/tags/h-r-3081/" rel="tag">H.R.3081</a></li><li><a href="/blog/tags/democracy-is-strengthened-by-casting-light-on-spending-in-elections/" rel="tag">Democracy is Strengthened by Casting Light on Spending in Elections</a></li><li><a href="/blog/tags/creating-american-jobs-and-ending-offshoring-act/" rel="tag">Creating American Jobs and Ending Offshoring Act</a></li><li><a href="/blog/tags/and-related-programs-appropriations-act/" rel="tag">and Related Programs Appropriations Act</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

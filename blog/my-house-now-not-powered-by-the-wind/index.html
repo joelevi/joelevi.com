@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/my-house-now-not-powered-by-the-wind/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "environment",
+        "green",
+        "pacificorp",
+        "rocky mountain power",
+        "turbine",
+        "wind"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p><strong>Gregory E. Abel, Chairman and CEO of PacifiCorp</strong></p> <p><strong>201 South Main St., Suite 2300</strong></p> <p><strong>Salt Lake City, UT 84111</strong></p> <p><strong></strong>&nbsp;</p> <p>An Open Letter to Gregory E. Abel, Chairman and CEO of PacifiCorp:</p> <p>This is a response to a <a href="https://www.joelevi.com/blog/index.php/2008/05/07/my-house-now-entirely-powered-by-the-wind/" rel="me">prior article</a> I published on my website (<a title="http://www.joelevi.com/blog/index.php/2008/05/07/my-house-now-entirely-powered-by-the-wind/" href="https://www.joelevi.com/blog/index.php/2008/05/07/my-house-now-entirely-powered-by-the-wind/">http://www.joelevi.com/blog/index.php/2008/05/07/my-house-now-entirely-powered-by-the-wind/</a>) about the&nbsp; regarding opting in to&nbsp; <a href="https://www.rockymtnpower.net/" target="_blank">Rocky Mountain Power</a>'s (a division of PacifiCorp) "<a href="https://www.rockymtnpower.net/Article/Article65531.html" target="_blank">Blue Sky</a>" program which allows customers to buy their power your wind farm.</p> <p>First, I find it odd that one has to "apply" for the program. That's silly. Any customer who has lines hooked up to a meter on the side of their house should "qualify," at least in my opinion.</p> <p>Second, you have an "Equal Payment" program, wherein a customer's yearly power usage is tallied up and the total cost divided by 12. This way in the summer time when we use more power we aren't gouged by a huge power bill. Similarly, in the winter, when we don't use as much power, we pay a higher amount than we actually use. When you average everything out, we pay the same amount per year. Rocky Mountain Power doesn't charge us any interest for the summer months, and we don't get paid any interest in the winter months; it's just a nice service that you offer.</p> <h3>A nice service that disqualifies you from buying power from the wind farm</h3> <p>Yes, you read that correctly. We were denied enrollment on the "Blue Sky" program because we participate in the equal pay program. Not only that, my wife was quite upset when she got the news... the rejection letter went on to say that if we've had our power turned off in the last year, we also don't qualify.</p> <p>We haven't had our power turned off in the last, let me see.... EVER! But since we participate in your equal payment plan we're somehow lumped into the same bucket as people who can't pay their power bill for months at a time. &lt;sarcasm&gt;Nice. <em>That</em> is customer service.&lt;/sarcasm&gt;</p> <p>I'm publishing this to my website (<a href="https://www.JoeLevi.com">http://www.JoeLevi.com</a>) as an open letter and await your response.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">environment</a></li><li><a href="/blog/tags/green/" rel="tag">green</a></li><li><a href="/blog/tags/pacificorp/" rel="tag">pacificorp</a></li><li><a href="/blog/tags/rocky-mountain-power/" rel="tag">rocky mountain power</a></li><li><a href="/blog/tags/turbine/" rel="tag">turbine</a></li><li><a href="/blog/tags/wind/" rel="tag">wind</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

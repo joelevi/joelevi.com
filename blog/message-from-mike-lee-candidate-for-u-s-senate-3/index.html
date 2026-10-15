@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/message-from-mike-lee-candidate-for-u-s-senate-3/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "U.S. Senate",
+        "Mike Lee",
+        "vote",
+        "senate",
+        "primary",
+        "message",
+        "candidate"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -315,6 +331,10 @@
 
 <p>Please visit my website at <a href="https://www.mikelee2010.com/" target="_blank">www.mikelee2010.com</a> for more information and updates on my campaign.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/mike-lee/" rel="tag">Mike Lee</a></li><li><a href="/blog/tags/vote/" rel="tag">vote</a></li><li><a href="/blog/tags/senate/" rel="tag">senate</a></li><li><a href="/blog/tags/primary/" rel="tag">primary</a></li><li><a href="/blog/tags/message/" rel="tag">message</a></li><li><a href="/blog/tags/candidate/" rel="tag">candidate</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

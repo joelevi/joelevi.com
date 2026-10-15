@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/icoaster-for-iphone/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/12/image111.png"><img title="image" style="border-right: 0px; border-top: 0px; display: inline; margin-left: 0px; border-left: 0px; margin-right: 0px; border-bottom: 0px" height="348" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/12/image-thumb101.png" width="187" align="right" border="0" /></a> Is your significant other is always getting on your case about setting your (insert drink of choice here) on the (insert a wood surface here) and leaving water rings from the condensation?</p>  <p>Do the words “can’t you ever use a coaster” echo throughout your home and embarrass you in front of your friends?</p>  <p>Can you never find a coaster when you need one?</p>  <p>Do you have an iPhone? If so, with this 3G-enabled web application all your coaster problems are solved!</p>  <p>Introducing <a href="https://www.joeldare.com/wiki/icoaster" target="_blank">iCoaster</a> for iPhone! Simply navigate to this address and viola! Instant <a href="https://www.joeldare.com/wiki/icoaster" target="_blank">coaster</a>! No more yelling, no more embarrassment, and if you use it long enough, no more need to plug in your iPhone to charge!</p>  <p>Best of all, it’s free*!</p>  <p>* = Cost of any damages to the iPhone due to condensation, water, spills, etc. are the responsibility of the owner. <a href="https://www.joeldare.com/wiki/icoaster" target="_blank">iCoaster</a> is not liable for any damages incidental, consequential, or for any legal mumbo-jumbo reasons. Use at your own risk.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/t-mobile-home-service-problems/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/09/image15.png"><img title="image" style="border-right: 0px; border-top: 0px; display: inline; margin-left: 0px; border-left: 0px; margin-right: 0px; border-bottom: 0px" height="79" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/09/image-thumb11.png" width="154" align="right" border="0" /></a> My friend, Brett, and I both traded in our Vonage service for T-Mobile’s new @Home VoIP solution. How could we not? </p>  <p>Vonage was running about $30/month for their unlimited domestic plan (fees and taxes included), whereas T-Mobile advertised basically the same service for $10/month (so long as you also have a $39.99+ mobile plan). Add that all up and it’s $240/year.</p>  <p>The T-Mobile ATA (analog telephone adaptor) is a Linksys WRTU54G-TM with combines a router, firewall, wireless B/G Wi-Fi access point, and 4-port switch with the ATA functions (two phone lines with two SIM slots). This meant that I could get rid of my Netgear router/firewall/WAP/switch and the Vonage ATA. Less equipment usually means less heat, fewer potential points of failure, and typically uses less power (note, I haven’t actually measured heat output nor power consumption of the two solutions, I’m only making generalizations).</p>  <p>I had some fairly <a title="Problems setting up T-Mobile&#39;s @Home VoIP Service" href="https://www.joelevi.com/blog/index.php/2008/09/08/my-t-mobile-home-experience/" target="_blank">substantial complications getting setup initially</a> but once the LNP (local number porting)was (fully) complete I thought I’d be all set with Vonage-esque reliability.</p>  <p>Recently we’ve notices a rather peculiar trend: we’ll go to make a phone call and won’t have a dial-tone. A check on the ATA shows all lights blinking away happily, internet traffic is still buzzing away, wireless traffic is still getting through. For all intents and purposes, the ATA is doing everything <em>except</em> being an ATA. After I unplug the ATA (wait 15 seconds) and plug it back in, I have a dial-tone within 90 seconds. Apparently something is happening to interrupt the registration between the ATA and T-Mobile’s servers. I don’t know if this is an issue with the ATA (I’d assume not, since all other functions are working), the Internet/ISP (I’d assume not, since all other internet traffic is flowing), or something on T-Mobile’s end.</p>  <p>In any event, I shared my experience with my buddy, Brett. He says he’s experiencing the same thing about once a month. My experience is a bit more frequent than that.</p>  <p>Anyone else having this type of problem with T-Mobile’s @Home service?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

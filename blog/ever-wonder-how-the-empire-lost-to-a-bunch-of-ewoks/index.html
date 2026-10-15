@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,23 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/ever-wonder-how-the-empire-lost-to-a-bunch-of-ewoks/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "college humor",
+        "dance",
+        "darth vader",
+        "endor",
+        "funny",
+        "humor",
+        "michael jackson",
+        "mj",
+        "music video",
+        "parody",
+        "star wars",
+        "storm troopers",
+        "thriller",
+        "Music"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -281,6 +304,10 @@
 
 <object type="application/x-shockwave-flash" data="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id=1819422&fullscreen=1" width="480" height="360" ><param name="allowfullscreen" value="true"/><param name="wmode" value="transparent"/><param name="AllowScriptAccess" value="true"/><param name="movie" quality="best" value="http://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id=1819422&fullscreen=1"/><embed src="https://www.collegehumor.com/moogaloop/moogaloop.swf?clip_id=1819422&fullscreen=1" type="application/x-shockwave-flash" wmode="transparent"  width="480" height="360"  allowScriptAccess="always"></embed></object><div style="padding:5px 0; text-align:center; width:480px;">See more <a href="https://www.collegehumor.com/videos">funny videos</a> and <a href="https://www.collegehumor.com/pictures">funny pictures</a> at <a href="https://www.collegehumor.com/">CollegeHumor</a>.</div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/college-humor/" rel="tag">college humor</a></li><li><a href="/blog/tags/dance/" rel="tag">dance</a></li><li><a href="/blog/tags/darth-vader/" rel="tag">darth vader</a></li><li><a href="/blog/tags/endor/" rel="tag">endor</a></li><li><a href="/blog/tags/funny/" rel="tag">funny</a></li><li><a href="/blog/tags/humor/" rel="tag">humor</a></li><li><a href="/blog/tags/michael-jackson/" rel="tag">michael jackson</a></li><li><a href="/blog/tags/mj/" rel="tag">mj</a></li><li><a href="/blog/tags/music-video/" rel="tag">music video</a></li><li><a href="/blog/tags/parody/" rel="tag">parody</a></li><li><a href="/blog/tags/star-wars/" rel="tag">star wars</a></li><li><a href="/blog/tags/storm-troopers/" rel="tag">storm troopers</a></li><li><a href="/blog/tags/thriller/" rel="tag">thriller</a></li><li><a href="/blog/tags/music/" rel="tag">Music</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

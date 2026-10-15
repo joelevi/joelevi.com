@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/11122007-zune-on-wootcom/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Music"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>If you haven't gotten a Zune yet, today may be the day to do it!</p>  <p><a href="https://www.woot.com/" target="_blank">Woot.com</a> is selling black and white (refurbished) Zune's for $84.99 + 5 shipping.</p>  <p>Those of you unfamiliar with the way Woot.com works, they offer one product a day until they're gone. So tomorrow it will be something different, and they could run out at any time, so if you want one, act fast!</p>  <p><a href="https://www.woot.com" target="_blank"><img alt="Microsoft Zune 30GB Digital Media Player (Black or White)" src="https://s3-external-1.amazonaws.com/wootsaleimages/Microsoft_Zune_30GB_Digital_Media_Player_(Black_or_White)tsaStandard.jpg" align="right" /></a></p>  <p>Oh, and they'll be getting the new &quot;Zune 2&quot; firmware via automatic update TOMORROW (11/13/2007) which will give you the ability to wirelessly sync over your home's Wi-Fi network (via the Zune's built-in Wi-Fi), a new user-interface, and a bunch more bells and whistles... it's like buying a 3rd generation ip-od and getting the 4th gen for free (only with less Apple and non-standard file-formats ;) ).</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/music/" rel="tag">Music</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

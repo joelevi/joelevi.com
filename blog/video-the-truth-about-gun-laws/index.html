@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,22 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/video-the-truth-about-gun-laws/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "2a",
+        "constitution",
+        "debate",
+        "gun",
+        "history",
+        "law",
+        "rights",
+        "RKBA",
+        "second amendment",
+        "security",
+        "Self-Defense",
+        "supreme court",
+        "Video"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +299,10 @@
 			<div class="post-body">
 <p>Regardless of which side of the debate you’re on, the following video is a must-see. It delves into the history of gun laws in The United States of America, how other leaders through history have applied gun logic to their agendas, the history of gun control in the States, and more recent court decisions.</p>  <p>Watch the video, then tell me what side of the debate you’re on, and why.</p> <object width="420" height="339"><param name="movie" value="http://www.dailymotion.com/swf/x9iv1a_meet-the-truth-about-gun-laws_sport" /><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><embed src="https://www.dailymotion.com/swf/x9iv1a_meet-the-truth-about-gun-laws_sport" type="application/x-shockwave-flash" width="420" height="339" allowFullScreen="true" allowScriptAccess="always"></embed></object>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/2a/" rel="tag">2a</a></li><li><a href="/blog/tags/constitution/" rel="tag">constitution</a></li><li><a href="/blog/tags/debate/" rel="tag">debate</a></li><li><a href="/blog/tags/gun/" rel="tag">gun</a></li><li><a href="/blog/tags/history/" rel="tag">history</a></li><li><a href="/blog/tags/law/" rel="tag">law</a></li><li><a href="/blog/tags/rights/" rel="tag">rights</a></li><li><a href="/blog/tags/rkba/" rel="tag">RKBA</a></li><li><a href="/blog/tags/second-amendment/" rel="tag">second amendment</a></li><li><a href="/blog/tags/security/" rel="tag">security</a></li><li><a href="/blog/tags/self-defense-activism-joe-family-friends-family/" rel="tag">Self-Defense</a></li><li><a href="/blog/tags/supreme-court/" rel="tag">supreme court</a></li><li><a href="/blog/tags/video/" rel="tag">Video</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

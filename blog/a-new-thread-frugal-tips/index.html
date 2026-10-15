@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/a-new-thread-frugal-tips/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "frugal",
+        "money",
+        "thrifty",
+        "tip"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p>I don’t know if I should call them “Frugal Tips” or “Thrifty Tips” we’ll go with the former for the time being (I’ll use both tags so you can easily cross-reference all of them).</p>  <p>What I plan on doing is releasing a new tip every few days that will help you save money by doing simple things. These will be things that I’ve done (or plan to do in the immediate future) and I’ll share with you my actual savings (your savings may vary, but it’ll be a good place to compare).</p>  <p>Ideally, these tips won’t drastically change your current lifestyle, but some of them may.</p>  <p>Please, <a href="https://www.joelevi.com/blog/index.php/contact/" target="_blank">contact me</a> with any tips that you have that you’d like me to review and write-up.</p>  <p>Stay tuned, the first tip will hit <a href="https://www.JoeLevi.com">www.JoeLevi.com</a> tonight!</p>  <p><a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>™.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/frugal/" rel="tag">frugal</a></li><li><a href="/blog/tags/money/" rel="tag">money</a></li><li><a href="/blog/tags/thrifty/" rel="tag">thrifty</a></li><li><a href="/blog/tags/tip/" rel="tag">tip</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

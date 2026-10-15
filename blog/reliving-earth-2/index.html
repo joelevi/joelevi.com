@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/reliving-earth-2/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "nostalgia",
+        "sci-fi",
+        "tv"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image3.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="180" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image-thumb3.png" width="240" align="right" border="0"/></a> <i><b>Earth 2</b></i> is a short-lived science fiction <a href="https://en.wikipedia.org/wiki/Television_series">television series</a> which aired on <a href="https://en.wikipedia.org/wiki/NBC">NBC</a> from <a href="https://en.wikipedia.org/wiki/November_6">November 6</a>, <a href="https://en.wikipedia.org/wiki/1994">1994</a> to <a href="https://en.wikipedia.org/wiki/June_4">June 4</a>, <a href="https://en.wikipedia.org/wiki/1995">1995</a>. The show was canceled after one season of 22 episodes. (Wikipedia)</p> <p>When I was a kid I loved this show... I only got to watch a few episodes of it before it "disappeared" (kids sometimes don't get that a show can be up and canceled without "finishing" the story).</p> <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image4.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="159" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image-thumb41.png" width="240" align="left" border="0"/></a> Thanks to the miracle that is Netflix Watch Now (on demand) I was able to watch the entire series online with my kids. They were enthralled with the storyline and drawn in because there are two kids in the show. That really strikes a cord for kids and parents of kids alike.</p> <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image51.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="224" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/05/image-thumb51.png" width="150" align="right" border="0"/></a> The Netflix Watch Now sequence is out of order (just like on the physical DVD media) as they tack in two "didn't make it to air" episodes at the end (which is confuses the timeline).</p> <p>The series premiered on <a href="https://en.wikipedia.org/wiki/November_6">November 6</a>, <a href="https://en.wikipedia.org/wiki/1994">1994</a> with a one-hour, thirty minute <a href="https://en.wikipedia.org/wiki/Television_pilot">pilot episode</a> that ran from 7:00 – 9:00PM EST (including adverts – it was later split into two episodes for syndication). The following week it moved to a regular timeslot.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/nostalgia/" rel="tag">nostalgia</a></li><li><a href="/blog/tags/sci-fi/" rel="tag">sci-fi</a></li><li><a href="/blog/tags/tv/" rel="tag">tv</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

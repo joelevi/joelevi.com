@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/scam-invalid-domain-contact-information-in-the-whois-database-for-this-domain/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p>Halloween night I got a scary email, but it was more a “trick” than a “treat.” The email is a scam trying to (presumably) get you to pay to get your domain name back.</p>  <p>Their “investigation” took less than 1 millisecond to complete. The window they “provided” to allow me to “fix” the missing information passed in that same millisecond. And someone purchased the domain, also, in the same, millisecond.</p>  <p>As irony would have it, the “complaint,” “investigation,” and “sale” of the domain was received <em>after</em> I’d already gotten their email. </p>  <p>Oh, and they never mentioned which domain it was they were writing about.</p>  <p>Here’s a copy of the email for your convenience.</p>  <blockquote>   <p><strong>SUBJECT:</strong> Inaccurate whois information. </p>    <p><strong>FROM:</strong> eNomCentral Support Team [support@enom.com]</p>    <p>Dear user,</p>    <p>On Sat, 1 Nov 2008 06:39:58 +0100 we received a third party complaint of invalid domain contact information in the Whois database for this domain. Whenever we receive a complaint, we are required by ICANN regulations to initiate an investigation as to whether the contact data displaying in the Whois database is valid data or not. If we find that there is invalid or missing data, we contact both the registrant and the account holder and inform them to update the information. </p>    <p>The contact information for the domain which displayed in the Whois database was indeed invalid. On Sat, 1 Nov 2008 06:39:58 +0100 we sent a notice to you at the admin/tech contact email address and the account email address informing you of invalid data in breach of the domain registration agreement and advising you to update the information or risk cancellation of the domain. The contact information was not updated within the specified period of time and we canceled the domain. The domain has subsequently been purchased by another party. You will need to contact them for any further inquiries regarding the domain.      <br />PLEASE VERIFY YOUR CONTACT INFORMATION - http://www.enom.com</p>    <p>If you find any invalid contact information for this domain, please respond to this email with evidence of the specific contact information you have found to be invalid on the Whois record for the domain name. Examples would be a bounced email or returned postal mail. If you have a bounced email, please attach or forward with your reply or in the case of returned postal mail, scan the returned letter and attach to your email reply or please send it to: </p>    <p>Attn: Domain Services 14455 N Hayden Rd Suite 219 Scottsdale, AZ 85260 </p>    <p>LINK TO CHANGE INFORMATION - http://www.enom.com      <br /></p>    <p>Thank you,      <br />Domain Services</p> </blockquote>  <p>The links in the email are “phishing” style (meaning the human-readable link in the email is different than the href in the code).</p>  <p>Don’t get sucked in, it’s a hoax. When in doubt, contact your domain registrar directly.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

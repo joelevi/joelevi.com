@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/simple-solution-deflated-balls-situation/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "cheating",
+        "deflated balls",
+        "football",
+        "Patriots",
+        "Seahawks",
+        "Super Bowl"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -300,6 +315,10 @@ We don't know (or they aren't saying) who tampered with the balls (or perhaps th
 
 <p>Then again, why are we so worried about deflated balls? Shouldn't we be more outraged that an organization that seems to be about nothing but grotesque amounts of profit is somehow tax-free?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/cheating/" rel="tag">cheating</a></li><li><a href="/blog/tags/deflated-balls/" rel="tag">deflated balls</a></li><li><a href="/blog/tags/football/" rel="tag">football</a></li><li><a href="/blog/tags/patriots/" rel="tag">Patriots</a></li><li><a href="/blog/tags/seahawks/" rel="tag">Seahawks</a></li><li><a href="/blog/tags/super-bowl/" rel="tag">Super Bowl</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

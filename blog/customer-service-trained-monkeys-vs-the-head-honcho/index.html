@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/customer-service-trained-monkeys-vs-the-head-honcho/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "activism",
+        "customer service",
+        "replacement",
+        "Warranty"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -327,6 +340,10 @@
 
 <ul>   <li><a title="http://msmvps.com/blogs/alvin/archive/2007/06/21/kitchenaid-architect-ii-electric-double-oven-fraud.aspx#comments" href="https://msmvps.com/blogs/alvin/archive/2007/06/21/kitchenaid-architect-ii-electric-double-oven-fraud.aspx">http://msmvps.com/blogs/alvin/archive/2007/06/21/kitchenaid-architect-ii-electric-double-oven-fraud.aspx</a></li>    <li>     <div class="wlWriterSmartContent" id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:5b976c1a-7c0c-4c05-9057-d909822fb61e" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px">del.icio.us Tags: <a href="https://del.icio.us/popular/customer+service" rel="tag">customer service</a>,activism,<a href="https://del.icio.us/popular/warranty" rel="tag">warranty</a>,<a href="https://del.icio.us/popular/replacement" rel="tag">replacement</a></div>   </li> </ul></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/activism/" rel="tag">activism</a></li><li><a href="/blog/tags/customer-service/" rel="tag">customer service</a></li><li><a href="/blog/tags/replacement/" rel="tag">replacement</a></li><li><a href="/blog/tags/warranty/" rel="tag">Warranty</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/solicitation-for-productsservices-for-review/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Chickens",
+        "Environment",
+        "Internet",
+        "Prius",
+        "Rabbits",
+        "Science",
+        "Solar Power",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +294,10 @@
 			<div class="post-body">
 <p>If you are a manufacturer or reseller of high-tech and/or green/environmentally friendly products I would like to review products for you!</p>  <p>I will fully disclose in my review whether or not you’re providing the product/service for “evaluation only” or “for keeps” and will not hold back praise and/or constructive criticism, as warranted by that which I’m reviewing.</p>  <p>Things I’d like to review:</p>  <ul>   <li>Alternative lighting (LEDs, OLEDs, CFL, etc.) for standard “Edison” sockets as well as battery powered</li>    <li>Solar Power Stuff (from panels and chargers to hoozits and whatzits)</li>    <li>Wind Power Stuff (small-wind turbines, controllers, furling systems, etc.)</li>    <li>Solar Thermal Stuff (for air and/or water heating, cooking, solar ovens, window coverings and appliqués, etc.)</li>    <li>Water Stuff (storage, purification, etc.)</li>    <li>Power Storage Stuff (batteries, chargers, AA, deep cycle, sealed cell, 12V, and all stuff related)</li>    <li>Power Saving Gizmos (smart UPSs, smart surge protectors, energy usage monitors, etc.)</li>    <li>Green Computer Stuff (low heavy metals, low power use, high efficiency PSU’s, etc.)</li>    <li>Green clothing and fabrics (pillows, sheets, shirts, socks, etc.)</li>    <li>Chicken Stuff (feeders, waterers, nesting boxes, lights, accessories for chicken coops, etc.)</li>    <li>Garden Stuff (for extending the growing season, reducing the use of pesticides/herbicides)</li>    <li>Vehicle accessories to improve efficiency and/or reduce emissions</li>    <li>Alternative Transportation (electric/hybrid bicycles, tricycles, etc.)</li>    <li>Self-defense and family-defense tools, equipment, methodologies, etc.</li> </ul>  <p>Each article is blasted out to RSS subscribers and over 900 Twitter followers. The site itself gets around 2,500 monthly visits and 3,500 monthly page views and is highly optimized for search engine placement (some people call this SEO).</p>  <p>   </p><p><a href="https://www.google.com/analytics/reporting/pageviews?id=474323&amp;pdr=20081101-20081201&amp;cmp=average"></a></p> So, if you’re looking for an honest review, I’m your man! Just <a href="https://www.joelevi.com/blog/index.php/contact/" target="_blank">contact me</a> and we’ll talk about the details.
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/chickens/" rel="tag">Chickens</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/prius/" rel="tag">Prius</a></li><li><a href="/blog/tags/rabbits/" rel="tag">Rabbits</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li><li><a href="/blog/tags/solar-power/" rel="tag">Solar Power</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

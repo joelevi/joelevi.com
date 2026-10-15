@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/whitehousegov-gets-a-facelift/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "communication",
+        "Internet",
+        "obama",
+        "participation",
+        "president",
+        "promises",
+        "transparency",
+        "white house",
+        "whitehouse"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -289,6 +307,10 @@
 
 <blockquote>   <p>Just like your new government, WhiteHouse.gov and the rest of the Administration's online programs will put citizens first. Our initial new media efforts will center around three priorities:      <br /><strong>       <br />Communication -- </strong>Americans are eager for information about the state of the economy, national security and a host of other issues. This site will feature timely and in-depth content meant to keep everyone up-to-date and educated. Check out the <a href="https://www.whitehouse.gov/briefing_room/">briefing room</a>, keep tabs on <a href="https://www.whitehouse.gov/blog/">the blog</a> (<a href="https://www.whitehouse.gov/feed/blog">RSS feed</a>) and take a moment to <a href="https://www.whitehouse.gov/welcome/">sign up for e-mail updates</a> from the President and his administration so you can be sure to know about major announcements and decisions.</p>    <p><strong>Transparency --</strong> President Obama has committed to making his administration the most open and transparent in history, and WhiteHouse.gov will play a major role in delivering on that promise. The President's executive orders and proclamations will be published for everyone to review, and that’s just the beginning of our efforts to provide a window for all Americans into the business of the government. You can also learn about some of the senior leadership in the new administration and about the President’s <a href="https://www.whitehouse.gov/agenda/">policy priorities</a>.      <br /><strong>       <br />Participation -- </strong>President Obama started his career as a community organizer on the South Side of Chicago, where he saw firsthand what people can do when they come together for a common cause. Citizen participation will be a priority for the Administration, and the internet will play an important role in that. One significant addition to WhiteHouse.gov reflects a campaign promise from the President: we will publish all non-emergency legislation to the website for five days, and allow the public to review and comment before the President signs it.</p></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/communication/" rel="tag">communication</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/obama/" rel="tag">obama</a></li><li><a href="/blog/tags/participation/" rel="tag">participation</a></li><li><a href="/blog/tags/president/" rel="tag">president</a></li><li><a href="/blog/tags/promises/" rel="tag">promises</a></li><li><a href="/blog/tags/transparency/" rel="tag">transparency</a></li><li><a href="/blog/tags/white-house/" rel="tag">white house</a></li><li><a href="/blog/tags/whitehouse/" rel="tag">whitehouse</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

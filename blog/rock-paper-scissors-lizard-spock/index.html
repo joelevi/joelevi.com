@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/rock-paper-scissors-lizard-spock/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "chance",
+        "game",
+        "geek",
+        "humor",
+        "nerd",
+        "spock",
+        "star trek"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <p>“Rock, paper, scissors,” sometimes called jan-ken-pon, rochambeau, or roshambo, is typically a two-person game of chance used to help with decision making. Unlike truly random selection methods (such as coin-flipping), a player can often recognize and exploit the behavior of an opponent, tipping the odds in their favor.</p>  <p>To help combat this, the cast from <em>That 70’s Show</em> adds Nuclear bomb and cockroach to the choices.</p>  <p>A geekier version involved Sheldon, a physicist on the CBS sitcom <em>Big Bang Theory,</em> making his own variant of the game that adds two options to the standard three: lizard and Spock.</p>  <p>In this variant, the rules are extended such that:</p>  <ul>   <li>Scissors cut paper</li>    <li>Paper covers rock</li>    <li>Rock crushes lizard</li>    <li>Lizard poisons Spock</li>    <li>Spock smashes scissors</li>    <li>Scissors decapitates lizard</li>    <li>Lizard eats paper</li>    <li>Paper disproves Spock</li>    <li>Spock vaporizes rock</li>    <li>and as it always has, rock crushes scissors</li> </ul>  <p><object width="445" height="364"><param name="movie" value="http://www.youtube.com/v/9EUA2I2sfRQ&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x006699&amp;color2=0x54abd6&amp;border=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/9EUA2I2sfRQ&amp;hl=en&amp;fs=1&amp;rel=0&amp;color1=0x006699&amp;color2=0x54abd6&amp;border=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="445" height="364"></embed></object></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/chance/" rel="tag">chance</a></li><li><a href="/blog/tags/game/" rel="tag">game</a></li><li><a href="/blog/tags/geek/" rel="tag">geek</a></li><li><a href="/blog/tags/humor/" rel="tag">humor</a></li><li><a href="/blog/tags/nerd/" rel="tag">nerd</a></li><li><a href="/blog/tags/spock/" rel="tag">spock</a></li><li><a href="/blog/tags/star-trek/" rel="tag">star trek</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,29 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/seo-tip-an-introduction-to-search-engine-optimization-placement-and-marketing-seo/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "bing",
+        "Google",
+        "negative",
+        "positive",
+        "review",
+        "reviews",
+        "search engine",
+        "search engine marketing",
+        "search engine optimization",
+        "search engine placement",
+        "search engine positioning",
+        "sem",
+        "seo",
+        "sep",
+        "word of mouth",
+        "Yahoo",
+        "Freelance",
+        "Internet",
+        "Lifetime Products",
+        "Work"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +306,10 @@
 			<div class="post-body">
 <p>Many of you may already know, I’m involved with <abbr title="Search Engine Marketing">SEM</abbr> (including <abbr title="Search Engine Optimization">SEO</abbr> &amp; <abbr title="Search Engine Placement">SEP</abbr>) with my <a href="https://www.Lifetime.com" target="_blank">employer</a>. </p>  <p>First off, let me give you some background and define terms:</p>  <h3>Search Engine Optimization (SEO)</h3>  <h4>What is SEO?</h4>  <ul>   <li>This term is almost universally used <em>incorrectly</em>.</li>    <li>Most SEO Strategists or “purists” call this “on-page” SEO; in other words, SEO is optimizing your sites, your pages, and your content in such a way that search engines (Google, Bing, Yahoo!, et. al., ad nauseum) can easily “see” your content.</li>    <li>More specifically, they “see” the content that you want them to see in the order that you want them to see it.</li>    <li>SEO involves the proper use of language, grammar, and keywords (including keyword density).</li>    <li>SEO involves the proper use of valid markup and styling languages (html/xhtml, CSS, etc.).</li>    <li>SEO involves the proper use of meta-data to further (and accurately) describe your content (including, but not limited to; the title, description, and (although not used often these days) keywords meta tags; the values of the title attribute on anchor (hyperlink) elements; the values of the alternate (“alt”) attribute on image (“img”) elements; etc.</li>    <li>SEO involves the proper use of&#160; hyperlinks: intra-page links, intra-site links, and inter-site links (links from one of your sites to another of your sites).</li>    <li>SEO involves the use of “alternate presentations” of the data (sitemap.xml files, rss/atom feeds, etc.).</li>    <li>In short, SEO is entirely within your control and relies on absolutely no one else.</li> </ul>  <h4>What <em>isn’t</em> SEO?</h4>  <ul>   <li>SEO doesn’t mean how high a given page ranks in any particular search engine for any particular term</li>    <li>SEO doesn’t involve <em>anything</em> external to what you have complete control over.</li>    <li>SEO <em>is not</em> getting incoming links from other sites.</li>    <li>SEO <em>is not</em> not submitting your pages to search engines or directories.</li>    <li>In short, SEO <em>is not</em> any kind of advertising or marketing.</li> </ul>  <p>Be forewarned, although to you and I the above statements may be factual and correct, to your boss or your client, SEO (incorrectly) means “ranking well in search engines.”</p>  <h3>Search Engine Marketing (SEM)</h3>  <p>What’s SEM? That’s the topic for the next article in the series…</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/bing/" rel="tag">bing</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/negative/" rel="tag">negative</a></li><li><a href="/blog/tags/positive/" rel="tag">positive</a></li><li><a href="/blog/tags/review/" rel="tag">review</a></li><li><a href="/blog/tags/reviews/" rel="tag">reviews</a></li><li><a href="/blog/tags/search-engine/" rel="tag">search engine</a></li><li><a href="/blog/tags/search-engine-marketing/" rel="tag">search engine marketing</a></li><li><a href="/blog/tags/search-engine-optimization/" rel="tag">search engine optimization</a></li><li><a href="/blog/tags/search-engine-placement/" rel="tag">search engine placement</a></li><li><a href="/blog/tags/search-engine-positioning/" rel="tag">search engine positioning</a></li><li><a href="/blog/tags/sem/" rel="tag">sem</a></li><li><a href="/blog/tags/seo/" rel="tag">seo</a></li><li><a href="/blog/tags/sep/" rel="tag">sep</a></li><li><a href="/blog/tags/word-of-mouth/" rel="tag">word of mouth</a></li><li><a href="/blog/tags/yahoo/" rel="tag">Yahoo</a></li><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li><li><a href="/blog/tags/work/" rel="tag">Work</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

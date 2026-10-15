@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/this-copy-of-the-silverlight-plug-in-has-expired/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "expired",
+        "flash",
+        "plugin",
+        "Silverlight",
+        "Web Development",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p>Today I visited <a href="https://www.silverlight.net">www.silverlight.net</a> and was presented with the following error message: </p>  <blockquote>   <p><strong>This copy of the Silverlight plug-in has expired.</strong></p>    <p>The version of the Silverlight plug-in installed on your system is no longer valid. Please go to <a href="https://go.microsoft.com/fwlink/?LinkID=81210&amp;clcid=0x409e" target="_blank">http://go.microsoft.com/fwlink/?LinkID=81210&amp;clcid=0x409e</a> for the latest version.</p> </blockquote>  <p>From what I understand, everyone who installed the beta version of the Silverlight 1.0 plugin will be seeing this error message in a browser-style dialog box which contains only an &quot;OK&quot; button. There is no user-friendly was of getting to the download page. </p>  <p>While that's not very cool, the page which contains the Silverlight component still loads, just without the Silverlight content.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/expired/" rel="tag">expired</a></li><li><a href="/blog/tags/flash/" rel="tag">flash</a></li><li><a href="/blog/tags/plugin/" rel="tag">plugin</a></li><li><a href="/blog/tags/silverlight/" rel="tag">Silverlight</a></li><li><a href="/blog/tags/web-development/" rel="tag">Web Development</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/mccain-a-polygamist/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Religion"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p></p>  <p>Senator and presumed GOP nominee for President of the United States of America has an interesting marital history. </p>  <p>In his 2002 memoir, &quot;Worth the Fighting For,&quot; Senator McCain wrote &quot;I was separated from Carol, but our divorce would not become final until February of 1980.&quot; Court documents, however, indicate that McCain did not even file for divorce until Feb. 19, 1980, making him a liar.</p>  <p>Further, he wrote in his court petition that he and his current wife had &quot;cohabited&quot; until Jan. 7 of that year – legally making him an adulterer.</p>  <p>But wait, it gets better!</p>  <p>McCain’s divorce was granted April 2, 1980, and he wed his current wife in a private ceremony five weeks later.</p>  <p>To get married in Arizona (like most States) one must first obtain a marriage licence. McCain did so on March 6, 1980, while still legally married to his first wife.</p>  <p>In this regard, McCain is a liar and an adulterer, if not technically a polygamist. </p>  <p>Of note, however, is that polygamy is apparently legal in Arizona – or was in 1980.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/religion/" rel="tag">Religion</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/syracuse-jr-high-caught-violating-state-law/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "law",
+        "LEA",
+        "Parent's Rights",
+        "SAGE",
+        "Syracuse Junior High",
+        "Testing"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -317,6 +332,10 @@
 
 <p>Would it be appropriate for the School Board to handle this at the district level, or would it be more appropriate for me to file a formal complaint against the three persons named herein (with a "John Doe" for the district person issuing false information, to be discovered as part of the complaint process) to ensure that the proper corrective actions are taken?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/law/" rel="tag">law</a></li><li><a href="/blog/tags/lea/" rel="tag">LEA</a></li><li><a href="/blog/tags/parents-rights/" rel="tag">Parent&#x27;s Rights</a></li><li><a href="/blog/tags/sage/" rel="tag">SAGE</a></li><li><a href="/blog/tags/syracuse-junior-high/" rel="tag">Syracuse Junior High</a></li><li><a href="/blog/tags/testing/" rel="tag">Testing</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

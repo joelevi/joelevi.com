@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/its-getting-cold-have-you-got-your-sleeping-bag-ready/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "prepping",
+        "sleeping bag",
+        "camping",
+        "emergency preparedness",
+        "tips"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +293,10 @@
 
 <p>It's getting cold outside, and in the interest of preparedness, you should be able to snuggle up and be warm even if the power goes out, the gas line gets cut, or even if you just want to set the thermostat at 40-degrees!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/prepping/" rel="tag">prepping</a></li><li><a href="/blog/tags/sleeping-bag/" rel="tag">sleeping bag</a></li><li><a href="/blog/tags/camping/" rel="tag">camping</a></li><li><a href="/blog/tags/emergency-preparedness/" rel="tag">emergency preparedness</a></li><li><a href="/blog/tags/tips/" rel="tag">tips</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/ford-claims-they-own-your-pics-if-its-got-a-ford-in-it/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "activism",
+        "Photography",
+        "black mustang club",
+        "copyright",
+        "ford",
+        "lawsuit",
+        "mustang"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -284,6 +300,10 @@
 <p>On a related note, how do you think this will apply to traffic camera (red-light cameras, speeding cameras, etc.)? "Your Honor, that image is not admissible in court because I own the rights to my image and Ford owns the right to the picture of that car. Since neither party has released their image for use in this manner I move that the image be destroyed, the case dismissed, and punitive damages be paid to both parties."</p>
 <p>Looks like I won't be buying a Ford anytime soon.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/activism/" rel="tag">activism</a></li><li><a href="/blog/tags/photography/" rel="tag">Photography</a></li><li><a href="/blog/tags/black-mustang-club/" rel="tag">black mustang club</a></li><li><a href="/blog/tags/copyright/" rel="tag">copyright</a></li><li><a href="/blog/tags/ford/" rel="tag">ford</a></li><li><a href="/blog/tags/lawsuit/" rel="tag">lawsuit</a></li><li><a href="/blog/tags/mustang/" rel="tag">mustang</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

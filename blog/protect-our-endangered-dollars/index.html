@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,27 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/protect-our-endangered-dollars/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "borrowing",
+        "money",
+        "loan",
+        "lending",
+        "dollar",
+        "debt",
+        "currency",
+        "U.S. Senate",
+        "jay leno",
+        "U.S. House",
+        "Rob Bishop",
+        "Orrin Hatch",
+        "Free Competition in Currency Act",
+        "fiat",
+        "federal reserve",
+        "Bob Bennett",
+        "fed",
+        "downsizedc.org"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -335,6 +362,10 @@ I want you to provide me with evidence to the contrary on this last point. Inste
 Vice President<br />
 DownsizeDC.org, Inc.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/borrowing/" rel="tag">borrowing</a></li><li><a href="/blog/tags/money/" rel="tag">money</a></li><li><a href="/blog/tags/loan/" rel="tag">loan</a></li><li><a href="/blog/tags/lending/" rel="tag">lending</a></li><li><a href="/blog/tags/dollar/" rel="tag">dollar</a></li><li><a href="/blog/tags/debt/" rel="tag">debt</a></li><li><a href="/blog/tags/currency/" rel="tag">currency</a></li><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/jay-leno/" rel="tag">jay leno</a></li><li><a href="/blog/tags/u-s-house/" rel="tag">U.S. House</a></li><li><a href="/blog/tags/rob-bishop/" rel="tag">Rob Bishop</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/free-competition-in-currency-act/" rel="tag">Free Competition in Currency Act</a></li><li><a href="/blog/tags/fiat/" rel="tag">fiat</a></li><li><a href="/blog/tags/federal-reserve/" rel="tag">federal reserve</a></li><li><a href="/blog/tags/bob-bennett/" rel="tag">Bob Bennett</a></li><li><a href="/blog/tags/fed/" rel="tag">fed</a></li><li><a href="/blog/tags/downsizedc-org/" rel="tag">downsizedc.org</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/13-uber-cool-things-you-never-thought-to-use-google-for/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "cool",
+        "Google",
+        "hints",
+        "shortcuts",
+        "tips",
+        "tricks",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <ol>   <li>Wondering if you should bring an umbrella? Type “weather” and your destination zip code (or city and state) into the Google search box.</li>    </ol><ol>     <li>“weather 84075”</li>   </ol>    <li>How about what movies are playing? </li>    <ol>     <li>“movies 84075”</li>   </ol>    <li>Out of town and need to contact the police, but it’s not an emergency? Go go Google Local and search for “police”, if you’ve got Gears enabled it’ll show you the police departments closest to your location.</li>    <ol>     <li>“police 84075”</li>   </ol>    <li>Sign up for Google Voice then set up your cell, home, and office phone to forward over there. Now all your voice messages are in one convenient place, transcribed, and available via the email or even by email.</li>    <li>Looking for something fast? Type your search into the Google search box, then press enter, no need to take your hands off the keyboard to click the mouse.</li>    <li>Need to calculate something quick? Ask Google! Type your simple math equation into the Google search box, press enter, and Google returns your answer!</li>    <li>How’s that stock doing? Type “stocks:” followed by the ticker symbol.</li>    <ol>     <li>“stocks:goog”</li>   </ol>    <li>Want to search a particular website for something? Type “site:” followed by the address and your search terms.</li>    <ol>     <li>“site:joelevi.com resume”</li>   </ol>    <li>Who just called me?! Type their phone number into Google, if the number is listed, Google should find it for you</li>    <ol>     <li>“(801) 547-1497”</li>   </ol>    <li>Want to see where all that web traffic is coming from? Use Google to search for pages that link to yours</li>    <ol>     <li>“link:joelevi.com”</li>   </ol>    <li>Check the status of your flight</li>    <ol>     <li>“delta 957”</li>   </ol>    <li>Want to track a package? Type the tracking number in the search box. This works for patent numbers, vehicle identification numbers, all kinds of numbers!</li>    <li>What does that word mean? Look it up using Google!</li>    <ol>     <li>“define:quixotic”</li>   </ol>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/cool/" rel="tag">cool</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/hints/" rel="tag">hints</a></li><li><a href="/blog/tags/shortcuts/" rel="tag">shortcuts</a></li><li><a href="/blog/tags/tips/" rel="tag">tips</a></li><li><a href="/blog/tags/tricks/" rel="tag">tricks</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

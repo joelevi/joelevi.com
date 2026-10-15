@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/local-review-the-mobile-source/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "cell phone",
+        "cellular",
+        "local review",
+        "syracuse",
+        "T-Mobile",
+        "The Mobile Source",
+        "utah"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -373,6 +389,10 @@ All told I spent well over an hour trying to get out of the mess that should nev
 
 <p>(An <a title="Google Review of The Mobile Source in Syracuse, Utah, USA" rel="review" href="https://maps.google.com/maps?oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;q=the+mobile+source+syracuse,+utah&amp;fb=1&amp;split=1&amp;gl=us&amp;view=text&amp;ei=xnLeSaPROo6MNrKp7JAE&amp;cd=1&amp;hl=en&amp;sll=41.089210,-112.065526&amp;sspn=0.006295,0.006295&amp;latlng=41089210,-112065526,14141809316058710648&amp;sig2=WLz4sL5SQ3gCf9q45Fl7ZA" target="_blank">abbreviated version of this review</a> was submitted to Google for this business.)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/cell-phone/" rel="tag">cell phone</a></li><li><a href="/blog/tags/cellular/" rel="tag">cellular</a></li><li><a href="/blog/tags/local-review/" rel="tag">local review</a></li><li><a href="/blog/tags/syracuse/" rel="tag">syracuse</a></li><li><a href="/blog/tags/t-mobile/" rel="tag">T-Mobile</a></li><li><a href="/blog/tags/the-mobile-source/" rel="tag">The Mobile Source</a></li><li><a href="/blog/tags/utah/" rel="tag">utah</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

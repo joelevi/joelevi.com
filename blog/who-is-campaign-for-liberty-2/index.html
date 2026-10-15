@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/who-is-campaign-for-liberty-2/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "youtube",
+        "viral",
+        "Video",
+        "iamcfp",
+        "cfl",
+        "campaign for liberty",
+        "c4l"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -309,6 +325,10 @@ Campaign for Liberty</p>
     <li><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="640" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/k1u_8YkD1zA&amp;rel=0&amp;color1=0xb1b1b1&amp;color2=0xd0d0d0&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1&amp;rel=0&amp;hd=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="640" height="385" src="https://www.youtube.com/v/k1u_8YkD1zA&amp;rel=0&amp;color1=0xb1b1b1&amp;color2=0xd0d0d0&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1&amp;rel=0&amp;hd=1" allowscriptaccess="always" allowfullscreen="true"/></object></li>
 </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/youtube/" rel="tag">youtube</a></li><li><a href="/blog/tags/viral/" rel="tag">viral</a></li><li><a href="/blog/tags/video/" rel="tag">Video</a></li><li><a href="/blog/tags/iamcfp/" rel="tag">iamcfp</a></li><li><a href="/blog/tags/cfl/" rel="tag">cfl</a></li><li><a href="/blog/tags/campaign-for-liberty/" rel="tag">campaign for liberty</a></li><li><a href="/blog/tags/c4l/" rel="tag">c4l</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

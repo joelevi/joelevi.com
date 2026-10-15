@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/show-me-your-receipt-or-youll-be-arrested/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Store"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -309,6 +319,10 @@
 
 <p><b></b><b></b><b></b><b>77-7-14. Person causing detention or arrest of person suspected of shoplifting or library theft -- Civil and criminal immunity.</b><br />&nbsp;&nbsp;&nbsp;&nbsp; (1) A peace officer, merchant, or merchant's employee, servant, or agent who causes the detention of a person as provided in Section <b>77-7-12</b>, or who causes the arrest of a person for theft of goods held or displayed for sale, is not criminally or civilly liable where he has reasonable and probable cause to believe the person detained or arrested committed a theft of goods held or displayed for sale.<br />&nbsp;&nbsp;&nbsp;&nbsp; (2) A peace officer or employee of a library who causes a detention or arrest of a person under Title 76, Chapter 6, Part 8, Library Theft, is not criminally or civilly liable where he has reasonable and probable cause to believe that the person committed a theft of library materials.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/store/" rel="tag">Store</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

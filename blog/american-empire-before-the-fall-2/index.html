@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/american-empire-before-the-fall-2/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "American Empire: Before the Fall"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -298,6 +308,10 @@
 
 <p>P.S. Campaign for Liberty’s first book, <em><a href="https://www.amazon.com/gp/product/1452829535?ie=UTF8&amp;tag=leviz&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1452829535" target="_blank">American Empire: Before the Fall</a></em>, is an intense, riveting examination of America’s foreign policy and the essential issues that will determine the future of a nation.  Help us promote this educational tool by <a href="https://paracom.paramountcommunication.com/ct/4442308:6645264019:m:1:171001347:78BDA59E2C912FBA50563FDA6E18A388" target="_blank">participating in our August 2nd “Book Bomb”</a>!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/american-empire-before-the-fall/" rel="tag">American Empire: Before the Fall</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

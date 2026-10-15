@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,23 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/chevy-volt-just-get-hit-house/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Roav",
+        "road hazard",
+        "waze",
+        "willard bay",
+        "I-15",
+        "Tiny House",
+        "insurance",
+        "Geico",
+        "Wizard of Oz",
+        "dash cam",
+        "Chevy",
+        "Volt",
+        "car",
+        "Video"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -461,6 +484,10 @@ come to my location (my home or place of employment), had to argue the point, bu
 </tbody>
 </table>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/roav/" rel="tag">Roav</a></li><li><a href="/blog/tags/road-hazard/" rel="tag">road hazard</a></li><li><a href="/blog/tags/waze/" rel="tag">waze</a></li><li><a href="/blog/tags/willard-bay/" rel="tag">willard bay</a></li><li><a href="/blog/tags/i-15/" rel="tag">I-15</a></li><li><a href="/blog/tags/tiny-house/" rel="tag">Tiny House</a></li><li><a href="/blog/tags/insurance/" rel="tag">insurance</a></li><li><a href="/blog/tags/geico/" rel="tag">Geico</a></li><li><a href="/blog/tags/wizard-of-oz/" rel="tag">Wizard of Oz</a></li><li><a href="/blog/tags/dash-cam/" rel="tag">dash cam</a></li><li><a href="/blog/tags/chevy/" rel="tag">Chevy</a></li><li><a href="/blog/tags/volt/" rel="tag">Volt</a></li><li><a href="/blog/tags/car/" rel="tag">car</a></li><li><a href="/blog/tags/video/" rel="tag">Video</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

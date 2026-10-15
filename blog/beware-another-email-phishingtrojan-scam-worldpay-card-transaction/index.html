@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/beware-another-email-phishingtrojan-scam-worldpay-card-transaction/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "amazon",
+        "phishing",
+        "spam",
+        "trojan",
+        "virus",
+        "worldpay"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p>I have been getting an increasing number of this type of message in my inbox, so I thought it would be worth mentioning to you:</p>  <blockquote>   <p>Subject: Worldpay CARD transaction Confirmation</p>    <p>Body: Your transaction has been processed by WorldPay, on behalf of Amazon Inc.</p>    <p>http://w-crook.com.ar/(somefilename).exe</p>    <p>This is not a tax receipt. e processed your payment.</p>    <p>Amazon Inc has received your order, and will inform you about delivery.</p>    <p>Sincerely,</p>    <p>Amazon Team</p>    <p>This confirmation only indicates that your transaction has been processed successfully. </p>    <p>It does not indicate that your order has been accepted. </p>    <p>It is the responsibility of Amazon Inc to confirm that your order has been accepted, and to deliver any goods or services you have ordered.</p> </blockquote>  <p>This scam hopes that you will click and run the link provided, which will do who-knows-what, but it’s unlikely to do anything good.</p>  <p>It’s not a legit email, and no “receipt” should ever force you to open an attachment or download a file to view it.</p>  <p>Ironically, <a href="https://www.joelevi.com/blog/index.php/2009/06/16/i-will-never-buy-tom-tom-again/">TomTom</a> provided a .pdf receipt, which is another example of <a href="https://www.joelevi.com/blog/index.php/2009/06/16/i-will-never-buy-tom-tom-again/">things they do wrong</a>.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/amazon/" rel="tag">amazon</a></li><li><a href="/blog/tags/phishing/" rel="tag">phishing</a></li><li><a href="/blog/tags/spam/" rel="tag">spam</a></li><li><a href="/blog/tags/trojan/" rel="tag">trojan</a></li><li><a href="/blog/tags/virus/" rel="tag">virus</a></li><li><a href="/blog/tags/worldpay/" rel="tag">worldpay</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

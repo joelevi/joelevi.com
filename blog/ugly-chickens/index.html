@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/ugly-chickens/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Chickens",
+        "Environment"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>By popular request, here are a few snaps I took this morning of my “Ugly Chickens.”</p>  <p>The one on the right is Nugget, in the middle is Stew, on the left is Pox, and on the bottom is Pot Pie.</p>  <p>These birds are 1.5 years old and just coming out of a molt (hence why they look so ugly). I have gotten one egg from them so far, but it was a beautiful, big, brown egg that my <a href="https://natalie.joelevi.com" target="_blank" rel="met contact spouse sweetheart muse collegue neighbor">wife</a> had for breakfast this morning (over easy).</p>  <p>Last night was their second night with a light in their coop (a 23W CFL spiral in a heat lamp enclosure), so I’m hoping I’ll start getting a decent number of eggs with the next week or so.</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00031.jpg"><img title="IMAG0003" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0003" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0003-thumb1.jpg" width="244" border="0" /></a><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00011.jpg"><img title="IMAG0001" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0001" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0001-thumb1.jpg" width="244" border="0" /></a> <a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00021.jpg"><img title="IMAG0002" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0002" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0002-thumb1.jpg" width="244" border="0" /></a><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag00041.jpg"><img title="IMAG0004" style="border-right: 0px; border-top: 0px; display: inline; border-left: 0px; border-bottom: 0px" height="184" alt="IMAG0004" src="https://www.joelevi.com/blog/wp-content/uploads/2008/11/imag0004-thumb1.jpg" width="244" border="0" /></a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/chickens/" rel="tag">Chickens</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

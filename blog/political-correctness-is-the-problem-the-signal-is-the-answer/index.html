@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,18 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/political-correctness-is-the-problem-the-signal-is-the-answer/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "firefly",
+        "joss whedon",
+        "lies",
+        "msnbc",
+        "political correctness",
+        "politically correct",
+        "reporter",
+        "serenity",
+        "signal"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -315,6 +333,10 @@ And like “Mister Universe” says in the movie <em>Serenity</em>: “You can�
 	<li>To the man in the video: Well done. Well played. If you happen to stumble across this “noise” and ever find yourself in Utah, drop me a line, I’d like to buy you dinner. I hope you’ll still have your sidearm on your hip, and me with mine, and we’ll have a polite meal and conversation. Even though we both have guns. Even though our skin isn’t the same color.</li>
 </ol>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/firefly/" rel="tag">firefly</a></li><li><a href="/blog/tags/joss-whedon/" rel="tag">joss whedon</a></li><li><a href="/blog/tags/lies/" rel="tag">lies</a></li><li><a href="/blog/tags/msnbc/" rel="tag">msnbc</a></li><li><a href="/blog/tags/political-correctness/" rel="tag">political correctness</a></li><li><a href="/blog/tags/politically-correct/" rel="tag">politically correct</a></li><li><a href="/blog/tags/reporter/" rel="tag">reporter</a></li><li><a href="/blog/tags/serenity/" rel="tag">serenity</a></li><li><a href="/blog/tags/signal/" rel="tag">signal</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

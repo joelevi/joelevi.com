@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,19 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/utah-hb-59-warrantless-arrest-bill-is-dead/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "4a",
+        "5a",
+        "handy",
+        "hb 59",
+        "Nazi",
+        "warrant",
+        "warrantless",
+        "wilson",
+        "State",
+        "State Representative"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -292,6 +311,10 @@
 
 <p>Ever vigilant!</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/4a/" rel="tag">4a</a></li><li><a href="/blog/tags/5a/" rel="tag">5a</a></li><li><a href="/blog/tags/handy/" rel="tag">handy</a></li><li><a href="/blog/tags/hb-59/" rel="tag">hb 59</a></li><li><a href="/blog/tags/nazi/" rel="tag">Nazi</a></li><li><a href="/blog/tags/warrant/" rel="tag">warrant</a></li><li><a href="/blog/tags/warrantless/" rel="tag">warrantless</a></li><li><a href="/blog/tags/wilson/" rel="tag">wilson</a></li><li><a href="/blog/tags/state/" rel="tag">State</a></li><li><a href="/blog/tags/state-representative/" rel="tag">State Representative</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

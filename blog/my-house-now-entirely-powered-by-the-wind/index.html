@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/my-house-now-entirely-powered-by-the-wind/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "electricity",
+        "green",
+        "pacificorp",
+        "power",
+        "rocky mountain power",
+        "turbine",
+        "wind",
+        "Environment"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +294,10 @@
 			<div class="post-body">
 <p>I try to be as environmentally friendly as possible... I have a long way to go before I'm comfortable with my impact on the environment around me, but I'm working on it.</p> <p>My wife has been generally supportive with my "greenness;" she supported taking the insulation in our attic from R35 to R58, she supported replacing 3 (of 5) of our North-facing windows, she approved of planting shade trees in our front yard to (eventually) block the summer sun from pounding down on the South-facing side of our home, she was fine with&nbsp; buying a solar-powered attic fan to vent hot/humid air from our attic, and has put up with me replacing all of our lights with CFLs and even a few LEDs. </p> <p>Recently she did something that floored me: she decided to power our home completely with energy from the wind.</p> <p><strike>Okay, so we can't be sure where the power actually comes from, but we bough enough "energy vouchers" from our power utility's "blue skies" program to cover the amount of electricity our home uses.</strike></p> <p><strike>It's not as nice as having a solar array or a wind turbine or two in the back yard, but it's a start... and hopefully sends a message to the power company and local legislators.</strike></p> <h3>UPDATE</h3> <p>Apparently we were denied participation in the Blue Sky Program... Yes, Rocky Mountain Power (a PacifiCorp company) is refusing to let us purchase "green energy." Read my open letter to their CEO/Chairman at <a title="http://www.joelevi.com/blog/index.php/2008/05/13/my-house-now-not-powered-by-the-wind/" href="https://www.joelevi.com/blog/index.php/2008/05/13/my-house-now-not-powered-by-the-wind/">http://www.joelevi.com/blog/index.php/2008/05/13/my-house-now-not-powered-by-the-wind/</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/electricity/" rel="tag">electricity</a></li><li><a href="/blog/tags/green/" rel="tag">green</a></li><li><a href="/blog/tags/pacificorp/" rel="tag">pacificorp</a></li><li><a href="/blog/tags/power/" rel="tag">power</a></li><li><a href="/blog/tags/rocky-mountain-power/" rel="tag">rocky mountain power</a></li><li><a href="/blog/tags/turbine/" rel="tag">turbine</a></li><li><a href="/blog/tags/wind/" rel="tag">wind</a></li><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,23 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/utah-on-the-way-legalize-rainwater-collection/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "cistern",
+        "clean",
+        "efficient",
+        "environment",
+        "legislature",
+        "prepper",
+        "rain",
+        "rain barrel",
+        "self-sufficiency",
+        "senate",
+        "storage",
+        "utah",
+        "water",
+        "watering"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -319,6 +342,10 @@
 
 <p>A special hat-tip to Senator Scott Jenkins (R., Plain City), for sponsoring this bill.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/cistern/" rel="tag">cistern</a></li><li><a href="/blog/tags/clean/" rel="tag">clean</a></li><li><a href="/blog/tags/efficient/" rel="tag">efficient</a></li><li><a href="/blog/tags/environment/" rel="tag">environment</a></li><li><a href="/blog/tags/legislature/" rel="tag">legislature</a></li><li><a href="/blog/tags/prepper/" rel="tag">prepper</a></li><li><a href="/blog/tags/rain/" rel="tag">rain</a></li><li><a href="/blog/tags/rain-barrel/" rel="tag">rain barrel</a></li><li><a href="/blog/tags/self-sufficiency/" rel="tag">self-sufficiency</a></li><li><a href="/blog/tags/senate/" rel="tag">senate</a></li><li><a href="/blog/tags/storage/" rel="tag">storage</a></li><li><a href="/blog/tags/utah/" rel="tag">utah</a></li><li><a href="/blog/tags/water/" rel="tag">water</a></li><li><a href="/blog/tags/watering/" rel="tag">watering</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

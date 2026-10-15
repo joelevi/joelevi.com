@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,19 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/conflicker-b-infection-alert/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "conficker",
+        "conflicker",
+        "conflicker.b",
+        "fake",
+        "fraud",
+        "Microsoft",
+        "scam",
+        "virus",
+        "worm",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -287,6 +306,10 @@
 
 <blockquote>   <p>Dear Microsoft Customer,</p>    <p>Starting 12/11/2009 the ‘Conficker’ worm began infecting Microsoft customers unusually rapidly. Microsoft has been advised by your Internet provider that your network is infected.</p>    <p>To counteract further spread we advise removing the infection using an antispyware program. We are supplying all effected Windows Users with a free system scan in order to clean any files infected by the virus.</p>    <p>Please install attached file to start the scan. The process takes under a minute and will prevent your files from being compromised. We appreciate your prompt cooperation.</p>    <p>Regards,</p>    <p>Microsoft Windows Agent #2 (Hollis)</p>    <p>Microsoft Windows Computer Safety Division</p></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/conficker/" rel="tag">conficker</a></li><li><a href="/blog/tags/conflicker/" rel="tag">conflicker</a></li><li><a href="/blog/tags/conflicker-b/" rel="tag">conflicker.b</a></li><li><a href="/blog/tags/fake/" rel="tag">fake</a></li><li><a href="/blog/tags/fraud/" rel="tag">fraud</a></li><li><a href="/blog/tags/microsoft-internet-technology-joe-family-friends-family/" rel="tag">Microsoft</a></li><li><a href="/blog/tags/scam/" rel="tag">scam</a></li><li><a href="/blog/tags/virus/" rel="tag">virus</a></li><li><a href="/blog/tags/worm/" rel="tag">worm</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-2-city-ordinance-and-neighborhood-considerations/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Projects",
+        "Science"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <h3>Project Table of Contents</h3>  <ol>   <li><a href="https://www.joelevi.com/blog/index.php/2008/09/24/backyard-wind-turbine-part-1/" target="_blank">What kind of energy should I harvest?</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/09/26/backyard-wind-turbine-part-2-city-ordinance-and-neighborhood-considerations/" target="_blank">City ordinance and neighborhood considerations</a> (this article) </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/16/backyard-wind-turbine-part-3-installing-the-tower-base/" target="_blank">Installing the tower base</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/27/backyard-wind-turbine-part-4-building-and-securing-the-tower/">Building and securing the tower</a> </li>    <li>Building and installing the wind turbine </li>    <li>Wiring up the electrical connections      <ul>       <li>Wiring </li>        <li>Preventing “reverse flow” </li>        <li>Regulating and controlling the charge </li>        <li>Batteries </li>        <li>Dump Loads </li>     </ul>   </li>    <li>Afterward… </li> </ol>  <p><a title="Photo Credit: the original red tape by suttonhoo" href="https://www.flickr.com/photos/suttonhoo22/300607353/" target="_blank"><img title="image" style="border-top-width: 0px; display: inline; border-left-width: 0px; border-bottom-width: 0px; margin-left: 0px; margin-right: 0px; border-right-width: 0px" height="240" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/09/image18.png" width="207" align="right" border="0" /></a> </p>  <p>This is the second article in a series of articles detailing my adventures in setting up a small-wind backyard wind turbine. </p>  <p>It’s important at his stage of the game, before you’ve invested anything more than your own time in consideration of a project like this, to check and see what your local regulations are (if any) concerning a project like this.</p>  <p>I can’t speak to anyone else’s requirements or regulations, all I can do is detail my own.</p>  <h3>Neighbors</h3>  <p>There are two concepts that I learned from the Sim City games called NIMBY and YIMBY. NIMBY is an acronym that stands for “not in my backyard” and basically describes a generally undesirable “something” located “close” to someone’s “backyard” such as a landfill. YIMBY is the opposite, “yes, in my backyard,” something desirable, such as a park.</p>  <p>Although your neighbors don’t have much legal say over what goes on over their side of the fence, it’s generally a good idea to be in good graces with your neighbors. Where legal matters do come into play are local laws, regulations, ordinances, code, and permit requirements. We’ll get to that in a minute.</p>  <p>To test the “NIMBY”-ness of my wind turbine I mocked up a prototype and plunked it atop a tetherball pole. Most of my neighbors thought it was “cool” and none of them complained. Granted, the pole was in the backyard, so only my neighbors to the rear and the sides even knew I had it, but it seemed to pass the “neighbor approval” test.</p>  <h3>Ordinances, Regulations, and Restrictions</h3>  <p>Where I live, there are no restrictions on wind turbines of any kind, that’s good. What’s more, the only regulations that would apply are height restrictions: according to Syracuse City Municipal Code, a resident can only build a structure up to seven feet above the highest point of their roofline without going through a conditional use permit process.</p>  <p>That works just fine for me, I have a relatively high roofline compared to my neighbors, and since I’ll be putting the tower over my lower roof, I estimate that I’ll be about 15 feet above that roofline, so I should have a decent clearance from 3 out of 4 directions on my house. The fourth will still be fairly good.</p>  <p>It really pays to have a good, conversational relationship with the employees in the city’s Ordinances Department. I can’t emphasize this enough.</p>  <p>Next point of consideration, since I’m not restricted from building the tower or placing a turbine atop it, is building regulations. Any out-building or structure (including an antenna or tower) to which plumbing or electricity is run requires a building permit and inspections to accompany it. But there’s the kicker: I’m running electricity “from” the structure, not to it. And since I won’t be connecting the electricity to my house’s wiring, nor up to the grid I don’t fall under those requirements either. In short, I don’t need a permit, permission, or inspections of any kind. Woot!</p>  <h3>Up next</h3>  <p>Installing the tower base…</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

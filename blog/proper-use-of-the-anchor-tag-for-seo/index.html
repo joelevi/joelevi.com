@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/proper-use-of-the-anchor-tag-for-seo/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "anchor",
+        "html",
+        "seo",
+        "title"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +292,10 @@
 
 First let me start with a refresher course on the HTML anchor element.    <p>The anchor (or “hyperlink”) element is used to provide a link from one html source to another. This source can be link to a location elsewhere on the page, to another page, or even a call to a javascript function.</p>    <p>The anchor element wraps some content with an opening and closing tag, like so: <a>text to link</a></p>    <p>There are several commonly used attributes that can be assigned to the anchor tag, including, but not limited to:</p>    <ul>     <li><strong>href</strong>: the destination where the text is linked; this should be the shortest possible link to the page/location</li>      </ul><ul>       <li>href=“#page-link”</li>        <li>href=“/products/t-shirts/lime-in-the-coconut.html”</li>        <li>href=“<a title="http://www.joelevi.com/blog/index.php/2009/12/30/asynchronous-google-analytics-script/" href="https://www.joelevi.com/blog/index.php/2009/12/30/asynchronous-google-analytics-script/">http://www.joelevi.com/blog/index.php/2009/12/30/asynchronous-google-analytics-script/</a>”</li>        <li>Etc.</li>     </ul>      <li><strong>target</strong>: the browser frame where the link will be opened</li>      <ul>       <li>target=“_blank” for a new window or tab</li>        <li>target=“_self” to open in the same window (“_self” is the default behavior)</li>     </ul>      <li><strong>title</strong>: the “alternate” text for the link; used when the text of the hyperlink is not the same as the linked page.</li>      <ul>       <li>title=“Asynchronous Google Analytics Script”</li>     </ul>       <p>There are many other attributes that the anchor element can use, such as rel, rev, class, id, style, hreflang, DOM events (onClick,onBlur, onFocus, etc.) , and others.</p>    <p>When you are linking, the strongest link-to-page relationship is when the text of the anchor is the same as the text of the linked page.</p>    <p>That may not not always be contextually correct (it doesn’t always make sense when reading the paragraph in which the link is placed). In that case, the title attribute should be supplied with its value set to the title of the page to which you’re linking.</p>    <p>Clear as mud?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/anchor/" rel="tag">anchor</a></li><li><a href="/blog/tags/html/" rel="tag">html</a></li><li><a href="/blog/tags/seo/" rel="tag">seo</a></li><li><a href="/blog/tags/title/" rel="tag">title</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

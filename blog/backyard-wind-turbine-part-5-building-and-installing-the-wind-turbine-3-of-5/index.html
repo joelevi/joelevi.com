@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,12 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-3-of-5/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Environment",
+        "Projects",
+        "Wind Power"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +289,10 @@
 			<div class="post-body">
 <h3>Project Table of Contents</h3>  <ol>   <li><a href="https://www.joelevi.com/blog/index.php/2008/09/24/backyard-wind-turbine-part-1/">What kind of energy should I harvest?</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/09/26/backyard-wind-turbine-part-2-city-ordinance-and-neighborhood-considerations/">City ordinance and neighborhood considerations</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/16/backyard-wind-turbine-part-3-installing-the-tower-base/">Installing the tower base</a> </li>    <li><a href="https://www.joelevi.com/blog/index.php/2008/10/27/backyard-wind-turbine-part-4-building-and-securing-the-tower/">Building and securing the tower</a> </li>    <li>Building and installing the wind turbine </li>    <ul>     <li><a href="https://www.joelevi.com/blog/index.php/2008/11/06/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-1-of-5/">Selecting the type of turbine</a>&#160; </li>      <li><a href="https://www.joelevi.com/blog/index.php/2008/11/07/backyard-wind-turbine-part-5-building-and-installing-the-wind-turbine-2-of-5/">Choosing AC or DC</a></li>      <li>Prototype, aka “Mark 1” (this article) </li>      <li>Building the “Mark 2”</li>      <li>Video of the finished Mark 2 in action</li>   </ul>    <li>Wiring up the electrical connections      <ul>       <li>Wiring </li>        <li>Preventing “reverse flow” </li>        <li>Regulating and controlling the charge </li>        <li>Batteries </li>        <li>Dump Loads </li>     </ul>   </li>    <li>Afterward… </li> </ol>  <h3>Prototyping (aka, the “Mark 1”)</h3>  <p>What started this whole project and launched it from a wild hair into something I could actually do was an old treadmill that we inherited when I got married. The treadmill broke one day and I couldn’t fix it. It was too big to just throw away, so I had to take it apart (read: break it into smaller pieces). In so doing I “liberated” the DC motor, and it was a big one. This motor sat on a shelf in the garage for years until I finally stumbled upon the incorrectly named “<a href="https://www.instructables.com/id/Chispito-Wind-Generator/" target="_blank">Chispito Wind Generator</a>.” There were my plans. I went to work building the thing with reclaimed PVC pipe, a scrap of plywood, a new pumping flange and nipple, and a length of steel tube. Within a few weekends I had a “functional” wind turbine. All in all, materials for the head and tail assembly cost me under $20. I didn’t have a tower or even a post to mount it on, but I was on my way. The assembled head and tail assembly sat in my garage until our good friends donated a tetherball pole to us. I now had a “prototyping tower.”</p>  <p>I placed the head and tail assembly atop the 10-foot pole… and waited for the wind. And waited. And waited. Finally we got a breezy evening and watched the blades slowly spin. It was beautiful. Until the blades unscrewed the hub and fell to the ground. I’d cut my blades the wrong way – rather, I cut my blades such that they spun the wrong direction, you want the rotation to tighten down on the hub, not loosen it. Good to know.</p>  <p>So I cut and mounted a new set of blades, then mounted them atop the pole, and waited for the wind… And waited.</p>  <p>Finally we got a gusty evening. I ran outside and eagerly hooked up my multimeter. The blades were spinning pretty quickly, but the output peaked at 2.4 volts. To charge batteries I needed at least 12 volts. I was devastated, but I finally knew why the treadmill had stopped working: the motor was shot. I left the “Mark 1” atop the pole just so I could see it spin.</p>  <p>By this point in time I’d learned enough about the whole system that I decided to “upgrade” when I built my “Mark 2.”</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/environment/" rel="tag">Environment</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/wind-power/" rel="tag">Wind Power</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

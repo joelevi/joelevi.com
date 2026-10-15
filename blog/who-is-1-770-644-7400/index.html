@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/who-is-1-770-644-7400/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "phishing",
+        "scam",
+        "scamming",
+        "telephone",
+        "theft"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -291,6 +305,10 @@
 
 <ul>   <li>http://800notes.com/Phone.aspx/1-770-644-7400</li>    <li><a title="http://whocalled.us/lookup/7706447400" href="https://whocalled.us/lookup/7706447400" target="_blank">http://whocalled.us/lookup/7706447400</a></li> </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/phishing/" rel="tag">phishing</a></li><li><a href="/blog/tags/scam/" rel="tag">scam</a></li><li><a href="/blog/tags/scamming/" rel="tag">scamming</a></li><li><a href="/blog/tags/telephone/" rel="tag">telephone</a></li><li><a href="/blog/tags/theft/" rel="tag">theft</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

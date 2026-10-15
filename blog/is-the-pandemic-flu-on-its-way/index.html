@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/is-the-pandemic-flu-on-its-way/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Religion",
+        "Science"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -305,6 +316,10 @@
 
 <ul> <li><a title="The End-of-the-world, how it all begins" href="https://www.joelevi.com/blog/index.php/2007/10/29/then-end-of-the-world-how-it-all-begins/" rel="me">The End-of-the-world, how it all begins</a>  </li><li>http://www.nationalpost.com/news/story.html?id=504180  </li><li><a title="http://cnews.canoe.ca/CNEWS/Canada/2008/05/09/5519286-cp.html" href="https://cnews.canoe.ca/CNEWS/Canada/2008/05/09/5519286-cp.html">http://cnews.canoe.ca/CNEWS/Canada/2008/05/09/5519286-cp.html</a>  </li><li>http://canadianpress.google.com/article/ALeqM5h7Q0-fHwzAdqlClVOGmwfb3FRtyA  </li><li><a title="http://www.reuters.com/article/worldNews/idUSN0948513220080509?feedType=RSS&amp;feedName=worldNews" href="https://www.reuters.com/article/worldNews/idUSN0948513220080509?feedType=RSS&amp;feedName=worldNews">http://www.reuters.com/article/worldNews/idUSN0948513220080509?feedType=RSS&amp;feedName=worldNews</a>  </li><li>http://edition.cnn.com/2008/WORLD/americas/05/09/canada.train.ap/index.html  </li><li>http://ap.google.com/article/ALeqM5gFlSjtUIBDMVj9iFqsaSYEypMdpAD90I9BJO0  </li><li>http://www.canada.com/vancouversun/news/story.html?id=8ad78a10-61da-4ae0-83dd-68da89156fb1  </li><li><a title="http://www.thestar.com/News/Ontario/article/423330" href="https://www.thestar.com/News/Ontario/article/423330">http://www.thestar.com/News/Ontario/article/423330</a>  </li><li><a title="http://www.macleans.ca/canada/wire/article.jsp?content=n050921A" href="https://www.macleans.ca/canada/wire/article.jsp?content=n050921A">http://www.macleans.ca/canada/wire/article.jsp?content=n050921A</a>  </li><li>http://www.ctv.ca/servlet/ArticleNews/story/CTVNews/20080509/train_alert_080509/20080509?hub=Canada  </li><li>http://comments.breitbart.com/080509161808628kb3e4/#comment-93648</li></ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/religion/" rel="tag">Religion</a></li><li><a href="/blog/tags/science/" rel="tag">Science</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

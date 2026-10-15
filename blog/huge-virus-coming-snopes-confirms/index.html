@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/huge-virus-coming-snopes-confirms/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "hallmark",
+        "Internet",
+        "halmark",
+        "hoax",
+        "mcafee",
+        "snopes",
+        "virus"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +295,10 @@
 d
 Family,</p>    <p>I know this forward to be real.&#160; WE were notified by our ITS people at NDSU of the same thing.&#160; Thought I'd better get this forwarded to all of you.&#160; Don't know if it will affect MACS but bette be safe than sorry. </p>    <p>In case you haven't already heard. . . My cousin said that this was reported on Fox News yesterday and they even gave a statistics as to how many computers were effected in one hour. checked with Norton Anti-Virus and they are gearing up for this virus. I checked Snopes (URL above:) and it is for real. </p>    <p>Get this E-mail message sent around to your contacts ASAP. </p>    <p>PLEASE FORWARD THIS WARNING AMONG FRIENDS, FAMILY AND CONTACTS! </p>    <p>You should be alert during the next few days. Do not open any message with an attachment entitled 'POSTCARD FROM HALLMARK,' regardless of who sent it to you. It is a virus which opens A POSTCARD IMAGE, which 'burns' the whole hard disc C of your computer. This virus will be received from someone who has your e-mail address in his/her contact list. This is the reason why you need to let all your contacts know about this. It is better to receive this message 25 times than to receive the virus and open it. </p>    <p>If you receive a mail called' POSTCARD,' even though sent to you by a friend, do not open it! Shut down your computer immediately. </p>    <p>This is the worst virus announced by CNN. It has been classified by Microsoft as the most destructive virus ever. This virus was discovered by McAfee yesterday, and there is no repair yet for this kind of virus. This virus simply destroys the Zero Sector of the Hard Disc, where the vital information is kept. </p>    <p>COPY THIS, AND SEND IT TO YOUR FRIENDS. REMEMBER: IF YOU SEND IT TO THEM, YOU WILL BENEFIT ALL OF US.</p></blockquote>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/hallmark/" rel="tag">hallmark</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/halmark/" rel="tag">halmark</a></li><li><a href="/blog/tags/hoax/" rel="tag">hoax</a></li><li><a href="/blog/tags/mcafee/" rel="tag">mcafee</a></li><li><a href="/blog/tags/snopes/" rel="tag">snopes</a></li><li><a href="/blog/tags/virus/" rel="tag">virus</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

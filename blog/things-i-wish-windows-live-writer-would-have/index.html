@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/things-i-wish-windows-live-writer-would-have/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Freelance",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p>I love Windows Live Writer, it takes the slowness and spelling errors, and linking, and inserting pictures/objects so much easier. After all, shouldn’t a blog be about the content, not about how to get the content into the blog’s CMS?</p>  <p>Windows Live Writer does that. It’s a desktop application (that runs on Windows, obviously) that lets you publish content to virtually any blogging engine. I’ve personally tested it on </p>  <ul>   <li>WordPress 1.x</li>    <li>WordPress 2.5.x</li>    <li>BlogEngine.Net</li>    <li>Community Server 2007</li>    <li>SubText</li> </ul>  <p>What’s more, you can configure any number of blogs in it, so you can write an article and publish it one blog, then write another article on another topic in the same UI, and publish it to another blog. Quick. Easy. Fast. Consistent UI. Just the way I like it.</p>  <p>It also has a plug-architecture that allows developers to write “stuff” that makes doing “things” easier (is that generic enough?). For example, you can have a plug-in that allows you to insert a Windows Live Map object, or a YouTube video object. Cool. </p>  <h3>So what would I like?</h3>  <p>Here’s my wish list:</p>  <ul>   <li>Add the rev, class, and id attributes to the anchor dialog box</li>    </ul><ul>     <li>add common XFN, license, common MicroFormat values, etc. to the field’s drop-down lists</li>   </ul>    <li>Add MicroFormat support – everywhere</li>    <ul>     <li>Devote a section to the in the right-channel</li>      <li>Add an hCard (with or without Geo)</li>      <li>Add an hReview</li>      <li>Add an hCalendar / event</li>      <li>Markup with abbr</li>   </ul>    <li>Dynamic Tag (for Tag Cloud) recommendation (based on what you’ve written, recommend tags for the post)</li>    <li>Yahoo’s fancy WordPress plug-in: yes I know Microsoft and Yahoo aren’t on the best of terms, but Yahoo, come on, publish your WordPress plug-in for Live Writer. It’s killer, and I’d love to “enrich” my posts with your data (inserting a dynamic stock quote box, information box, etc.) but I’m not going back to WordPress’s editor, so I can’t use your plug-in.</li>    <li>Dynamic Social networking badges: let me add a “Digg This” or “Stumble This” or better yet, a dynamic window/div opens up and lets the user pick which social net to submit the article’s permalink to.</li>   <h3>How about you?</h3>  <p>What would you like to see included in Windows Live Writer?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/freelance/" rel="tag">Freelance</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

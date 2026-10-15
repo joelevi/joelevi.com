@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/senator-bennetts-office-replies-to-my-call-about-auditing-the-federal-reserve/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "U.S. Senate",
+        "Bob Bennett",
+        "vote",
+        "vitter",
+        "nay",
+        "federal reserve",
+        "audit the fed"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -279,6 +295,10 @@
 
 <p><object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/embedPlayer" width="100%" height="64"><param name="movie" value="https://clients4.google.com/voice/embed/embedPlayer" /><param name="wmode" value="transparent" /><param name="FlashVars" value="u=15824890420224478321&amp;k=AHwOX_A3aM7SSQBKG3lNmtutIx3wWIm7SyoC2lCoNf6-9JDjpUH_sxvVX9UQH4mD1fjazkgcwCb2CUbs_CRHs6aDIksIpheDDm83poCwdoDqmvuXAbBqmO71JhDGJ9cgNVsZAw5hWsbl0xzgWkO6euV-gA_9ViIKH4faFGGaAC6I2DAtNnvCo30&amp;baseurl=https://clients4.google.com/voice&amp;autoPlay=false&cap;=Senator%20Bennett%27s%20office%20replies%20to%20my%20call%20about%20Auditing%20the%20Fed" /></object></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/bob-bennett/" rel="tag">Bob Bennett</a></li><li><a href="/blog/tags/vote/" rel="tag">vote</a></li><li><a href="/blog/tags/vitter/" rel="tag">vitter</a></li><li><a href="/blog/tags/nay/" rel="tag">nay</a></li><li><a href="/blog/tags/federal-reserve/" rel="tag">federal reserve</a></li><li><a href="/blog/tags/audit-the-fed/" rel="tag">audit the fed</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,10 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/google-checkout-sign-up-now-and-get-free-processing-through-the-end-of-last-year/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +287,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/07/image13.png"><img title="image" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="150" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/07/image-thumb10.png" width="244" align="right" border="0" /></a>While submitting our storefronts to Google Local Business Center today (07/29/2008) I stumbled across something funny: an incentive for businesses like my client’s to use Google Checkout as their payment processor.</p>  <blockquote>   <p>New! <a href="https://checkout.google.com/sell?promo=slbshpfp">Google Checkout</a> - Let your customers buy from you quickly and conveniently using a single Google Checkout login. And process all of your Checkout sales for free through the end of 2007.</p> </blockquote>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p>Wow… free processing? That’d save 1-3% per transaction, so it’s worth looking into, right? Wait, through the end of 2007?! Wasn’t that almost 8 months ago? </p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

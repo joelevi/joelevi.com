@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/finished-baby-step-number-one/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Dave Ramsey",
+        "Projects",
+        "debt",
+        "finances",
+        "money"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>My <a href="https://natalie.joelevi.com" target="_blank" rel="met contact spouse sweetheart muse collegue neighbor">wife</a> and I have recently decided to undertake Dave Ramsey’s <em>Total Money Makeover</em> to help us get out of debt and secure our financial freedom.</p>  <p>Dave recommends the following seven-step process to achieve financial independence, he calls these the “Baby Steps to get your finances in order and on track.”</p>  <ol>   <li>$1,000 to start an Emergency Fund</li>    <li>Pay off all debt using the Debt Snowball (excluding your home, see step 6)</li>    <li>3 to 6 months of expenses in savings</li>    <li>Invest 15% of household income into Roth IRAs and pre-tax retirement</li>    <li>College funding for children</li>    <li>Pay off home early</li>    <li>Build wealth and give! Invest in mutual funds and real estate</li> </ol>  <p>One rule is to work on one step at a time, finish the one step before moving on to the next step (if you want to know why, read his book!!).</p>  <p>Today marks a big day for us, we’ve successfully checked off step one. Funny, it’s not that big a step, but it feels liberating and already the weight of debt is being cast away.</p>  <p>Tomorrow, on to step two. We have a line-of-credit, vehicle payment, and two credit cards to pay off (probably in that order).</p>  <p>(Hat tip to <a href="https://www.MikeDopp.com" target="_blank" rel="friend met co-worker contact neighbor colleague">Mike Dopp</a> for helping light a fire under my finances to turn “talk” about financial security into action.)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/dave-ramsey/" rel="tag">Dave Ramsey</a></li><li><a href="/blog/tags/projects/" rel="tag">Projects</a></li><li><a href="/blog/tags/debt/" rel="tag">debt</a></li><li><a href="/blog/tags/finances/" rel="tag">finances</a></li><li><a href="/blog/tags/money/" rel="tag">money</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/zune-marketplace-look-at-all-the-stuff-we-dont-have/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "MP3",
+        "Music",
+        "wma",
+        "zune"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +290,10 @@
 			<div class="post-body">
 <p></p>  <p></p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/06/image1.png"><img title="image" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="101" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/06/image-thumb1.png" width="244" align="right" border="0" /></a>I decided to hop on to the Zune Marketplace today and buy a couple albums, namely <em>Leaves’ Eyes</em>, and noticed something interesting: a pink triangle with a white “no” symbol in the bottom-right corner of some album covers…</p>  <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/06/image21.png"><img title="image" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="177" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/06/image-thumb2.png" width="244" align="left" border="0" /></a>Digging deeper I found this means that it’s not available.</p>  <p>Nice… Now we get to see what we CANNOT buy?&#160;&#160; </p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p></p>  <p>Where’s AllOfMP3.com when you need them?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/mp3/" rel="tag">MP3</a></li><li><a href="/blog/tags/music/" rel="tag">Music</a></li><li><a href="/blog/tags/wma/" rel="tag">wma</a></li><li><a href="/blog/tags/zune-technology-joe-family-friends-family/" rel="tag">zune</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

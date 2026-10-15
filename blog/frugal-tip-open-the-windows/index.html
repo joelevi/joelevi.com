@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/frugal-tip-open-the-windows/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "electricity",
+        "frugal",
+        "savings",
+        "thrifty",
+        "tip"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +291,10 @@
 			<div class="post-body">
 <p>This year we decided to be a bit more thrifty with our use of the central air conditioning unit.</p>  <p>We live in Utah where it’s fairly cold in the winter, fairly hot in the summer, and fairly moderate in the spring and autumn. Normally we keep the windows and doors closed in the winter (to keep the heat in) and closed the rest of the year (to keep the cool in).</p>  <p>This year we did something different: we opened the windows.</p>  <p>Obviously we’ll keep the windows closed in the cold of the winter, and probably through the heat of the summer, but that leaves half the year when we could run without any supplemental heating or cooling.</p>  <p>The spring and fall can have their warm days, and the inside of our house can still get uncomfortably hot – when the windows are closed and all the hot air is trapped inside.</p>  <p>In the mornings I open the windows on the middle level of our house (it’s still a bit chilly in the mornings, so I haven’t been opening the lower windows yet), and the upstairs windows. Doing this not only lets the breeze in, it lets the hot air vent out the top of the house, which causes the house to pull in cool air from the downstairs. It’s like running a fan all the time, without plugging anything in.</p>  <p>I close the windows almost all the way again at night (we have window locks that let us keep them open an inch or so), so it doesn’t get too cold at night.</p>  <h3>Does it work?</h3>  <p>Does it actually work? You betcha it does! It takes a little manual effort to do this, but the reward is a nice, cool house right when you need it.</p>  <h3>Does it save any money?</h3>  <p>Last year’s average daily temperature for the same month was 58 degrees F, whereas this year it was 61 – three degrees hotter.</p>  <p>Last year we used an average of 28 kwh/day, whereas this year we’re down to 25 kwh/day. That’s a savings of $0.11/day</p>  <h3>Savings</h3>  <p>Assuming the same type of savings the the entire spring and fall – roughly half the year – we’re looking at $20.09/year, not including the extra time we’re adding to the life of our central AC unit due to the lighter work-load. </p>  <table border="0" cellspacing="2" cellpadding="2"><thead>     <tr>       <th>Frugal Tip</th>        <th>Annual Savings</th>     </tr>   </thead><tbody>     <tr>       <td><a href="/blog/index.php/2009/06/10/frugal-tip-how-can-you-shave-and-save/">How can you Shave and Save?</a></td>        <td>$27.88</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/11/frugal-tip-alternate-to-shaving-gels-and-creams/">Alternate to Shaving Gels and Creams</a></td>        <td>$47.28</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/12/frugal-tip-tv-on-your-schedule/">TV on YOUR Schedule</a></td>        <td>$99.00</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/13/frugal-tip-ditch-paid-tv/">Ditch Paid TV</a></td>        <td>$359.88</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/14/frugal-tip-switch-to-netflix-instead-of-redbox-to-rent-videos/">Switch to Netflix instead of Redbox to Rent Videos</a></td>        <td>$150.06</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/15/frugal-tip-downgrade-at-home-netflix-upgrade-streaming-netflix/">Downgrade at-home Netflix, upgrade Streaming Netflix</a></td>        <td>$96.00</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/15/frugal-tip-ditch-your-land-line/">Ditch your Land-Line</a></td>        <td>$552.12</td>     </tr>      <tr>       <td><a href="/blog/index.php/2009/06/16/frugal-tip-open-the-windows/">Open the Windows</a></td>        <td>$20.09</td>     </tr>   </tbody></table>  <p>Tune in for our next <a href="/blog/index.php?tag=frugal" target="_blank">Frugal Tip</a>! <a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>™.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/electricity/" rel="tag">electricity</a></li><li><a href="/blog/tags/frugal/" rel="tag">frugal</a></li><li><a href="/blog/tags/savings/" rel="tag">savings</a></li><li><a href="/blog/tags/thrifty/" rel="tag">thrifty</a></li><li><a href="/blog/tags/tip/" rel="tag">tip</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

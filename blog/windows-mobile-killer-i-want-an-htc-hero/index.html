@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,27 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/windows-mobile-killer-i-want-an-htc-hero/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "android",
+        "Internet",
+        "Reviews",
+        "apple",
+        "Facebook",
+        "Google",
+        "hero",
+        "htc",
+        "integration",
+        "iPhone",
+        "itunes",
+        "killer",
+        "pocket pc",
+        "twitter",
+        "UI",
+        "ux",
+        "windows",
+        "Windows Mobile"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +304,10 @@
 			<div class="post-body">
 <p>I’ve been holding on to my Windows Mobile phone as a platform for a long, long time. It’s always been strong, powerful, fast, and I didn’t have to re-learn an entirely new mobile platform every time I switched handsets.</p>  <p>Then Apple’s iPhone came along with its beauty and simplicity, but it was still young, and (worse yet) it still required iTunes.</p>  <p>Google bought Android and remarketed it as its own. It was a baby, but it improved quickly.</p>  <p>And then HTC announced Hero… and blew me away.</p> <object width="853" height="505"><param name="movie" value="http://www.youtube.com/v/kshGq8COSiM&amp;hl=en&amp;fs=1&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/kshGq8COSiM&amp;hl=en&amp;fs=1&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="853" height="505"></embed></object> <p>So now I want an HTC Hero (with a keyboard, would that be the "Hero Pro"?). </p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android/" rel="tag">android</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/reviews/" rel="tag">Reviews</a></li><li><a href="/blog/tags/apple/" rel="tag">apple</a></li><li><a href="/blog/tags/facebook/" rel="tag">Facebook</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/hero/" rel="tag">hero</a></li><li><a href="/blog/tags/htc/" rel="tag">htc</a></li><li><a href="/blog/tags/integration/" rel="tag">integration</a></li><li><a href="/blog/tags/iphone/" rel="tag">iPhone</a></li><li><a href="/blog/tags/itunes/" rel="tag">itunes</a></li><li><a href="/blog/tags/killer/" rel="tag">killer</a></li><li><a href="/blog/tags/pocket-pc/" rel="tag">pocket pc</a></li><li><a href="/blog/tags/twitter/" rel="tag">twitter</a></li><li><a href="/blog/tags/ui/" rel="tag">UI</a></li><li><a href="/blog/tags/ux/" rel="tag">ux</a></li><li><a href="/blog/tags/windows/" rel="tag">windows</a></li><li><a href="/blog/tags/windows-mobile/" rel="tag">Windows Mobile</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

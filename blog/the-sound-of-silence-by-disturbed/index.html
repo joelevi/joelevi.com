@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/the-sound-of-silence-by-disturbed/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "anthem",
+        "disturbed",
+        "music",
+        "simon and garfunkel",
+        "the sound of silence",
+        "Normalcy Bias"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -302,6 +317,10 @@ People talking without speaking, people hearing without listening.
 "Hear my words and I might teach you, take my arms then I might reach you."<br />
 But my words, like silent raindrops fell, and echoed in the wells of silence.</blockquote></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/anthem/" rel="tag">anthem</a></li><li><a href="/blog/tags/disturbed/" rel="tag">disturbed</a></li><li><a href="/blog/tags/music/" rel="tag">music</a></li><li><a href="/blog/tags/simon-and-garfunkel/" rel="tag">simon and garfunkel</a></li><li><a href="/blog/tags/the-sound-of-silence/" rel="tag">the sound of silence</a></li><li><a href="/blog/tags/normalcy-bias/" rel="tag">Normalcy Bias</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

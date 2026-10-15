@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/windows-mobile-7-predictions/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "funny",
+        "humor",
+        "Microsoft",
+        "predictions",
+        "Windows CE",
+        "Windows Mobile",
+        "Windows Phone"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -281,6 +297,10 @@
 
 <ul>   <li>Microsoft announces new form-factor; larger, no camera, no phone; calls it the winPad </li>    <li>Windows Phone, now powered by Android</li>    <li>Pocket Internet Explorer (aka Internet Explorer Mobile) replaced with Chrome (Safari is optional to comply with EU requirements; Fennec is still &quot;due out soon&quot;) </li>    <li>Windows Media Player Mobile: has not been upgraded; it is not being replaced with a “Zune Player”; and still doesn't natively play .WAV files </li>    <li>Microsoft will announce that its mobile division has been sold off; major buyers are SPB Software House &amp; HTC </li>    <li>Windows CE scrapped; new handsets run Windows 7 with Aero</li>    <li>Touch-friendly GUI replaced with PowerShell command prompt, to make a call run: dialer -outgoing -[contact name] -[home|work|mobile|...] -redialattempts:[0-999] </li>    <li>Solitaire is upgraded; winning &quot;card cascade&quot; animation is now in full HD resolution @ 120Hz</li> </ul>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/funny/" rel="tag">funny</a></li><li><a href="/blog/tags/humor/" rel="tag">humor</a></li><li><a href="/blog/tags/microsoft-internet-technology-joe-family-friends-family/" rel="tag">Microsoft</a></li><li><a href="/blog/tags/predictions/" rel="tag">predictions</a></li><li><a href="/blog/tags/windows-ce/" rel="tag">Windows CE</a></li><li><a href="/blog/tags/windows-mobile/" rel="tag">Windows Mobile</a></li><li><a href="/blog/tags/windows-phone/" rel="tag">Windows Phone</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

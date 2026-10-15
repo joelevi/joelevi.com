@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,28 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/bennett-response-to-obamacare/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "H.R. 4872",
+        "H.R. 3590",
+        "constituent",
+        "bennett",
+        "senator",
+        "senate",
+        "S. 3152",
+        "RFB:kc",
+        "rfb",
+        "repeal",
+        "Patient Protection and Affordable Care Act",
+        "obamacare",
+        "kc",
+        "healthcare reform",
+        "U.S. Senate",
+        "Bob Bennett",
+        "vote",
+        "health",
+        "hcr"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -300,6 +328,10 @@ United States Senator</p>
 
 <p>RFB:kc</blockquote></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/h-r-4872/" rel="tag">H.R. 4872</a></li><li><a href="/blog/tags/h-r-3590/" rel="tag">H.R. 3590</a></li><li><a href="/blog/tags/constituent/" rel="tag">constituent</a></li><li><a href="/blog/tags/bennett/" rel="tag">bennett</a></li><li><a href="/blog/tags/senator/" rel="tag">senator</a></li><li><a href="/blog/tags/senate/" rel="tag">senate</a></li><li><a href="/blog/tags/s-3152/" rel="tag">S. 3152</a></li><li><a href="/blog/tags/rfbkc/" rel="tag">RFB:kc</a></li><li><a href="/blog/tags/rfb/" rel="tag">rfb</a></li><li><a href="/blog/tags/repeal/" rel="tag">repeal</a></li><li><a href="/blog/tags/patient-protection-and-affordable-care-act/" rel="tag">Patient Protection and Affordable Care Act</a></li><li><a href="/blog/tags/obamacare/" rel="tag">obamacare</a></li><li><a href="/blog/tags/kc/" rel="tag">kc</a></li><li><a href="/blog/tags/healthcare-reform/" rel="tag">healthcare reform</a></li><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/bob-bennett/" rel="tag">Bob Bennett</a></li><li><a href="/blog/tags/vote/" rel="tag">vote</a></li><li><a href="/blog/tags/health/" rel="tag">health</a></li><li><a href="/blog/tags/hcr/" rel="tag">hcr</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

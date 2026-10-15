@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/experiments-with-homemade-wheat-gluten/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "food",
+        "Religion",
+        "food storage",
+        "gluten",
+        "meat",
+        "preparedness",
+        "vegan",
+        "vegetarian"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +294,10 @@
 			<div class="post-body">
 <p>Gluten is a vegetarian alternative to meat. When prepared and seasoned correctly it can be almost indistinguishable from hamburger, ribs, chicken strips or chicken nuggets, or sausage.</p>  <p>My <a href="https://www.blogger.com/profile/13403847624491620709" target="_blank">buddy</a> recently wrote an article on <a href="https://apaetoday.blogspot.com/2009/04/vegetarian-alternative.html" target="_blank">how to make wheat gluten at home</a>. </p>  <p>My <a href="https://natalie.joelevi.com" rel="met contact spouse sweetheart muse collegue neighbor" target="_blank">wife</a> had just ground some hard white wheat earlier in the day, and I decided to see what I could do and report my results.</p>  <p>I followed my buddy’s directions up to the “seitan process” that he mentions in his post.</p>  <p>The day after mixing the wheat and water we “washed” the starches out of the ball, spread, and cut into strips, we then marinated (soaked) the strips in water with some liquid smoke, Worcester sauce, and some homemade “beef flavoring” spice mix. </p>  <p>The next day we fried the strips in olive oil, top dressing them with various spices to experiment with flavoring (garlic powder, black pepper, beef flavoring spice mix, and steak rub). We left a few “plain” as a control. </p>  <p>The kids ate them! My wife loved them, she enjoyed them more than chicken strips or nuggets (with a little shaping we could easily turn these into chicken nuggets). </p>  <p>We determined that the spices applied during cooking didn’t really matter (although the black pepper made that strip “spicier” than the others).</p>  <p>The next day I coiled some of the strips into patties and ate them like I would a hamburger. </p>  <p>Mmmm... </p>  <p>Do you have any gluten recipes or suggestions?</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/food/" rel="tag">food</a></li><li><a href="/blog/tags/religion/" rel="tag">Religion</a></li><li><a href="/blog/tags/food-storage/" rel="tag">food storage</a></li><li><a href="/blog/tags/gluten/" rel="tag">gluten</a></li><li><a href="/blog/tags/meat/" rel="tag">meat</a></li><li><a href="/blog/tags/preparedness/" rel="tag">preparedness</a></li><li><a href="/blog/tags/vegan/" rel="tag">vegan</a></li><li><a href="/blog/tags/vegetarian/" rel="tag">vegetarian</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

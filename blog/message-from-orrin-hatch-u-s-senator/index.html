@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,14 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/message-from-orrin-hatch-u-s-senator/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "hatch",
+        "U.S. Senate",
+        "Orrin Hatch",
+        "town hall meeting",
+        "st. george"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -299,6 +313,10 @@
 
 <ul>   <li>.@TheSpectrum reports on the town hall meeting I held last night in St. George: <a href="https://r20.rs6.net/tn.jsp?et=1103462356884&amp;s=35928&amp;e=001mgywpU_zV1EI5Y-g6Ntnkigk0F-tck84yXDeVeVII05wl4ekyypxsp6Ejq2DiRE7vF5GjpP5hY3pPAntKtUlT9S6VVMgc_wISicFUHETEUEhr85l2SkI3a3UAfKg_nEIn8WXQeeIC6yF4-iEZAI8qPv69y_NyypBFw7BtVTCwwKQig3ktME9XK1gODTGwB35mSHYj6sHwy999GKNpFTBEIBB63yWE0-U3wOvotIK1EHFKpitAADA-g==">http://bit.ly/9KEHHa</a> #utpol </li>    <li>I'm holding a town hall meeting in St. George tonight. I hope you can join me there:&#160; <a href="https://r20.rs6.net/tn.jsp?et=1103462356884&amp;s=35928&amp;e=001mgywpU_zV1HsZ-3r95E780yJsyITYtRqpv6hG1wQLOubbqv6wNHsIza3JVB1AAay74aTtmHfZR5TWICWAQm6AD0DV65hxyJak3k3xAoguf4=">http://bit.ly/ctbkMJ</a></li>    <li>Thank you to all who have donned a uniform for our great nation -- especially those who paid the ultimate price to defend our freedoms. </li>    <li>I had the honor of presenting Korean War veteran Robert Wahlen with 1 of 2 Purple Hearts he earned, but didn't receive:<a href="https://r20.rs6.net/tn.jsp?et=1103462356884&amp;s=35928&amp;e=001mgywpU_zV1FzjarNjB9wL9i59oV6fMyt5Drx-8EGqoPTK8gd1_da7Tj5OFG_WVp6XZhOD085nRg3gjCjRzmiLHSjlB4EBgEIQPwaZjYlkeE=">http://bit.ly/9re1ZQ</a></li> </ul></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/hatch/" rel="tag">hatch</a></li><li><a href="/blog/tags/u-s-senate/" rel="tag">U.S. Senate</a></li><li><a href="/blog/tags/orrin-hatch/" rel="tag">Orrin Hatch</a></li><li><a href="/blog/tags/town-hall-meeting/" rel="tag">town hall meeting</a></li><li><a href="/blog/tags/st-george/" rel="tag">st. george</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

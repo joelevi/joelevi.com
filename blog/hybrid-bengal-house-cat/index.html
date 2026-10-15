@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,11 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/hybrid-bengal-house-cat/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "Internet",
+        "Lifetime Products"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +288,10 @@
 			<div class="post-body">
 <p><a href="https://www.joelevi.com/blog/wp-content/uploads/2008/09/image6.png"><img title="image" style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="162" alt="image" src="https://www.joelevi.com/blog/wp-content/uploads/2008/09/image-thumb5.png" width="204" align="right" border="0" /></a> A co-worker of mine has set up a blog all about her hybrid Bengal house cat and is planning on conducting an SEO/SEP experiment with its content. This is my attempt to beat her to the punch, so when she heads to Google, I’m hoping this article shows up above her’s. ;)</p>  <p>According to Wikipedia: </p>  <blockquote>   <p>The <b>Bengal</b> is a relatively new <a href="https://en.wikipedia.org/wiki/Felid_hybrid">hybrid</a> breed of <a href="https://en.wikipedia.org/wiki/Cat">cat</a> developed to have a gentle and friendly temperament, while exhibiting the &quot;wild&quot; markings (such as large spots, rosettes, and a light/white belly), and body structure reminiscent of the wild Asian <a href="https://en.wikipedia.org/wiki/Leopard_Cat">Leopard Cat</a> (<i>Prionailurus bengalensis</i>). In other words, a Bengal cat has a desirable &quot;wild&quot; appearance with a gentle domestic cat temperament, provided it is separated by at least three generations from the original crossing between a domestic and Asian Leopard Cat.</p>    <p>The name <i>Bengal</i> was derived from the taxonomic name of the Asian Leopard Cat (ALC), as shown above, and not from the more widely known <a href="https://en.wikipedia.org/wiki/Bengal_Tiger">Bengal Tiger</a> species, which is unrelated to the Bengal's ancestry.</p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p>    <p></p> </blockquote> Dang… that’d be cool if it were like a miniature tiger… ;)
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li><li><a href="/blog/tags/lifetime-products/" rel="tag">Lifetime Products</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

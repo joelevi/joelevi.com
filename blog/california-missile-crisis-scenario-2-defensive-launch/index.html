@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,13 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/california-missile-crisis-scenario-2-defensive-launch/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "missile",
+        "missile crisis",
+        "china",
+        "theory"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -285,6 +298,10 @@
 
 <p>Were this the case, there would likely be a delay in reporting &quot;what really happened&quot; because the President himself would need to be involved in, and would likely make the announcement to nation himself. He&#x27;s overseas right now, so a delay of even 12-20 hours would be &quot;reasonable&quot;. Since it&#x27;s been almost a full day since the event, and we haven&#x27;t gotten word from the White House or Pentagon, we can likely rule out this scenario.</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/missile/" rel="tag">missile</a></li><li><a href="/blog/tags/missile-crisis/" rel="tag">missile crisis</a></li><li><a href="/blog/tags/china/" rel="tag">china</a></li><li><a href="/blog/tags/theory/" rel="tag">theory</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

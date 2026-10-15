@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,16 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/theres-a-map-for-that/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "app",
+        "AT&T",
+        "Google",
+        "iPhone",
+        "map",
+        "verizon",
+        "Internet"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +293,10 @@
 			<div class="post-body">
 <p>Verizon takes on AT&T’s iPhone with their “Map for That” commercial.</p>  <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:5737277B-5D6D-4f48-ABFC-DD9C333F4C5D:5ee9a413-66ae-4f84-b41e-26e54f803347" class="wlWriterEditableSmartContent"><div id="308967c1-3dd6-4f3d-a58c-fad30e009454" style="margin: 0px; padding: 0px; display: inline;"><div><a href="https://www.youtube.com/watch?v=zagFT6VI5tI&color1=0xb1b1b1&color2=0xcfcfcf&feature=player_embedded&fs=1" target="_new"><img src="https://www.joelevi.com/files/blog-attachments/Theresamapforthat_D2F5/videof99356523404.jpg" style="border-style: none" galleryimg="no" onload="var downlevelDiv = document.getElementById('308967c1-3dd6-4f3d-a58c-fad30e009454'); downlevelDiv.innerHTML = "<div><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/zagFT6VI5tI&color1=0xb1b1b1&color2=0xcfcfcf&feature=player_embedded&fs=1&hl=en"></param><embed src="https://www.youtube.com/v/zagFT6VI5tI&color1=0xb1b1b1&color2=0xcfcfcf&feature=player_embedded&fs=1&hl=en" type="application/x-shockwave-flash" width="425" height="355"></embed></object></div>";" alt=""/></a></div></div></div>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/app/" rel="tag">app</a></li><li><a href="/blog/tags/att/" rel="tag">AT&amp;T</a></li><li><a href="/blog/tags/google/" rel="tag">Google</a></li><li><a href="/blog/tags/iphone/" rel="tag">iPhone</a></li><li><a href="/blog/tags/map/" rel="tag">map</a></li><li><a href="/blog/tags/verizon/" rel="tag">verizon</a></li><li><a href="/blog/tags/internet/" rel="tag">Internet</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,17 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/documents-prove-ag-holder-lied-had-knowledge-of-the-death-of-border-patrol-agent-terry-the-same-day/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "2a",
+        "ag",
+        "eric holder",
+        "fast and furious",
+        "gun walker",
+        "holder",
+        "RKBA",
+        "U.S. Executive Branch"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -297,6 +314,10 @@
 
 <p>Source: <a href="https://godfatherpolitics.com/3409/documents-prove-holder-lied-he-knew-same-day-of-death-of-border-patrol-agent-terry/#ixzz1kz2CTa1N" target="_blank">Godfather Politics</a></p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/2a/" rel="tag">2a</a></li><li><a href="/blog/tags/ag/" rel="tag">ag</a></li><li><a href="/blog/tags/eric-holder/" rel="tag">eric holder</a></li><li><a href="/blog/tags/fast-and-furious/" rel="tag">fast and furious</a></li><li><a href="/blog/tags/gun-walker/" rel="tag">gun walker</a></li><li><a href="/blog/tags/holder/" rel="tag">holder</a></li><li><a href="/blog/tags/rkba/" rel="tag">RKBA</a></li><li><a href="/blog/tags/u-s-executive-branch/" rel="tag">U.S. Executive Branch</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>

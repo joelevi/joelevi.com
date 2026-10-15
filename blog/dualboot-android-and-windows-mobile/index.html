@@ -182,6 +182,13 @@
 		::selection { background: var(--selection-bg); color: var(--selection-fg); }
 		::-moz-selection { background: var(--selection-bg); color: var(--selection-fg); }
 		a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+		/* post-terms */
+		.post-terms { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
+		.post-terms__cats { margin: 0 0 0.6rem; color: var(--ink-muted); }
+		.post-terms__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+		.post-terms__tags a { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid var(--blue); color: var(--blue); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background 0.15s ease; }
+		.post-terms__tags a:hover { background: var(--blue-soft); }
+		/* /post-terms */
 	</style>
 	<script type="application/ld+json">
 {
@@ -208,7 +215,15 @@
       },
       "breadcrumb": {
         "@id": "https://www.joelevi.com/blog/dualboot-android-and-windows-mobile/#breadcrumb"
-      }
+      },
+      "keywords": [
+        "android",
+        "bootloader",
+        "dual boot",
+        "pocketnow.com",
+        "Video",
+        "Windows Mobile"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -277,6 +292,10 @@
 			<div class="post-body">
 <p>Yes folks, you read that correctly. It is now possible to dual boot Android and Windows Mobile on select Windows Mobile devices.</p>  <p>Similar to what we’ve seen in the past, running Android on your WinMo hardware requires that you have a distro of Android to play with. That’s easy enough since Android is open-source. The drawbacks are drivers and configuration which vary by device. In other words, just because you can <em>run</em> Android on your WinMo hardware doesn’t mean everything will work correctly.</p>  <p>Give it a shot and see what you think!</p> <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/Nvj4ObHmxCI&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="https://www.youtube.com/v/Nvj4ObHmxCI&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="425" height="344"></embed></object>  <p>(Hat tip to <a href="https://pocketnow.com" target="_blank">pocketnow.com</a> for <a title="How to Dual Boot Windows Mobile and Android" href="https://pocketnow.com/tweaks-hacks/how-to-dual-boot-windows-mobile-and-android" target="_blank">covering this</a>!)</p>
 			</div>
+			<!-- post-terms -->
+			<nav class="post-terms" aria-label="Categories and tags">
+				<ul class="post-terms__tags" aria-label="Tags"><li><a href="/blog/tags/android/" rel="tag">android</a></li><li><a href="/blog/tags/bootloader/" rel="tag">bootloader</a></li><li><a href="/blog/tags/dual-boot/" rel="tag">dual boot</a></li><li><a href="/blog/tags/pocketnow-com/" rel="tag">pocketnow.com</a></li><li><a href="/blog/tags/video/" rel="tag">Video</a></li><li><a href="/blog/tags/windows-mobile/" rel="tag">Windows Mobile</a></li></ul>
+			</nav><!-- /post-terms -->
 
 			<p class="post-nav"><a href="/blog/">← All articles</a></p>
 		</article>
