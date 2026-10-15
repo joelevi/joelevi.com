@@ -131,6 +131,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/tags/c4l-cfl/",
+      "destination": "/blog/tags/c4l/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/c4l-cfl",
+      "destination": "/blog/tags/c4l/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tags/county-delegates-precinct-information/",
       "destination": "/blog/tags/county-delegates/",
       "permanent": true
