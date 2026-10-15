@@ -1,6 +1,46 @@
 {
   "redirects": [
     {
+      "source": "/blog/tough-economic-times-2/",
+      "destination": "/blog/tough-economic-times/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tough-economic-times-2",
+      "destination": "/blog/tough-economic-times/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/google-recognizes-their-evil-deeds-and-goes-into-damage-control-mode-2/",
+      "destination": "/blog/google-recognizes-their-evil-deeds-and-goes-into-damage-control-mode/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/google-recognizes-their-evil-deeds-and-goes-into-damage-control-mode-2",
+      "destination": "/blog/google-recognizes-their-evil-deeds-and-goes-into-damage-control-mode/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010-2/",
+      "destination": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010-2",
+      "destination": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010-3/",
+      "destination": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010-3",
+      "destination": "/blog/lifetime-products-and-why-they-chose-to-move-to-microsoft-exchange-server-2010/",
+      "permanent": true
+    },
+    {
       "source": "/blog/categories/consume-protection/",
       "destination": "/blog/categories/consumer-protection/",
       "permanent": true
