@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -319,12 +320,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/command-prompt-tip-ampersand.jpg" alt="Share graphic for “Command Prompt Tip: Ampersand” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>Command Prompt Tip: Ampersand</h1>
 				<p class="post-meta"><time datetime="2009-01-15">January 15, 2009</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/command-prompt-tip-ampersand.jpg" alt="Share graphic for “Command Prompt Tip: Ampersand” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>If you’re like me, you often want to do a couple things while you’re at the command prompt, but those couple things might be dependant upon the completion of one before the starting of the other.</p>  <p>In the past I’ve simply sent one command, gone away for a while, then sent the next. This will result in wasted time (even if I’m right there next to the computer and type in the next command as soon as the first one finishes).</p>  <p>For example, if I want to release and renew my IP address, I have to issue two commands:</p>  <ul>   <li>ipconfig /release</li>    <li>ipconfig /renew</li> </ul>  <p>That’s inconvenient, because I really want to do both! Here’s how you can chain commands together:</p>  <ul>   <li>ipconfig /release &amp; ipconfig/renew</li> </ul>  <p>As soon as the first command completes it starts the second one.</p>  <p><a title="Donate to www.JoeLevi.com via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=Joe%40JoeLevi%2ecom&amp;item_name=www%2eJoeLevi%2ecom&amp;amount=&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">You can thank me later</a>.</p>

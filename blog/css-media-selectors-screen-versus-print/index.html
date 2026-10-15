@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -344,12 +345,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/css-media-selectors-screen-versus-print.jpg" alt="Share graphic for “CSS Media Selectors: Screen versus Print” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>CSS Media Selectors: Screen versus Print</h1>
 				<p class="post-meta"><time datetime="2009-06-25">June 25, 2009</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/css-media-selectors-screen-versus-print.jpg" alt="Share graphic for “CSS Media Selectors: Screen versus Print” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>As we move ever onward with our online web presence there are certain conventions that we’ve already agreed upon and have implemented (opening external links via target=&quot;_blank&quot;, using icon sprites indicative of what type of link the hyperlink refers to (email, pdf, external link, tag, etc.)). As we march ever onward there are new technologies, new techniques, and even old technologies/techniques that we’re not currently using to be considered.</p>  <p>To that end I bring up for your consideration and input the CSS Media selector, specifically for print.</p>  <p>Now, there are some non-developers included in this conversation so I’ll “water it down” a little bit (developers, don’t give up on me here). </p>  <p>CSS allows us to apply a set of stylistic rules to our site, ya’ll know that already. What you may not have known is what we’re currently NOT using: CSS Media Selectors.</p>  <p>CSS Media Selectors let you specify the medium on which your style rules should be applied: screen versus print.</p>  <p>Obviously, we deal primarily in the Screen medium while we’re developing web pages, but what happens when people print our pages?</p>  <p>Printing screws up how web pages look on the printed page due to several reasons, including but not limited to:</p>  <ul>   <li>Margins</li>    <li>By default NOT printing background images or colors</li>    <li>Screen-based layouts do not necessarily translate well into printed layouts</li>    <li>Etc.</li> </ul>  <p>We can use CSS Media Selectors to essentially write an entirely new set (or override our existing set) of style rules.</p>  <p>This article (<a href="https://css-tricks.com/dont-rely-on-background-colors-printing/" target="_blank">http://css-tricks.com/dont-rely-on-background-colors-printing/</a>), although it’s about a related topic, shows what you can do with a webpage that is printed. Basically, you’re re-styling the page to look good on a printer.</p>  <p>What does this mean to all of us?</p>  <ul>   <li>For the business it would mean that the data on our web pages would now be able to be printed in a format that can be easily referenced offline, not just on-screen.</li>    <li>For marketing/graphics it means that each “screen” styleguide that is delivered needs to be accompanies with a “print” styleguide (what the page should look like when printed).</li>    <li>For developers it would mean writing a new set of CSS styles to realize the “print” styleguide.</li> </ul>  <p>Thoughts?</p>

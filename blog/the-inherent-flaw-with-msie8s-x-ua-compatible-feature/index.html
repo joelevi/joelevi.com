@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -337,12 +338,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/the-inherent-flaw-with-msie8s-x-ua-compatible-feature.jpg" alt="Share graphic for “The inherent flaw with MSIE8&amp;#8217;s X-UA-Compatible &amp;#8220;feature&amp;#8221;” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>The inherent flaw with MSIE8&amp;#8217;s X-UA-Compatible &amp;#8220;feature&amp;#8221;</h1>
 				<p class="post-meta"><time datetime="2009-05-26">May 26, 2009</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/the-inherent-flaw-with-msie8s-x-ua-compatible-feature.jpg" alt="Share graphic for “The inherent flaw with MSIE8&amp;#8217;s X-UA-Compatible &amp;#8220;feature&amp;#8221;” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>For more than a decade it’s been the web developer’s most frustrating challenge: different browsers rendering the same stuff in different ways. The problem is that there are no internet police to enforce the laws of the W3C… then again, the W3C has incomplete and ambiguous “laws” so it wouldn’t do much to enforce them. But I digress.</p>  <p>When Microsoft began work on MSIE8 one of their objectives was to make the browser more standards-complaint. All in all, they did a pretty good job. But therein was a problem: pages written with MSIE7 in mind didn’t always render the same way in MSIE8, which meant lots of things might break or look ugly.</p>  <p>Microsoft put a full-court press on advising its clients and customers about this difference and told them to add a meta tag to the header of websites that didn’t render correctly in MSIE8. That tag is the now infamous X-UA-Compatible tag, and it lets you tell MSIE8 that it should display the page as if it were MSIE7 (why they didn’t go all the way back to MSIE6, I don’t know).</p>  <p>So, rather than having corporate web developers go and “fix” their pages to render correctly, Microsoft said “just add this tag to your header and you’re done.” Ugly.</p>  <p>We all had to write around MSIE7 when it came out, now we have to write around MSIE8, too. I’ve never had to rewrite a page for Firefox or Safari version “n + 1”, why do I have to with MSIE… all the time.</p>  <h3>What they should have done</h3>  <p>Rather than (or in addition to) adding the X-UA-Compatible feature into MSIE8, Microsoft should have pushed an update to MSIE6 and MSIE7 to enable MSIE8 rendering using an X-UA-Compatible meta-tag. Yes, this would require significant, work, but the foundation was laid with MSIE8, why not backdate it?</p>  <h3>What would that have accomplished?</h3>  <p>By adding the X-UA-Compatible tag to prior versions of MSIE, Microsoft would have allowed developers to write code once for MSIE8, and have it work in MSIE6, 7, and 8. Sweet, right?</p>  <p>Instead, why devote more time to write for MSIE8, when you already have to write for MSIE6 and MSIE7, when you can just add a tag and have MSIE8 think it’s MSIE7?</p>

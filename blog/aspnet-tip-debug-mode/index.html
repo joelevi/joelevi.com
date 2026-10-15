@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -343,12 +344,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/aspnet-tip-debug-mode.jpg" alt="Share graphic for “ASP.NET Tip: Debug mode” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>ASP.NET Tip: Debug mode</h1>
 				<p class="post-meta"><time datetime="2009-06-01">June 1, 2009</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/aspnet-tip-debug-mode.jpg" alt="Share graphic for “ASP.NET Tip: Debug mode” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <h3>Background</h3>  <p>ASP.NET applications let you specify if they should be run with extra debugging “stuff” turned on or off via the <strong>web.config</strong> file. Production applications should run with debug mode turned off to reduce overhead, while development and test environments should run the application in debug mode.</p>  <p>In addition to the built-in debugging stuff that ASP.NET does, there may be certain things that you want your code to run only when in debug mode and not while in production mode.</p>  <h3>Example</h3>  <p>For example, I’ve been writing a custom RSS feed generator as an <strong>.ashx</strong> file.</p>  <p>This “page” first checks to see if a cached version of the feed exists in server memory, if a cached version exists it outputs the cached version (the cache expiration is configurable via an integer variable passed to the method).</p>  <p>If a cached version does not exist it sets up the RSS header, grabs the data, and formats it as RSS Items in the feed, it then adds the newly generated feed to the server cache with an expiration set at “now” plus however many hours were passed to the method, then sends pings (in background threads) to a bunch of RDF ping servers via another method.</p>  <p>That’s exactly what I want it to do in the “real word” or “production environment. But in development and testing, if I make a change, I’m out of luck, I can’t see my changes until the cached feed expires.</p>  <h3>How do I do that?</h3>  <p>Luckily for us, ASP.NET includes a way for us to do that, built right in.</p>  <p>Simply surround the code you don’t want to run outside of debug mode like this:</p>  <div style="border-bottom: gray 1px solid; border-left: gray 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; max-height: 200px; font-size: 8pt; overflow: auto; border-top: gray 1px solid; cursor: text; border-right: gray 1px solid; padding-top: 4px">   <div style="border-bottom-style: none; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">     <pre style="border-bottom-style: none; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: consolas, &#39;Courier New&#39;, courier, monospace; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060">   1:</span> <span style="color: #cc6633">#if</span> DEBUG</pre>

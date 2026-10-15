@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -327,12 +328,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/blogengine-14-screws-upgraders.jpg" alt="Share graphic for “BlogEngine 1.4 Screws Upgraders” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>BlogEngine 1.4 Screws Upgraders</h1>
 				<p class="post-meta"><time datetime="2008-07-28">July 28, 2008</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/blogengine-14-screws-upgraders.jpg" alt="Share graphic for “BlogEngine 1.4 Screws Upgraders” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>BlogEngine 1.4 is the latest in a string of updates for BlogEngine.net (a .NET blogging platform). This release was supposed to add widget support (something us WordPress users have had for a long time now).</p>  <h3>What did it end up doing?</h3>  <p>The 1.4 update ended up breaking everybody’s site that used any custom theme. No warnings on the upgrade.</p>  <p>The problems were acknowledged and an “fix” promised (1.4.1), but has yet to be seen.</p>  <p>So now BlogEngine.net users are faced with a dilemma: use broken software with a patch nowhere in sight, or try to revert back to 1.3 (like <a href="https://mikedopp.com" target="_blank" rel="friend met neighbor co-worker colleague contact">Mike Dopp</a> just did).</p>

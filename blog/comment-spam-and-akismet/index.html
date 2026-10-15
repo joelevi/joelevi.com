@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -327,12 +328,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/comment-spam-and-akismet.jpg" alt="Share graphic for “Comment Spam and Akismet” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>Comment Spam and Akismet</h1>
 				<p class="post-meta"><time datetime="2006-11-27">November 27, 2006</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/comment-spam-and-akismet.jpg" alt="Share graphic for “Comment Spam and Akismet” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p><!-- missing image: <a href="https://akismet.com/" target="_blank"><img src="https://akismet.com/i/download-button.png" alt="Download Akismet" align="right" /></a> -->In an effort to boot reader participation though comments I recently turned off the requirement that comment posters be registered users on the site. Knowing this was an open door for comment spam, I took the plunge hoping that <a href="https://akismet.com/" target="_blank">Akismet</a> would help weed out the spams.</p>

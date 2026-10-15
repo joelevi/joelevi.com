@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -325,12 +326,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/developing-for-paypal-payment-processing.jpg" alt="Share graphic for “Developing for PayPal Payment Processing” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>Developing for PayPal Payment Processing</h1>
 				<p class="post-meta"><time datetime="2007-08-13">August 13, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/developing-for-paypal-payment-processing.jpg" alt="Share graphic for “Developing for PayPal Payment Processing” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>When developing an application that uses PayPal for payment processing, here are a few things that you might like to know about their test (or sandbox) environment that isn't necessarily the same in their live environment.</p> <ul> <li>Don't try and approve any amount over $1,000.00; you can, but it'll give you a bogus reply.</li> <li>Only use 123 for the credit card's CCV</li> <li>Only use 4 digit expiration dates (mmyy) - this is true for live as well</li></ul> <p>Hope it helps!</p> <p>(Hat tip to <a href="https://www.mikedopp.com" target="_blank">Mike Dopp</a> for pointing these out!)</p>

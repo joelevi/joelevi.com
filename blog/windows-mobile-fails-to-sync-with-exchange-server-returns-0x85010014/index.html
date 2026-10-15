@@ -198,7 +198,8 @@
 		.post-terms__tags a:hover { background: var(--blue-soft); }
 		/* /post-terms */
 		/* og-header */
-		.post-hero { margin: 0 0 1.25rem; }
+		.post-hero { margin: 1.25rem 0 0.75rem; }
+		.post-hero + header h1 { margin-top: 0; }
 		.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 1rem; border: 1px solid var(--rule); box-shadow: 0 8px 24px var(--shadow); }
 		@media (max-width: 560px) { .post-hero img { border-radius: 0.75rem; } }
 		/* /og-header */
@@ -327,12 +328,12 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- og-header -->
+			<figure class="post-hero"><img src="/blog/media/og/windows-mobile-fails-to-sync-with-exchange-server-returns-0x85010014.jpg" alt="Share graphic for “Windows Mobile fails to Sync with Exchange Server, returns 0x85010014” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 			<header>
 				<h1>Windows Mobile fails to Sync with Exchange Server, returns 0x85010014</h1>
 				<p class="post-meta"><time datetime="2007-12-12">December 12, 2007</time> · <a href="/blog/">Articles</a></p>
 			</header>
-			<!-- og-header -->
-			<figure class="post-hero"><img src="/blog/media/og/windows-mobile-fails-to-sync-with-exchange-server-returns-0x85010014.jpg" alt="Share graphic for “Windows Mobile fails to Sync with Exchange Server, returns 0x85010014” by Joe Levi" width="1200" height="630" fetchpriority="high" decoding="async" /></figure><!-- /og-header -->
 
 			<div class="post-body">
 <p>Today a user was trying to sync his Windows Mobile device (using T-Mobile's T-Zones on a Dash running Windows Mobile 6) and was unable to sync with our corporate Exchange Server, each time returning a &quot;server error&quot; of type 0x85010014.</p>  <p>Typically this type of error is due to a mismatched date/time on the device versus the server (the SSL certificate is invalid outside a certain window).</p>  <p>In this instance the problem was because the user's account was set to require the password to be changed on the first login.</p>  <p>Once we did that (on a network connected computer), and input the user's new password on the device, all worked without any problems.</p>
